@@ -266,6 +266,7 @@ async function loadUsers() {
         <div class="gp-mods">
           <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-kids" checked>🧸 幼儿英语</label>
           <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-primary" checked>📖 小学英语</label>
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-junior" checked>🎒 初中英语</label>
           <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-middle" checked>🎧 中考英语</label>
           <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-gk" checked>🎓 高考英语</label>
           <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-math" checked>🧮 数学</label>
@@ -275,19 +276,22 @@ async function loadUsers() {
     </div>`;
   }).join('');
 }
-const MOD_LABEL = { kids: '🧸 幼儿英语', primary: '📖 小学英语', middle: '🎧 中考英语', gk: '🎓 高考英语', math: '🧮 数学' };
+const MOD_LABEL = { kids: '🧸 幼儿英语', primary: '📖 小学英语', junior: '🎒 初中英语', middle: '🎧 中考英语', gk: '🎓 高考英语', math: '🧮 数学' };
 function modTags(u) {
   const mods = u.modules || {};
-  return ['kids', 'primary', 'middle', 'gk', 'math'].map(m =>
-    '<span class="mod-tag' + (mods[m] ? ' on' : '') + '">' + (mods[m] ? '✓ ' : '✗ ') + MOD_LABEL[m] + '</span>'
-  ).join('');
+  return ['kids', 'primary', 'junior', 'middle', 'gk', 'math'].map(m => {
+    const on = m === 'junior' ? !!mods.primary : !!mods[m];   // 初中随小学授权
+    return '<span class="mod-tag' + (on ? ' on' : '') + '">' + (on ? '✓ ' : '✗ ') + MOD_LABEL[m] + '</span>';
+  }).join('');
 }
 function toggleGrant(i) {
   const p = $('gp-' + i); p.style.display = p.style.display === 'none' ? '' : 'none';
   const u = LAST_USERS[i], mods = u.modules || {};
   const defAll = !u.authorized || !mods.kids && !mods.primary && !mods.middle && !mods.gk && !mods.math; // 未授权/全空 → 默认全选
-  ['kids', 'primary', 'middle', 'gk', 'math'].forEach(m => {
-    const c = $('gmod-' + i + '-' + m); if (c) { c.checked = defAll ? true : !!mods[m]; c.dispatchEvent(new Event('change')); }
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math'].forEach(m => {
+    const c = $('gmod-' + i + '-' + m); if (!c) return;
+    c.checked = m === 'junior' ? ($('gmod-' + i + '-primary') || { checked: defAll }).checked : (defAll ? true : !!mods[m]);
+    c.dispatchEvent(new Event('change'));
   });
 }
 function gplanChanged(i) { $('gdays-' + i).style.display = $('gplan-' + i).value === 'custom' ? '' : 'none'; }
@@ -304,6 +308,14 @@ async function doGrant(i) {
 document.addEventListener('change', e => {
   if (e.target && e.target.type === 'checkbox' && e.target.id && e.target.id.indexOf('gmod-') === 0) {
     e.target.closest('.mod-chk').classList.toggle('on', e.target.checked);
+    const seg = e.target.id.split('-'), i = seg[1], m = seg[2];
+    if (m === 'junior') {          // 初中 ↔ 小学 双向联动
+      const p = $('gmod-' + i + '-primary');
+      if (p && p.checked !== e.target.checked) { p.checked = e.target.checked; p.closest('.mod-chk').classList.toggle('on', p.checked); }
+    } else if (m === 'primary') {
+      const j = $('gmod-' + i + '-junior');
+      if (j && j.checked !== e.target.checked) { j.checked = e.target.checked; j.closest('.mod-chk').classList.toggle('on', j.checked); }
+    }
   }
 });
 async function unbind(i, device) {
