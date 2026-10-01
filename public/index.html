@@ -157,6 +157,13 @@
       <div><span class="state" id="st-math">加载中</span></div>
       <button class="go" id="go-math" onclick="enterMod('math')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-senior">
+      <div class="icon">📗</div>
+      <div class="name">高中英语 · 课本同步</div>
+      <div class="desc">人教版 必修+选必 7 册 36 单元 · 课本同步训练 / 语法要点 / 同步练习</div>
+      <div><span class="state" id="st-senior">加载中</span></div>
+      <button class="go" id="go-senior" onclick="enterMod('senior')">进入模块</button>
+    </div>
   </div>
 
   <!-- 微信联系卡 -->
@@ -164,7 +171,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元</div>
 </div>
 
 <script>
@@ -194,6 +201,7 @@ const MODINFO = {
   middle:  { url: './quiz.html',  name: '中考英语 · 听说专项' },
   gk:      { url: './gaokao.html', name: '高考英语 · 三问五答' },
   math:    { url: './math.html',  name: '数学 · 思维训练' },
+  senior:  { url: './senior-textbook.html', name: '高中英语 · 课本同步' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -222,7 +230,7 @@ async function login() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
@@ -264,7 +272,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {

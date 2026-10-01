@@ -1,0 +1,2402 @@
+{
+  "product": "高中英语课本章节同步训练",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "人教版（2019 版）必修第一/二/三册 + 选择性必修第一~四册共 7 册 36 单元；每单元含重点词汇、语法要点与同步练习；词汇音频约定路径 /audio/sw/<word>.mp3（暂无则优雅降级）。必修第一册与各校首单元已充实，其余单元内容整理中。",
+  "books": [
+    {
+      "code": "b1",
+      "title": "必修第一册",
+      "units": [
+        {
+          "id": "b1w",
+          "title": "Welcome Unit",
+          "topic": "高中生活启航 · 基础交际与校园词汇",
+          "words": [
+            {
+              "word": "freshman",
+              "phonetic": "ˈfreʃmən",
+              "pos": "n.",
+              "meaning": "（中学或大学的）一年级新生",
+              "audio": "/audio/sw/freshman.mp3",
+              "sentence": "As a freshman, he felt both excited and nervous.",
+              "sentenceCn": "作为高一新生，他既兴奋又紧张。"
+            },
+            {
+              "word": "campus",
+              "phonetic": "ˈkæmpəs",
+              "pos": "n.",
+              "meaning": "校园；校区",
+              "audio": "/audio/sw/campus.mp3",
+              "sentence": "The campus is beautiful in autumn.",
+              "sentenceCn": "秋天的校园很美。"
+            },
+            {
+              "word": "challenge",
+              "phonetic": "ˈtʃælɪndʒ",
+              "pos": "n./v.",
+              "meaning": "挑战；向…挑战",
+              "audio": "/audio/sw/challenge.mp3",
+              "sentence": "Learning a new language is a real challenge.",
+              "sentenceCn": "学习一门新语言是真正的挑战。"
+            },
+            {
+              "word": "confident",
+              "phonetic": "ˈkɒnfɪdənt",
+              "pos": "adj.",
+              "meaning": "自信的；有把握的",
+              "audio": "/audio/sw/confident.mp3",
+              "sentence": "She is confident about the coming exam.",
+              "sentenceCn": "她对即将到来的考试很有信心。"
+            },
+            {
+              "word": "concentrate",
+              "phonetic": "ˈkɒnsntreɪt",
+              "pos": "v.",
+              "meaning": "集中（注意力）；专注",
+              "audio": "/audio/sw/concentrate.mp3",
+              "sentence": "Please concentrate on your homework.",
+              "sentenceCn": "请专心做作业。"
+            },
+            {
+              "word": "lecture",
+              "phonetic": "ˈlektʃə(r)",
+              "pos": "n.",
+              "meaning": "讲座；讲课",
+              "audio": "/audio/sw/lecture.mp3",
+              "sentence": "We attended a lecture on science.",
+              "sentenceCn": "我们听了一场关于科学的讲座。"
+            },
+            {
+              "word": "register",
+              "phonetic": "ˈredʒɪstə(r)",
+              "pos": "v.",
+              "meaning": "登记；注册",
+              "audio": "/audio/sw/register.mp3",
+              "sentence": "You must register for the new course.",
+              "sentenceCn": "你必须注册这门新课。"
+            },
+            {
+              "word": "volunteer",
+              "phonetic": "ˌvɒlənˈtɪə(r)",
+              "pos": "n./v.",
+              "meaning": "志愿者；做志愿工作",
+              "audio": "/audio/sw/volunteer.mp3",
+              "sentence": "He volunteers at the local library.",
+              "sentenceCn": "他在当地图书馆做志愿工作。"
+            },
+            {
+              "word": "goal",
+              "phonetic": "ɡəʊl",
+              "pos": "n.",
+              "meaning": "目标；球门",
+              "audio": "/audio/sw/goal.mp3",
+              "sentence": "My goal is to study abroad.",
+              "sentenceCn": "我的目标是出国留学。"
+            },
+            {
+              "word": "independent",
+              "phonetic": "ˌɪndɪˈpendənt",
+              "pos": "adj.",
+              "meaning": "独立的；自主的",
+              "audio": "/audio/sw/independent.mp3",
+              "sentence": "University life makes students more independent.",
+              "sentenceCn": "大学生活让学生更独立。"
+            },
+            {
+              "word": "responsible",
+              "phonetic": "rɪˈspɒnsəbl",
+              "pos": "adj.",
+              "meaning": "有责任的；可靠的",
+              "audio": "/audio/sw/responsible.mp3",
+              "sentence": "We should be responsible for our own study.",
+              "sentenceCn": "我们应该对自己的学习负责。"
+            },
+            {
+              "word": "explore",
+              "phonetic": "ɪkˈsplɔː(r)",
+              "pos": "v.",
+              "meaning": "探索；探究",
+              "audio": "/audio/sw/explore.mp3",
+              "sentence": "Let's explore different clubs.",
+              "sentenceCn": "我们来了解一下不同的社团吧。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "用情态动词 can / should / must 表达能力与建议：can 表能力，should 表建议，must 表必须。",
+              "example": "You should join a club to make friends.",
+              "exampleCn": "你应该加入一个社团来交朋友。"
+            },
+            {
+              "point": "祈使句用于提出请求或建议，常以动词原形开头；否定式在句首加 Don't。",
+              "example": "Don't be late for the first class.",
+              "exampleCn": "第一节课不要迟到。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "新学期你鼓励同学加入社团，最恰当的建议是：___",
+              "options": [
+                "You should join a club.",
+                "You must sleep all day.",
+                "Don't go to school."
+              ],
+              "answer": 0,
+              "analysis": "should 用于给出建议，加入社团是积极建议。"
+            },
+            {
+              "stem": "\"大一新生\" 对应的英文是：___",
+              "options": [
+                "freshman",
+                "teacher",
+                "worker"
+              ],
+              "answer": 0,
+              "analysis": "freshman 指中学或大学一年级新生。"
+            },
+            {
+              "stem": "— Can you concentrate on the lecture? — ___, it is very interesting.",
+              "options": [
+                "Yes, I can",
+                "No, I must",
+                "Don't"
+              ],
+              "answer": 0,
+              "analysis": "can 提问用 can 回答，表示能做到。"
+            },
+            {
+              "stem": "We should be ___ for our own learning.",
+              "options": [
+                "responsible",
+                "responsibility",
+                "respond"
+              ],
+              "answer": 0,
+              "analysis": "be 动词后接形容词 responsible（有责任的）。"
+            },
+            {
+              "stem": "He ___ at the school library every weekend.",
+              "options": [
+                "volunteers",
+                "volunteer",
+                "volunteering"
+              ],
+              "answer": 0,
+              "analysis": "主语 he 为第三人称单数，动词加 -s。"
+            },
+            {
+              "stem": "___ late for the meeting.",
+              "options": [
+                "Don't be",
+                "Not be",
+                "Be not"
+              ],
+              "answer": 0,
+              "analysis": "祈使句否定式以 Don't 开头。"
+            }
+          ]
+        },
+        {
+          "id": "b101",
+          "title": "Unit 1 Teenage Life",
+          "topic": "青少年生活 · 学习与社团",
+          "words": [
+            {
+              "word": "teenager",
+              "phonetic": "ˈtiːneɪdʒə(r)",
+              "pos": "n.",
+              "meaning": "青少年（13–19 岁）",
+              "audio": "/audio/sw/teenager.mp3",
+              "sentence": "Many teenagers like playing sports.",
+              "sentenceCn": "许多青少年喜欢运动。"
+            },
+            {
+              "word": "prefer",
+              "phonetic": "prɪˈfɜː(r)",
+              "pos": "v.",
+              "meaning": "更喜欢；宁愿",
+              "audio": "/audio/sw/prefer.mp3",
+              "sentence": "I prefer reading to watching TV.",
+              "sentenceCn": "比起看电视，我更喜欢阅读。"
+            },
+            {
+              "word": "suitable",
+              "phonetic": "ˈsuːtəbl",
+              "pos": "adj.",
+              "meaning": "合适的；适宜的",
+              "audio": "/audio/sw/suitable.mp3",
+              "sentence": "This club is suitable for beginners.",
+              "sentenceCn": "这个社团适合初学者。"
+            },
+            {
+              "word": "pressure",
+              "phonetic": "ˈpreʃə(r)",
+              "pos": "n.",
+              "meaning": "压力",
+              "audio": "/audio/sw/pressure.mp3",
+              "sentence": "Students often face study pressure.",
+              "sentenceCn": "学生常面临学习压力。"
+            },
+            {
+              "word": "debate",
+              "phonetic": "dɪˈbeɪt",
+              "pos": "n./v.",
+              "meaning": "辩论；讨论",
+              "audio": "/audio/sw/debate.mp3",
+              "sentence": "We had a debate about school rules.",
+              "sentenceCn": "我们就校规进行了一场辩论。"
+            },
+            {
+              "word": "attend",
+              "phonetic": "əˈtend",
+              "pos": "v.",
+              "meaning": "参加；出席",
+              "audio": "/audio/sw/attend.mp3",
+              "sentence": "She will attend the music club.",
+              "sentenceCn": "她将参加音乐社团。"
+            },
+            {
+              "word": "extra",
+              "phonetic": "ˈekstrə",
+              "pos": "adj.",
+              "meaning": "额外的；额外的",
+              "audio": "/audio/sw/extra.mp3",
+              "sentence": "He needs extra practice.",
+              "sentenceCn": "他需要额外的练习。"
+            },
+            {
+              "word": "quit",
+              "phonetic": "kwɪt",
+              "pos": "v.",
+              "meaning": "停止；放弃；离开",
+              "audio": "/audio/sw/quit.mp3",
+              "sentence": "He quit the team last month.",
+              "sentenceCn": "他上个月退出了团队。"
+            },
+            {
+              "word": "survive",
+              "phonetic": "səˈvaɪv",
+              "pos": "v.",
+              "meaning": "幸存；挺过",
+              "audio": "/audio/sw/survive.mp3",
+              "sentence": "We must learn to survive stress.",
+              "sentenceCn": "我们必须学会扛过压力。"
+            },
+            {
+              "word": "generation",
+              "phonetic": "ˌdʒenəˈreɪʃn",
+              "pos": "n.",
+              "meaning": "一代（人）；世代",
+              "audio": "/audio/sw/generation.mp3",
+              "sentence": "There is a gap between two generations.",
+              "sentenceCn": "两代人之间存在代沟。"
+            },
+            {
+              "word": "actually",
+              "phonetic": "ˈæktʃuəli",
+              "pos": "adv.",
+              "meaning": "实际上；事实上",
+              "audio": "/audio/sw/actually.mp3",
+              "sentence": "Actually, it is not difficult.",
+              "sentenceCn": "实际上，这并不难。"
+            },
+            {
+              "word": "obviously",
+              "phonetic": "ˈɒbviəsli",
+              "pos": "adv.",
+              "meaning": "显然；明显地",
+              "audio": "/audio/sw/obviously.mp3",
+              "sentence": "Obviously, he needs help.",
+              "sentenceCn": "显然，他需要帮助。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "宾语从句：由 that / whether / what 等引导，作动词的宾语；that 常可省略。",
+              "example": "I think (that) this club is fun.",
+              "exampleCn": "我认为这个社团很有趣。"
+            },
+            {
+              "point": "一般现在时与一般过去时：描述常态用一般现在时，描述过去动作用一般过去时。",
+              "example": "He joins the club. / He joined it last year.",
+              "exampleCn": "他加入社团。/ 他去年加入的。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "I ___ reading books to playing games.",
+              "options": [
+                "prefer",
+                "prefers",
+                "preferring"
+              ],
+              "answer": 0,
+              "analysis": "主语 I 后用动词原形 prefer。"
+            },
+            {
+              "stem": "This activity is ___ for new students.",
+              "options": [
+                "suitable",
+                "suit",
+                "suited"
+              ],
+              "answer": 0,
+              "analysis": "be suitable for 为固定搭配，意为\"适合…\"。"
+            },
+            {
+              "stem": "— Do you think ___ we should join the team? — Yes.",
+              "options": [
+                "that",
+                "what",
+                "who"
+              ],
+              "answer": 0,
+              "analysis": "think 后接 that 引导的宾语从句，that 可省略。"
+            },
+            {
+              "stem": "Teenagers often feel ___ from exams.",
+              "options": [
+                "pressure",
+                "press",
+                "pressed"
+              ],
+              "answer": 0,
+              "analysis": "feel 后接名词 pressure（压力）。"
+            },
+            {
+              "stem": "He ___ the club because he was too busy.",
+              "options": [
+                "quit",
+                "quits",
+                "quitting"
+              ],
+              "answer": 0,
+              "analysis": "由 was 可知用一般过去时 quit（quit 过去式同形）。"
+            },
+            {
+              "stem": "___, the homework is not so hard.",
+              "options": [
+                "Actually",
+                "Act",
+                "Active"
+              ],
+              "answer": 0,
+              "analysis": "actually 作状语，意为\"实际上\"。"
+            }
+          ]
+        },
+        {
+          "id": "b102",
+          "title": "Unit 2 Travelling Around",
+          "topic": "旅行计划 · 交通与预订",
+          "words": [
+            {
+              "word": "journey",
+              "phonetic": "ˈdʒɜːni",
+              "pos": "n.",
+              "meaning": "旅行；旅程",
+              "audio": "/audio/sw/journey.mp3",
+              "sentence": "We had a long journey by train.",
+              "sentenceCn": "我们乘火车进行了一次长途旅行。"
+            },
+            {
+              "word": "transport",
+              "phonetic": "trænˈspɔːt",
+              "pos": "n./v.",
+              "meaning": "交通；运输",
+              "audio": "/audio/sw/transport.mp3",
+              "sentence": "Public transport is convenient.",
+              "sentenceCn": "公共交通很方便。"
+            },
+            {
+              "word": "destination",
+              "phonetic": "ˌdestɪˈneɪʃn",
+              "pos": "n.",
+              "meaning": "目的地；终点",
+              "audio": "/audio/sw/destination.mp3",
+              "sentence": "Paris is our destination.",
+              "sentenceCn": "巴黎是我们的目的地。"
+            },
+            {
+              "word": "brochure",
+              "phonetic": "brəʊˈʃʊə(r)",
+              "pos": "n.",
+              "meaning": "小册子；指南",
+              "audio": "/audio/sw/brochure.mp3",
+              "sentence": "Take a travel brochure with you.",
+              "sentenceCn": "带一本旅行指南吧。"
+            },
+            {
+              "word": "rent",
+              "phonetic": "rent",
+              "pos": "v.",
+              "meaning": "租用；出租",
+              "audio": "/audio/sw/rent.mp3",
+              "sentence": "We can rent a car there.",
+              "sentenceCn": "我们可以在那儿租一辆车。"
+            },
+            {
+              "word": "hike",
+              "phonetic": "haɪk",
+              "pos": "v./n.",
+              "meaning": "徒步旅行；远足",
+              "audio": "/audio/sw/hike.mp3",
+              "sentence": "They hiked in the mountains.",
+              "sentenceCn": "他们在山里徒步。"
+            },
+            {
+              "word": "credit",
+              "phonetic": "ˈkredɪt",
+              "pos": "n.",
+              "meaning": "信用；赊账；学分",
+              "audio": "/audio/sw/credit.mp3",
+              "sentence": "I paid by credit card.",
+              "sentenceCn": "我用信用卡付款。"
+            },
+            {
+              "word": "contact",
+              "phonetic": "ˈkɒntækt",
+              "pos": "v./n.",
+              "meaning": "联系；联络",
+              "audio": "/audio/sw/contact.mp3",
+              "sentence": "Please contact us by email.",
+              "sentenceCn": "请通过邮件联系我们。"
+            },
+            {
+              "word": "budget",
+              "phonetic": "ˈbʌdʒɪt",
+              "pos": "n.",
+              "meaning": "预算",
+              "audio": "/audio/sw/budget.mp3",
+              "sentence": "We should plan a travel budget.",
+              "sentenceCn": "我们应该规划旅行预算。"
+            },
+            {
+              "word": "flight",
+              "phonetic": "flaɪt",
+              "pos": "n.",
+              "meaning": "航班；飞行",
+              "audio": "/audio/sw/flight.mp3",
+              "sentence": "The flight was delayed.",
+              "sentenceCn": "航班延误了。"
+            },
+            {
+              "word": "luggage",
+              "phonetic": "ˈlʌɡɪdʒ",
+              "pos": "n.",
+              "meaning": "行李",
+              "audio": "/audio/sw/luggage.mp3",
+              "sentence": "Check your luggage at the counter.",
+              "sentenceCn": "在柜台托运你的行李。"
+            },
+            {
+              "word": "accommodation",
+              "phonetic": "əˌkɒməˈdeɪʃn",
+              "pos": "n.",
+              "meaning": "住宿；膳宿",
+              "audio": "/audio/sw/accommodation.mp3",
+              "sentence": "The hotel offers good accommodation.",
+              "sentenceCn": "这家酒店住宿条件很好。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "将来时态：be going to 表计划，will 表意愿或预测，现在进行时表已确定的近期安排。",
+              "example": "I am going to visit Beijing.",
+              "exampleCn": "我打算去北京游玩。"
+            },
+            {
+              "point": "疑问词引导的宾语从句：what / where / how 等疑问词可引导宾语从句。",
+              "example": "Could you tell me where the station is?",
+              "exampleCn": "你能告诉我车站在哪儿吗？"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "We are ___ to take a trip next week.",
+              "options": [
+                "going",
+                "go",
+                "went"
+              ],
+              "answer": 0,
+              "analysis": "be going to 表计划中的将来。"
+            },
+            {
+              "stem": "Could you tell me ___ the museum is?",
+              "options": [
+                "where",
+                "that",
+                "what"
+              ],
+              "answer": 0,
+              "analysis": "where 引导宾语从句，询问地点。"
+            },
+            {
+              "stem": "We can ___ a car at the airport.",
+              "options": [
+                "rent",
+                "rents",
+                "renting"
+              ],
+              "answer": 0,
+              "analysis": "can 后接动词原形 rent。"
+            },
+            {
+              "stem": "The train ___ was cancelled because of the storm.",
+              "options": [
+                "journey",
+                "journeys",
+                "journeying"
+              ],
+              "answer": 0,
+              "analysis": "train journey 意为\"火车旅程\"，用名词原形。"
+            },
+            {
+              "stem": "Don't forget to pack your ___.",
+              "options": [
+                "luggage",
+                "lug",
+                "lugged"
+              ],
+              "answer": 0,
+              "analysis": "luggage 为不可数行李。"
+            },
+            {
+              "stem": "I paid for the ticket by ___ card.",
+              "options": [
+                "credit",
+                "credits",
+                "crediting"
+              ],
+              "answer": 0,
+              "analysis": "credit card 信用卡。"
+            }
+          ]
+        },
+        {
+          "id": "b103",
+          "title": "Unit 3 Sports and Fitness",
+          "topic": "运动与健康",
+          "words": [
+            {
+              "word": "fitness",
+              "phonetic": "ˈfɪtnəs",
+              "pos": "n.",
+              "meaning": "健康；健壮",
+              "audio": "/audio/sw/fitness.mp3",
+              "sentence": "Daily exercise improves fitness.",
+              "sentenceCn": "每天锻炼增强体质。"
+            },
+            {
+              "word": "sweat",
+              "phonetic": "swet",
+              "pos": "n./v.",
+              "meaning": "汗；出汗",
+              "audio": "/audio/sw/sweat.mp3",
+              "sentence": "He was covered in sweat.",
+              "sentenceCn": "他满身是汗。"
+            },
+            {
+              "word": "marathon",
+              "phonetic": "ˈmærəθən",
+              "pos": "n.",
+              "meaning": "马拉松赛跑",
+              "audio": "/audio/sw/marathon.mp3",
+              "sentence": "She finished the marathon.",
+              "sentenceCn": "她跑完了马拉松。"
+            },
+            {
+              "word": "compete",
+              "phonetic": "kəmˈpiːt",
+              "pos": "v.",
+              "meaning": "竞争；比赛",
+              "audio": "/audio/sw/compete.mp3",
+              "sentence": "They compete in the match.",
+              "sentenceCn": "他们在比赛中竞争。"
+            },
+            {
+              "word": "cheer",
+              "phonetic": "tʃɪə(r)",
+              "pos": "v.",
+              "meaning": "欢呼；加油",
+              "audio": "/audio/sw/cheer.mp3",
+              "sentence": "Fans cheered for the team.",
+              "sentenceCn": "球迷为球队欢呼。"
+            },
+            {
+              "word": "jog",
+              "phonetic": "dʒɒɡ",
+              "pos": "v.",
+              "meaning": "慢跑",
+              "audio": "/audio/sw/jog.mp3",
+              "sentence": "I jog in the park every morning.",
+              "sentenceCn": "我每天早晨在公园慢跑。"
+            },
+            {
+              "word": "athletic",
+              "phonetic": "æθˈletɪk",
+              "pos": "adj.",
+              "meaning": "运动的；运动员的",
+              "audio": "/audio/sw/athletic.mp3",
+              "sentence": "He has an athletic build.",
+              "sentenceCn": "他体格健壮。"
+            },
+            {
+              "word": "injury",
+              "phonetic": "ˈɪndʒəri",
+              "pos": "n.",
+              "meaning": "伤害；损伤",
+              "audio": "/audio/sw/injury.mp3",
+              "sentence": "He suffered a knee injury.",
+              "sentenceCn": "他膝盖受了伤。"
+            },
+            {
+              "word": "strengthen",
+              "phonetic": "ˈstreŋθn",
+              "pos": "v.",
+              "meaning": "加强；增强",
+              "audio": "/audio/sw/strengthen.mp3",
+              "sentence": "Yoga can strengthen your body.",
+              "sentenceCn": "瑜伽能增强体质。"
+            },
+            {
+              "word": "workout",
+              "phonetic": "ˈwɜːkaʊt",
+              "pos": "n.",
+              "meaning": "锻炼；训练",
+              "audio": "/audio/sw/workout.mp3",
+              "sentence": "A daily workout keeps you fit.",
+              "sentenceCn": "每天锻炼让你保持健康。"
+            },
+            {
+              "word": "diet",
+              "phonetic": "ˈdaɪət",
+              "pos": "n.",
+              "meaning": "日常饮食；节食",
+              "audio": "/audio/sw/diet.mp3",
+              "sentence": "A balanced diet is important.",
+              "sentenceCn": "均衡饮食很重要。"
+            },
+            {
+              "word": "determination",
+              "phonetic": "dɪˌtɜːmɪˈneɪʃn",
+              "pos": "n.",
+              "meaning": "决心；决定",
+              "audio": "/audio/sw/determination.mp3",
+              "sentence": "She won with great determination.",
+              "sentenceCn": "她凭着极大的决心获胜。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "现在完成时：have/has + 过去分词，表示过去发生并持续到现在的动作或影响。",
+              "example": "He has trained for two years.",
+              "exampleCn": "他已经训练两年了。"
+            },
+            {
+              "point": "形容词、副词的比较级与最高级：单音节加 -er/-est，多音节用 more/most。",
+              "example": "Running is healthier than sitting.",
+              "exampleCn": "跑步比久坐更健康。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "He has ___ every morning this month.",
+              "options": [
+                "jogged",
+                "jog",
+                "jogs"
+              ],
+              "answer": 0,
+              "analysis": "has + 过去分词 jogged 构成现在完成时。"
+            },
+            {
+              "stem": "Cycling is ___ than driving for short trips.",
+              "options": [
+                "healthier",
+                "healthy",
+                "healthiest"
+              ],
+              "answer": 0,
+              "analysis": "than 提示用比较级 healthier。"
+            },
+            {
+              "stem": "The players ___ for their team loudly.",
+              "options": [
+                "cheered",
+                "cheer",
+                "cheering"
+              ],
+              "answer": 0,
+              "analysis": "描述已发生的比赛用一般过去时 cheered。"
+            },
+            {
+              "stem": "You should keep a balanced ___ to stay fit.",
+              "options": [
+                "diet",
+                "die",
+                "dieting"
+              ],
+              "answer": 0,
+              "analysis": "balanced diet 均衡饮食。"
+            },
+            {
+              "stem": "She showed great ___ to finish the race.",
+              "options": [
+                "determination",
+                "determine",
+                "determined"
+              ],
+              "answer": 0,
+              "analysis": "great 后接名词 determination（决心）。"
+            },
+            {
+              "stem": "To ___ your body, try swimming twice a week.",
+              "options": [
+                "strengthen",
+                "strength",
+                "strong"
+              ],
+              "answer": 0,
+              "analysis": "不定式 to 后接动词原形 strengthen（增强）。"
+            }
+          ]
+        },
+        {
+          "id": "b104",
+          "title": "Unit 4 Natural Disasters",
+          "topic": "自然灾害 · 应急与报道",
+          "words": [
+            {
+              "word": "disaster",
+              "phonetic": "dɪˈzɑːstə(r)",
+              "pos": "n.",
+              "meaning": "灾难；灾害",
+              "audio": "/audio/sw/disaster.mp3",
+              "sentence": "The earthquake was a terrible disaster.",
+              "sentenceCn": "那场地震是可怕的灾难。"
+            },
+            {
+              "word": "earthquake",
+              "phonetic": "ˈɜːθkweɪk",
+              "pos": "n.",
+              "meaning": "地震",
+              "audio": "/audio/sw/earthquake.mp3",
+              "sentence": "The earthquake destroyed many houses.",
+              "sentenceCn": "地震摧毁了许多房屋。"
+            },
+            {
+              "word": "flood",
+              "phonetic": "flʌd",
+              "pos": "n./v.",
+              "meaning": "洪水；淹没",
+              "audio": "/audio/sw/flood.mp3",
+              "sentence": "The flood washed away the bridge.",
+              "sentenceCn": "洪水冲走了桥梁。"
+            },
+            {
+              "word": "hurricane",
+              "phonetic": "ˈhʌrɪkən",
+              "pos": "n.",
+              "meaning": "飓风",
+              "audio": "/audio/sw/hurricane.mp3",
+              "sentence": "A hurricane hit the coast.",
+              "sentenceCn": "飓风袭击了海岸。"
+            },
+            {
+              "word": "shelter",
+              "phonetic": "ˈʃeltə(r)",
+              "pos": "n.",
+              "meaning": "避难处；庇护",
+              "audio": "/audio/sw/shelter.mp3",
+              "sentence": "They found shelter in a school.",
+              "sentenceCn": "他们在学校找到了避难所。"
+            },
+            {
+              "word": "rescue",
+              "phonetic": "ˈreskjuː",
+              "pos": "v./n.",
+              "meaning": "营救；救援",
+              "audio": "/audio/sw/rescue.mp3",
+              "sentence": "Soldiers rescued the survivors.",
+              "sentenceCn": "士兵营救了幸存者。"
+            },
+            {
+              "word": "damage",
+              "phonetic": "ˈdæmɪdʒ",
+              "pos": "n./v.",
+              "meaning": "损害；毁坏",
+              "audio": "/audio/sw/damage.mp3",
+              "sentence": "The storm damaged the crops.",
+              "sentenceCn": "暴风雨毁坏了庄稼。"
+            },
+            {
+              "word": "destroy",
+              "phonetic": "dɪˈstrɔɪ",
+              "pos": "v.",
+              "meaning": "摧毁；毁灭",
+              "audio": "/audio/sw/destroy.mp3",
+              "sentence": "The fire destroyed the building.",
+              "sentenceCn": "大火烧毁了大楼。"
+            },
+            {
+              "word": "survivor",
+              "phonetic": "səˈvaɪvə(r)",
+              "pos": "n.",
+              "meaning": "幸存者",
+              "audio": "/audio/sw/survivor.mp3",
+              "sentence": "The survivors were sent to hospital.",
+              "sentenceCn": "幸存者被送医。"
+            },
+            {
+              "word": "buried",
+              "phonetic": "ˈberid",
+              "pos": "adj./v.",
+              "meaning": "被掩埋的（bury 的过去分词）",
+              "audio": "/audio/sw/buried.mp3",
+              "sentence": "Many houses were buried by the mud.",
+              "sentenceCn": "许多房屋被泥石流掩埋。"
+            },
+            {
+              "word": "effort",
+              "phonetic": "ˈefət",
+              "pos": "n.",
+              "meaning": "努力；尽力",
+              "audio": "/audio/sw/effort.mp3",
+              "sentence": "We should make an effort to help.",
+              "sentenceCn": "我们应尽力相助。"
+            },
+            {
+              "word": "supply",
+              "phonetic": "səˈplaɪ",
+              "pos": "n./v.",
+              "meaning": "供应；供给",
+              "audio": "/audio/sw/supply.mp3",
+              "sentence": "Food supplies were sent to the area.",
+              "sentenceCn": "食物补给被送往该地区。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "一般过去时被动语态：was/were + 过去分词，强调动作的承受者。",
+              "example": "The bridge was destroyed by the flood.",
+              "exampleCn": "桥被洪水冲毁了。"
+            },
+            {
+              "point": "定语从句：that / which 指物，who 指人，在从句中作主语或宾语。",
+              "example": "The soldiers who helped us were brave.",
+              "exampleCn": "帮助我们的士兵很勇敢。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "The old house ___ by the earthquake last night.",
+              "options": [
+                "was destroyed",
+                "destroyed",
+                "destroys"
+              ],
+              "answer": 0,
+              "analysis": "last night 用一般过去时；house 作主语用被动 was destroyed。"
+            },
+            {
+              "stem": "The man ___ saved the child was a firefighter.",
+              "options": [
+                "who",
+                "which",
+                "what"
+              ],
+              "answer": 0,
+              "analysis": "先行词 man 指人，用 who 引导定语从句。"
+            },
+            {
+              "stem": "After the flood, food ___ were sent to the village.",
+              "options": [
+                "supplies",
+                "supply",
+                "supplying"
+              ],
+              "answer": 0,
+              "analysis": "food supplies 意为\"食物补给\"，用复数。"
+            },
+            {
+              "stem": "The rescue team made every ___ to find survivors.",
+              "options": [
+                "effort",
+                "efforts",
+                "effect"
+              ],
+              "answer": 0,
+              "analysis": "make an effort / make every effort 努力。"
+            },
+            {
+              "stem": "Many people lost their homes in the ___.",
+              "options": [
+                "disaster",
+                "disastrous",
+                "destroy"
+              ],
+              "answer": 0,
+              "analysis": "in the disaster 在灾难中。"
+            },
+            {
+              "stem": "They found ___ in a nearby school.",
+              "options": [
+                "shelter",
+                "sheltered",
+                "sheltering"
+              ],
+              "answer": 0,
+              "analysis": "find shelter 找到避难处。"
+            }
+          ]
+        },
+        {
+          "id": "b105",
+          "title": "Unit 5 Languages Around the World",
+          "topic": "世界语言 · 文化与沟通",
+          "words": [
+            {
+              "word": "command",
+              "phonetic": "kəˈmɑːnd",
+              "pos": "n./v.",
+              "meaning": "掌握；命令",
+              "audio": "/audio/sw/command.mp3",
+              "sentence": "He has a good command of English.",
+              "sentenceCn": "他英语掌握得很好。"
+            },
+            {
+              "word": "request",
+              "phonetic": "rɪˈkwest",
+              "pos": "n./v.",
+              "meaning": "请求；要求",
+              "audio": "/audio/sw/request.mp3",
+              "sentence": "She made a polite request.",
+              "sentenceCn": "她提出了一个礼貌的请求。"
+            },
+            {
+              "word": "communicate",
+              "phonetic": "kəˈmjuːnɪkeɪt",
+              "pos": "v.",
+              "meaning": "交流；沟通",
+              "audio": "/audio/sw/communicate.mp3",
+              "sentence": "We communicate by email.",
+              "sentenceCn": "我们通过邮件沟通。"
+            },
+            {
+              "word": "variety",
+              "phonetic": "vəˈraɪəti",
+              "pos": "n.",
+              "meaning": "多样；种类",
+              "audio": "/audio/sw/variety.mp3",
+              "sentence": "English has a variety of accents.",
+              "sentenceCn": "英语有各种各样的口音。"
+            },
+            {
+              "word": "unique",
+              "phonetic": "juˈniːk",
+              "pos": "adj.",
+              "meaning": "独特的；唯一的",
+              "audio": "/audio/sw/unique.mp3",
+              "sentence": "Each language is unique.",
+              "sentenceCn": "每种语言都是独特的。"
+            },
+            {
+              "word": "civilization",
+              "phonetic": "ˌsɪvəlaɪˈzeɪʃn",
+              "pos": "n.",
+              "meaning": "文明",
+              "audio": "/audio/sw/civilization.mp3",
+              "sentence": "Language carries civilization.",
+              "sentenceCn": "语言承载文明。"
+            },
+            {
+              "word": "barrier",
+              "phonetic": "ˈbæriə(r)",
+              "pos": "n.",
+              "meaning": "障碍；屏障",
+              "audio": "/audio/sw/barrier.mp3",
+              "sentence": "Language can be a barrier.",
+              "sentenceCn": "语言可能成为障碍。"
+            },
+            {
+              "word": "fluent",
+              "phonetic": "ˈfluːənt",
+              "pos": "adj.",
+              "meaning": "流利的；流畅的",
+              "audio": "/audio/sw/fluent.mp3",
+              "sentence": "She is fluent in French.",
+              "sentenceCn": "她法语很流利。"
+            },
+            {
+              "word": "accent",
+              "phonetic": "ˈæksent",
+              "pos": "n.",
+              "meaning": "口音；重音",
+              "audio": "/audio/sw/accent.mp3",
+              "sentence": "He speaks with a British accent.",
+              "sentenceCn": "他说话带英国口音。"
+            },
+            {
+              "word": "dialect",
+              "phonetic": "ˈdaɪəlekt",
+              "pos": "n.",
+              "meaning": "方言",
+              "audio": "/audio/sw/dialect.mp3",
+              "sentence": "People there speak a local dialect.",
+              "sentenceCn": "那里的人说当地方言。"
+            },
+            {
+              "word": "transmit",
+              "phonetic": "trænzˈmɪt",
+              "pos": "v.",
+              "meaning": "传播；传递",
+              "audio": "/audio/sw/transmit.mp3",
+              "sentence": "Stories transmit culture.",
+              "sentenceCn": "故事传播文化。"
+            },
+            {
+              "word": "trend",
+              "phonetic": "trend",
+              "pos": "n.",
+              "meaning": "趋势；倾向",
+              "audio": "/audio/sw/trend.mp3",
+              "sentence": "English is a global trend.",
+              "sentenceCn": "英语是一种全球趋势。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "现在分词作定语或状语：表示主动、进行，如 speaking English（说英语的）。",
+              "example": "The boy speaking English is my cousin.",
+              "exampleCn": "那个说英语的男孩是我表弟。"
+            },
+            {
+              "point": "主谓一致：集合名词或单数主语用单数动词，并列主语用复数。",
+              "example": "English is useful. / Tom and Jerry are friends.",
+              "exampleCn": "英语很有用。/ 汤姆和杰瑞是朋友。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "The girl ___ French fluently is from Paris.",
+              "options": [
+                "speaking",
+                "spoken",
+                "speak"
+              ],
+              "answer": 0,
+              "analysis": "现在分词 speaking 作定语，表主动。"
+            },
+            {
+              "stem": "He has a good ___ of three languages.",
+              "options": [
+                "command",
+                "commanded",
+                "commanding"
+              ],
+              "answer": 0,
+              "analysis": "have a good command of 熟练掌握。"
+            },
+            {
+              "stem": "English, Chinese and Arabic ___ widely used.",
+              "options": [
+                "are",
+                "is",
+                "was"
+              ],
+              "answer": 0,
+              "analysis": "三个并列主语用复数 are。"
+            },
+            {
+              "stem": "A strong accent can be a communication ___.",
+              "options": [
+                "barrier",
+                "barriers",
+                "barring"
+              ],
+              "answer": 0,
+              "analysis": "barrier 障碍。"
+            },
+            {
+              "stem": "She is ___ in both English and Japanese.",
+              "options": [
+                "fluent",
+                "fluency",
+                "fluid"
+              ],
+              "answer": 0,
+              "analysis": "be fluent in 在…方面流利。"
+            },
+            {
+              "stem": "Each culture is ___ and worth respecting.",
+              "options": [
+                "unique",
+                "uniquely",
+                "union"
+              ],
+              "answer": 0,
+              "analysis": "unique 独特的，作表语。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "b2",
+      "title": "必修第二册",
+      "units": [
+        {
+          "id": "b201",
+          "title": "Unit 1 Cultural Heritage",
+          "topic": "文化遗产 · 保护与交流",
+          "words": [
+            {
+              "word": "heritage",
+              "phonetic": "ˈherɪtɪdʒ",
+              "pos": "n.",
+              "meaning": "遗产（文化、历史）",
+              "audio": "/audio/sw/heritage.mp3",
+              "sentence": "The Great Wall is a world heritage.",
+              "sentenceCn": "长城是世界遗产。"
+            },
+            {
+              "word": "preserve",
+              "phonetic": "prɪˈzɜːv",
+              "pos": "v.",
+              "meaning": "保护；保存",
+              "audio": "/audio/sw/preserve.mp3",
+              "sentence": "We must preserve old buildings.",
+              "sentenceCn": "我们必须保护老建筑。"
+            },
+            {
+              "word": "promote",
+              "phonetic": "prəˈməʊt",
+              "pos": "v.",
+              "meaning": "促进；推广",
+              "audio": "/audio/sw/promote.mp3",
+              "sentence": "The event promotes culture.",
+              "sentenceCn": "该活动推广文化。"
+            },
+            {
+              "word": "balance",
+              "phonetic": "ˈbæləns",
+              "pos": "n./v.",
+              "meaning": "平衡；权衡",
+              "audio": "/audio/sw/balance.mp3",
+              "sentence": "We need a balance between work and rest.",
+              "sentenceCn": "我们需要工作与休息的平衡。"
+            },
+            {
+              "word": "committee",
+              "phonetic": "kəˈmɪti",
+              "pos": "n.",
+              "meaning": "委员会",
+              "audio": "/audio/sw/committee.mp3",
+              "sentence": "A committee was set up.",
+              "sentenceCn": "成立了一个委员会。"
+            },
+            {
+              "word": "worthy",
+              "phonetic": "ˈwɜːði",
+              "pos": "adj.",
+              "meaning": "值得的；有价值的",
+              "audio": "/audio/sw/worthy.mp3",
+              "sentence": "The site is worthy of protection.",
+              "sentenceCn": "该遗址值得保护。"
+            },
+            {
+              "word": "recommend",
+              "phonetic": "ˌrekəˈmend",
+              "pos": "v.",
+              "meaning": "推荐；建议",
+              "audio": "/audio/sw/recommend.mp3",
+              "sentence": "I recommend this museum.",
+              "sentenceCn": "我推荐这家博物馆。"
+            },
+            {
+              "word": "contribute",
+              "phonetic": "kənˈtrɪbjuːt",
+              "pos": "v.",
+              "meaning": "贡献；捐献",
+              "audio": "/audio/sw/contribute.mp3",
+              "sentence": "Tourists contribute to the local economy.",
+              "sentenceCn": "游客为当地经济做贡献。"
+            },
+            {
+              "word": "prevent",
+              "phonetic": "prɪˈvent",
+              "pos": "v.",
+              "meaning": "阻止；防止",
+              "audio": "/audio/sw/prevent.mp3",
+              "sentence": "We should prevent damage.",
+              "sentenceCn": "我们应防止破坏。"
+            },
+            {
+              "word": "establish",
+              "phonetic": "ɪˈstæblɪʃ",
+              "pos": "v.",
+              "meaning": "建立；设立",
+              "audio": "/audio/sw/establish.mp3",
+              "sentence": "They established a fund.",
+              "sentenceCn": "他们设立了一个基金。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "介词 + which / whom 引导的定语从句：表物用 which，表人用 whom。",
+              "example": "The temple in which they prayed is old.",
+              "exampleCn": "他们祈祷的那座庙很古老。"
+            },
+            {
+              "point": "被动语态：be + 过去分词，强调承受者或动作本身。",
+              "example": "The site was protected by law.",
+              "exampleCn": "该遗址受法律保护。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "We must ___ our cultural heritage for the future.",
+              "options": [
+                "preserve",
+                "preserves",
+                "preserving"
+              ],
+              "answer": 0,
+              "analysis": "must 后接动词原形 preserve。"
+            },
+            {
+              "stem": "The museum ___ in 1950 is famous.",
+              "options": [
+                "established",
+                "establishes",
+                "establishing"
+              ],
+              "answer": 0,
+              "analysis": "过去分词 established 作定语，表被动完成。"
+            },
+            {
+              "stem": "This place is ___ of a visit.",
+              "options": [
+                "worthy",
+                "worth",
+                "worship"
+              ],
+              "answer": 0,
+              "analysis": "worthy of 值得…。"
+            },
+            {
+              "stem": "I ___ the local food to every visitor.",
+              "options": [
+                "recommend",
+                "recommends",
+                "recommending"
+              ],
+              "answer": 0,
+              "analysis": "主语 I 后用动词原形 recommend。"
+            },
+            {
+              "stem": "Tourists ___ a lot to the economy.",
+              "options": [
+                "contribute",
+                "contributes",
+                "contributing"
+              ],
+              "answer": 0,
+              "analysis": "复数主语用动词原形 contribute。"
+            },
+            {
+              "stem": "The old bridge was ___ by the flood.",
+              "options": [
+                "destroyed",
+                "destroy",
+                "destroying"
+              ],
+              "answer": 0,
+              "analysis": "被动语态 was destroyed。"
+            }
+          ]
+        },
+        {
+          "id": "b202",
+          "title": "Unit 2 Wildlife Protection",
+          "topic": "野生动物保护",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b203",
+          "title": "Unit 3 The Internet",
+          "topic": "互联网与数字生活",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b204",
+          "title": "Unit 4 History and Traditions",
+          "topic": "历史与传统",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b205",
+          "title": "Unit 5 Music",
+          "topic": "音乐与情感",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    },
+    {
+      "code": "b3",
+      "title": "必修第三册",
+      "units": [
+        {
+          "id": "b301",
+          "title": "Unit 1 Festivals and Celebrations",
+          "topic": "节日与庆典",
+          "words": [
+            {
+              "word": "festival",
+              "phonetic": "ˈfestɪvl",
+              "pos": "n.",
+              "meaning": "节日；节庆",
+              "audio": "/audio/sw/festival.mp3",
+              "sentence": "The Spring Festival is important.",
+              "sentenceCn": "春节很重要。"
+            },
+            {
+              "word": "celebrate",
+              "phonetic": "ˈselɪbreɪt",
+              "pos": "v.",
+              "meaning": "庆祝；庆贺",
+              "audio": "/audio/sw/celebrate.mp3",
+              "sentence": "We celebrate it with a big meal.",
+              "sentenceCn": "我们吃大餐庆祝。"
+            },
+            {
+              "word": "gather",
+              "phonetic": "ˈɡæðə(r)",
+              "pos": "v.",
+              "meaning": "聚集；集合",
+              "audio": "/audio/sw/gather.mp3",
+              "sentence": "Families gather at festivals.",
+              "sentenceCn": "节日里家人团聚。"
+            },
+            {
+              "word": "decorate",
+              "phonetic": "ˈdekəreɪt",
+              "pos": "v.",
+              "meaning": "装饰；布置",
+              "audio": "/audio/sw/decorate.mp3",
+              "sentence": "They decorate the house with lights.",
+              "sentenceCn": "他们用彩灯装饰房子。"
+            },
+            {
+              "word": "feast",
+              "phonetic": "fiːst",
+              "pos": "n.",
+              "meaning": "盛宴；宴会",
+              "audio": "/audio/sw/feast.mp3",
+              "sentence": "We had a feast at night.",
+              "sentenceCn": "我们晚上吃了一顿盛宴。"
+            },
+            {
+              "word": "gratitude",
+              "phonetic": "ˈɡrætɪtjuːd",
+              "pos": "n.",
+              "meaning": "感激；感恩",
+              "audio": "/audio/sw/gratitude.mp3",
+              "sentence": "We show gratitude to guests.",
+              "sentenceCn": "我们向客人表达感激。"
+            },
+            {
+              "word": "origin",
+              "phonetic": "ˈɒrɪdʒɪn",
+              "pos": "n.",
+              "meaning": "起源；起因",
+              "audio": "/audio/sw/origin.mp3",
+              "sentence": "What is the origin of this festival?",
+              "sentenceCn": "这个节日的起源是什么？"
+            },
+            {
+              "word": "custom",
+              "phonetic": "ˈkʌstəm",
+              "pos": "n.",
+              "meaning": "习俗；习惯",
+              "audio": "/audio/sw/custom.mp3",
+              "sentence": "It is a local custom.",
+              "sentenceCn": "这是当地习俗。"
+            },
+            {
+              "word": "harvest",
+              "phonetic": "ˈhɑːvɪst",
+              "pos": "n./v.",
+              "meaning": "收获；收割",
+              "audio": "/audio/sw/harvest.mp3",
+              "sentence": "The harvest festival thanks the land.",
+              "sentenceCn": "丰收节感谢大地。"
+            },
+            {
+              "word": "lantern",
+              "phonetic": "ˈlæntən",
+              "pos": "n.",
+              "meaning": "灯笼；提灯",
+              "audio": "/audio/sw/lantern.mp3",
+              "sentence": "Children carry lanterns.",
+              "sentenceCn": "孩子们提着灯笼。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "情态动词表推测：must 表肯定推测，can't 表否定推测，may 表可能。",
+              "example": "He must be tired after the trip.",
+              "exampleCn": "旅途后他一定累了。"
+            },
+            {
+              "point": "名词性从句：what 引导主语/宾语/表语从句，表示\"…的事物\"。",
+              "example": "What we need is time.",
+              "exampleCn": "我们需要的是时间。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "Families ___ together during the Spring Festival.",
+              "options": [
+                "gather",
+                "gathers",
+                "gathering"
+              ],
+              "answer": 0,
+              "analysis": "复数主语用动词原形 gather。"
+            },
+            {
+              "stem": "He ___ be the owner — I saw him leave.",
+              "options": [
+                "can't",
+                "must",
+                "may"
+              ],
+              "answer": 0,
+              "analysis": "can't 表否定推测，意为\"不可能\"。"
+            },
+            {
+              "stem": "They ___ the street with red flags.",
+              "options": [
+                "decorated",
+                "decorate",
+                "decorating"
+              ],
+              "answer": 0,
+              "analysis": "描述已发生用过去时 decorated。"
+            },
+            {
+              "stem": "___ we need most is a plan.",
+              "options": [
+                "What",
+                "That",
+                "Which"
+              ],
+              "answer": 0,
+              "analysis": "what 引导主语从句，表\"…的事物\"。"
+            },
+            {
+              "stem": "The ___ of the festival is a harvest thanks.",
+              "options": [
+                "origin",
+                "original",
+                "originate"
+              ],
+              "answer": 0,
+              "analysis": "origin 起源。"
+            },
+            {
+              "stem": "We show ___ to our teachers.",
+              "options": [
+                "gratitude",
+                "grateful",
+                "grade"
+              ],
+              "answer": 0,
+              "analysis": "show gratitude 表达感激。"
+            }
+          ]
+        },
+        {
+          "id": "b302",
+          "title": "Unit 2 Healthy Eating",
+          "topic": "健康饮食",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b303",
+          "title": "Unit 3 Diverse Cultures",
+          "topic": "多元文化",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b304",
+          "title": "Unit 4 Space Exploration",
+          "topic": "太空探索",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "b305",
+          "title": "Unit 5 The Value of Money",
+          "topic": "金钱的价值",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    },
+    {
+      "code": "x1",
+      "title": "选择性必修第一册",
+      "units": [
+        {
+          "id": "x101",
+          "title": "Unit 1 People of Achievement",
+          "topic": "杰出人物 · 传记与成就",
+          "words": [
+            {
+              "word": "achieve",
+              "phonetic": "əˈtʃiːv",
+              "pos": "v.",
+              "meaning": "实现；达成",
+              "audio": "/audio/sw/achieve.mp3",
+              "sentence": "She achieved her dream.",
+              "sentenceCn": "她实现了梦想。"
+            },
+            {
+              "word": "contribution",
+              "phonetic": "ˌkɒntrɪˈbjuːʃn",
+              "pos": "n.",
+              "meaning": "贡献",
+              "audio": "/audio/sw/contribution.mp3",
+              "sentence": "His contribution was great.",
+              "sentenceCn": "他的贡献很大。"
+            },
+            {
+              "word": "devote",
+              "phonetic": "dɪˈvəʊt",
+              "pos": "v.",
+              "meaning": "致力于；奉献",
+              "audio": "/audio/sw/devote.mp3",
+              "sentence": "He devoted his life to science.",
+              "sentenceCn": "他毕生奉献于科学。"
+            },
+            {
+              "word": "exceptional",
+              "phonetic": "ɪkˈsepʃənl",
+              "pos": "adj.",
+              "meaning": "杰出的；异常的",
+              "audio": "/audio/sw/exceptional.mp3",
+              "sentence": "She has exceptional talent.",
+              "sentenceCn": "她才华出众。"
+            },
+            {
+              "word": "determined",
+              "phonetic": "dɪˈtɜːmɪnd",
+              "pos": "adj.",
+              "meaning": "下定决心的；坚定的",
+              "audio": "/audio/sw/determined.mp3",
+              "sentence": "He was determined to win.",
+              "sentenceCn": "他下定决心要赢。"
+            },
+            {
+              "word": "intelligent",
+              "phonetic": "ɪnˈtelɪdʒənt",
+              "pos": "adj.",
+              "meaning": "聪明的；有智力的",
+              "audio": "/audio/sw/intelligent.mp3",
+              "sentence": "The child is highly intelligent.",
+              "sentenceCn": "这孩子非常聪明。"
+            },
+            {
+              "word": "generous",
+              "phonetic": "ˈdʒenərəs",
+              "pos": "adj.",
+              "meaning": "慷慨的；大方的",
+              "audio": "/audio/sw/generous.mp3",
+              "sentence": "He is generous with his time.",
+              "sentenceCn": "他慷慨地付出时间。"
+            },
+            {
+              "word": "acquire",
+              "phonetic": "əˈkwaɪə(r)",
+              "pos": "v.",
+              "meaning": "获得；习得",
+              "audio": "/audio/sw/acquire.mp3",
+              "sentence": "She acquired many skills.",
+              "sentenceCn": "她习得了许多技能。"
+            },
+            {
+              "word": "inspire",
+              "phonetic": "ɪnˈspaɪə(r)",
+              "pos": "v.",
+              "meaning": "激励；启发",
+              "audio": "/audio/sw/inspire.mp3",
+              "sentence": "His story inspired us.",
+              "sentenceCn": "他的故事激励了我们。"
+            },
+            {
+              "word": "outstanding",
+              "phonetic": "aʊtˈstændɪŋ",
+              "pos": "adj.",
+              "meaning": "杰出的；出色的",
+              "audio": "/audio/sw/outstanding.mp3",
+              "sentence": "She is an outstanding scientist.",
+              "sentenceCn": "她是位杰出的科学家。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "非谓语动词：不定式 to do、动名词 doing、分词作状语/定语，使句子更简洁。",
+              "example": "To succeed, you must work hard.",
+              "exampleCn": "要成功，你必须努力。"
+            },
+            {
+              "point": "定语从句：who / whom / whose 指人，在从句中分别作主、宾、定语。",
+              "example": "The scientist whose theory changed the world was Einstein.",
+              "exampleCn": "改变世界的那位科学家是爱因斯坦。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "He ___ his life to helping others.",
+              "options": [
+                "devoted",
+                "devotes",
+                "devoting"
+              ],
+              "answer": 0,
+              "analysis": "devote...to... 奉献于…；此处作谓语用过去时 devoted。"
+            },
+            {
+              "stem": "___ succeed, you need to keep trying.",
+              "options": [
+                "To",
+                "For",
+                "Of"
+              ],
+              "answer": 0,
+              "analysis": "不定式 To succeed 作目的状语。"
+            },
+            {
+              "stem": "The writer ___ book won a prize is my friend.",
+              "options": [
+                "whose",
+                "who",
+                "which"
+              ],
+              "answer": 0,
+              "analysis": "whose 在定语从句中作定语，表\"…的\"。"
+            },
+            {
+              "stem": "She is an ___ student in every way.",
+              "options": [
+                "outstanding",
+                "outstand",
+                "outstood"
+              ],
+              "answer": 0,
+              "analysis": "outstanding 杰出的，作定语。"
+            },
+            {
+              "stem": "His ___ to medicine saved many lives.",
+              "options": [
+                "contribution",
+                "contribute",
+                "contributing"
+              ],
+              "answer": 0,
+              "analysis": "his 后接名词 contribution（贡献）。"
+            },
+            {
+              "stem": "We were ___ by her brave story.",
+              "options": [
+                "inspired",
+                "inspire",
+                "inspiring"
+              ],
+              "answer": 0,
+              "analysis": "被动语态 were inspired（被激励）。"
+            }
+          ]
+        },
+        {
+          "id": "x102",
+          "title": "Unit 2 Looking into the Future",
+          "topic": "展望未来",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x103",
+          "title": "Unit 3 Fascinating Parks",
+          "topic": "迷人的公园",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x104",
+          "title": "Unit 4 Body Language",
+          "topic": "肢体语言",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x105",
+          "title": "Unit 5 Working the Land",
+          "topic": "耕耘土地",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    },
+    {
+      "code": "x2",
+      "title": "选择性必修第二册",
+      "units": [
+        {
+          "id": "x201",
+          "title": "Unit 1 Science and Scientists",
+          "topic": "科学家与科学精神",
+          "words": [
+            {
+              "word": "scientific",
+              "phonetic": "ˌsaɪənˈtɪfɪk",
+              "pos": "adj.",
+              "meaning": "科学的",
+              "audio": "/audio/sw/scientific.mp3",
+              "sentence": "We need a scientific method.",
+              "sentenceCn": "我们需要科学的方法。"
+            },
+            {
+              "word": "theory",
+              "phonetic": "ˈθɪəri",
+              "pos": "n.",
+              "meaning": "理论；学说",
+              "audio": "/audio/sw/theory.mp3",
+              "sentence": "His theory changed physics.",
+              "sentenceCn": "他的理论改变了物理学。"
+            },
+            {
+              "word": "discover",
+              "phonetic": "dɪˈskʌvə(r)",
+              "pos": "v.",
+              "meaning": "发现",
+              "audio": "/audio/sw/discover.mp3",
+              "sentence": "They discovered a new planet.",
+              "sentenceCn": "他们发现了一颗新行星。"
+            },
+            {
+              "word": "phenomenon",
+              "phonetic": "fəˈnɒmɪnən",
+              "pos": "n.",
+              "meaning": "现象",
+              "audio": "/audio/sw/phenomenon.mp3",
+              "sentence": "This is a natural phenomenon.",
+              "sentenceCn": "这是一种自然现象。"
+            },
+            {
+              "word": "evidence",
+              "phonetic": "ˈevɪdəns",
+              "pos": "n.",
+              "meaning": "证据；证明",
+              "audio": "/audio/sw/evidence.mp3",
+              "sentence": "We need solid evidence.",
+              "sentenceCn": "我们需要确凿的证据。"
+            },
+            {
+              "word": "hypothesis",
+              "phonetic": "haɪˈpɒθəsɪs",
+              "pos": "n.",
+              "meaning": "假说；假设",
+              "audio": "/audio/sw/hypothesis.mp3",
+              "sentence": "The hypothesis was tested.",
+              "sentenceCn": "该假说经过了检验。"
+            },
+            {
+              "word": "conduct",
+              "phonetic": "kənˈdʌkt",
+              "pos": "v.",
+              "meaning": "进行；实施",
+              "audio": "/audio/sw/conduct.mp3",
+              "sentence": "They conducted an experiment.",
+              "sentenceCn": "他们做了一项实验。"
+            },
+            {
+              "word": "publish",
+              "phonetic": "ˈpʌblɪʃ",
+              "pos": "v.",
+              "meaning": "出版；发表",
+              "audio": "/audio/sw/publish.mp3",
+              "sentence": "She published a paper.",
+              "sentenceCn": "她发表了一篇论文。"
+            },
+            {
+              "word": "breakthrough",
+              "phonetic": "ˈbreɪkθruː",
+              "pos": "n.",
+              "meaning": "突破；重大进展",
+              "audio": "/audio/sw/breakthrough.mp3",
+              "sentence": "The research made a breakthrough.",
+              "sentenceCn": "研究取得了突破。"
+            },
+            {
+              "word": "conclude",
+              "phonetic": "kənˈkluːd",
+              "pos": "v.",
+              "meaning": "得出结论；总结",
+              "audio": "/audio/sw/conclude.mp3",
+              "sentence": "We concluded the test was valid.",
+              "sentenceCn": "我们得出结论：测试有效。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "现在完成时被动语态：have/has been + 过去分词，强调已完成且影响延续。",
+              "example": "The theory has been proved.",
+              "exampleCn": "该理论已被证实。"
+            },
+            {
+              "point": "名词性从句作主语/宾语：what / that 引导，如 What he said is true.",
+              "example": "That he was right has been shown.",
+              "exampleCn": "他是对的这一点已被证明。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "The experiment has ___ successfully.",
+              "options": [
+                "been conducted",
+                "conducted",
+                "conducting"
+              ],
+              "answer": 0,
+              "analysis": "现在完成时被动 has been conducted。"
+            },
+            {
+              "stem": "They ___ a new way to treat the disease.",
+              "options": [
+                "discovered",
+                "discovers",
+                "discovering"
+              ],
+              "answer": 0,
+              "analysis": "描述已发生用过去时 discovered。"
+            },
+            {
+              "stem": "We need more ___ to support the claim.",
+              "options": [
+                "evidence",
+                "evident",
+                "evidently"
+              ],
+              "answer": 0,
+              "analysis": "more 后接名词 evidence（证据）。"
+            },
+            {
+              "stem": "His ___ changed how we see the universe.",
+              "options": [
+                "theory",
+                "theoretical",
+                "theorize"
+              ],
+              "answer": 0,
+              "analysis": "his 后接名词 theory（理论）。"
+            },
+            {
+              "stem": "The team ___ the study last year.",
+              "options": [
+                "conducted",
+                "conduct",
+                "conducts"
+              ],
+              "answer": 0,
+              "analysis": "last year 用过去时 conducted。"
+            },
+            {
+              "stem": "She ___ her findings in a journal.",
+              "options": [
+                "published",
+                "publishes",
+                "publishing"
+              ],
+              "answer": 0,
+              "analysis": "她发表了发现，用过去时 published。"
+            }
+          ]
+        },
+        {
+          "id": "x202",
+          "title": "Unit 2 Bridging Cultures",
+          "topic": "文化桥梁",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x203",
+          "title": "Unit 3 Food and Culture",
+          "topic": "饮食与文化",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x204",
+          "title": "Unit 4 Journey Across a Vast Land",
+          "topic": "穿越广袤大地",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x205",
+          "title": "Unit 5 First Aid",
+          "topic": "急救常识",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    },
+    {
+      "code": "x3",
+      "title": "选择性必修第三册",
+      "units": [
+        {
+          "id": "x301",
+          "title": "Unit 1 Art",
+          "topic": "艺术形式与欣赏",
+          "words": [
+            {
+              "word": "gallery",
+              "phonetic": "ˈɡæləri",
+              "pos": "n.",
+              "meaning": "画廊；美术馆",
+              "audio": "/audio/sw/gallery.mp3",
+              "sentence": "We visited an art gallery.",
+              "sentenceCn": "我们参观了一家美术馆。"
+            },
+            {
+              "word": "sculpture",
+              "phonetic": "ˈskʌlptʃə(r)",
+              "pos": "n.",
+              "meaning": "雕塑；雕刻",
+              "audio": "/audio/sw/sculpture.mp3",
+              "sentence": "The sculpture is made of stone.",
+              "sentenceCn": "这座雕塑由石头制成。"
+            },
+            {
+              "word": "portrait",
+              "phonetic": "ˈpɔːtreɪt",
+              "pos": "n.",
+              "meaning": "肖像；画像",
+              "audio": "/audio/sw/portrait.mp3",
+              "sentence": "He painted a portrait of his mother.",
+              "sentenceCn": "他画了一幅母亲的肖像。"
+            },
+            {
+              "word": "exhibit",
+              "phonetic": "ɪɡˈzɪbɪt",
+              "pos": "v./n.",
+              "meaning": "展览；展品",
+              "audio": "/audio/sw/exhibit.mp3",
+              "sentence": "The museum exhibits old coins.",
+              "sentenceCn": "博物馆展出了古币。"
+            },
+            {
+              "word": "contemporary",
+              "phonetic": "kənˈtemprəri",
+              "pos": "adj.",
+              "meaning": "当代的；同时代的",
+              "audio": "/audio/sw/contemporary.mp3",
+              "sentence": "I like contemporary art.",
+              "sentenceCn": "我喜欢当代艺术。"
+            },
+            {
+              "word": "masterpiece",
+              "phonetic": "ˈmɑːstəpiːs",
+              "pos": "n.",
+              "meaning": "杰作；名著",
+              "audio": "/audio/sw/masterpiece.mp3",
+              "sentence": "This is a masterpiece.",
+              "sentenceCn": "这是一件杰作。"
+            },
+            {
+              "word": "convey",
+              "phonetic": "kənˈveɪ",
+              "pos": "v.",
+              "meaning": "传达；表达",
+              "audio": "/audio/sw/convey.mp3",
+              "sentence": "Art conveys feelings.",
+              "sentenceCn": "艺术传达情感。"
+            },
+            {
+              "word": "abstract",
+              "phonetic": "ˈæbstrækt",
+              "pos": "adj.",
+              "meaning": "抽象的",
+              "audio": "/audio/sw/abstract.mp3",
+              "sentence": "The painting is abstract.",
+              "sentenceCn": "这幅画是抽象的。"
+            },
+            {
+              "word": "realistic",
+              "phonetic": "ˌriːəˈlɪstɪk",
+              "pos": "adj.",
+              "meaning": "现实的；写实主义的",
+              "audio": "/audio/sw/realistic.mp3",
+              "sentence": "The drawing is very realistic.",
+              "sentenceCn": "这幅画非常写实。"
+            },
+            {
+              "word": "perspective",
+              "phonetic": "pəˈspektɪv",
+              "pos": "n.",
+              "meaning": "视角；透视",
+              "audio": "/audio/sw/perspective.mp3",
+              "sentence": "The artist changed perspective.",
+              "sentenceCn": "艺术家改变了视角。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "定语从句：that / which / who 引导，修饰名词，使描述更紧凑。",
+              "example": "The painting which won the prize is famous.",
+              "exampleCn": "获奖的那幅画很有名。"
+            },
+            {
+              "point": "非谓语动词作定语：现在分词表主动，过去分词表被动。",
+              "example": "The exhibited works attracted many visitors.",
+              "exampleCn": "展出的作品吸引了许多观众。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "The museum ___ works by local artists.",
+              "options": [
+                "exhibits",
+                "exhibit",
+                "exhibiting"
+              ],
+              "answer": 0,
+              "analysis": "主语 museum 单数，动词用 exhibits。"
+            },
+            {
+              "stem": "The painting ___ won a prize is by Picasso.",
+              "options": [
+                "which",
+                "who",
+                "what"
+              ],
+              "answer": 0,
+              "analysis": "先行词 painting 指物，用 which 引导定语从句。"
+            },
+            {
+              "stem": "Art can ___ deep feelings.",
+              "options": [
+                "convey",
+                "conveys",
+                "conveying"
+              ],
+              "answer": 0,
+              "analysis": "can 后接动词原形 convey（传达）。"
+            },
+            {
+              "stem": "This is a ___ of modern architecture.",
+              "options": [
+                "masterpiece",
+                "master",
+                "mastery"
+              ],
+              "answer": 0,
+              "analysis": "a masterpiece 杰作。"
+            },
+            {
+              "stem": "I prefer ___ art to classical art.",
+              "options": [
+                "contemporary",
+                "contemporaries",
+                "contemporarily"
+              ],
+              "answer": 0,
+              "analysis": "contemporary art 当代艺术。"
+            },
+            {
+              "stem": "The ___ works were painted in the 19th century.",
+              "options": [
+                "exhibited",
+                "exhibit",
+                "exhibiting"
+              ],
+              "answer": 0,
+              "analysis": "过去分词 exhibited 作定语，表被动。"
+            }
+          ]
+        },
+        {
+          "id": "x302",
+          "title": "Unit 2 Healthy Lifestyle",
+          "topic": "健康生活方式",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x303",
+          "title": "Unit 3 Environmental Protection",
+          "topic": "环境保护",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x304",
+          "title": "Unit 4 Adversity and Courage",
+          "topic": "逆境与勇气",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x305",
+          "title": "Unit 5 Poems",
+          "topic": "诗歌欣赏",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    },
+    {
+      "code": "x4",
+      "title": "选择性必修第四册",
+      "units": [
+        {
+          "id": "x401",
+          "title": "Unit 1 Science Fiction",
+          "topic": "科幻文学与想象",
+          "words": [
+            {
+              "word": "fiction",
+              "phonetic": "ˈfɪkʃn",
+              "pos": "n.",
+              "meaning": "小说；虚构",
+              "audio": "/audio/sw/fiction.mp3",
+              "sentence": "Science fiction is popular.",
+              "sentenceCn": "科幻小说很受欢迎。"
+            },
+            {
+              "word": "alien",
+              "phonetic": "ˈeɪliən",
+              "pos": "n./adj.",
+              "meaning": "外星人；外国的",
+              "audio": "/audio/sw/alien.mp3",
+              "sentence": "The film is about aliens.",
+              "sentenceCn": "这部电影关于外星人。"
+            },
+            {
+              "word": "spacecraft",
+              "phonetic": "ˈspeɪskrɑːft",
+              "pos": "n.",
+              "meaning": "航天器；宇宙飞船",
+              "audio": "/audio/sw/spacecraft.mp3",
+              "sentence": "The spacecraft landed safely.",
+              "sentenceCn": "航天器安全着陆。"
+            },
+            {
+              "word": "dimension",
+              "phonetic": "daɪˈmenʃn",
+              "pos": "n.",
+              "meaning": "维度；方面",
+              "audio": "/audio/sw/dimension.mp3",
+              "sentence": "The story has another dimension.",
+              "sentenceCn": "这个故事另有维度。"
+            },
+            {
+              "word": "artificial",
+              "phonetic": "ˌɑːtɪˈfɪʃl",
+              "pos": "adj.",
+              "meaning": "人工的；人造的",
+              "audio": "/audio/sw/artificial.mp3",
+              "sentence": "AI is artificial intelligence.",
+              "sentenceCn": "AI 是人工智能。"
+            },
+            {
+              "word": "consciousness",
+              "phonetic": "ˈkɒnʃəsnəs",
+              "pos": "n.",
+              "meaning": "意识；知觉",
+              "audio": "/audio/sw/consciousness.mp3",
+              "sentence": "The robot gained consciousness.",
+              "sentenceCn": "机器人获得了意识。"
+            },
+            {
+              "word": "evolve",
+              "phonetic": "ɪˈvɒlv",
+              "pos": "v.",
+              "meaning": "进化；发展",
+              "audio": "/audio/sw/evolve.mp3",
+              "sentence": "Humans evolved over millions of years.",
+              "sentenceCn": "人类历经数百万年进化。"
+            },
+            {
+              "word": "narrative",
+              "phonetic": "ˈnærətɪv",
+              "pos": "n.",
+              "meaning": "叙事；叙述",
+              "audio": "/audio/sw/narrative.mp3",
+              "sentence": "The narrative is complex.",
+              "sentenceCn": "叙事很复杂。"
+            },
+            {
+              "word": "premise",
+              "phonetic": "ˈpremɪs",
+              "pos": "n.",
+              "meaning": "前提；假设",
+              "audio": "/audio/sw/premise.mp3",
+              "sentence": "The story's premise is interesting.",
+              "sentenceCn": "这个故事的前提很有趣。"
+            },
+            {
+              "word": "speculative",
+              "phonetic": "ˈspekjələtɪv",
+              "pos": "adj.",
+              "meaning": "推测的；思辨的",
+              "audio": "/audio/sw/speculative.mp3",
+              "sentence": "Sci-fi is speculative fiction.",
+              "sentenceCn": "科幻是思辨性小说。"
+            }
+          ],
+          "grammars": [
+            {
+              "point": "虚拟语气：if 引导的非真实条件句，表示与现在/过去事实相反的假设。",
+              "example": "If I were an alien, I would explore Earth.",
+              "exampleCn": "如果我是外星人，我会探索地球。"
+            },
+            {
+              "point": "定语从句：that / which 修饰物，who 修饰人，在从句中作成分。",
+              "example": "A world which has no war is our hope.",
+              "exampleCn": "没有战争的世界是我们的希望。"
+            }
+          ],
+          "questions": [
+            {
+              "stem": "If I ___ an alien, I would visit another planet.",
+              "options": [
+                "were",
+                "am",
+                "be"
+              ],
+              "answer": 0,
+              "analysis": "与现在事实相反的虚拟语气，be 用 were。"
+            },
+            {
+              "stem": "The ___ landed on a distant planet.",
+              "options": [
+                "spacecraft",
+                "space",
+                "spaceship's"
+              ],
+              "answer": 0,
+              "analysis": "spacecraft 航天器，单复数同形。"
+            },
+            {
+              "stem": "AI means ___ intelligence.",
+              "options": [
+                "artificial",
+                "artifice",
+                "artist"
+              ],
+              "answer": 0,
+              "analysis": "artificial intelligence 人工智能。"
+            },
+            {
+              "stem": "The novel's ___ is about time travel.",
+              "options": [
+                "premise",
+                "premises",
+                "premising"
+              ],
+              "answer": 0,
+              "analysis": "premise 前提。"
+            },
+            {
+              "stem": "Humans ___ from ancient apes.",
+              "options": [
+                "evolved",
+                "evolve",
+                "evolving"
+              ],
+              "answer": 0,
+              "analysis": "描述已发生用过去时 evolved。"
+            },
+            {
+              "stem": "A story ___ makes us think is good sci-fi.",
+              "options": [
+                "which",
+                "who",
+                "what"
+              ],
+              "answer": 0,
+              "analysis": "先行词 story 指物，用 which 引导定语从句。"
+            }
+          ]
+        },
+        {
+          "id": "x402",
+          "title": "Unit 2 Iconic Attractions",
+          "topic": "标志性景点",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x403",
+          "title": "Unit 3 Sea Exploration",
+          "topic": "海洋探索",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x404",
+          "title": "Unit 4 Sharing",
+          "topic": "分享与互助",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        },
+        {
+          "id": "x405",
+          "title": "Unit 5 Launching Your Career",
+          "topic": "职业生涯启航",
+          "words": [],
+          "grammars": [],
+          "questions": []
+        }
+      ]
+    }
+  ]
+}
