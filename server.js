@@ -35,6 +35,12 @@ const pexam = load('primary_exam.json', { volumes: [] }); // 校内期末同步�
 const TRIAL_EX = 'ex3a'; // 期末包体验模式：未授权仅可练习第 1 套
 const jlink = load('junior_link.json', { units: [] }); // 小升初衔接包
 const TRIAL_JL = 'jl1'; // 衔接包体验模式：未授权仅可学习第 1 单元
+const jwords = load('junior_words.json', { groups: [] }); // 初中英语单词听读背记
+const TRIAL_JW = 'jw7a'; // 初中词体验：未授权仅可学习第 1 组
+const jbook = load('junior_textbook.json', { books: [] }); // 初中课本章节同步训练
+const TRIAL_JU = '7a01'; // 课本体验：未授权仅可学习第 1 单元
+const jgram = load('junior_grammar.json', { topics: [] }); // 初中英语语法知识点详解
+const TRIAL_JG = 'g01'; // 语法体验：未授权仅可学习第 1 专题
 const gread = load('graded_reading.json', { levels: [] }); // 分级阅读
 const TRIAL_RD = 'r1a1'; // 分级阅读体验模式：未授权仅可阅读第 1 篇
 const kw = load('ket_words.json', { groups: [] }); // KET 核心词
@@ -873,6 +879,60 @@ const srv = http.createServer(async (req, res) => {
       }
       const list = jlink.units.map(un => ({ id: un.id, title: un.title, grammar: un.grammar.length, words: un.words.length, practice: un.practice.length }));
       return ok(res, { units: authed ? list : list.filter(un => un.id === TRIAL_JL), trial: !authed });
+    }
+    // —— 初中英语单词听读背记：组列表 / 单组（未授权 = 体验模式，仅放行第 1 组）——
+    if (u === '/api/junior-words' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      if (user.expiry && Number(user.expiry) <= Date.now()) return err(res, 403, '授权已过期，请联系管理员续费或重新激活');
+      const authed = modAuthed(user, 'primary');
+      const gid = q.words || q.group;
+      if (gid) {
+        const g = jwords.groups.find(x => x.id === gid);
+        if (!g) return err(res, 404, '主题不存在');
+        if (!authed && gid !== TRIAL_JW) return err(res, 403, '体验模式仅可学习 ' + TRIAL_JW + '，输入授权码或联系管理员解锁全部主题');
+        return ok(res, g);
+      }
+      const groups = jwords.groups.map(g => ({ id: g.id, grade: g.grade, title: g.title, count: g.words.length }));
+      return ok(res, { groups: authed ? groups : groups.filter(g => g.id === TRIAL_JW), trial: !authed });
+    }
+    // —— 初中课本章节同步训练：册/单元列表 / 单单元（未授权 = 体验模式，仅放行第 1 单元）——
+    if (u === '/api/junior-textbook' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      if (user.expiry && Number(user.expiry) <= Date.now()) return err(res, 403, '授权已过期，请联系管理员续费或重新激活');
+      const authed = modAuthed(user, 'primary');
+      const uid = q.unit;
+      if (uid) {
+        let uu = null;
+        for (const b of jbook.books) { const f = b.units.find(x => x.id === uid); if (f) { uu = f; break; } }
+        if (!uu) return err(res, 404, '单元不存在');
+        if (!authed && uid !== TRIAL_JU) return err(res, 403, '体验模式仅可学习 ' + TRIAL_JU + '，输入授权码或联系管理员解锁全部单元');
+        return ok(res, uu);
+      }
+      const list = jbook.books.map(b => ({ code: b.code, title: b.title, units: b.units.map(un => ({ id: un.id, title: un.title, topic: un.topic, words: un.words.length, grammars: un.grammars.length, questions: un.questions.length })) }));
+      if (authed) return ok(res, { books: list, trial: false });
+      const slim = list.map(b => ({ ...b, units: b.units.filter(un => un.id === TRIAL_JU) })).filter(b => b.units.length > 0);
+      return ok(res, { books: slim, trial: true });
+    }
+    // —— 初中英语语法知识点详解：专题列表 / 单专题（未授权 = 体验模式，仅放行第 1 专题）——
+    if (u === '/api/junior-grammar' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      if (user.expiry && Number(user.expiry) <= Date.now()) return err(res, 403, '授权已过期，请联系管理员续费或重新激活');
+      const authed = modAuthed(user, 'primary');
+      const tid = q.topic;
+      if (tid) {
+        const t = jgram.topics.find(x => x.id === tid);
+        if (!t) return err(res, 404, '专题不存在');
+        if (!authed && tid !== TRIAL_JG) return err(res, 403, '体验模式仅可学习 ' + TRIAL_JG + '，输入授权码或联系管理员解锁全部专题');
+        return ok(res, t);
+      }
+      const list = jgram.topics.map(t => ({ id: t.id, title: t.title, points: t.points.length }));
+      return ok(res, { topics: authed ? list : list.filter(t => t.id === TRIAL_JG), trial: !authed });
     }
     // —— 分级阅读：级别列表 / 单篇（未授权 = 体验模式，仅放行第 1 篇）——
     if (u === '/api/graded-reading' && req.method === 'GET') {

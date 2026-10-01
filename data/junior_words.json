@@ -1,0 +1,3092 @@
+{
+  "product": "初中英语单词高效记忆",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "中考核心词汇按年级与主题分组；每词含音标/词性/词义/例句；支持听/读/背/记四模式；audio 为英音单词发音",
+  "groups": [
+    {
+      "id": "jw7a",
+      "grade": 7,
+      "title": "家庭与人物",
+      "words": [
+        {
+          "id": "jw7a01",
+          "word": "family",
+          "phonetic": "ˈfæməli",
+          "pos": "n.",
+          "meaning": "家庭；家人",
+          "sentence": "My family has four people.",
+          "sentenceCn": "我家有四口人。",
+          "audio": "/audio/jw/jw7a01.mp3"
+        },
+        {
+          "id": "jw7a02",
+          "word": "parent",
+          "phonetic": "ˈpeərənt",
+          "pos": "n.",
+          "meaning": "父亲；母亲（常用复数 parents）",
+          "sentence": "My parents are both teachers.",
+          "sentenceCn": "我父母都是老师。",
+          "audio": "/audio/jw/jw7a02.mp3"
+        },
+        {
+          "id": "jw7a03",
+          "word": "brother",
+          "phonetic": "ˈbrʌðə",
+          "pos": "n.",
+          "meaning": "兄；弟",
+          "sentence": "My brother is two years older than me.",
+          "sentenceCn": "我哥哥比我大两岁。",
+          "audio": "/audio/jw/jw7a03.mp3"
+        },
+        {
+          "id": "jw7a04",
+          "word": "sister",
+          "phonetic": "ˈsɪstə",
+          "pos": "n.",
+          "meaning": "姐；妹",
+          "sentence": "His sister studies in a middle school.",
+          "sentenceCn": "他姐姐在一所中学读书。",
+          "audio": "/audio/jw/jw7a04.mp3"
+        },
+        {
+          "id": "jw7a05",
+          "word": "grandma",
+          "phonetic": "ˈɡrænmɑː",
+          "pos": "n.",
+          "meaning": "奶奶；外婆",
+          "sentence": "Grandma tells me stories every night.",
+          "sentenceCn": "奶奶每晚给我讲故事。",
+          "audio": "/audio/jw/jw7a05.mp3"
+        },
+        {
+          "id": "jw7a06",
+          "word": "grandpa",
+          "phonetic": "ˈɡrænpɑː",
+          "pos": "n.",
+          "meaning": "爷爷；外公",
+          "sentence": "Grandpa takes a walk after dinner.",
+          "sentenceCn": "爷爷晚饭后去散步。",
+          "audio": "/audio/jw/jw7a06.mp3"
+        },
+        {
+          "id": "jw7a07",
+          "word": "cousin",
+          "phonetic": "ˈkʌzn",
+          "pos": "n.",
+          "meaning": "表（堂）兄弟姐妹",
+          "sentence": "My cousin and I are in the same school.",
+          "sentenceCn": "我表哥和我在同一所学校。",
+          "audio": "/audio/jw/jw7a07.mp3"
+        },
+        {
+          "id": "jw7a08",
+          "word": "uncle",
+          "phonetic": "ˈʌŋkl",
+          "pos": "n.",
+          "meaning": "叔叔；舅舅；伯父",
+          "sentence": "Uncle Li works in a hospital.",
+          "sentenceCn": "李叔叔在医院工作。",
+          "audio": "/audio/jw/jw7a08.mp3"
+        },
+        {
+          "id": "jw7a09",
+          "word": "aunt",
+          "phonetic": "ɑːnt",
+          "pos": "n.",
+          "meaning": "姑母；姨母；伯母",
+          "sentence": "Aunt Wang is a kind woman.",
+          "sentenceCn": "王阿姨是一位善良的女人。",
+          "audio": "/audio/jw/jw7a09.mp3"
+        },
+        {
+          "id": "jw7a10",
+          "word": "daughter",
+          "phonetic": "ˈdɔːtə",
+          "pos": "n.",
+          "meaning": "女儿",
+          "sentence": "Their daughter is only five years old.",
+          "sentenceCn": "他们的女儿只有五岁。",
+          "audio": "/audio/jw/jw7a10.mp3"
+        },
+        {
+          "id": "jw7a11",
+          "word": "son",
+          "phonetic": "sʌn",
+          "pos": "n.",
+          "meaning": "儿子",
+          "sentence": "His son wants to be a pilot.",
+          "sentenceCn": "他的儿子想当飞行员。",
+          "audio": "/audio/jw/jw7a11.mp3"
+        },
+        {
+          "id": "jw7a12",
+          "word": "friend",
+          "phonetic": "frend",
+          "pos": "n.",
+          "meaning": "朋友",
+          "sentence": "A real friend helps you when you are in trouble.",
+          "sentenceCn": "真正的朋友在你困难时会帮你。",
+          "audio": "/audio/jw/jw7a12.mp3"
+        },
+        {
+          "id": "jw7a13",
+          "word": "neighbour",
+          "phonetic": "ˈneɪbə",
+          "pos": "n.",
+          "meaning": "邻居",
+          "sentence": "Our neighbour often waters my flowers.",
+          "sentenceCn": "我们的邻居经常帮我浇花。",
+          "audio": "/audio/jw/jw7a13.mp3"
+        },
+        {
+          "id": "jw7a14",
+          "word": "classmate",
+          "phonetic": "ˈklɑːsmeɪt",
+          "pos": "n.",
+          "meaning": "同班同学",
+          "sentence": "My classmates are all friendly to me.",
+          "sentenceCn": "我的同学们对我都很友好。",
+          "audio": "/audio/jw/jw7a14.mp3"
+        },
+        {
+          "id": "jw7a15",
+          "word": "people",
+          "phonetic": "ˈpiːpl",
+          "pos": "n.",
+          "meaning": "人们；人",
+          "sentence": "There are many people in the park on Sunday.",
+          "sentenceCn": "星期天公园里有很多人。",
+          "audio": "/audio/jw/jw7a15.mp3"
+        },
+        {
+          "id": "jw7a16",
+          "word": "child",
+          "phonetic": "tʃaɪld",
+          "pos": "n.",
+          "meaning": "儿童（复数 children）",
+          "sentence": "Every child loves games.",
+          "sentenceCn": "每个孩子都爱游戏。",
+          "audio": "/audio/jw/jw7a16.mp3"
+        },
+        {
+          "id": "jw7a17",
+          "word": "baby",
+          "phonetic": "ˈbeɪbi",
+          "pos": "n.",
+          "meaning": "婴儿",
+          "sentence": "The baby is sleeping now.",
+          "sentenceCn": "婴儿正在睡觉。",
+          "audio": "/audio/jw/jw7a17.mp3"
+        },
+        {
+          "id": "jw7a18",
+          "word": "tall",
+          "phonetic": "tɔːl",
+          "pos": "adj.",
+          "meaning": "高的",
+          "sentence": "My father is tall and thin.",
+          "sentenceCn": "我爸爸又高又瘦。",
+          "audio": "/audio/jw/jw7a18.mp3"
+        },
+        {
+          "id": "jw7a19",
+          "word": "kind",
+          "phonetic": "kaɪnd",
+          "pos": "adj.",
+          "meaning": "善良的；友好的",
+          "sentence": "It is kind of you to help me.",
+          "sentenceCn": "你来帮我真是太好了。",
+          "audio": "/audio/jw/jw7a19.mp3"
+        },
+        {
+          "id": "jw7a20",
+          "word": "friendly",
+          "phonetic": "ˈfrendli",
+          "pos": "adj.",
+          "meaning": "友好的",
+          "sentence": "Our new teacher is very friendly.",
+          "sentenceCn": "我们的新老师非常友好。",
+          "audio": "/audio/jw/jw7a20.mp3"
+        },
+        {
+          "id": "jw7a21",
+          "word": "lovely",
+          "phonetic": "ˈlʌvli",
+          "pos": "adj.",
+          "meaning": "可爱的",
+          "sentence": "What a lovely girl!",
+          "sentenceCn": "多么可爱的女孩啊！",
+          "audio": "/audio/jw/jw7a21.mp3"
+        },
+        {
+          "id": "jw7a22",
+          "word": "helpful",
+          "phonetic": "ˈhelpfl",
+          "pos": "adj.",
+          "meaning": "乐于助人的；有用的",
+          "sentence": "He is always helpful to others.",
+          "sentenceCn": "他总是乐于助人。",
+          "audio": "/audio/jw/jw7a22.mp3"
+        },
+        {
+          "id": "jw7a23",
+          "word": "polite",
+          "phonetic": "pəˈlaɪt",
+          "pos": "adj.",
+          "meaning": "有礼貌的",
+          "sentence": "Be polite to old people.",
+          "sentenceCn": "对老人要有礼貌。",
+          "audio": "/audio/jw/jw7a23.mp3"
+        },
+        {
+          "id": "jw7a24",
+          "word": "clever",
+          "phonetic": "ˈklevə",
+          "pos": "adj.",
+          "meaning": "聪明的",
+          "sentence": "The clever boy works out the problem quickly.",
+          "sentenceCn": "这个聪明的男孩很快解出了那道题。",
+          "audio": "/audio/jw/jw7a24.mp3"
+        },
+        {
+          "id": "jw7a25",
+          "word": "hero",
+          "phonetic": "ˈhɪərəʊ",
+          "pos": "n.",
+          "meaning": "英雄；偶像",
+          "sentence": "Firefighters are heroes in our city.",
+          "sentenceCn": "消防员是我们城市的英雄。",
+          "audio": "/audio/jw/jw7a25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw7b",
+      "grade": 7,
+      "title": "学校与学习",
+      "words": [
+        {
+          "id": "jw7b01",
+          "word": "school",
+          "phonetic": "skuːl",
+          "pos": "n.",
+          "meaning": "学校",
+          "sentence": "We go to school from Monday to Friday.",
+          "sentenceCn": "我们从周一到周五上学。",
+          "audio": "/audio/jw/jw7b01.mp3"
+        },
+        {
+          "id": "jw7b02",
+          "word": "classroom",
+          "phonetic": "ˈklɑːsruːm",
+          "pos": "n.",
+          "meaning": "教室",
+          "sentence": "Our classroom is clean and bright.",
+          "sentenceCn": "我们的教室干净又明亮。",
+          "audio": "/audio/jw/jw7b02.mp3"
+        },
+        {
+          "id": "jw7b03",
+          "word": "subject",
+          "phonetic": "ˈsʌbdʒɪkt",
+          "pos": "n.",
+          "meaning": "科目；学科",
+          "sentence": "Which subject do you like best?",
+          "sentenceCn": "你最喜欢哪个科目？",
+          "audio": "/audio/jw/jw7b03.mp3"
+        },
+        {
+          "id": "jw7b04",
+          "word": "lesson",
+          "phonetic": "ˈlesn",
+          "pos": "n.",
+          "meaning": "课；一节课",
+          "sentence": "We have four English lessons every week.",
+          "sentenceCn": "我们每周有四节英语课。",
+          "audio": "/audio/jw/jw7b04.mp3"
+        },
+        {
+          "id": "jw7b05",
+          "word": "maths",
+          "phonetic": "mæθs",
+          "pos": "n.",
+          "meaning": "数学（英式）",
+          "sentence": "Maths is my favourite subject.",
+          "sentenceCn": "数学是我最喜欢的科目。",
+          "audio": "/audio/jw/jw7b05.mp3"
+        },
+        {
+          "id": "jw7b06",
+          "word": "history",
+          "phonetic": "ˈhɪstri",
+          "pos": "n.",
+          "meaning": "历史",
+          "sentence": "We learn a lot from history.",
+          "sentenceCn": "我们从历史中学到很多。",
+          "audio": "/audio/jw/jw7b06.mp3"
+        },
+        {
+          "id": "jw7b07",
+          "word": "science",
+          "phonetic": "ˈsaɪəns",
+          "pos": "n.",
+          "meaning": "科学",
+          "sentence": "Science makes our life better.",
+          "sentenceCn": "科学让我们的生活更美好。",
+          "audio": "/audio/jw/jw7b07.mp3"
+        },
+        {
+          "id": "jw7b08",
+          "word": "teacher",
+          "phonetic": "ˈtiːtʃə",
+          "pos": "n.",
+          "meaning": "教师",
+          "sentence": "Miss Gao is a patient teacher.",
+          "sentenceCn": "高老师是一位有耐心的老师。",
+          "audio": "/audio/jw/jw7b08.mp3"
+        },
+        {
+          "id": "jw7b09",
+          "word": "student",
+          "phonetic": "ˈstjuːdnt",
+          "pos": "n.",
+          "meaning": "学生",
+          "sentence": "Every student should work hard.",
+          "sentenceCn": "每个学生都应该努力学习。",
+          "audio": "/audio/jw/jw7b09.mp3"
+        },
+        {
+          "id": "jw7b10",
+          "word": "pupil",
+          "phonetic": "ˈpjuːpl",
+          "pos": "n.",
+          "meaning": "学生（尤指小学生）",
+          "sentence": "The pupils are reading in the library.",
+          "sentenceCn": "学生们正在图书馆看书。",
+          "audio": "/audio/jw/jw7b10.mp3"
+        },
+        {
+          "id": "jw7b11",
+          "word": "homework",
+          "phonetic": "ˈhəʊmwɜːk",
+          "pos": "n.",
+          "meaning": "家庭作业",
+          "sentence": "I finish my homework before dinner.",
+          "sentenceCn": "我在晚饭前完成作业。",
+          "audio": "/audio/jw/jw7b11.mp3"
+        },
+        {
+          "id": "jw7b12",
+          "word": "exam",
+          "phonetic": "ɪɡˈzæm",
+          "pos": "n.",
+          "meaning": "考试；测验",
+          "sentence": "There will be an English exam next week.",
+          "sentenceCn": "下周有一场英语考试。",
+          "audio": "/audio/jw/jw7b12.mp3"
+        },
+        {
+          "id": "jw7b13",
+          "word": "question",
+          "phonetic": "ˈkwestʃən",
+          "pos": "n.",
+          "meaning": "问题",
+          "sentence": "May I ask you a question?",
+          "sentenceCn": "我可以问你一个问题吗？",
+          "audio": "/audio/jw/jw7b13.mp3"
+        },
+        {
+          "id": "jw7b14",
+          "word": "answer",
+          "phonetic": "ˈɑːnsə",
+          "pos": "n./v.",
+          "meaning": "回答；答案",
+          "sentence": "Please answer the question in English.",
+          "sentenceCn": "请用英语回答这个问题。",
+          "audio": "/audio/jw/jw7b14.mp3"
+        },
+        {
+          "id": "jw7b15",
+          "word": "dictionary",
+          "phonetic": "ˈdɪkʃənri",
+          "pos": "n.",
+          "meaning": "词典",
+          "sentence": "Look up the new word in your dictionary.",
+          "sentenceCn": "在词典里查一下这个生词。",
+          "audio": "/audio/jw/jw7b15.mp3"
+        },
+        {
+          "id": "jw7b16",
+          "word": "library",
+          "phonetic": "ˈlaɪbrəri",
+          "pos": "n.",
+          "meaning": "图书馆",
+          "sentence": "You can borrow three books from the library.",
+          "sentenceCn": "你可以从图书馆借三本书。",
+          "audio": "/audio/jw/jw7b16.mp3"
+        },
+        {
+          "id": "jw7b17",
+          "word": "playground",
+          "phonetic": "ˈpleɪɡraʊnd",
+          "pos": "n.",
+          "meaning": "操场",
+          "sentence": "The children are running on the playground.",
+          "sentenceCn": "孩子们正在操场上跑步。",
+          "audio": "/audio/jw/jw7b17.mp3"
+        },
+        {
+          "id": "jw7b18",
+          "word": "study",
+          "phonetic": "ˈstʌdi",
+          "pos": "v./n.",
+          "meaning": "学习；书房",
+          "sentence": "He studies English for an hour every day.",
+          "sentenceCn": "他每天学一小时英语。",
+          "audio": "/audio/jw/jw7b18.mp3"
+        },
+        {
+          "id": "jw7b19",
+          "word": "learn",
+          "phonetic": "lɜːn",
+          "pos": "v.",
+          "meaning": "学会；学习",
+          "sentence": "It is never too late to learn.",
+          "sentenceCn": "活到老学到老。",
+          "audio": "/audio/jw/jw7b19.mp3"
+        },
+        {
+          "id": "jw7b20",
+          "word": "read",
+          "phonetic": "riːd",
+          "pos": "v.",
+          "meaning": "阅读；读",
+          "sentence": "I like reading before going to bed.",
+          "sentenceCn": "我喜欢睡前阅读。",
+          "audio": "/audio/jw/jw7b20.mp3"
+        },
+        {
+          "id": "jw7b21",
+          "word": "write",
+          "phonetic": "raɪt",
+          "pos": "v.",
+          "meaning": "写；书写",
+          "sentence": "Write down your name on the paper.",
+          "sentenceCn": "把你的名字写在纸上。",
+          "audio": "/audio/jw/jw7b21.mp3"
+        },
+        {
+          "id": "jw7b22",
+          "word": "spell",
+          "phonetic": "spel",
+          "pos": "v.",
+          "meaning": "拼写",
+          "sentence": "Can you spell the word \"banana\"?",
+          "sentenceCn": "你会拼写 banana 这个词吗？",
+          "audio": "/audio/jw/jw7b22.mp3"
+        },
+        {
+          "id": "jw7b23",
+          "word": "practise",
+          "phonetic": "ˈpræktɪs",
+          "pos": "v.",
+          "meaning": "练习（美式 practice）",
+          "sentence": "Practise makes perfect.",
+          "sentenceCn": "熟能生巧。",
+          "audio": "/audio/jw/jw7b23.mp3"
+        },
+        {
+          "id": "jw7b24",
+          "word": "careful",
+          "phonetic": "ˈkeəfl",
+          "pos": "adj.",
+          "meaning": "仔细的；小心的",
+          "sentence": "Be careful with your spelling.",
+          "sentenceCn": "拼写要仔细。",
+          "audio": "/audio/jw/jw7b24.mp3"
+        },
+        {
+          "id": "jw7b25",
+          "word": "remember",
+          "phonetic": "rɪˈmembə",
+          "pos": "v.",
+          "meaning": "记住；记得",
+          "sentence": "Remember to close the window.",
+          "sentenceCn": "记得关窗。",
+          "audio": "/audio/jw/jw7b25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw7c",
+      "grade": 7,
+      "title": "饮食与购物",
+      "words": [
+        {
+          "id": "jw7c01",
+          "word": "breakfast",
+          "phonetic": "ˈbrekfəst",
+          "pos": "n.",
+          "meaning": "早餐",
+          "sentence": "I have bread and milk for breakfast.",
+          "sentenceCn": "我早餐吃面包喝牛奶。",
+          "audio": "/audio/jw/jw7c01.mp3"
+        },
+        {
+          "id": "jw7c02",
+          "word": "lunch",
+          "phonetic": "lʌntʃ",
+          "pos": "n.",
+          "meaning": "午餐",
+          "sentence": "School lunch starts at twelve.",
+          "sentenceCn": "学校午餐十二点开始。",
+          "audio": "/audio/jw/jw7c02.mp3"
+        },
+        {
+          "id": "jw7c03",
+          "word": "dinner",
+          "phonetic": "ˈdɪnə",
+          "pos": "n.",
+          "meaning": "正餐；晚餐",
+          "sentence": "We have dinner together at seven.",
+          "sentenceCn": "我们七点一起吃晚饭。",
+          "audio": "/audio/jw/jw7c03.mp3"
+        },
+        {
+          "id": "jw7c04",
+          "word": "rice",
+          "phonetic": "raɪs",
+          "pos": "n.",
+          "meaning": "米饭；大米",
+          "sentence": "People in the south live on rice.",
+          "sentenceCn": "南方人以大米为主食。",
+          "audio": "/audio/jw/jw7c04.mp3"
+        },
+        {
+          "id": "jw7c05",
+          "word": "noodle",
+          "phonetic": "ˈnuːdl",
+          "pos": "n.",
+          "meaning": "面条（常用复数 noodles）",
+          "sentence": "The beef noodles smell good.",
+          "sentenceCn": "牛肉面条闻起来很香。",
+          "audio": "/audio/jw/jw7c05.mp3"
+        },
+        {
+          "id": "jw7c06",
+          "word": "bread",
+          "phonetic": "bred",
+          "pos": "n.",
+          "meaning": "面包",
+          "sentence": "She buys some bread for breakfast.",
+          "sentenceCn": "她买了一些面包当早餐。",
+          "audio": "/audio/jw/jw7c06.mp3"
+        },
+        {
+          "id": "jw7c07",
+          "word": "egg",
+          "phonetic": "eɡ",
+          "pos": "n.",
+          "meaning": "鸡蛋",
+          "sentence": "An egg a day is good for you.",
+          "sentenceCn": "每天一个鸡蛋对你有好处。",
+          "audio": "/audio/jw/jw7c07.mp3"
+        },
+        {
+          "id": "jw7c08",
+          "word": "vegetable",
+          "phonetic": "ˈvedʒtəbl",
+          "pos": "n.",
+          "meaning": "蔬菜",
+          "sentence": "Eating more vegetables keeps you healthy.",
+          "sentenceCn": "多吃蔬菜使你健康。",
+          "audio": "/audio/jw/jw7c08.mp3"
+        },
+        {
+          "id": "jw7c09",
+          "word": "fruit",
+          "phonetic": "fruːt",
+          "pos": "n.",
+          "meaning": "水果",
+          "sentence": "Fruit is good for our skin.",
+          "sentenceCn": "水果对我们的皮肤有好处。",
+          "audio": "/audio/jw/jw7c09.mp3"
+        },
+        {
+          "id": "jw7c10",
+          "word": "juice",
+          "phonetic": "dʒuːs",
+          "pos": "n.",
+          "meaning": "果汁",
+          "sentence": "Would you like some orange juice?",
+          "sentenceCn": "你想要些橙汁吗？",
+          "audio": "/audio/jw/jw7c10.mp3"
+        },
+        {
+          "id": "jw7c11",
+          "word": "delicious",
+          "phonetic": "dɪˈlɪʃəs",
+          "pos": "adj.",
+          "meaning": "美味的",
+          "sentence": "The dumplings taste delicious.",
+          "sentenceCn": "这饺子尝起来很美味。",
+          "audio": "/audio/jw/jw7c11.mp3"
+        },
+        {
+          "id": "jw7c12",
+          "word": "hungry",
+          "phonetic": "ˈhʌŋɡri",
+          "pos": "adj.",
+          "meaning": "饥饿的",
+          "sentence": "I am so hungry that I could eat a horse.",
+          "sentenceCn": "我饿极了。",
+          "audio": "/audio/jw/jw7c12.mp3"
+        },
+        {
+          "id": "jw7c13",
+          "word": "thirsty",
+          "phonetic": "ˈθɜːsti",
+          "pos": "adj.",
+          "meaning": "口渴的",
+          "sentence": "Give me some water because I am thirsty.",
+          "sentenceCn": "我渴了，给我一些水。",
+          "audio": "/audio/jw/jw7c13.mp3"
+        },
+        {
+          "id": "jw7c14",
+          "word": "shop",
+          "phonetic": "ʃɒp",
+          "pos": "n./v.",
+          "meaning": "商店；购物",
+          "sentence": "We often shop at the weekend.",
+          "sentenceCn": "我们经常在周末购物。",
+          "audio": "/audio/jw/jw7c14.mp3"
+        },
+        {
+          "id": "jw7c15",
+          "word": "market",
+          "phonetic": "ˈmɑːkɪt",
+          "pos": "n.",
+          "meaning": "市场；集市",
+          "sentence": "Mother buys fresh fish at the market.",
+          "sentenceCn": "妈妈在市场买新鲜的鱼。",
+          "audio": "/audio/jw/jw7c15.mp3"
+        },
+        {
+          "id": "jw7c16",
+          "word": "price",
+          "phonetic": "praɪs",
+          "pos": "n.",
+          "meaning": "价格",
+          "sentence": "The price of the coat is too high.",
+          "sentenceCn": "这件外套的价格太高了。",
+          "audio": "/audio/jw/jw7c16.mp3"
+        },
+        {
+          "id": "jw7c17",
+          "word": "cheap",
+          "phonetic": "tʃiːp",
+          "pos": "adj.",
+          "meaning": "便宜的",
+          "sentence": "This dictionary is cheap but useful.",
+          "sentenceCn": "这本词典便宜但有用。",
+          "audio": "/audio/jw/jw7c17.mp3"
+        },
+        {
+          "id": "jw7c18",
+          "word": "expensive",
+          "phonetic": "ɪkˈspensɪv",
+          "pos": "adj.",
+          "meaning": "昂贵的",
+          "sentence": "The bike is too expensive for me.",
+          "sentenceCn": "这辆自行车对我来说太贵了。",
+          "audio": "/audio/jw/jw7c18.mp3"
+        },
+        {
+          "id": "jw7c19",
+          "word": "buy",
+          "phonetic": "baɪ",
+          "pos": "v.",
+          "meaning": "买（过去式 bought）",
+          "sentence": "I want to buy a gift for my mother.",
+          "sentenceCn": "我想给妈妈买份礼物。",
+          "audio": "/audio/jw/jw7c19.mp3"
+        },
+        {
+          "id": "jw7c20",
+          "word": "sell",
+          "phonetic": "sel",
+          "pos": "v.",
+          "meaning": "卖；售",
+          "sentence": "The shop sells all kinds of fruit.",
+          "sentenceCn": "这家店卖各种各样的水果。",
+          "audio": "/audio/jw/jw7c20.mp3"
+        },
+        {
+          "id": "jw7c21",
+          "word": "money",
+          "phonetic": "ˈmʌni",
+          "pos": "n.",
+          "meaning": "钱",
+          "sentence": "Don't take too much money with you.",
+          "sentenceCn": "不要随身带太多钱。",
+          "audio": "/audio/jw/jw7c21.mp3"
+        },
+        {
+          "id": "jw7c22",
+          "word": "store",
+          "phonetic": "stɔː",
+          "pos": "n.",
+          "meaning": "商店；百货店",
+          "sentence": "There is a big store near our school.",
+          "sentenceCn": "我们学校附近有一家大商店。",
+          "audio": "/audio/jw/jw7c22.mp3"
+        },
+        {
+          "id": "jw7c23",
+          "word": "waiter",
+          "phonetic": "ˈweɪtə",
+          "pos": "n.",
+          "meaning": "（男）服务员",
+          "sentence": "The waiter brings us the menu quickly.",
+          "sentenceCn": "服务员很快给我们拿来菜单。",
+          "audio": "/audio/jw/jw7c23.mp3"
+        },
+        {
+          "id": "jw7c24",
+          "word": "menu",
+          "phonetic": "ˈmenjuː",
+          "pos": "n.",
+          "meaning": "菜单",
+          "sentence": "Let me look at the menu first.",
+          "sentenceCn": "让我先看看菜单。",
+          "audio": "/audio/jw/jw7c24.mp3"
+        },
+        {
+          "id": "jw7c25",
+          "word": "order",
+          "phonetic": "ˈɔːdə",
+          "pos": "v./n.",
+          "meaning": "点菜；订购；命令",
+          "sentence": "We ordered two bowls of noodles.",
+          "sentenceCn": "我们点了两碗面条。",
+          "audio": "/audio/jw/jw7c25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw7d",
+      "grade": 7,
+      "title": "日常与时间",
+      "words": [
+        {
+          "id": "jw7d01",
+          "word": "morning",
+          "phonetic": "ˈmɔːnɪŋ",
+          "pos": "n.",
+          "meaning": "早晨；上午",
+          "sentence": "I get up at six in the morning.",
+          "sentenceCn": "我早上六点起床。",
+          "audio": "/audio/jw/jw7d01.mp3"
+        },
+        {
+          "id": "jw7d02",
+          "word": "afternoon",
+          "phonetic": "ɑːftəˈnuːn",
+          "pos": "n.",
+          "meaning": "下午",
+          "sentence": "We have PE class in the afternoon.",
+          "sentenceCn": "我们下午有体育课。",
+          "audio": "/audio/jw/jw7d02.mp3"
+        },
+        {
+          "id": "jw7d03",
+          "word": "evening",
+          "phonetic": "ˈiːvnɪŋ",
+          "pos": "n.",
+          "meaning": "傍晚；晚上",
+          "sentence": "My family watch TV in the evening.",
+          "sentenceCn": "我们一家人晚上看电视。",
+          "audio": "/audio/jw/jw7d03.mp3"
+        },
+        {
+          "id": "jw7d04",
+          "word": "night",
+          "phonetic": "naɪt",
+          "pos": "n.",
+          "meaning": "夜晚",
+          "sentence": "Good night and sweet dreams.",
+          "sentenceCn": "晚安，做个好梦。",
+          "audio": "/audio/jw/jw7d04.mp3"
+        },
+        {
+          "id": "jw7d05",
+          "word": "today",
+          "phonetic": "təˈdeɪ",
+          "pos": "adv./n.",
+          "meaning": "今天",
+          "sentence": "Today is my birthday.",
+          "sentenceCn": "今天是我的生日。",
+          "audio": "/audio/jw/jw7d05.mp3"
+        },
+        {
+          "id": "jw7d06",
+          "word": "tomorrow",
+          "phonetic": "təˈmɒrəʊ",
+          "pos": "adv./n.",
+          "meaning": "明天",
+          "sentence": "We will plant trees tomorrow.",
+          "sentenceCn": "我们明天要去植树。",
+          "audio": "/audio/jw/jw7d06.mp3"
+        },
+        {
+          "id": "jw7d07",
+          "word": "yesterday",
+          "phonetic": "ˈjestədeɪ",
+          "pos": "adv./n.",
+          "meaning": "昨天",
+          "sentence": "Yesterday was the coldest day this week.",
+          "sentenceCn": "昨天是本周最冷的一天。",
+          "audio": "/audio/jw/jw7d07.mp3"
+        },
+        {
+          "id": "jw7d08",
+          "word": "weekend",
+          "phonetic": "ˌwiːkˈend",
+          "pos": "n.",
+          "meaning": "周末",
+          "sentence": "I visit my grandparents at weekends.",
+          "sentenceCn": "我周末去看望祖父母。",
+          "audio": "/audio/jw/jw7d08.mp3"
+        },
+        {
+          "id": "jw7d09",
+          "word": "hour",
+          "phonetic": "ˈaʊə",
+          "pos": "n.",
+          "meaning": "小时",
+          "sentence": "An hour has sixty minutes.",
+          "sentenceCn": "一小时有六十分钟。",
+          "audio": "/audio/jw/jw7d09.mp3"
+        },
+        {
+          "id": "jw7d10",
+          "word": "minute",
+          "phonetic": "ˈmɪnɪt",
+          "pos": "n.",
+          "meaning": "分钟",
+          "sentence": "Wait a minute, please.",
+          "sentenceCn": "请等一会儿。",
+          "audio": "/audio/jw/jw7d10.mp3"
+        },
+        {
+          "id": "jw7d11",
+          "word": "early",
+          "phonetic": "ˈɜːli",
+          "pos": "adj./adv.",
+          "meaning": "早的（地）",
+          "sentence": "The early bird catches the worm.",
+          "sentenceCn": "早起的鸟儿有虫吃。",
+          "audio": "/audio/jw/jw7d11.mp3"
+        },
+        {
+          "id": "jw7d12",
+          "word": "late",
+          "phonetic": "leɪt",
+          "pos": "adj./adv.",
+          "meaning": "迟的（地）；晚的",
+          "sentence": "Don't be late for class.",
+          "sentenceCn": "上课不要迟到。",
+          "audio": "/audio/jw/jw7d12.mp3"
+        },
+        {
+          "id": "jw7d13",
+          "word": "always",
+          "phonetic": "ˈɔːlweɪz",
+          "pos": "adv.",
+          "meaning": "总是",
+          "sentence": "She is always ready to help others.",
+          "sentenceCn": "她总是乐于助人。",
+          "audio": "/audio/jw/jw7d13.mp3"
+        },
+        {
+          "id": "jw7d14",
+          "word": "usually",
+          "phonetic": "ˈjuːʒuəli",
+          "pos": "adv.",
+          "meaning": "通常",
+          "sentence": "We usually have a meeting on Monday.",
+          "sentenceCn": "我们通常周一开会。",
+          "audio": "/audio/jw/jw7d14.mp3"
+        },
+        {
+          "id": "jw7d15",
+          "word": "often",
+          "phonetic": "ˈɒfn",
+          "pos": "adv.",
+          "meaning": "经常",
+          "sentence": "How often do you exercise?",
+          "sentenceCn": "你多久锻炼一次？",
+          "audio": "/audio/jw/jw7d15.mp3"
+        },
+        {
+          "id": "jw7d16",
+          "word": "sometimes",
+          "phonetic": "ˈsʌmtaɪmz",
+          "pos": "adv.",
+          "meaning": "有时",
+          "sentence": "Sometimes I read comics for fun.",
+          "sentenceCn": "有时我为了乐趣看漫画书。",
+          "audio": "/audio/jw/jw7d16.mp3"
+        },
+        {
+          "id": "jw7d17",
+          "word": "never",
+          "phonetic": "ˈnevə",
+          "pos": "adv.",
+          "meaning": "从不",
+          "sentence": "He never tells a lie.",
+          "sentenceCn": "他从不撒谎。",
+          "audio": "/audio/jw/jw7d17.mp3"
+        },
+        {
+          "id": "jw7d18",
+          "word": "sleep",
+          "phonetic": "sliːp",
+          "pos": "v./n.",
+          "meaning": "睡觉",
+          "sentence": "Children need at least eight hours' sleep.",
+          "sentenceCn": "儿童需要至少八小时的睡眠。",
+          "audio": "/audio/jw/jw7d18.mp3"
+        },
+        {
+          "id": "jw7d19",
+          "word": "wake",
+          "phonetic": "weɪk",
+          "pos": "v.",
+          "meaning": "醒来；叫醒（wake up）",
+          "sentence": "My mother wakes me up at six.",
+          "sentenceCn": "妈妈六点叫醒我。",
+          "audio": "/audio/jw/jw7d19.mp3"
+        },
+        {
+          "id": "jw7d20",
+          "word": "rest",
+          "phonetic": "rest",
+          "pos": "v./n.",
+          "meaning": "休息",
+          "sentence": "Take a rest after long study.",
+          "sentenceCn": "长时间学习后要休息一下。",
+          "audio": "/audio/jw/jw7d20.mp3"
+        },
+        {
+          "id": "jw7d21",
+          "word": "busy",
+          "phonetic": "ˈbɪzi",
+          "pos": "adj.",
+          "meaning": "忙碌的",
+          "sentence": "Farmers are busy in autumn.",
+          "sentenceCn": "农民秋天很忙。",
+          "audio": "/audio/jw/jw7d21.mp3"
+        },
+        {
+          "id": "jw7d22",
+          "word": "free",
+          "phonetic": "friː",
+          "pos": "adj.",
+          "meaning": "空闲的；自由的",
+          "sentence": "Are you free this Sunday evening?",
+          "sentenceCn": "这周日晚上你有空吗？",
+          "audio": "/audio/jw/jw7d22.mp3"
+        },
+        {
+          "id": "jw7d23",
+          "word": "start",
+          "phonetic": "stɑːt",
+          "pos": "v./n.",
+          "meaning": "开始",
+          "sentence": "School starts at eight o'clock.",
+          "sentenceCn": "学校八点开始上课。",
+          "audio": "/audio/jw/jw7d23.mp3"
+        },
+        {
+          "id": "jw7d24",
+          "word": "finish",
+          "phonetic": "ˈfɪnɪʃ",
+          "pos": "v.",
+          "meaning": "完成；结束",
+          "sentence": "We finish class at four thirty.",
+          "sentenceCn": "我们四点半下课。",
+          "audio": "/audio/jw/jw7d24.mp3"
+        },
+        {
+          "id": "jw7d25",
+          "word": "daily",
+          "phonetic": "ˈdeɪli",
+          "pos": "adj./adv.",
+          "meaning": "每日的（地）",
+          "sentence": "Exercise is part of my daily life.",
+          "sentenceCn": "锻炼是我日常生活的一部分。",
+          "audio": "/audio/jw/jw7d25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw8a",
+      "grade": 8,
+      "title": "旅行与交通",
+      "words": [
+        {
+          "id": "jw8a01",
+          "word": "travel",
+          "phonetic": "ˈtrævl",
+          "pos": "v./n.",
+          "meaning": "旅行",
+          "sentence": "Travel broadens the mind.",
+          "sentenceCn": "旅行开阔眼界。",
+          "audio": "/audio/jw/jw8a01.mp3"
+        },
+        {
+          "id": "jw8a02",
+          "word": "trip",
+          "phonetic": "trɪp",
+          "pos": "n.",
+          "meaning": "（短途）旅行；出行",
+          "sentence": "We took a trip to the seaside last month.",
+          "sentenceCn": "上个月我们去海边旅行了。",
+          "audio": "/audio/jw/jw8a02.mp3"
+        },
+        {
+          "id": "jw8a03",
+          "word": "journey",
+          "phonetic": "ˈdʒɜːni",
+          "pos": "n.",
+          "meaning": "（长途）旅程",
+          "sentence": "The journey to Tibet was unforgettable.",
+          "sentenceCn": "去西藏的旅程令人难忘。",
+          "audio": "/audio/jw/jw8a03.mp3"
+        },
+        {
+          "id": "jw8a04",
+          "word": "visit",
+          "phonetic": "ˈvɪzɪt",
+          "pos": "v./n.",
+          "meaning": "参观；拜访",
+          "sentence": "Thousands of people visit the Great Wall every day.",
+          "sentenceCn": "每天成千上万的人参观长城。",
+          "audio": "/audio/jw/jw8a04.mp3"
+        },
+        {
+          "id": "jw8a05",
+          "word": "ticket",
+          "phonetic": "ˈtɪkɪt",
+          "pos": "n.",
+          "meaning": "票；车票",
+          "sentence": "I bought two train tickets online.",
+          "sentenceCn": "我在网上买了两张火车票。",
+          "audio": "/audio/jw/jw8a05.mp3"
+        },
+        {
+          "id": "jw8a06",
+          "word": "station",
+          "phonetic": "ˈsteɪʃn",
+          "pos": "n.",
+          "meaning": "车站",
+          "sentence": "Meet me at the railway station at nine.",
+          "sentenceCn": "九点到火车站接我。",
+          "audio": "/audio/jw/jw8a06.mp3"
+        },
+        {
+          "id": "jw8a07",
+          "word": "airport",
+          "phonetic": "ˈeəpɔːt",
+          "pos": "n.",
+          "meaning": "机场",
+          "sentence": "His uncle will meet us at the airport.",
+          "sentenceCn": "他叔叔会到机场接我们。",
+          "audio": "/audio/jw/jw8a07.mp3"
+        },
+        {
+          "id": "jw8a08",
+          "word": "train",
+          "phonetic": "treɪn",
+          "pos": "n.",
+          "meaning": "火车",
+          "sentence": "The train arrives at Platform 2.",
+          "sentenceCn": "火车到达2号站台。",
+          "audio": "/audio/jw/jw8a08.mp3"
+        },
+        {
+          "id": "jw8a09",
+          "word": "plane",
+          "phonetic": "pleɪn",
+          "pos": "n.",
+          "meaning": "飞机",
+          "sentence": "The plane took off on time.",
+          "sentenceCn": "飞机准时起飞了。",
+          "audio": "/audio/jw/jw8a09.mp3"
+        },
+        {
+          "id": "jw8a10",
+          "word": "subway",
+          "phonetic": "ˈsʌbweɪ",
+          "pos": "n.",
+          "meaning": "地铁",
+          "sentence": "Subway is a fast way to travel in Beijing.",
+          "sentenceCn": "在北京，地铁是快捷的出行方式。",
+          "audio": "/audio/jw/jw8a10.mp3"
+        },
+        {
+          "id": "jw8a11",
+          "word": "bicycle",
+          "phonetic": "ˈbaɪsɪkl",
+          "pos": "n.",
+          "meaning": "自行车（bike）",
+          "sentence": "Riding a bicycle is good exercise.",
+          "sentenceCn": "骑自行车是很好的锻炼。",
+          "audio": "/audio/jw/jw8a11.mp3"
+        },
+        {
+          "id": "jw8a12",
+          "word": "ride",
+          "phonetic": "raɪd",
+          "pos": "v./n.",
+          "meaning": "骑；乘",
+          "sentence": "Can you ride a horse?",
+          "sentenceCn": "你会骑马吗？",
+          "audio": "/audio/jw/jw8a12.mp3"
+        },
+        {
+          "id": "jw8a13",
+          "word": "drive",
+          "phonetic": "draɪv",
+          "pos": "v.",
+          "meaning": "驾驶；开车（去）",
+          "sentence": "Father drives me to school on rainy days.",
+          "sentenceCn": "雨天爸爸开车送我上学。",
+          "audio": "/audio/jw/jw8a13.mp3"
+        },
+        {
+          "id": "jw8a14",
+          "word": "walk",
+          "phonetic": "wɔːk",
+          "pos": "v./n.",
+          "meaning": "步行；散步",
+          "sentence": "It is only ten minutes' walk from here.",
+          "sentenceCn": "离这里步行只有十分钟。",
+          "audio": "/audio/jw/jw8a14.mp3"
+        },
+        {
+          "id": "jw8a15",
+          "word": "map",
+          "phonetic": "mæp",
+          "pos": "n.",
+          "meaning": "地图",
+          "sentence": "We found the museum easily with a map.",
+          "sentenceCn": "有地图我们很容易找到了博物馆。",
+          "audio": "/audio/jw/jw8a15.mp3"
+        },
+        {
+          "id": "jw8a16",
+          "word": "hotel",
+          "phonetic": "həʊˈtel",
+          "pos": "n.",
+          "meaning": "旅馆；酒店",
+          "sentence": "The hotel room is clean and quiet.",
+          "sentenceCn": "酒店房间干净又安静。",
+          "audio": "/audio/jw/jw8a16.mp3"
+        },
+        {
+          "id": "jw8a17",
+          "word": "beach",
+          "phonetic": "biːtʃ",
+          "pos": "n.",
+          "meaning": "海滩",
+          "sentence": "We picked up shells on the beach.",
+          "sentenceCn": "我们在海滩上捡贝壳。",
+          "audio": "/audio/jw/jw8a17.mp3"
+        },
+        {
+          "id": "jw8a18",
+          "word": "mountain",
+          "phonetic": "ˈmaʊntən",
+          "pos": "n.",
+          "meaning": "山；山脉",
+          "sentence": "Climbing mountains makes you strong.",
+          "sentenceCn": "爬山使你强壮。",
+          "audio": "/audio/jw/jw8a18.mp3"
+        },
+        {
+          "id": "jw8a19",
+          "word": "island",
+          "phonetic": "ˈaɪlənd",
+          "pos": "n.",
+          "meaning": "岛；岛屿",
+          "sentence": "Hainan is a famous island in China.",
+          "sentenceCn": "海南是中国著名的岛屿。",
+          "audio": "/audio/jw/jw8a19.mp3"
+        },
+        {
+          "id": "jw8a20",
+          "word": "luggage",
+          "phonetic": "ˈlʌɡɪdʒ",
+          "pos": "n.",
+          "meaning": "行李",
+          "sentence": "Please take your luggage with you.",
+          "sentenceCn": "请随身携带您的行李。",
+          "audio": "/audio/jw/jw8a20.mp3"
+        },
+        {
+          "id": "jw8a21",
+          "word": "camera",
+          "phonetic": "ˈkæmərə",
+          "pos": "n.",
+          "meaning": "照相机",
+          "sentence": "I brought my camera to take photos.",
+          "sentenceCn": "我带了相机来拍照。",
+          "audio": "/audio/jw/jw8a21.mp3"
+        },
+        {
+          "id": "jw8a22",
+          "word": "postcard",
+          "phonetic": "ˈpəʊstkɑːd",
+          "pos": "n.",
+          "meaning": "明信片",
+          "sentence": "She sent me a postcard from Yunnan.",
+          "sentenceCn": "她从云南给我寄了一张明信片。",
+          "audio": "/audio/jw/jw8a22.mp3"
+        },
+        {
+          "id": "jw8a23",
+          "word": "abroad",
+          "phonetic": "əˈbrɔːd",
+          "pos": "adv.",
+          "meaning": "在国外；到国外",
+          "sentence": "My brother will study abroad next year.",
+          "sentenceCn": "我哥哥明年将出国留学。",
+          "audio": "/audio/jw/jw8a23.mp3"
+        },
+        {
+          "id": "jw8a24",
+          "word": "sightseeing",
+          "phonetic": "ˈsaɪtsiːɪŋ",
+          "pos": "n.",
+          "meaning": "观光；游览",
+          "sentence": "We went sightseeing around the old town.",
+          "sentenceCn": "我们在老城区观光游览。",
+          "audio": "/audio/jw/jw8a24.mp3"
+        },
+        {
+          "id": "jw8a25",
+          "word": "passenger",
+          "phonetic": "ˈpæsɪndʒə",
+          "pos": "n.",
+          "meaning": "乘客；旅客",
+          "sentence": "All passengers must fasten the seat belt.",
+          "sentenceCn": "所有乘客必须系好安全带。",
+          "audio": "/audio/jw/jw8a25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw8b",
+      "grade": 8,
+      "title": "健康与运动",
+      "words": [
+        {
+          "id": "jw8b01",
+          "word": "health",
+          "phonetic": "helθ",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "Health is more important than wealth.",
+          "sentenceCn": "健康比财富更重要。",
+          "audio": "/audio/jw/jw8b01.mp3"
+        },
+        {
+          "id": "jw8b02",
+          "word": "healthy",
+          "phonetic": "ˈhelθi",
+          "pos": "adj.",
+          "meaning": "健康的",
+          "sentence": "Eating an apple a day keeps you healthy.",
+          "sentenceCn": "每天吃一个苹果使你健康。",
+          "audio": "/audio/jw/jw8b02.mp3"
+        },
+        {
+          "id": "jw8b03",
+          "word": "exercise",
+          "phonetic": "ˈeksəsaɪz",
+          "pos": "v./n.",
+          "meaning": "锻炼；练习",
+          "sentence": "Exercise for half an hour every day.",
+          "sentenceCn": "每天锻炼半小时。",
+          "audio": "/audio/jw/jw8b03.mp3"
+        },
+        {
+          "id": "jw8b04",
+          "word": "sport",
+          "phonetic": "spɔːt",
+          "pos": "n.",
+          "meaning": "体育运动",
+          "sentence": "Table tennis is a popular sport in China.",
+          "sentenceCn": "乒乓球在中国是一项受欢迎的运动。",
+          "audio": "/audio/jw/jw8b04.mp3"
+        },
+        {
+          "id": "jw8b05",
+          "word": "basketball",
+          "phonetic": "ˈbɑːskɪtbɔːl",
+          "pos": "n.",
+          "meaning": "篮球",
+          "sentence": "The boys are playing basketball on the playground.",
+          "sentenceCn": "男孩子们正在操场上打篮球。",
+          "audio": "/audio/jw/jw8b05.mp3"
+        },
+        {
+          "id": "jw8b06",
+          "word": "football",
+          "phonetic": "ˈfʊtbɔːl",
+          "pos": "n.",
+          "meaning": "足球",
+          "sentence": "Our school football team won the match.",
+          "sentenceCn": "我们学校足球队赢了比赛。",
+          "audio": "/audio/jw/jw8b06.mp3"
+        },
+        {
+          "id": "jw8b07",
+          "word": "swimming",
+          "phonetic": "ˈswɪmɪŋ",
+          "pos": "n.",
+          "meaning": "游泳",
+          "sentence": "Swimming in summer is really cool.",
+          "sentenceCn": "夏天游泳真凉爽。",
+          "audio": "/audio/jw/jw8b07.mp3"
+        },
+        {
+          "id": "jw8b08",
+          "word": "match",
+          "phonetic": "mætʃ",
+          "pos": "n.",
+          "meaning": "比赛；火柴",
+          "sentence": "I watched a wonderful match last night.",
+          "sentenceCn": "昨晚我看了一场精彩的比赛。",
+          "audio": "/audio/jw/jw8b08.mp3"
+        },
+        {
+          "id": "jw8b09",
+          "word": "team",
+          "phonetic": "tiːm",
+          "pos": "n.",
+          "meaning": "队；团队",
+          "sentence": "Teamwork makes the dream work.",
+          "sentenceCn": "团队合作成就梦想。",
+          "audio": "/audio/jw/jw8b09.mp3"
+        },
+        {
+          "id": "jw8b10",
+          "word": "win",
+          "phonetic": "wɪn",
+          "pos": "v.",
+          "meaning": "赢；获胜（过去式 won）",
+          "sentence": "Which team won the game?",
+          "sentenceCn": "哪个队赢了比赛？",
+          "audio": "/audio/jw/jw8b10.mp3"
+        },
+        {
+          "id": "jw8b11",
+          "word": "lose",
+          "phonetic": "luːz",
+          "pos": "v.",
+          "meaning": "输掉；丢失（过去式 lost）",
+          "sentence": "Don't lose heart when you lose a game.",
+          "sentenceCn": "比赛输了也不要灰心。",
+          "audio": "/audio/jw/jw8b11.mp3"
+        },
+        {
+          "id": "jw8b12",
+          "word": "score",
+          "phonetic": "skɔː",
+          "pos": "n./v.",
+          "meaning": "得分；分数",
+          "sentence": "Our team scored three goals.",
+          "sentenceCn": "我们队进了三个球。",
+          "audio": "/audio/jw/jw8b12.mp3"
+        },
+        {
+          "id": "jw8b13",
+          "word": "player",
+          "phonetic": "ˈpleɪə",
+          "pos": "n.",
+          "meaning": "运动员；选手",
+          "sentence": "Yao Ming is a great basketball player.",
+          "sentenceCn": "姚明是一位伟大的篮球运动员。",
+          "audio": "/audio/jw/jw8b13.mp3"
+        },
+        {
+          "id": "jw8b14",
+          "word": "coach",
+          "phonetic": "kəʊtʃ",
+          "pos": "n.",
+          "meaning": "教练",
+          "sentence": "The coach teaches us how to pass the ball.",
+          "sentenceCn": "教练教我们如何传球。",
+          "audio": "/audio/jw/jw8b14.mp3"
+        },
+        {
+          "id": "jw8b15",
+          "word": "headache",
+          "phonetic": "ˈhedeɪk",
+          "pos": "n.",
+          "meaning": "头痛",
+          "sentence": "I have a headache, so I will see a doctor.",
+          "sentenceCn": "我头痛，所以要去看医生。",
+          "audio": "/audio/jw/jw8b15.mp3"
+        },
+        {
+          "id": "jw8b16",
+          "word": "fever",
+          "phonetic": "ˈfiːvə",
+          "pos": "n.",
+          "meaning": "发烧",
+          "sentence": "The boy has a high fever.",
+          "sentenceCn": "这个男孩发着高烧。",
+          "audio": "/audio/jw/jw8b16.mp3"
+        },
+        {
+          "id": "jw8b17",
+          "word": "cough",
+          "phonetic": "kɒf",
+          "pos": "v./n.",
+          "meaning": "咳嗽",
+          "sentence": "You should drink more water when you cough.",
+          "sentenceCn": "咳嗽时应该多喝水。",
+          "audio": "/audio/jw/jw8b17.mp3"
+        },
+        {
+          "id": "jw8b18",
+          "word": "medicine",
+          "phonetic": "ˈmedsn",
+          "pos": "n.",
+          "meaning": "药",
+          "sentence": "Take the medicine three times a day.",
+          "sentenceCn": "这药一天服三次。",
+          "audio": "/audio/jw/jw8b18.mp3"
+        },
+        {
+          "id": "jw8b19",
+          "word": "dentist",
+          "phonetic": "ˈdentɪst",
+          "pos": "n.",
+          "meaning": "牙医",
+          "sentence": "You should see a dentist twice a year.",
+          "sentenceCn": "你应该一年看两次牙医。",
+          "audio": "/audio/jw/jw8b19.mp3"
+        },
+        {
+          "id": "jw8b20",
+          "word": "hospital",
+          "phonetic": "ˈhɒspɪtl",
+          "pos": "n.",
+          "meaning": "医院",
+          "sentence": "Grandma is in hospital, so we will visit her.",
+          "sentenceCn": "奶奶住院了，我们会去看她。",
+          "audio": "/audio/jw/jw8b20.mp3"
+        },
+        {
+          "id": "jw8b21",
+          "word": "gym",
+          "phonetic": "dʒɪm",
+          "pos": "n.",
+          "meaning": "健身房；体育馆",
+          "sentence": "There is a new gym in our school.",
+          "sentenceCn": "我们学校有一个新体育馆。",
+          "audio": "/audio/jw/jw8b21.mp3"
+        },
+        {
+          "id": "jw8b22",
+          "word": "strong",
+          "phonetic": "strɒŋ",
+          "pos": "adj.",
+          "meaning": "强壮的；坚固的",
+          "sentence": "Milk makes your bones strong.",
+          "sentenceCn": "牛奶使你的骨骼强壮。",
+          "audio": "/audio/jw/jw8b22.mp3"
+        },
+        {
+          "id": "jw8b23",
+          "word": "weak",
+          "phonetic": "wiːk",
+          "pos": "adj.",
+          "meaning": "虚弱的；弱的",
+          "sentence": "He is still weak after the illness.",
+          "sentenceCn": "他病后仍然很虚弱。",
+          "audio": "/audio/jw/jw8b23.mp3"
+        },
+        {
+          "id": "jw8b24",
+          "word": "relax",
+          "phonetic": "rɪˈlæks",
+          "pos": "v.",
+          "meaning": "放松；休息",
+          "sentence": "Listen to music to relax yourself.",
+          "sentenceCn": "听音乐放松一下自己。",
+          "audio": "/audio/jw/jw8b24.mp3"
+        },
+        {
+          "id": "jw8b25",
+          "word": "habit",
+          "phonetic": "ˈhæbɪt",
+          "pos": "n.",
+          "meaning": "习惯",
+          "sentence": "Getting up early is a good habit.",
+          "sentenceCn": "早起是一个好习惯。",
+          "audio": "/audio/jw/jw8b25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw8c",
+      "grade": 8,
+      "title": "天气与自然",
+      "words": [
+        {
+          "id": "jw8c01",
+          "word": "weather",
+          "phonetic": "ˈweðə",
+          "pos": "n.",
+          "meaning": "天气",
+          "sentence": "What will the weather be like tomorrow?",
+          "sentenceCn": "明天天气怎么样？",
+          "audio": "/audio/jw/jw8c01.mp3"
+        },
+        {
+          "id": "jw8c02",
+          "word": "sunny",
+          "phonetic": "ˈsʌni",
+          "pos": "adj.",
+          "meaning": "晴朗的",
+          "sentence": "It is a sunny day for a picnic.",
+          "sentenceCn": "今天是适合野餐的晴天。",
+          "audio": "/audio/jw/jw8c02.mp3"
+        },
+        {
+          "id": "jw8c03",
+          "word": "rainy",
+          "phonetic": "ˈreɪni",
+          "pos": "adj.",
+          "meaning": "多雨的；下雨的",
+          "sentence": "Take an umbrella on rainy days.",
+          "sentenceCn": "雨天要带伞。",
+          "audio": "/audio/jw/jw8c03.mp3"
+        },
+        {
+          "id": "jw8c04",
+          "word": "windy",
+          "phonetic": "ˈwɪndi",
+          "pos": "adj.",
+          "meaning": "有风的",
+          "sentence": "It is too windy to fly a kite today.",
+          "sentenceCn": "今天风太大，不适合放风筝。",
+          "audio": "/audio/jw/jw8c04.mp3"
+        },
+        {
+          "id": "jw8c05",
+          "word": "cloudy",
+          "phonetic": "ˈklaʊdi",
+          "pos": "adj.",
+          "meaning": "多云的；阴天的",
+          "sentence": "The sky is cloudy, but it is not cold.",
+          "sentenceCn": "天空多云，但不冷。",
+          "audio": "/audio/jw/jw8c05.mp3"
+        },
+        {
+          "id": "jw8c06",
+          "word": "snowy",
+          "phonetic": "ˈsnəʊi",
+          "pos": "adj.",
+          "meaning": "下雪的；多雪的",
+          "sentence": "Children love snowy days.",
+          "sentenceCn": "孩子们喜欢下雪天。",
+          "audio": "/audio/jw/jw8c06.mp3"
+        },
+        {
+          "id": "jw8c07",
+          "word": "storm",
+          "phonetic": "stɔːm",
+          "pos": "n.",
+          "meaning": "暴风雨（雪）",
+          "sentence": "The storm broke many trees last night.",
+          "sentenceCn": "昨晚的暴风雨刮断了许多树。",
+          "audio": "/audio/jw/jw8c07.mp3"
+        },
+        {
+          "id": "jw8c08",
+          "word": "rain",
+          "phonetic": "reɪn",
+          "pos": "n./v.",
+          "meaning": "雨；下雨",
+          "sentence": "Heavy rain stopped the football match.",
+          "sentenceCn": "大雨使足球赛停了下来。",
+          "audio": "/audio/jw/jw8c08.mp3"
+        },
+        {
+          "id": "jw8c09",
+          "word": "snow",
+          "phonetic": "snəʊ",
+          "pos": "n./v.",
+          "meaning": "雪；下雪",
+          "sentence": "The ground is white with snow.",
+          "sentenceCn": "大地被雪覆盖成白色。",
+          "audio": "/audio/jw/jw8c09.mp3"
+        },
+        {
+          "id": "jw8c10",
+          "word": "sky",
+          "phonetic": "skaɪ",
+          "pos": "n.",
+          "meaning": "天空",
+          "sentence": "The stars shine brightly in the night sky.",
+          "sentenceCn": "星星在夜空中明亮地闪烁。",
+          "audio": "/audio/jw/jw8c10.mp3"
+        },
+        {
+          "id": "jw8c11",
+          "word": "rainbow",
+          "phonetic": "ˈreɪnbəʊ",
+          "pos": "n.",
+          "meaning": "彩虹",
+          "sentence": "A rainbow appears after the rain.",
+          "sentenceCn": "雨后出现了彩虹。",
+          "audio": "/audio/jw/jw8c11.mp3"
+        },
+        {
+          "id": "jw8c12",
+          "word": "temperature",
+          "phonetic": "ˈtemprətʃə",
+          "pos": "n.",
+          "meaning": "温度；气温",
+          "sentence": "The temperature stays below zero in winter.",
+          "sentenceCn": "冬季气温保持在零度以下。",
+          "audio": "/audio/jw/jw8c12.mp3"
+        },
+        {
+          "id": "jw8c13",
+          "word": "degree",
+          "phonetic": "dɪˈɡriː",
+          "pos": "n.",
+          "meaning": "度；度数",
+          "sentence": "Water boils at 100 degrees.",
+          "sentenceCn": "水在100度沸腾。",
+          "audio": "/audio/jw/jw8c13.mp3"
+        },
+        {
+          "id": "jw8c14",
+          "word": "season",
+          "phonetic": "ˈsiːzn",
+          "pos": "n.",
+          "meaning": "季节",
+          "sentence": "Autumn is the best season for travel.",
+          "sentenceCn": "秋天是旅行的好季节。",
+          "audio": "/audio/jw/jw8c14.mp3"
+        },
+        {
+          "id": "jw8c15",
+          "word": "spring",
+          "phonetic": "sprɪŋ",
+          "pos": "n.",
+          "meaning": "春天；泉水",
+          "sentence": "Flowers come out in spring.",
+          "sentenceCn": "春天百花盛开。",
+          "audio": "/audio/jw/jw8c15.mp3"
+        },
+        {
+          "id": "jw8c16",
+          "word": "summer",
+          "phonetic": "ˈsʌmə",
+          "pos": "n.",
+          "meaning": "夏天",
+          "sentence": "We often swim in the river in summer.",
+          "sentenceCn": "夏天我们经常在河里游泳。",
+          "audio": "/audio/jw/jw8c16.mp3"
+        },
+        {
+          "id": "jw8c17",
+          "word": "autumn",
+          "phonetic": "ˈɔːtəm",
+          "pos": "n.",
+          "meaning": "秋天（美式 fall）",
+          "sentence": "Leaves turn yellow in autumn.",
+          "sentenceCn": "秋天树叶变黄。",
+          "audio": "/audio/jw/jw8c17.mp3"
+        },
+        {
+          "id": "jw8c18",
+          "word": "winter",
+          "phonetic": "ˈwɪntə",
+          "pos": "n.",
+          "meaning": "冬天",
+          "sentence": "It often snows here in winter.",
+          "sentenceCn": "这里冬天经常下雪。",
+          "audio": "/audio/jw/jw8c18.mp3"
+        },
+        {
+          "id": "jw8c19",
+          "word": "nature",
+          "phonetic": "ˈneɪtʃə",
+          "pos": "n.",
+          "meaning": "大自然；本性",
+          "sentence": "We should get close to nature.",
+          "sentenceCn": "我们应该亲近大自然。",
+          "audio": "/audio/jw/jw8c19.mp3"
+        },
+        {
+          "id": "jw8c20",
+          "word": "tree",
+          "phonetic": "triː",
+          "pos": "n.",
+          "meaning": "树",
+          "sentence": "Old trees give us cool shade.",
+          "sentenceCn": "老树给我们阴凉。",
+          "audio": "/audio/jw/jw8c20.mp3"
+        },
+        {
+          "id": "jw8c21",
+          "word": "flower",
+          "phonetic": "ˈflaʊə",
+          "pos": "n.",
+          "meaning": "花",
+          "sentence": "The garden is full of beautiful flowers.",
+          "sentenceCn": "花园里开满美丽的花。",
+          "audio": "/audio/jw/jw8c21.mp3"
+        },
+        {
+          "id": "jw8c22",
+          "word": "river",
+          "phonetic": "ˈrɪvə",
+          "pos": "n.",
+          "meaning": "河；江",
+          "sentence": "The river runs through our city.",
+          "sentenceCn": "这条河穿过我们的城市。",
+          "audio": "/audio/jw/jw8c22.mp3"
+        },
+        {
+          "id": "jw8c23",
+          "word": "forest",
+          "phonetic": "ˈfɒrɪst",
+          "pos": "n.",
+          "meaning": "森林",
+          "sentence": "Many wild animals live in the forest.",
+          "sentenceCn": "许多野生动物生活在森林里。",
+          "audio": "/audio/jw/jw8c23.mp3"
+        },
+        {
+          "id": "jw8c24",
+          "word": "protect",
+          "phonetic": "prəˈtekt",
+          "pos": "v.",
+          "meaning": "保护",
+          "sentence": "We must protect wild animals.",
+          "sentenceCn": "我们必须保护野生动物。",
+          "audio": "/audio/jw/jw8c24.mp3"
+        },
+        {
+          "id": "jw8c25",
+          "word": "earth",
+          "phonetic": "ɜːθ",
+          "pos": "n.",
+          "meaning": "地球；大地",
+          "sentence": "The earth is our only home.",
+          "sentenceCn": "地球是我们唯一的家园。",
+          "audio": "/audio/jw/jw8c25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw8d",
+      "grade": 8,
+      "title": "情感与交往",
+      "words": [
+        {
+          "id": "jw8d01",
+          "word": "happy",
+          "phonetic": "ˈhæpi",
+          "pos": "adj.",
+          "meaning": "高兴的；幸福的",
+          "sentence": "Nothing makes me happier than your success.",
+          "sentenceCn": "没有什么比你的成功更让我高兴。",
+          "audio": "/audio/jw/jw8d01.mp3"
+        },
+        {
+          "id": "jw8d02",
+          "word": "sad",
+          "phonetic": "sæd",
+          "pos": "adj.",
+          "meaning": "悲伤的",
+          "sentence": "Why does the little girl look so sad?",
+          "sentenceCn": "为什么这个小女孩看起来这么伤心？",
+          "audio": "/audio/jw/jw8d02.mp3"
+        },
+        {
+          "id": "jw8d03",
+          "word": "angry",
+          "phonetic": "ˈæŋɡri",
+          "pos": "adj.",
+          "meaning": "生气的",
+          "sentence": "Don't be angry with him; he is only a child.",
+          "sentenceCn": "别生他的气，他只是个孩子。",
+          "audio": "/audio/jw/jw8d03.mp3"
+        },
+        {
+          "id": "jw8d04",
+          "word": "excited",
+          "phonetic": "ɪkˈsaɪtɪd",
+          "pos": "adj.",
+          "meaning": "兴奋的；激动的",
+          "sentence": "Everyone got excited at the good news.",
+          "sentenceCn": "听到好消息大家都很兴奋。",
+          "audio": "/audio/jw/jw8d04.mp3"
+        },
+        {
+          "id": "jw8d05",
+          "word": "worried",
+          "phonetic": "ˈwʌrid",
+          "pos": "adj.",
+          "meaning": "担心的；烦恼的",
+          "sentence": "Mother is worried about my eyes.",
+          "sentenceCn": "妈妈担心我的眼睛。",
+          "audio": "/audio/jw/jw8d05.mp3"
+        },
+        {
+          "id": "jw8d06",
+          "word": "nervous",
+          "phonetic": "ˈnɜːvəs",
+          "pos": "adj.",
+          "meaning": "紧张的；神经紧张的",
+          "sentence": "I felt nervous before the exam.",
+          "sentenceCn": "考试前我感到紧张。",
+          "audio": "/audio/jw/jw8d06.mp3"
+        },
+        {
+          "id": "jw8d07",
+          "word": "afraid",
+          "phonetic": "əˈfreɪd",
+          "pos": "adj.",
+          "meaning": "害怕的；担心的",
+          "sentence": "Don't be afraid of making mistakes.",
+          "sentenceCn": "不要害怕犯错误。",
+          "audio": "/audio/jw/jw8d07.mp3"
+        },
+        {
+          "id": "jw8d08",
+          "word": "proud",
+          "phonetic": "praʊd",
+          "pos": "adj.",
+          "meaning": "自豪的；骄傲的",
+          "sentence": "We are proud of our country.",
+          "sentenceCn": "我们为我们的国家感到自豪。",
+          "audio": "/audio/jw/jw8d08.mp3"
+        },
+        {
+          "id": "jw8d09",
+          "word": "lonely",
+          "phonetic": "ˈləʊnli",
+          "pos": "adj.",
+          "meaning": "孤独的；寂寞的",
+          "sentence": "The old man feels lonely sometimes.",
+          "sentenceCn": "这位老人有时感到孤独。",
+          "audio": "/audio/jw/jw8d09.mp3"
+        },
+        {
+          "id": "jw8d10",
+          "word": "surprised",
+          "phonetic": "səˈpraɪzd",
+          "pos": "adj.",
+          "meaning": "感到惊讶的",
+          "sentence": "I was surprised at the exam result.",
+          "sentenceCn": "我对考试结果感到惊讶。",
+          "audio": "/audio/jw/jw8d10.mp3"
+        },
+        {
+          "id": "jw8d11",
+          "word": "smile",
+          "phonetic": "smaɪl",
+          "pos": "v./n.",
+          "meaning": "微笑",
+          "sentence": "A smile costs nothing but gives much.",
+          "sentenceCn": "微笑不花分文却给予很多。",
+          "audio": "/audio/jw/jw8d11.mp3"
+        },
+        {
+          "id": "jw8d12",
+          "word": "laugh",
+          "phonetic": "lɑːf",
+          "pos": "v./n.",
+          "meaning": "笑；大笑",
+          "sentence": "We all laughed at his funny story.",
+          "sentenceCn": "我们都因他有趣的故事而大笑。",
+          "audio": "/audio/jw/jw8d12.mp3"
+        },
+        {
+          "id": "jw8d13",
+          "word": "cry",
+          "phonetic": "kraɪ",
+          "pos": "v.",
+          "meaning": "哭；喊叫",
+          "sentence": "The baby stopped crying when it saw its mother.",
+          "sentenceCn": "婴儿看到妈妈就不哭了。",
+          "audio": "/audio/jw/jw8d13.mp3"
+        },
+        {
+          "id": "jw8d14",
+          "word": "shout",
+          "phonetic": "ʃaʊt",
+          "pos": "v./n.",
+          "meaning": "喊；高声呼喊",
+          "sentence": "Don't shout at me. I can hear you.",
+          "sentenceCn": "别对我喊，我听得见。",
+          "audio": "/audio/jw/jw8d14.mp3"
+        },
+        {
+          "id": "jw8d15",
+          "word": "care",
+          "phonetic": "keə",
+          "pos": "v./n.",
+          "meaning": "关心；在意（care about）",
+          "sentence": "A true friend cares about your feelings.",
+          "sentenceCn": "真正的朋友在意你的感受。",
+          "audio": "/audio/jw/jw8d15.mp3"
+        },
+        {
+          "id": "jw8d16",
+          "word": "share",
+          "phonetic": "ʃeə",
+          "pos": "v.",
+          "meaning": "分享；共用",
+          "sentence": "Good friends share happiness and sadness.",
+          "sentenceCn": "好朋友分享快乐与悲伤。",
+          "audio": "/audio/jw/jw8d16.mp3"
+        },
+        {
+          "id": "jw8d17",
+          "word": "trust",
+          "phonetic": "trʌst",
+          "pos": "v./n.",
+          "meaning": "信任",
+          "sentence": "Trust yourself and you will succeed.",
+          "sentenceCn": "相信自己，你就会成功。",
+          "audio": "/audio/jw/jw8d17.mp3"
+        },
+        {
+          "id": "jw8d18",
+          "word": "understand",
+          "phonetic": "ˌʌndəˈstænd",
+          "pos": "v.",
+          "meaning": "理解；懂得（过去式 understood）",
+          "sentence": "Now I understand why you were late.",
+          "sentenceCn": "现在我明白你为什么迟到了。",
+          "audio": "/audio/jw/jw8d18.mp3"
+        },
+        {
+          "id": "jw8d19",
+          "word": "argue",
+          "phonetic": "ˈɑːɡjuː",
+          "pos": "v.",
+          "meaning": "争论；辩论",
+          "sentence": "They often argue about small things.",
+          "sentenceCn": "他们经常为小事争吵。",
+          "audio": "/audio/jw/jw8d19.mp3"
+        },
+        {
+          "id": "jw8d20",
+          "word": "agree",
+          "phonetic": "əˈɡriː",
+          "pos": "v.",
+          "meaning": "同意；一致",
+          "sentence": "I agree with what you said.",
+          "sentenceCn": "我同意你说的话。",
+          "audio": "/audio/jw/jw8d20.mp3"
+        },
+        {
+          "id": "jw8d21",
+          "word": "miss",
+          "phonetic": "mɪs",
+          "pos": "v.",
+          "meaning": "想念；错过",
+          "sentence": "I miss my friends in the primary school.",
+          "sentenceCn": "我想念小学的朋友们。",
+          "audio": "/audio/jw/jw8d21.mp3"
+        },
+        {
+          "id": "jw8d22",
+          "word": "hug",
+          "phonetic": "hʌɡ",
+          "pos": "v./n.",
+          "meaning": "拥抱",
+          "sentence": "Mother gave me a warm hug.",
+          "sentenceCn": "妈妈给了我一个温暖的拥抱。",
+          "audio": "/audio/jw/jw8d22.mp3"
+        },
+        {
+          "id": "jw8d23",
+          "word": "thank",
+          "phonetic": "θæŋk",
+          "pos": "v./n.",
+          "meaning": "感谢",
+          "sentence": "Thank you for helping me with my maths.",
+          "sentenceCn": "谢谢你帮我学数学。",
+          "audio": "/audio/jw/jw8d23.mp3"
+        },
+        {
+          "id": "jw8d24",
+          "word": "sorry",
+          "phonetic": "ˈsɒri",
+          "pos": "adj.",
+          "meaning": "抱歉的；难过的",
+          "sentence": "I am sorry to keep you waiting.",
+          "sentenceCn": "对不起让你久等了。",
+          "audio": "/audio/jw/jw8d24.mp3"
+        },
+        {
+          "id": "jw8d25",
+          "word": "encourage",
+          "phonetic": "ɪnˈkʌrɪdʒ",
+          "pos": "v.",
+          "meaning": "鼓励",
+          "sentence": "My teacher encourages me to speak English bravely.",
+          "sentenceCn": "老师鼓励我勇敢地说英语。",
+          "audio": "/audio/jw/jw8d25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw9a",
+      "grade": 9,
+      "title": "环保与社会",
+      "words": [
+        {
+          "id": "jw9a01",
+          "word": "environment",
+          "phonetic": "ɪnˈvaɪrənmənt",
+          "pos": "n.",
+          "meaning": "环境",
+          "sentence": "We should do something to protect the environment.",
+          "sentenceCn": "我们应该为保护环境做些事。",
+          "audio": "/audio/jw/jw9a01.mp3"
+        },
+        {
+          "id": "jw9a02",
+          "word": "pollution",
+          "phonetic": "pəˈluːʃn",
+          "pos": "n.",
+          "meaning": "污染",
+          "sentence": "Air pollution is a serious problem in big cities.",
+          "sentenceCn": "空气污染是大城市的严重问题。",
+          "audio": "/audio/jw/jw9a02.mp3"
+        },
+        {
+          "id": "jw9a03",
+          "word": "recycle",
+          "phonetic": "ˌriːˈsaɪkl",
+          "pos": "v.",
+          "meaning": "回收利用",
+          "sentence": "We recycle old paper to save trees.",
+          "sentenceCn": "我们回收旧纸来拯救树木。",
+          "audio": "/audio/jw/jw9a03.mp3"
+        },
+        {
+          "id": "jw9a04",
+          "word": "rubbish",
+          "phonetic": "ˈrʌbɪʃ",
+          "pos": "n.",
+          "meaning": "垃圾",
+          "sentence": "Please put the rubbish into the bin.",
+          "sentenceCn": "请把垃圾放进垃圾桶。",
+          "audio": "/audio/jw/jw9a04.mp3"
+        },
+        {
+          "id": "jw9a05",
+          "word": "plastic",
+          "phonetic": "ˈplæstɪk",
+          "pos": "n./adj.",
+          "meaning": "塑料（的）",
+          "sentence": "Don't use too many plastic bags.",
+          "sentenceCn": "不要使用太多塑料袋。",
+          "audio": "/audio/jw/jw9a05.mp3"
+        },
+        {
+          "id": "jw9a06",
+          "word": "save",
+          "phonetic": "seɪv",
+          "pos": "v.",
+          "meaning": "节省；拯救；储蓄",
+          "sentence": "Turn off the lights to save electricity.",
+          "sentenceCn": "关灯以节约用电。",
+          "audio": "/audio/jw/jw9a06.mp3"
+        },
+        {
+          "id": "jw9a07",
+          "word": "energy",
+          "phonetic": "ˈenədʒi",
+          "pos": "n.",
+          "meaning": "能源；能量",
+          "sentence": "Solar energy is clean and cheap.",
+          "sentenceCn": "太阳能清洁又便宜。",
+          "audio": "/audio/jw/jw9a07.mp3"
+        },
+        {
+          "id": "jw9a08",
+          "word": "solar",
+          "phonetic": "ˈsəʊlə",
+          "pos": "adj.",
+          "meaning": "太阳的；太阳能的",
+          "sentence": "This is a solar-powered car.",
+          "sentenceCn": "这是一辆太阳能汽车。",
+          "audio": "/audio/jw/jw9a08.mp3"
+        },
+        {
+          "id": "jw9a09",
+          "word": "waste",
+          "phonetic": "weɪst",
+          "pos": "v./n.",
+          "meaning": "浪费；废物",
+          "sentence": "Don't waste water.",
+          "sentenceCn": "不要浪费水。",
+          "audio": "/audio/jw/jw9a09.mp3"
+        },
+        {
+          "id": "jw9a10",
+          "word": "reduce",
+          "phonetic": "rɪˈdjuːs",
+          "pos": "v.",
+          "meaning": "减少；降低",
+          "sentence": "We can reduce air pollution by taking buses.",
+          "sentenceCn": "乘公交车可以减少空气污染。",
+          "audio": "/audio/jw/jw9a10.mp3"
+        },
+        {
+          "id": "jw9a11",
+          "word": "society",
+          "phonetic": "səˈsaɪəti",
+          "pos": "n.",
+          "meaning": "社会",
+          "sentence": "Everyone should follow the rules of society.",
+          "sentenceCn": "每个人都应遵守社会规则。",
+          "audio": "/audio/jw/jw9a11.mp3"
+        },
+        {
+          "id": "jw9a12",
+          "word": "volunteer",
+          "phonetic": "ˌvɒlənˈtɪə",
+          "pos": "n./v.",
+          "meaning": "志愿者；自愿做",
+          "sentence": "The volunteers clean the beach every month.",
+          "sentenceCn": "志愿者每个月清理海滩。",
+          "audio": "/audio/jw/jw9a12.mp3"
+        },
+        {
+          "id": "jw9a13",
+          "word": "charity",
+          "phonetic": "ˈtʃærəti",
+          "pos": "n.",
+          "meaning": "慈善机构；慈善",
+          "sentence": "She gave her old books to charity.",
+          "sentenceCn": "她把旧书捐给了慈善机构。",
+          "audio": "/audio/jw/jw9a13.mp3"
+        },
+        {
+          "id": "jw9a14",
+          "word": "community",
+          "phonetic": "kəˈmjuːnəti",
+          "pos": "n.",
+          "meaning": "社区；社团",
+          "sentence": "Our community has a library and a gym.",
+          "sentenceCn": "我们社区有一个图书馆和一个健身房。",
+          "audio": "/audio/jw/jw9a14.mp3"
+        },
+        {
+          "id": "jw9a15",
+          "word": "government",
+          "phonetic": "ˈɡʌvənmənt",
+          "pos": "n.",
+          "meaning": "政府",
+          "sentence": "The government builds new schools every year.",
+          "sentenceCn": "政府每年建新学校。",
+          "audio": "/audio/jw/jw9a15.mp3"
+        },
+        {
+          "id": "jw9a16",
+          "word": "law",
+          "phonetic": "lɔː",
+          "pos": "n.",
+          "meaning": "法律",
+          "sentence": "Everyone is equal before the law.",
+          "sentenceCn": "法律面前人人平等。",
+          "audio": "/audio/jw/jw9a16.mp3"
+        },
+        {
+          "id": "jw9a17",
+          "word": "rule",
+          "phonetic": "ruːl",
+          "pos": "n./v.",
+          "meaning": "规则；统治",
+          "sentence": "Follow the school rules, please.",
+          "sentenceCn": "请遵守校规。",
+          "audio": "/audio/jw/jw9a17.mp3"
+        },
+        {
+          "id": "jw9a18",
+          "word": "safety",
+          "phonetic": "ˈseɪfti",
+          "pos": "n.",
+          "meaning": "安全",
+          "sentence": "Safety comes first when we swim.",
+          "sentenceCn": "游泳时安全第一。",
+          "audio": "/audio/jw/jw9a18.mp3"
+        },
+        {
+          "id": "jw9a19",
+          "word": "danger",
+          "phonetic": "ˈdeɪndʒə",
+          "pos": "n.",
+          "meaning": "危险",
+          "sentence": "The sign says \"Danger! Keep out!\"",
+          "sentenceCn": "牌子上写着\"危险，请勿入内\"。",
+          "audio": "/audio/jw/jw9a19.mp3"
+        },
+        {
+          "id": "jw9a20",
+          "word": "warn",
+          "phonetic": "wɔːn",
+          "pos": "v.",
+          "meaning": "警告；提醒",
+          "sentence": "The teacher warned us not to swim in the river.",
+          "sentenceCn": "老师警告我们不要在河里游泳。",
+          "audio": "/audio/jw/jw9a20.mp3"
+        },
+        {
+          "id": "jw9a21",
+          "word": "planet",
+          "phonetic": "ˈplænɪt",
+          "pos": "n.",
+          "meaning": "行星；地球",
+          "sentence": "There is no planet B for humans.",
+          "sentenceCn": "人类没有第二个星球可去。",
+          "audio": "/audio/jw/jw9a21.mp3"
+        },
+        {
+          "id": "jw9a22",
+          "word": "traffic",
+          "phonetic": "ˈtræfɪk",
+          "pos": "n.",
+          "meaning": "交通",
+          "sentence": "There is heavy traffic at eight in the morning.",
+          "sentenceCn": "早上八点交通很拥堵。",
+          "audio": "/audio/jw/jw9a22.mp3"
+        },
+        {
+          "id": "jw9a23",
+          "word": "crowded",
+          "phonetic": "ˈkraʊdɪd",
+          "pos": "adj.",
+          "meaning": "拥挤的",
+          "sentence": "The bus was so crowded that I had to stand.",
+          "sentenceCn": "公交车太挤，我只好站着。",
+          "audio": "/audio/jw/jw9a23.mp3"
+        },
+        {
+          "id": "jw9a24",
+          "word": "green",
+          "phonetic": "ɡriːn",
+          "pos": "adj.",
+          "meaning": "环保的；绿色的",
+          "sentence": "A green lifestyle helps the earth.",
+          "sentenceCn": "绿色生活方式有助于地球。",
+          "audio": "/audio/jw/jw9a24.mp3"
+        },
+        {
+          "id": "jw9a25",
+          "word": "responsibility",
+          "phonetic": "rɪˌspɒnsəˈbɪləti",
+          "pos": "n.",
+          "meaning": "责任；职责",
+          "sentence": "Keeping the classroom clean is everyone's responsibility.",
+          "sentenceCn": "保持教室整洁是每个人的责任。",
+          "audio": "/audio/jw/jw9a25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw9b",
+      "grade": 9,
+      "title": "科技与发明",
+      "words": [
+        {
+          "id": "jw9b01",
+          "word": "technology",
+          "phonetic": "tekˈnɒlədʒi",
+          "pos": "n.",
+          "meaning": "科技；技术",
+          "sentence": "Technology changes our life quickly.",
+          "sentenceCn": "科技迅速改变着我们的生活。",
+          "audio": "/audio/jw/jw9b01.mp3"
+        },
+        {
+          "id": "jw9b02",
+          "word": "computer",
+          "phonetic": "kəmˈpjuːtə",
+          "pos": "n.",
+          "meaning": "计算机；电脑",
+          "sentence": "Don't play computer games for too long.",
+          "sentenceCn": "不要玩太长时间电脑游戏。",
+          "audio": "/audio/jw/jw9b02.mp3"
+        },
+        {
+          "id": "jw9b03",
+          "word": "internet",
+          "phonetic": "ˈɪntənet",
+          "pos": "n.",
+          "meaning": "互联网",
+          "sentence": "The Internet makes the world a small village.",
+          "sentenceCn": "互联网使世界变成了小村庄。",
+          "audio": "/audio/jw/jw9b03.mp3"
+        },
+        {
+          "id": "jw9b04",
+          "word": "mobile",
+          "phonetic": "ˈməʊbaɪl",
+          "pos": "adj./n.",
+          "meaning": "移动的；手机（mobile phone）",
+          "sentence": "Mobile phones are useful but also distracting.",
+          "sentenceCn": "手机有用但也让人分心。",
+          "audio": "/audio/jw/jw9b04.mp3"
+        },
+        {
+          "id": "jw9b05",
+          "word": "robot",
+          "phonetic": "ˈrəʊbɒt",
+          "pos": "n.",
+          "meaning": "机器人",
+          "sentence": "Robots will do more housework in the future.",
+          "sentenceCn": "将来机器人会做更多家务。",
+          "audio": "/audio/jw/jw9b05.mp3"
+        },
+        {
+          "id": "jw9b06",
+          "word": "machine",
+          "phonetic": "məˈʃiːn",
+          "pos": "n.",
+          "meaning": "机器",
+          "sentence": "This washing machine is easy to use.",
+          "sentenceCn": "这台洗衣机很容易使用。",
+          "audio": "/audio/jw/jw9b06.mp3"
+        },
+        {
+          "id": "jw9b07",
+          "word": "invent",
+          "phonetic": "ɪnˈvent",
+          "pos": "v.",
+          "meaning": "发明",
+          "sentence": "Edison invented the light bulb.",
+          "sentenceCn": "爱迪生发明了灯泡。",
+          "audio": "/audio/jw/jw9b07.mp3"
+        },
+        {
+          "id": "jw9b08",
+          "word": "invention",
+          "phonetic": "ɪnˈvenʃn",
+          "pos": "n.",
+          "meaning": "发明；发明物",
+          "sentence": "The paper is one of the four great inventions of China.",
+          "sentenceCn": "纸是中国四大发明之一。",
+          "audio": "/audio/jw/jw9b08.mp3"
+        },
+        {
+          "id": "jw9b09",
+          "word": "discover",
+          "phonetic": "dɪˈskʌvə",
+          "pos": "v.",
+          "meaning": "发现",
+          "sentence": "Who discovered the new continent?",
+          "sentenceCn": "谁发现了新大陆？",
+          "audio": "/audio/jw/jw9b09.mp3"
+        },
+        {
+          "id": "jw9b10",
+          "word": "scientist",
+          "phonetic": "ˈsaɪəntɪst",
+          "pos": "n.",
+          "meaning": "科学家",
+          "sentence": "The scientist spent ten years on the research.",
+          "sentenceCn": "这位科学家花了十年做研究。",
+          "audio": "/audio/jw/jw9b10.mp3"
+        },
+        {
+          "id": "jw9b11",
+          "word": "experiment",
+          "phonetic": "ɪkˈsperɪmənt",
+          "pos": "n./v.",
+          "meaning": "实验",
+          "sentence": "We did an interesting experiment in the science class.",
+          "sentenceCn": "我们在科学课上做了一个有趣的实验。",
+          "audio": "/audio/jw/jw9b11.mp3"
+        },
+        {
+          "id": "jw9b12",
+          "word": "digital",
+          "phonetic": "ˈdɪdʒɪtl",
+          "pos": "adj.",
+          "meaning": "数字的；数码的",
+          "sentence": "Digital cameras are popular now.",
+          "sentenceCn": "数码相机现在很流行。",
+          "audio": "/audio/jw/jw9b12.mp3"
+        },
+        {
+          "id": "jw9b13",
+          "word": "online",
+          "phonetic": "ˌɒnˈlaɪn",
+          "pos": "adj./adv.",
+          "meaning": "在线的（地）",
+          "sentence": "More and more people shop online.",
+          "sentenceCn": "越来越多的人网上购物。",
+          "audio": "/audio/jw/jw9b13.mp3"
+        },
+        {
+          "id": "jw9b14",
+          "word": "website",
+          "phonetic": "ˈwebsaɪt",
+          "pos": "n.",
+          "meaning": "网站",
+          "sentence": "You can find the answer on this website.",
+          "sentenceCn": "你可以在这个网站上找到答案。",
+          "audio": "/audio/jw/jw9b14.mp3"
+        },
+        {
+          "id": "jw9b15",
+          "word": "software",
+          "phonetic": "ˈsɒftweə",
+          "pos": "n.",
+          "meaning": "软件",
+          "sentence": "This software helps you learn English.",
+          "sentenceCn": "这款软件帮助你学英语。",
+          "audio": "/audio/jw/jw9b15.mp3"
+        },
+        {
+          "id": "jw9b16",
+          "word": "data",
+          "phonetic": "ˈdeɪtə",
+          "pos": "n.",
+          "meaning": "数据",
+          "sentence": "The data show that students sleep less.",
+          "sentenceCn": "数据表明学生睡眠更少了。",
+          "audio": "/audio/jw/jw9b16.mp3"
+        },
+        {
+          "id": "jw9b17",
+          "word": "screen",
+          "phonetic": "skriːn",
+          "pos": "n.",
+          "meaning": "屏幕",
+          "sentence": "Don't look at the screen for too long.",
+          "sentenceCn": "不要看屏幕太久。",
+          "audio": "/audio/jw/jw9b17.mp3"
+        },
+        {
+          "id": "jw9b18",
+          "word": "keyboard",
+          "phonetic": "ˈkiːbɔːd",
+          "pos": "n.",
+          "meaning": "键盘",
+          "sentence": "He types very fast on the keyboard.",
+          "sentenceCn": "他打字非常快。",
+          "audio": "/audio/jw/jw9b18.mp3"
+        },
+        {
+          "id": "jw9b19",
+          "word": "search",
+          "phonetic": "sɜːtʃ",
+          "pos": "v./n.",
+          "meaning": "搜索；搜查",
+          "sentence": "Search the word on the Internet.",
+          "sentenceCn": "在网上搜索这个词。",
+          "audio": "/audio/jw/jw9b19.mp3"
+        },
+        {
+          "id": "jw9b20",
+          "word": "download",
+          "phonetic": "ˌdaʊnˈləʊd",
+          "pos": "v./n.",
+          "meaning": "下载",
+          "sentence": "You can download the song for free.",
+          "sentenceCn": "你可以免费下载这首歌。",
+          "audio": "/audio/jw/jw9b20.mp3"
+        },
+        {
+          "id": "jw9b21",
+          "word": "update",
+          "phonetic": "ˌʌpˈdeɪt",
+          "pos": "v./n.",
+          "meaning": "更新",
+          "sentence": "Remember to update your app regularly.",
+          "sentenceCn": "记得定期更新你的应用。",
+          "audio": "/audio/jw/jw9b21.mp3"
+        },
+        {
+          "id": "jw9b22",
+          "word": "electric",
+          "phonetic": "ɪˈlektrɪk",
+          "pos": "adj.",
+          "meaning": "电动的；电的",
+          "sentence": "More and more people drive electric cars.",
+          "sentenceCn": "越来越多的人开电动汽车。",
+          "audio": "/audio/jw/jw9b22.mp3"
+        },
+        {
+          "id": "jw9b23",
+          "word": "convenient",
+          "phonetic": "kənˈviːniənt",
+          "pos": "adj.",
+          "meaning": "方便的；便利的",
+          "sentence": "It is convenient to pay by phone.",
+          "sentenceCn": "用手机支付很方便。",
+          "audio": "/audio/jw/jw9b23.mp3"
+        },
+        {
+          "id": "jw9b24",
+          "word": "wireless",
+          "phonetic": "ˈwaɪələs",
+          "pos": "adj.",
+          "meaning": "无线的",
+          "sentence": "The mouse is wireless, so there are no wires.",
+          "sentenceCn": "这个鼠标是无线的，所以没有电线。",
+          "audio": "/audio/jw/jw9b24.mp3"
+        },
+        {
+          "id": "jw9b25",
+          "word": "create",
+          "phonetic": "kriˈeɪt",
+          "pos": "v.",
+          "meaning": "创造；创作",
+          "sentence": "Young people should learn to create, not just copy.",
+          "sentenceCn": "年轻人应该学会创造，而不只是复制。",
+          "audio": "/audio/jw/jw9b25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw9c",
+      "grade": 9,
+      "title": "文化与节日",
+      "words": [
+        {
+          "id": "jw9c01",
+          "word": "festival",
+          "phonetic": "ˈfestɪvl",
+          "pos": "n.",
+          "meaning": "节日",
+          "sentence": "The Spring Festival is the most important festival in China.",
+          "sentenceCn": "春节是中国最重要的节日。",
+          "audio": "/audio/jw/jw9c01.mp3"
+        },
+        {
+          "id": "jw9c02",
+          "word": "culture",
+          "phonetic": "ˈkʌltʃə",
+          "pos": "n.",
+          "meaning": "文化",
+          "sentence": "Learning English helps us understand other cultures.",
+          "sentenceCn": "学英语帮助我们理解其他文化。",
+          "audio": "/audio/jw/jw9c02.mp3"
+        },
+        {
+          "id": "jw9c03",
+          "word": "tradition",
+          "phonetic": "trəˈdɪʃn",
+          "pos": "n.",
+          "meaning": "传统",
+          "sentence": "It is a tradition to eat dumplings at Spring Festival.",
+          "sentenceCn": "春节吃饺子是一个传统。",
+          "audio": "/audio/jw/jw9c03.mp3"
+        },
+        {
+          "id": "jw9c04",
+          "word": "custom",
+          "phonetic": "ˈkʌstəm",
+          "pos": "n.",
+          "meaning": "习俗；风俗",
+          "sentence": "Every country has its own customs.",
+          "sentenceCn": "每个国家都有自己的习俗。",
+          "audio": "/audio/jw/jw9c04.mp3"
+        },
+        {
+          "id": "jw9c05",
+          "word": "celebrate",
+          "phonetic": "ˈselɪbreɪt",
+          "pos": "v.",
+          "meaning": "庆祝",
+          "sentence": "How do you celebrate your birthday?",
+          "sentenceCn": "你怎么庆祝生日？",
+          "audio": "/audio/jw/jw9c05.mp3"
+        },
+        {
+          "id": "jw9c06",
+          "word": "dragon",
+          "phonetic": "ˈdræɡən",
+          "pos": "n.",
+          "meaning": "龙",
+          "sentence": "The dragon is a symbol of China.",
+          "sentenceCn": "龙是中国的象征。",
+          "audio": "/audio/jw/jw9c06.mp3"
+        },
+        {
+          "id": "jw9c07",
+          "word": "mooncake",
+          "phonetic": "ˈmuːnkeɪk",
+          "pos": "n.",
+          "meaning": "月饼",
+          "sentence": "People eat mooncakes at Mid-Autumn Festival.",
+          "sentenceCn": "人们在中秋节吃月饼。",
+          "audio": "/audio/jw/jw9c07.mp3"
+        },
+        {
+          "id": "jw9c08",
+          "word": "dumpling",
+          "phonetic": "ˈdʌmplɪŋ",
+          "pos": "n.",
+          "meaning": "饺子；汤团",
+          "sentence": "My grandmother makes dumplings every winter.",
+          "sentenceCn": "我奶奶每年冬天都包饺子。",
+          "audio": "/audio/jw/jw9c08.mp3"
+        },
+        {
+          "id": "jw9c09",
+          "word": "lantern",
+          "phonetic": "ˈlæntən",
+          "pos": "n.",
+          "meaning": "灯笼；提灯",
+          "sentence": "Children carry lanterns at the Lantern Festival.",
+          "sentenceCn": "孩子们在元宵节提灯笼。",
+          "audio": "/audio/jw/jw9c09.mp3"
+        },
+        {
+          "id": "jw9c10",
+          "word": "firework",
+          "phonetic": "ˈfaɪəwɜːk",
+          "pos": "n.",
+          "meaning": "烟花（常用复数 fireworks）",
+          "sentence": "We watched the fireworks by the river.",
+          "sentenceCn": "我们在河边看了烟花。",
+          "audio": "/audio/jw/jw9c10.mp3"
+        },
+        {
+          "id": "jw9c11",
+          "word": "gift",
+          "phonetic": "ɡɪft",
+          "pos": "n.",
+          "meaning": "礼物",
+          "sentence": "Thank you for the lovely gift.",
+          "sentenceCn": "谢谢你送我可爱的礼物。",
+          "audio": "/audio/jw/jw9c11.mp3"
+        },
+        {
+          "id": "jw9c12",
+          "word": "card",
+          "phonetic": "kɑːd",
+          "pos": "n.",
+          "meaning": "卡片；纸牌",
+          "sentence": "I made a birthday card for my best friend.",
+          "sentenceCn": "我为最好的朋友做了一张生日贺卡。",
+          "audio": "/audio/jw/jw9c12.mp3"
+        },
+        {
+          "id": "jw9c13",
+          "word": "party",
+          "phonetic": "ˈpɑːti",
+          "pos": "n.",
+          "meaning": "聚会；派对",
+          "sentence": "Welcome to my birthday party this Saturday.",
+          "sentenceCn": "欢迎这周六来我的生日聚会。",
+          "audio": "/audio/jw/jw9c13.mp3"
+        },
+        {
+          "id": "jw9c14",
+          "word": "dance",
+          "phonetic": "dɑːns",
+          "pos": "v./n.",
+          "meaning": "跳舞；舞蹈",
+          "sentence": "Square dancing is popular among old people.",
+          "sentenceCn": "广场舞在老年人中很流行。",
+          "audio": "/audio/jw/jw9c14.mp3"
+        },
+        {
+          "id": "jw9c15",
+          "word": "sing",
+          "phonetic": "sɪŋ",
+          "pos": "v.",
+          "meaning": "唱歌（过去式 sang）",
+          "sentence": "She sings English songs very well.",
+          "sentenceCn": "她英语歌唱得很好。",
+          "audio": "/audio/jw/jw9c15.mp3"
+        },
+        {
+          "id": "jw9c16",
+          "word": "concert",
+          "phonetic": "ˈkɒnsət",
+          "pos": "n.",
+          "meaning": "音乐会",
+          "sentence": "We went to a concert last weekend.",
+          "sentenceCn": "上周末我们去听了一场音乐会。",
+          "audio": "/audio/jw/jw9c16.mp3"
+        },
+        {
+          "id": "jw9c17",
+          "word": "museum",
+          "phonetic": "mjuˈziːəm",
+          "pos": "n.",
+          "meaning": "博物馆",
+          "sentence": "The museum is free for students.",
+          "sentenceCn": "博物馆对学生免费。",
+          "audio": "/audio/jw/jw9c17.mp3"
+        },
+        {
+          "id": "jw9c18",
+          "word": "ancient",
+          "phonetic": "ˈeɪnʃənt",
+          "pos": "adj.",
+          "meaning": "古代的；古老的",
+          "sentence": "The Great Wall is an ancient building.",
+          "sentenceCn": "长城是一座古老的建筑。",
+          "audio": "/audio/jw/jw9c18.mp3"
+        },
+        {
+          "id": "jw9c19",
+          "word": "poem",
+          "phonetic": "ˈpəʊɪm",
+          "pos": "n.",
+          "meaning": "诗；诗歌",
+          "sentence": "Li Bai wrote many famous poems.",
+          "sentenceCn": "李白写了许多著名的诗。",
+          "audio": "/audio/jw/jw9c19.mp3"
+        },
+        {
+          "id": "jw9c20",
+          "word": "artist",
+          "phonetic": "ˈɑːtɪst",
+          "pos": "n.",
+          "meaning": "艺术家；画家",
+          "sentence": "The artist paints beautiful pictures.",
+          "sentenceCn": "这位画家画出了美丽的画。",
+          "audio": "/audio/jw/jw9c20.mp3"
+        },
+        {
+          "id": "jw9c21",
+          "word": "painting",
+          "phonetic": "ˈpeɪntɪŋ",
+          "pos": "n.",
+          "meaning": "绘画；油画",
+          "sentence": "This painting was drawn by a child.",
+          "sentenceCn": "这幅画是一个孩子画的。",
+          "audio": "/audio/jw/jw9c21.mp3"
+        },
+        {
+          "id": "jw9c22",
+          "word": "tourist",
+          "phonetic": "ˈtʊərɪst",
+          "pos": "n.",
+          "meaning": "游客；旅游者",
+          "sentence": "Thousands of tourists come to Beijing every year.",
+          "sentenceCn": "每年有成千上万的游客来北京。",
+          "audio": "/audio/jw/jw9c22.mp3"
+        },
+        {
+          "id": "jw9c23",
+          "word": "performance",
+          "phonetic": "pəˈfɔːməns",
+          "pos": "n.",
+          "meaning": "表演；演出",
+          "sentence": "The children gave a wonderful performance.",
+          "sentenceCn": "孩子们进行了一场精彩的表演。",
+          "audio": "/audio/jw/jw9c23.mp3"
+        },
+        {
+          "id": "jw9c24",
+          "word": "traditional",
+          "phonetic": "trəˈdɪʃənl",
+          "pos": "adj.",
+          "meaning": "传统的",
+          "sentence": "Qipao is a traditional Chinese dress.",
+          "sentenceCn": "旗袍是传统的中国服装。",
+          "audio": "/audio/jw/jw9c24.mp3"
+        },
+        {
+          "id": "jw9c25",
+          "word": "national",
+          "phonetic": "ˈnæʃnəl",
+          "pos": "adj.",
+          "meaning": "国家的；民族的",
+          "sentence": "National Day is on the first of October.",
+          "sentenceCn": "国庆节是十月一日。",
+          "audio": "/audio/jw/jw9c25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "jw9d",
+      "grade": 9,
+      "title": "职业与理想",
+      "words": [
+        {
+          "id": "jw9d01",
+          "word": "job",
+          "phonetic": "dʒɒb",
+          "pos": "n.",
+          "meaning": "工作；职业",
+          "sentence": "What kind of job do you want in the future?",
+          "sentenceCn": "你将来想做什么样的工作？",
+          "audio": "/audio/jw/jw9d01.mp3"
+        },
+        {
+          "id": "jw9d02",
+          "word": "career",
+          "phonetic": "kəˈrɪə",
+          "pos": "n.",
+          "meaning": "事业；职业生涯",
+          "sentence": "She plans her career as a teacher.",
+          "sentenceCn": "她规划自己当教师的事业。",
+          "audio": "/audio/jw/jw9d02.mp3"
+        },
+        {
+          "id": "jw9d03",
+          "word": "dream",
+          "phonetic": "driːm",
+          "pos": "n./v.",
+          "meaning": "梦想；做梦（dream of/about）",
+          "sentence": "Follow your dream and never give up.",
+          "sentenceCn": "追随你的梦想，永不放弃。",
+          "audio": "/audio/jw/jw9d03.mp3"
+        },
+        {
+          "id": "jw9d04",
+          "word": "goal",
+          "phonetic": "ɡəʊl",
+          "pos": "n.",
+          "meaning": "目标；进球",
+          "sentence": "Set a small goal first, like reading ten pages.",
+          "sentenceCn": "先定一个小目标，比如读十页书。",
+          "audio": "/audio/jw/jw9d04.mp3"
+        },
+        {
+          "id": "jw9d05",
+          "word": "future",
+          "phonetic": "ˈfjuːtʃə",
+          "pos": "n.",
+          "meaning": "未来；将来",
+          "sentence": "What will schools be like in the future?",
+          "sentenceCn": "将来的学校会是什么样？",
+          "audio": "/audio/jw/jw9d05.mp3"
+        },
+        {
+          "id": "jw9d06",
+          "word": "success",
+          "phonetic": "səkˈses",
+          "pos": "n.",
+          "meaning": "成功",
+          "sentence": "Hard work leads to success.",
+          "sentenceCn": "努力工作通向成功。",
+          "audio": "/audio/jw/jw9d06.mp3"
+        },
+        {
+          "id": "jw9d07",
+          "word": "achieve",
+          "phonetic": "əˈtʃiːv",
+          "pos": "v.",
+          "meaning": "实现；达到",
+          "sentence": "You can achieve your dream through hard work.",
+          "sentenceCn": "通过努力你能实现梦想。",
+          "audio": "/audio/jw/jw9d07.mp3"
+        },
+        {
+          "id": "jw9d08",
+          "word": "effort",
+          "phonetic": "ˈefət",
+          "pos": "n.",
+          "meaning": "努力；尽力（make an effort）",
+          "sentence": "Make an effort and you will pass the exam.",
+          "sentenceCn": "尽一份力，你就会通过考试。",
+          "audio": "/audio/jw/jw9d08.mp3"
+        },
+        {
+          "id": "jw9d09",
+          "word": "practice",
+          "phonetic": "ˈpræktɪs",
+          "pos": "n.",
+          "meaning": "实践；练习",
+          "sentence": "Practice makes perfect.",
+          "sentenceCn": "熟能生巧。",
+          "audio": "/audio/jw/jw9d09.mp3"
+        },
+        {
+          "id": "jw9d10",
+          "word": "skill",
+          "phonetic": "skɪl",
+          "pos": "n.",
+          "meaning": "技能；技巧",
+          "sentence": "Swimming is a useful life skill.",
+          "sentenceCn": "游泳是一项有用的生活技能。",
+          "audio": "/audio/jw/jw9d10.mp3"
+        },
+        {
+          "id": "jw9d11",
+          "word": "ability",
+          "phonetic": "əˈbɪləti",
+          "pos": "n.",
+          "meaning": "能力",
+          "sentence": "She has the ability to solve hard problems.",
+          "sentenceCn": "她有解决难题的能力。",
+          "audio": "/audio/jw/jw9d11.mp3"
+        },
+        {
+          "id": "jw9d12",
+          "word": "engineer",
+          "phonetic": "ˌendʒɪˈnɪə",
+          "pos": "n.",
+          "meaning": "工程师",
+          "sentence": "His father is a computer engineer.",
+          "sentenceCn": "他爸爸是一名计算机工程师。",
+          "audio": "/audio/jw/jw9d12.mp3"
+        },
+        {
+          "id": "jw9d13",
+          "word": "pilot",
+          "phonetic": "ˈpaɪlət",
+          "pos": "n.",
+          "meaning": "飞行员",
+          "sentence": "The pilot flies planes all over the world.",
+          "sentenceCn": "飞行员驾驶飞机飞遍世界。",
+          "audio": "/audio/jw/jw9d13.mp3"
+        },
+        {
+          "id": "jw9d14",
+          "word": "driver",
+          "phonetic": "ˈdraɪvə",
+          "pos": "n.",
+          "meaning": "司机；驾驶员",
+          "sentence": "The bus driver waits for the old man every day.",
+          "sentenceCn": "公交车司机每天等那位老人。",
+          "audio": "/audio/jw/jw9d14.mp3"
+        },
+        {
+          "id": "jw9d15",
+          "word": "farmer",
+          "phonetic": "ˈfɑːmə",
+          "pos": "n.",
+          "meaning": "农民；农场主",
+          "sentence": "Farmers grow rice and vegetables.",
+          "sentenceCn": "农民种植水稻和蔬菜。",
+          "audio": "/audio/jw/jw9d15.mp3"
+        },
+        {
+          "id": "jw9d16",
+          "word": "worker",
+          "phonetic": "ˈwɜːkə",
+          "pos": "n.",
+          "meaning": "工人",
+          "sentence": "The workers built the bridge in two years.",
+          "sentenceCn": "工人们两年建成了那座桥。",
+          "audio": "/audio/jw/jw9d16.mp3"
+        },
+        {
+          "id": "jw9d17",
+          "word": "manager",
+          "phonetic": "ˈmænɪdʒə",
+          "pos": "n.",
+          "meaning": "经理",
+          "sentence": "The manager talks with every customer.",
+          "sentenceCn": "经理与每位顾客交谈。",
+          "audio": "/audio/jw/jw9d17.mp3"
+        },
+        {
+          "id": "jw9d18",
+          "word": "designer",
+          "phonetic": "dɪˈzaɪnə",
+          "pos": "n.",
+          "meaning": "设计师",
+          "sentence": "She wants to be a clothes designer.",
+          "sentenceCn": "她想成为一名服装设计师。",
+          "audio": "/audio/jw/jw9d18.mp3"
+        },
+        {
+          "id": "jw9d19",
+          "word": "reporter",
+          "phonetic": "rɪˈpɔːtə",
+          "pos": "n.",
+          "meaning": "记者",
+          "sentence": "The reporter is interviewing a doctor.",
+          "sentenceCn": "记者正在采访一位医生。",
+          "audio": "/audio/jw/jw9d19.mp3"
+        },
+        {
+          "id": "jw9d20",
+          "word": "policeman",
+          "phonetic": "pəˈliːsmən",
+          "pos": "n.",
+          "meaning": "男警察（复数 policemen）",
+          "sentence": "The policeman helps children cross the road.",
+          "sentenceCn": "警察帮助孩子们过马路。",
+          "audio": "/audio/jw/jw9d20.mp3"
+        },
+        {
+          "id": "jw9d21",
+          "word": "firefighter",
+          "phonetic": "ˈfaɪəfaɪtə",
+          "pos": "n.",
+          "meaning": "消防员",
+          "sentence": "Firefighters save people from fires.",
+          "sentenceCn": "消防员把人们从火中救出来。",
+          "audio": "/audio/jw/jw9d21.mp3"
+        },
+        {
+          "id": "jw9d22",
+          "word": "lawyer",
+          "phonetic": "ˈlɔːjə",
+          "pos": "n.",
+          "meaning": "律师",
+          "sentence": "The lawyer knows the law very well.",
+          "sentenceCn": "这位律师非常懂法律。",
+          "audio": "/audio/jw/jw9d22.mp3"
+        },
+        {
+          "id": "jw9d23",
+          "word": "programmer",
+          "phonetic": "ˈprəʊɡræmə",
+          "pos": "n.",
+          "meaning": "程序员",
+          "sentence": "A programmer writes computer programs.",
+          "sentenceCn": "程序员编写计算机程序。",
+          "audio": "/audio/jw/jw9d23.mp3"
+        },
+        {
+          "id": "jw9d24",
+          "word": "author",
+          "phonetic": "ˈɔːθə",
+          "pos": "n.",
+          "meaning": "作者；作家",
+          "sentence": "Mo Yan is a famous author in China.",
+          "sentenceCn": "莫言是中国著名的作家。",
+          "audio": "/audio/jw/jw9d24.mp3"
+        },
+        {
+          "id": "jw9d25",
+          "word": "serve",
+          "phonetic": "sɜːv",
+          "pos": "v.",
+          "meaning": "服务；服役（serve the people）",
+          "sentence": "We should serve the people wholeheartedly.",
+          "sentenceCn": "我们应该全心全意为人民服务。",
+          "audio": "/audio/jw/jw9d25.mp3"
+        }
+      ]
+    }
+  ]
+}

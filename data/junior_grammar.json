@@ -1,0 +1,1630 @@
+{
+  "product": "初中英语语法知识点详解",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "中考 30 个核心语法专题；每专题含概述、讲解条目、易错提示与 3 道例题；前端渲染为知识点卡片",
+  "topics": [
+    {
+      "id": "g01",
+      "title": "名词",
+      "overview": "名词表示人、事物、地点或抽象概念。中考重点考查可数与不可数名词、名词复数变化及名词所有格。",
+      "points": [
+        {
+          "title": "可数与不可数名词",
+          "detail": "可数名词有单复数（book/books）；不可数名词无复数，表数量用 a cup of / two pieces of 等（water, advice, news, information）。"
+        },
+        {
+          "title": "名词复数规则",
+          "detail": "一般加 -s；s/x/ch/sh 结尾加 -es；辅音+y 结尾变 y 为 i 加 -es；f/fe 结尾变 v 加 -es（knife→knives）；不规则如 man→men, child→children。"
+        },
+        {
+          "title": "名词所有格",
+          "detail": "有生命名词加 's（Tom's book）；复数以 s 结尾加 '（teachers' office）；无生命常用 of（the door of the room）。"
+        }
+      ],
+      "pitfalls": [
+        "不可数名词永远不加 s，也不能直接用 a/an 修饰，需用量词。",
+        "以 o 结尾的名词：negro/hero/tomato/potato 加 -es，其余多直接加 -s（photo→photos）。"
+      ],
+      "examples": [
+        {
+          "stem": "There is some ___ on the table.",
+          "options": [
+            "milk",
+            "milks",
+            "a milk"
+          ],
+          "answer": 0,
+          "analysis": "milk 不可数，无复数、不加 a。"
+        },
+        {
+          "stem": "—How many ___ are there? —Two.",
+          "options": [
+            "box",
+            "boxes",
+            "boxs"
+          ],
+          "answer": 1,
+          "analysis": "x 结尾加 -es。"
+        },
+        {
+          "stem": "This is ___ book.",
+          "options": [
+            "Tom",
+            "Tom's",
+            "Toms'"
+          ],
+          "answer": 1,
+          "analysis": "有生命名词所有格加 's。"
+        }
+      ]
+    },
+    {
+      "id": "g02",
+      "title": "代词",
+      "overview": "代词用来代替名词，中考常考人称代词、物主代词、不定代词和反身代词的辨析与用法。",
+      "points": [
+        {
+          "title": "人称代词主格与宾格",
+          "detail": "主格 I/you/he/she/it/we/they 作主语；宾格 me/you/him/her/it/us/them 作宾语（动词或介词后）。"
+        },
+        {
+          "title": "物主代词",
+          "detail": "形容词性 my/your/his/her/our/their 后必须跟名词；名词性 mine/yours/his/hers/ours/theirs 单独使用 = 形容词性 + 名词。"
+        },
+        {
+          "title": "不定代词",
+          "detail": "some/any（some 用于肯定与希望得到肯定回答的问句）；复合不定代词 someone/anyone/everything 等作主语谓语用单数。"
+        },
+        {
+          "title": "反身代词",
+          "detail": "myself/yourself/himself/ourselves 等，常用于 by oneself（独自）、enjoy oneself（玩得开心）、help oneself（随便吃）。"
+        }
+      ],
+      "pitfalls": [
+        "形容词性物主代词后必须有名词；名词性物主代词后绝不可再加名词。",
+        "复合不定代词被形容词修饰时，形容词须后置（something important）。"
+      ],
+      "examples": [
+        {
+          "stem": "This is ___ book. That one is ___ .",
+          "options": [
+            "my; yours",
+            "mine; your",
+            "my; your"
+          ],
+          "answer": 0,
+          "analysis": "第一空后有名词用 my，第二空单独使用用 yours。"
+        },
+        {
+          "stem": "Everyone ___ here today.",
+          "options": [
+            "are",
+            "is",
+            "were"
+          ],
+          "answer": 1,
+          "analysis": "复合不定代词作主语谓语用单数。"
+        },
+        {
+          "stem": "We enjoyed ___ at the party.",
+          "options": [
+            "us",
+            "ourselves",
+            "our"
+          ],
+          "answer": 1,
+          "analysis": "enjoy oneself 固定搭配。"
+        }
+      ]
+    },
+    {
+      "id": "g03",
+      "title": "冠词",
+      "overview": "冠词 a/an（不定冠词）与 the（定冠词）及零冠词。中考重点在 a/an 的选择、定冠词特指与零冠词固定搭配。",
+      "points": [
+        {
+          "title": "a 与 an 的选择",
+          "detail": "看其后单词的发音而非字母：元音音素开头用 an（an hour, an apple），辅音音素开头用 a（a university, a book）。"
+        },
+        {
+          "title": "定冠词 the 的用法",
+          "detail": "特指双方都知道的人或物、上文提过、最高级/序数词前、乐器前（play the piano）、独一无二的事物（the sun）。"
+        },
+        {
+          "title": "零冠词",
+          "detail": "球类、三餐、学科、语言前不加 the（play football, have lunch, English）。"
+        }
+      ],
+      "pitfalls": [
+        "判断用 a 还是 an 看发音（hour 以元音开头用 an，university 以辅音开头用 a）。",
+        "序数词前一般加 the，但表示'再一/又一'时用 a（a second time）。"
+      ],
+      "examples": [
+        {
+          "stem": "He is ___ honest boy.",
+          "options": [
+            "a",
+            "an",
+            "the"
+          ],
+          "answer": 1,
+          "analysis": "honest 的 h 不发音，以元音开头用 an。"
+        },
+        {
+          "stem": "She can play ___ piano very well.",
+          "options": [
+            "a",
+            "the",
+            "/"
+          ],
+          "answer": 1,
+          "analysis": "乐器前加 the。"
+        },
+        {
+          "stem": "Let's play ___ basketball after school.",
+          "options": [
+            "the",
+            "a",
+            "/"
+          ],
+          "answer": 2,
+          "analysis": "球类前零冠词。"
+        }
+      ]
+    },
+    {
+      "id": "g04",
+      "title": "数词",
+      "overview": "数词包括基数词与序数词。中考考查日期、分数、编号及序数词变化。",
+      "points": [
+        {
+          "title": "基数词与序数词",
+          "detail": "序数词前加 the；first/second/third 特殊，其余加 th；five→fifth, nine→ninth, twelve→twelfth, twenty→twentieth。"
+        },
+        {
+          "title": "分数表达",
+          "detail": "分子基数、分母序数，分子大于1分母加 s（one third, two thirds）。"
+        },
+        {
+          "title": "编号与年月日",
+          "detail": "编号用名词+基数词（Room 101, Class 3）；日期用序数词（May 1st / on May 1）。"
+        }
+      ],
+      "pitfalls": [
+        "hundred/thousand/million 前有具体数字时不加 s（three hundred），表泛指'数百'用 hundreds of。",
+        "分数中分子>1 时分母必须加 s。"
+      ],
+      "examples": [
+        {
+          "stem": "September is the ___ month of the year.",
+          "options": [
+            "nine",
+            "ninth",
+            "nineth"
+          ],
+          "answer": 1,
+          "analysis": "第九用序数词 ninth。"
+        },
+        {
+          "stem": "There are two ___ students in our school.",
+          "options": [
+            "hundred",
+            "hundreds",
+            "hundreds of"
+          ],
+          "answer": 0,
+          "analysis": "具体数字后 hundred 不加 s。"
+        },
+        {
+          "stem": "About two ___ of the students like reading.",
+          "options": [
+            "third",
+            "thirds",
+            "threes"
+          ],
+          "answer": 1,
+          "analysis": "分子大于1，分母加 s。"
+        }
+      ]
+    },
+    {
+      "id": "g05",
+      "title": "形容词与副词",
+      "overview": "形容词修饰名词，副词修饰动词/形容词/句子。中考重点是级的变化与辨析。",
+      "points": [
+        {
+          "title": "比较级与最高级构成",
+          "detail": "单音节/少数双音节加 -er/-est；多音节加 more/most；不规则 good/well→better/best, bad→worse/worst, little→less/least, far→farther/further。"
+        },
+        {
+          "title": "比较句式",
+          "detail": "比较级+than；the+比较级..., the+比较级...（越…越…）；比较级+and+比较级（越来越…）；三者以上用最高级 the+most。"
+        },
+        {
+          "title": "形容词与副词辨析",
+          "detail": "修饰名词用形容词（a beautiful flower）；修饰动词/形容词用副词（run fast, very good→well）。"
+        }
+      ],
+      "pitfalls": [
+        "-ly 结尾的不一定都是副词（friendly, lonely 是形容词）；形容词变副词多数加 -ly。",
+        "最高级前通常加 the，但副词最高级前的 the 可省。"
+      ],
+      "examples": [
+        {
+          "stem": "This book is ___ than that one.",
+          "options": [
+            "interesting",
+            "more interesting",
+            "most interesting"
+          ],
+          "answer": 1,
+          "analysis": "多音节词比较级用 more。"
+        },
+        {
+          "stem": "He runs ___ in our class.",
+          "options": [
+            "fast",
+            "faster",
+            "(the) fastest"
+          ],
+          "answer": 2,
+          "analysis": "三者以上用最高级。"
+        },
+        {
+          "stem": "The cat is ___ . I like it.",
+          "options": [
+            "friend",
+            "friendly",
+            "friends"
+          ],
+          "answer": 1,
+          "analysis": "friendly 是形容词，作表语。"
+        }
+      ]
+    },
+    {
+      "id": "g06",
+      "title": "介词",
+      "overview": "介词表示时间、方位、方式等关系。中考常考时间/方位介词辨析及固定搭配。",
+      "points": [
+        {
+          "title": "时间介词",
+          "detail": "at（具体时刻/noon/night）、on（具体某天/某天上）、in（年/月/季节/上午下午）、since（时间点）、for（时间段）、by（截止）。"
+        },
+        {
+          "title": "方位介词",
+          "detail": "in（在…里）、on（在…上，接触）、under（在…下）、above（上方不接触）、below（下方）、between（两者之间）、among（三者以上）。"
+        },
+        {
+          "title": "方式与其他",
+          "detail": "by（交通/方式，by bus, by reading）、with（用工具/带有）、without（没有）、about（关于）。"
+        }
+      ],
+      "pitfalls": [
+        "in the morning 但 on a cold morning（有修饰语用 on）；at night 但 on the night of...",
+        "between 用于两者，among 用于三者及以上。"
+      ],
+      "examples": [
+        {
+          "stem": "We have lunch ___ noon.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "answer": 2,
+          "analysis": "具体时刻 noon 用 at。"
+        },
+        {
+          "stem": "The book is ___ the desk.",
+          "options": [
+            "in",
+            "on",
+            "under"
+          ],
+          "answer": 1,
+          "analysis": "在桌面上用 on。"
+        },
+        {
+          "stem": "He goes to school ___ bike.",
+          "options": [
+            "by",
+            "on",
+            "with"
+          ],
+          "answer": 0,
+          "analysis": "by + 交通工具中间无词。"
+        }
+      ]
+    },
+    {
+      "id": "g07",
+      "title": "连词",
+      "overview": "连词连接词、短语或句子。中考考查并列连词与从属连词的辨析及时态配合。",
+      "points": [
+        {
+          "title": "并列连词",
+          "detail": "and（并列/顺承）、but（转折）、or（选择/否则）、so（结果）、for（原因）。"
+        },
+        {
+          "title": "从属连词",
+          "detail": "when/while（时间）、because（原因）、if（条件）、although/though（让步）、so...that（结果）、as soon as（一…就）。"
+        },
+        {
+          "title": "就近与就远",
+          "detail": "neither...nor / either...or / not only...but also 遵循就近原则；with/together with 不影响主语数（就远）。"
+        }
+      ],
+      "pitfalls": [
+        "although 与 but 不能连用；because 与 so 也不能连用（只取其一）。",
+        "or 在否定句中表'和'（I don't like tea or coffee）。"
+      ],
+      "examples": [
+        {
+          "stem": "Hurry up, ___ you will miss the bus.",
+          "options": [
+            "and",
+            "but",
+            "or"
+          ],
+          "answer": 2,
+          "analysis": "or 表'否则'。"
+        },
+        {
+          "stem": "___ he is young, he knows a lot.",
+          "options": [
+            "Although",
+            "But",
+            "Because"
+          ],
+          "answer": 0,
+          "analysis": "让步用 Although，不与 but 连用。"
+        },
+        {
+          "stem": "Either you or he ___ right.",
+          "options": [
+            "are",
+            "is",
+            "am"
+          ],
+          "answer": 1,
+          "analysis": "就近原则，he 单数用 is。"
+        }
+      ]
+    },
+    {
+      "id": "g08",
+      "title": "一般现在时",
+      "overview": "一般现在时表示经常性、习惯性动作或客观真理。中考重点是三单变化与用法。",
+      "points": [
+        {
+          "title": "基本用法",
+          "detail": "表习惯（I get up at 7）、客观真理（The sun rises in the east）、现状（He likes music）。"
+        },
+        {
+          "title": "第三人称单数",
+          "detail": "主语三单，动词加 -s/-es（go→goes, study→studies, watch→watches）；助动词用 does。"
+        },
+        {
+          "title": "句式变化",
+          "detail": "否定/疑问用 do/does；三单用 does，后接动词原形。"
+        }
+      ],
+      "pitfalls": [
+        "客观真理永远用一般现在时，即使主句过去时（He said the earth goes around the sun）。",
+        "三单助动词 does 后动词必须还原。"
+      ],
+      "examples": [
+        {
+          "stem": "Tom ___ to school by bus every day.",
+          "options": [
+            "go",
+            "goes",
+            "going"
+          ],
+          "answer": 1,
+          "analysis": "主语三单，动词加 es。"
+        },
+        {
+          "stem": "___ she like apples? —Yes.",
+          "options": [
+            "Do",
+            "Does",
+            "Is"
+          ],
+          "answer": 1,
+          "analysis": "三单用 Does。"
+        },
+        {
+          "stem": "The teacher said light ___ faster than sound.",
+          "options": [
+            "traveled",
+            "travels",
+            "travel"
+          ],
+          "answer": 1,
+          "analysis": "客观真理用一般现在时。"
+        }
+      ]
+    },
+    {
+      "id": "g09",
+      "title": "一般过去时",
+      "overview": "一般过去时表示过去某时发生的动作或状态。中考重点是规则/不规则动词过去式及时间状语。",
+      "points": [
+        {
+          "title": "动词过去式",
+          "detail": "规则加 -ed；以 e 结尾加 -d；辅元辅双写加 -ed；y 前辅音变 i 加 -ed。不规则需记忆（go→went, see→saw, do→did）。"
+        },
+        {
+          "title": "be 动词过去式",
+          "detail": "am/is→was, are→were；否定 wasn't/weren't，疑问提前。"
+        },
+        {
+          "title": "时间状语",
+          "detail": "yesterday, last week, ...ago, in 2020, just now 等。"
+        }
+      ],
+      "pitfalls": [
+        "实义动词过去时否定/疑问用 did，后接动词原形（didn't go）。",
+        "不规则动词过去式无固定规律，需专门记忆。"
+      ],
+      "examples": [
+        {
+          "stem": "I ___ a film last night.",
+          "options": [
+            "watch",
+            "watched",
+            "watching"
+          ],
+          "answer": 1,
+          "analysis": "last night 用过去式。"
+        },
+        {
+          "stem": "He didn't ___ his homework.",
+          "options": [
+            "finish",
+            "finished",
+            "finishes"
+          ],
+          "answer": 0,
+          "analysis": "didn't 后接原形。"
+        },
+        {
+          "stem": "She ___ to Beijing in 2019.",
+          "options": [
+            "go",
+            "went",
+            "goes"
+          ],
+          "answer": 1,
+          "analysis": "过去时用 went。"
+        }
+      ]
+    },
+    {
+      "id": "g10",
+      "title": "一般将来时",
+      "overview": "一般将来时表示将要发生的动作。中考考查 will 与 be going to 的区别。",
+      "points": [
+        {
+          "title": "will + 动词原形",
+          "detail": "表示将来（无人称变化），否定 won't，疑问 will 提前；There will be 将来存在句。"
+        },
+        {
+          "title": "be going to + 原形",
+          "detail": "表打算、计划或迹象表明即将发生；随主语变 be（am/is/are）。"
+        },
+        {
+          "title": "其他表达",
+          "detail": "现在进行时表将来（I am leaving tomorrow）、be about to（即将）。"
+        }
+      ],
+      "pitfalls": [
+        "will 的否定缩写是 won't，不是 willn't。",
+        "There will be 的 be 永远用原形，不随主语变化。"
+      ],
+      "examples": [
+        {
+          "stem": "I think it ___ rain tomorrow.",
+          "options": [
+            "will",
+            "won't",
+            "is"
+          ],
+          "answer": 1,
+          "analysis": "否定推测用 won't。"
+        },
+        {
+          "stem": "We ___ a picnic next Sunday.",
+          "options": [
+            "have",
+            "are having",
+            "are going to have"
+          ],
+          "answer": 2,
+          "analysis": "计划用 be going to。"
+        },
+        {
+          "stem": "There ___ more trees planted next year.",
+          "options": [
+            "will be",
+            "will have",
+            "are"
+          ],
+          "answer": 0,
+          "analysis": "将来存在句用 will be。"
+        }
+      ]
+    },
+    {
+      "id": "g11",
+      "title": "现在进行时",
+      "overview": "现在进行时表示此刻或现阶段正在进行的动作，结构 be + V-ing。",
+      "points": [
+        {
+          "title": "结构与时态",
+          "detail": "am/is/are + 现在分词；常与 now, at the moment, look, listen 连用。"
+        },
+        {
+          "title": "V-ing 变化",
+          "detail": "一般加 -ing；去 e 加 -ing（make→making）；辅元辅双写加 -ing（run→running, swim→swimming）；ie 变 y（lie→lying）。"
+        }
+      ],
+      "pitfalls": [
+        "感官/状态动词（know, like, have, belong）一般不用进行时。",
+        "swim 双写 m 加 ing，不是 swiming。"
+      ],
+      "examples": [
+        {
+          "stem": "Look! The boys ___ soccer.",
+          "options": [
+            "play",
+            "are playing",
+            "played"
+          ],
+          "answer": 1,
+          "analysis": "look 提示现在进行时。"
+        },
+        {
+          "stem": "She is ___ (write) a letter now.",
+          "options": [
+            "write",
+            "writing",
+            "writting"
+          ],
+          "answer": 1,
+          "analysis": "去 e 加 ing。"
+        },
+        {
+          "stem": "They are ___ (run) on the playground.",
+          "options": [
+            "runing",
+            "running",
+            "run"
+          ],
+          "answer": 1,
+          "analysis": "双写 n 加 ing。"
+        }
+      ]
+    },
+    {
+      "id": "g12",
+      "title": "过去进行时",
+      "overview": "过去进行时表示过去某时刻正在进行的动作，结构 was/were + V-ing。",
+      "points": [
+        {
+          "title": "结构与用法",
+          "detail": "was/were + V-ing；常与 at 8 last night, when 从句连用，表示'长动作被打断'。"
+        },
+        {
+          "title": "when 与 while",
+          "detail": "when 后接短动作（一般过去时），while 后接长动作（过去进行时）；也可 while + 过去进行时, when + 过去时。"
+        }
+      ],
+      "pitfalls": [
+        "when 引导的从句用过去时，主句用过去进行时，表示被打断。",
+        "at that time / this time yesterday 是典型标志。"
+      ],
+      "examples": [
+        {
+          "stem": "I ___ TV at 8 p.m. yesterday.",
+          "options": [
+            "watched",
+            "was watching",
+            "watch"
+          ],
+          "answer": 1,
+          "analysis": "过去某时刻用过去进行时。"
+        },
+        {
+          "stem": "While I ___ , it began to rain.",
+          "options": [
+            "slept",
+            "was sleeping",
+            "sleep"
+          ],
+          "answer": 1,
+          "analysis": "while 后接过去进行时。"
+        },
+        {
+          "stem": "What ___ you ___ when he called?",
+          "options": [
+            "were; doing",
+            "did; do",
+            "are; doing"
+          ],
+          "answer": 0,
+          "analysis": "when 从句过去时，主句过去进行时。"
+        }
+      ]
+    },
+    {
+      "id": "g13",
+      "title": "现在完成时",
+      "overview": "现在完成时表示过去发生、与现在有关的动作，结构 have/has + 过去分词。",
+      "points": [
+        {
+          "title": "基本结构",
+          "detail": "have/has + 过去分词；否定 haven't/hasn't，疑问提前 have/has。"
+        },
+        {
+          "title": "yet/already/ever/never",
+          "detail": "yet 用于疑问/否定句末，already 用于肯定句中；ever 曾经，never 从未。"
+        },
+        {
+          "title": "for 与 since",
+          "detail": "for + 时间段（for two years），since + 时间点/从句（since 2020 / since I was ten）。"
+        },
+        {
+          "title": "been to 与 gone to",
+          "detail": "have been to 去过已回；have gone to 去了未回。"
+        }
+      ],
+      "pitfalls": [
+        "现在完成时不能与具体过去时间（yesterday, last week）连用。",
+        "since 后接时间点或一般过去时从句，for 后接时间段。"
+      ],
+      "examples": [
+        {
+          "stem": "I have ___ finished my homework.",
+          "options": [
+            "yet",
+            "already",
+            "ever"
+          ],
+          "answer": 1,
+          "analysis": "肯定句用 already。"
+        },
+        {
+          "stem": "He has gone to the library. That means he ___ there now.",
+          "options": [
+            "is",
+            "was",
+            "isn't"
+          ],
+          "answer": 2,
+          "analysis": "has gone to 人未回，所以不在。"
+        },
+        {
+          "stem": "She has learned English ___ 2018.",
+          "options": [
+            "for",
+            "since",
+            "in"
+          ],
+          "answer": 1,
+          "analysis": "时间点用 since。"
+        }
+      ]
+    },
+    {
+      "id": "g14",
+      "title": "被动语态",
+      "overview": "被动语态表示主语是动作的承受者，结构 be + 过去分词（by 引出执行者）。",
+      "points": [
+        {
+          "title": "各时态被动",
+          "detail": "一般现在时 am/is/are done；一般过去时 was/were done；一般将来时 will be done；现在完成时 have/has been done。"
+        },
+        {
+          "title": "含情态动词被动",
+          "detail": "情态动词 + be + 过去分词（must be done, should be allowed to do）。"
+        },
+        {
+          "title": "主动变被动",
+          "detail": "宾语变主语，谓语变 be+done，原主语变 by 宾语；不及物动词无被动。"
+        }
+      ],
+      "pitfalls": [
+        "被动语态的 be 必须和时态、主语数一致。",
+        "不及物动词（happen, belong, appear）无被动语态。"
+      ],
+      "examples": [
+        {
+          "stem": "English ___ spoken by many people.",
+          "options": [
+            "is",
+            "was",
+            "be"
+          ],
+          "answer": 0,
+          "analysis": "一般现在时被动 is spoken。"
+        },
+        {
+          "stem": "The book ___ by Lu Xun.",
+          "options": [
+            "wrote",
+            "was written",
+            "is writing"
+          ],
+          "answer": 1,
+          "analysis": "过去被动 was written。"
+        },
+        {
+          "stem": "The work must ___ today.",
+          "options": [
+            "finish",
+            "be finished",
+            "finished"
+          ],
+          "answer": 1,
+          "analysis": "情态被动 must be finished。"
+        }
+      ]
+    },
+    {
+      "id": "g15",
+      "title": "动词不定式",
+      "overview": "动词不定式 to do 可作宾语、目的状语、补语等。中考重点是后接不定式的动词。",
+      "points": [
+        {
+          "title": "作宾语",
+          "detail": "want/hope/plan/decide/agree/refuse/learn/expect 等后接 to do；help (to) do 中 to 可省。"
+        },
+        {
+          "title": "作目的状语",
+          "detail": "To get good grades, he studies hard.（表目的，可放句首）。"
+        },
+        {
+          "title": "疑问词 + 不定式",
+          "detail": "how to do, what to do, where to go 可作宾语（I don't know how to solve it）。"
+        }
+      ],
+      "pitfalls": [
+        "make/let/have 后接不带 to 的不定式（make sb do），被动时补 to（be made to do）。",
+        "介词后接动名词不接不定式（look forward to doing）。"
+      ],
+      "examples": [
+        {
+          "stem": "He wants ___ a doctor.",
+          "options": [
+            "be",
+            "to be",
+            "being"
+          ],
+          "answer": 1,
+          "analysis": "want 后接 to do。"
+        },
+        {
+          "stem": "I don't know ___ next.",
+          "options": [
+            "what to do",
+            "what do",
+            "do what"
+          ],
+          "answer": 0,
+          "analysis": "疑问词 + 不定式。"
+        },
+        {
+          "stem": "The teacher made him ___ the room.",
+          "options": [
+            "clean",
+            "to clean",
+            "cleaning"
+          ],
+          "answer": 0,
+          "analysis": "make sb do 用原形。"
+        }
+      ]
+    },
+    {
+      "id": "g16",
+      "title": "动名词",
+      "overview": "动名词 doing 具名词性质，可作主语、宾语。中考重点在固定搭配。",
+      "points": [
+        {
+          "title": "作主语与宾语",
+          "detail": "Reading is fun.（主语）I like swimming.（宾语）。"
+        },
+        {
+          "title": "固定搭配",
+          "detail": "enjoy/mind/finish/practice/consider/keep + doing；be busy doing；look forward to doing。"
+        },
+        {
+          "title": "remember/forget + doing/to do",
+          "detail": "doing 表示'记得/忘记做过'；to do 表示'记得/忘记要去做'。"
+        }
+      ],
+      "pitfalls": [
+        "to 作介词时（look forward to, be used to）后接动名词，不是不定式。",
+        "stop doing（停止做）与 stop to do（停下来去做）意思不同。"
+      ],
+      "examples": [
+        {
+          "stem": "She enjoys ___ music.",
+          "options": [
+            "listen",
+            "listening",
+            "to listen"
+          ],
+          "answer": 1,
+          "analysis": "enjoy 后接动名词。"
+        },
+        {
+          "stem": "I look forward to ___ you.",
+          "options": [
+            "see",
+            "seeing",
+            "saw"
+          ],
+          "answer": 1,
+          "analysis": "to 是介词，后接动名词。"
+        },
+        {
+          "stem": "Please remember ___ the door.",
+          "options": [
+            "lock",
+            "to lock",
+            "locking"
+          ],
+          "answer": 1,
+          "analysis": "记得去做用 to lock。"
+        }
+      ]
+    },
+    {
+      "id": "g17",
+      "title": "情态动词",
+      "overview": "情态动词 can/may/must/should 等后接动词原形，无人称和数的变化。",
+      "points": [
+        {
+          "title": "基本辨析",
+          "detail": "can（能/会）、may（可以/可能）、must（必须）、should（应该）、need（需要）。"
+        },
+        {
+          "title": "表推测",
+          "detail": "must（一定，把握大）、may/might/could（可能）、can't（不可能，把握大）。"
+        },
+        {
+          "title": "回答方式",
+          "detail": "Must I...? 否定用 needn't（不必）；May I...? 用 Yes, you may / No, you mustn't。"
+        }
+      ],
+      "pitfalls": [
+        "must 开头的一般疑问句，否定回答用 needn't 而非 mustn't。",
+        "can't 表推测'不可能'，语气强；may not 表'可能不'。"
+      ],
+      "examples": [
+        {
+          "stem": "—Must I finish it now? —No, you ___ .",
+          "options": [
+            "mustn't",
+            "needn't",
+            "can't"
+          ],
+          "answer": 1,
+          "analysis": "must 否定回答用 needn't。"
+        },
+        {
+          "stem": "The book ___ be Lily's. She loves it.",
+          "options": [
+            "must",
+            "can't",
+            "may not"
+          ],
+          "answer": 0,
+          "analysis": "把握大用 must。"
+        },
+        {
+          "stem": "You ___ smoke here. It's dangerous.",
+          "options": [
+            "mustn't",
+            "needn't",
+            "may not"
+          ],
+          "answer": 0,
+          "analysis": "禁止用 mustn't。"
+        }
+      ]
+    },
+    {
+      "id": "g18",
+      "title": "be going to 与 will",
+      "overview": "两者都表将来，但 be going to 强调计划/迹象，will 强调临时决定或预测。",
+      "points": [
+        {
+          "title": "be going to 的用法",
+          "detail": "表示事先打算、计划或已有迹象（Look at the clouds! It's going to rain）。"
+        },
+        {
+          "title": "will 的用法",
+          "detail": "表示说话时临时决定、预测或意愿（I'll help you.）；客观将来。"
+        }
+      ],
+      "pitfalls": [
+        "已有明显迹象时用 be going to 不用 will。",
+        "承诺、临时决定常用 will。"
+      ],
+      "examples": [
+        {
+          "stem": "Look at the black sky! It ___ rain.",
+          "options": [
+            "is going to",
+            "will",
+            "is"
+          ],
+          "answer": 0,
+          "analysis": "有迹象用 be going to。"
+        },
+        {
+          "stem": "—The phone is ringing. —I ___ answer it.",
+          "options": [
+            "am going to",
+            "will",
+            "am"
+          ],
+          "answer": 1,
+          "analysis": "临时决定用 will。"
+        },
+        {
+          "stem": "We ___ a party next Sunday.",
+          "options": [
+            "have",
+            "are going to have",
+            "will have"
+          ],
+          "answer": 1,
+          "analysis": "计划用 be going to。"
+        }
+      ]
+    },
+    {
+      "id": "g19",
+      "title": "祈使句",
+      "overview": "祈使句表示请求、命令、建议，以动词原形开头，否定用 Don't + 原形。",
+      "points": [
+        {
+          "title": "肯定与否定",
+          "detail": "肯定：动词原形开头（Open the door.）；否定：Don't + 原形（Don't run.）。"
+        },
+        {
+          "title": "Let 开头",
+          "detail": "Let's + 原形（包括对方）；Let us 可仅指我们；否定 Let's not。"
+        },
+        {
+          "title": "短语动词祈使",
+          "detail": "turn on/off, clean up, pick up 等，代词宾语放中间（turn it on）。"
+        }
+      ],
+      "pitfalls": [
+        "祈使句主语 you 通常省略，谓语用原形。",
+        "No + 动名词 也可表禁止（No smoking）。"
+      ],
+      "examples": [
+        {
+          "stem": "___ late for class.",
+          "options": [
+            "Don't be",
+            "Not be",
+            "Be not"
+          ],
+          "answer": 0,
+          "analysis": "祈使否定 Don't be + 形。"
+        },
+        {
+          "stem": "Please ___ the light.",
+          "options": [
+            "turn on",
+            "turn it on",
+            "turn on it"
+          ],
+          "answer": 1,
+          "analysis": "代词放中间。"
+        },
+        {
+          "stem": "___ quiet in the library.",
+          "options": [
+            "Be",
+            "Don't",
+            "To be"
+          ],
+          "answer": 0,
+          "analysis": "祈使句用动词原形 Be。"
+        }
+      ]
+    },
+    {
+      "id": "g20",
+      "title": "感叹句",
+      "overview": "感叹句由 What 或 How 引导，考查二者辨析。",
+      "points": [
+        {
+          "title": "What 引导",
+          "detail": "What + (a/an) + 形容词 + 名词 (+ 主谓)！（What a beautiful girl! / What fine weather!）"
+        },
+        {
+          "title": "How 引导",
+          "detail": "How + 形容词/副词 (+ 主谓)！（How beautiful! / How fast he runs!）"
+        }
+      ],
+      "pitfalls": [
+        "判断关键：紧接名词用 What，紧接形容词/副词用 How。",
+        "不可数名词前 What 不加 a（What good news!）。"
+      ],
+      "examples": [
+        {
+          "stem": "___ beautiful flowers they are!",
+          "options": [
+            "What",
+            "How",
+            "What a"
+          ],
+          "answer": 0,
+          "analysis": "flowers 复数，用 What + 形容词 + 名词。"
+        },
+        {
+          "stem": "___ fast he runs!",
+          "options": [
+            "What",
+            "How",
+            "How a"
+          ],
+          "answer": 1,
+          "analysis": "紧接副词 fast 用 How。"
+        },
+        {
+          "stem": "___ good news it is!",
+          "options": [
+            "What a",
+            "What",
+            "How"
+          ],
+          "answer": 1,
+          "analysis": "news 不可数，用 What 无 a。"
+        }
+      ]
+    },
+    {
+      "id": "g21",
+      "title": "疑问句",
+      "overview": "疑问句包括一般疑问句、特殊疑问句与反意疑问句。",
+      "points": [
+        {
+          "title": "一般疑问句",
+          "detail": "be/情态/助动词提前，回答用 yes/no；some 在希望肯定回答时不变 any。"
+        },
+        {
+          "title": "特殊疑问句",
+          "detail": "疑问词(what/who/where/when/why/how) + 一般疑问句语序；how 系列：how many/much/long/far/often。"
+        },
+        {
+          "title": "反意疑问句",
+          "detail": "前肯后否、前否后肯；主语用人称代词；祈使句后多用 will you。"
+        }
+      ],
+      "pitfalls": [
+        "反意疑问句主语必须用人称代词，不用名词。",
+        "There be 的反意用 there，不用 it。"
+      ],
+      "examples": [
+        {
+          "stem": "—___ do you go to school? —By bus.",
+          "options": [
+            "What",
+            "How",
+            "When"
+          ],
+          "answer": 1,
+          "analysis": "问交通方式用 How。"
+        },
+        {
+          "stem": "He is a teacher, ___ ?",
+          "options": [
+            "is he",
+            "isn't he",
+            "does he"
+          ],
+          "answer": 1,
+          "analysis": "前肯后否 isn't he。"
+        },
+        {
+          "stem": "Let's go, ___ ?",
+          "options": [
+            "will you",
+            "shall we",
+            "don't you"
+          ],
+          "answer": 1,
+          "analysis": "Let's 后用 shall we。"
+        }
+      ]
+    },
+    {
+      "id": "g22",
+      "title": "There be 句型",
+      "overview": "There be 表示'某地有某物'，be 与最近名词保持一致（就近原则）。",
+      "points": [
+        {
+          "title": "就近原则",
+          "detail": "There is a book and two pens. / There are two pens and a book."
+        },
+        {
+          "title": "时态与数量",
+          "detail": "There was/were；There will be（将来）；How many 提问用 are there。"
+        }
+      ],
+      "pitfalls": [
+        "There be 表'存在有'，have 表'拥有'，二者不混用（不能说 There have）。",
+        "be 永远与最近的名词数一致。"
+      ],
+      "examples": [
+        {
+          "stem": "There ___ a pen and two books on the desk.",
+          "options": [
+            "are",
+            "is",
+            "have"
+          ],
+          "answer": 1,
+          "analysis": "就近原则，a pen 单数用 is。"
+        },
+        {
+          "stem": "There ___ some milk in the cup.",
+          "options": [
+            "are",
+            "is",
+            "have"
+          ],
+          "answer": 1,
+          "analysis": "milk 不可数用 is。"
+        },
+        {
+          "stem": "___ there any students in the room?",
+          "options": [
+            "Is",
+            "Are",
+            "Have"
+          ],
+          "answer": 1,
+          "analysis": "students 复数用 Are。"
+        }
+      ]
+    },
+    {
+      "id": "g23",
+      "title": "宾语从句",
+      "overview": "宾语从句作主句的宾语，考查语序、时态呼应和引导词。",
+      "points": [
+        {
+          "title": "陈述语序",
+          "detail": "从句永远用陈述语序（主语在前）：Could you tell me where he is?（不是 is he）。"
+        },
+        {
+          "title": "引导词",
+          "detail": "that（可省，陈述事实）、if/whether（是否）、疑问词 what/who/when 等。"
+        },
+        {
+          "title": "时态呼应",
+          "detail": "主句过去时，从句用相应过去时态；客观真理仍用一般现在时。"
+        }
+      ],
+      "pitfalls": [
+        "无论原句是疑问，转换后从句都用陈述语序。",
+        "if 表'是否'时不能与 whether 在宾语从句随意互换（介词后、不定式前用 whether）。"
+      ],
+      "examples": [
+        {
+          "stem": "Do you know ___ ?",
+          "options": [
+            "where is he",
+            "where he is",
+            "he is where"
+          ],
+          "answer": 1,
+          "analysis": "从句用陈述语序。"
+        },
+        {
+          "stem": "I think ___ he will come.",
+          "options": [
+            "that",
+            "if",
+            "what"
+          ],
+          "answer": 0,
+          "analysis": "陈述事实用 that。"
+        },
+        {
+          "stem": "She said the earth ___ around the sun.",
+          "options": [
+            "went",
+            "goes",
+            "will go"
+          ],
+          "answer": 1,
+          "analysis": "客观真理用一般现在时。"
+        }
+      ]
+    },
+    {
+      "id": "g24",
+      "title": "定语从句",
+      "overview": "定语从句修饰名词，由关系词引导。中考重点为 that/which/who 的用法。",
+      "points": [
+        {
+          "title": "关系代词",
+          "detail": "that/which 指物，who/whom 指人；在从句中作主语或宾语（作宾语可省略）。"
+        },
+        {
+          "title": "使用要点",
+          "detail": "先行词被最高级/序数词修饰常用 that；逗号后非限制性从句不用 that。"
+        }
+      ],
+      "pitfalls": [
+        "关系代词在从句中作主语时不可省略，且谓语数要与先行词一致。",
+        "先行词既有人又有物时用 that。"
+      ],
+      "examples": [
+        {
+          "stem": "The book ___ is on the desk is mine.",
+          "options": [
+            "who",
+            "that",
+            "what"
+          ],
+          "answer": 1,
+          "analysis": "修饰物用 that/which。"
+        },
+        {
+          "stem": "The girl ___ won the game is my friend.",
+          "options": [
+            "which",
+            "who",
+            "what"
+          ],
+          "answer": 1,
+          "analysis": "修饰人用 who。"
+        },
+        {
+          "stem": "This is the best film ___ I have seen.",
+          "options": [
+            "which",
+            "that",
+            "what"
+          ],
+          "answer": 1,
+          "analysis": "最高级修饰用 that。"
+        }
+      ]
+    },
+    {
+      "id": "g25",
+      "title": "状语从句",
+      "overview": "状语从句修饰主句，含时间、条件、原因、让步等，考查连词与时态配合。",
+      "points": [
+        {
+          "title": "时间状语从句",
+          "detail": "when/while/as/before/after/until/as soon as 引导；as soon as 主将从现。"
+        },
+        {
+          "title": "条件状语从句",
+          "detail": "if/unless 引导，遵循'主将从现'：If it rains, we will stay."
+        },
+        {
+          "title": "原因与让步",
+          "detail": "because 原因；although/though 让步（不与 but 连用）；so...that 结果。"
+        }
+      ],
+      "pitfalls": [
+        "if/unless 从句用一般现在时表将来（主将从现）。",
+        "although 不与 but 连用，because 不与 so 连用。"
+      ],
+      "examples": [
+        {
+          "stem": "I'll call you as soon as I ___ home.",
+          "options": [
+            "get",
+            "will get",
+            "got"
+          ],
+          "answer": 0,
+          "analysis": "as soon as 主将从现。"
+        },
+        {
+          "stem": "___ it is raining, we stay at home.",
+          "options": [
+            "Because",
+            "So",
+            "But"
+          ],
+          "answer": 0,
+          "analysis": "原因用 Because。"
+        },
+        {
+          "stem": "He is ___ tired ___ he falls asleep.",
+          "options": [
+            "so; that",
+            "too; to",
+            "such; that"
+          ],
+          "answer": 0,
+          "analysis": "so + 形 + that 如此…以至于。"
+        }
+      ]
+    },
+    {
+      "id": "g26",
+      "title": "if 条件句（主将从现）",
+      "overview": "if 引导的条件状语从句，主句用一般将来时，从句用一般现在时。",
+      "points": [
+        {
+          "title": "主将从现",
+          "detail": "主句将来时，if 从句现在时：If you study hard, you will pass."
+        },
+        {
+          "title": "unless = if not",
+          "detail": "Unless you hurry, you'll be late. = If you don't hurry, you'll be late."
+        }
+      ],
+      "pitfalls": [
+        "if 从句绝不出现 will（除非表'是否'宾语从句）。",
+        "主句将来时，从句现在时，不可都用将来时。"
+      ],
+      "examples": [
+        {
+          "stem": "If it ___ tomorrow, we will stay home.",
+          "options": [
+            "rains",
+            "will rain",
+            "rained"
+          ],
+          "answer": 0,
+          "analysis": "if 从句用现在时 rains。"
+        },
+        {
+          "stem": "Unless you ___ , you'll fail.",
+          "options": [
+            "study",
+            "will study",
+            "studied"
+          ],
+          "answer": 0,
+          "analysis": "unless 后接现在时。"
+        },
+        {
+          "stem": "If he ___ free, he will come.",
+          "options": [
+            "is",
+            "will be",
+            "was"
+          ],
+          "answer": 0,
+          "analysis": "if 从句用 is。"
+        }
+      ]
+    },
+    {
+      "id": "g27",
+      "title": "used to do",
+      "overview": "used to do 表示过去常常（现在已不），区分 be used to doing。",
+      "points": [
+        {
+          "title": "used to + 原形",
+          "detail": "表过去习惯/状态（I used to be short.），否定 didn't use to，疑问 Did...use to。"
+        },
+        {
+          "title": "be used to doing",
+          "detail": "表'习惯于'，to 是介词，后接动名词（He is used to getting up early）。"
+        }
+      ],
+      "pitfalls": [
+        "used to 后接动词原形；be used to 后接动名词，含义完全不同。",
+        "否定/疑问借助 did（Did you use to...?），不用 usedn't 常见写法。"
+      ],
+      "examples": [
+        {
+          "stem": "He ___ play soccer after school.",
+          "options": [
+            "used to",
+            "use to",
+            "is used to"
+          ],
+          "answer": 0,
+          "analysis": "过去习惯用 used to。"
+        },
+        {
+          "stem": "She is used to ___ early.",
+          "options": [
+            "get",
+            "getting",
+            "got"
+          ],
+          "answer": 1,
+          "analysis": "be used to doing。"
+        },
+        {
+          "stem": "Did you use to ___ short?",
+          "options": [
+            "be",
+            "being",
+            "been"
+          ],
+          "answer": 0,
+          "analysis": "used to 后接原形 be。"
+        }
+      ]
+    },
+    {
+      "id": "g28",
+      "title": "主谓一致",
+      "overview": "主语与谓语在数上保持一致。中考考查集合名词、不定代词、并列主语等。",
+      "points": [
+        {
+          "title": "不定代词作主语",
+          "detail": "everyone/something/nobody 等谓语用单数；both/each 视情况。"
+        },
+        {
+          "title": "并列与集合",
+          "detail": "and 连接两个名词谓语用复数；with/together with 就远；family/class 强调整体用单数、强调成员用复数。"
+        },
+        {
+          "title": "数量短语",
+          "detail": "a number of + 复数名词谓语复数；the number of + 名词谓语单数。"
+        }
+      ],
+      "pitfalls": [
+        "the number of 作主语谓语用单数，a number of 用复数。",
+        "each of / one of 谓语用单数。"
+      ],
+      "examples": [
+        {
+          "stem": "The number of students ___ 50.",
+          "options": [
+            "are",
+            "is",
+            "were"
+          ],
+          "answer": 1,
+          "analysis": "the number of 用单数。"
+        },
+        {
+          "stem": "Neither of them ___ right.",
+          "options": [
+            "are",
+            "is",
+            "were"
+          ],
+          "answer": 1,
+          "analysis": "neither 谓语单数。"
+        },
+        {
+          "stem": "Tom with his friends ___ playing.",
+          "options": [
+            "are",
+            "is",
+            "were"
+          ],
+          "answer": 1,
+          "analysis": "就远原则，Tom 单数用 is。"
+        }
+      ]
+    },
+    {
+      "id": "g29",
+      "title": "过去完成时",
+      "overview": "过去完成时 had + 过去分词，表示'过去的过去'。",
+      "points": [
+        {
+          "title": "基本用法",
+          "detail": "在另一过去动作之前已发生（When I got there, the bus had left）。"
+        },
+        {
+          "title": "by the time",
+          "detail": "By the time + 过去时从句，主句常用过去完成时。"
+        }
+      ],
+      "pitfalls": [
+        "必须有'两个过去动作'的时间参照，否则不用过去完成时。",
+        "与一般过去时的区别：强调'先于另一过去动作'。"
+      ],
+      "examples": [
+        {
+          "stem": "By the time I woke up, it ___ .",
+          "options": [
+            "stopped",
+            "had stopped",
+            "has stopped"
+          ],
+          "answer": 1,
+          "analysis": "过去的过去用过去完成时。"
+        },
+        {
+          "stem": "He said he ___ the film before.",
+          "options": [
+            "saw",
+            "had seen",
+            "has seen"
+          ],
+          "answer": 1,
+          "analysis": "said 之前用 had seen。"
+        },
+        {
+          "stem": "The train ___ when we arrived.",
+          "options": [
+            "left",
+            "had left",
+            "has left"
+          ],
+          "answer": 1,
+          "analysis": "arrived 之前用 had left。"
+        }
+      ]
+    },
+    {
+      "id": "g30",
+      "title": "交际用语",
+      "overview": "交际用语考查日常情景对话的得体应答，如问候、邀请、劝告、祝愿等。",
+      "points": [
+        {
+          "title": "邀请与建议",
+          "detail": "Can you...? 肯定 Sure, I'd love to.；Why not...? / You should... 提建议。"
+        },
+        {
+          "title": "感谢与道歉",
+          "detail": "Thank you. —You're welcome./My pleasure.；Sorry. —Never mind./It doesn't matter."
+        },
+        {
+          "title": "祝愿与请求",
+          "detail": "Good luck! / Have a good time!；Could you please...? 礼貌请求。"
+        }
+      ],
+      "pitfalls": [
+        "接受邀请用 Sure, I'd love to，不用 Yes, I would love（缺 to）。",
+        "道歉应答用 Never mind 而非 Don't mind。"
+      ],
+      "examples": [
+        {
+          "stem": "—Can you come to my party? —___ .",
+          "options": [
+            "Sure, I'd love to",
+            "Yes, I would love",
+            "No, I wouldn't"
+          ],
+          "answer": 0,
+          "analysis": "接受邀请用 Sure, I'd love to。"
+        },
+        {
+          "stem": "—Thank you for your help. —___ .",
+          "options": [
+            "Never mind",
+            "You're welcome",
+            "It doesn't matter"
+          ],
+          "answer": 1,
+          "analysis": "感谢应答 You're welcome。"
+        },
+        {
+          "stem": "—I'm sorry I'm late. —___ .",
+          "options": [
+            "You're welcome",
+            "Never mind",
+            "That's right"
+          ],
+          "answer": 1,
+          "analysis": "道歉应答 Never mind。"
+        }
+      ]
+    }
+  ]
+}

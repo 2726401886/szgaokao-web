@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>初中英语 · 语法知识点详解</title>
+<style>
+  :root { --brand:#3b6fe0; --brand2:#5a8dee; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:1000px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#3b6fe0,#5a8dee); color:#fff; padding:16px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .topbar h1 { font-size:19px; }
+  .topbar .sub { font-size:12px; opacity:.92; margin-top:3px; }
+  .topbar .spacer { flex:1; }
+  .topbar a.back { color:#fff; text-decoration:none; background:rgba(255,255,255,.22); padding:7px 14px; border-radius:20px; font-size:13px; }
+  .trial-note { background:#fffbe8; border:1px solid #f3e6b8; color:#7a5c00; padding:10px 14px; border-radius:12px; font-size:13px; margin-bottom:14px; display:none; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:10px; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:120px; height:auto; border-radius:8px; display:block; }
+  .layout { display:flex; gap:14px; align-items:flex-start; }
+  .side { width:250px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); max-height:80vh; overflow-y:auto; }
+  .side h3 { font-size:12px; color:#999; margin:0 0 8px; font-weight:700; }
+  .topic-item { padding:9px 11px; border-radius:10px; cursor:pointer; border:1.5px solid transparent; margin-bottom:5px; font-size:13px; }
+  .topic-item:hover { background:#eef3fe; }
+  .topic-item.on { background:#eef3fe; border-color:var(--brand,#3b6fe0); font-weight:700; }
+  .topic-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .main { flex:1; min-width:0; }
+  .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-bottom:14px; }
+  .card h2 { font-size:18px; margin-bottom:6px; }
+  .overview { font-size:14px; color:#444; line-height:1.8; background:#f8faff; border-radius:12px; padding:12px 14px; }
+  .sec-title { font-size:15px; font-weight:800; color:var(--brand,#3b6fe0); margin:18px 0 10px; display:flex; align-items:center; gap:8px; }
+  .sec-title .num { background:var(--brand,#3b6fe0); color:#fff; border-radius:8px; font-size:12px; padding:2px 8px; }
+  .pt { border-left:3px solid var(--brand,#3b6fe0); background:#f8faff; padding:10px 12px; border-radius:0 10px 10px 0; margin-bottom:10px; }
+  .pt .ptt { font-weight:700; font-size:14px; margin-bottom:4px; }
+  .pt .ptd { font-size:13px; color:#444; line-height:1.6; }
+  .pit { background:#fff6f6; border:1px solid #ffd9d9; border-radius:10px; padding:9px 12px; font-size:13px; color:#a33; margin-bottom:8px; line-height:1.6; }
+  .pit::before { content:'⚠ '; font-weight:800; }
+  .qitem { border:1px solid #eef0f5; border-radius:12px; padding:14px; margin-bottom:12px; }
+  .qitem .qh { font-size:14px; font-weight:700; margin-bottom:10px; }
+  .qopt { padding:11px 13px; border:1.5px solid #eee; border-radius:10px; margin:7px 0; font-size:14px; cursor:pointer; }
+  .qopt:hover { border-color:var(--brand,#3b6fe0); }
+  .qopt.right { background:#e8f8ee; border-color:var(--ok,#2a8); }
+  .qopt.wrong { background:#fdecea; border-color:var(--err,#e23); }
+  .qopt.locked { pointer-events:none; }
+  .qres { margin-top:8px; font-size:13px; font-weight:700; display:none; }
+  .qres.ok { color:#2a8; display:block; }
+  .qres.bad { color:#e23; display:block; }
+  .qana { margin-top:6px; font-size:12.5px; color:#666; line-height:1.6; display:none; }
+  .qana.show { display:block; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .err-msg { color:#e23; font-size:14px; text-align:center; padding:30px 10px; }
+  @media (max-width:720px) { .layout { flex-direction:column; } .side { width:100%; max-height:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>📗 初中英语 · 语法知识点详解</h1>
+      <div class="sub">中考 30 个核心语法专题 · 概述 + 讲解 + 易错 + 例题</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="back" href="./junior-words.html">📖 单词听读背记</a>
+    <a class="back" href="./junior-textbook.html">📘 课本同步</a>
+    <a class="back" href="./junior.html">🚀 小升初衔接</a>
+    <a class="back" href="./index.html">← 返回主页</a>
+    <a class="back" style="cursor:pointer;" onclick="logout()">退出登录</a>
+  </div>
+  <div class="trial-note" id="trialNote"></div>
+
+  <div class="layout">
+    <div class="side">
+      <h3>语法专题（30）</h3>
+      <div id="topicList"><div class="empty" style="box-shadow:none;padding:18px;">加载中…</div></div>
+    </div>
+    <div class="main" id="mainArea"><div class="empty">请选择左侧专题开始学习</div></div>
+  </div>
+</div>
+
+<script>
+function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href='./index.html'; }
+(function () {
+  const $ = s => document.querySelector(s);
+  const TOKEN = localStorage.getItem('token') || '';
+  let DEVFP = '';
+  try { DEVFP = localStorage.getItem('devfp') || ''; } catch (e) {}
+  const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+  let TOPICS = [];
+  let curTopic = null;
+
+  async function api(path) {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), 12000);
+    try {
+      const r = await fetch(path, { headers: H(), signal: ctl.signal });
+      const j = await r.json().catch(() => ({}));
+      return { s: r.status, j };
+    } catch (e) { return { s: 0, j: { error: '网络异常或请求超时，请检查网络后重试' } }; }
+    finally { clearTimeout(tm); }
+  }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+  async function init() {
+    const r = await api('/api/junior-grammar');
+    if (r.s === 0) { $('#topicList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">网络异常 <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#3b6fe0;color:#fff;cursor:pointer;">重试</button></div>'; $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#3b6fe0;">前往登录页</a></div>'; $('#topicList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">未登录</div>'; return; }
+    TOPICS = (r.j && r.j.topics) || [];
+    if (!TOPICS.length) { $('#topicList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">暂无数据</div>'; return; }
+    if (r.j.trial) {
+      $('#trialNote').style.display = 'block';
+      $('#trialNote').innerHTML = '🎁 体验模式：可学习 <b>专题一 名词</b>。输入授权码或联系管理员授权，即可解锁全部 30 个语法专题。<div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>';
+    }
+    renderTopics();
+    loadTopic(TOPICS[0].id);
+  }
+
+  function renderTopics() {
+    $('#topicList').innerHTML = TOPICS.map(t => {
+      const on = curTopic && curTopic.id === t.id ? ' on' : '';
+      return '<div class="topic-item' + on + '" data-t="' + t.id + '"><div>' + esc(t.title) + '</div><div class="s">' + (t.points || 0) + ' 个讲解要点</div></div>';
+    }).join('');
+    document.querySelectorAll('.topic-item').forEach(el => el.addEventListener('click', () => {
+      document.querySelectorAll('.topic-item').forEach(x => x.classList.remove('on'));
+      el.classList.add('on'); loadTopic(el.dataset.t);
+    }));
+  }
+
+  async function loadTopic(tid) {
+    const r = await api('/api/junior-grammar?topic=' + tid);
+    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常') + ' <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#3b6fe0;color:#fff;cursor:pointer;">重试</button></div>'; return; }
+    if (r.s !== 200 || !r.j) { $('#mainArea').innerHTML = '<div class="err-msg">加载失败（' + r.s + '）</div>'; return; }
+    curTopic = r.j;
+    renderTopic();
+  }
+
+  function renderTopic() {
+    const t = curTopic;
+    let h = '<div class="card"><h2>' + esc(t.title) + '</h2>';
+    h += '<div class="overview">' + esc(t.overview) + '</div></div>';
+    // 讲解条目
+    h += '<div class="card"><div class="sec-title"><span class="num">' + t.points.length + '</span> 讲解要点</div>';
+    h += t.points.map(p => '<div class="pt"><div class="ptt">' + esc(p.title) + '</div><div class="ptd">' + esc(p.detail) + '</div></div>').join('');
+    h += '</div>';
+    // 易错提示
+    if (t.pitfalls && t.pitfalls.length) {
+      h += '<div class="card"><div class="sec-title"><span class="num">' + t.pitfalls.length + '</span> 易错提示</div>';
+      h += t.pitfalls.map(p => '<div class="pit">' + esc(p) + '</div>').join('');
+      h += '</div>';
+    }
+    // 例题
+    h += '<div class="card"><div class="sec-title"><span class="num">' + t.examples.length + '</span> 巩固例题</div>';
+    h += t.examples.map((q, qi) => {
+      return '<div class="qitem" data-q="' + qi + '"><div class="qh">' + (qi + 1) + '. ' + esc(q.stem) + '</div>' +
+        q.options.map((o, oi) => '<div class="qopt" data-o="' + oi + '">' + esc(o) + '</div>').join('') +
+        '<div class="qres" id="qres' + qi + '"></div>' +
+        '<div class="qana" id="qana' + qi + '">💡 ' + esc(q.analysis || '') + '</div></div>';
+    }).join('');
+    h += '</div>';
+    $('#mainArea').innerHTML = h;
+    document.querySelectorAll('.qitem').forEach(item => {
+      const qi = Number(item.dataset.q);
+      const q = t.examples[qi];
+      item.querySelectorAll('.qopt').forEach(opt => opt.addEventListener('click', () => {
+        if (item.querySelector('.qres').classList.contains('ok') || item.querySelector('.qres').classList.contains('bad')) return;
+        const oi = Number(opt.dataset.o);
+        const ok = oi === q.answer;
+        item.querySelectorAll('.qopt').forEach(x => x.classList.add('locked'));
+        if (ok) { opt.classList.add('right'); } else { opt.classList.add('wrong'); item.querySelectorAll('.qopt').forEach(x => { if (Number(x.dataset.o) === q.answer) x.classList.add('right'); }); }
+        const res = item.querySelector('#qres' + qi);
+        res.textContent = ok ? '✅ 回答正确！' : '❌ 正确答案：' + esc(q.options[q.answer]);
+        res.className = 'qres ' + (ok ? 'ok' : 'bad');
+        item.querySelector('#qana' + qi).classList.add('show');
+      }));
+    });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>

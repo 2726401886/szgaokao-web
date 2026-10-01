@@ -54,24 +54,39 @@
   .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
   .tb-btn:hover { background:rgba(255,255,255,.36); }
   @media (max-width:680px){ .topbar-r { margin-left:0; } }
+
+  .subnav { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .subbtn { flex:1; min-width:130px; text-align:center; text-decoration:none; padding:13px 10px; border-radius:14px; background:#fff; color:#3b6fe0; font-weight:800; font-size:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); border:1.5px solid transparent; }
+  .subbtn:hover { border-color:#3b6fe0; }
+  .subbtn.cur { background:#3b6fe0; color:#fff; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="topbar">
-    <h1>🚀 小升初英语衔接包</h1>
-    <p>8 大初中预备语法 · 衔接词汇 · 随学小测（小学毕业升初中必备）</p>
+    <div>
+      <h1>🚀 初中英语</h1>
+      <p>课本同步训练 · 语法知识点详解 · 单词听读背记 · 小升初衔接包</p>
+    </div>
   <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+  <div class="subnav">
+    <a class="subbtn" href="./junior-textbook.html">📘 课本同步训练</a>
+    <a class="subbtn" href="./junior-grammar.html">📗 语法详解</a>
+    <a class="subbtn" href="./junior-words.html">📖 单词听读背记</a>
+    <a class="subbtn cur" href="#linkSection">🚀 小升初衔接包</a>
   </div>
   <div class="card" id="trialCard" style="display:none;border-left:4px solid #ff9966">
     <b>🎁 体验模式</b>：当前可免费学习 <b>第 1 单元</b>。解锁小学英语模块后即可学习全部 8 单元。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
+  <div class="sec-title" id="linkSection"><span class="bar"></span>小升初衔接包（初中预备）</div>
   <div class="layout" id="appLayout" style="display:none">
     <aside class="side">
       <h3>📚 衔接单元</h3>
       <div id="unMenu"></div>
-      <button class="logout blue" onclick="location.href='./longman.html'">📘 朗文同步</button>
-      <button class="logout blue" onclick="location.href='./words.html'">📖 单词听读背记</button>
+      <button class="logout blue" onclick="location.href='./junior-textbook.html'">📘 课本同步训练</button>
+      <button class="logout blue" onclick="location.href='./junior-grammar.html'">📗 语法详解</button>
+      <button class="logout blue" onclick="location.href='./junior-words.html'">📖 单词听读背记</button>
       <div class="dev-note" id="acctNote"></div>
       <div class="dev-note" id="devNote"></div>
     </aside>
