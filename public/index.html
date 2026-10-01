@@ -240,7 +240,7 @@ function renderMod(m, el) {
 }
 function enterMod(m) {
   if (!TOKEN) { setMsg('authMsg', '请先登录后再进入模块', 'err'); $('authCard').scrollIntoView({ behavior: 'smooth' }); return; }
-  if (!MODS[m]) {
+  if (!(m in MODS ? MODS[m] : MODS.primary)) {   // junior 随 primary 授权（与 renderMod 同一判断）
     if ($('actCard').style.display !== 'none') $('actCard').scrollIntoView({ behavior: 'smooth' });
     alert(MODINFO[m].name + ' 未授权：输入授权码可一键解锁全部模块，或联系管理员微信 13538237315 开通对应模块。');
     return;
