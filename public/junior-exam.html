@@ -68,6 +68,12 @@
   .kl { font-size:13.5px; line-height:1.9; }
   .kl b { color:#1a9e5c; }
   .sharebox { margin-top:12px; background:#fafafa; border:1px dashed #ddd; border-radius:10px; padding:10px 12px; font-size:12.5px; word-break:break-all; color:#555; }
+  .exam-inp { width:100%; padding:8px 10px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; margin-top:6px; box-sizing:border-box; }
+  .exam-ta { width:100%; min-height:120px; padding:10px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; margin-top:6px; box-sizing:border-box; resize:vertical; }
+  .exam-blank { width:88px; padding:4px 6px; border:1.5px solid #ccc; border-radius:6px; font-size:13px; margin:0 4px; }
+  .opt input { margin-right:6px; vertical-align:middle; }
+  .q-tip { font-size:13px; color:#7a5c00; margin-top:8px; line-height:1.7; background:#fffbe8; padding:8px 10px; border-radius:8px; }
+  .exam-result { display:none; background:#e8f8ee; border:1.5px solid #2a8; border-radius:12px; padding:12px 14px; margin-top:12px; }
   @media print {
     .no-print { display:none !important; }
     body { background:#fff; }
@@ -102,6 +108,7 @@
       <div class="tab cur" id="tab-tpl" onclick="switchTab('tpl')">📋 模板组卷</div>
       <div class="tab" id="tab-free" onclick="switchTab('free')">🗂️ 自由组卷（题库）</div>
       <div class="tab" id="tab-prev" onclick="switchTab('prev')">👁️ 组卷预览</div>
+      <div class="tab" id="tab-exam" onclick="switchTab('exam')">📝 在线作答</div>
     </div>
 
     <!-- 模板组卷 -->
@@ -183,6 +190,20 @@
       <div class="paper" id="paperView"></div>
     </div>
 
+    <!-- 在线作答 -->
+    <div id="p-exam" style="display:none">
+      <div class="card no-print" id="examTools" style="display:none">
+        <div class="sec-title"><span class="bar"></span>在线作答</div>
+        <div class="tip">直接在下方作答，完成后点「交卷」自动批改并展示答案与解析。任务型阅读与书面表达为开放式作答，建议老师人工核对，不计入机评得分。</div>
+        <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" id="examSubmit" onclick="submitExam()">📤 交卷</button>
+          <button class="btn ghost" id="examRetry" onclick="resetExam()" style="display:none">🔄 重做</button>
+        </div>
+        <div class="exam-result" id="examResult"></div>
+      </div>
+      <div class="paper" id="examView"></div>
+    </div>
+
     <!-- 已选工具条 -->
     <div class="selbar no-print" id="selBar" style="display:none">
       <b>已选 <span id="selCount">0</span> 题</b>
@@ -239,11 +260,11 @@ if(TOKEN) afterLogin();
 else { show('loginMsg',true); }
 
 function switchTab(t){
-  ['tpl','free','prev'].forEach(x=>{ document.getElementById('tab-'+x).classList.toggle('cur', x===t); document.getElementById('p-'+x).style.display = x===t?'':'none'; });
+  ['tpl','free','prev','exam'].forEach(x=>{ const el=document.getElementById('tab-'+x); if(el) el.classList.toggle('cur', x===t); const pe=document.getElementById('p-'+x); if(pe) pe.style.display = x===t?'':'none'; });
   if(t==='free' && !bankCache.length) loadBank();
   if(t==='prev') renderPaper();
-  if(t!=='free') document.getElementById('selBar').style.display = (PAPER.length && t!=='prev')?'flex':'none';
-  else document.getElementById('selBar').style.display = 'flex';
+  if(t==='exam') renderExam();
+  document.getElementById('selBar').style.display = (t==='free')?'flex':'none';
 }
 
 /* ---------- 模板组卷 ---------- */
@@ -261,7 +282,7 @@ async function genTemplate(kind){
   if(kind==='mid') pick = pickByType(all,{choice:12,vocab:8,cloze:1,grammar:1,reading:3,task:1,writing:1});
   else if(kind==='final') pick = all.slice();
   else if(kind==='mock') pick = pickByType(all,{choice:18,vocab:10,cloze:1,grammar:1,reading:4,task:1,writing:1});
-  PAPER = pick; KEYSHOWN=false;
+  PAPER = pick; KEYSHOWN=false; examReset();
   const names={mid:'期中考试卷',final:'期末考试卷',mock:'中考模拟卷'};
   const gname={7:'七年级',8:'八年级',9:'九年级'}[tplGrade];
   document.getElementById('paperTitle').value = gname+'英语'+names[kind];
@@ -278,7 +299,7 @@ async function genChapter(){
   if(r.s!==200){ alert('加载失败：'+(r.j.error||'请重新登录')); return; }
   const all=(r.j.questions||[]).filter(q=>q.book===b);
   if(!all.length){ alert('该分册暂无题目'); return; }
-  PAPER=all.slice(); KEYSHOWN=false;
+  PAPER=all.slice(); KEYSHOWN=false; examReset();
   const gname={7:'七年级',8:'八年级',9:'九年级'}[tplGrade];
   document.getElementById('paperTitle').value = gname+' '+b+' 章节练习卷';
   switchTab('prev');
@@ -337,11 +358,11 @@ function toggleSel(id){
   const i=PAPER.findIndex(x=>x.id===id);
   if(i>=0) PAPER.splice(i,1); else { const q=bankCache.find(x=>x.id===id); if(q) PAPER.push(q); }
   const el=document.getElementById('bk-'+id); if(el){ el.classList.toggle('on'); const c=el.querySelector('.chk'); if(c) c.checked=i<0; }
-  updateSelBar();
+  examReset(); updateSelBar();
 }
 function selectAllVisible(on){
   bankCache.forEach(q=>{ const ex=PAPER.find(x=>x.id===q.id); if(on&&!ex) PAPER.push(q); if(!on&&ex) PAPER=PAPER.filter(x=>x.id!==q.id); });
-  renderBank(); updateSelBar();
+  renderBank(); updateSelBar(); examReset();
 }
 function updateSelBar(){
   document.getElementById('selCount').textContent=PAPER.length;
@@ -349,7 +370,7 @@ function updateSelBar(){
   if(PAPER.length){ bar.style.display='flex'; document.getElementById('selHint').textContent='组卷预览中将按 单选→词汇→完形→语法→阅读→任务→写作 排版'; }
   else bar.style.display='none';
 }
-function clearPaper(){ PAPER=[]; KEYSHOWN=false; updateSelBar(); if(document.getElementById('p-free').style.display!=='none') renderBank(); if(document.getElementById('p-prev').style.display!=='none') renderPaper(); }
+function clearPaper(){ PAPER=[]; KEYSHOWN=false; examReset(); updateSelBar(); if(document.getElementById('p-free').style.display!=='none') renderBank(); if(document.getElementById('p-prev').style.display!=='none') renderPaper(); }
 
 /* ---------- 组卷预览 / 渲染 ---------- */
 function scoreOf(q){
@@ -447,6 +468,96 @@ function renderKey(){
 function toggleKey(){ KEYSHOWN=!KEYSHOWN; document.getElementById('keyBtn').textContent=KEYSHOWN?'🙈 隐藏答案':'👁️ 显示答案'; renderPaper(); }
 function printPaper(){ if(!PAPER.length){ alert('请先组卷'); return; } window.print(); }
 
+/* ---------- 在线作答 ---------- */
+let EXAM = { answers:{}, submitted:false, score:null };
+function examReset(){ EXAM = { answers:{}, submitted:false, score:null }; document.getElementById('examSubmit').style.display=''; document.getElementById('examRetry').style.display='none'; const er=document.getElementById('examResult'); if(er){ er.style.display='none'; er.innerHTML=''; } }
+function renderExam(){
+  const view=document.getElementById('examView'); const tools=document.getElementById('examTools');
+  if(!PAPER.length){ view.innerHTML='<div class="empty">尚未组卷。请先到「模板组卷」或「自由组卷」生成试卷，再来在线作答。</div>'; tools.style.display='none'; return; }
+  tools.style.display='';
+  const groups={}; TYPE_ORDER.forEach(t=>groups[t]=[]);
+  PAPER.forEach(q=>{ if(groups[q.type]) groups[q.type].push(q); });
+  let gNo=0; const parts=[];
+  TYPE_ORDER.forEach(t=>{
+    const items=groups[t]; if(!items.length) return; gNo++;
+    const secName='一、二、三、四、五、六、七'.split('、')[gNo-1];
+    parts.push('<div class="psec"><h3>'+secName+'、'+TYP[t]+'</h3>'+items.map(q=>examQ(q)).join('')+'</div>');
+  });
+  view.innerHTML=parts.join('');
+}
+function examQ(q){
+  const sub=EXAM.submitted; const dis=sub?'disabled':'';
+  if(q.type==='choice'){
+    const a=EXAM.answers[q.id];
+    const opts=q.options.map((o,i)=>{ let cls='opt'; let ck=(a===i)?'checked':''; if(sub){ if(i===q.answer) cls+=' right'; else if(a===i) cls+=' wrong'; } return '<label class="opt '+cls+'"><input type="radio" name="rd-'+q.id+'" value="'+i+'" '+ck+' '+dis+' onchange=\'EXAM.answers["'+q.id+'"]='+i+';\'> '+L(i)+'. '+esc(o)+'</label>'; }).join('');
+    return '<div class="q"><div class="stem">'+esc(q.stem)+'</div>'+opts+(sub?examFB_choice(q,a):'')+'</div>';
+  }
+  if(q.type==='vocab'){
+    const a=EXAM.answers[q.id]||'';
+    const inp='<input type="text" class="exam-inp" value="'+esc(a)+'" '+dis+' oninput=\'EXAM.answers["'+q.id+'"]=this.value;\'>';
+    return '<div class="q"><div class="stem">'+esc(q.stem)+'</div>'+(q.word?'<div class="given">所给词：'+esc(q.word)+'</div>':'')+inp+(sub?examFB_text(q.answer,a):'')+'</div>';
+  }
+  if(q.type==='cloze'||q.type==='grammar'){
+    const passage=(q.passage||'').replace(/\((\d+)\)___/g,(m,n)=>{ const k=q.id+'#'+n; const v=esc(EXAM.answers[k]||''); return '('+n+') <input type="text" class="exam-blank" value="'+v+'" '+dis+' oninput=\'EXAM.answers["'+k+'"]=this.value;\'>'; });
+    let fb='';
+    if(sub){ fb='<div class="ans">'+q.blanks.map((b,i)=>{ const k=q.id+'#'+(i+1); const a=EXAM.answers[k]||''; const correct=b.options[b.answer]; const r=(a.trim().toLowerCase()===(correct||'').trim().toLowerCase()); return '('+(i+1)+') '+(r?'✅':'❌')+' 正确答案：'+esc(correct)+'　解析：'+esc(b.analysis); }).join('<br>')+'</div>'; }
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+passage+'</div>'+fb+'</div>';
+  }
+  if(q.type==='reading'){
+    const qs=(q.questions||[]).map((sq,i)=>{ const k=q.id+'#'+(i+1); const a=EXAM.answers[k]; const opts=(sq.options||[]).map((o,j)=>{ let cls='opt'; let ck=(a===j)?'checked':''; if(sub){ if(j===sq.answer) cls+=' right'; else if(a===j) cls+=' wrong'; } return '<label class="opt '+cls+'"><input type="radio" name="rd-'+k+'" value="'+j+'" '+ck+' '+dis+' onchange=\'EXAM.answers["'+k+'"]='+j+';\'> '+L(j)+'. '+esc(o)+'</label>'; }).join(''); return '<div class="sub"><div class="sq">'+(i+1)+'. '+esc(sq.stem)+'</div>'+opts+(sub?examFB_choice(sq,a):'')+'</div>'; }).join('');
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+esc(q.passage)+'</div>'+qs+'</div>';
+  }
+  if(q.type==='task'){
+    const qs=(q.questions||[]).map((sq,i)=>{ const k=q.id+'#'+(i+1); const a=EXAM.answers[k]||''; const inp='<input type="text" class="exam-inp" value="'+esc(a)+'" '+dis+' oninput=\'EXAM.answers["'+k+'"]=this.value;\'>'; const fb=sub?'<div class="ans">参考答案：'+esc(sq.answer)+'　解析：'+esc(sq.analysis)+'（建议人工核对）</div>':''; return '<div class="sub"><div class="sq">'+(i+1)+'. '+esc(sq.stem)+'</div>'+inp+fb+'</div>'; }).join('');
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+esc(q.passage)+'</div>'+qs+'</div>';
+  }
+  if(q.type==='writing'){
+    const a=EXAM.answers[q.id]||'';
+    const ta='<textarea class="exam-ta" '+dis+' oninput=\'EXAM.answers["'+q.id+'"]=this.value;\'>'+esc(a)+'</textarea>';
+    const req=(q.requirements||[]).map(r=>'· '+esc(r)).join('<br>');
+    const pts=(q.points||[]).map(p=>'· '+esc(p)).join('<br>');
+    const fb=sub?'<div class="ans">参考范文：</div><div class="ana">'+esc(q.sample)+'</div>':'';
+    return '<div class="q"><div class="qh">'+esc(q.title||'书面表达')+'</div><div class="stem">'+esc(q.prompt)+'</div><div class="req" style="margin-top:8px"><b>要求：</b><br>'+req+'</div><div class="req"><b>要点：</b><br>'+pts+'</div><div class="req">词数：'+(q.wordLimit||'')+' 词左右</div>'+ta+fb+'</div>';
+  }
+  return '';
+}
+function examFB_choice(q,a){
+  if(a===undefined||a===null) return '<div class="q-tip">未作答。正确答案：'+L(q.answer)+'. '+esc(q.options[q.answer])+'　解析：'+esc(q.analysis)+'</div>';
+  const r=(a===q.answer);
+  return '<div class="q-tip" style="color:'+(r?'#1a9e5c':'#e23')+'">'+(r?'✅ 正确':'❌ 错误')+'　正确答案：'+L(q.answer)+'. '+esc(q.options[q.answer])+'　解析：'+esc(q.analysis)+'</div>';
+}
+function examFB_text(correct,a){
+  const ca=(a||'').trim().toLowerCase(); const cb=(correct||'').trim().toLowerCase();
+  if(!ca) return '<div class="q-tip">未作答。参考答案：'+esc(correct)+'</div>';
+  const r=(ca===cb);
+  return '<div class="q-tip" style="color:'+(r?'#1a9e5c':'#e23')+'">'+(r?'✅ 正确':'❌ 错误')+'　参考答案：'+esc(correct)+'</div>';
+}
+function submitExam(){
+  if(!PAPER.length) return;
+  EXAM.submitted=true;
+  let got=0, full=0;
+  PAPER.forEach(q=>{
+    if(q.type==='choice'){ full+=1; if(EXAM.answers[q.id]===q.answer) got+=1; }
+    else if(q.type==='vocab'){ full+=1; if((EXAM.answers[q.id]||'').trim().toLowerCase()===(q.answer||'').trim().toLowerCase()) got+=1; }
+    else if(q.type==='cloze'||q.type==='grammar'){ (q.blanks||[]).forEach((b,i)=>{ full+=1; const a=EXAM.answers[q.id+'#'+(i+1)]||''; if(a.trim().toLowerCase()===(b.options[b.answer]||'').trim().toLowerCase()) got+=1; }); }
+    else if(q.type==='reading'){ (q.questions||[]).forEach((sq,i)=>{ full+=1; if(EXAM.answers[q.id+'#'+(i+1)]===sq.answer) got+=1; }); }
+  });
+  EXAM.score={got,full};
+  renderExam();
+  const bar=document.getElementById('examResult'); bar.style.display='';
+  document.getElementById('examSubmit').style.display='none';
+  document.getElementById('examRetry').style.display='';
+  bar.innerHTML='<b>机评得分：'+got+' / '+full+'</b><span class="tip">（任务型阅读与书面表达为人工批改，不计入机评；点“重做”可重新答题）</span>';
+  window.scrollTo({top:0});
+}
+function resetExam(){
+  EXAM={answers:{},submitted:false,score:null};
+  document.getElementById('examSubmit').style.display='';
+  document.getElementById('examRetry').style.display='none';
+  document.getElementById('examResult').style.display='none';
+  renderExam();
+}
+
 /* ---------- 分享链接 ---------- */
 function makeShare(){
   if(!PAPER.length){ alert('请先组卷'); return; }
@@ -464,7 +575,7 @@ async function loadFromShare(b64){
     const obj=JSON.parse(decodeURIComponent(escape(atob(b64))));
     const r=await api('/api/junior-exam?ids='+obj.ids.join(','),{headers:H()});
     if(r.s!==200){ alert('分享试卷加载失败：'+(r.j.error||'')); loadBank(); return; }
-    PAPER=r.j.questions||[]; KEYSHOWN=false;
+    PAPER=r.j.questions||[]; KEYSHOWN=false; examReset();
     document.getElementById('paperTitle').value=obj.t||'初中英语测试卷';
     updateSelBar(); switchTab('prev');
   }catch(e){ alert('分享链接解析失败'); loadBank(); }
