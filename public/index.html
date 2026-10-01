@@ -129,6 +129,13 @@
       <div><span class="state" id="st-primary">加载中</span></div>
       <button class="go" id="go-primary" onclick="enterMod('primary')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-junior">
+      <div class="icon">🎒</div>
+      <div class="name">初中英语 · 课本同步</div>
+      <div class="desc">人教版 5 册 58 单元 · 课本同步训练 / 语法专题详解 / 单词听读背记</div>
+      <div><span class="state" id="st-junior">加载中</span></div>
+      <button class="go" id="go-junior" onclick="enterMod('junior')">进入模块</button>
+    </div>
     <div class="mod-card" id="mod-middle">
       <div class="icon">🎧</div>
       <div class="name">中考英语 · 听说专项</div>
@@ -157,7 +164,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元</div>
 </div>
 
 <script>
@@ -183,6 +190,7 @@ const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TO
 const MODINFO = {
   kids:    { url: './kids.html', name: '幼儿启蒙英语 · 听读背记' },
   primary: { url: './words.html', name: '小学英语 · 听读背记' },
+  junior:  { url: './junior.html', name: '初中英语 · 课本同步' },
   middle:  { url: './quiz.html',  name: '中考英语 · 听说专项' },
   gk:      { url: './gaokao.html', name: '高考英语 · 三问五答' },
   math:    { url: './math.html',  name: '数学 · 思维训练' },
@@ -214,14 +222,14 @@ async function login() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, middle: 1, gk: 1, math: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
 
 function renderMod(m, el) {
   const st = $('st-' + m), go = $('go-' + m);
-  const locked = !MODS[m];
+  const locked = !(m in MODS ? MODS[m] : MODS.primary);   // junior 随 primary 授权
   if (locked) {
     st.className = 'state trial'; st.textContent = TOKEN ? '未授权此模块 · 可体验' : '登录后可用';
     go.className = 'go off'; go.textContent = TOKEN ? '🔒 未解锁' : '登录后进入';
@@ -256,7 +264,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'middle', 'gk', 'math'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {
