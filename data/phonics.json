@@ -1,0 +1,3109 @@
+{
+  "product": "小学英语自然拼读专项",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "5 级 42 条规则 × 4 示例词；audio 为规则/单词发音（英音女声）；quiz 每规则 3 题（听音选词/找规律词/听音写词）",
+  "levels": [
+    {
+      "id": "p1",
+      "name": "第一级 · 短元音（CVC）",
+      "desc": "26 个字母音打底后，先学 5 个短元音：a e i o u，见词能拼 cat、dog 这类 CVC 单词。",
+      "rules": [
+        {
+          "id": "p101",
+          "rule": "a",
+          "sound": "/æ/",
+          "cn": "字母 a 在 cat 中发短音 /æ/",
+          "tip": "嘴巴张大、短促有力，像中文的“哎”但更短。",
+          "audio": "/audio/ph/p101.mp3",
+          "words": [
+            {
+              "id": "p101w1",
+              "word": "cat",
+              "phonetic": "/kæt/",
+              "meaning": "猫",
+              "audio": "/audio/ph/p101w1.mp3"
+            },
+            {
+              "id": "p101w2",
+              "word": "bat",
+              "phonetic": "/bæt/",
+              "meaning": "蝙蝠",
+              "audio": "/audio/ph/p101w2.mp3"
+            },
+            {
+              "id": "p101w3",
+              "word": "hat",
+              "phonetic": "/hæt/",
+              "meaning": "帽子",
+              "audio": "/audio/ph/p101w3.mp3"
+            },
+            {
+              "id": "p101w4",
+              "word": "map",
+              "phonetic": "/mæp/",
+              "meaning": "地图",
+              "audio": "/audio/ph/p101w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p101w1.mp3",
+              "options": [
+                "cat",
+                "bat",
+                "hat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/æ/",
+              "options": [
+                "cat",
+                "cup",
+                "cake"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p101w2.mp3",
+              "answer": "bat",
+              "tip": "按音节拆分拼写：bat → b · a · t",
+              "phonetic": "/bæt/"
+            }
+          ]
+        },
+        {
+          "id": "p102",
+          "rule": "e",
+          "sound": "/e/",
+          "cn": "字母 e 在 bed 中发短音 /e/",
+          "tip": "嘴唇微扁、声音短，像“诶”的短促版。",
+          "audio": "/audio/ph/p102.mp3",
+          "words": [
+            {
+              "id": "p102w1",
+              "word": "bed",
+              "phonetic": "/bed/",
+              "meaning": "床",
+              "audio": "/audio/ph/p102w1.mp3"
+            },
+            {
+              "id": "p102w2",
+              "word": "pen",
+              "phonetic": "/pen/",
+              "meaning": "钢笔",
+              "audio": "/audio/ph/p102w2.mp3"
+            },
+            {
+              "id": "p102w3",
+              "word": "hen",
+              "phonetic": "/hen/",
+              "meaning": "母鸡",
+              "audio": "/audio/ph/p102w3.mp3"
+            },
+            {
+              "id": "p102w4",
+              "word": "red",
+              "phonetic": "/red/",
+              "meaning": "红色的",
+              "audio": "/audio/ph/p102w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p102w1.mp3",
+              "options": [
+                "bed",
+                "pen",
+                "hen",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/e/",
+              "options": [
+                "bed",
+                "bat",
+                "big"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p102w2.mp3",
+              "answer": "pen",
+              "tip": "按音节拆分拼写：pen → p · e · n",
+              "phonetic": "/pen/"
+            }
+          ]
+        },
+        {
+          "id": "p103",
+          "rule": "i",
+          "sound": "/ɪ/",
+          "cn": "字母 i 在 pig 中发短音 /ɪ/",
+          "tip": "比 /e/ 更放松，像“一”但嘴形放松。",
+          "audio": "/audio/ph/p103.mp3",
+          "words": [
+            {
+              "id": "p103w1",
+              "word": "pig",
+              "phonetic": "/pɪɡ/",
+              "meaning": "猪",
+              "audio": "/audio/ph/p103w1.mp3"
+            },
+            {
+              "id": "p103w2",
+              "word": "six",
+              "phonetic": "/sɪks/",
+              "meaning": "六",
+              "audio": "/audio/ph/p103w2.mp3"
+            },
+            {
+              "id": "p103w3",
+              "word": "fish",
+              "phonetic": "/fɪʃ/",
+              "meaning": "鱼",
+              "audio": "/audio/ph/p103w3.mp3"
+            },
+            {
+              "id": "p103w4",
+              "word": "big",
+              "phonetic": "/bɪɡ/",
+              "meaning": "大的",
+              "audio": "/audio/ph/p103w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p103w1.mp3",
+              "options": [
+                "pig",
+                "six",
+                "fish",
+                "pen"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɪ/",
+              "options": [
+                "pig",
+                "pen",
+                "plane"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p103w2.mp3",
+              "answer": "six",
+              "tip": "按音节拆分拼写：six → s · i · x",
+              "phonetic": "/sɪks/"
+            }
+          ]
+        },
+        {
+          "id": "p104",
+          "rule": "o",
+          "sound": "/ɒ/",
+          "cn": "字母 o 在 dog 中发短音 /ɒ/",
+          "tip": "嘴巴圆、声音低沉，像“哦”的短促版。",
+          "audio": "/audio/ph/p104.mp3",
+          "words": [
+            {
+              "id": "p104w1",
+              "word": "dog",
+              "phonetic": "/dɒɡ/",
+              "meaning": "狗",
+              "audio": "/audio/ph/p104w1.mp3"
+            },
+            {
+              "id": "p104w2",
+              "word": "box",
+              "phonetic": "/bɒks/",
+              "meaning": "盒子",
+              "audio": "/audio/ph/p104w2.mp3"
+            },
+            {
+              "id": "p104w3",
+              "word": "hot",
+              "phonetic": "/hɒt/",
+              "meaning": "热的",
+              "audio": "/audio/ph/p104w3.mp3"
+            },
+            {
+              "id": "p104w4",
+              "word": "frog",
+              "phonetic": "/frɒɡ/",
+              "meaning": "青蛙",
+              "audio": "/audio/ph/p104w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p104w1.mp3",
+              "options": [
+                "dog",
+                "box",
+                "hot",
+                "duck"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɒ/",
+              "options": [
+                "dog",
+                "duck",
+                "day"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p104w2.mp3",
+              "answer": "box",
+              "tip": "按音节拆分拼写：box → b · o · x",
+              "phonetic": "/bɒks/"
+            }
+          ]
+        },
+        {
+          "id": "p105",
+          "rule": "u",
+          "sound": "/ʌ/",
+          "cn": "字母 u 在 bus 中发短音 /ʌ/",
+          "tip": "嘴巴半开、放松，像“啊”的短促版。",
+          "audio": "/audio/ph/p105.mp3",
+          "words": [
+            {
+              "id": "p105w1",
+              "word": "bus",
+              "phonetic": "/bʌs/",
+              "meaning": "公共汽车",
+              "audio": "/audio/ph/p105w1.mp3"
+            },
+            {
+              "id": "p105w2",
+              "word": "cup",
+              "phonetic": "/kʌp/",
+              "meaning": "杯子",
+              "audio": "/audio/ph/p105w2.mp3"
+            },
+            {
+              "id": "p105w3",
+              "word": "sun",
+              "phonetic": "/sʌn/",
+              "meaning": "太阳",
+              "audio": "/audio/ph/p105w3.mp3"
+            },
+            {
+              "id": "p105w4",
+              "word": "duck",
+              "phonetic": "/dʌk/",
+              "meaning": "鸭子",
+              "audio": "/audio/ph/p105w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p105w1.mp3",
+              "options": [
+                "bus",
+                "cup",
+                "sun",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ʌ/",
+              "options": [
+                "bus",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p105w2.mp3",
+              "answer": "cup",
+              "tip": "按音节拆分拼写：cup → c · u · p",
+              "phonetic": "/kʌp/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "第二级 · 长元音（Magic e 与元音组合）",
+      "desc": "学完短元音后进阶长元音：末尾加 e 让元音“念自己的名字”，以及常见元音组合。",
+      "rules": [
+        {
+          "id": "p201",
+          "rule": "a_e",
+          "sound": "/eɪ/",
+          "cn": "a_e（如 cake）：末尾 e 让 a 发字母音 /eɪ/",
+          "tip": "先读 a 的字母音，再读辅音：c-a-k-e → /keɪk/。",
+          "audio": "/audio/ph/p201.mp3",
+          "words": [
+            {
+              "id": "p201w1",
+              "word": "cake",
+              "phonetic": "/keɪk/",
+              "meaning": "蛋糕",
+              "audio": "/audio/ph/p201w1.mp3"
+            },
+            {
+              "id": "p201w2",
+              "word": "lake",
+              "phonetic": "/leɪk/",
+              "meaning": "湖",
+              "audio": "/audio/ph/p201w2.mp3"
+            },
+            {
+              "id": "p201w3",
+              "word": "name",
+              "phonetic": "/neɪm/",
+              "meaning": "名字",
+              "audio": "/audio/ph/p201w3.mp3"
+            },
+            {
+              "id": "p201w4",
+              "word": "plane",
+              "phonetic": "/pleɪn/",
+              "meaning": "飞机",
+              "audio": "/audio/ph/p201w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p201w1.mp3",
+              "options": [
+                "cake",
+                "lake",
+                "name",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/eɪ/",
+              "options": [
+                "cake",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p201w2.mp3",
+              "answer": "lake",
+              "tip": "按音节拆分拼写：lake → l · a · k · e",
+              "phonetic": "/leɪk/"
+            }
+          ]
+        },
+        {
+          "id": "p202",
+          "rule": "i_e",
+          "sound": "/aɪ/",
+          "cn": "i_e（如 five）：末尾 e 让 i 发字母音 /aɪ/",
+          "tip": "i 念自己的名字“爱”：f-i-v-e → /faɪv/。",
+          "audio": "/audio/ph/p202.mp3",
+          "words": [
+            {
+              "id": "p202w1",
+              "word": "five",
+              "phonetic": "/faɪv/",
+              "meaning": "五",
+              "audio": "/audio/ph/p202w1.mp3"
+            },
+            {
+              "id": "p202w2",
+              "word": "nine",
+              "phonetic": "/naɪn/",
+              "meaning": "九",
+              "audio": "/audio/ph/p202w2.mp3"
+            },
+            {
+              "id": "p202w3",
+              "word": "kite",
+              "phonetic": "/kaɪt/",
+              "meaning": "风筝",
+              "audio": "/audio/ph/p202w3.mp3"
+            },
+            {
+              "id": "p202w4",
+              "word": "rice",
+              "phonetic": "/raɪs/",
+              "meaning": "米饭",
+              "audio": "/audio/ph/p202w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p202w1.mp3",
+              "options": [
+                "five",
+                "nine",
+                "kite",
+                "fish"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/aɪ/",
+              "options": [
+                "five",
+                "fish",
+                "frog"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p202w2.mp3",
+              "answer": "nine",
+              "tip": "按音节拆分拼写：nine → n · i · n · e",
+              "phonetic": "/naɪn/"
+            }
+          ]
+        },
+        {
+          "id": "p203",
+          "rule": "o_e",
+          "sound": "/əʊ/",
+          "cn": "o_e（如 home）：末尾 e 让 o 发字母音 /əʊ/",
+          "tip": "o 念自己的名字，口型从圆到扁：h-o-m-e。",
+          "audio": "/audio/ph/p203.mp3",
+          "words": [
+            {
+              "id": "p203w1",
+              "word": "home",
+              "phonetic": "/həʊm/",
+              "meaning": "家",
+              "audio": "/audio/ph/p203w1.mp3"
+            },
+            {
+              "id": "p203w2",
+              "word": "nose",
+              "phonetic": "/nəʊz/",
+              "meaning": "鼻子",
+              "audio": "/audio/ph/p203w2.mp3"
+            },
+            {
+              "id": "p203w3",
+              "word": "rose",
+              "phonetic": "/rəʊz/",
+              "meaning": "玫瑰",
+              "audio": "/audio/ph/p203w3.mp3"
+            },
+            {
+              "id": "p203w4",
+              "word": "stone",
+              "phonetic": "/stəʊn/",
+              "meaning": "石头",
+              "audio": "/audio/ph/p203w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p203w1.mp3",
+              "options": [
+                "home",
+                "nose",
+                "rose",
+                "hat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/əʊ/",
+              "options": [
+                "home",
+                "hat",
+                "hen"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p203w2.mp3",
+              "answer": "nose",
+              "tip": "按音节拆分拼写：nose → n · o · s · e",
+              "phonetic": "/nəʊz/"
+            }
+          ]
+        },
+        {
+          "id": "p204",
+          "rule": "u_e",
+          "sound": "/juː/",
+          "cn": "u_e（如 cute）：末尾 e 让 u 发字母音 /juː/",
+          "tip": "先读“you”再读辅音：c-u-t-e → /kjuːt/。",
+          "audio": "/audio/ph/p204.mp3",
+          "words": [
+            {
+              "id": "p204w1",
+              "word": "cute",
+              "phonetic": "/kjuːt/",
+              "meaning": "可爱的",
+              "audio": "/audio/ph/p204w1.mp3"
+            },
+            {
+              "id": "p204w2",
+              "word": "cube",
+              "phonetic": "/kjuːb/",
+              "meaning": "立方体",
+              "audio": "/audio/ph/p204w2.mp3"
+            },
+            {
+              "id": "p204w3",
+              "word": "mule",
+              "phonetic": "/mjuːl/",
+              "meaning": "骡子",
+              "audio": "/audio/ph/p204w3.mp3"
+            },
+            {
+              "id": "p204w4",
+              "word": "tube",
+              "phonetic": "/tjuːb/",
+              "meaning": "管子",
+              "audio": "/audio/ph/p204w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p204w1.mp3",
+              "options": [
+                "cute",
+                "cube",
+                "mule",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/juː/",
+              "options": [
+                "cute",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p204w2.mp3",
+              "answer": "cube",
+              "tip": "按音节拆分拼写：cube → c · u · b · e",
+              "phonetic": "/kjuːb/"
+            }
+          ]
+        },
+        {
+          "id": "p205",
+          "rule": "ee/ea",
+          "sound": "/iː/",
+          "cn": "ee 与 ea 都发长音 /iː/（如 see、tea）",
+          "tip": "嘴唇向两边微笑，声音拉长：s-ee → /siː/。",
+          "audio": "/audio/ph/p205.mp3",
+          "words": [
+            {
+              "id": "p205w1",
+              "word": "see",
+              "phonetic": "/siː/",
+              "meaning": "看见",
+              "audio": "/audio/ph/p205w1.mp3"
+            },
+            {
+              "id": "p205w2",
+              "word": "green",
+              "phonetic": "/ɡriːn/",
+              "meaning": "绿色的",
+              "audio": "/audio/ph/p205w2.mp3"
+            },
+            {
+              "id": "p205w3",
+              "word": "tea",
+              "phonetic": "/tiː/",
+              "meaning": "茶",
+              "audio": "/audio/ph/p205w3.mp3"
+            },
+            {
+              "id": "p205w4",
+              "word": "sea",
+              "phonetic": "/siː/",
+              "meaning": "大海",
+              "audio": "/audio/ph/p205w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p205w1.mp3",
+              "options": [
+                "see",
+                "green",
+                "tea",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/iː/",
+              "options": [
+                "see",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p205w2.mp3",
+              "answer": "green",
+              "tip": "按音节拆分拼写：green → g · r · e · e · n",
+              "phonetic": "/ɡriːn/"
+            }
+          ]
+        },
+        {
+          "id": "p206",
+          "rule": "ai/ay",
+          "sound": "/eɪ/",
+          "cn": "ai 与 ay 都发 /eɪ/（如 rain、day）",
+          "tip": "和 a_e 同音，多在词中写 ai、词尾写 ay。",
+          "audio": "/audio/ph/p206.mp3",
+          "words": [
+            {
+              "id": "p206w1",
+              "word": "rain",
+              "phonetic": "/reɪn/",
+              "meaning": "雨",
+              "audio": "/audio/ph/p206w1.mp3"
+            },
+            {
+              "id": "p206w2",
+              "word": "train",
+              "phonetic": "/treɪn/",
+              "meaning": "火车",
+              "audio": "/audio/ph/p206w2.mp3"
+            },
+            {
+              "id": "p206w3",
+              "word": "day",
+              "phonetic": "/deɪ/",
+              "meaning": "白天",
+              "audio": "/audio/ph/p206w3.mp3"
+            },
+            {
+              "id": "p206w4",
+              "word": "play",
+              "phonetic": "/pleɪ/",
+              "meaning": "玩",
+              "audio": "/audio/ph/p206w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p206w1.mp3",
+              "options": [
+                "rain",
+                "train",
+                "day",
+                "red"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/eɪ/",
+              "options": [
+                "rain",
+                "red",
+                "rice"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p206w2.mp3",
+              "answer": "train",
+              "tip": "按音节拆分拼写：train → t · r · a · i · n",
+              "phonetic": "/treɪn/"
+            }
+          ]
+        },
+        {
+          "id": "p207",
+          "rule": "oa/ow",
+          "sound": "/əʊ/",
+          "cn": "oa 与 ow 都发 /əʊ/（如 boat、snow）",
+          "tip": "和 o_e 同音：b-oa-t → /bəʊt/。",
+          "audio": "/audio/ph/p207.mp3",
+          "words": [
+            {
+              "id": "p207w1",
+              "word": "boat",
+              "phonetic": "/bəʊt/",
+              "meaning": "小船",
+              "audio": "/audio/ph/p207w1.mp3"
+            },
+            {
+              "id": "p207w2",
+              "word": "coat",
+              "phonetic": "/kəʊt/",
+              "meaning": "外套",
+              "audio": "/audio/ph/p207w2.mp3"
+            },
+            {
+              "id": "p207w3",
+              "word": "snow",
+              "phonetic": "/snəʊ/",
+              "meaning": "雪",
+              "audio": "/audio/ph/p207w3.mp3"
+            },
+            {
+              "id": "p207w4",
+              "word": "bowl",
+              "phonetic": "/bəʊl/",
+              "meaning": "碗",
+              "audio": "/audio/ph/p207w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p207w1.mp3",
+              "options": [
+                "boat",
+                "coat",
+                "snow",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/əʊ/",
+              "options": [
+                "boat",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p207w2.mp3",
+              "answer": "coat",
+              "tip": "按音节拆分拼写：coat → c · o · a · t",
+              "phonetic": "/kəʊt/"
+            }
+          ]
+        },
+        {
+          "id": "p208",
+          "rule": "igh/ie",
+          "sound": "/aɪ/",
+          "cn": "igh 与 ie 都发 /aɪ/（如 light、pie）",
+          "tip": "和 i_e 同音：l-igh-t → /laɪt/。",
+          "audio": "/audio/ph/p208.mp3",
+          "words": [
+            {
+              "id": "p208w1",
+              "word": "light",
+              "phonetic": "/laɪt/",
+              "meaning": "灯",
+              "audio": "/audio/ph/p208w1.mp3"
+            },
+            {
+              "id": "p208w2",
+              "word": "night",
+              "phonetic": "/naɪt/",
+              "meaning": "夜晚",
+              "audio": "/audio/ph/p208w2.mp3"
+            },
+            {
+              "id": "p208w3",
+              "word": "high",
+              "phonetic": "/haɪ/",
+              "meaning": "高的",
+              "audio": "/audio/ph/p208w3.mp3"
+            },
+            {
+              "id": "p208w4",
+              "word": "pie",
+              "phonetic": "/paɪ/",
+              "meaning": "馅饼",
+              "audio": "/audio/ph/p208w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p208w1.mp3",
+              "options": [
+                "light",
+                "night",
+                "high",
+                "lake"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/aɪ/",
+              "options": [
+                "light",
+                "lake",
+                "lunch"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p208w2.mp3",
+              "answer": "night",
+              "tip": "按音节拆分拼写：night → n · i · g · h · t",
+              "phonetic": "/naɪt/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "第三级 · 辅音组合",
+      "desc": "两个字母组合发一个新音（sh、ch、th 等），以及常见“双辅音”开头（bl、br、fl、fr…）。",
+      "rules": [
+        {
+          "id": "p301",
+          "rule": "sh",
+          "sound": "/ʃ/",
+          "cn": "sh 发 /ʃ/，像“嘘”（如 ship）",
+          "tip": "嘴唇向前突出，轻轻吹气。",
+          "audio": "/audio/ph/p301.mp3",
+          "words": [
+            {
+              "id": "p301w1",
+              "word": "ship",
+              "phonetic": "/ʃɪp/",
+              "meaning": "轮船",
+              "audio": "/audio/ph/p301w1.mp3"
+            },
+            {
+              "id": "p301w2",
+              "word": "fish",
+              "phonetic": "/fɪʃ/",
+              "meaning": "鱼",
+              "audio": "/audio/ph/p301w2.mp3"
+            },
+            {
+              "id": "p301w3",
+              "word": "sheep",
+              "phonetic": "/ʃiːp/",
+              "meaning": "绵羊",
+              "audio": "/audio/ph/p301w3.mp3"
+            },
+            {
+              "id": "p301w4",
+              "word": "shop",
+              "phonetic": "/ʃɒp/",
+              "meaning": "商店",
+              "audio": "/audio/ph/p301w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p301w1.mp3",
+              "options": [
+                "ship",
+                "fish",
+                "sheep",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ʃ/",
+              "options": [
+                "ship",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p301w2.mp3",
+              "answer": "fish",
+              "tip": "按音节拆分拼写：fish → f · i · s · h",
+              "phonetic": "/fɪʃ/"
+            }
+          ]
+        },
+        {
+          "id": "p302",
+          "rule": "ch",
+          "sound": "/tʃ/",
+          "cn": "ch 发 /tʃ/，像“吃”的轻读（如 chair）",
+          "tip": "先做 /t/ 的口型再快速接 /ʃ/。",
+          "audio": "/audio/ph/p302.mp3",
+          "words": [
+            {
+              "id": "p302w1",
+              "word": "chair",
+              "phonetic": "/tʃeə(r)/",
+              "meaning": "椅子",
+              "audio": "/audio/ph/p302w1.mp3"
+            },
+            {
+              "id": "p302w2",
+              "word": "chicken",
+              "phonetic": "/ˈtʃɪkɪn/",
+              "meaning": "鸡肉",
+              "audio": "/audio/ph/p302w2.mp3"
+            },
+            {
+              "id": "p302w3",
+              "word": "lunch",
+              "phonetic": "/lʌntʃ/",
+              "meaning": "午餐",
+              "audio": "/audio/ph/p302w3.mp3"
+            },
+            {
+              "id": "p302w4",
+              "word": "chat",
+              "phonetic": "/tʃæt/",
+              "meaning": "聊天",
+              "audio": "/audio/ph/p302w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p302w1.mp3",
+              "options": [
+                "chair",
+                "chicken",
+                "lunch",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/tʃ/",
+              "options": [
+                "chair",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p302w2.mp3",
+              "answer": "chicken",
+              "tip": "按音节拆分拼写：chicken → c · h · i · c · k · e · n",
+              "phonetic": "/ˈtʃɪkɪn/"
+            }
+          ]
+        },
+        {
+          "id": "p303",
+          "rule": "th",
+          "sound": "/θ/ 或 /ð/",
+          "cn": "th 发 /θ/（three）或 /ð/（this），舌尖轻咬",
+          "tip": "舌尖放在上下牙之间，轻轻送气。",
+          "audio": "/audio/ph/p303.mp3",
+          "words": [
+            {
+              "id": "p303w1",
+              "word": "three",
+              "phonetic": "/θriː/",
+              "meaning": "三",
+              "audio": "/audio/ph/p303w1.mp3"
+            },
+            {
+              "id": "p303w2",
+              "word": "thin",
+              "phonetic": "/θɪn/",
+              "meaning": "瘦的",
+              "audio": "/audio/ph/p303w2.mp3"
+            },
+            {
+              "id": "p303w3",
+              "word": "this",
+              "phonetic": "/ðɪs/",
+              "meaning": "这个",
+              "audio": "/audio/ph/p303w3.mp3"
+            },
+            {
+              "id": "p303w4",
+              "word": "mother",
+              "phonetic": "/ˈmʌðə(r)/",
+              "meaning": "母亲",
+              "audio": "/audio/ph/p303w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p303w1.mp3",
+              "options": [
+                "three",
+                "thin",
+                "this",
+                "tube"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/θ/ 或 /ð/",
+              "options": [
+                "three",
+                "tube",
+                "tea"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p303w2.mp3",
+              "answer": "thin",
+              "tip": "按音节拆分拼写：thin → t · h · i · n",
+              "phonetic": "/θɪn/"
+            }
+          ]
+        },
+        {
+          "id": "p304",
+          "rule": "wh",
+          "sound": "/w/",
+          "cn": "wh 发 /w/（如 white），口型收圆",
+          "tip": "像中文“哇”的开头，嘴唇收圆。",
+          "audio": "/audio/ph/p304.mp3",
+          "words": [
+            {
+              "id": "p304w1",
+              "word": "white",
+              "phonetic": "/waɪt/",
+              "meaning": "白色的",
+              "audio": "/audio/ph/p304w1.mp3"
+            },
+            {
+              "id": "p304w2",
+              "word": "where",
+              "phonetic": "/weə(r)/",
+              "meaning": "哪里",
+              "audio": "/audio/ph/p304w2.mp3"
+            },
+            {
+              "id": "p304w3",
+              "word": "what",
+              "phonetic": "/wɒt/",
+              "meaning": "什么",
+              "audio": "/audio/ph/p304w3.mp3"
+            },
+            {
+              "id": "p304w4",
+              "word": "wheel",
+              "phonetic": "/wiːl/",
+              "meaning": "轮子",
+              "audio": "/audio/ph/p304w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p304w1.mp3",
+              "options": [
+                "white",
+                "where",
+                "what",
+                "write"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/w/",
+              "options": [
+                "white",
+                "write",
+                "wrist"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p304w2.mp3",
+              "answer": "where",
+              "tip": "按音节拆分拼写：where → w · h · e · r · e",
+              "phonetic": "/weə(r)/"
+            }
+          ]
+        },
+        {
+          "id": "p305",
+          "rule": "ph",
+          "sound": "/f/",
+          "cn": "ph 发 /f/（如 phone），希腊语来源",
+          "tip": "看到 ph 就读 /f/：ph-one → phone。",
+          "audio": "/audio/ph/p305.mp3",
+          "words": [
+            {
+              "id": "p305w1",
+              "word": "phone",
+              "phonetic": "/fəʊn/",
+              "meaning": "电话",
+              "audio": "/audio/ph/p305w1.mp3"
+            },
+            {
+              "id": "p305w2",
+              "word": "photo",
+              "phonetic": "/ˈfəʊtəʊ/",
+              "meaning": "照片",
+              "audio": "/audio/ph/p305w2.mp3"
+            },
+            {
+              "id": "p305w3",
+              "word": "elephant",
+              "phonetic": "/ˈelɪfənt/",
+              "meaning": "大象",
+              "audio": "/audio/ph/p305w3.mp3"
+            },
+            {
+              "id": "p305w4",
+              "word": "dolphin",
+              "phonetic": "/ˈdɒlfɪn/",
+              "meaning": "海豚",
+              "audio": "/audio/ph/p305w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p305w1.mp3",
+              "options": [
+                "phone",
+                "photo",
+                "elephant",
+                "pen"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/f/",
+              "options": [
+                "phone",
+                "pen",
+                "pig"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p305w2.mp3",
+              "answer": "photo",
+              "tip": "按音节拆分拼写：photo → p · h · o · t · o",
+              "phonetic": "/ˈfəʊtəʊ/"
+            }
+          ]
+        },
+        {
+          "id": "p306",
+          "rule": "ck",
+          "sound": "/k/",
+          "cn": "ck 发 /k/，跟在短元音后（如 duck）",
+          "tip": "词尾短元音后常写 ck：du-ck。",
+          "audio": "/audio/ph/p306.mp3",
+          "words": [
+            {
+              "id": "p306w1",
+              "word": "duck",
+              "phonetic": "/dʌk/",
+              "meaning": "鸭子",
+              "audio": "/audio/ph/p306w1.mp3"
+            },
+            {
+              "id": "p306w2",
+              "word": "sock",
+              "phonetic": "/sɒk/",
+              "meaning": "袜子",
+              "audio": "/audio/ph/p306w2.mp3"
+            },
+            {
+              "id": "p306w3",
+              "word": "clock",
+              "phonetic": "/klɒk/",
+              "meaning": "钟",
+              "audio": "/audio/ph/p306w3.mp3"
+            },
+            {
+              "id": "p306w4",
+              "word": "black",
+              "phonetic": "/blæk/",
+              "meaning": "黑色的",
+              "audio": "/audio/ph/p306w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p306w1.mp3",
+              "options": [
+                "duck",
+                "sock",
+                "clock",
+                "dog"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/k/",
+              "options": [
+                "duck",
+                "dog",
+                "day"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p306w2.mp3",
+              "answer": "sock",
+              "tip": "按音节拆分拼写：sock → s · o · c · k",
+              "phonetic": "/sɒk/"
+            }
+          ]
+        },
+        {
+          "id": "p307",
+          "rule": "ng",
+          "sound": "/ŋ/",
+          "cn": "ng 发 /ŋ/，舌根堵住气流（如 sing）",
+          "tip": "像“嗯”的后半段，声音从鼻腔出。",
+          "audio": "/audio/ph/p307.mp3",
+          "words": [
+            {
+              "id": "p307w1",
+              "word": "sing",
+              "phonetic": "/sɪŋ/",
+              "meaning": "唱歌",
+              "audio": "/audio/ph/p307w1.mp3"
+            },
+            {
+              "id": "p307w2",
+              "word": "ring",
+              "phonetic": "/rɪŋ/",
+              "meaning": "戒指",
+              "audio": "/audio/ph/p307w2.mp3"
+            },
+            {
+              "id": "p307w3",
+              "word": "long",
+              "phonetic": "/lɒŋ/",
+              "meaning": "长的",
+              "audio": "/audio/ph/p307w3.mp3"
+            },
+            {
+              "id": "p307w4",
+              "word": "king",
+              "phonetic": "/kɪŋ/",
+              "meaning": "国王",
+              "audio": "/audio/ph/p307w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p307w1.mp3",
+              "options": [
+                "sing",
+                "ring",
+                "long",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ŋ/",
+              "options": [
+                "sing",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p307w2.mp3",
+              "answer": "ring",
+              "tip": "按音节拆分拼写：ring → r · i · n · g",
+              "phonetic": "/rɪŋ/"
+            }
+          ]
+        },
+        {
+          "id": "p308",
+          "rule": "bl/br",
+          "sound": "/bl/ /br/",
+          "cn": "b 快速接 l 或 r（如 blue、bread）",
+          "tip": "两个音连读，不要停顿。",
+          "audio": "/audio/ph/p308.mp3",
+          "words": [
+            {
+              "id": "p308w1",
+              "word": "blue",
+              "phonetic": "/bluː/",
+              "meaning": "蓝色的",
+              "audio": "/audio/ph/p308w1.mp3"
+            },
+            {
+              "id": "p308w2",
+              "word": "black",
+              "phonetic": "/blæk/",
+              "meaning": "黑色的",
+              "audio": "/audio/ph/p308w2.mp3"
+            },
+            {
+              "id": "p308w3",
+              "word": "bread",
+              "phonetic": "/bred/",
+              "meaning": "面包",
+              "audio": "/audio/ph/p308w3.mp3"
+            },
+            {
+              "id": "p308w4",
+              "word": "bridge",
+              "phonetic": "/brɪdʒ/",
+              "meaning": "桥",
+              "audio": "/audio/ph/p308w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p308w1.mp3",
+              "options": [
+                "blue",
+                "black",
+                "bread",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/bl/ /br/",
+              "options": [
+                "blue",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p308w2.mp3",
+              "answer": "black",
+              "tip": "按音节拆分拼写：black → b · l · a · c · k",
+              "phonetic": "/blæk/"
+            }
+          ]
+        },
+        {
+          "id": "p309",
+          "rule": "fl/fr",
+          "sound": "/fl/ /fr/",
+          "cn": "f 快速接 l 或 r（如 flag、frog）",
+          "tip": "先摆好 /f/ 的口型，快速滑向 l/r。",
+          "audio": "/audio/ph/p309.mp3",
+          "words": [
+            {
+              "id": "p309w1",
+              "word": "flag",
+              "phonetic": "/flæɡ/",
+              "meaning": "旗子",
+              "audio": "/audio/ph/p309w1.mp3"
+            },
+            {
+              "id": "p309w2",
+              "word": "flower",
+              "phonetic": "/ˈflaʊə(r)/",
+              "meaning": "花",
+              "audio": "/audio/ph/p309w2.mp3"
+            },
+            {
+              "id": "p309w3",
+              "word": "frog",
+              "phonetic": "/frɒɡ/",
+              "meaning": "青蛙",
+              "audio": "/audio/ph/p309w3.mp3"
+            },
+            {
+              "id": "p309w4",
+              "word": "fruit",
+              "phonetic": "/fruːt/",
+              "meaning": "水果",
+              "audio": "/audio/ph/p309w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p309w1.mp3",
+              "options": [
+                "flag",
+                "flower",
+                "frog",
+                "fish"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/fl/ /fr/",
+              "options": [
+                "flag",
+                "fish",
+                "five"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p309w2.mp3",
+              "answer": "flower",
+              "tip": "按音节拆分拼写：flower → f · l · o · w · e · r",
+              "phonetic": "/ˈflaʊə(r)/"
+            }
+          ]
+        },
+        {
+          "id": "p310",
+          "rule": "pl/pr",
+          "sound": "/pl/ /pr/",
+          "cn": "p 快速接 l 或 r（如 plane、prize）",
+          "tip": "注意 p 后不夹带“呃”音。",
+          "audio": "/audio/ph/p310.mp3",
+          "words": [
+            {
+              "id": "p310w1",
+              "word": "plane",
+              "phonetic": "/pleɪn/",
+              "meaning": "飞机",
+              "audio": "/audio/ph/p310w1.mp3"
+            },
+            {
+              "id": "p310w2",
+              "word": "plate",
+              "phonetic": "/pleɪt/",
+              "meaning": "盘子",
+              "audio": "/audio/ph/p310w2.mp3"
+            },
+            {
+              "id": "p310w3",
+              "word": "prize",
+              "phonetic": "/praɪz/",
+              "meaning": "奖品",
+              "audio": "/audio/ph/p310w3.mp3"
+            },
+            {
+              "id": "p310w4",
+              "word": "pretty",
+              "phonetic": "/ˈprɪti/",
+              "meaning": "漂亮的",
+              "audio": "/audio/ph/p310w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p310w1.mp3",
+              "options": [
+                "plane",
+                "plate",
+                "prize",
+                "pen"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/pl/ /pr/",
+              "options": [
+                "plane",
+                "pen",
+                "pig"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p310w2.mp3",
+              "answer": "plate",
+              "tip": "按音节拆分拼写：plate → p · l · a · t · e",
+              "phonetic": "/pleɪt/"
+            }
+          ]
+        },
+        {
+          "id": "p311",
+          "rule": "sp/st",
+          "sound": "/sp/ /st/",
+          "cn": "s 快速接 p 或 t（如 spider、star）",
+          "tip": "词首的 sp/st，p/t 读得接近浊音。",
+          "audio": "/audio/ph/p311.mp3",
+          "words": [
+            {
+              "id": "p311w1",
+              "word": "spider",
+              "phonetic": "/ˈspaɪdə(r)/",
+              "meaning": "蜘蛛",
+              "audio": "/audio/ph/p311w1.mp3"
+            },
+            {
+              "id": "p311w2",
+              "word": "spoon",
+              "phonetic": "/spuːn/",
+              "meaning": "勺子",
+              "audio": "/audio/ph/p311w2.mp3"
+            },
+            {
+              "id": "p311w3",
+              "word": "star",
+              "phonetic": "/stɑː(r)/",
+              "meaning": "星星",
+              "audio": "/audio/ph/p311w3.mp3"
+            },
+            {
+              "id": "p311w4",
+              "word": "stop",
+              "phonetic": "/stɒp/",
+              "meaning": "停止",
+              "audio": "/audio/ph/p311w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p311w1.mp3",
+              "options": [
+                "spider",
+                "spoon",
+                "star",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/sp/ /st/",
+              "options": [
+                "spider",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p311w2.mp3",
+              "answer": "spoon",
+              "tip": "按音节拆分拼写：spoon → s · p · o · o · n",
+              "phonetic": "/spuːn/"
+            }
+          ]
+        },
+        {
+          "id": "p312",
+          "rule": "sl/sm",
+          "sound": "/sl/ /sm/",
+          "cn": "s 快速接 l 或 m（如 slide、smile）",
+          "tip": "s 轻短，快速滑向后面的音。",
+          "audio": "/audio/ph/p312.mp3",
+          "words": [
+            {
+              "id": "p312w1",
+              "word": "slide",
+              "phonetic": "/slaɪd/",
+              "meaning": "滑梯",
+              "audio": "/audio/ph/p312w1.mp3"
+            },
+            {
+              "id": "p312w2",
+              "word": "sleep",
+              "phonetic": "/sliːp/",
+              "meaning": "睡觉",
+              "audio": "/audio/ph/p312w2.mp3"
+            },
+            {
+              "id": "p312w3",
+              "word": "smile",
+              "phonetic": "/smaɪl/",
+              "meaning": "微笑",
+              "audio": "/audio/ph/p312w3.mp3"
+            },
+            {
+              "id": "p312w4",
+              "word": "small",
+              "phonetic": "/smɔːl/",
+              "meaning": "小的",
+              "audio": "/audio/ph/p312w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p312w1.mp3",
+              "options": [
+                "slide",
+                "sleep",
+                "smile",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/sl/ /sm/",
+              "options": [
+                "slide",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p312w2.mp3",
+              "answer": "sleep",
+              "tip": "按音节拆分拼写：sleep → s · l · e · e · p",
+              "phonetic": "/sliːp/"
+            }
+          ]
+        },
+        {
+          "id": "p313",
+          "rule": "sw/tr",
+          "sound": "/sw/ /tr/",
+          "cn": "s 接 w、t 接 r（如 swim、tree）",
+          "tip": "tr 的 /r/ 要卷舌，像“戳”的轻读。",
+          "audio": "/audio/ph/p313.mp3",
+          "words": [
+            {
+              "id": "p313w1",
+              "word": "swim",
+              "phonetic": "/swɪm/",
+              "meaning": "游泳",
+              "audio": "/audio/ph/p313w1.mp3"
+            },
+            {
+              "id": "p313w2",
+              "word": "sweet",
+              "phonetic": "/swiːt/",
+              "meaning": "甜的",
+              "audio": "/audio/ph/p313w2.mp3"
+            },
+            {
+              "id": "p313w3",
+              "word": "tree",
+              "phonetic": "/triː/",
+              "meaning": "树",
+              "audio": "/audio/ph/p313w3.mp3"
+            },
+            {
+              "id": "p313w4",
+              "word": "train",
+              "phonetic": "/treɪn/",
+              "meaning": "火车",
+              "audio": "/audio/ph/p313w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p313w1.mp3",
+              "options": [
+                "swim",
+                "sweet",
+                "tree",
+                "six"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/sw/ /tr/",
+              "options": [
+                "swim",
+                "six",
+                "sun"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p313w2.mp3",
+              "answer": "sweet",
+              "tip": "按音节拆分拼写：sweet → s · w · e · e · t",
+              "phonetic": "/swiːt/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "第四级 · r 控制元音与更多元音组合",
+      "desc": "元音后面跟着 r，发音被“控制”（ar、er、ir、or、ur），以及 oo、ou、ow、oi、oy 等组合。",
+      "rules": [
+        {
+          "id": "p401",
+          "rule": "ar",
+          "sound": "/ɑː/",
+          "cn": "ar 发 /ɑː/（如 car），嘴巴张大",
+          "tip": "像“啊”但拉长：c-ar → /kɑː/。",
+          "audio": "/audio/ph/p401.mp3",
+          "words": [
+            {
+              "id": "p401w1",
+              "word": "car",
+              "phonetic": "/kɑː(r)/",
+              "meaning": "汽车",
+              "audio": "/audio/ph/p401w1.mp3"
+            },
+            {
+              "id": "p401w2",
+              "word": "star",
+              "phonetic": "/stɑː(r)/",
+              "meaning": "星星",
+              "audio": "/audio/ph/p401w2.mp3"
+            },
+            {
+              "id": "p401w3",
+              "word": "park",
+              "phonetic": "/pɑːk/",
+              "meaning": "公园",
+              "audio": "/audio/ph/p401w3.mp3"
+            },
+            {
+              "id": "p401w4",
+              "word": "farm",
+              "phonetic": "/fɑːm/",
+              "meaning": "农场",
+              "audio": "/audio/ph/p401w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p401w1.mp3",
+              "options": [
+                "car",
+                "star",
+                "park",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɑː/",
+              "options": [
+                "car",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p401w2.mp3",
+              "answer": "star",
+              "tip": "按音节拆分拼写：star → s · t · a · r",
+              "phonetic": "/stɑː(r)/"
+            }
+          ]
+        },
+        {
+          "id": "p402",
+          "rule": "er",
+          "sound": "/ɜː/",
+          "cn": "er 发 /ɜː/（如 her），舌中部抬起",
+          "tip": "像“饿”的轻读，多在词尾：sist-er。",
+          "audio": "/audio/ph/p402.mp3",
+          "words": [
+            {
+              "id": "p402w1",
+              "word": "her",
+              "phonetic": "/hɜː(r)/",
+              "meaning": "她的",
+              "audio": "/audio/ph/p402w1.mp3"
+            },
+            {
+              "id": "p402w2",
+              "word": "sister",
+              "phonetic": "/ˈsɪstə(r)/",
+              "meaning": "姐妹",
+              "audio": "/audio/ph/p402w2.mp3"
+            },
+            {
+              "id": "p402w3",
+              "word": "tiger",
+              "phonetic": "/ˈtaɪɡə(r)/",
+              "meaning": "老虎",
+              "audio": "/audio/ph/p402w3.mp3"
+            },
+            {
+              "id": "p402w4",
+              "word": "father",
+              "phonetic": "/ˈfɑːðə(r)/",
+              "meaning": "父亲",
+              "audio": "/audio/ph/p402w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p402w1.mp3",
+              "options": [
+                "her",
+                "sister",
+                "tiger",
+                "hat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɜː/",
+              "options": [
+                "her",
+                "hat",
+                "hen"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p402w2.mp3",
+              "answer": "sister",
+              "tip": "按音节拆分拼写：sister → s · i · s · t · e · r",
+              "phonetic": "/ˈsɪstə(r)/"
+            }
+          ]
+        },
+        {
+          "id": "p403",
+          "rule": "ir",
+          "sound": "/ɜː/",
+          "cn": "ir 发 /ɜː/（如 bird），与 er 同音",
+          "tip": "看到 ir 就读“饿”：b-ir-d → /bɜːd/。",
+          "audio": "/audio/ph/p403.mp3",
+          "words": [
+            {
+              "id": "p403w1",
+              "word": "bird",
+              "phonetic": "/bɜːd/",
+              "meaning": "鸟",
+              "audio": "/audio/ph/p403w1.mp3"
+            },
+            {
+              "id": "p403w2",
+              "word": "girl",
+              "phonetic": "/ɡɜːl/",
+              "meaning": "女孩",
+              "audio": "/audio/ph/p403w2.mp3"
+            },
+            {
+              "id": "p403w3",
+              "word": "shirt",
+              "phonetic": "/ʃɜːt/",
+              "meaning": "衬衫",
+              "audio": "/audio/ph/p403w3.mp3"
+            },
+            {
+              "id": "p403w4",
+              "word": "first",
+              "phonetic": "/fɜːst/",
+              "meaning": "第一",
+              "audio": "/audio/ph/p403w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p403w1.mp3",
+              "options": [
+                "bird",
+                "girl",
+                "shirt",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɜː/",
+              "options": [
+                "bird",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p403w2.mp3",
+              "answer": "girl",
+              "tip": "按音节拆分拼写：girl → g · i · r · l",
+              "phonetic": "/ɡɜːl/"
+            }
+          ]
+        },
+        {
+          "id": "p404",
+          "rule": "or",
+          "sound": "/ɔː/",
+          "cn": "or 发 /ɔː/（如 for），嘴唇收圆",
+          "tip": "像“哦”但更圆更重：f-or → /fɔː/。",
+          "audio": "/audio/ph/p404.mp3",
+          "words": [
+            {
+              "id": "p404w1",
+              "word": "for",
+              "phonetic": "/fɔː(r)/",
+              "meaning": "为了",
+              "audio": "/audio/ph/p404w1.mp3"
+            },
+            {
+              "id": "p404w2",
+              "word": "horse",
+              "phonetic": "/hɔːs/",
+              "meaning": "马",
+              "audio": "/audio/ph/p404w2.mp3"
+            },
+            {
+              "id": "p404w3",
+              "word": "morning",
+              "phonetic": "/ˈmɔːnɪŋ/",
+              "meaning": "早晨",
+              "audio": "/audio/ph/p404w3.mp3"
+            },
+            {
+              "id": "p404w4",
+              "word": "short",
+              "phonetic": "/ʃɔːt/",
+              "meaning": "短的",
+              "audio": "/audio/ph/p404w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p404w1.mp3",
+              "options": [
+                "for",
+                "horse",
+                "morning",
+                "fish"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɔː/",
+              "options": [
+                "for",
+                "fish",
+                "frog"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p404w2.mp3",
+              "answer": "horse",
+              "tip": "按音节拆分拼写：horse → h · o · r · s · e",
+              "phonetic": "/hɔːs/"
+            }
+          ]
+        },
+        {
+          "id": "p405",
+          "rule": "ur",
+          "sound": "/ɜː/",
+          "cn": "ur 发 /ɜː/（如 nurse），与 er/ir 同音",
+          "tip": "n-ur-se → /nɜːs/，记住“一家人”。",
+          "audio": "/audio/ph/p405.mp3",
+          "words": [
+            {
+              "id": "p405w1",
+              "word": "nurse",
+              "phonetic": "/nɜːs/",
+              "meaning": "护士",
+              "audio": "/audio/ph/p405w1.mp3"
+            },
+            {
+              "id": "p405w2",
+              "word": "turn",
+              "phonetic": "/tɜːn/",
+              "meaning": "转弯",
+              "audio": "/audio/ph/p405w2.mp3"
+            },
+            {
+              "id": "p405w3",
+              "word": "purple",
+              "phonetic": "/ˈpɜːpl/",
+              "meaning": "紫色的",
+              "audio": "/audio/ph/p405w3.mp3"
+            },
+            {
+              "id": "p405w4",
+              "word": "hurt",
+              "phonetic": "/hɜːt/",
+              "meaning": "受伤",
+              "audio": "/audio/ph/p405w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p405w1.mp3",
+              "options": [
+                "nurse",
+                "turn",
+                "purple",
+                "name"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɜː/",
+              "options": [
+                "nurse",
+                "name",
+                "nine"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p405w2.mp3",
+              "answer": "turn",
+              "tip": "按音节拆分拼写：turn → t · u · r · n",
+              "phonetic": "/tɜːn/"
+            }
+          ]
+        },
+        {
+          "id": "p406",
+          "rule": "oo",
+          "sound": "/ʊ/ 或 /uː/",
+          "cn": "oo 发 /ʊ/（book）或 /uː/（moon）",
+          "tip": "短音常见于 k/d：b-oo-k；长音拉长：m-oo-n。",
+          "audio": "/audio/ph/p406.mp3",
+          "words": [
+            {
+              "id": "p406w1",
+              "word": "book",
+              "phonetic": "/bʊk/",
+              "meaning": "书",
+              "audio": "/audio/ph/p406w1.mp3"
+            },
+            {
+              "id": "p406w2",
+              "word": "foot",
+              "phonetic": "/fʊt/",
+              "meaning": "脚",
+              "audio": "/audio/ph/p406w2.mp3"
+            },
+            {
+              "id": "p406w3",
+              "word": "moon",
+              "phonetic": "/muːn/",
+              "meaning": "月亮",
+              "audio": "/audio/ph/p406w3.mp3"
+            },
+            {
+              "id": "p406w4",
+              "word": "school",
+              "phonetic": "/skuːl/",
+              "meaning": "学校",
+              "audio": "/audio/ph/p406w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p406w1.mp3",
+              "options": [
+                "book",
+                "foot",
+                "moon",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ʊ/ 或 /uː/",
+              "options": [
+                "book",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p406w2.mp3",
+              "answer": "foot",
+              "tip": "按音节拆分拼写：foot → f · o · o · t",
+              "phonetic": "/fʊt/"
+            }
+          ]
+        },
+        {
+          "id": "p407",
+          "rule": "ou",
+          "sound": "/aʊ/",
+          "cn": "ou 发 /aʊ/（如 house），嘴巴由大到小",
+          "tip": "像“奥”加“乌”：h-ou-se → /haʊs/。",
+          "audio": "/audio/ph/p407.mp3",
+          "words": [
+            {
+              "id": "p407w1",
+              "word": "house",
+              "phonetic": "/haʊs/",
+              "meaning": "房子",
+              "audio": "/audio/ph/p407w1.mp3"
+            },
+            {
+              "id": "p407w2",
+              "word": "mouse",
+              "phonetic": "/maʊs/",
+              "meaning": "老鼠",
+              "audio": "/audio/ph/p407w2.mp3"
+            },
+            {
+              "id": "p407w3",
+              "word": "mouth",
+              "phonetic": "/maʊθ/",
+              "meaning": "嘴",
+              "audio": "/audio/ph/p407w3.mp3"
+            },
+            {
+              "id": "p407w4",
+              "word": "cloud",
+              "phonetic": "/klaʊd/",
+              "meaning": "云",
+              "audio": "/audio/ph/p407w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p407w1.mp3",
+              "options": [
+                "house",
+                "mouse",
+                "mouth",
+                "hat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/aʊ/",
+              "options": [
+                "house",
+                "hat",
+                "hen"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p407w2.mp3",
+              "answer": "mouse",
+              "tip": "按音节拆分拼写：mouse → m · o · u · s · e",
+              "phonetic": "/maʊs/"
+            }
+          ]
+        },
+        {
+          "id": "p408",
+          "rule": "ow",
+          "sound": "/aʊ/",
+          "cn": "ow 也发 /aʊ/（如 cow），与 ou 同音",
+          "tip": "c-ow → /kaʊ/；注意与第三级 /əʊ/ 区分。",
+          "audio": "/audio/ph/p408.mp3",
+          "words": [
+            {
+              "id": "p408w1",
+              "word": "cow",
+              "phonetic": "/kaʊ/",
+              "meaning": "奶牛",
+              "audio": "/audio/ph/p408w1.mp3"
+            },
+            {
+              "id": "p408w2",
+              "word": "now",
+              "phonetic": "/naʊ/",
+              "meaning": "现在",
+              "audio": "/audio/ph/p408w2.mp3"
+            },
+            {
+              "id": "p408w3",
+              "word": "brown",
+              "phonetic": "/braʊn/",
+              "meaning": "棕色的",
+              "audio": "/audio/ph/p408w3.mp3"
+            },
+            {
+              "id": "p408w4",
+              "word": "flower",
+              "phonetic": "/ˈflaʊə(r)/",
+              "meaning": "花",
+              "audio": "/audio/ph/p408w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p408w1.mp3",
+              "options": [
+                "cow",
+                "now",
+                "brown",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/aʊ/",
+              "options": [
+                "cow",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p408w2.mp3",
+              "answer": "now",
+              "tip": "按音节拆分拼写：now → n · o · w",
+              "phonetic": "/naʊ/"
+            }
+          ]
+        },
+        {
+          "id": "p409",
+          "rule": "oi/oy",
+          "sound": "/ɔɪ/",
+          "cn": "oi 与 oy 都发 /ɔɪ/（如 coin、boy）",
+          "tip": "先“哦”再“一”快速连读：b-oy → /bɔɪ/。",
+          "audio": "/audio/ph/p409.mp3",
+          "words": [
+            {
+              "id": "p409w1",
+              "word": "boy",
+              "phonetic": "/bɔɪ/",
+              "meaning": "男孩",
+              "audio": "/audio/ph/p409w1.mp3"
+            },
+            {
+              "id": "p409w2",
+              "word": "toy",
+              "phonetic": "/tɔɪ/",
+              "meaning": "玩具",
+              "audio": "/audio/ph/p409w2.mp3"
+            },
+            {
+              "id": "p409w3",
+              "word": "coin",
+              "phonetic": "/kɔɪn/",
+              "meaning": "硬币",
+              "audio": "/audio/ph/p409w3.mp3"
+            },
+            {
+              "id": "p409w4",
+              "word": "point",
+              "phonetic": "/pɔɪnt/",
+              "meaning": "指向",
+              "audio": "/audio/ph/p409w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p409w1.mp3",
+              "options": [
+                "boy",
+                "toy",
+                "coin",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɔɪ/",
+              "options": [
+                "boy",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p409w2.mp3",
+              "answer": "toy",
+              "tip": "按音节拆分拼写：toy → t · o · y",
+              "phonetic": "/tɔɪ/"
+            }
+          ]
+        },
+        {
+          "id": "p410",
+          "rule": "au/aw",
+          "sound": "/ɔː/",
+          "cn": "au 与 aw 都发 /ɔː/（如 August、draw）",
+          "tip": "和 or 同音：dr-aw → /drɔː/。",
+          "audio": "/audio/ph/p410.mp3",
+          "words": [
+            {
+              "id": "p410w1",
+              "word": "August",
+              "phonetic": "/ˈɔːɡəst/",
+              "meaning": "八月",
+              "audio": "/audio/ph/p410w1.mp3"
+            },
+            {
+              "id": "p410w2",
+              "word": "autumn",
+              "phonetic": "/ˈɔːtəm/",
+              "meaning": "秋天",
+              "audio": "/audio/ph/p410w2.mp3"
+            },
+            {
+              "id": "p410w3",
+              "word": "draw",
+              "phonetic": "/drɔː/",
+              "meaning": "画画",
+              "audio": "/audio/ph/p410w3.mp3"
+            },
+            {
+              "id": "p410w4",
+              "word": "saw",
+              "phonetic": "/sɔː/",
+              "meaning": "锯；看见(过去式)",
+              "audio": "/audio/ph/p410w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p410w1.mp3",
+              "options": [
+                "August",
+                "autumn",
+                "draw",
+                "mother"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/ɔː/",
+              "options": [
+                "August",
+                "mother",
+                "bridge"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p410w2.mp3",
+              "answer": "autumn",
+              "tip": "按音节拆分拼写：autumn → a · u · t · u · m · n",
+              "phonetic": "/ˈɔːtəm/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "name": "第五级 · 特殊规则",
+      "desc": "进阶拼读：软音 c/g、不发音字母、双写字母、词尾 y 的发音。",
+      "rules": [
+        {
+          "id": "p501",
+          "rule": "soft c",
+          "sound": "/s/",
+          "cn": "c 后面跟 e/i/y 时发 /s/（如 city）",
+          "tip": "ce/ci/cy 里的 c 都读 /s/：ci-ty → /ˈsɪti/。",
+          "audio": "/audio/ph/p501.mp3",
+          "words": [
+            {
+              "id": "p501w1",
+              "word": "city",
+              "phonetic": "/ˈsɪti/",
+              "meaning": "城市",
+              "audio": "/audio/ph/p501w1.mp3"
+            },
+            {
+              "id": "p501w2",
+              "word": "circle",
+              "phonetic": "/ˈsɜːkl/",
+              "meaning": "圆圈",
+              "audio": "/audio/ph/p501w2.mp3"
+            },
+            {
+              "id": "p501w3",
+              "word": "face",
+              "phonetic": "/feɪs/",
+              "meaning": "脸",
+              "audio": "/audio/ph/p501w3.mp3"
+            },
+            {
+              "id": "p501w4",
+              "word": "ice",
+              "phonetic": "/aɪs/",
+              "meaning": "冰",
+              "audio": "/audio/ph/p501w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p501w1.mp3",
+              "options": [
+                "city",
+                "circle",
+                "face",
+                "cat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/s/",
+              "options": [
+                "city",
+                "cat",
+                "cup"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p501w2.mp3",
+              "answer": "circle",
+              "tip": "按音节拆分拼写：circle → c · i · r · c · l · e",
+              "phonetic": "/ˈsɜːkl/"
+            }
+          ]
+        },
+        {
+          "id": "p502",
+          "rule": "soft g",
+          "sound": "/dʒ/",
+          "cn": "g 后面跟 e/i/y 时常发 /dʒ/（如 orange）",
+          "tip": "ge/gi 里的 g 常读 /dʒ/，像“知”的浊音。",
+          "audio": "/audio/ph/p502.mp3",
+          "words": [
+            {
+              "id": "p502w1",
+              "word": "giraffe",
+              "phonetic": "/dʒəˈrɑːf/",
+              "meaning": "长颈鹿",
+              "audio": "/audio/ph/p502w1.mp3"
+            },
+            {
+              "id": "p502w2",
+              "word": "orange",
+              "phonetic": "/ˈɒrɪndʒ/",
+              "meaning": "橙子",
+              "audio": "/audio/ph/p502w2.mp3"
+            },
+            {
+              "id": "p502w3",
+              "word": "page",
+              "phonetic": "/peɪdʒ/",
+              "meaning": "页",
+              "audio": "/audio/ph/p502w3.mp3"
+            },
+            {
+              "id": "p502w4",
+              "word": "cage",
+              "phonetic": "/keɪdʒ/",
+              "meaning": "笼子",
+              "audio": "/audio/ph/p502w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p502w1.mp3",
+              "options": [
+                "giraffe",
+                "orange",
+                "page",
+                "green"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/dʒ/",
+              "options": [
+                "giraffe",
+                "green",
+                "girl"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p502w2.mp3",
+              "answer": "orange",
+              "tip": "按音节拆分拼写：orange → o · r · a · n · g · e",
+              "phonetic": "/ˈɒrɪndʒ/"
+            }
+          ]
+        },
+        {
+          "id": "p503",
+          "rule": "silent k",
+          "sound": "/n/ 前 k 不发音",
+          "cn": "kn 开头的 k 不发音（如 knife）",
+          "tip": "k 不读，直接读 n：kn-ife → /naɪf/。",
+          "audio": "/audio/ph/p503.mp3",
+          "words": [
+            {
+              "id": "p503w1",
+              "word": "knife",
+              "phonetic": "/naɪf/",
+              "meaning": "小刀",
+              "audio": "/audio/ph/p503w1.mp3"
+            },
+            {
+              "id": "p503w2",
+              "word": "knee",
+              "phonetic": "/niː/",
+              "meaning": "膝盖",
+              "audio": "/audio/ph/p503w2.mp3"
+            },
+            {
+              "id": "p503w3",
+              "word": "knock",
+              "phonetic": "/nɒk/",
+              "meaning": "敲门",
+              "audio": "/audio/ph/p503w3.mp3"
+            },
+            {
+              "id": "p503w4",
+              "word": "know",
+              "phonetic": "/nəʊ/",
+              "meaning": "知道",
+              "audio": "/audio/ph/p503w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p503w1.mp3",
+              "options": [
+                "knife",
+                "knee",
+                "knock",
+                "kite"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/n/ 前 k 不发音",
+              "options": [
+                "knife",
+                "kite",
+                "king"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p503w2.mp3",
+              "answer": "knee",
+              "tip": "按音节拆分拼写：knee → k · n · e · e",
+              "phonetic": "/niː/"
+            }
+          ]
+        },
+        {
+          "id": "p504",
+          "rule": "silent w",
+          "sound": "/r/ 前 w 不发音",
+          "cn": "wr 开头的 w 不发音（如 write）",
+          "tip": "w 不读，直接读 r：wr-ite → /raɪt/。",
+          "audio": "/audio/ph/p504.mp3",
+          "words": [
+            {
+              "id": "p504w1",
+              "word": "write",
+              "phonetic": "/raɪt/",
+              "meaning": "写",
+              "audio": "/audio/ph/p504w1.mp3"
+            },
+            {
+              "id": "p504w2",
+              "word": "wrist",
+              "phonetic": "/rɪst/",
+              "meaning": "手腕",
+              "audio": "/audio/ph/p504w2.mp3"
+            },
+            {
+              "id": "p504w3",
+              "word": "wrap",
+              "phonetic": "/ræp/",
+              "meaning": "包裹",
+              "audio": "/audio/ph/p504w3.mp3"
+            },
+            {
+              "id": "p504w4",
+              "word": "wrong",
+              "phonetic": "/rɒŋ/",
+              "meaning": "错误的",
+              "audio": "/audio/ph/p504w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p504w1.mp3",
+              "options": [
+                "write",
+                "wrist",
+                "wrap",
+                "white"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/r/ 前 w 不发音",
+              "options": [
+                "write",
+                "white",
+                "where"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p504w2.mp3",
+              "answer": "wrist",
+              "tip": "按音节拆分拼写：wrist → w · r · i · s · t",
+              "phonetic": "/rɪst/"
+            }
+          ]
+        },
+        {
+          "id": "p505",
+          "rule": "ll/ss",
+          "sound": "双写字母只读一个音",
+          "cn": "词尾双写 ll/ss 只读一个音（如 ball、class）",
+          "tip": "看到双写读一个音：ba-ll → /bɔːl/。",
+          "audio": "/audio/ph/p505.mp3",
+          "words": [
+            {
+              "id": "p505w1",
+              "word": "ball",
+              "phonetic": "/bɔːl/",
+              "meaning": "球",
+              "audio": "/audio/ph/p505w1.mp3"
+            },
+            {
+              "id": "p505w2",
+              "word": "hill",
+              "phonetic": "/hɪl/",
+              "meaning": "小山",
+              "audio": "/audio/ph/p505w2.mp3"
+            },
+            {
+              "id": "p505w3",
+              "word": "class",
+              "phonetic": "/klɑːs/",
+              "meaning": "班级",
+              "audio": "/audio/ph/p505w3.mp3"
+            },
+            {
+              "id": "p505w4",
+              "word": "glass",
+              "phonetic": "/ɡlɑːs/",
+              "meaning": "玻璃杯",
+              "audio": "/audio/ph/p505w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p505w1.mp3",
+              "options": [
+                "ball",
+                "hill",
+                "class",
+                "bat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "双写字母只读一个音",
+              "options": [
+                "ball",
+                "bat",
+                "bed"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p505w2.mp3",
+              "answer": "hill",
+              "tip": "按音节拆分拼写：hill → h · i · l · l",
+              "phonetic": "/hɪl/"
+            }
+          ]
+        },
+        {
+          "id": "p506",
+          "rule": "y 结尾",
+          "sound": "/i/ 或 /aɪ/",
+          "cn": "词尾 y：多音节发 /i/（happy），单音节发 /aɪ/（my）",
+          "tip": "happy 的 y 读“一”，my 的 y 读“爱”。",
+          "audio": "/audio/ph/p506.mp3",
+          "words": [
+            {
+              "id": "p506w1",
+              "word": "happy",
+              "phonetic": "/ˈhæpi/",
+              "meaning": "开心的",
+              "audio": "/audio/ph/p506w1.mp3"
+            },
+            {
+              "id": "p506w2",
+              "word": "sunny",
+              "phonetic": "/ˈsʌni/",
+              "meaning": "晴朗的",
+              "audio": "/audio/ph/p506w2.mp3"
+            },
+            {
+              "id": "p506w3",
+              "word": "my",
+              "phonetic": "/maɪ/",
+              "meaning": "我的",
+              "audio": "/audio/ph/p506w3.mp3"
+            },
+            {
+              "id": "p506w4",
+              "word": "fly",
+              "phonetic": "/flaɪ/",
+              "meaning": "飞",
+              "audio": "/audio/ph/p506w4.mp3"
+            }
+          ],
+          "quiz": [
+            {
+              "type": "listen",
+              "q": "听发音，选出你听到的单词",
+              "audio": "/audio/ph/p506w1.mp3",
+              "options": [
+                "happy",
+                "sunny",
+                "my",
+                "hat"
+              ],
+              "answer": 0,
+              "tip": "先听清第一个音，再对比选项中单词的拼读规律。"
+            },
+            {
+              "type": "find",
+              "q": "哪个单词含有这个发音？",
+              "sound": "/i/ 或 /aɪ/",
+              "options": [
+                "happy",
+                "hat",
+                "hen"
+              ],
+              "answer": 0,
+              "tip": "用拼读规则先自己读一遍每个词，再判断。"
+            },
+            {
+              "type": "write",
+              "q": "听音写单词（用拼读规则拼出来）",
+              "audio": "/audio/ph/p506w2.mp3",
+              "answer": "sunny",
+              "tip": "按音节拆分拼写：sunny → s · u · n · n · y",
+              "phonetic": "/ˈsʌni/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

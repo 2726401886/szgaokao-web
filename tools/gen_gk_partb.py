@@ -1,0 +1,445 @@
+# -*- coding: utf-8 -*-
+"""
+广东高考英语听说 Part B「三问五答」专项 —— 12 套内容生成
+用法：
+  python tools/gen_gk_partb.py json   # 生成 data/gaokao_partb.json + 同步 worker/src
+  python tools/gen_gk_partb.py md     # 生成 12 套素材 md（03交付素材库/听说试卷包/）
+  python tools/gen_gk_partb.py all    # 全部
+说明：英语内容为 AI 初稿，交付前须经创始人人工校对（SOP 红线）。
+"""
+import io, json, os, shutil, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MD_DIR = os.path.join(ROOT, '..', 'english-edu-company', '03交付素材库', '听说试卷包')
+
+# ============ 12 套数据 ============
+SETS = [
+# ---------------- gkb01 校园·图书馆志愿者 ----------------
+{
+ "id":"gkb01","title":"图书馆志愿者","topic":"校园",
+ "scene":"你将扮演校园小记者，采访学校图书馆的志愿者负责人 Mr. Li。采访前会观看一段关于图书馆志愿者活动的对话视频（只播放一次），请边听边记下人物、时间、地点、数字等信息。",
+ "dialogue":[
+  {"s":"W","t":"Mr. Li, I heard that the school library now has many student volunteers."},
+  {"s":"M","t":"Yes. We started the volunteer program last September. Every Saturday morning, they come to the library."},
+  {"s":"W","t":"What do the volunteers usually do there?"},
+  {"s":"M","t":"They tidy the bookshelves, help students find books, and tell stories to the younger students."},
+  {"s":"W","t":"That sounds great. Do you often hold reading activities?"},
+  {"s":"M","t":"Yes, we do. We hold a reading activity once a month. Last time we had a book-sharing meeting, and about forty students joined it."},
+  {"s":"W","t":"How can other students join the volunteer team?"},
+  {"s":"M","t":"They can sign up at the library office before this Friday."}],
+ "q3":[
+  {"cn":"你什么时候开始当志愿者的？","en":"When did the volunteer program start?"},
+  {"cn":"志愿者平时在图书馆做哪些工作？","en":"What do the volunteers usually do in the library?"},
+  {"cn":"你们多久举办一次读书活动？","en":"How often do you hold reading activities?"}],
+ "a5":[
+  {"q":"When did the volunteer program start?","a":"It started last September.","points":"时间：去年九月"},
+  {"q":"How often do the volunteers work?","a":"They work every Saturday morning.","points":"频率：每周六上午"},
+  {"q":"What do the volunteers do in the library?","a":"They tidy the bookshelves, help students find books and tell stories to younger students.","points":"三项工作"},
+  {"q":"How many students joined the last book-sharing meeting?","a":"About forty.","points":"数量：约 40 人"},
+  {"q":"How can other students join the volunteer team?","a":"They can sign up at the library office before this Friday.","points":"方式/时间：本周五前到图书馆办公室报名"}],
+ "analysis":{
+  "q3":["Q1 易错：缺助动词（When you start?）或用错人称（the volunteer program 是单数，用 did）；因 last September 用过去时。","Q2 易错：主语 volunteers 复数用 do，误用 does。","Q3 易错：How often 问频率（答案含 once a month），别误用 How long 问时长。"],
+  "a5":["A1 时间信息必须完整（last September），不能只答 Yes。","A2 频率答 Every Saturday morning，漏 morning 算信息不完整。","A3 三项工作缺一项扣信息分，用 and 连接保持流畅。","A4 数字 forty 是关键信息，发音要清楚。","A5 方式（sign up at the library office）+ 时限（before this Friday）都要答到。"]},
+ "trap":"时间/频率/数量信息捕捉 + 动词时态"
+},
+# ---------------- gkb02 校园·学校科技节 ----------------
+{
+ "id":"gkb02","title":"学校科技节","topic":"科技",
+ "scene":"你将扮演学校广播站记者，采访学生会主席 Wang Lin，了解即将举办的科技节。先观看一段关于科技节的对话视频（只播放一次），留意时间、地点、内容、人数等信息。",
+ "dialogue":[
+  {"s":"M","t":"Hi, Wang Lin. I heard the school will hold a science and technology festival. When will it start?"},
+  {"s":"W","t":"It will start on March 20th and last for three days."},
+  {"s":"M","t":"Where will the festival be held?"},
+  {"s":"W","t":"In the school hall. We have robot shows, model-making competitions and science lectures there."},
+  {"s":"M","t":"Who will give the science lectures?"},
+  {"s":"W","t":"Professor Chen from Sun Yat-sen University will give two lectures. He is an expert on AI."},
+  {"s":"M","t":"How many students can take part in the model-making competition?"},
+  {"s":"W","t":"At most forty students, and they need to sign up in groups of four before March 5th."},
+  {"s":"M","t":"Why do you hold this festival?"},
+  {"s":"W","t":"Because we want to help students learn science in a fun way."}],
+ "q3":[
+  {"cn":"科技节什么时候开始？","en":"When will the science and technology festival start?"},
+  {"cn":"科技节在哪里举行？","en":"Where will the festival be held?"},
+  {"cn":"谁来做科学讲座？","en":"Who will give the science lectures?"}],
+ "a5":[
+  {"q":"When will the science and technology festival start?","a":"It will start on March 20th.","points":"时间：3 月 20 日"},
+  {"q":"How long will the festival last?","a":"It will last for three days.","points":"时长：三天"},
+  {"q":"Where will the festival be held?","a":"In the school hall.","points":"地点：学校礼堂"},
+  {"q":"Who will give the science lectures?","a":"Professor Chen from Sun Yat-sen University.","points":"人物：中山大学陈教授"},
+  {"q":"How many students can take part in the model-making competition?","a":"At most forty, and they need to sign up in groups of four.","points":"数量+规则：最多 40 人、4 人一组"}],
+ "analysis":{
+  "q3":["Q1 将来事件用 will start（on March 20th），别用一般现在时 starts。","Q2 地点问句 Where will the festival be held?，别漏被动语态或宾语（Where will hold the festival?）。","Q3 who 作主语后直接跟动词（who will give），不能再加助动词（Who does will give）。"],
+  "a5":["A1 日期 on March 20th 要完整。","A2 时长 three days 来自 last for three days，别漏 for。","A3 地点 In the school hall，只答 school 信息不全。","A4 人物+单位（Professor Chen + Sun Yat-sen University）要完整。","A5 数量 at most forty + 规则 in groups of four 都要答。"]},
+ "trap":"将来时 will + 被动语态 be held + who 主语句型"
+},
+# ---------------- gkb03 社会·环保讲座 ----------------
+{
+ "id":"gkb03","title":"环保讲座","topic":"社会",
+ "scene":"你是一名校园记者，讲座结束后采访环保专家 Dr. Smith。先观看一段关于环保讲座的对话视频（只播放一次），留意讲座主题、时间、数据、做法等信息。",
+ "dialogue":[
+  {"s":"M","t":"Dr. Smith, thank you for the wonderful lecture. What is the lecture mainly about?"},
+  {"s":"W","t":"It is about how to reduce plastic waste in our daily life."},
+  {"s":"M","t":"How much plastic waste do students in our city produce every year?"},
+  {"s":"W","t":"About five thousand tons every year. That is a big problem."},
+  {"s":"M","t":"What can students do to help?"},
+  {"s":"W","t":"They can use water bottles instead of plastic ones, bring their own shopping bags, and separate waste at home."},
+  {"s":"M","t":"Has the city set a goal for waste reduction?"},
+  {"s":"W","t":"Yes. The city plans to cut plastic waste by half in five years, by 2030."},
+  {"s":"M","t":"Why did you become an environmental scientist?"},
+  {"s":"W","t":"Because I want to protect the earth for the next generation."}],
+ "q3":[
+  {"cn":"讲座主要讲什么？","en":"What is the lecture mainly about?"},
+  {"cn":"学生可以做些什么来帮助减少塑料垃圾？","en":"What can students do to help reduce plastic waste?"},
+  {"cn":"你为什么要成为一名环保科学家？","en":"Why did you become an environmental scientist?"}],
+ "a5":[
+  {"q":"What is the lecture mainly about?","a":"It is about how to reduce plastic waste in our daily life.","points":"主题：减少塑料垃圾"},
+  {"q":"How much plastic waste do students in the city produce every year?","a":"About five thousand tons.","points":"数据：每年约 5000 吨"},
+  {"q":"What can students do to help?","a":"They can use water bottles instead of plastic ones, bring their own shopping bags, and separate waste at home.","points":"三个做法"},
+  {"q":"What is the city's goal for waste reduction?","a":"To cut plastic waste by half in five years, by 2030.","points":"目标：五年减半、2030"},
+  {"q":"Why did Dr. Smith become an environmental scientist?","a":"Because he wants to protect the earth for the next generation.","points":"原因：为下一代保护地球"}],
+ "analysis":{
+  "q3":["Q1 主语 the lecture 单数用 is；别用陈述语序（What the lecture is about?）。","Q2 情态动词 can 后接动词原形（do/to help），别多加 to（What can students to do?）。","Q3 did 后接原形 become，别写成 did became。"],
+  "a5":["A1 主题要完整（in our daily life 别漏）。","A2 数字 five thousand tons 是关键，别只说 a lot of。","A3 三个做法缺一项扣分，用 and 连接。","A4 目标 = cut by half + in five years + by 2030，三要素都要有。","A5 原因句 Because + 现在时 wants（他现在的愿望），别误用过去时。"]},
+ "trap":"情态动词 can + 过去时 did 疑问 + 数字信息"
+},
+# ---------------- gkb04 文化·校园传统文化节 ----------------
+{
+ "id":"gkb04","title":"校园传统文化节","topic":"文化",
+ "scene":"你将扮演校园记者，采访学生会文化部部长 Li Hua，了解即将举办的校园传统文化节。先观看一段对话视频（只播放一次），留意活动时间、地点、内容、人数等信息。",
+ "dialogue":[
+  {"s":"M","t":"Hi, Li Hua. I heard the school will hold a Chinese Culture Festival. When will it be held?"},
+  {"s":"W","t":"It will be held from May 20th to 22nd, in the school hall and on the playground."},
+  {"s":"M","t":"What activities will there be at the festival?"},
+  {"s":"W","t":"There will be paper-cutting, calligraphy and a hanfu show. Students can also try traditional food."},
+  {"s":"M","t":"That sounds interesting. How many students took part in the festival last year?"},
+  {"s":"W","t":"More than three hundred students joined it last year."},
+  {"s":"M","t":"How can students take part in the activities?"},
+  {"s":"W","t":"They can register online before Friday, and the registration is free."},
+  {"s":"M","t":"Why do you hold such a festival?"},
+  {"s":"W","t":"Because we want to help students learn about and love traditional Chinese culture."}],
+ "q3":[
+  {"cn":"文化节什么时候举办？","en":"When will the Chinese Culture Festival be held?"},
+  {"cn":"文化节上有哪些活动？","en":"What activities will there be at the festival?"},
+  {"cn":"学生怎样才能参加？","en":"How can students take part in the activities?"}],
+ "a5":[
+  {"q":"When will the Chinese Culture Festival be held?","a":"It will be held from May 20th to 22nd.","points":"时间：5 月 20–22 日"},
+  {"q":"Where will the festival be held?","a":"In the school hall and on the playground.","points":"地点：学校大厅+操场"},
+  {"q":"What activities will there be at the festival?","a":"Paper-cutting, calligraphy and a hanfu show.","points":"三项活动"},
+  {"q":"How many students took part in the festival last year?","a":"More than three hundred.","points":"人数：300+（去年）"},
+  {"q":"How can students take part in the activities?","a":"They can register online before Friday, and the registration is free.","points":"方式/时间：周五前线上注册、免费"}],
+ "analysis":{
+  "q3":["Q1 将来时 be held（被动），别写成 will hold 无宾语。","Q2 there will be 句型，问活动内容用 What activities will there be?。","Q3 方式问法 How can...，答案含 register online + before Friday。"],
+  "a5":["A1 起止日期 from May 20th to 22nd 都要答。","A2 地点两处（hall + playground）缺一扣分。","A3 三项活动缺一扣分。","A4 数字 more than three hundred 是关键。","A5 方式（register online）+ 时限（before Friday）+ 免费（free）信息完整。"]},
+ "trap":"将来时被动 be held + there be 句型 + 数字与地点完整性"
+},
+# ---------------- gkb05 健康·健康生活讲座 ----------------
+{
+ "id":"gkb05","title":"健康生活讲座","topic":"健康",
+ "scene":"你将扮演校园记者，采访校医 Dr. Chen，了解即将举办的学生健康讲座。先观看一段对话视频（只播放一次），留意讲座主题、时间、建议等信息。",
+ "dialogue":[
+  {"s":"M","t":"Dr. Chen, thank you for your time. What is the lecture mainly about?"},
+  {"s":"W","t":"It is about healthy eating and living habits for students."},
+  {"s":"M","t":"What should students do to keep healthy?"},
+  {"s":"W","t":"They should eat breakfast every morning, drink enough water, and sleep for about eight hours a night."},
+  {"s":"M","t":"Why is having breakfast so important?"},
+  {"s":"W","t":"Because it gives students energy for the morning classes. Many students skip breakfast, and that is a big problem."},
+  {"s":"M","t":"What about exercise? How much exercise do students need?"},
+  {"s":"W","t":"About an hour of exercise every day, like running, swimming or playing ball games."},
+  {"s":"M","t":"When will the lecture be held?"},
+  {"s":"W","t":"At 4 p.m. this Wednesday in the school hall."}],
+ "q3":[
+  {"cn":"讲座主要讲什么？","en":"What is the lecture mainly about?"},
+  {"cn":"学生应该怎样保持健康？","en":"What should students do to keep healthy?"},
+  {"cn":"为什么吃早餐很重要？","en":"Why is having breakfast important?"}],
+ "a5":[
+  {"q":"What is the lecture mainly about?","a":"Healthy eating and living habits for students.","points":"主题：健康饮食与生活习惯"},
+  {"q":"How many hours of sleep do students need?","a":"About eight hours a night.","points":"睡眠：约 8 小时"},
+  {"q":"What should students do to keep healthy?","a":"Eat breakfast, drink enough water, and sleep for about eight hours.","points":"三个建议"},
+  {"q":"How much exercise do students need?","a":"About an hour every day.","points":"运动：每天约 1 小时"},
+  {"q":"What is a common problem among students?","a":"Many students skip breakfast.","points":"问题：不吃早餐"}],
+ "analysis":{
+  "q3":["Q1 主语 the lecture 用 is。","Q2 情态动词 should 后接原形，回答时用 should + 动词原形。","Q3 Why is having breakfast important? 动名词作主语，别漏 is。"],
+  "a5":["A1 主题完整（healthy eating and living habits）。","A2 数字 eight hours 是关键。","A3 三个建议缺一扣分。","A4 频率/时长 about an hour every day。","A5 问题信息（skip breakfast）要答准。"]},
+ "trap":"should 情态动词 + 动名词主语 + 健康建议信息点"
+},
+# ---------------- gkb06 交通·城市绿色出行 ----------------
+{
+ "id":"gkb06","title":"城市绿色出行","topic":"交通",
+ "scene":"你是一名校园小记者，采访市交通部门工作人员 Mr. Wang，了解城市绿色出行的情况。先观看一段对话视频（只播放一次），留意主题、数据、新变化等信息。",
+ "dialogue":[
+  {"s":"M","t":"Mr. Wang, what is green travel exactly?"},
+  {"s":"W","t":"It means travelling by public transport, walking or riding bikes instead of driving cars."},
+  {"s":"M","t":"I heard a new metro line opened recently. Is that right?"},
+  {"s":"W","t":"Yes. Line 5 opened last month, and it connects the city centre with the university town."},
+  {"s":"M","t":"What about shared bikes? How many are there in the city?"},
+  {"s":"W","t":"About ten thousand shared bikes are available now, and they are great for short trips."},
+  {"s":"M","t":"Does green travel really help reduce traffic?"},
+  {"s":"W","t":"Yes. The city expects car use to drop by about twenty percent in the next two years."},
+  {"s":"M","t":"How can students travel in a green way?"},
+  {"s":"W","t":"They can walk or ride bikes to school, or take the metro and the bus."}],
+ "q3":[
+  {"cn":"什么是绿色出行？","en":"What is green travel?"},
+  {"cn":"最近交通方面有什么新变化？","en":"What changes have happened to transport recently?"},
+  {"cn":"学生怎样做到绿色出行？","en":"How can students travel in a green way?"}],
+ "a5":[
+  {"q":"What is green travel?","a":"It means travelling by public transport, walking or riding bikes instead of driving cars.","points":"定义：公共交通/步行/骑行"},
+  {"q":"When did Line 5 open?","a":"It opened last month.","points":"时间：上个月"},
+  {"q":"How many shared bikes are there in the city?","a":"About ten thousand.","points":"数量：约 1 万辆"},
+  {"q":"What are shared bikes great for?","a":"Short trips.","points":"用途：短途出行"},
+  {"q":"How much is car use expected to drop?","a":"By about twenty percent in the next two years.","points":"降幅：约 20%（两年内）"}],
+ "analysis":{
+  "q3":["Q1 定义类问句 What is green travel? 用一般现在时 is。","Q2 现在完成时 What changes have happened...? 注意 have+过去分词。","Q3 方式问法 How can students...? 答案含 walk/ride/take metro。"],
+  "a5":["A1 定义要完整（by public transport, walking or riding bikes）。","A2 时间 last month 关键。","A3 数字 ten thousand 关键。","A4 用途 short trips。","A5 降幅 twenty percent + 时间 next two years 都要答。"]},
+ "trap":"现在完成时 have happened + 数字/定义类信息完整性"
+},
+# ---------------- gkb07 活动·校园运动会 ----------------
+{
+ "id":"gkb07","title":"校园运动会","topic":"活动",
+ "scene":"你将扮演校报记者，采访体育老师 Mr. Zhang，了解即将举行的校园运动会。先观看一段对话视频（只播放一次），留意时间、项目、报名等信息。",
+ "dialogue":[
+  {"s":"M","t":"Mr. Zhang, when will the sports meeting be held?"},
+  {"s":"W","t":"It will be held next Friday on the school playground."},
+  {"s":"M","t":"What events will there be?"},
+  {"s":"W","t":"There will be the 100-metre race, the relay race and the long jump."},
+  {"s":"M","t":"How can students sign up for the events?"},
+  {"s":"W","t":"They can sign up with their PE teachers before next Wednesday."},
+  {"s":"M","t":"How many students will take part?"},
+  {"s":"W","t":"More than two hundred students will take part this year."},
+  {"s":"M","t":"Who will give a speech at the opening ceremony?"},
+  {"s":"W","t":"Our headmaster will give a speech, and then the games will start."},
+  {"s":"M","t":"Why do you hold the sports meeting every year?"},
+  {"s":"W","t":"Because we want to encourage students to exercise and build team spirit."}],
+ "q3":[
+  {"cn":"运动会什么时候举行？","en":"When will the sports meeting be held?"},
+  {"cn":"运动会上有哪些比赛项目？","en":"What events will there be at the sports meeting?"},
+  {"cn":"学生怎样报名参加？","en":"How can students sign up for the events?"}],
+ "a5":[
+  {"q":"When will the sports meeting be held?","a":"Next Friday.","points":"时间：下周五"},
+  {"q":"Where will the sports meeting be held?","a":"On the school playground.","points":"地点：学校操场"},
+  {"q":"What events will there be?","a":"The 100-metre race, the relay race and the long jump.","points":"三个项目"},
+  {"q":"How many students will take part this year?","a":"More than two hundred.","points":"人数：200+（今年）"},
+  {"q":"Who will give a speech at the opening ceremony?","a":"Our headmaster.","points":"人物：校长"}],
+ "analysis":{
+  "q3":["Q1 将来时被动 will be held。","Q2 there will be 句型。","Q3 sign up 短语：How can students sign up for the events?，别漏 for。"],
+  "a5":["A1 时间 next Friday 关键。","A2 地点 on the school playground。","A3 三个项目缺一扣分。","A4 数字 more than two hundred。","A5 人物 our headmaster，注意提问里 opening ceremony 要对应。"]},
+ "trap":"将来时被动 + there be + sign up 短语搭配"
+},
+# ---------------- gkb08 社会·社区志愿服务 ----------------
+{
+ "id":"gkb08","title":"社区志愿服务","topic":"社会",
+ "scene":"你是一名校园记者，采访社区志愿者协会负责人 Ms. Zhang，了解学生参与的志愿活动。先观看一段对话视频（只播放一次），留意活动内容、时间、数据等信息。",
+ "dialogue":[
+  {"s":"M","t":"Ms. Zhang, what volunteer activities do your members mainly do?"},
+  {"s":"W","t":"They mainly visit the old people's home and hold charity sales in the community."},
+  {"s":"M","t":"When do volunteers visit the old people's home?"},
+  {"s":"W","t":"Every Saturday morning. They chat with the old people, sing songs and help clean the rooms."},
+  {"s":"M","t":"How much money did the charity sale raise last month?"},
+  {"s":"W","t":"Five thousand yuan. We use the money to buy books for children in mountain schools."},
+  {"s":"M","t":"How many volunteers are there in the association?"},
+  {"s":"W","t":"There are about one hundred and twenty volunteers now."},
+  {"s":"M","t":"How can students join the volunteer group?"},
+  {"s":"W","t":"They can sign up at the volunteer association office, or ask their class teachers for help."}],
+ "q3":[
+  {"cn":"你们主要做哪些志愿活动？","en":"What volunteer activities do you mainly do?"},
+  {"cn":"志愿者什么时候去敬老院？","en":"When do volunteers visit the old people's home?"},
+  {"cn":"上个月的义卖筹了多少钱？","en":"How much money did the charity sale raise last month?"}],
+ "a5":[
+  {"q":"What volunteer activities do the members mainly do?","a":"They visit the old people's home and hold charity sales in the community.","points":"两类活动"},
+  {"q":"What do volunteers do at the old people's home?","a":"They chat with the old people, sing songs and help clean the rooms.","points":"三项服务"},
+  {"q":"When do volunteers visit the old people's home?","a":"Every Saturday morning.","points":"时间：每周六上午"},
+  {"q":"How much money did the charity sale raise last month?","a":"Five thousand yuan.","points":"金额：5000 元（上月）"},
+  {"q":"How can students join the volunteer group?","a":"They can sign up at the volunteer association office.","points":"方式：协会办公室报名"}],
+ "analysis":{
+  "q3":["Q1 一般现在时 do you mainly do，主语 you 用 do。","Q2 频率问法 When do...? 答 every Saturday。","Q3 过去时 did the charity sale raise，did 后接原形 raise。"],
+  "a5":["A1 两类活动缺一扣分。","A2 三项服务缺一扣分。","A3 频率时间 every Saturday morning 完整。","A4 金额 five thousand yuan 关键，yuan 发音清楚。","A5 报名方式 sign up at the association office。"]},
+ "trap":"过去时 did+原形 + 频率/金额信息 + 活动列举完整性"
+},
+# ---------------- gkb09 校园·学习方法与备考 ----------------
+{
+ "id":"gkb09","title":"学习方法与备考","topic":"校园",
+ "scene":"你将扮演校园记者，采访高三优秀学生代表 Li Ming，请他分享学习与备考经验。先观看一段对话视频（只播放一次），留意方法、时间安排、心态建议等信息。",
+ "dialogue":[
+  {"s":"M","t":"Li Ming, congratulations on your great results. What methods do you usually use to learn English?"},
+  {"s":"W","t":"Thank you. I review my notes every evening, practise with test papers, and speak English with my classmates."},
+  {"s":"M","t":"How do you arrange your revision time before exams?"},
+  {"s":"W","t":"I make a 30-minute plan for each subject every evening and stick to it. I never study late into the night."},
+  {"s":"M","t":"Why do you think sleep is important before exams?"},
+  {"s":"W","t":"Because enough sleep helps students stay focused in class and remember things better."},
+  {"s":"M","t":"What should students do if they feel nervous before exams?"},
+  {"s":"W","t":"They should take deep breaths, tell themselves they are ready, and do a little exercise to relax."},
+  {"s":"M","t":"Who can students turn to if they have problems with their studies?"},
+  {"s":"W","t":"They can ask their teachers for help, or discuss with classmates in study groups."}],
+ "q3":[
+  {"cn":"你平时用什么方法学习英语？","en":"What methods do you usually use to learn English?"},
+  {"cn":"考试前怎样安排复习时间？","en":"How do you arrange your revision time before exams?"},
+  {"cn":"考试前紧张该怎么办？","en":"What should students do if they feel nervous before exams?"}],
+ "a5":[
+  {"q":"What methods does Li Ming use to learn English?","a":"He reviews his notes, practises with test papers, and speaks English with classmates.","points":"三个方法"},
+  {"q":"How does he arrange his revision time?","a":"He makes a 30-minute plan for each subject every evening and sticks to it.","points":"方式：每晚每科 30 分钟计划"},
+  {"q":"Why is sleep important before exams?","a":"Because enough sleep helps students stay focused and remember things better.","points":"原因：保持专注、增强记忆"},
+  {"q":"What should students do if they feel nervous?","a":"They should take deep breaths, tell themselves they are ready, and do a little exercise.","points":"三个建议"},
+  {"q":"Who can students turn to for help?","a":"Their teachers, or classmates in study groups.","points":"求助对象：老师/学习小组"}],
+ "analysis":{
+  "q3":["Q1 一般现在时 do you use，主语 you。","Q2 时间安排 How do you arrange...? 答案含 30-minute plan + every evening。","Q3 情态动词 should + 原形，条件从句 if they feel nervous。"],
+  "a5":["A1 三个方法缺一扣分。","A2 计划细节 30-minute plan + every evening + stick to it。","A3 原因两句（stay focused + remember better）都要。","A4 三个建议缺一扣分。","A5 求助对象 teachers + classmates 都要。"]},
+ "trap":"should 情态动词 + 条件从句 if + 建议类信息列举"
+},
+# ---------------- gkb10 科技·人工智能与学习 ----------------
+{
+ "id":"gkb10","title":"人工智能与学习","topic":"科技",
+ "scene":"你将扮演校园记者，采访大学教授 Dr. Wang，了解人工智能如何帮助学生学习。先观看一段对话视频（只播放一次），留意讲座主题、时间、使用建议等信息。",
+ "dialogue":[
+  {"s":"M","t":"Dr. Wang, thank you for the lecture. What is the lecture mainly about?"},
+  {"s":"W","t":"It is about how artificial intelligence, or AI, can help students learn."},
+  {"s":"M","t":"What can AI tools do for students?"},
+  {"s":"W","t":"They can translate words, check pronunciation, and give personalised exercises according to each student's level."},
+  {"s":"M","t":"What is the biggest advantage of AI in learning?"},
+  {"s":"W","t":"It can make a personalised learning plan for every student, so everyone learns at their own speed."},
+  {"s":"M","t":"What should students pay attention to when using AI tools?"},
+  {"s":"W","t":"They should use AI wisely and not depend on it too much. Learning still needs hard work."},
+  {"s":"M","t":"When and where will the lecture be held?"},
+  {"s":"W","t":"At 7 p.m. next Tuesday in the lecture hall. Everyone is welcome."}],
+ "q3":[
+  {"cn":"讲座主要讲什么？","en":"What is the lecture mainly about?"},
+  {"cn":"AI 能怎样帮助学生学习？","en":"How can AI help students learn?"},
+  {"cn":"使用 AI 学习工具要注意什么？","en":"What should students pay attention to when using AI tools?"}],
+ "a5":[
+  {"q":"What is the lecture mainly about?","a":"How artificial intelligence, or AI, can help students learn.","points":"主题：AI 如何帮助学习"},
+  {"q":"What can AI tools do for students?","a":"They can translate words, check pronunciation, and give personalised exercises.","points":"三项功能"},
+  {"q":"What is the biggest advantage of AI in learning?","a":"It can make a personalised learning plan for every student.","points":"优势：个性化学习计划"},
+  {"q":"What should students pay attention to when using AI tools?","a":"They should use AI wisely and not depend on it too much.","points":"注意：理性使用、不过度依赖"},
+  {"q":"When and where will the lecture be held?","a":"At 7 p.m. next Tuesday in the lecture hall.","points":"时间地点：下周二晚7点·报告厅"}],
+ "analysis":{
+  "q3":["Q1 主语 the lecture 用 is。","Q2 情态动词 can 后接原形。","Q3 注意事项 when using AI tools（when+动名词），答案用 should + 原形。"],
+  "a5":["A1 主题完整（AI can help students learn）。","A2 三项功能缺一扣分。","A3 优势 personalised learning plan。","A4 两个要点（use wisely + not depend too much）。","A5 时间（7 p.m. next Tuesday）+ 地点（lecture hall）都要。"]},
+ "trap":"can/should 情态动词 + when+动名词 + 时间地点信息完整"
+},
+# ---------------- gkb11 文化·校园音乐节 ----------------
+{
+ "id":"gkb11","title":"校园音乐节","topic":"文化",
+ "scene":"你将扮演校园记者，采访音乐社社长 Amy，了解即将举办的校园音乐节。先观看一段对话视频（只播放一次），留意时间、节目、特别环节等信息。",
+ "dialogue":[
+  {"s":"M","t":"Hi, Amy. When will the music festival be held?"},
+  {"s":"W","t":"It will be held on Saturday evening, at the end of this month, in the school hall."},
+  {"s":"M","t":"What performances will there be?"},
+  {"s":"W","t":"There will be the school band, a chorus, and some solo performances by talented students."},
+  {"s":"M","t":"I heard there is a special part this year. What is it?"},
+  {"s":"W","t":"Yes. We will hold a charity performance to raise money for students in mountain schools."},
+  {"s":"M","t":"How many people came to the festival last year?"},
+  {"s":"W","t":"About five hundred people came last year, and we expect even more this year."},
+  {"s":"M","t":"How can students join the performances?"},
+  {"s":"W","t":"They can sign up at the music club before next Monday and have an audition."}],
+ "q3":[
+  {"cn":"音乐节什么时候举行？","en":"When will the music festival be held?"},
+  {"cn":"音乐节上有什么节目？","en":"What performances will there be at the music festival?"},
+  {"cn":"音乐节筹的钱用来做什么？","en":"What will the money raised be used for?"}],
+ "a5":[
+  {"q":"When will the music festival be held?","a":"On Saturday evening, at the end of this month.","points":"时间：本月末周六晚"},
+  {"q":"Where will the music festival be held?","a":"In the school hall.","points":"地点：学校礼堂"},
+  {"q":"What performances will there be?","a":"The school band, a chorus, and some solo performances.","points":"三类节目"},
+  {"q":"How many people came last year?","a":"About five hundred.","points":"人数：约 500（去年）"},
+  {"q":"What will the money raised be used for?","a":"To help students in mountain schools.","points":"用途：资助山区学校学生"}],
+ "analysis":{
+  "q3":["Q1 将来时被动 will be held，时间 on Saturday evening 完整。","Q2 there will be 句型。","Q3 过去分词 raised 修饰 money：What will the money raised be used for?，答 to do 结构。"],
+  "a5":["A1 时间 on Saturday evening + at the end of this month。","A2 地点 school hall。","A3 三类节目缺一扣分。","A4 数字 five hundred（去年）。","A5 用途 to help students in mountain schools。"]},
+ "trap":"将来时被动 + 过去分词 raised + 时间/用途信息完整"
+},
+# ---------------- gkb12 健康·心理健康与减压 ----------------
+{
+ "id":"gkb12","title":"心理健康与减压","topic":"健康",
+ "scene":"你将扮演校园记者，采访心理老师 Ms. Liu，了解学生心理健康与减压方法。先观看一段对话视频（只播放一次），留意常见问题、建议、咨询室开放时间等信息。",
+ "dialogue":[
+  {"s":"M","t":"Ms. Liu, what mental problems do students often have?"},
+  {"s":"W","t":"Many students feel anxious before exams, and some feel stressed about too much homework."},
+  {"s":"M","t":"What can students do to reduce stress?"},
+  {"s":"W","t":"They can do some exercise, talk to friends or parents, and listen to music to relax."},
+  {"s":"M","t":"When is the school counseling room open?"},
+  {"s":"W","t":"It is open on Monday, Wednesday and Friday afternoons, from 3 to 5 p.m."},
+  {"s":"M","t":"How can students make an appointment?"},
+  {"s":"W","t":"They can book online through the school website, or just come and talk to us."},
+  {"s":"M","t":"Will the school hold any activities about mental health?"},
+  {"s":"W","t":"Yes. We will hold a stress-relief lecture next Wednesday evening in the library hall."}],
+ "q3":[
+  {"cn":"学生常见的心理问题是什么？","en":"What mental problems do students often have?"},
+  {"cn":"学生怎样缓解压力？","en":"How can students reduce stress?"},
+  {"cn":"心理咨询室什么时候开放？","en":"When is the counseling room open?"}],
+ "a5":[
+  {"q":"What mental problems do students often have?","a":"Many feel anxious before exams, and some feel stressed about homework.","points":"两类问题：考前焦虑/作业压力"},
+  {"q":"What can students do to reduce stress?","a":"Do some exercise, talk to friends or parents, and listen to music.","points":"三个方法"},
+  {"q":"When is the counseling room open?","a":"On Monday, Wednesday and Friday afternoons, from 3 to 5 p.m.","points":"时间：周一三五下午3-5点"},
+  {"q":"How can students make an appointment?","a":"They can book online through the school website.","points":"方式：线上预约"},
+  {"q":"What activity will the school hold?","a":"A stress-relief lecture next Wednesday evening in the library hall.","points":"活动：减压讲座（下周三晚·图书馆报告厅）"}],
+ "analysis":{
+  "q3":["Q1 一般现在时 do students often have。","Q2 情态动词 can + 原形，三个方法列举。","Q3 开放时间 When is...open? 答案含具体时间。"],
+  "a5":["A1 两类问题缺一扣分。","A2 三个方法缺一扣分。","A3 三天（Monday/Wednesday/Friday）+ 时段（3-5 p.m.）完整。","A4 方式 book online。","A5 活动名称（stress-relief lecture）+ 时间地点完整。"]},
+ "trap":"一般现在时 + 情态动词 can + 开放时间/时段信息完整"
+},
+]
+
+AUDIO_BASE = "/audio/gk/"
+
+def build_json():
+    sets = []
+    for s in SETS:
+        sets.append({
+            "id": s["id"], "title": s["title"], "topic": s["topic"],
+            "scene": s["scene"], "dialogue": s["dialogue"],
+            "q3": s["q3"], "a5": s["a5"], "analysis": s["analysis"],
+            "trap": s.get("trap", ""),
+            "audio": {
+                "dialogue": AUDIO_BASE + s["id"] + "-dialogue.mp3",
+                "questions": AUDIO_BASE + s["id"] + "-questions.mp3",
+                "questionsSlow": AUDIO_BASE + s["id"] + "-questions-slow.mp3"
+            }
+        })
+    data = {"sets": sets, "meta": {"total": len(sets), "trial": "gkb01", "note": "英语内容为 AI 初稿，交付前须创始人人工校对"}}
+    out = os.path.join(ROOT, 'data', 'gaokao_partb.json')
+    io.open(out, 'w', encoding='utf-8').write(json.dumps(data, ensure_ascii=False, indent=1))
+    wout = r"E:\szgaokao.cn\worker\src\gaokao_partb.json"
+    shutil.copyfile(out, wout)
+    print("[OK] gaokao_partb.json 已写入 data/ 与 worker/src/（%d 套）" % len(sets))
+    # 校验
+    ids = [s["id"] for s in sets]
+    assert len(ids) == len(set(ids)), "ID 重复！"
+    for s in sets:
+        assert len(s["q3"]) == 3 and len(s["a5"]) == 5, s["id"] + " q3/a5 数量错误"
+        assert len(s["dialogue"]) >= 5, s["id"] + " 对话过短"
+    print("[OK] 校验通过：12 套 / 三问 36 条 / 五答 60 条 / 对话信息点完整")
+
+def build_md():
+    for s in SETS:
+        n = int(s["id"][-2:])
+        path = os.path.join(MD_DIR, "广东高考听说PartB-模拟卷%02d-%s.md" % (n, s["title"]))
+        L = []
+        L.append("# 广东高考听说 Part B 模拟卷 %02d · %s\n" % (n, s["title"]))
+        L.append("> 产出岗位：3号｜内容交付专员　日期：2026-09-27\n> 难度：应试　情景类型：%s\n> 状态：AI 初稿，待创始人人工校对后生成音频、交付\n> ⚠️ 英语内容未经人工校对前不得对外发布\n" % s["topic"])
+        L.append("---\n\n## 情景介绍（考生阅读）\n\n%s\n\n## 对话原文（视频音频，一男一女，约 30 秒）\n" % s["scene"])
+        for d in s["dialogue"]:
+            who = "女生" if d["s"] == "W" else "男生"
+            L.append("**%s:** %s" % (who, d["t"]))
+        L.append("\n## 三问（根据中文提示用英语提问）\n\n| # | 中文提示 | 参考提问 | 评分维度 |")
+        L.append("|---|---|---|---|")
+        for i, q in enumerate(s["q3"], 1):
+            L.append("| %d | %s | %s | 语言 |" % (i, q["cn"], q["en"]))
+        L.append("\n## 五答（听电脑提问，用英语回答）\n\n| # | 电脑提问 | 参考回答 | 信息要点 |")
+        L.append("|---|---|---|---|")
+        for i, a in enumerate(s["a5"], 1):
+            L.append("| %d | %s | %s | %s |" % (i, a["q"], a["a"], a["points"]))
+        L.append("\n## 逐题解析\n\n**三问易错点**")
+        for t in s["analysis"]["q3"]:
+            L.append("- %s" % t)
+        L.append("\n**五答易错点**")
+        for t in s["analysis"]["a5"]:
+            L.append("- %s" % t)
+        L.append("\n## 音频脚本说明\n\n| 音频 | 内容 | 建议时长 |\n|---|---|---|")
+        L.append("| %s-dialogue.mp3 | 对话原文（女+男双声） | 约 30 秒 |" % s["id"])
+        L.append("| %s-questions.mp3 | 五答的 5 个电脑提问（原速） | 约 25 秒 |" % s["id"])
+        L.append("| %s-questions-slow.mp3 | 同上（慢速跟练版） | 约 40 秒 |" % s["id"])
+        L.append("\n> 音频在人工校对通过后，按 gen_gk_audio.py 流程生成。\n\n---\n产出岗位：3号｜内容交付专员　待创始人确认：□ 对话与参考答案校对　□ 音频生成")
+        io.open(path, 'w', encoding='utf-8').write("\n".join(L))
+    print("[OK] 12 套素材 md 已写入 03交付素材库/听说试卷包/")
+
+if __name__ == '__main__':
+    cmd = sys.argv[1] if len(sys.argv) > 1 else 'all'
+    if cmd in ('json', 'all'): build_json()
+    if cmd in ('md', 'all'): build_md()

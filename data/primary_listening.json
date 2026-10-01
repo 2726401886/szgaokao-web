@@ -1,0 +1,1124 @@
+{
+ "product": "小学英语听说题型库（五大题型）",
+ "version": "1.0",
+ "schema_version": "1.0",
+ "note": "6 卷：3/4/5/6 年级专项 + 2 套综合模拟；题型 word 单词听力 / sentence 短句听力 / dialogue 对话听力 / passage 篇章听力 / speaking 口语跟读；音频英音女声慢速",
+ "volumes": [
+  {
+   "id": "lt3",
+   "grade": 3,
+   "title": "三年级听说专项",
+   "topic": "颜色数字·文具·动物水果",
+   "questions": [
+    {
+     "id": "lt301",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt301.mp3",
+     "options": [
+      "苹果",
+      "香蕉",
+      "橙子"
+     ],
+     "answer": 0,
+     "tip": "apple 是苹果，a 发 /æ/。"
+    },
+    {
+     "id": "lt302",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt302.mp3",
+     "options": [
+      "钢笔",
+      "铅笔",
+      "尺子"
+     ],
+     "answer": 1,
+     "tip": "pen 是钢笔，pencil 是铅笔。"
+    },
+    {
+     "id": "lt303",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt303.mp3",
+     "options": [
+      "鸭子",
+      "猫",
+      "狗"
+     ],
+     "answer": 0,
+     "tip": "duck 鸭子，叫声 quack quack。"
+    },
+    {
+     "id": "lt304",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt304.mp3",
+     "options": [
+      "蓝色",
+      "红色",
+      "黄色"
+     ],
+     "answer": 2,
+     "tip": "yellow 黄色，像香蕉的颜色。"
+    },
+    {
+     "id": "lt305",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt305.mp3",
+     "options": [
+      "我有三本书。",
+      "我有三支笔。",
+      "我买了三本书。"
+     ],
+     "answer": 0,
+     "tip": "three books = 三本书。"
+    },
+    {
+     "id": "lt306",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt306.mp3",
+     "options": [
+      "猫在垫子上。",
+      "猫在桌子上。",
+      "狗在垫子上。"
+     ],
+     "answer": 0,
+     "tip": "cat 猫，mat 垫子。"
+    },
+    {
+     "id": "lt307",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt307.mp3",
+     "options": [
+      "请合上书。",
+      "请打开书。",
+      "请拿出笔。"
+     ],
+     "answer": 1,
+     "tip": "open 打开，book 书。"
+    },
+    {
+     "id": "lt308",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt308.mp3",
+     "options": [
+      "我喜欢红苹果。",
+      "我喜欢绿苹果。",
+      "我吃了一个红苹果。"
+     ],
+     "answer": 0,
+     "tip": "like 喜欢，red apples 红苹果。"
+    },
+    {
+     "id": "lt309",
+     "type": "dialogue",
+     "q": "听对话，回答问题：Who is in the dialogue?",
+     "audio": "/audio/lt/lt309.mp3",
+     "options": [
+      "Tom and Ann",
+      "Tom and Bob",
+      "Ann and Lily"
+     ],
+     "answer": 0,
+     "tip": "对话开头：Hello, Tom! Hi, Ann!",
+     "q2": "对话里有谁？"
+    },
+    {
+     "id": "lt310",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What colour does the girl like?",
+     "audio": "/audio/lt/lt310.mp3",
+     "options": [
+      "红色",
+      "蓝色",
+      "绿色"
+     ],
+     "answer": 1,
+     "tip": "I like blue，喜欢蓝色。",
+     "q2": "女孩喜欢什么颜色？"
+    },
+    {
+     "id": "lt311",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/lt311.mp3",
+     "questions": [
+      {
+       "q2": "短文里的狗是什么颜色？",
+       "options": [
+        "黑白相间",
+        "棕色",
+        "黄色"
+       ],
+       "answer": 0,
+       "tip": "black and white 黑白相间。",
+       "id": "lt311-s1"
+      },
+      {
+       "q2": "狗会做什么？",
+       "options": [
+        "跑得很快",
+        "会游泳",
+        "会唱歌"
+       ],
+       "answer": 0,
+       "tip": "It can run fast 跑得很快。",
+       "id": "lt311-s2"
+      }
+     ]
+    },
+    {
+     "id": "lt312",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt312.mp3",
+     "text": "I like apples.",
+     "ref": "我喜欢苹果。"
+    },
+    {
+     "id": "lt313",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt313.mp3",
+     "text": "The duck is yellow.",
+     "ref": "鸭子是黄色的。"
+    }
+   ]
+  },
+  {
+   "id": "lt4",
+   "grade": 4,
+   "title": "四年级听说专项",
+   "topic": "家庭房间·食物饮料·衣物天气",
+   "questions": [
+    {
+     "id": "lt401",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt401.mp3",
+     "options": [
+      "妈妈",
+      "爸爸",
+      "奶奶"
+     ],
+     "answer": 0,
+     "tip": "mother 妈妈，father 爸爸。"
+    },
+    {
+     "id": "lt402",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt402.mp3",
+     "options": [
+      "果汁",
+      "牛奶",
+      "水"
+     ],
+     "answer": 1,
+     "tip": "milk 牛奶，juice 果汁。"
+    },
+    {
+     "id": "lt403",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt403.mp3",
+     "options": [
+      "衬衫",
+      "外套",
+      "裙子"
+     ],
+     "answer": 1,
+     "tip": "coat 外套，shirt 衬衫。"
+    },
+    {
+     "id": "lt404",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt404.mp3",
+     "options": [
+      "晴天的",
+      "下雨的",
+      "刮风的"
+     ],
+     "answer": 1,
+     "tip": "rainy 下雨的，sunny 晴朗的。"
+    },
+    {
+     "id": "lt405",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt405.mp3",
+     "options": [
+      "我妈妈做晚饭。",
+      "我妈妈做早饭。",
+      "我爸爸做晚饭。"
+     ],
+     "answer": 0,
+     "tip": "mother 妈妈，cook dinner 做晚饭。"
+    },
+    {
+     "id": "lt406",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt406.mp3",
+     "options": [
+      "我每天晚上喝牛奶。",
+      "我每天早上喝牛奶。",
+      "我每天早上喝水。"
+     ],
+     "answer": 1,
+     "tip": "every morning 每天早上。"
+    },
+    {
+     "id": "lt407",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt407.mp3",
+     "options": [
+      "今天下雨，带把伞。",
+      "今天晴天，戴帽子。",
+      "今天刮风，多穿衣。"
+     ],
+     "answer": 0,
+     "tip": "rainy 下雨，umbrella 伞。"
+    },
+    {
+     "id": "lt408",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt408.mp3",
+     "options": [
+      "我家有四口人。",
+      "我家有五口人。",
+      "我家有四间房。"
+     ],
+     "answer": 0,
+     "tip": "four people 四口人。"
+    },
+    {
+     "id": "lt409",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What does the boy want for breakfast?",
+     "audio": "/audio/lt/lt409.mp3",
+     "options": [
+      "面包和牛奶",
+      "米饭和鸡蛋",
+      "面条和果汁"
+     ],
+     "answer": 0,
+     "tip": "bread and milk 面包和牛奶。",
+     "q2": "男孩早餐想吃什么？"
+    },
+    {
+     "id": "lt410",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What's the weather like?",
+     "audio": "/audio/lt/lt410.mp3",
+     "options": [
+      "刮风又冷",
+      "晴朗又热",
+      "下雨又冷"
+     ],
+     "answer": 0,
+     "tip": "windy 刮风，cold 冷。",
+     "q2": "今天天气怎么样？"
+    },
+    {
+     "id": "lt411",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/lt411.mp3",
+     "questions": [
+      {
+       "q2": "妹妹几岁？",
+       "options": [
+        "六岁",
+        "七岁",
+        "五岁"
+       ],
+       "answer": 0,
+       "tip": "six years old 六岁。",
+       "id": "lt411-s1"
+      },
+      {
+       "q2": "妹妹喜欢什么？",
+       "options": [
+        "牛奶和鸡蛋",
+        "面包和果汁",
+        "苹果和牛奶"
+       ],
+       "answer": 0,
+       "tip": "likes milk and eggs 喜欢牛奶和鸡蛋。",
+       "id": "lt411-s2"
+      }
+     ]
+    },
+    {
+     "id": "lt412",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt412.mp3",
+     "text": "My mother cooks dinner.",
+     "ref": "我妈妈做晚饭。"
+    },
+    {
+     "id": "lt413",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt413.mp3",
+     "text": "It's sunny and warm.",
+     "ref": "天气晴朗又暖和。"
+    }
+   ]
+  },
+  {
+   "id": "lt5",
+   "grade": 5,
+   "title": "五年级听说专项",
+   "topic": "科目学校·场所出行·活动爱好",
+   "questions": [
+    {
+     "id": "lt501",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt501.mp3",
+     "options": [
+      "数学",
+      "科学",
+      "音乐"
+     ],
+     "answer": 1,
+     "tip": "science 科学，math 数学。"
+    },
+    {
+     "id": "lt502",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt502.mp3",
+     "options": [
+      "医院",
+      "博物馆",
+      "银行"
+     ],
+     "answer": 1,
+     "tip": "museum 博物馆，hospital 医院。"
+    },
+    {
+     "id": "lt503",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt503.mp3",
+     "options": [
+      "跑步",
+      "游泳",
+      "跳舞"
+     ],
+     "answer": 1,
+     "tip": "swim 游泳，run 跑步。"
+    },
+    {
+     "id": "lt504",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt504.mp3",
+     "options": [
+      "图书馆",
+      "教室",
+      "操场"
+     ],
+     "answer": 0,
+     "tip": "library 图书馆，classroom 教室。"
+    },
+    {
+     "id": "lt505",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt505.mp3",
+     "options": [
+      "我们今天有数学课。",
+      "我们今天有英语课。",
+      "我们昨天有数学课。"
+     ],
+     "answer": 0,
+     "tip": "math class 数学课。"
+    },
+    {
+     "id": "lt506",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt506.mp3",
+     "options": [
+      "我们星期天去公园吧。",
+      "我们星期六去公园吧。",
+      "我们星期天去动物园吧。"
+     ],
+     "answer": 0,
+     "tip": "Sunday 星期天，park 公园。"
+    },
+    {
+     "id": "lt507",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt507.mp3",
+     "options": [
+      "我睡觉前看书。",
+      "我起床后看书。",
+      "我放学后看书。"
+     ],
+     "answer": 0,
+     "tip": "before bed 睡觉前。"
+    },
+    {
+     "id": "lt508",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt508.mp3",
+     "options": [
+      "公交站在那边。",
+      "火车站在那边。",
+      "公交站离这儿很远。"
+     ],
+     "answer": 0,
+     "tip": "bus station 公交站。"
+    },
+    {
+     "id": "lt509",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What class does the girl like best?",
+     "audio": "/audio/lt/lt509.mp3",
+     "options": [
+      "音乐",
+      "数学",
+      "英语"
+     ],
+     "answer": 0,
+     "tip": "Music! 她最喜欢音乐。",
+     "q2": "女孩最喜欢什么课？"
+    },
+    {
+     "id": "lt510",
+     "type": "dialogue",
+     "q": "听对话，回答问题：How does the man go to the museum?",
+     "audio": "/audio/lt/lt510.mp3",
+     "options": [
+      "直走再左转",
+      "直走再右转",
+      "坐公交车"
+     ],
+     "answer": 0,
+     "tip": "walk straight and turn left 直走左转。",
+     "q2": "去博物馆怎么走？"
+    },
+    {
+     "id": "lt511",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/lt511.mp3",
+     "questions": [
+      {
+       "q2": "他们星期六去了哪里？",
+       "options": [
+        "动物园",
+        "博物馆",
+        "公园"
+       ],
+       "answer": 0,
+       "tip": "go to the zoo 去动物园。",
+       "id": "lt511-s1"
+      },
+      {
+       "q2": "作者最喜欢什么动物？",
+       "options": [
+        "老虎",
+        "猴子",
+        "大象"
+       ],
+       "answer": 1,
+       "tip": "I like monkeys best 最喜欢猴子。",
+       "id": "lt511-s2"
+      }
+     ]
+    },
+    {
+     "id": "lt512",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt512.mp3",
+     "text": "Science is interesting.",
+     "ref": "科学很有趣。"
+    },
+    {
+     "id": "lt513",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt513.mp3",
+     "text": "I like swimming on weekends.",
+     "ref": "我喜欢周末游泳。"
+    }
+   ]
+  },
+  {
+   "id": "lt6",
+   "grade": 6,
+   "title": "六年级听说专项",
+   "topic": "职业工作·感受情绪·自然环保",
+   "questions": [
+    {
+     "id": "lt601",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt601.mp3",
+     "options": [
+      "司机",
+      "农民",
+      "医生"
+     ],
+     "answer": 1,
+     "tip": "farmer 农民，driver 司机。"
+    },
+    {
+     "id": "lt602",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt602.mp3",
+     "options": [
+      "饥饿的",
+      "口渴的",
+      "累的"
+     ],
+     "answer": 1,
+     "tip": "thirsty 口渴，hungry 饿。"
+    },
+    {
+     "id": "lt603",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt603.mp3",
+     "options": [
+      "环境",
+      "天气",
+      "季节"
+     ],
+     "answer": 0,
+     "tip": "environment 环境，weather 天气。"
+    },
+    {
+     "id": "lt604",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/lt604.mp3",
+     "options": [
+      "污染",
+      "保护",
+      "垃圾"
+     ],
+     "answer": 0,
+     "tip": "pollution 污染，protect 保护。"
+    },
+    {
+     "id": "lt605",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt605.mp3",
+     "options": [
+      "我爸爸在医院工作。",
+      "我爸爸在学校工作。",
+      "我妈妈在医院工作。"
+     ],
+     "answer": 0,
+     "tip": "father 爸爸，hospital 医院。"
+    },
+    {
+     "id": "lt606",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt606.mp3",
+     "options": [
+      "走了很远的路，我很累。",
+      "跑了很久，我很渴。",
+      "走了很远的路，我很饿。"
+     ],
+     "answer": 0,
+     "tip": "tired 累的，long walk 长途步行。"
+    },
+    {
+     "id": "lt607",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt607.mp3",
+     "options": [
+      "我们应该保护环境。",
+      "我们应该保护动物。",
+      "我们应该节约用水。"
+     ],
+     "answer": 0,
+     "tip": "protect the environment 保护环境。"
+    },
+    {
+     "id": "lt608",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/lt608.mp3",
+     "options": [
+      "太阳从东方升起。",
+      "太阳从西方落下。",
+      "月亮从东方升起。"
+     ],
+     "answer": 0,
+     "tip": "rises in the east 从东方升起。"
+    },
+    {
+     "id": "lt609",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What does the boy want to be?",
+     "audio": "/audio/lt/lt609.mp3",
+     "options": [
+      "医生",
+      "老师",
+      "厨师"
+     ],
+     "answer": 0,
+     "tip": "a doctor 医生。",
+     "q2": "男孩想当什么？"
+    },
+    {
+     "id": "lt610",
+     "type": "dialogue",
+     "q": "听对话，回答问题：How does the girl feel?",
+     "audio": "/audio/lt/lt610.mp3",
+     "options": [
+      "又饿又渴",
+      "又累又困",
+      "开心又兴奋"
+     ],
+     "answer": 0,
+     "tip": "hungry and thirsty 又饿又渴。",
+     "q2": "女孩感觉怎么样？"
+    },
+    {
+     "id": "lt611",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/lt611.mp3",
+     "questions": [
+      {
+       "q2": "他们在学校做了什么？",
+       "options": [
+        "种树",
+        "扫地",
+        "浇水浇花"
+       ],
+       "answer": 0,
+       "tip": "plant trees 种树。",
+       "id": "lt611-s1"
+      },
+      {
+       "q2": "树能带来什么好处？",
+       "options": [
+        "让空气干净",
+        "让天气变冷",
+        "让马路变宽"
+       ],
+       "answer": 0,
+       "tip": "Trees make the air clean 让空气变干净。",
+       "id": "lt611-s2"
+      }
+     ]
+    },
+    {
+     "id": "lt612",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt612.mp3",
+     "text": "I want to be a doctor.",
+     "ref": "我想当一名医生。"
+    },
+    {
+     "id": "lt613",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/lt613.mp3",
+     "text": "We should protect the environment.",
+     "ref": "我们应该保护环境。"
+    }
+   ]
+  },
+  {
+   "id": "ltM1",
+   "grade": 0,
+   "title": "综合模拟卷（一）",
+   "topic": "全学段综合",
+   "questions": [
+    {
+     "id": "ltM101",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM101.mp3",
+     "options": [
+      "苹果",
+      "香蕉",
+      "葡萄"
+     ],
+     "answer": 1,
+     "tip": "banana 香蕉，apple 苹果。"
+    },
+    {
+     "id": "ltM102",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM102.mp3",
+     "options": [
+      "护士",
+      "医生",
+      "老师"
+     ],
+     "answer": 1,
+     "tip": "doctor 医生，nurse 护士。"
+    },
+    {
+     "id": "ltM103",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM103.mp3",
+     "options": [
+      "云",
+      "雨",
+      "雪"
+     ],
+     "answer": 0,
+     "tip": "cloud 云，rain 雨。"
+    },
+    {
+     "id": "ltM104",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM104.mp3",
+     "options": [
+      "超市",
+      "银行",
+      "餐馆"
+     ],
+     "answer": 0,
+     "tip": "supermarket 超市，restaurant 餐馆。"
+    },
+    {
+     "id": "ltM105",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM105.mp3",
+     "options": [
+      "我早餐吃面包喝牛奶。",
+      "我午餐吃面条喝汤。",
+      "我晚餐吃米饭和鱼。"
+     ],
+     "answer": 0,
+     "tip": "breakfast 早餐。"
+    },
+    {
+     "id": "ltM106",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM106.mp3",
+     "options": [
+      "我妹妹会画猫。",
+      "我妹妹喜欢猫。",
+      "我弟弟会画猫。"
+     ],
+     "answer": 0,
+     "tip": "draw a cat 画猫。"
+    },
+    {
+     "id": "ltM107",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM107.mp3",
+     "options": [
+      "在第二个路口右转。",
+      "在第一个路口左转。",
+      "在第二个路口左转。"
+     ],
+     "answer": 0,
+     "tip": "turn right 右转。"
+    },
+    {
+     "id": "ltM108",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM108.mp3",
+     "options": [
+      "我对学校旅行很兴奋。",
+      "我对学校考试很紧张。",
+      "我对运动会很期待。"
+     ],
+     "answer": 0,
+     "tip": "excited 兴奋的。"
+    },
+    {
+     "id": "ltM109",
+     "type": "dialogue",
+     "q": "听对话，回答问题：Where are they going?",
+     "audio": "/audio/lt/ltM109.mp3",
+     "options": [
+      "图书馆",
+      "超市",
+      "公园"
+     ],
+     "answer": 0,
+     "tip": "the library 图书馆。",
+     "q2": "他们下午要去哪里？"
+    },
+    {
+     "id": "ltM110",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What's the matter with the boy?",
+     "audio": "/audio/lt/ltM110.mp3",
+     "options": [
+      "头疼",
+      "肚子疼",
+      "牙疼"
+     ],
+     "answer": 0,
+     "tip": "headache 头疼。",
+     "q2": "男孩怎么了？"
+    },
+    {
+     "id": "ltM111",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/ltM111.mp3",
+     "questions": [
+      {
+       "q2": "汤姆几点起床？",
+       "options": [
+        "七点",
+        "七点半",
+        "六点"
+       ],
+       "answer": 0,
+       "tip": "gets up at seven 七点起床。",
+       "id": "ltM111-s1"
+      },
+      {
+       "q2": "汤姆最喜欢什么课？",
+       "options": [
+        "英语",
+        "数学",
+        "科学"
+       ],
+       "answer": 0,
+       "tip": "likes English best 最喜欢英语。",
+       "id": "ltM111-s2"
+      }
+     ]
+    },
+    {
+     "id": "ltM112",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/ltM112.mp3",
+     "text": "I get up at seven.",
+     "ref": "我七点起床。"
+    },
+    {
+     "id": "ltM113",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/ltM113.mp3",
+     "text": "I like English best.",
+     "ref": "我最喜欢英语。"
+    }
+   ]
+  },
+  {
+   "id": "ltM2",
+   "grade": 0,
+   "title": "综合模拟卷（二）",
+   "topic": "全学段综合",
+   "questions": [
+    {
+     "id": "ltM201",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM201.mp3",
+     "options": [
+      "米饭",
+      "面条",
+      "饺子"
+     ],
+     "answer": 1,
+     "tip": "noodles 面条，rice 米饭。"
+    },
+    {
+     "id": "ltM202",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM202.mp3",
+     "options": [
+      "医院",
+      "银行",
+      "酒店"
+     ],
+     "answer": 0,
+     "tip": "hospital 医院，hotel 酒店。"
+    },
+    {
+     "id": "ltM203",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM203.mp3",
+     "options": [
+      "雪",
+      "风",
+      "雨"
+     ],
+     "answer": 0,
+     "tip": "snow 雪，wind 风。"
+    },
+    {
+     "id": "ltM204",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/lt/ltM204.mp3",
+     "options": [
+      "兴奋的",
+      "难过的",
+      "生气的"
+     ],
+     "answer": 0,
+     "tip": "excited 兴奋的，sad 难过的。"
+    },
+    {
+     "id": "ltM205",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM205.mp3",
+     "options": [
+      "我叔叔是厨师。",
+      "我叔叔是司机。",
+      "我舅舅是医生。"
+     ],
+     "answer": 0,
+     "tip": "uncle 叔叔/舅舅，cook 厨师。"
+    },
+    {
+     "id": "ltM206",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM206.mp3",
+     "options": [
+      "春天经常下雨。",
+      "夏天经常下雨。",
+      "秋天经常刮风。"
+     ],
+     "answer": 0,
+     "tip": "in spring 在春天。"
+    },
+    {
+     "id": "ltM207",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM207.mp3",
+     "options": [
+      "我们放学后打篮球。",
+      "我们放学后踢足球。",
+      "我们上课前打篮球。"
+     ],
+     "answer": 0,
+     "tip": "after school 放学后。"
+    },
+    {
+     "id": "ltM208",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/lt/ltM208.mp3",
+     "options": [
+      "别担心，一切都会好起来的。",
+      "别哭，我会帮你的。",
+      "别跑，注意安全。"
+     ],
+     "answer": 0,
+     "tip": "Don't worry 别担心。"
+    },
+    {
+     "id": "ltM209",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What season does the girl like best?",
+     "audio": "/audio/lt/ltM209.mp3",
+     "options": [
+      "冬天",
+      "夏天",
+      "春天"
+     ],
+     "answer": 0,
+     "tip": "winter 冬天，make a snowman 堆雪人。",
+     "q2": "女孩最喜欢什么季节？"
+    },
+    {
+     "id": "ltM210",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What would the man like to drink?",
+     "audio": "/audio/lt/ltM210.mp3",
+     "options": [
+      "橙汁",
+      "牛奶",
+      "茶"
+     ],
+     "answer": 0,
+     "tip": "orange juice 橙汁。",
+     "q2": "男士想喝什么？"
+    },
+    {
+     "id": "ltM211",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/lt/ltM211.mp3",
+     "questions": [
+      {
+       "q2": "他们夏天去了哪里？",
+       "options": [
+        "海边",
+        "山上",
+        "公园"
+       ],
+       "answer": 0,
+       "tip": "the beach 海边。",
+       "id": "ltM211-s1"
+      },
+      {
+       "q2": "妹妹喜欢做什么？",
+       "options": [
+        "捡贝壳",
+        "堆沙堡",
+        "游泳"
+       ],
+       "answer": 0,
+       "tip": "collecting shells 捡贝壳。",
+       "id": "ltM211-s2"
+      }
+     ]
+    },
+    {
+     "id": "ltM212",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/ltM212.mp3",
+     "text": "I like winter best.",
+     "ref": "我最喜欢冬天。"
+    },
+    {
+     "id": "ltM213",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/lt/ltM213.mp3",
+     "text": "We all have a good time.",
+     "ref": "我们都玩得很开心。"
+    }
+   ]
+  }
+ ]
+}

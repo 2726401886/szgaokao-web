@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学情工作台 · 科科通</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .topbar { background:linear-gradient(135deg,#6a5cff,#9b6cff); color:#fff; padding:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:19px; }
+  .topbar p { font-size:12.5px; opacity:.92; margin-top:3px; }
+  .topbar-r { margin-left:auto; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.22); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tabs { display:flex; gap:8px; padding:14px 16px 0; max-width:980px; margin:0 auto; flex-wrap:wrap; }
+  .tabs button { flex:1; min-width:120px; padding:12px; border:none; border-radius:12px 12px 0 0; background:#e7e9f5; font-size:14px; cursor:pointer; font-weight:600; color:#555; }
+  .tabs button.on { background:#fff; color:#6a5cff; font-weight:800; box-shadow:0 -2px 8px rgba(0,0,0,.04); }
+  .panel { max-width:980px; margin:0 auto; padding:0 16px 16px; }
+  .frame { background:#fff; border-radius:0 0 16px 16px; box-shadow:0 4px 16px rgba(0,0,0,.05); overflow:hidden; padding:16px; min-height:60vh; }
+  iframe { width:100%; height:78vh; border:none; display:block; }
+  .sec-title { font-size:15px; font-weight:800; margin:4px 0 10px; }
+  .sec-sub { font-size:12.5px; color:#999; margin-bottom:10px; }
+  .wk-group { margin-bottom:18px; }
+  .wk-item { padding:10px 0; border-bottom:1px solid #f0f0f0; }
+  .wk-top { display:flex; justify-content:space-between; font-size:13.5px; }
+  .wk-name { font-weight:700; }
+  .wk-num { color:#888; font-size:12.5px; }
+  .wk-bar { height:8px; background:#eee; border-radius:6px; overflow:hidden; margin:6px 0 4px; }
+  .wk-bar > div { height:100%; background:linear-gradient(90deg,#6a5cff,#9b6cff); }
+  .wk-rate { font-size:12px; color:#6a5cff; font-weight:700; }
+  .wk-rate.bad { color:#e23; }
+  .tbl { width:100%; border-collapse:collapse; font-size:13px; margin-top:6px; }
+  .tbl th, .tbl td { padding:8px 10px; border-bottom:1px solid #f0f0f0; text-align:left; }
+  .tbl th { color:#999; font-weight:600; }
+  .rep-grid { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:16px; }
+  .rep-card { flex:1; min-width:140px; background:#f7f6ff; border-radius:12px; padding:14px; text-align:center; }
+  .rep-card .v { font-size:26px; font-weight:800; color:#6a5cff; }
+  .rep-card .l { font-size:12px; color:#777; margin-top:4px; }
+  .qcard { border:1.5px solid #eee; border-radius:12px; padding:12px; margin:8px 0; }
+  .qcard .qmeta { font-size:12px; color:#888; margin-bottom:6px; }
+  .qcard .qtext { font-size:14.5px; font-weight:600; line-height:1.55; }
+  .qcard .qopts { font-size:13px; color:#444; margin-top:6px; line-height:1.7; }
+  .qcard .qtip { font-size:12.5px; color:#7a5c00; background:#fffbe8; padding:7px 10px; border-radius:8px; margin-top:8px; }
+  .step { padding:6px 10px; border-left:3px solid #6a5cff; background:#f7f6ff; border-radius:8px; margin:6px 0; font-size:12.5px; line-height:1.65; }
+  .step b { color:#6a5cff; }
+  .qcard .qact { margin-top:8px; }
+  .mini-btn { padding:6px 12px; border:none; border-radius:10px; background:#efeaff; color:#6a5cff; font-weight:700; cursor:pointer; font-size:12.5px; }
+  .tagchip { display:inline-block; padding:2px 9px; border-radius:10px; background:#f0f0f0; color:#666; font-size:11.5px; margin:2px 4px 2px 0; }
+  .tagchip.habit { background:#fff0ef; color:#ff5e62; }
+  .note { padding:40px 16px; text-align:center; color:#b0b0b0; font-size:14px; line-height:1.8; }
+  .note b { color:#6a5cff; }
+  .login-gate { padding:60px 16px; text-align:center; }
+  .login-gate a { display:inline-block; margin-top:14px; padding:12px 22px; background:#6a5cff; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; }
+  .optrow { padding:5px 8px; border-radius:8px; margin:3px 0; }
+  .optrow.ok { background:#e8f8ee; color:#1a8a3a; font-weight:700; }
+  .optrow.bad { background:#fdeaea; color:#d23; font-weight:700; }
+  .ansline { font-size:13px; margin-top:6px; }
+  .ansline.bad { color:#d23; }
+  .simbtn { margin-left:6px; }
+  .simpanel { margin-top:10px; border-top:1px dashed #e0e0e0; padding-top:10px; }
+  .simq { border:1px solid #eee; border-radius:10px; padding:10px; margin:8px 0; }
+  .simq .sqt { font-size:14px; font-weight:600; line-height:1.5; }
+  .simq .sans { font-size:13px; margin-top:6px; color:#1a8a3a; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>📊 学情工作台</h1>
+  <p>自主学习辅助 · 跨模块学情打通（不授课、不保分）</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 主页</button></div>
+</div>
+<div class="tabs" id="tabs">
+  <button data-t="check" class="on" onclick="switchTab('check')">🔍 基础自检中心</button>
+  <button data-t="weak" onclick="switchTab('weak')">📉 我的薄弱点</button>
+  <button data-t="wrong" onclick="switchTab('wrong')">📕 错题本</button>
+  <button data-t="report" onclick="switchTab('report')">📈 学习报告</button>
+</div>
+<div class="panel"><div class="frame" id="frame"></div></div>
+
+<script>
+const api=(u,opt)=>fetch(u,opt).then(r=>r.json().then(j=>({s:r.status,j})));
+let TOKEN=localStorage.getItem('token')||'';
+function fp(){ try{ const c=document.createElement('canvas'); const x=c.getContext('2d'); x.textBaseline='top'; x.font="14px 'Arial'"; x.fillText('szgaokao-fp',2,2); const px=c.toDataURL(); const s=[px,navigator.userAgent,navigator.language,(navigator.languages||[]).join(','),screen.width+'x'+screen.height+'x'+screen.colorDepth,new Date().getTimezoneOffset(),navigator.hardwareConcurrency||0,navigator.deviceMemory||0].join('|'); let h=0x811c9dc5; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,0x01000193);} return ('0000000'+(h>>>0).toString(16)).slice(-8);}catch(e){return 'fp-fallback';} }
+const DEVFP=(()=>{ try{ let f=localStorage.getItem('devfp'); if(!f){f=fp();localStorage.setItem('devfp',f);} return f;}catch(e){return fp();} })();
+const H=()=>({'Content-Type':'application/json','X-Device':DEVFP,...(TOKEN?{Authorization:TOKEN}:{})});
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+const OPTL=['A','B','C','D','E','F'];
+let ST=null;
+
+function switchTab(t){
+  document.querySelectorAll('#tabs button').forEach(b=>b.className=(b.dataset.t===t?'on':''));
+  const f=document.getElementById('frame');
+  if(t==='check'){ f.innerHTML='<iframe src="./selfcheck.html"></iframe>'; return; }
+  f.innerHTML='<div class="note">加载中…</div>';
+  ensureStudy().then(st=>{
+    if(t==='weak') renderWeak(st);
+    else if(t==='wrong') renderWrong(st);
+    else if(t==='report') renderReport(st);
+  }).catch(e=>{ f.innerHTML='<div class="note">加载失败：'+esc(e.message||e)+'</div>'; });
+  try{ location.hash=t; }catch(e){}
+}
+async function ensureStudy(){ if(ST) return ST; const r=await api('/api/study',{headers:H()}); if(r.s!==200){ throw new Error((r.j&&r.j.error)||'加载失败'); } ST=r.j; window.__study=r.j; return ST; }
+
+function parseQid(qid){
+  const m=/^math:(mp|mj|mh)([0-9]+)#([0-9]+)$/.exec(qid);
+  if(!m) return {raw:qid};
+  const lvl=m[1]==='mp'?'小学':(m[1]==='mj'?'初中':'高中');
+  return {mod:'数学', lvl, vol:m[1]+m[2], idx:parseInt(m[3],10)};
+}
+function fmtDate(ts){ if(!ts) return '—'; const d=new Date(ts); return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+
+function renderWeak(st){
+  const f=document.getElementById('frame');
+  const tags=st.tags||{};
+  const keys=Object.keys(tags);
+  if(!keys.length){ f.innerHTML='<div class="note">还没有学情数据。<br>去 🔍 基础自检中心做几题，这里会显示你的跨模块薄弱知识点。</div>'; return; }
+  const subj=[], habit=[];
+  keys.forEach(k=>{ const r=Object.assign({key:k},tags[k]); if(k.indexOf('跨模块·')===0) habit.push(r); else subj.push(r); });
+  const rate=r=>r.total?Math.round((r.total-r.wrong)/r.total*100):0;
+  subj.sort((a,b)=> (b.wrong-a.wrong) || (rate(a)-rate(b)));
+  habit.sort((a,b)=> (b.wrong-a.wrong) || (rate(a)-rate(b)));
+  const item=r=>{ const rr=rate(r); return '<div class="wk-item"><div class="wk-top"><span class="wk-name">'+esc(r.key)+'</span><span class="wk-num">错 '+r.wrong+' / 总 '+r.total+'</span></div><div class="wk-bar"><div style="width:'+rr+'%"></div></div><div class="wk-rate'+(rr<60?' bad':'')+'">正确率 '+rr+'%</div></div>'; };
+  const itemHabit=r=>{ const rr=rate(r); return '<div class="wk-item"><div class="wk-top"><span class="wk-name">'+esc(r.key)+'</span><span class="wk-num">错 '+r.wrong+' / 总 '+r.total+'</span></div><div class="wk-bar"><div style="width:'+rr+'%"></div></div><div class="wk-rate'+(rr<60?' bad':'')+'">正确率 '+rr+'%</div><div class="qact" style="margin-top:8px;"><button class="mini-btn" onclick="habitPractice('+JSON.stringify(r.key)+')">🎯 针对性练习</button></div></div>'; };
+  let h='<div class="sec-title">📉 我的薄弱点</div><div class="sec-sub">基于你的逐题作答自动归类（科目类 + 习惯类），正确率越低越需巩固</div>';
+  h+='<div class="wk-group"><div class="sec-sub" style="font-weight:700;color:#444;">科目薄弱点</div>'+(subj.length?subj.map(item).join(''):'<div class="note" style="padding:20px;">暂无科目类数据</div>')+'</div>';
+  h+='<div class="wk-group"><div class="sec-sub" style="font-weight:700;color:#444;">习惯薄弱点（跨模块）</div>'+(habit.length?habit.map(itemHabit).join(''):'<div class="note" style="padding:20px;">暂无习惯类数据。答错时标记「为什么错」（审题漏看 / 计算马虎 / 单位换算 / 概念混淆），这里会生成针对性练习。</div>')+'</div>';
+  f.innerHTML=h;
+}
+
+function renderWrong(st){
+  const f=document.getElementById('frame');
+  const ans=st.ans||{};
+  const list=[];
+  for(const qid in ans){ if(ans[qid].w>0) list.push({qid, rec:ans[qid]}); }
+  if(!list.length){ f.innerHTML='<div class="note">🎉 还没有错题！<br>继续在 🔍 基础自检中心练习，答错的题会自动收录到这里。</div>'; return; }
+  list.sort((a,b)=> b.rec.w-a.rec.w);
+  const qids=list.map(x=>x.qid).join(',');
+  f.innerHTML='<div class="sec-title">📕 错题本</div><div class="sec-sub">共 '+list.length+' 道答错过的题，展开可看题面与解析，点「重做」回到自检中心巩固</div><div id="wrongList"></div><div class="note" id="wrongLoad">加载题面中…</div>';
+  api('/api/qbyid?qids='+encodeURIComponent(qids),{headers:H()}).then(r=>{
+    const map=(r.s===200&&r.j.questions)||{};
+    const box=document.getElementById('wrongList'); const ld=document.getElementById('wrongLoad');
+    box.innerHTML=list.map((it,ix)=>{
+      const pq=parseQid(it.qid); const qm=map[it.qid];
+      const meta = pq.raw ? esc(pq.raw) : (pq.mod+' · '+pq.lvl+' · '+pq.vol+' #'+(pq.idx+1));
+      let wrongOpt='—';
+      if(qm && qm.type!=='fill' && it.rec.lw!=null && qm.options && qm.options[it.rec.lw]!=null){ wrongOpt=OPTL[it.rec.lw]+'. '+qm.options[it.rec.lw]; }
+      const tags=(it.rec.tags||[]).map(t=>'<span class="tagchip'+(t.indexOf('跨模块·')===0?' habit':'')+'">'+esc(t)+'</span>').join('');
+      return '<div class="qcard"><div class="qmeta">'+meta+' ｜ 错 '+it.rec.w+' 次 / 对 '+it.rec.r+' 次 ｜ 最近错选：'+esc(wrongOpt)+'</div><div>'+tags+'</div>'+
+        '<div class="qact"><button class="mini-btn" onclick="toggleQ('+ix+')">展开复盘</button> <button class="mini-btn" onclick="location.href=\'./selfcheck.html\'">重做</button> <button class="mini-btn simbtn" onclick="similarPractice('+ix+')">📚 同知识点巩固</button></div>'+
+        '<div id="qbody-'+ix+'" style="display:none;margin-top:8px;"></div>'+
+        '<div id="simp-'+ix+'" style="display:none;margin-top:8px;"></div></div>';
+    }).join('');
+    ld.style.display='none';
+    window.__qmap=map; window.__wrongList=list;
+  });
+}
+function toggleQ(ix){
+  const el=document.getElementById('qbody-'+ix); if(!el) return;
+  if(el.style.display!=='none'){ el.style.display='none'; return; }
+  const it=window.__wrongList[ix]; const qm=window.__qmap[it.qid];
+  let body='';
+  if(!qm){ body='<div class="qtext">该题暂不支持预览（目前仅数学题可回看，英语题后续补充）。</div>'; }
+  else {
+    body='<div class="qtext">'+esc(qm.q)+'</div>';
+    if(qm.type==='fill'){
+      const ua = it.rec.lw!=null ? String(it.rec.lw) : '—';
+      body+='<div class="ansline">✅ 正确答案：<b>'+esc(qm.answer)+'</b></div>';
+      body+='<div class="ansline bad">❌ 你的答案：'+esc(ua)+'</div>';
+    } else if(qm.options){
+      const ansIdx = (typeof qm.answer==='number') ? qm.answer : qm.options.indexOf(qm.answer);
+      const myIdx = (it.rec.lw!=null && typeof it.rec.lw==='number') ? it.rec.lw : -1;
+      body+='<div class="qopts">'+qm.options.map((o,i)=>{
+        let cls='optrow'; let mark='';
+        if(i===ansIdx){ cls+=' ok'; mark=' ✅'; }
+        else if(i===myIdx){ cls+=' bad'; mark=' ❌'; }
+        return '<div class="'+cls+'">'+OPTL[i]+'. '+esc(o)+mark+'</div>';
+      }).join('')+'</div>';
+      if(ansIdx>=0){ body+='<div class="ansline">✅ 正确答案：'+OPTL[ansIdx]+'. '+esc(qm.options[ansIdx])+'</div>'; }
+      if(myIdx>=0 && myIdx!==ansIdx){ body+='<div class="ansline bad">❌ 你的答案：'+OPTL[myIdx]+'. '+esc(qm.options[myIdx])+'</div>'; }
+    }
+    if(qm.tip){ body+='<div class="qtip">📖 解析：'+esc(qm.tip)+'</div>'; }
+    if(qm.steps && qm.steps.length){ body+='<div class="sec-sub" style="font-weight:700;color:#444;margin:8px 0 4px;">📝 分步解题</div>'+qm.steps.map(function(s,i){ return '<div class="step"><b>'+(s.title||('第'+(i+1)+'步'))+'</b>：'+esc(s.detail)+'</div>'; }).join(''); }
+    const tagHtml=(it.rec.tags||[]).map(t=>'<span class="tagchip'+(t.indexOf('跨模块·')===0?' habit':'')+'">'+esc(t)+'</span>').join(' ');
+    if(tagHtml){ body+='<div style="margin-top:8px;"><div class="sec-sub" style="font-weight:700;color:#444;margin-bottom:4px;">知识点 / 错因</div>'+tagHtml+'</div>'; }
+  }
+  el.innerHTML=body; el.style.display='block';
+}
+async function similarPractice(ix){
+  const el=document.getElementById('simp-'+ix); if(!el) return;
+  if(el.style.display!=='none'){ el.style.display='none'; return; }
+  const it=window.__wrongList[ix]; const pq=parseQid(it.qid);
+  const lvl = pq.raw ? 'p' : (pq.lvl==='初中' ? 'm' : (pq.lvl==='高中' ? 'h' : 'p'));
+  const tag = (it.rec.tags||[]).find(t => t.indexOf('跨模块·')!==0) || '';
+  el.innerHTML='<div class="simpanel"><div class="sec-sub">正在生成同知识点练习…</div></div>';
+  el.style.display='block';
+  try {
+    const r=await api('/api/selfcheck',{method:'POST',headers:H(),body:JSON.stringify({module:'math',level:lvl,count:3,tags:tag?[tag]:[]})});
+    const qs=(r.s===200 && r.j.questions) || [];
+    if(!qs.length){ el.innerHTML='<div class="simpanel"><div class="note" style="padding:10px;">暂无可用的同知识点题目。</div></div>'; return; }
+    el.innerHTML='<div class="simpanel"><div class="sec-sub">📚 同知识点巩固（'+esc(tag||'全部')+'）：做完点「看答案」</div>'+qs.map((q,i)=>{
+      const opts = q.type==='fill' ? '' : '<div class="qopts">'+q.options.map((o,j)=>OPTL[j]+'. '+esc(o)).join('<br>')+'</div>';
+      return '<div class="simq"><div class="sqt">'+esc(q.q)+'</div>'+opts+'<div class="qact"><button class="mini-btn" onclick="revealSim('+ix+','+i+')">看答案</button></div><div id="sans-'+ix+'-'+i+'" style="display:none;" class="sans"></div></div>';
+    }).join('')+'</div>';
+    window.__simMap = window.__simMap||{}; window.__simMap[ix]=qs;
+  } catch(e){ el.innerHTML='<div class="simpanel"><div class="note" style="padding:10px;">生成失败：'+esc(e.message||e)+'</div></div>'; }
+}
+function revealSim(ix,i){
+  const el=document.getElementById('sans-'+ix+'-'+i); if(!el) return;
+  const q=(window.__simMap && window.__simMap[ix] && window.__simMap[ix][i]);
+  if(!q) return;
+  const a = q.type==='fill' ? ('参考答案：'+esc(q.answer)) : ('正确答案：'+OPTL[q.answer]+'. '+esc(q.options[q.answer]));
+  el.innerHTML=a; el.style.display='block';
+}
+
+// —— P4 片②：答题习惯专项（按 跨模块·* 错因标签做针对性复习）——
+// 逻辑：从学情 ans 中筛出带该习惯标签且答错过的题，收集其知识点标签（非跨模块），
+// 按学段分组后调 selfcheck（OR 过滤）生成分学段混合练习，无需新增后端。
+async function habitPractice(habitKey){
+  const st = ST || window.__study;
+  if(!st){ alert('学情数据未加载，请稍后重试'); return; }
+  const ans = st.ans||{};
+  const byLevel = { p:new Set(), m:new Set(), h:new Set() };
+  for(const qid in ans){
+    const rec = ans[qid]; if(!rec || !(rec.w>0)) continue;
+    const tags = rec.tags||[]; if(tags.indexOf(habitKey)<0) continue;
+    const m = /^math:(mp|mj|mh)/.exec(qid);
+    const lvl = m ? (m[1]==='mp'?'p':(m[1]==='mj'?'m':'h')) : 'p';
+    tags.forEach(function(t){ if(t.indexOf('跨模块·')!==0) byLevel[lvl].add(t); });
+  }
+  const f=document.getElementById('frame');
+  f.innerHTML='<div class="sec-title">🎯 针对性练习 · '+esc(habitKey)+'</div>'+
+    '<div class="sec-sub">基于你在该习惯下的错题知识点生成（按学段混合）。做完点「看答案」核对。</div>'+
+    '<div id="hpArea"><div class="note">正在生成练习…</div></div>'+
+    '<div class="qact" style="margin-top:14px;"><button class="mini-btn" onclick="switchTab(\'weak\')">← 返回薄弱点</button></div>';
+  try {
+    const allQs=[];
+    for(const lvl of ['p','m','h']){
+      const ks=[...byLevel[lvl]]; if(!ks.length) continue;
+      const r=await api('/api/selfcheck',{method:'POST',headers:H(),body:JSON.stringify({module:'math',level:lvl,count:3,tags:ks})});
+      if(r.s===200 && r.j && r.j.questions) allQs.push.apply(allQs, r.j.questions);
+    }
+    const area=document.getElementById('hpArea');
+    if(!allQs.length){ area.innerHTML='<div class="note">暂无可练习题目。<br>先去 🔍 基础自检中心做几题，并在答错时标记「为什么错」，这里就能生成针对性练习。</div>'; return; }
+    area.innerHTML=allQs.map(function(q,i){
+      const opts = q.type==='fill'
+        ? '<div class="qopts" style="margin-top:6px;color:#444;font-size:13px;">（填空题：在纸上写出答案后点「看答案」）</div>'
+        : '<div class="qopts">'+q.options.map(function(o,j){return OPTL[j]+'. '+esc(o);}).join('<br>')+'</div>';
+      return '<div class="simq"><div class="sqt">'+esc(q.q)+'</div>'+opts+
+        '<div class="qact"><button class="mini-btn" onclick="revealHp('+i+')">看答案</button></div>'+
+        '<div id="hpans-'+i+'" style="display:none;" class="sans"></div></div>';
+    }).join('');
+    window.__hpMap = allQs;
+  } catch(e){ const area=document.getElementById('hpArea'); if(area) area.innerHTML='<div class="note">生成失败：'+esc(e.message||e)+'</div>'; }
+}
+function revealHp(i){
+  const el=document.getElementById('hpans-'+i); if(!el) return;
+  const q=window.__hpMap && window.__hpMap[i]; if(!q) return;
+  const a = q.type==='fill' ? ('参考答案：'+esc(q.answer)) : ('正确答案：'+OPTL[q.answer]+'. '+esc(q.options[q.answer]));
+  el.innerHTML=a; el.style.display='block';
+}
+
+function renderReport(st){
+  const f=document.getElementById('frame');
+  const ans=st.ans||{}; const tags=st.tags||{};
+  let total=0,right=0,wrong=0;
+  for(const k in ans){ total+= (ans[k].r||0)+(ans[k].w||0); right+=ans[k].r||0; wrong+=ans[k].w||0; }
+  if(!total){ f.innerHTML='<div class="note">还没有学习数据。<br>去 🔍 基础自检中心做几题，这里会生成你的专属学习报告。</div>'; return; }
+  const rate=Math.round(right/total*100);
+  const tagKeys=Object.keys(tags);
+  tagKeys.sort((a,b)=>{ const ra=tags[a].total?(1-tags[a].wrong/tags[a].total):1, rb=tags[b].total?(1-tags[b].wrong/tags[b].total):1; return ra-rb; });
+  let rows=tagKeys.map(k=>{ const r=tags[k]; const rr=r.total?Math.round((r.total-r.wrong)/r.total*100):0; return '<tr><td>'+esc(k)+'</td><td>'+r.total+'</td><td>'+r.wrong+'</td><td'+(rr<60?' style="color:#e23;font-weight:700"':'')+'>'+rr+'%</td></tr>'; }).join('');
+  const habit=tagKeys.filter(k=>k.indexOf('跨模块·')===0).map(k=>{ const r=tags[k]; return esc(k)+'：错 '+r.wrong+' / 总 '+r.total; }).join(' ｜ ');
+  let h='<div class="sec-title">📈 学习报告</div>';
+  h+='<div class="rep-grid"><div class="rep-card"><div class="v">'+total+'</div><div class="l">累计作答</div></div>'+
+     '<div class="rep-card"><div class="v">'+right+'</div><div class="l">答对</div></div>'+
+     '<div class="rep-card"><div class="v">'+wrong+'</div><div class="l">答错</div></div>'+
+     '<div class="rep-card"><div class="v">'+rate+'%</div><div class="l">总正确率</div></div></div>';
+  h+='<div class="sec-sub" style="font-weight:700;color:#444;">各知识点正确率</div>';
+  h+='<table class="tbl"><tr><th>知识点</th><th>总</th><th>错</th><th>正确率</th></tr>'+rows+'</table>';
+  if(habit.length){ h+='<div class="sec-sub" style="font-weight:700;color:#444;margin-top:16px;">答题习惯分析（跨模块）</div><div class="note" style="padding:10px;text-align:left;color:#666;">'+habit+'</div>'; }
+  h+='<div class="sec-sub" style="margin-top:16px;">最近更新：'+fmtDate(st.updated)+'</div>';
+  f.innerHTML=h;
+}
+
+function boot(){
+  if(!TOKEN){ document.getElementById('frame').innerHTML='<div class="login-gate">📊 学情工作台需要登录后查看<br><a href="./index.html">前往登录 / 注册</a></div>'; return; }
+  switchTab((location.hash||'#check').slice(1));
+}
+window.addEventListener('hashchange',()=>{ const t=(location.hash||'#check').slice(1); switchTab(t); });
+boot();
+</script>
+</body>
+</html>

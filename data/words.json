@@ -1,0 +1,2012 @@
+{
+  "product": "小学英语单词听读背记",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "单词按年级与主题分组；audio 为单词发音；支持听/读/背/记四模式",
+  "groups": [
+    {
+      "id": "g3a",
+      "grade": 3,
+      "title": "颜色与数字",
+      "words": [
+        {
+          "id": "g3a01",
+          "word": "red",
+          "phonetic": "/red/",
+          "pos": "adj.",
+          "meaning": "红色的",
+          "audio": "/audio/w/g3a01.mp3"
+        },
+        {
+          "id": "g3a02",
+          "word": "blue",
+          "phonetic": "/bluː/",
+          "pos": "adj.",
+          "meaning": "蓝色的",
+          "audio": "/audio/w/g3a02.mp3"
+        },
+        {
+          "id": "g3a03",
+          "word": "green",
+          "phonetic": "/ɡriːn/",
+          "pos": "adj.",
+          "meaning": "绿色的",
+          "audio": "/audio/w/g3a03.mp3"
+        },
+        {
+          "id": "g3a04",
+          "word": "yellow",
+          "phonetic": "/ˈjeləʊ/",
+          "pos": "adj.",
+          "meaning": "黄色的",
+          "audio": "/audio/w/g3a04.mp3"
+        },
+        {
+          "id": "g3a05",
+          "word": "black",
+          "phonetic": "/blæk/",
+          "pos": "adj.",
+          "meaning": "黑色的",
+          "audio": "/audio/w/g3a05.mp3"
+        },
+        {
+          "id": "g3a06",
+          "word": "white",
+          "phonetic": "/waɪt/",
+          "pos": "adj.",
+          "meaning": "白色的",
+          "audio": "/audio/w/g3a06.mp3"
+        },
+        {
+          "id": "g3a07",
+          "word": "orange",
+          "phonetic": "/ˈɒrɪndʒ/",
+          "pos": "adj.",
+          "meaning": "橙色的",
+          "audio": "/audio/w/g3a07.mp3"
+        },
+        {
+          "id": "g3a08",
+          "word": "brown",
+          "phonetic": "/braʊn/",
+          "pos": "adj.",
+          "meaning": "棕色的",
+          "audio": "/audio/w/g3a08.mp3"
+        },
+        {
+          "id": "g3a09",
+          "word": "pink",
+          "phonetic": "/pɪŋk/",
+          "pos": "adj.",
+          "meaning": "粉色的",
+          "audio": "/audio/w/g3a09.mp3"
+        },
+        {
+          "id": "g3a10",
+          "word": "purple",
+          "phonetic": "/ˈpɜːpl/",
+          "pos": "adj.",
+          "meaning": "紫色的",
+          "audio": "/audio/w/g3a10.mp3"
+        },
+        {
+          "id": "g3a11",
+          "word": "one",
+          "phonetic": "/wʌn/",
+          "pos": "num.",
+          "meaning": "一",
+          "audio": "/audio/w/g3a11.mp3"
+        },
+        {
+          "id": "g3a12",
+          "word": "two",
+          "phonetic": "/tuː/",
+          "pos": "num.",
+          "meaning": "二",
+          "audio": "/audio/w/g3a12.mp3"
+        },
+        {
+          "id": "g3a13",
+          "word": "three",
+          "phonetic": "/θriː/",
+          "pos": "num.",
+          "meaning": "三",
+          "audio": "/audio/w/g3a13.mp3"
+        },
+        {
+          "id": "g3a14",
+          "word": "four",
+          "phonetic": "/fɔː(r)/",
+          "pos": "num.",
+          "meaning": "四",
+          "audio": "/audio/w/g3a14.mp3"
+        },
+        {
+          "id": "g3a15",
+          "word": "five",
+          "phonetic": "/faɪv/",
+          "pos": "num.",
+          "meaning": "五",
+          "audio": "/audio/w/g3a15.mp3"
+        },
+        {
+          "id": "g3a16",
+          "word": "six",
+          "phonetic": "/sɪks/",
+          "pos": "num.",
+          "meaning": "六",
+          "audio": "/audio/w/g3a16.mp3"
+        },
+        {
+          "id": "g3a17",
+          "word": "seven",
+          "phonetic": "/ˈsevn/",
+          "pos": "num.",
+          "meaning": "七",
+          "audio": "/audio/w/g3a17.mp3"
+        },
+        {
+          "id": "g3a18",
+          "word": "eight",
+          "phonetic": "/eɪt/",
+          "pos": "num.",
+          "meaning": "八",
+          "audio": "/audio/w/g3a18.mp3"
+        },
+        {
+          "id": "g3a19",
+          "word": "nine",
+          "phonetic": "/naɪn/",
+          "pos": "num.",
+          "meaning": "九",
+          "audio": "/audio/w/g3a19.mp3"
+        },
+        {
+          "id": "g3a20",
+          "word": "ten",
+          "phonetic": "/ten/",
+          "pos": "num.",
+          "meaning": "十",
+          "audio": "/audio/w/g3a20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g3b",
+      "grade": 3,
+      "title": "文具与身体",
+      "words": [
+        {
+          "id": "g3b01",
+          "word": "pen",
+          "phonetic": "/pen/",
+          "pos": "n.",
+          "meaning": "钢笔",
+          "audio": "/audio/w/g3b01.mp3"
+        },
+        {
+          "id": "g3b02",
+          "word": "pencil",
+          "phonetic": "/ˈpensl/",
+          "pos": "n.",
+          "meaning": "铅笔",
+          "audio": "/audio/w/g3b02.mp3"
+        },
+        {
+          "id": "g3b03",
+          "word": "ruler",
+          "phonetic": "/ˈruːlə(r)/",
+          "pos": "n.",
+          "meaning": "尺子",
+          "audio": "/audio/w/g3b03.mp3"
+        },
+        {
+          "id": "g3b04",
+          "word": "eraser",
+          "phonetic": "/ɪˈreɪzə(r)/",
+          "pos": "n.",
+          "meaning": "橡皮",
+          "audio": "/audio/w/g3b04.mp3"
+        },
+        {
+          "id": "g3b05",
+          "word": "bag",
+          "phonetic": "/bæɡ/",
+          "pos": "n.",
+          "meaning": "书包",
+          "audio": "/audio/w/g3b05.mp3"
+        },
+        {
+          "id": "g3b06",
+          "word": "book",
+          "phonetic": "/bʊk/",
+          "pos": "n.",
+          "meaning": "书",
+          "audio": "/audio/w/g3b06.mp3"
+        },
+        {
+          "id": "g3b07",
+          "word": "crayon",
+          "phonetic": "/ˈkreɪən/",
+          "pos": "n.",
+          "meaning": "蜡笔",
+          "audio": "/audio/w/g3b07.mp3"
+        },
+        {
+          "id": "g3b08",
+          "word": "pencil box",
+          "phonetic": "/ˈpensl bɒks/",
+          "pos": "n.",
+          "meaning": "铅笔盒",
+          "audio": "/audio/w/g3b08.mp3"
+        },
+        {
+          "id": "g3b09",
+          "word": "eye",
+          "phonetic": "/aɪ/",
+          "pos": "n.",
+          "meaning": "眼睛",
+          "audio": "/audio/w/g3b09.mp3"
+        },
+        {
+          "id": "g3b10",
+          "word": "ear",
+          "phonetic": "/ɪə(r)/",
+          "pos": "n.",
+          "meaning": "耳朵",
+          "audio": "/audio/w/g3b10.mp3"
+        },
+        {
+          "id": "g3b11",
+          "word": "nose",
+          "phonetic": "/nəʊz/",
+          "pos": "n.",
+          "meaning": "鼻子",
+          "audio": "/audio/w/g3b11.mp3"
+        },
+        {
+          "id": "g3b12",
+          "word": "mouth",
+          "phonetic": "/maʊθ/",
+          "pos": "n.",
+          "meaning": "嘴",
+          "audio": "/audio/w/g3b12.mp3"
+        },
+        {
+          "id": "g3b13",
+          "word": "face",
+          "phonetic": "/feɪs/",
+          "pos": "n.",
+          "meaning": "脸",
+          "audio": "/audio/w/g3b13.mp3"
+        },
+        {
+          "id": "g3b14",
+          "word": "head",
+          "phonetic": "/hed/",
+          "pos": "n.",
+          "meaning": "头",
+          "audio": "/audio/w/g3b14.mp3"
+        },
+        {
+          "id": "g3b15",
+          "word": "hand",
+          "phonetic": "/hænd/",
+          "pos": "n.",
+          "meaning": "手",
+          "audio": "/audio/w/g3b15.mp3"
+        },
+        {
+          "id": "g3b16",
+          "word": "arm",
+          "phonetic": "/ɑːm/",
+          "pos": "n.",
+          "meaning": "手臂",
+          "audio": "/audio/w/g3b16.mp3"
+        },
+        {
+          "id": "g3b17",
+          "word": "leg",
+          "phonetic": "/leɡ/",
+          "pos": "n.",
+          "meaning": "腿",
+          "audio": "/audio/w/g3b17.mp3"
+        },
+        {
+          "id": "g3b18",
+          "word": "foot",
+          "phonetic": "/fʊt/",
+          "pos": "n.",
+          "meaning": "脚",
+          "audio": "/audio/w/g3b18.mp3"
+        },
+        {
+          "id": "g3b19",
+          "word": "body",
+          "phonetic": "/ˈbɒdi/",
+          "pos": "n.",
+          "meaning": "身体",
+          "audio": "/audio/w/g3b19.mp3"
+        },
+        {
+          "id": "g3b20",
+          "word": "school",
+          "phonetic": "/skuːl/",
+          "pos": "n.",
+          "meaning": "学校",
+          "audio": "/audio/w/g3b20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g3c",
+      "grade": 3,
+      "title": "动物与水果",
+      "words": [
+        {
+          "id": "g3c01",
+          "word": "cat",
+          "phonetic": "/kæt/",
+          "pos": "n.",
+          "meaning": "猫",
+          "audio": "/audio/w/g3c01.mp3"
+        },
+        {
+          "id": "g3c02",
+          "word": "dog",
+          "phonetic": "/dɒɡ/",
+          "pos": "n.",
+          "meaning": "狗",
+          "audio": "/audio/w/g3c02.mp3"
+        },
+        {
+          "id": "g3c03",
+          "word": "duck",
+          "phonetic": "/dʌk/",
+          "pos": "n.",
+          "meaning": "鸭子",
+          "audio": "/audio/w/g3c03.mp3"
+        },
+        {
+          "id": "g3c04",
+          "word": "pig",
+          "phonetic": "/pɪɡ/",
+          "pos": "n.",
+          "meaning": "猪",
+          "audio": "/audio/w/g3c04.mp3"
+        },
+        {
+          "id": "g3c05",
+          "word": "cow",
+          "phonetic": "/kaʊ/",
+          "pos": "n.",
+          "meaning": "奶牛",
+          "audio": "/audio/w/g3c05.mp3"
+        },
+        {
+          "id": "g3c06",
+          "word": "sheep",
+          "phonetic": "/ʃiːp/",
+          "pos": "n.",
+          "meaning": "绵羊",
+          "audio": "/audio/w/g3c06.mp3"
+        },
+        {
+          "id": "g3c07",
+          "word": "horse",
+          "phonetic": "/hɔːs/",
+          "pos": "n.",
+          "meaning": "马",
+          "audio": "/audio/w/g3c07.mp3"
+        },
+        {
+          "id": "g3c08",
+          "word": "hen",
+          "phonetic": "/hen/",
+          "pos": "n.",
+          "meaning": "母鸡",
+          "audio": "/audio/w/g3c08.mp3"
+        },
+        {
+          "id": "g3c09",
+          "word": "bird",
+          "phonetic": "/bɜːd/",
+          "pos": "n.",
+          "meaning": "鸟",
+          "audio": "/audio/w/g3c09.mp3"
+        },
+        {
+          "id": "g3c10",
+          "word": "fish",
+          "phonetic": "/fɪʃ/",
+          "pos": "n.",
+          "meaning": "鱼",
+          "audio": "/audio/w/g3c10.mp3"
+        },
+        {
+          "id": "g3c11",
+          "word": "apple",
+          "phonetic": "/ˈæpl/",
+          "pos": "n.",
+          "meaning": "苹果",
+          "audio": "/audio/w/g3c11.mp3"
+        },
+        {
+          "id": "g3c12",
+          "word": "banana",
+          "phonetic": "/bəˈnɑːnə/",
+          "pos": "n.",
+          "meaning": "香蕉",
+          "audio": "/audio/w/g3c12.mp3"
+        },
+        {
+          "id": "g3c13",
+          "word": "pear",
+          "phonetic": "/peə(r)/",
+          "pos": "n.",
+          "meaning": "梨",
+          "audio": "/audio/w/g3c13.mp3"
+        },
+        {
+          "id": "g3c14",
+          "word": "peach",
+          "phonetic": "/piːtʃ/",
+          "pos": "n.",
+          "meaning": "桃子",
+          "audio": "/audio/w/g3c14.mp3"
+        },
+        {
+          "id": "g3c15",
+          "word": "watermelon",
+          "phonetic": "/ˈwɔːtəmelən/",
+          "pos": "n.",
+          "meaning": "西瓜",
+          "audio": "/audio/w/g3c15.mp3"
+        },
+        {
+          "id": "g3c16",
+          "word": "grape",
+          "phonetic": "/ɡreɪp/",
+          "pos": "n.",
+          "meaning": "葡萄",
+          "audio": "/audio/w/g3c16.mp3"
+        },
+        {
+          "id": "g3c17",
+          "word": "strawberry",
+          "phonetic": "/ˈstrɔːbəri/",
+          "pos": "n.",
+          "meaning": "草莓",
+          "audio": "/audio/w/g3c17.mp3"
+        },
+        {
+          "id": "g3c18",
+          "word": "mango",
+          "phonetic": "/ˈmæŋɡəʊ/",
+          "pos": "n.",
+          "meaning": "芒果",
+          "audio": "/audio/w/g3c18.mp3"
+        },
+        {
+          "id": "g3c19",
+          "word": "lemon",
+          "phonetic": "/ˈlemən/",
+          "pos": "n.",
+          "meaning": "柠檬",
+          "audio": "/audio/w/g3c19.mp3"
+        },
+        {
+          "id": "g3c20",
+          "word": "cherry",
+          "phonetic": "/ˈtʃeri/",
+          "pos": "n.",
+          "meaning": "樱桃",
+          "audio": "/audio/w/g3c20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g4a",
+      "grade": 4,
+      "title": "家庭与房间",
+      "words": [
+        {
+          "id": "g4a01",
+          "word": "father",
+          "phonetic": "/ˈfɑːðə(r)/",
+          "pos": "n.",
+          "meaning": "父亲",
+          "audio": "/audio/w/g4a01.mp3"
+        },
+        {
+          "id": "g4a02",
+          "word": "mother",
+          "phonetic": "/ˈmʌðə(r)/",
+          "pos": "n.",
+          "meaning": "母亲",
+          "audio": "/audio/w/g4a02.mp3"
+        },
+        {
+          "id": "g4a03",
+          "word": "brother",
+          "phonetic": "/ˈbrʌðə(r)/",
+          "pos": "n.",
+          "meaning": "兄弟",
+          "audio": "/audio/w/g4a03.mp3"
+        },
+        {
+          "id": "g4a04",
+          "word": "sister",
+          "phonetic": "/ˈsɪstə(r)/",
+          "pos": "n.",
+          "meaning": "姐妹",
+          "audio": "/audio/w/g4a04.mp3"
+        },
+        {
+          "id": "g4a05",
+          "word": "grandpa",
+          "phonetic": "/ˈɡrænpɑː/",
+          "pos": "n.",
+          "meaning": "爷爷；外公",
+          "audio": "/audio/w/g4a05.mp3"
+        },
+        {
+          "id": "g4a06",
+          "word": "grandma",
+          "phonetic": "/ˈɡrænmɑː/",
+          "pos": "n.",
+          "meaning": "奶奶；外婆",
+          "audio": "/audio/w/g4a06.mp3"
+        },
+        {
+          "id": "g4a07",
+          "word": "uncle",
+          "phonetic": "/ˈʌŋkl/",
+          "pos": "n.",
+          "meaning": "叔叔；舅舅",
+          "audio": "/audio/w/g4a07.mp3"
+        },
+        {
+          "id": "g4a08",
+          "word": "aunt",
+          "phonetic": "/ɑːnt/",
+          "pos": "n.",
+          "meaning": "阿姨；姑姑",
+          "audio": "/audio/w/g4a08.mp3"
+        },
+        {
+          "id": "g4a09",
+          "word": "family",
+          "phonetic": "/ˈfæməli/",
+          "pos": "n.",
+          "meaning": "家庭",
+          "audio": "/audio/w/g4a09.mp3"
+        },
+        {
+          "id": "g4a10",
+          "word": "parent",
+          "phonetic": "/ˈpeərənt/",
+          "pos": "n.",
+          "meaning": "父母亲",
+          "audio": "/audio/w/g4a10.mp3"
+        },
+        {
+          "id": "g4a11",
+          "word": "home",
+          "phonetic": "/həʊm/",
+          "pos": "n.",
+          "meaning": "家",
+          "audio": "/audio/w/g4a11.mp3"
+        },
+        {
+          "id": "g4a12",
+          "word": "room",
+          "phonetic": "/ruːm/",
+          "pos": "n.",
+          "meaning": "房间",
+          "audio": "/audio/w/g4a12.mp3"
+        },
+        {
+          "id": "g4a13",
+          "word": "bedroom",
+          "phonetic": "/ˈbedruːm/",
+          "pos": "n.",
+          "meaning": "卧室",
+          "audio": "/audio/w/g4a13.mp3"
+        },
+        {
+          "id": "g4a14",
+          "word": "living room",
+          "phonetic": "/ˈlɪvɪŋ ruːm/",
+          "pos": "n.",
+          "meaning": "客厅",
+          "audio": "/audio/w/g4a14.mp3"
+        },
+        {
+          "id": "g4a15",
+          "word": "kitchen",
+          "phonetic": "/ˈkɪtʃɪn/",
+          "pos": "n.",
+          "meaning": "厨房",
+          "audio": "/audio/w/g4a15.mp3"
+        },
+        {
+          "id": "g4a16",
+          "word": "bathroom",
+          "phonetic": "/ˈbɑːθruːm/",
+          "pos": "n.",
+          "meaning": "浴室",
+          "audio": "/audio/w/g4a16.mp3"
+        },
+        {
+          "id": "g4a17",
+          "word": "study",
+          "phonetic": "/ˈstʌdi/",
+          "pos": "n.",
+          "meaning": "书房",
+          "audio": "/audio/w/g4a17.mp3"
+        },
+        {
+          "id": "g4a18",
+          "word": "door",
+          "phonetic": "/dɔː(r)/",
+          "pos": "n.",
+          "meaning": "门",
+          "audio": "/audio/w/g4a18.mp3"
+        },
+        {
+          "id": "g4a19",
+          "word": "window",
+          "phonetic": "/ˈwɪndəʊ/",
+          "pos": "n.",
+          "meaning": "窗户",
+          "audio": "/audio/w/g4a19.mp3"
+        },
+        {
+          "id": "g4a20",
+          "word": "bed",
+          "phonetic": "/bed/",
+          "pos": "n.",
+          "meaning": "床",
+          "audio": "/audio/w/g4a20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g4b",
+      "grade": 4,
+      "title": "食物与饮料",
+      "words": [
+        {
+          "id": "g4b01",
+          "word": "rice",
+          "phonetic": "/raɪs/",
+          "pos": "n.",
+          "meaning": "米饭",
+          "audio": "/audio/w/g4b01.mp3"
+        },
+        {
+          "id": "g4b02",
+          "word": "noodles",
+          "phonetic": "/ˈnuːdlz/",
+          "pos": "n.",
+          "meaning": "面条",
+          "audio": "/audio/w/g4b02.mp3"
+        },
+        {
+          "id": "g4b03",
+          "word": "bread",
+          "phonetic": "/bred/",
+          "pos": "n.",
+          "meaning": "面包",
+          "audio": "/audio/w/g4b03.mp3"
+        },
+        {
+          "id": "g4b04",
+          "word": "egg",
+          "phonetic": "/eɡ/",
+          "pos": "n.",
+          "meaning": "鸡蛋",
+          "audio": "/audio/w/g4b04.mp3"
+        },
+        {
+          "id": "g4b05",
+          "word": "milk",
+          "phonetic": "/mɪlk/",
+          "pos": "n.",
+          "meaning": "牛奶",
+          "audio": "/audio/w/g4b05.mp3"
+        },
+        {
+          "id": "g4b06",
+          "word": "juice",
+          "phonetic": "/dʒuːs/",
+          "pos": "n.",
+          "meaning": "果汁",
+          "audio": "/audio/w/g4b06.mp3"
+        },
+        {
+          "id": "g4b07",
+          "word": "water",
+          "phonetic": "/ˈwɔːtə(r)/",
+          "pos": "n.",
+          "meaning": "水",
+          "audio": "/audio/w/g4b07.mp3"
+        },
+        {
+          "id": "g4b08",
+          "word": "tea",
+          "phonetic": "/tiː/",
+          "pos": "n.",
+          "meaning": "茶",
+          "audio": "/audio/w/g4b08.mp3"
+        },
+        {
+          "id": "g4b09",
+          "word": "coffee",
+          "phonetic": "/ˈkɒfi/",
+          "pos": "n.",
+          "meaning": "咖啡",
+          "audio": "/audio/w/g4b09.mp3"
+        },
+        {
+          "id": "g4b10",
+          "word": "soup",
+          "phonetic": "/suːp/",
+          "pos": "n.",
+          "meaning": "汤",
+          "audio": "/audio/w/g4b10.mp3"
+        },
+        {
+          "id": "g4b11",
+          "word": "meat",
+          "phonetic": "/miːt/",
+          "pos": "n.",
+          "meaning": "肉",
+          "audio": "/audio/w/g4b11.mp3"
+        },
+        {
+          "id": "g4b12",
+          "word": "chicken",
+          "phonetic": "/ˈtʃɪkɪn/",
+          "pos": "n.",
+          "meaning": "鸡肉",
+          "audio": "/audio/w/g4b12.mp3"
+        },
+        {
+          "id": "g4b13",
+          "word": "beef",
+          "phonetic": "/biːf/",
+          "pos": "n.",
+          "meaning": "牛肉",
+          "audio": "/audio/w/g4b13.mp3"
+        },
+        {
+          "id": "g4b14",
+          "word": "vegetable",
+          "phonetic": "/ˈvedʒtəbl/",
+          "pos": "n.",
+          "meaning": "蔬菜",
+          "audio": "/audio/w/g4b14.mp3"
+        },
+        {
+          "id": "g4b15",
+          "word": "tomato",
+          "phonetic": "/təˈmɑːtəʊ/",
+          "pos": "n.",
+          "meaning": "西红柿",
+          "audio": "/audio/w/g4b15.mp3"
+        },
+        {
+          "id": "g4b16",
+          "word": "potato",
+          "phonetic": "/pəˈteɪtəʊ/",
+          "pos": "n.",
+          "meaning": "土豆",
+          "audio": "/audio/w/g4b16.mp3"
+        },
+        {
+          "id": "g4b17",
+          "word": "carrot",
+          "phonetic": "/ˈkærət/",
+          "pos": "n.",
+          "meaning": "胡萝卜",
+          "audio": "/audio/w/g4b17.mp3"
+        },
+        {
+          "id": "g4b18",
+          "word": "cake",
+          "phonetic": "/keɪk/",
+          "pos": "n.",
+          "meaning": "蛋糕",
+          "audio": "/audio/w/g4b18.mp3"
+        },
+        {
+          "id": "g4b19",
+          "word": "candy",
+          "phonetic": "/ˈkændi/",
+          "pos": "n.",
+          "meaning": "糖果",
+          "audio": "/audio/w/g4b19.mp3"
+        },
+        {
+          "id": "g4b20",
+          "word": "cookie",
+          "phonetic": "/ˈkʊki/",
+          "pos": "n.",
+          "meaning": "饼干",
+          "audio": "/audio/w/g4b20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g4c",
+      "grade": 4,
+      "title": "衣物与天气",
+      "words": [
+        {
+          "id": "g4c01",
+          "word": "shirt",
+          "phonetic": "/ʃɜːt/",
+          "pos": "n.",
+          "meaning": "衬衫",
+          "audio": "/audio/w/g4c01.mp3"
+        },
+        {
+          "id": "g4c02",
+          "word": "T-shirt",
+          "phonetic": "/ˈtiː ʃɜːt/",
+          "pos": "n.",
+          "meaning": "T恤衫",
+          "audio": "/audio/w/g4c02.mp3"
+        },
+        {
+          "id": "g4c03",
+          "word": "dress",
+          "phonetic": "/dres/",
+          "pos": "n.",
+          "meaning": "连衣裙",
+          "audio": "/audio/w/g4c03.mp3"
+        },
+        {
+          "id": "g4c04",
+          "word": "skirt",
+          "phonetic": "/skɜːt/",
+          "pos": "n.",
+          "meaning": "短裙",
+          "audio": "/audio/w/g4c04.mp3"
+        },
+        {
+          "id": "g4c05",
+          "word": "coat",
+          "phonetic": "/kəʊt/",
+          "pos": "n.",
+          "meaning": "外套",
+          "audio": "/audio/w/g4c05.mp3"
+        },
+        {
+          "id": "g4c06",
+          "word": "jacket",
+          "phonetic": "/ˈdʒækɪt/",
+          "pos": "n.",
+          "meaning": "夹克衫",
+          "audio": "/audio/w/g4c06.mp3"
+        },
+        {
+          "id": "g4c07",
+          "word": "sweater",
+          "phonetic": "/ˈswetə(r)/",
+          "pos": "n.",
+          "meaning": "毛衣",
+          "audio": "/audio/w/g4c07.mp3"
+        },
+        {
+          "id": "g4c08",
+          "word": "hat",
+          "phonetic": "/hæt/",
+          "pos": "n.",
+          "meaning": "帽子",
+          "audio": "/audio/w/g4c08.mp3"
+        },
+        {
+          "id": "g4c09",
+          "word": "cap",
+          "phonetic": "/kæp/",
+          "pos": "n.",
+          "meaning": "鸭舌帽",
+          "audio": "/audio/w/g4c09.mp3"
+        },
+        {
+          "id": "g4c10",
+          "word": "shoes",
+          "phonetic": "/ʃuːz/",
+          "pos": "n.",
+          "meaning": "鞋子",
+          "audio": "/audio/w/g4c10.mp3"
+        },
+        {
+          "id": "g4c11",
+          "word": "socks",
+          "phonetic": "/sɒks/",
+          "pos": "n.",
+          "meaning": "袜子",
+          "audio": "/audio/w/g4c11.mp3"
+        },
+        {
+          "id": "g4c12",
+          "word": "pants",
+          "phonetic": "/pænts/",
+          "pos": "n.",
+          "meaning": "裤子",
+          "audio": "/audio/w/g4c12.mp3"
+        },
+        {
+          "id": "g4c13",
+          "word": "shorts",
+          "phonetic": "/ʃɔːts/",
+          "pos": "n.",
+          "meaning": "短裤",
+          "audio": "/audio/w/g4c13.mp3"
+        },
+        {
+          "id": "g4c14",
+          "word": "weather",
+          "phonetic": "/ˈweðə(r)/",
+          "pos": "n.",
+          "meaning": "天气",
+          "audio": "/audio/w/g4c14.mp3"
+        },
+        {
+          "id": "g4c15",
+          "word": "sunny",
+          "phonetic": "/ˈsʌni/",
+          "pos": "adj.",
+          "meaning": "晴朗的",
+          "audio": "/audio/w/g4c15.mp3"
+        },
+        {
+          "id": "g4c16",
+          "word": "rainy",
+          "phonetic": "/ˈreɪni/",
+          "pos": "adj.",
+          "meaning": "下雨的",
+          "audio": "/audio/w/g4c16.mp3"
+        },
+        {
+          "id": "g4c17",
+          "word": "cloudy",
+          "phonetic": "/ˈklaʊdi/",
+          "pos": "adj.",
+          "meaning": "多云的",
+          "audio": "/audio/w/g4c17.mp3"
+        },
+        {
+          "id": "g4c18",
+          "word": "windy",
+          "phonetic": "/ˈwɪndi/",
+          "pos": "adj.",
+          "meaning": "有风的",
+          "audio": "/audio/w/g4c18.mp3"
+        },
+        {
+          "id": "g4c19",
+          "word": "snowy",
+          "phonetic": "/ˈsnəʊi/",
+          "pos": "adj.",
+          "meaning": "下雪的",
+          "audio": "/audio/w/g4c19.mp3"
+        },
+        {
+          "id": "g4c20",
+          "word": "hot",
+          "phonetic": "/hɒt/",
+          "pos": "adj.",
+          "meaning": "热的",
+          "audio": "/audio/w/g4c20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g5a",
+      "grade": 5,
+      "title": "科目与学校",
+      "words": [
+        {
+          "id": "g5a01",
+          "word": "Chinese",
+          "phonetic": "/ˌtʃaɪˈniːz/",
+          "pos": "n.",
+          "meaning": "语文；中文",
+          "audio": "/audio/w/g5a01.mp3"
+        },
+        {
+          "id": "g5a02",
+          "word": "English",
+          "phonetic": "/ˈɪŋɡlɪʃ/",
+          "pos": "n.",
+          "meaning": "英语",
+          "audio": "/audio/w/g5a02.mp3"
+        },
+        {
+          "id": "g5a03",
+          "word": "math",
+          "phonetic": "/mæθ/",
+          "pos": "n.",
+          "meaning": "数学",
+          "audio": "/audio/w/g5a03.mp3"
+        },
+        {
+          "id": "g5a04",
+          "word": "science",
+          "phonetic": "/ˈsaɪəns/",
+          "pos": "n.",
+          "meaning": "科学",
+          "audio": "/audio/w/g5a04.mp3"
+        },
+        {
+          "id": "g5a05",
+          "word": "music",
+          "phonetic": "/ˈmjuːzɪk/",
+          "pos": "n.",
+          "meaning": "音乐",
+          "audio": "/audio/w/g5a05.mp3"
+        },
+        {
+          "id": "g5a06",
+          "word": "art",
+          "phonetic": "/ɑːt/",
+          "pos": "n.",
+          "meaning": "美术",
+          "audio": "/audio/w/g5a06.mp3"
+        },
+        {
+          "id": "g5a07",
+          "word": "PE",
+          "phonetic": "/ˌpiː ˈiː/",
+          "pos": "n.",
+          "meaning": "体育",
+          "audio": "/audio/w/g5a07.mp3"
+        },
+        {
+          "id": "g5a08",
+          "word": "history",
+          "phonetic": "/ˈhɪstri/",
+          "pos": "n.",
+          "meaning": "历史",
+          "audio": "/audio/w/g5a08.mp3"
+        },
+        {
+          "id": "g5a09",
+          "word": "geography",
+          "phonetic": "/dʒiˈɒɡrəfi/",
+          "pos": "n.",
+          "meaning": "地理",
+          "audio": "/audio/w/g5a09.mp3"
+        },
+        {
+          "id": "g5a10",
+          "word": "computer",
+          "phonetic": "/kəmˈpjuːtə(r)/",
+          "pos": "n.",
+          "meaning": "电脑",
+          "audio": "/audio/w/g5a10.mp3"
+        },
+        {
+          "id": "g5a11",
+          "word": "library",
+          "phonetic": "/ˈlaɪbrəri/",
+          "pos": "n.",
+          "meaning": "图书馆",
+          "audio": "/audio/w/g5a11.mp3"
+        },
+        {
+          "id": "g5a12",
+          "word": "playground",
+          "phonetic": "/ˈpleɪɡraʊnd/",
+          "pos": "n.",
+          "meaning": "操场",
+          "audio": "/audio/w/g5a12.mp3"
+        },
+        {
+          "id": "g5a13",
+          "word": "classroom",
+          "phonetic": "/ˈklɑːsruːm/",
+          "pos": "n.",
+          "meaning": "教室",
+          "audio": "/audio/w/g5a13.mp3"
+        },
+        {
+          "id": "g5a14",
+          "word": "teacher",
+          "phonetic": "/ˈtiːtʃə(r)/",
+          "pos": "n.",
+          "meaning": "老师",
+          "audio": "/audio/w/g5a14.mp3"
+        },
+        {
+          "id": "g5a15",
+          "word": "student",
+          "phonetic": "/ˈstjuːdnt/",
+          "pos": "n.",
+          "meaning": "学生",
+          "audio": "/audio/w/g5a15.mp3"
+        },
+        {
+          "id": "g5a16",
+          "word": "friend",
+          "phonetic": "/frend/",
+          "pos": "n.",
+          "meaning": "朋友",
+          "audio": "/audio/w/g5a16.mp3"
+        },
+        {
+          "id": "g5a17",
+          "word": "classmate",
+          "phonetic": "/ˈklɑːsmeɪt/",
+          "pos": "n.",
+          "meaning": "同学",
+          "audio": "/audio/w/g5a17.mp3"
+        },
+        {
+          "id": "g5a18",
+          "word": "homework",
+          "phonetic": "/ˈhəʊmwɜːk/",
+          "pos": "n.",
+          "meaning": "作业",
+          "audio": "/audio/w/g5a18.mp3"
+        },
+        {
+          "id": "g5a19",
+          "word": "exam",
+          "phonetic": "/ɪɡˈzæm/",
+          "pos": "n.",
+          "meaning": "考试",
+          "audio": "/audio/w/g5a19.mp3"
+        },
+        {
+          "id": "g5a20",
+          "word": "question",
+          "phonetic": "/ˈkwestʃən/",
+          "pos": "n.",
+          "meaning": "问题",
+          "audio": "/audio/w/g5a20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g5b",
+      "grade": 5,
+      "title": "场所与出行",
+      "words": [
+        {
+          "id": "g5b01",
+          "word": "park",
+          "phonetic": "/pɑːk/",
+          "pos": "n.",
+          "meaning": "公园",
+          "audio": "/audio/w/g5b01.mp3"
+        },
+        {
+          "id": "g5b02",
+          "word": "zoo",
+          "phonetic": "/zuː/",
+          "pos": "n.",
+          "meaning": "动物园",
+          "audio": "/audio/w/g5b02.mp3"
+        },
+        {
+          "id": "g5b03",
+          "word": "museum",
+          "phonetic": "/mjuˈziːəm/",
+          "pos": "n.",
+          "meaning": "博物馆",
+          "audio": "/audio/w/g5b03.mp3"
+        },
+        {
+          "id": "g5b04",
+          "word": "hospital",
+          "phonetic": "/ˈhɒspɪtl/",
+          "pos": "n.",
+          "meaning": "医院",
+          "audio": "/audio/w/g5b04.mp3"
+        },
+        {
+          "id": "g5b05",
+          "word": "bank",
+          "phonetic": "/bæŋk/",
+          "pos": "n.",
+          "meaning": "银行",
+          "audio": "/audio/w/g5b05.mp3"
+        },
+        {
+          "id": "g5b06",
+          "word": "supermarket",
+          "phonetic": "/ˈsuːpəmɑːkɪt/",
+          "pos": "n.",
+          "meaning": "超市",
+          "audio": "/audio/w/g5b06.mp3"
+        },
+        {
+          "id": "g5b07",
+          "word": "restaurant",
+          "phonetic": "/ˈrestrɒnt/",
+          "pos": "n.",
+          "meaning": "餐馆",
+          "audio": "/audio/w/g5b07.mp3"
+        },
+        {
+          "id": "g5b08",
+          "word": "hotel",
+          "phonetic": "/həʊˈtel/",
+          "pos": "n.",
+          "meaning": "旅馆",
+          "audio": "/audio/w/g5b08.mp3"
+        },
+        {
+          "id": "g5b09",
+          "word": "airport",
+          "phonetic": "/ˈeəpɔːt/",
+          "pos": "n.",
+          "meaning": "机场",
+          "audio": "/audio/w/g5b09.mp3"
+        },
+        {
+          "id": "g5b10",
+          "word": "station",
+          "phonetic": "/ˈsteɪʃn/",
+          "pos": "n.",
+          "meaning": "车站",
+          "audio": "/audio/w/g5b10.mp3"
+        },
+        {
+          "id": "g5b11",
+          "word": "cinema",
+          "phonetic": "/ˈsɪnəmə/",
+          "pos": "n.",
+          "meaning": "电影院",
+          "audio": "/audio/w/g5b11.mp3"
+        },
+        {
+          "id": "g5b12",
+          "word": "shop",
+          "phonetic": "/ʃɒp/",
+          "pos": "n.",
+          "meaning": "商店",
+          "audio": "/audio/w/g5b12.mp3"
+        },
+        {
+          "id": "g5b13",
+          "word": "street",
+          "phonetic": "/striːt/",
+          "pos": "n.",
+          "meaning": "街道",
+          "audio": "/audio/w/g5b13.mp3"
+        },
+        {
+          "id": "g5b14",
+          "word": "city",
+          "phonetic": "/ˈsɪti/",
+          "pos": "n.",
+          "meaning": "城市",
+          "audio": "/audio/w/g5b14.mp3"
+        },
+        {
+          "id": "g5b15",
+          "word": "village",
+          "phonetic": "/ˈvɪlɪdʒ/",
+          "pos": "n.",
+          "meaning": "村庄",
+          "audio": "/audio/w/g5b15.mp3"
+        },
+        {
+          "id": "g5b16",
+          "word": "country",
+          "phonetic": "/ˈkʌntri/",
+          "pos": "n.",
+          "meaning": "国家",
+          "audio": "/audio/w/g5b16.mp3"
+        },
+        {
+          "id": "g5b17",
+          "word": "map",
+          "phonetic": "/mæp/",
+          "pos": "n.",
+          "meaning": "地图",
+          "audio": "/audio/w/g5b17.mp3"
+        },
+        {
+          "id": "g5b18",
+          "word": "ticket",
+          "phonetic": "/ˈtɪkɪt/",
+          "pos": "n.",
+          "meaning": "票",
+          "audio": "/audio/w/g5b18.mp3"
+        },
+        {
+          "id": "g5b19",
+          "word": "train",
+          "phonetic": "/treɪn/",
+          "pos": "n.",
+          "meaning": "火车",
+          "audio": "/audio/w/g5b19.mp3"
+        },
+        {
+          "id": "g5b20",
+          "word": "plane",
+          "phonetic": "/pleɪn/",
+          "pos": "n.",
+          "meaning": "飞机",
+          "audio": "/audio/w/g5b20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g5c",
+      "grade": 5,
+      "title": "活动与爱好",
+      "words": [
+        {
+          "id": "g5c01",
+          "word": "run",
+          "phonetic": "/rʌn/",
+          "pos": "v.",
+          "meaning": "跑",
+          "audio": "/audio/w/g5c01.mp3"
+        },
+        {
+          "id": "g5c02",
+          "word": "swim",
+          "phonetic": "/swɪm/",
+          "pos": "v.",
+          "meaning": "游泳",
+          "audio": "/audio/w/g5c02.mp3"
+        },
+        {
+          "id": "g5c03",
+          "word": "jump",
+          "phonetic": "/dʒʌmp/",
+          "pos": "v.",
+          "meaning": "跳",
+          "audio": "/audio/w/g5c03.mp3"
+        },
+        {
+          "id": "g5c04",
+          "word": "dance",
+          "phonetic": "/dɑːns/",
+          "pos": "v.",
+          "meaning": "跳舞",
+          "audio": "/audio/w/g5c04.mp3"
+        },
+        {
+          "id": "g5c05",
+          "word": "sing",
+          "phonetic": "/sɪŋ/",
+          "pos": "v.",
+          "meaning": "唱歌",
+          "audio": "/audio/w/g5c05.mp3"
+        },
+        {
+          "id": "g5c06",
+          "word": "draw",
+          "phonetic": "/drɔː/",
+          "pos": "v.",
+          "meaning": "画画",
+          "audio": "/audio/w/g5c06.mp3"
+        },
+        {
+          "id": "g5c07",
+          "word": "read",
+          "phonetic": "/riːd/",
+          "pos": "v.",
+          "meaning": "读",
+          "audio": "/audio/w/g5c07.mp3"
+        },
+        {
+          "id": "g5c08",
+          "word": "write",
+          "phonetic": "/raɪt/",
+          "pos": "v.",
+          "meaning": "写",
+          "audio": "/audio/w/g5c08.mp3"
+        },
+        {
+          "id": "g5c09",
+          "word": "play",
+          "phonetic": "/pleɪ/",
+          "pos": "v.",
+          "meaning": "玩；打（球）",
+          "audio": "/audio/w/g5c09.mp3"
+        },
+        {
+          "id": "g5c10",
+          "word": "watch",
+          "phonetic": "/wɒtʃ/",
+          "pos": "v.",
+          "meaning": "观看",
+          "audio": "/audio/w/g5c10.mp3"
+        },
+        {
+          "id": "g5c11",
+          "word": "listen",
+          "phonetic": "/ˈlɪsn/",
+          "pos": "v.",
+          "meaning": "听",
+          "audio": "/audio/w/g5c11.mp3"
+        },
+        {
+          "id": "g5c12",
+          "word": "speak",
+          "phonetic": "/spiːk/",
+          "pos": "v.",
+          "meaning": "说",
+          "audio": "/audio/w/g5c12.mp3"
+        },
+        {
+          "id": "g5c13",
+          "word": "walk",
+          "phonetic": "/wɔːk/",
+          "pos": "v.",
+          "meaning": "走路",
+          "audio": "/audio/w/g5c13.mp3"
+        },
+        {
+          "id": "g5c14",
+          "word": "ride",
+          "phonetic": "/raɪd/",
+          "pos": "v.",
+          "meaning": "骑",
+          "audio": "/audio/w/g5c14.mp3"
+        },
+        {
+          "id": "g5c15",
+          "word": "drive",
+          "phonetic": "/draɪv/",
+          "pos": "v.",
+          "meaning": "开车",
+          "audio": "/audio/w/g5c15.mp3"
+        },
+        {
+          "id": "g5c16",
+          "word": "clean",
+          "phonetic": "/kliːn/",
+          "pos": "v.",
+          "meaning": "打扫",
+          "audio": "/audio/w/g5c16.mp3"
+        },
+        {
+          "id": "g5c17",
+          "word": "wash",
+          "phonetic": "/wɒʃ/",
+          "pos": "v.",
+          "meaning": "洗",
+          "audio": "/audio/w/g5c17.mp3"
+        },
+        {
+          "id": "g5c18",
+          "word": "buy",
+          "phonetic": "/baɪ/",
+          "pos": "v.",
+          "meaning": "买",
+          "audio": "/audio/w/g5c18.mp3"
+        },
+        {
+          "id": "g5c19",
+          "word": "football",
+          "phonetic": "/ˈfʊtbɔːl/",
+          "pos": "n.",
+          "meaning": "足球",
+          "audio": "/audio/w/g5c19.mp3"
+        },
+        {
+          "id": "g5c20",
+          "word": "basketball",
+          "phonetic": "/ˈbɑːskɪtbɔːl/",
+          "pos": "n.",
+          "meaning": "篮球",
+          "audio": "/audio/w/g5c20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g6a",
+      "grade": 6,
+      "title": "职业与工作",
+      "words": [
+        {
+          "id": "g6a01",
+          "word": "doctor",
+          "phonetic": "/ˈdɒktə(r)/",
+          "pos": "n.",
+          "meaning": "医生",
+          "audio": "/audio/w/g6a01.mp3"
+        },
+        {
+          "id": "g6a02",
+          "word": "nurse",
+          "phonetic": "/nɜːs/",
+          "pos": "n.",
+          "meaning": "护士",
+          "audio": "/audio/w/g6a02.mp3"
+        },
+        {
+          "id": "g6a03",
+          "word": "police officer",
+          "phonetic": "/pəˈliːs ɒfɪsə(r)/",
+          "pos": "n.",
+          "meaning": "警察",
+          "audio": "/audio/w/g6a03.mp3"
+        },
+        {
+          "id": "g6a04",
+          "word": "farmer",
+          "phonetic": "/ˈfɑːmə(r)/",
+          "pos": "n.",
+          "meaning": "农民",
+          "audio": "/audio/w/g6a04.mp3"
+        },
+        {
+          "id": "g6a05",
+          "word": "driver",
+          "phonetic": "/ˈdraɪvə(r)/",
+          "pos": "n.",
+          "meaning": "司机",
+          "audio": "/audio/w/g6a05.mp3"
+        },
+        {
+          "id": "g6a06",
+          "word": "cook",
+          "phonetic": "/kʊk/",
+          "pos": "n.",
+          "meaning": "厨师",
+          "audio": "/audio/w/g6a06.mp3"
+        },
+        {
+          "id": "g6a07",
+          "word": "worker",
+          "phonetic": "/ˈwɜːkə(r)/",
+          "pos": "n.",
+          "meaning": "工人",
+          "audio": "/audio/w/g6a07.mp3"
+        },
+        {
+          "id": "g6a08",
+          "word": "businessman",
+          "phonetic": "/ˈbɪznəsmæn/",
+          "pos": "n.",
+          "meaning": "商人",
+          "audio": "/audio/w/g6a08.mp3"
+        },
+        {
+          "id": "g6a09",
+          "word": "singer",
+          "phonetic": "/ˈsɪŋə(r)/",
+          "pos": "n.",
+          "meaning": "歌手",
+          "audio": "/audio/w/g6a09.mp3"
+        },
+        {
+          "id": "g6a10",
+          "word": "dancer",
+          "phonetic": "/ˈdɑːnsə(r)/",
+          "pos": "n.",
+          "meaning": "舞者",
+          "audio": "/audio/w/g6a10.mp3"
+        },
+        {
+          "id": "g6a11",
+          "word": "actor",
+          "phonetic": "/ˈæktə(r)/",
+          "pos": "n.",
+          "meaning": "演员",
+          "audio": "/audio/w/g6a11.mp3"
+        },
+        {
+          "id": "g6a12",
+          "word": "pilot",
+          "phonetic": "/ˈpaɪlət/",
+          "pos": "n.",
+          "meaning": "飞行员",
+          "audio": "/audio/w/g6a12.mp3"
+        },
+        {
+          "id": "g6a13",
+          "word": "engineer",
+          "phonetic": "/ˌendʒɪˈnɪə(r)/",
+          "pos": "n.",
+          "meaning": "工程师",
+          "audio": "/audio/w/g6a13.mp3"
+        },
+        {
+          "id": "g6a14",
+          "word": "scientist",
+          "phonetic": "/ˈsaɪəntɪst/",
+          "pos": "n.",
+          "meaning": "科学家",
+          "audio": "/audio/w/g6a14.mp3"
+        },
+        {
+          "id": "g6a15",
+          "word": "writer",
+          "phonetic": "/ˈraɪtə(r)/",
+          "pos": "n.",
+          "meaning": "作家",
+          "audio": "/audio/w/g6a15.mp3"
+        },
+        {
+          "id": "g6a16",
+          "word": "reporter",
+          "phonetic": "/rɪˈpɔːtə(r)/",
+          "pos": "n.",
+          "meaning": "记者",
+          "audio": "/audio/w/g6a16.mp3"
+        },
+        {
+          "id": "g6a17",
+          "word": "postman",
+          "phonetic": "/ˈpəʊstmən/",
+          "pos": "n.",
+          "meaning": "邮递员",
+          "audio": "/audio/w/g6a17.mp3"
+        },
+        {
+          "id": "g6a18",
+          "word": "fisherman",
+          "phonetic": "/ˈfɪʃəmən/",
+          "pos": "n.",
+          "meaning": "渔民",
+          "audio": "/audio/w/g6a18.mp3"
+        },
+        {
+          "id": "g6a19",
+          "word": "firefighter",
+          "phonetic": "/ˈfaɪəfaɪtə(r)/",
+          "pos": "n.",
+          "meaning": "消防员",
+          "audio": "/audio/w/g6a19.mp3"
+        },
+        {
+          "id": "g6a20",
+          "word": "dentist",
+          "phonetic": "/ˈdentɪst/",
+          "pos": "n.",
+          "meaning": "牙医",
+          "audio": "/audio/w/g6a20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g6b",
+      "grade": 6,
+      "title": "感受与情绪",
+      "words": [
+        {
+          "id": "g6b01",
+          "word": "happy",
+          "phonetic": "/ˈhæpi/",
+          "pos": "adj.",
+          "meaning": "开心的",
+          "audio": "/audio/w/g6b01.mp3"
+        },
+        {
+          "id": "g6b02",
+          "word": "sad",
+          "phonetic": "/sæd/",
+          "pos": "adj.",
+          "meaning": "难过的",
+          "audio": "/audio/w/g6b02.mp3"
+        },
+        {
+          "id": "g6b03",
+          "word": "angry",
+          "phonetic": "/ˈæŋɡri/",
+          "pos": "adj.",
+          "meaning": "生气的",
+          "audio": "/audio/w/g6b03.mp3"
+        },
+        {
+          "id": "g6b04",
+          "word": "tired",
+          "phonetic": "/ˈtaɪəd/",
+          "pos": "adj.",
+          "meaning": "疲惫的",
+          "audio": "/audio/w/g6b04.mp3"
+        },
+        {
+          "id": "g6b05",
+          "word": "hungry",
+          "phonetic": "/ˈhʌŋɡri/",
+          "pos": "adj.",
+          "meaning": "饿的",
+          "audio": "/audio/w/g6b05.mp3"
+        },
+        {
+          "id": "g6b06",
+          "word": "thirsty",
+          "phonetic": "/ˈθɜːsti/",
+          "pos": "adj.",
+          "meaning": "渴的",
+          "audio": "/audio/w/g6b06.mp3"
+        },
+        {
+          "id": "g6b07",
+          "word": "excited",
+          "phonetic": "/ɪkˈsaɪtɪd/",
+          "pos": "adj.",
+          "meaning": "兴奋的",
+          "audio": "/audio/w/g6b07.mp3"
+        },
+        {
+          "id": "g6b08",
+          "word": "worried",
+          "phonetic": "/ˈwʌrid/",
+          "pos": "adj.",
+          "meaning": "担心的",
+          "audio": "/audio/w/g6b08.mp3"
+        },
+        {
+          "id": "g6b09",
+          "word": "afraid",
+          "phonetic": "/əˈfreɪd/",
+          "pos": "adj.",
+          "meaning": "害怕的",
+          "audio": "/audio/w/g6b09.mp3"
+        },
+        {
+          "id": "g6b10",
+          "word": "surprised",
+          "phonetic": "/səˈpraɪzd/",
+          "pos": "adj.",
+          "meaning": "惊讶的",
+          "audio": "/audio/w/g6b10.mp3"
+        },
+        {
+          "id": "g6b11",
+          "word": "bored",
+          "phonetic": "/bɔːd/",
+          "pos": "adj.",
+          "meaning": "无聊的",
+          "audio": "/audio/w/g6b11.mp3"
+        },
+        {
+          "id": "g6b12",
+          "word": "nervous",
+          "phonetic": "/ˈnɜːvəs/",
+          "pos": "adj.",
+          "meaning": "紧张的",
+          "audio": "/audio/w/g6b12.mp3"
+        },
+        {
+          "id": "g6b13",
+          "word": "proud",
+          "phonetic": "/praʊd/",
+          "pos": "adj.",
+          "meaning": "自豪的",
+          "audio": "/audio/w/g6b13.mp3"
+        },
+        {
+          "id": "g6b14",
+          "word": "shy",
+          "phonetic": "/ʃaɪ/",
+          "pos": "adj.",
+          "meaning": "害羞的",
+          "audio": "/audio/w/g6b14.mp3"
+        },
+        {
+          "id": "g6b15",
+          "word": "kind",
+          "phonetic": "/kaɪnd/",
+          "pos": "adj.",
+          "meaning": "友善的",
+          "audio": "/audio/w/g6b15.mp3"
+        },
+        {
+          "id": "g6b16",
+          "word": "funny",
+          "phonetic": "/ˈfʌni/",
+          "pos": "adj.",
+          "meaning": "有趣的",
+          "audio": "/audio/w/g6b16.mp3"
+        },
+        {
+          "id": "g6b17",
+          "word": "clever",
+          "phonetic": "/ˈklevə(r)/",
+          "pos": "adj.",
+          "meaning": "聪明的",
+          "audio": "/audio/w/g6b17.mp3"
+        },
+        {
+          "id": "g6b18",
+          "word": "brave",
+          "phonetic": "/breɪv/",
+          "pos": "adj.",
+          "meaning": "勇敢的",
+          "audio": "/audio/w/g6b18.mp3"
+        },
+        {
+          "id": "g6b19",
+          "word": "lazy",
+          "phonetic": "/ˈleɪzi/",
+          "pos": "adj.",
+          "meaning": "懒惰的",
+          "audio": "/audio/w/g6b19.mp3"
+        },
+        {
+          "id": "g6b20",
+          "word": "polite",
+          "phonetic": "/pəˈlaɪt/",
+          "pos": "adj.",
+          "meaning": "有礼貌的",
+          "audio": "/audio/w/g6b20.mp3"
+        }
+      ]
+    },
+    {
+      "id": "g6c",
+      "grade": 6,
+      "title": "自然与环境",
+      "words": [
+        {
+          "id": "g6c01",
+          "word": "sun",
+          "phonetic": "/sʌn/",
+          "pos": "n.",
+          "meaning": "太阳",
+          "audio": "/audio/w/g6c01.mp3"
+        },
+        {
+          "id": "g6c02",
+          "word": "moon",
+          "phonetic": "/muːn/",
+          "pos": "n.",
+          "meaning": "月亮",
+          "audio": "/audio/w/g6c02.mp3"
+        },
+        {
+          "id": "g6c03",
+          "word": "star",
+          "phonetic": "/stɑː(r)/",
+          "pos": "n.",
+          "meaning": "星星",
+          "audio": "/audio/w/g6c03.mp3"
+        },
+        {
+          "id": "g6c04",
+          "word": "sky",
+          "phonetic": "/skaɪ/",
+          "pos": "n.",
+          "meaning": "天空",
+          "audio": "/audio/w/g6c04.mp3"
+        },
+        {
+          "id": "g6c05",
+          "word": "cloud",
+          "phonetic": "/klaʊd/",
+          "pos": "n.",
+          "meaning": "云",
+          "audio": "/audio/w/g6c05.mp3"
+        },
+        {
+          "id": "g6c06",
+          "word": "rain",
+          "phonetic": "/reɪn/",
+          "pos": "n.",
+          "meaning": "雨",
+          "audio": "/audio/w/g6c06.mp3"
+        },
+        {
+          "id": "g6c07",
+          "word": "wind",
+          "phonetic": "/wɪnd/",
+          "pos": "n.",
+          "meaning": "风",
+          "audio": "/audio/w/g6c07.mp3"
+        },
+        {
+          "id": "g6c08",
+          "word": "snow",
+          "phonetic": "/snəʊ/",
+          "pos": "n.",
+          "meaning": "雪",
+          "audio": "/audio/w/g6c08.mp3"
+        },
+        {
+          "id": "g6c09",
+          "word": "tree",
+          "phonetic": "/triː/",
+          "pos": "n.",
+          "meaning": "树",
+          "audio": "/audio/w/g6c09.mp3"
+        },
+        {
+          "id": "g6c10",
+          "word": "flower",
+          "phonetic": "/ˈflaʊə(r)/",
+          "pos": "n.",
+          "meaning": "花",
+          "audio": "/audio/w/g6c10.mp3"
+        },
+        {
+          "id": "g6c11",
+          "word": "grass",
+          "phonetic": "/ɡrɑːs/",
+          "pos": "n.",
+          "meaning": "草",
+          "audio": "/audio/w/g6c11.mp3"
+        },
+        {
+          "id": "g6c12",
+          "word": "river",
+          "phonetic": "/ˈrɪvə(r)/",
+          "pos": "n.",
+          "meaning": "河流",
+          "audio": "/audio/w/g6c12.mp3"
+        },
+        {
+          "id": "g6c13",
+          "word": "lake",
+          "phonetic": "/leɪk/",
+          "pos": "n.",
+          "meaning": "湖",
+          "audio": "/audio/w/g6c13.mp3"
+        },
+        {
+          "id": "g6c14",
+          "word": "sea",
+          "phonetic": "/siː/",
+          "pos": "n.",
+          "meaning": "大海",
+          "audio": "/audio/w/g6c14.mp3"
+        },
+        {
+          "id": "g6c15",
+          "word": "mountain",
+          "phonetic": "/ˈmaʊntən/",
+          "pos": "n.",
+          "meaning": "山；山脉",
+          "audio": "/audio/w/g6c15.mp3"
+        },
+        {
+          "id": "g6c16",
+          "word": "hill",
+          "phonetic": "/hɪl/",
+          "pos": "n.",
+          "meaning": "小山",
+          "audio": "/audio/w/g6c16.mp3"
+        },
+        {
+          "id": "g6c17",
+          "word": "forest",
+          "phonetic": "/ˈfɒrɪst/",
+          "pos": "n.",
+          "meaning": "森林",
+          "audio": "/audio/w/g6c17.mp3"
+        },
+        {
+          "id": "g6c18",
+          "word": "island",
+          "phonetic": "/ˈaɪlənd/",
+          "pos": "n.",
+          "meaning": "岛",
+          "audio": "/audio/w/g6c18.mp3"
+        },
+        {
+          "id": "g6c19",
+          "word": "beach",
+          "phonetic": "/biːtʃ/",
+          "pos": "n.",
+          "meaning": "沙滩",
+          "audio": "/audio/w/g6c19.mp3"
+        },
+        {
+          "id": "g6c20",
+          "word": "farm",
+          "phonetic": "/fɑːm/",
+          "pos": "n.",
+          "meaning": "农场",
+          "audio": "/audio/w/g6c20.mp3"
+        }
+      ]
+    }
+  ]
+}

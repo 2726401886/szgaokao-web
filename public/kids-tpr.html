@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿启蒙英语 · TPR 日常指令</title>
+<style>
+  :root { --brand:#ff9f43; --brand2:#ffbe76; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff9f43,#ffbe76); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .vol-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .vol-item:hover { background:#fff7f0; }
+  .vol-item.on { background:#fff3e8; border-color:#ff9f43; }
+  .vol-item .t { font-weight:700; font-size:13.5px; }
+  .vol-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#fff3e8; color:#ff9f43; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .mode-tabs { display:flex; gap:8px; margin-bottom:12px; }
+  .mode-tab { padding:9px 16px; border:none; border-radius:12px; font-size:13.5px; font-weight:700; cursor:pointer; background:#f0f0f0; color:#666; }
+  .mode-tab.on { background:#ff9f43; color:#fff; }
+  .tpr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+  .tpr-card { border:1.5px solid #f0f0f0; border-radius:14px; padding:12px; text-align:center; cursor:pointer; transition:all .15s; }
+  .tpr-card:hover { border-color:#ffbe76; background:#fffaf4; }
+  .tpr-card .em { font-size:32px; line-height:1.2; }
+  .tpr-card .en { font-size:14px; font-weight:700; margin-top:6px; min-height:40px; }
+  .tpr-card .zh { font-size:12px; color:#888; margin-top:3px; }
+  .tpr-card .play { margin-top:8px; width:32px; height:32px; border:none; border-radius:50%; background:#fff3e8; color:#ff9f43; font-size:13px; cursor:pointer; }
+  .q-box { background:#fff; border-radius:16px; padding:18px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .tag { display:inline-block; padding:3px 10px; border-radius:12px; font-size:12px; font-weight:700; background:#fff3e8; color:#ff9f43; }
+  .q-title { font-size:14.5px; font-weight:700; flex:1; min-width:160px; }
+  .audio-btn { display:inline-block; padding:10px 16px; border:none; border-radius:12px; background:#ff9f43; color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#ff9f43; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .q-tip { background:#fff7e0; padding:9px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:10px; line-height:1.6; }
+  .nav-foot { display:flex; gap:10px; justify-content:space-between; margin-top:16px; }
+  .nav-foot button { flex:1; padding:12px; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer; }
+  .btn-prev { background:#f0f0f0; color:#666; }
+  .btn-next { background:#ff9f43; color:#fff; }
+  .score { text-align:center; font-size:14px; font-weight:700; color:#2a8; padding:14px; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  @media (max-width:680px){ .layout { flex-direction:column; } .side { width:100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🤸 幼儿 TPR 日常指令</h1>
+    <p>听指令 · 做动作 · 亲子共玩（TPR 教学法，家长零基础也能带）</p>
+    <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ffbe76">
+    <b>🎁 体验模式</b>：当前可免费学 <b>第 1 组</b>。解锁幼儿英语模块后即可学习全部指令。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>🧩 指令分组</h3>
+      <div id="tprMenu"></div>
+      <button class="logout blue" onclick="location.href='./kids.html'">📖 单词听读背记</button>
+      <button class="logout" onclick="location.href='./kids-listening.html'">🎧 听说练习</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一组指令开始</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+let DEV = { n: 0, max: 2 };
+let ACCT = { username: '', expiry: null };
+let AUTHED = false;
+let TRIAL = false;
+let GROUPS = [];
+let CUR = null;
+let MODE = 'browse'; // browse | quiz
+let quizIdx = 0;
+let quizQs = [];
+let quizScore = 0;
+let AUD = null;
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src) {
+  if (!src) return;
+  if (AUD) AUD.pause();
+  const a = new Audio(src);
+  a.play();
+  AUD = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/kids-tpr', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  GROUPS = r.j.groups || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const m = document.getElementById('tprMenu'); m.innerHTML = '';
+  GROUPS.forEach(g => {
+    const d = document.createElement('div');
+    d.className = 'vol-item'; d.id = 'grp-' + g.id;
+    d.innerHTML = '<div class="t">' + g.emoji + ' ' + esc(g.title) + '</div><div class="s">' + g.count + ' 条指令</div>';
+    d.onclick = () => selectGroup(g.id);
+    m.appendChild(d);
+  });
+  if (GROUPS.length) selectGroup(GROUPS[0].id);
+}
+
+function selectGroup(id) {
+  document.querySelectorAll('.vol-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('grp-' + id); if (m) m.classList.add('on');
+  loadGroup(id);
+}
+
+async function loadGroup(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/kids-tpr?group=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  CUR = r.j;
+  MODE = 'browse';
+  renderBrowse();
+}
+
+function renderBrowse() {
+  const ma = document.getElementById('mainArea');
+  const cards = (CUR.items || []).map(it => `
+    <div class="tpr-card" onclick="playAudio('${it.audio}')">
+      <div class="em">${esc(it.emoji)}</div>
+      <div class="en">${esc(it.en)}</div>
+      <div class="zh">${esc(it.zh)}</div>
+      <button class="play">🔊</button>
+    </div>`).join('');
+  ma.innerHTML = `
+    <div class="card">
+      <div class="mode-tabs">
+        <button class="mode-tab on" id="tabBrowse" onclick="setMode('browse')">🃏 指令卡浏览</button>
+        <button class="mode-tab" id="tabQuiz" onclick="setMode('quiz')">🎯 听指令选中文</button>
+      </div>
+      <h2 style="font-size:18px;">${CUR.emoji} ${esc(CUR.title)} · ${esc(CUR.id.toUpperCase())}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">共 ${(CUR.items || []).length} 条指令 · 点卡片听发音，家长带娃边说边做动作</div>
+    </div>
+    <div class="card">
+      <div class="tpr-grid">${cards}</div>
+    </div>`;
+  window.scrollTo({ top: 0 });
+}
+
+function setMode(m) {
+  MODE = m;
+  document.getElementById('tabBrowse').classList.toggle('on', m === 'browse');
+  document.getElementById('tabQuiz').classList.toggle('on', m === 'quiz');
+  if (m === 'browse') renderBrowse();
+  else startQuiz();
+}
+
+function startQuiz() {
+  const items = CUR.items || [];
+  if (!items.length) return;
+  const arr = items.slice();
+  for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; }
+  const n = Math.min(8, arr.length);
+  quizQs = arr.slice(0, n).map(it => {
+    const others = items.filter(x => x.id !== it.id);
+    const opts = [it];
+    while (opts.length < 4 && others.length) {
+      const k = Math.floor(Math.random() * others.length);
+      opts.push(others.splice(k, 1)[0]);
+    }
+    for (let i = opts.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [opts[i], opts[j]] = [opts[j], opts[i]]; }
+    return { item: it, opts, picked: null };
+  });
+  quizIdx = 0;
+  quizScore = 0;
+  renderQuiz();
+}
+
+function renderQuiz() {
+  const ma = document.getElementById('mainArea');
+  if (quizIdx >= quizQs.length) {
+    ma.innerHTML = `<div class="card"><div class="score">🎉 练习完成！答对 ${quizScore} / ${quizQs.length} 题</div>
+      <div class="nav-foot"><button class="btn-next" onclick="setMode('browse')">🃏 返回指令卡</button><button class="btn-next" onclick="startQuiz()">🔄 再来一轮</button></div></div>`;
+    return;
+  }
+  const q = quizQs[quizIdx];
+  const opts = q.opts.map((o, oi) => {
+    let cls = 'opt';
+    if (q.picked != null) {
+      cls += ' locked';
+      if (o.id === q.item.id) cls += ' right';
+      else if (oi === q.picked) cls += ' wrong';
+    }
+    return `<div class="${cls}" onclick="pickQuiz(${oi})">${esc(o.zh)}</div>`;
+  }).join('');
+  const res = q.picked != null ? `<div class="q-answer">✅ ${esc(q.item.zh)} · ${esc(q.item.en)}</div>` : '';
+  ma.innerHTML = `
+    <div class="card">
+      <div class="mode-tabs">
+        <button class="mode-tab" id="tabBrowse" onclick="setMode('browse')">🃏 指令卡浏览</button>
+        <button class="mode-tab on" id="tabQuiz" onclick="setMode('quiz')">🎯 听指令选中文</button>
+      </div>
+      <h2 style="font-size:18px;">${CUR.emoji} ${esc(CUR.title)} · 练习</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">第 ${quizIdx + 1} / ${quizQs.length} 题 · 答对 ${quizScore} 题</div>
+    </div>
+    <div class="q-box">
+      <div class="q-head"><span class="tag">👂 听指令</span><span class="q-title">听一听，选出对应的中文意思</span>
+        <button class="audio-btn" onclick="playAudio('${q.item.audio}')">🔊 播放指令</button></div>
+      ${opts}
+      ${res}
+    </div>
+    <div class="nav-foot">
+      <button class="btn-prev" onclick="setMode('browse')">🃏 返回浏览</button>
+      <button class="btn-next" onclick="nextQuiz()" ${q.picked == null ? 'disabled style="opacity:.4"' : ''}>下一题 →</button>
+    </div>`;
+}
+
+function pickQuiz(oi) {
+  const q = quizQs[quizIdx];
+  if (q.picked != null) return;
+  q.picked = oi;
+  if (q.opts[oi].id === q.item.id) quizScore++;
+  renderQuiz();
+}
+function nextQuiz() {
+  if (quizQs[quizIdx].picked == null) return;
+  quizIdx++;
+  renderQuiz();
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).kids;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else {
+  show('appLayout', true);
+  document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#ff9f43;">前往登录页</a></div>';
+}
+</script>
+<script>
+(function(){try{var K='ktp';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

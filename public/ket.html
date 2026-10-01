@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>剑桥英语备考 · KET（A2）</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:1000px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#5b6ee1,#8e7ce6); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:250px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin:12px 0 8px; font-weight:600; }
+  .side h3:first-child { margin-top:0; }
+  .tab-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13.5px; font-weight:700; }
+  .tab-item:hover { background:#f2f4ff; }
+  .tab-item.on { background:#eef1ff; border-color:#5b6ee1; color:#5b6ee1; }
+  .sub-item { padding:9px 12px; border-radius:10px; cursor:pointer; border:1.5px solid transparent; margin-bottom:5px; font-size:13px; }
+  .sub-item:hover { background:#f2f4ff; }
+  .sub-item.on { background:#eef1ff; border-color:#5b6ee1; }
+  .sub-item .t { font-weight:700; font-size:12.5px; }
+  .sub-item .s { font-size:11px; color:#999; margin-top:1px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#eef1ff; color:#5b6ee1; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .w-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+  .w-card { background:#f6f7ff; border:1.5px solid #e3e6ff; border-radius:12px; padding:12px; }
+  .w-card .w { font-size:16px; font-weight:800; }
+  .w-card .ph { font-size:12px; color:#999; margin-top:2px; }
+  .w-card .m { font-size:13px; color:#666; margin-top:4px; }
+  .w-card .play { margin-top:8px; padding:6px 12px; border:none; border-radius:8px; background:#5b6ee1; color:#fff; font-size:12px; cursor:pointer; font-weight:700; }
+  .w-card .mk { margin-top:8px; padding:6px 12px; border:1.5px solid #c9c8e8; border-radius:8px; background:#fff; color:#5b6ee1; font-size:12px; cursor:pointer; font-weight:700; }
+  .w-card.done { border-color:#3ddc97; background:#f0fbf6; }
+  .w-card.done .mk { background:#3ddc97; color:#fff; border-color:#3ddc97; }
+  .qnav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+  .qnav button { width:38px; height:38px; border:1.5px solid #e0e0e0; border-radius:10px; background:#fff; font-size:14px; font-weight:700; color:#666; cursor:pointer; }
+  .qnav button.on { background:#5b6ee1; color:#fff; border-color:#5b6ee1; }
+  .qnav button.done { background:#e8f8ee; color:#2a8; border-color:#2a8; }
+  .qtext { font-size:15px; font-weight:600; margin:4px 0 10px; line-height:1.6; }
+  .audio-btn { display:inline-block; padding:9px 16px; border:none; border-radius:10px; background:#5b6ee1; color:#fff; font-size:14px; cursor:pointer; font-weight:700; margin:8px 0; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#5b6ee1; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .q-tip { background:#eef1ff; padding:9px 12px; border-radius:10px; font-size:13px; color:#3a4a8f; margin-top:10px; line-height:1.6; }
+  .navbtns { display:flex; gap:10px; margin-top:18px; }
+  .navbtns button { flex:1; padding:13px; border:none; border-radius:12px; font-size:15px; cursor:pointer; background:#f0f0f0; color:#555; }
+  .navbtns button.primary { background:#5b6ee1; color:#fff; }
+  .navbtns button:disabled { opacity:.35; cursor:not-allowed; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #c9c8e8; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  @media (max-width:680px){ .layout { flex-direction:column; } .side { width:100%; } }
+
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🎓 剑桥英语备考 · KET（A2 Key）</h1>
+    <p>核心词 12 主题 240 词 · 听说模拟 4 套 48 题（对标剑桥 A2 水平）</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #8e7ce6">
+    <b>🎁 体验模式</b>：当前可免费学习 <b>第 1 组词汇 / 第 1 套模拟</b>。解锁小学英语模块后即可学习全部内容。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📚 KET 模块</h3>
+      <div class="tab-item on" id="tabWords" onclick="setTab('words')">📖 核心词汇</div>
+      <div class="tab-item" id="tabExam" onclick="setTab('exam')">📝 听说模拟</div>
+      <div id="subMenu"></div>
+      <button class="logout blue" onclick="location.href='./pet.html'">🎓 PET（B1）</button>
+      <button class="logout blue" onclick="location.href='./longman.html'">📘 朗文同步</button>
+      <button class="logout" onclick="location.href='./words.html'">📖 单词听读背记</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">加载中…</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+let DEV = { n: 0, max: 2 }, ACCT = { username: '', expiry: null }, AUTHED = false, TRIAL = false;
+let WORDS = null, EXAMS = null, TAB = 'words', curGroup = null, curVol = null, qi = 0, answered = {}, AUD_CUR = null;
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src, el) {
+  if (!src) return;
+  if (AUD_CUR && AUD_CUR !== el) AUD_CUR.pause();
+  const a = el || new Audio(src);
+  if (!el) { a.src = src; a.play(); }
+  AUD_CUR = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+function setTab(t) {
+  TAB = t;
+  document.getElementById('tabWords').className = 'tab-item' + (t === 'words' ? ' on' : '');
+  document.getElementById('tabExam').className = 'tab-item' + (t === 'exam' ? ' on' : '');
+  renderSub();
+  if (t === 'words') { if (curGroup) loadGroup(curGroup); else if (WORDS && WORDS.groups.length) loadGroup(WORDS.groups[0].id); }
+  else { if (curVol) loadVol(curVol); else if (EXAMS && EXAMS.volumes.length) loadVol(EXAMS.volumes[0].id); }
+}
+const PROG_KEY = 'ket_words_progress';
+function loadProg() { try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}'); } catch (e) { return {}; } }
+function saveProg(p) { localStorage.setItem(PROG_KEY, JSON.stringify(p)); }
+function masteredCount(words) { const p = loadProg(); return words.filter(w => p[w.id] && p[w.id].m).length; }
+function toggleMastered(wid, el) { const p = loadProg(); if (p[wid] && p[wid].m) delete p[wid]; else p[wid] = { m: 1, t: Date.now() }; saveProg(p); const card = el.closest('.w-card'); if (card) card.classList.toggle('done', !!(p[wid] && p[wid].m)); el.textContent = (p[wid] && p[wid].m) ? '✅ 已掌握' : '✓ 标记掌握'; syncUp(); }
+async function syncDown() {
+  try {
+    if (!TOKEN) return;
+    const r = await api('/api/study', { headers: H() });
+    if (r.s !== 200 || !r.j) return;
+    const prog = r.j.progress || {};
+    const cloud = (prog.ket && typeof prog.ket === 'object') ? prog.ket : {};
+    const p = loadProg(); let changed = false;
+    for (const k in cloud) { if (!p[k] || (cloud[k].t || 0) >= (p[k].t || 0)) { p[k] = cloud[k]; changed = true; } }
+    if (changed) saveProg(p);
+  } catch (e) {}
+}
+function syncUp() {
+  try {
+    if (!TOKEN) return;
+    fetch('/api/study/sync', { method: 'POST', headers: H(), body: JSON.stringify({ log: {}, progress: { ket: loadProg() } }) }).catch(() => {});
+  } catch (e) {}
+}
+
+function renderSub() {
+  const m = document.getElementById('subMenu');
+  if (TAB === 'words' && WORDS) {
+    m.innerHTML = '<h3>主题词库</h3>' + WORDS.groups.map(g => '<div class="sub-item' + (curGroup === g.id ? ' on' : '') + '" data-k="' + g.id + '"><div class="t">' + esc(g.title) + '</div><div class="s">' + g.count + ' 词</div></div>').join('');
+  } else if (TAB === 'exam' && EXAMS) {
+    m.innerHTML = '<h3>模拟试卷</h3>' + EXAMS.volumes.map(v => '<div class="sub-item' + (curVol === v.id ? ' on' : '') + '" data-k="' + v.id + '"><div class="t">' + esc(v.title) + '</div><div class="s">' + v.count + ' 题</div></div>').join('');
+  } else m.innerHTML = '';
+  m.querySelectorAll('.sub-item').forEach(el => el.addEventListener('click', () => {
+    if (TAB === 'words') { curGroup = el.dataset.k; qi = 0; loadGroup(curGroup); }
+    else { curVol = el.dataset.k; qi = 0; answered = {}; loadVol(curVol); }
+    renderSub();
+  }));
+}
+async function showApp() {
+  await syncDown();
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else { const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5); exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期'); }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const [rw, re] = await Promise.all([api('/api/ket-words', { headers: H() }), api('/api/ket-exam', { headers: H() })]);
+  if (rw.s !== 200 || re.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + ((rw.j || re.j).error || '请返回主页重新登录') + '</div>'; return; }
+  WORDS = rw.j; EXAMS = re.j;
+  TRIAL = !!(rw.j.trial || re.j.trial);
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  renderSub();
+  if (TAB === 'words' && WORDS.groups.length) loadGroup(WORDS.groups[0].id);
+  else if (EXAMS.volumes.length) loadVol(EXAMS.volumes[0].id);
+}
+async function loadGroup(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/ket-words?group=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  const g = r.j;
+  ma.innerHTML = `
+    <div class="card">
+      <h2 style="font-size:18px;">📖 ${esc(g.title)}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">${g.count} 个核心词 · 已掌握 <b style="color:#3ddc97;">${masteredCount(g.words || [])}</b></div>
+    </div>
+    <div class="w-grid">${(g.words || []).map(w => {
+      const done = !!(loadProg()[w.id] && loadProg()[w.id].m);
+      return `
+      <div class="w-card${done ? ' done' : ''}">
+        <div class="w">${esc(w.word)}</div>
+        <div class="ph">/${esc(w.phonetic)}/</div>
+        <div class="m">${esc(w.meaning)}</div>
+        <button class="play" onclick="playAudio('${w.audio}')">🔊 播放</button>
+        <button class="mk" onclick="toggleMastered('${w.id}', this)">${done ? '✅ 已掌握' : '✓ 标记掌握'}</button>
+      </div>`;
+    }).join('')}
+    </div>`;
+  window.scrollTo({ top: 0 });
+}
+async function loadVol(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/ket-exam?vol=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  curVol = id; answered = {}; qi = 0;
+  renderVol(r.j);
+}
+function renderVol(v) {
+  const ma = document.getElementById('mainArea');
+  const qs = v.questions;
+  const q = qs[qi];
+  const nav = '<div class="qnav">' + qs.map((x, i) => '<button class="' + (i === qi ? 'on' : (answered[x.id] != null ? 'done' : '')) + '" onclick="goTo(' + i + ')">' + (i + 1) + '</button>').join('') + '</div>';
+  const body = (q.type === 'passage') ? renderPassage(q) : renderSimple(q);
+  ma.innerHTML = `
+    <div class="card">
+      <h2 style="font-size:17px;">📝 ${esc(v.title)}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">${v.topic} · 共 ${qs.length} 题 · 绿色 = 已作答</div>
+    </div>
+    ${nav}
+    <div class="card">
+      <div style="font-size:12px;color:#5b6ee1;font-weight:700;margin-bottom:6px;">${typeName(q.type)}</div>
+      <div class="qtext">第 ${qi + 1} 题 · ${esc(q.q)}</div>
+      ${body}
+    </div>
+    <div class="navbtns">
+      <button onclick="goTo(${qi - 1})" ${qi === 0 ? 'disabled' : ''}>← 上一题</button>
+      <button class="primary" onclick="goTo(${qi + 1})" ${qi >= qs.length - 1 ? 'disabled' : ''}>下一题 →</button>
+    </div>`;
+  window.scrollTo({ top: 0 });
+}
+function typeName(t) {
+  return { word: '单词听力', sentence: '短句听力', dialogue: '对话听力', passage: '篇章听力', speaking: '口语跟读' }[t] || t;
+}
+function renderSimple(q) {
+  const audioBtn = '<button class="audio-btn" onclick="playAudio(\'' + q.audio + '\')">🔊 播放录音</button>';
+  const sel = answered[q.id];
+  const opts = (q.options || []).map((o, oi) => {
+    let cls = 'opt';
+    if (sel != null) { cls += ' locked'; if (oi === q.answer) cls += ' right'; else if (oi === sel) cls += ' wrong'; }
+    return '<div class="' + cls + '" onclick="pick(\'' + q.id + '\', ' + oi + ')">' + String.fromCharCode(65 + oi) + '. ' + esc(o) + '</div>';
+  }).join('');
+  const res = sel != null ? '<div class="q-answer">✅ 正确答案：' + String.fromCharCode(65 + q.answer) + '. ' + esc(q.options[q.answer]) + '</div><div class="q-tip">💡 ' + esc(q.tip) + '</div>' : '';
+  return audioBtn + (q.type === 'speaking' ? (sel != null ? '<div class="q-answer">👏 完成跟读</div>' : '<div class="q-tip">🎤 点击播放，跟着录音大声读一遍，读熟后点击下方「完成跟读」。</div>') : '<div id="optBox">' + opts + '</div>') + (q.type === 'speaking' ? '<div style="margin-top:10px;"><button class="audio-btn" onclick="pick(\'' + q.id + '\', 0)">✅ 完成跟读</button></div>' : '') + res;
+}
+function renderPassage(q) {
+  const audioBtn = '<button class="audio-btn" onclick="playAudio(\'' + q.audio + '\')">🔊 播放短文</button>';
+  const subs = (q.questions || []).map((s, si) => {
+    const sel = answered[s.id];
+    const opts = s.options.map((o, oi) => {
+      let cls = 'opt';
+      if (sel != null) { cls += ' locked'; if (oi === s.answer) cls += ' right'; else if (oi === sel) cls += ' wrong'; }
+      return '<div class="' + cls + '" onclick="pick(\'' + s.id + '\', ' + oi + ')">' + String.fromCharCode(65 + oi) + '. ' + esc(o) + '</div>';
+    }).join('');
+    const res = sel != null ? '<div class="q-answer">✅ 正确答案：' + String.fromCharCode(65 + s.answer) + '. ' + esc(s.options[s.answer]) + '</div><div class="q-tip">💡 ' + esc(s.tip) + '</div>' : '';
+    return '<div style="margin-top:12px;padding-top:12px;border-top:1px dashed #eee;"><div class="qtext" style="font-size:14px;">第 ' + (si + 1) + ' 小题 · ' + esc(s.q) + '</div>' + opts + res + '</div>';
+  }).join('');
+  return audioBtn + subs;
+}
+function pick(pid, i) {
+  if (answered[pid] != null) return;
+  answered[pid] = i;
+  const v = EXAMS.volumes.find(x => x.id === curVol);
+  if (v) renderVol(v);
+}
+function goTo(i) {
+  qi = i;
+  const v = EXAMS.volumes.find(x => x.id === curVol);
+  if (v) renderVol(v);
+}
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).primary;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else { show('appLayout', true); document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#5b6ee1;">前往登录页</a></div>'; }
+</script>
+<script>
+(function(){try{var K='ket';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1360 @@
+{
+ "product": "校内期末同步包（3-6 年级 × 上下学期 8 套）",
+ "version": "1.0",
+ "schema_version": "1.0",
+ "note": "8 套期末复习卷：word/sentence/dialogue/passage/speaking 五大题型；内容 AI 生成待创始人校对",
+ "volumes": [
+  {
+   "id": "ex3a",
+   "grade": 3,
+   "sem": "上",
+   "title": "三年级上册期末复习",
+   "topic": "颜色数字·文具·动物水果·家庭成员",
+   "questions": [
+    {
+     "id": "ex3a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3a01.mp3",
+     "options": [
+      "红色",
+      "蓝色",
+      "绿色"
+     ],
+     "answer": 0,
+     "tip": "red 红色。"
+    },
+    {
+     "id": "ex3a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3a02.mp3",
+     "options": [
+      "钢笔",
+      "铅笔",
+      "蜡笔"
+     ],
+     "answer": 1,
+     "tip": "pencil 铅笔。"
+    },
+    {
+     "id": "ex3a03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3a03.mp3",
+     "options": [
+      "爷爷",
+      "奶奶",
+      "妈妈"
+     ],
+     "answer": 1,
+     "tip": "grandma 奶奶/外婆。"
+    },
+    {
+     "id": "ex3a04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3a04.mp3",
+     "options": [
+      "我有两本书。",
+      "我有三本书。",
+      "我有两支笔。"
+     ],
+     "answer": 0,
+     "tip": "two books 两本书。"
+    },
+    {
+     "id": "ex3a05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3a05.mp3",
+     "options": [
+      "猫在书桌上。",
+      "猫在垫子上。",
+      "狗在书桌上。"
+     ],
+     "answer": 0,
+     "tip": "on the desk 在书桌上。"
+    },
+    {
+     "id": "ex3a06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3a06.mp3",
+     "options": [
+      "我姐姐是我的朋友。",
+      "我弟弟是我的同学。",
+      "我妹妹是老师。"
+     ],
+     "answer": 0,
+     "tip": "sister 姐妹，friend 朋友。"
+    },
+    {
+     "id": "ex3a07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：How old is the boy?",
+     "audio": "/audio/ex/ex3a07.mp3",
+     "options": [
+      "八岁",
+      "九岁",
+      "七岁"
+     ],
+     "answer": 0,
+     "tip": "eight years old 八岁。",
+     "q2": "男孩几岁？"
+    },
+    {
+     "id": "ex3a08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What does the girl like?",
+     "audio": "/audio/ex/ex3a08.mp3",
+     "options": [
+      "苹果和香蕉",
+      "梨和葡萄",
+      "蛋糕和牛奶"
+     ],
+     "answer": 0,
+     "tip": "apples and bananas 苹果和香蕉。",
+     "q2": "女孩喜欢什么？"
+    },
+    {
+     "id": "ex3a09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex3a09.mp3",
+     "questions": [
+      {
+       "q2": "艾米几岁？",
+       "options": [
+        "九岁",
+        "八岁",
+        "十岁"
+       ],
+       "answer": 0,
+       "tip": "I'm nine 九岁。",
+       "id": "ex3a09-s1"
+      },
+      {
+       "q2": "她的狗是什么颜色？",
+       "options": [
+        "白色",
+        "黑色",
+        "棕色"
+       ],
+       "answer": 0,
+       "tip": "The dog is white 白色。",
+       "id": "ex3a09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex3a10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3a10.mp3",
+     "text": "I have two books.",
+     "ref": "我有两本书。"
+    },
+    {
+     "id": "ex3a11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3a11.mp3",
+     "text": "The cat is on the desk.",
+     "ref": "猫在书桌上。"
+    },
+    {
+     "id": "ex3a12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3a12.mp3",
+     "text": "My sister is my friend.",
+     "ref": "我姐姐是我的朋友。"
+    }
+   ]
+  },
+  {
+   "id": "ex3b",
+   "grade": 3,
+   "sem": "下",
+   "title": "三年级下册期末复习",
+   "topic": "动物食物·天气季节·衣物",
+   "questions": [
+    {
+     "id": "ex3b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3b01.mp3",
+     "options": [
+      "兔子",
+      "老虎",
+      "猴子"
+     ],
+     "answer": 0,
+     "tip": "rabbit 兔子。"
+    },
+    {
+     "id": "ex3b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3b02.mp3",
+     "options": [
+      "晴朗的",
+      "下雨的",
+      "刮风的"
+     ],
+     "answer": 0,
+     "tip": "sunny 晴朗的。"
+    },
+    {
+     "id": "ex3b03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex3b03.mp3",
+     "options": [
+      "外套",
+      "衬衫",
+      "裙子"
+     ],
+     "answer": 1,
+     "tip": "shirt 衬衫。"
+    },
+    {
+     "id": "ex3b04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3b04.mp3",
+     "options": [
+      "今天下雨。",
+      "今天下雪。",
+      "今天刮风。"
+     ],
+     "answer": 0,
+     "tip": "rainy 下雨。"
+    },
+    {
+     "id": "ex3b05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3b05.mp3",
+     "options": [
+      "我最喜欢春天。",
+      "我最喜欢夏天。",
+      "我不喜欢春天。"
+     ],
+     "answer": 0,
+     "tip": "spring 春天。"
+    },
+    {
+     "id": "ex3b06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex3b06.mp3",
+     "options": [
+      "穿上外套。",
+      "脱掉外套。",
+      "洗洗外套。"
+     ],
+     "answer": 0,
+     "tip": "put on 穿上。"
+    },
+    {
+     "id": "ex3b07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What do they have for lunch?",
+     "audio": "/audio/ex/ex3b07.mp3",
+     "options": [
+      "米饭和鱼",
+      "面包和牛奶",
+      "面条和鸡蛋"
+     ],
+     "answer": 0,
+     "tip": "rice and fish 米饭和鱼。",
+     "q2": "午餐吃什么？"
+    },
+    {
+     "id": "ex3b08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：Where is the ball?",
+     "audio": "/audio/ex/ex3b08.mp3",
+     "options": [
+      "椅子下面",
+      "桌子上",
+      "书包里"
+     ],
+     "answer": 0,
+     "tip": "under the chair 椅子下面。",
+     "q2": "球在哪里？"
+    },
+    {
+     "id": "ex3b09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex3b09.mp3",
+     "questions": [
+      {
+       "q2": "今天是什么天气？",
+       "options": [
+        "晴朗",
+        "下雨",
+        "下雪"
+       ],
+       "answer": 0,
+       "tip": "It's sunny 晴朗。",
+       "id": "ex3b09-s1"
+      },
+      {
+       "q2": "谁在骑自行车？",
+       "options": [
+        "妹妹",
+        "哥哥",
+        "妈妈"
+       ],
+       "answer": 0,
+       "tip": "My sister rides a bike 妹妹骑车。",
+       "id": "ex3b09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex3b10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3b10.mp3",
+     "text": "It's rainy today.",
+     "ref": "今天下雨。"
+    },
+    {
+     "id": "ex3b11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3b11.mp3",
+     "text": "I like spring best.",
+     "ref": "我最喜欢春天。"
+    },
+    {
+     "id": "ex3b12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex3b12.mp3",
+     "text": "Put on your coat.",
+     "ref": "穿上外套。"
+    }
+   ]
+  },
+  {
+   "id": "ex4a",
+   "grade": 4,
+   "sem": "上",
+   "title": "四年级上册期末复习",
+   "topic": "家庭房间·食物饮料·购物",
+   "questions": [
+    {
+     "id": "ex4a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4a01.mp3",
+     "options": [
+      "厨房",
+      "卧室",
+      "浴室"
+     ],
+     "answer": 0,
+     "tip": "kitchen 厨房。"
+    },
+    {
+     "id": "ex4a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4a02.mp3",
+     "options": [
+      "果汁",
+      "牛奶",
+      "水"
+     ],
+     "answer": 0,
+     "tip": "juice 果汁。"
+    },
+    {
+     "id": "ex4a03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4a03.mp3",
+     "options": [
+      "买",
+      "卖",
+      "看"
+     ],
+     "answer": 0,
+     "tip": "buy 买，sell 卖。"
+    },
+    {
+     "id": "ex4a04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4a04.mp3",
+     "options": [
+      "我爸爸在厨房做饭。",
+      "我爸爸在卧室睡觉。",
+      "我妈妈在厨房做饭。"
+     ],
+     "answer": 0,
+     "tip": "cooking in the kitchen 在厨房做饭。"
+    },
+    {
+     "id": "ex4a05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4a05.mp3",
+     "options": [
+      "这条连衣裙多少钱？",
+      "这件外套多少钱？",
+      "这双鞋多少钱？"
+     ],
+     "answer": 0,
+     "tip": "the dress 连衣裙。"
+    },
+    {
+     "id": "ex4a06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4a06.mp3",
+     "options": [
+      "我想要一些面条。",
+      "我想要一些米饭。",
+      "我想要一些饺子。"
+     ],
+     "answer": 0,
+     "tip": "noodles 面条。"
+    },
+    {
+     "id": "ex4a07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What would the girl like to drink?",
+     "audio": "/audio/ex/ex4a07.mp3",
+     "options": [
+      "牛奶",
+      "果汁",
+      "茶"
+     ],
+     "answer": 0,
+     "tip": "a glass of milk 一杯牛奶。",
+     "q2": "女孩想喝什么？"
+    },
+    {
+     "id": "ex4a08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：How much are the shoes?",
+     "audio": "/audio/ex/ex4a08.mp3",
+     "options": [
+      "五十元",
+      "十五元",
+      "四十元"
+     ],
+     "answer": 0,
+     "tip": "fifty yuan 五十元。",
+     "q2": "鞋子多少钱？"
+    },
+    {
+     "id": "ex4a09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex4a09.mp3",
+     "questions": [
+      {
+       "q2": "家里有几个房间？",
+       "options": [
+        "四个",
+        "三个",
+        "五个"
+       ],
+       "answer": 0,
+       "tip": "four rooms 四个房间。",
+       "id": "ex4a09-s1"
+      },
+      {
+       "q2": "作者喜欢自己的家吗？",
+       "options": [
+        "喜欢",
+        "不喜欢",
+        "不确定"
+       ],
+       "answer": 0,
+       "tip": "I like my home 喜欢。",
+       "id": "ex4a09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex4a10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4a10.mp3",
+     "text": "My father is cooking in the kitchen.",
+     "ref": "我爸爸在厨房做饭。"
+    },
+    {
+     "id": "ex4a11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4a11.mp3",
+     "text": "How much is the dress?",
+     "ref": "这条连衣裙多少钱？"
+    },
+    {
+     "id": "ex4a12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4a12.mp3",
+     "text": "I'd like some noodles, please.",
+     "ref": "我想要一些面条。"
+    }
+   ]
+  },
+  {
+   "id": "ex4b",
+   "grade": 4,
+   "sem": "下",
+   "title": "四年级下册期末复习",
+   "topic": "运动爱好·假期·月份",
+   "questions": [
+    {
+     "id": "ex4b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4b01.mp3",
+     "options": [
+      "游泳",
+      "跑步",
+      "骑车"
+     ],
+     "answer": 0,
+     "tip": "swimming 游泳。"
+    },
+    {
+     "id": "ex4b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4b02.mp3",
+     "options": [
+      "假期",
+      "节日",
+      "周末"
+     ],
+     "answer": 0,
+     "tip": "holiday 假期。"
+    },
+    {
+     "id": "ex4b03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex4b03.mp3",
+     "options": [
+      "八月",
+      "四月",
+      "十月"
+     ],
+     "answer": 0,
+     "tip": "August 八月。"
+    },
+    {
+     "id": "ex4b04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4b04.mp3",
+     "options": [
+      "夏天我能游泳。",
+      "冬天我能滑雪。",
+      "春天我能放风筝。"
+     ],
+     "answer": 0,
+     "tip": "swim in summer 夏天游泳。"
+    },
+    {
+     "id": "ex4b05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4b05.mp3",
+     "options": [
+      "我们要去海滩度假。",
+      "我们要去山上度假。",
+      "我们去了公园。"
+     ],
+     "answer": 0,
+     "tip": "the beach 海滩。"
+    },
+    {
+     "id": "ex4b06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex4b06.mp3",
+     "options": [
+      "我的爱好是集邮。",
+      "我的爱好是画画。",
+      "我的爱好是钓鱼。"
+     ],
+     "answer": 0,
+     "tip": "collecting stamps 集邮。"
+    },
+    {
+     "id": "ex4b07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What sport does the boy like?",
+     "audio": "/audio/ex/ex4b07.mp3",
+     "options": [
+      "篮球",
+      "足球",
+      "羽毛球"
+     ],
+     "answer": 0,
+     "tip": "basketball 篮球。",
+     "q2": "男孩喜欢什么运动？"
+    },
+    {
+     "id": "ex4b08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：When is the trip?",
+     "audio": "/audio/ex/ex4b08.mp3",
+     "options": [
+      "五月",
+      "六月",
+      "四月"
+     ],
+     "answer": 0,
+     "tip": "in May 五月。",
+     "q2": "学校旅行在什么时候？"
+    },
+    {
+     "id": "ex4b09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex4b09.mp3",
+     "questions": [
+      {
+       "q2": "哥哥星期几踢足球？",
+       "options": [
+        "周一和周三",
+        "周二和周四",
+        "周六和周日"
+       ],
+       "answer": 0,
+       "tip": "Monday and Wednesday 周一和周三。",
+       "id": "ex4b09-s1"
+      },
+      {
+       "q2": "哥哥周六做什么？",
+       "options": [
+        "游泳",
+        "跑步",
+        "踢球"
+       ],
+       "answer": 0,
+       "tip": "goes swimming 游泳。",
+       "id": "ex4b09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex4b10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4b10.mp3",
+     "text": "I can swim in summer.",
+     "ref": "夏天我能游泳。"
+    },
+    {
+     "id": "ex4b11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4b11.mp3",
+     "text": "My hobby is collecting stamps.",
+     "ref": "我的爱好是集邮。"
+    },
+    {
+     "id": "ex4b12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex4b12.mp3",
+     "text": "We are going to the beach for the holiday.",
+     "ref": "我们要去海滩度假。"
+    }
+   ]
+  },
+  {
+   "id": "ex5a",
+   "grade": 5,
+   "sem": "上",
+   "title": "五年级上册期末复习",
+   "topic": "科目学校·城市场所·问路",
+   "questions": [
+    {
+     "id": "ex5a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5a01.mp3",
+     "options": [
+      "图书馆",
+      "教室",
+      "操场"
+     ],
+     "answer": 0,
+     "tip": "library 图书馆。"
+    },
+    {
+     "id": "ex5a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5a02.mp3",
+     "options": [
+      "博物馆",
+      "医院",
+      "银行"
+     ],
+     "answer": 0,
+     "tip": "museum 博物馆。"
+    },
+    {
+     "id": "ex5a03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5a03.mp3",
+     "options": [
+      "直的",
+      "转弯的",
+      "旁边的"
+     ],
+     "answer": 0,
+     "tip": "go straight 直走。"
+    },
+    {
+     "id": "ex5a04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5a04.mp3",
+     "options": [
+      "我们周二有科学课。",
+      "我们周二有数学课。",
+      "我们周四有科学课。"
+     ],
+     "answer": 0,
+     "tip": "science on Tuesday 周二科学。"
+    },
+    {
+     "id": "ex5a05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5a05.mp3",
+     "options": [
+      "超市在公园旁边。",
+      "超市在公园对面。",
+      "银行在公园旁边。"
+     ],
+     "answer": 0,
+     "tip": "next to 在旁边。"
+    },
+    {
+     "id": "ex5a06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5a06.mp3",
+     "options": [
+      "在第二个路口左转。",
+      "在第二个路口右转。",
+      "在第一个路口左转。"
+     ],
+     "answer": 0,
+     "tip": "turn left 左转。"
+    },
+    {
+     "id": "ex5a07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：Which subject does the girl like best?",
+     "audio": "/audio/ex/ex5a07.mp3",
+     "options": [
+      "科学",
+      "数学",
+      "音乐"
+     ],
+     "answer": 0,
+     "tip": "favourite subject 最喜欢的科目。",
+     "q2": "女孩最喜欢的科目是什么？"
+    },
+    {
+     "id": "ex5a08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：How does the man get to the cinema?",
+     "audio": "/audio/ex/ex5a08.mp3",
+     "options": [
+      "坐地铁",
+      "坐公交",
+      "步行"
+     ],
+     "answer": 0,
+     "tip": "take the metro 坐地铁。",
+     "q2": "去电影院怎么走？"
+    },
+    {
+     "id": "ex5a09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex5a09.mp3",
+     "questions": [
+      {
+       "q2": "学校有什么？",
+       "options": [
+        "图书馆和操场",
+        "游泳池和食堂",
+        "电影院和公园"
+       ],
+       "answer": 0,
+       "tip": "library and playground 图书馆和操场。",
+       "id": "ex5a09-s1"
+      },
+      {
+       "q2": "他们在哪里读书？",
+       "options": [
+        "图书馆",
+        "操场",
+        "花园"
+       ],
+       "answer": 0,
+       "tip": "read books in the library 图书馆。",
+       "id": "ex5a09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex5a10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5a10.mp3",
+     "text": "We have science on Tuesday.",
+     "ref": "我们周二有科学课。"
+    },
+    {
+     "id": "ex5a11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5a11.mp3",
+     "text": "Turn left at the second crossing.",
+     "ref": "在第二个路口左转。"
+    },
+    {
+     "id": "ex5a12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5a12.mp3",
+     "text": "The supermarket is next to the park.",
+     "ref": "超市在公园旁边。"
+    }
+   ]
+  },
+  {
+   "id": "ex5b",
+   "grade": 5,
+   "sem": "下",
+   "title": "五年级下册期末复习",
+   "topic": "健康环保·自然·节日",
+   "questions": [
+    {
+     "id": "ex5b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5b01.mp3",
+     "options": [
+      "环境",
+      "天气",
+      "季节"
+     ],
+     "answer": 0,
+     "tip": "environment 环境。"
+    },
+    {
+     "id": "ex5b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5b02.mp3",
+     "options": [
+      "头疼",
+      "肚子疼",
+      "牙疼"
+     ],
+     "answer": 0,
+     "tip": "headache 头疼。"
+    },
+    {
+     "id": "ex5b03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex5b03.mp3",
+     "options": [
+      "回收",
+      "污染",
+      "保护"
+     ],
+     "answer": 0,
+     "tip": "recycle 回收。"
+    },
+    {
+     "id": "ex5b04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5b04.mp3",
+     "options": [
+      "我们应该保护环境。",
+      "我们应该多锻炼。",
+      "我们应该早点睡。"
+     ],
+     "answer": 0,
+     "tip": "protect the environment 保护环境。"
+    },
+    {
+     "id": "ex5b05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5b05.mp3",
+     "options": [
+      "不要往地上扔垃圾。",
+      "不要往河里倒水。",
+      "不要摘公园的花。"
+     ],
+     "answer": 0,
+     "tip": "throw rubbish 扔垃圾。"
+    },
+    {
+     "id": "ex5b06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex5b06.mp3",
+     "options": [
+      "我发烧了，需要看医生。",
+      "我感冒了，需要休息。",
+      "我咳嗽了，需要吃药。"
+     ],
+     "answer": 0,
+     "tip": "have a fever 发烧。"
+    },
+    {
+     "id": "ex5b07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What's wrong with the boy?",
+     "audio": "/audio/ex/ex5b07.mp3",
+     "options": [
+      "肚子疼",
+      "头疼",
+      "发烧"
+     ],
+     "answer": 0,
+     "tip": "stomachache 肚子疼。",
+     "q2": "男孩怎么了？"
+    },
+    {
+     "id": "ex5b08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What do they do at the festival?",
+     "audio": "/audio/ex/ex5b08.mp3",
+     "options": [
+      "吃月饼看月亮",
+      "放烟花吃粽子",
+      "挂灯笼猜灯谜"
+     ],
+     "answer": 0,
+     "tip": "eat mooncakes and watch the moon 吃月饼看月亮。",
+     "q2": "中秋节他们做什么？"
+    },
+    {
+     "id": "ex5b09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex5b09.mp3",
+     "questions": [
+      {
+       "q2": "他们每年做什么？",
+       "options": [
+        "种树",
+        "种花",
+        "浇水"
+       ],
+       "answer": 0,
+       "tip": "plant trees 种树。",
+       "id": "ex5b09-s1"
+      },
+      {
+       "q2": "树在夏天能做什么？",
+       "options": [
+        "提供树荫",
+        "结出果实",
+        "开出花朵"
+       ],
+       "answer": 0,
+       "tip": "give us shade 提供树荫。",
+       "id": "ex5b09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex5b10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5b10.mp3",
+     "text": "We should protect the environment.",
+     "ref": "我们应该保护环境。"
+    },
+    {
+     "id": "ex5b11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5b11.mp3",
+     "text": "Don't throw rubbish on the ground.",
+     "ref": "不要往地上扔垃圾。"
+    },
+    {
+     "id": "ex5b12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex5b12.mp3",
+     "text": "I have a fever. I need to see a doctor.",
+     "ref": "我发烧了，需要看医生。"
+    }
+   ]
+  },
+  {
+   "id": "ex6a",
+   "grade": 6,
+   "sem": "上",
+   "title": "六年级上册期末复习",
+   "topic": "过去经历·旅行购物·校园活动",
+   "questions": [
+    {
+     "id": "ex6a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6a01.mp3",
+     "options": [
+      "昨天",
+      "今天",
+      "明天"
+     ],
+     "answer": 0,
+     "tip": "yesterday 昨天。"
+    },
+    {
+     "id": "ex6a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6a02.mp3",
+     "options": [
+      "护照",
+      "车票",
+      "地图"
+     ],
+     "answer": 0,
+     "tip": "passport 护照。"
+    },
+    {
+     "id": "ex6a03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6a03.mp3",
+     "options": [
+      "比赛",
+      "假期",
+      "旅行"
+     ],
+     "answer": 0,
+     "tip": "competition 比赛。"
+    },
+    {
+     "id": "ex6a04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6a04.mp3",
+     "options": [
+      "去年夏天我去了北京。",
+      "今年夏天我去了上海。",
+      "上周末我去了北京。"
+     ],
+     "answer": 0,
+     "tip": "went to Beijing last summer 去年夏天去北京。"
+    },
+    {
+     "id": "ex6a05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6a05.mp3",
+     "options": [
+      "她昨天买了一条新裙子。",
+      "她昨天买了一件新外套。",
+      "她前天买了一条新裙子。"
+     ],
+     "answer": 0,
+     "tip": "bought a new dress 买新裙子。"
+    },
+    {
+     "id": "ex6a06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6a06.mp3",
+     "options": [
+      "我们队赢了比赛。",
+      "我们队输了比赛。",
+      "他们队赢了比赛。"
+     ],
+     "answer": 0,
+     "tip": "won the match 赢了比赛。"
+    },
+    {
+     "id": "ex6a07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：Where did the girl go last Sunday?",
+     "audio": "/audio/ex/ex6a07.mp3",
+     "options": [
+      "博物馆",
+      "动物园",
+      "商场"
+     ],
+     "answer": 0,
+     "tip": "went to the museum 去了博物馆。",
+     "q2": "女孩上周日去了哪里？"
+    },
+    {
+     "id": "ex6a08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What did the boy do at the weekend?",
+     "audio": "/audio/ex/ex6a08.mp3",
+     "options": [
+      "和朋友踢足球",
+      "在家看书",
+      "去游泳"
+     ],
+     "answer": 0,
+     "tip": "played football 踢足球。",
+     "q2": "男孩周末做了什么？"
+    },
+    {
+     "id": "ex6a09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex6a09.mp3",
+     "questions": [
+      {
+       "q2": "上周他们做了什么？",
+       "options": [
+        "开了运动会",
+        "去旅行",
+        "开了班会"
+       ],
+       "answer": 0,
+       "tip": "had a sports day 开运动会。",
+       "id": "ex6a09-s1"
+      },
+      {
+       "q2": "谁赢了跑步比赛？",
+       "options": [
+        "莉莉",
+        "作者",
+        "汤姆"
+       ],
+       "answer": 0,
+       "tip": "Lily won the running race 莉莉赢了。",
+       "id": "ex6a09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex6a10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6a10.mp3",
+     "text": "I went to Beijing last summer.",
+     "ref": "去年夏天我去了北京。"
+    },
+    {
+     "id": "ex6a11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6a11.mp3",
+     "text": "Our team won the match.",
+     "ref": "我们队赢了比赛。"
+    },
+    {
+     "id": "ex6a12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6a12.mp3",
+     "text": "She bought a new dress yesterday.",
+     "ref": "她昨天买了一条新裙子。"
+    }
+   ]
+  },
+  {
+   "id": "ex6b",
+   "grade": 6,
+   "sem": "下",
+   "title": "六年级下册期末复习",
+   "topic": "理想未来·友谊毕业·综合",
+   "questions": [
+    {
+     "id": "ex6b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6b01.mp3",
+     "options": [
+      "宇航员",
+      "科学家",
+      "工程师"
+     ],
+     "answer": 0,
+     "tip": "astronaut 宇航员。"
+    },
+    {
+     "id": "ex6b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6b02.mp3",
+     "options": [
+      "毕业",
+      "考试",
+      "开学"
+     ],
+     "answer": 0,
+     "tip": "graduate 毕业。"
+    },
+    {
+     "id": "ex6b03",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/ex/ex6b03.mp3",
+     "options": [
+      "诚实的",
+      "聪明的",
+      "勇敢的"
+     ],
+     "answer": 0,
+     "tip": "honest 诚实的。"
+    },
+    {
+     "id": "ex6b04",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6b04.mp3",
+     "options": [
+      "我将来想当科学家。",
+      "我将来想当老师。",
+      "我现在是科学家。"
+     ],
+     "answer": 0,
+     "tip": "in the future 将来。"
+    },
+    {
+     "id": "ex6b05",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6b05.mp3",
+     "options": [
+      "我们应该和朋友分享。",
+      "我们应该向朋友借钱。",
+      "我们应该帮助陌生人。"
+     ],
+     "answer": 0,
+     "tip": "share things 分享。"
+    },
+    {
+     "id": "ex6b06",
+     "type": "sentence",
+     "q": "听句子，选出正确的意思",
+     "audio": "/audio/ex/ex6b06.mp3",
+     "options": [
+      "我将在中学努力学习。",
+      "我将在小学努力学习。",
+      "我过去在中学很努力。"
+     ],
+     "answer": 0,
+     "tip": "study hard 努力学习。"
+    },
+    {
+     "id": "ex6b07",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What does the boy want to be?",
+     "audio": "/audio/ex/ex6b07.mp3",
+     "options": [
+      "飞行员",
+      "司机",
+      "船员"
+     ],
+     "answer": 0,
+     "tip": "a pilot 飞行员。",
+     "q2": "男孩想当什么？"
+    },
+    {
+     "id": "ex6b08",
+     "type": "dialogue",
+     "q": "听对话，回答问题：What is the girl like?",
+     "audio": "/audio/ex/ex6b08.mp3",
+     "options": [
+      "善良乐于助人",
+      "严厉",
+      "害羞"
+     ],
+     "answer": 0,
+     "tip": "kind and helpful 善良乐于助人。",
+     "q2": "女孩的朋友怎么样？"
+    },
+    {
+     "id": "ex6b09",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/ex/ex6b09.mp3",
+     "questions": [
+      {
+       "q2": "他们将要做什么？",
+       "options": [
+        "小学毕业",
+        "升入中学考试",
+        "参加比赛"
+       ],
+       "answer": 0,
+       "tip": "graduate from primary school 小学毕业。",
+       "id": "ex6b09-s1"
+      },
+      {
+       "q2": "他们会怎么做？",
+       "options": [
+        "保持联系",
+        "互相忘记",
+        "搬家离开"
+       ],
+       "answer": 0,
+       "tip": "keep in touch 保持联系。",
+       "id": "ex6b09-s2"
+      }
+     ]
+    },
+    {
+     "id": "ex6b10",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6b10.mp3",
+     "text": "I want to be a scientist in the future.",
+     "ref": "我将来想当科学家。"
+    },
+    {
+     "id": "ex6b11",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6b11.mp3",
+     "text": "We should share things with our friends.",
+     "ref": "我们应该和朋友分享。"
+    },
+    {
+     "id": "ex6b12",
+     "type": "speaking",
+     "q": "跟读句子，模仿发音",
+     "audio": "/audio/ex/ex6b12.mp3",
+     "text": "I will study hard in middle school.",
+     "ref": "我将在中学努力学习。"
+    }
+   ]
+  }
+ ]
+}

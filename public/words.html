@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小学英语单词 · 听读背记</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:16px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .topbar h1 { font-size:19px; }
+  .topbar .sub { font-size:12px; opacity:.92; margin-top:3px; }
+  .topbar .spacer { flex:1; }
+  .topbar a.back { color:#fff; text-decoration:none; background:rgba(255,255,255,.22); padding:7px 14px; border-radius:20px; font-size:13px; }
+  .trial-note { background:#fffbe8; border:1px solid #f3e6b8; color:#7a5c00; padding:10px 14px; border-radius:12px; font-size:13px; margin-bottom:14px; display:none; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:10px; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:120px; height:auto; border-radius:8px; display:block; }
+  .layout { display:flex; gap:14px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:12px; color:#999; margin:14px 0 8px; font-weight:700; }
+  .side h3:first-child { margin-top:0; }
+  .grp-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; }
+  .grp-item:hover { background:#fff3f2; }
+  .grp-item.on { background:#fff0ef; border-color:var(--brand,#ff5e62); }
+  .grp-item .t { font-weight:700; font-size:13.5px; }
+  .grp-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .grp-item .s b { color:#ff5e62; }
+  .side .me { font-size:12px; color:#999; margin-top:12px; padding-top:10px; border-top:1px dashed #eee; }
+  .main { flex:1; min-width:0; }
+  .modes { display:flex; gap:8px; margin-bottom:12px; }
+  .modes button { flex:1; padding:11px 6px; border:none; border-radius:12px; background:#fff; font-size:14.5px; font-weight:700; color:#555; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .modes button.on { background:#ff5e62; color:#fff; }
+  .card { background:#fff; border-radius:16px; padding:22px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .group-title { font-size:13px; color:#999; margin-bottom:14px; }
+  .word-hero { text-align:center; padding:6px 0 10px; }
+  .word-hero .w { font-size:40px; font-weight:800; letter-spacing:1px; }
+  .word-hero .ph { font-size:16px; color:#888; margin-top:6px; }
+  .word-hero .me { font-size:19px; color:#ff5e62; font-weight:700; margin-top:8px; }
+  .word-hero .pos { display:inline-block; background:#f0f0f0; color:#666; font-size:12px; padding:2px 8px; border-radius:8px; margin-top:4px; }
+  .play-row { display:flex; justify-content:center; gap:10px; margin-top:14px; }
+  .play { width:52px; height:52px; border-radius:50%; border:none; background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; font-size:22px; cursor:pointer; box-shadow:0 6px 16px rgba(255,94,98,.35); }
+  .play:active { transform:scale(.94); }
+  .mini { padding:9px 16px; border:none; border-radius:20px; background:#f0f0f0; color:#555; font-size:13px; cursor:pointer; }
+  .mini.on { background:#ff5e62; color:#fff; }
+  .navbtns { display:flex; gap:10px; margin-top:18px; }
+  .navbtns button { flex:1; padding:13px; border:none; border-radius:12px; font-size:15px; cursor:pointer; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06); color:#333; }
+  .navbtns button.primary { background:#ff5e62; color:#fff; }
+  .navbtns button:disabled { opacity:.35; cursor:not-allowed; }
+  .qtext { font-size:15px; font-weight:600; margin:4px 0 10px; }
+  .opt { padding:12px 14px; border:1.5px solid #eee; border-radius:12px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#ff5e62; }
+  .opt.right { background:#e8f8ee; border-color:var(--ok,#2a8); }
+  .opt.wrong { background:#fdecea; border-color:var(--err,#e23); }
+  .opt.locked { pointer-events:none; }
+  .result { text-align:center; padding:8px; border-radius:10px; margin-top:10px; font-size:14px; font-weight:700; }
+  .result.ok { background:#e8f8ee; color:#2a8; }
+  .result.bad { background:#fdecea; color:#e23; }
+  .spell-input { width:100%; padding:14px; border:2px solid #eee; border-radius:12px; font-size:20px; text-align:center; letter-spacing:1px; margin-top:12px; outline:none; }
+  .spell-input:focus { border-color:#ff5e62; }
+  .speak-panel { text-align:center; padding:4px 0 8px; }
+  .speak-hint { background:#f7f9ff; padding:10px 12px; border-radius:10px; font-size:13px; color:#555; margin-top:12px; line-height:1.7; }
+  .rate-btns { display:flex; gap:8px; margin-top:14px; }
+  .rate-btns button { flex:1; padding:11px; border:none; border-radius:10px; font-size:14px; cursor:pointer; background:#f0f0f0; color:#555; }
+  .rate-btns button.good { background:#e8f8ee; color:#2a8; font-weight:700; }
+  .rate-btns button.soso { background:#fffbe8; color:#b8860b; }
+  .prog-bar { height:6px; background:#f0f0f0; border-radius:6px; margin-top:12px; overflow:hidden; }
+  .prog-bar i { display:block; height:100%; background:linear-gradient(90deg,#ff5e62,#ff9966); width:0; transition:width .3s; }
+  .prog-txt { font-size:12px; color:#999; margin-top:6px; text-align:center; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .err-msg { color:#e23; font-size:14px; text-align:center; padding:30px 10px; }
+  @media (max-width:720px) {
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+    .side .grps { display:flex; overflow-x:auto; gap:6px; padding-bottom:6px; }
+    .side .grp-item { min-width:150px; margin-bottom:0; }
+    .side h3 { margin-top:10px; }
+    .word-hero .w { font-size:32px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>📖 小学英语单词 · 听读背记</h1>
+      <div class="sub">听发音 · 练跟读 · 背词义 · 记拼写（英音 · 3–6 年级）</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="back" href="./longman.html">📘 朗文同步</a>
+    <a class="back" href="./scenes.html">💬 场景对话</a>
+    <a class="back" href="./primary-listening.html">🎧 听说练习</a>
+    <a class="back" href="./exam.html">📝 期末复习</a>
+    <a class="back" href="./phonics.html">🔤 自然拼读</a>
+    <a class="back" href="./junior.html">🚀 小升初衔接</a>
+    <a class="back" href="./reading.html">📖 分级阅读</a>
+    <a class="back" href="./ket.html">🎓 KET 备考</a>
+    <a class="back" href="./pet.html">🎓 PET 备考</a>
+    <a class="back" href="./report.html">📊 学情报告</a>
+    <a class="back" href="./index.html">← 返回主页</a>
+  
+    <a class="back" style="cursor:pointer;" onclick="logout()">退出登录</a></div>
+  <div class="trial-note" id="trialNote"></div>
+
+  <div class="layout">
+    <div class="side">
+      <h3>选择年级与主题</h3>
+      <div class="grps" id="grpList"><div class="empty" style="box-shadow:none;padding:20px;">加载中…</div></div>
+      <div class="me" id="meNote"></div>
+    </div>
+    <div class="main" id="mainArea"><div class="empty">请选择左侧的主题开始学习</div></div>
+  </div>
+</div>
+
+<script>
+function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href='./index.html'; }
+
+(function () {
+  const $ = s => document.querySelector(s);
+  const TOKEN = localStorage.getItem('token') || '';
+  let DEVFP = '';
+  try { DEVFP = localStorage.getItem('devfp') || ''; } catch (e) {}
+  const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+  const PROG_KEY = 'primary_words_progress';
+  const MODES = [
+    { k: 'listen', t: '👂 听', sub: '听发音 · 辨词义' },
+    { k: 'read', t: '🗣 读', sub: '跟读 · 练发音' },
+    { k: 'memorize', t: '🧠 背', sub: '听/看选义 · 自测' },
+    { k: 'spell', t: '✍️ 记', sub: '看义拼写 · 记单词' },
+  ];
+  let GROUPS = [];
+  let curGroup = null;   // 当前组完整数据 {id,grade,title,words}
+  let mode = 'listen';
+  let idx = 0;           // 当前单词下标（听/读）
+  let listenSub = 'learn'; // learn | test
+  let listenOpts = [];
+  let testState = { q: null, answered: null, correct: 0, total: 0 };
+  let spellVal = '';
+  let readMarked = null;
+
+  // —— 进度 ——
+  function loadProg() { try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}'); } catch (e) { return {}; } }
+  function markMastered(wid) { const p = loadProg(); p[wid] = { m: 1, t: Date.now() }; saveProg(p); renderSide(); syncUp(); }
+  function masteredCount(words) { const p = loadProg(); return words.filter(w => p[w.id] && p[w.id].m).length; }
+  function saveProg(p) { localStorage.setItem(PROG_KEY, JSON.stringify(p)); }
+  async function syncDown() {
+    try {
+      if (!TOKEN) return;
+      const r = await api('/api/study');
+      if (r.s !== 200 || !r.j) return;
+      let cloud = r.j.progress || {};
+      if (cloud.primary && typeof cloud.primary === 'object') cloud = cloud.primary;
+      else if (!cloud.primary && !cloud.ket && !cloud.pet) { /* 旧 flat 数据整体视为小学单词进度 */ }
+      else cloud = {};
+      const p = loadProg();
+      let changed = false;
+      for (const k in cloud) { if (!p[k] || (cloud[k].t || 0) >= (p[k].t || 0)) { p[k] = cloud[k]; changed = true; } }
+      if (changed) saveProg(p);
+    } catch (e) {}
+  }
+  function syncUp() {
+    try {
+      if (!TOKEN) return;
+      fetch('/api/study/sync', { method: 'POST', headers: H(), body: JSON.stringify({ log: {}, progress: { primary: loadProg() } }) }).catch(() => {});
+    } catch (e) {}
+  }
+
+  // —— API ——
+  async function api(path, opts) {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), 12000);
+    try {
+      const r = await fetch(path, Object.assign({ headers: H(), signal: ctl.signal }, opts || {}));
+      const j = await r.json().catch(() => ({}));
+      return { s: r.status, j };
+    } catch (e) {
+      return { s: 0, j: { error: '网络异常或请求超时，请检查网络后重试' } };
+    } finally { clearTimeout(tm); }
+  }
+  function audioEl(id) { const a = new Audio(); a.src = id; return a; }
+  function play(id) { try { const a = audioEl(id); a.play(); return a; } catch (e) {} }
+
+  // —— 初始化 ——
+  async function init() {
+    await syncDown();
+    const r = await api('/api/words');
+    if (r.s === 0) {
+      $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">网络异常 <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#ff5e62;color:#fff;cursor:pointer;">重试</button></div>';
+      $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>';
+      return;
+    }
+    if (r.s === 401) {
+      $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>';
+      $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">未登录</div>';
+      return;
+    }
+    GROUPS = (r.j && r.j.groups) || [];
+    if (!GROUPS.length) { $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">暂无数据</div>'; return; }
+    if (r.j.trial) {
+      $('#trialNote').style.display = 'block';
+      $('#trialNote').innerHTML = '🎁 体验模式：可学习 <b>' + GROUPS[0].title + '</b>（' + GROUPS[0].grade + ' 年级）。输入授权码或联系管理员授权，即可解锁全部主题。<div class=\"wx-card\">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href=\"./assets/admin-wechat-qr.jpg\" target=\"_blank\"><img src=\"./assets/admin-wechat-qr.jpg\" alt=\"管理员微信二维码\"></a></div>';
+    }
+    renderSide();
+    loadGroup(GROUPS[0]);
+  }
+
+  function renderSide() {
+    const byGrade = {};
+    GROUPS.forEach(g => { (byGrade[g.grade] = byGrade[g.grade] || []).push(g); });
+    const grades = Object.keys(byGrade).map(Number).sort((a, b) => a - b);
+    $('#grpList').innerHTML = grades.map(gr => {
+      const items = byGrade[gr].map(g => {
+        const on = curGroup && curGroup.id === g.id ? ' on' : '';
+        const cnt = (g.count != null) ? g.count : (g.words ? g.words.length : 0);
+        const mc = masteredCount(g.words || []);
+        return '<div class="grp-item' + on + '" data-g="' + g.id + '"><div class="t">' + g.title + '</div>' +
+          '<div class="s">' + cnt + ' 词 · 已掌握 <b>' + mc + '</b>/' + cnt + '</div></div>';
+      }).join('');
+      return '<h3>Grade ' + gr + '（' + gr + ' 年级）</h3>' + items;
+    }).join('');
+    document.querySelectorAll('.grp-item').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.grp-item').forEach(x => x.classList.remove('on'));
+        el.classList.add('on');
+        loadGroup(GROUPS.find(g => g.id === el.dataset.g));
+      });
+    });
+    const me = loadProg();
+    const total = Object.keys(me).filter(k => me[k].m).length;
+    $('#meNote').innerHTML = '累计掌握 <b>' + total + '</b> 个单词';
+  }
+
+  async function loadGroup(g) {
+    const r = await api('/api/words?group=' + g.id);
+    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常') + ' <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#ff5e62;color:#fff;cursor:pointer;">重试</button></div>'; return; }
+    if (r.s !== 200 || !r.j) { $('#mainArea').innerHTML = '<div class="err-msg">加载失败（' + r.s + '）</div>'; return; }
+    curGroup = r.j;
+    idx = 0; listenSub = 'learn'; testState = { q: null, answered: null, correct: 0, total: 0 }; spellVal = ''; readMarked = null;
+    renderSide();
+    render();
+  }
+
+  // —— 渲染 ——
+  function render() {
+    if (!curGroup) return;
+    $('#mainArea').innerHTML =
+      '<div class="modes">' + MODES.map(m =>
+        '<button class="' + (mode === m.k ? 'on' : '') + '" data-m="' + m.k + '">' + m.t + '</button>').join('') + '</div>' +
+      '<div class="card" id="modeCard"></div>';
+    document.querySelectorAll('.modes button').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; render(); }));
+    const card = $('#modeCard');
+    if (mode === 'listen') renderListen(card);
+    else if (mode === 'read') renderRead(card);
+    else if (mode === 'memorize') renderMemorize(card);
+    else renderSpell(card);
+  }
+
+  function curWords() { return curGroup ? curGroup.words : []; }
+  function word() { const ws = curWords(); return ws[Math.min(idx, ws.length - 1)]; }
+
+  // —— 听 ——
+  function renderListen(card) {
+    const w = word();
+    const ws = curWords();
+    const mc = masteredCount(ws);
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + ws.length + ' 词 · 已掌握 ' + mc + '/' + ws.length + '</div>' +
+      '<div class="word-hero">' +
+        '<div class="w">' + esc(w.word) + '</div>' +
+        '<div class="ph">' + esc(w.phonetic) + '</div>' +
+        '<div class="pos">' + esc(w.pos) + '</div>' +
+        (listenSub === 'learn' ? '<div class="me">' + esc(w.meaning) + '</div>' : '<div class="me" style="color:#bbb;">？（听辨模式，先听再选）</div>') +
+      '</div>' +
+      '<div class="play-row"><button class="play" id="playBtn">▶</button></div>' +
+      '<div style="text-align:center;margin-top:12px;">' +
+        '<button class="mini' + (listenSub === 'learn' ? ' on' : '') + '" id="subLearn">学习</button> ' +
+        '<button class="mini' + (listenSub === 'test' ? ' on' : '') + '" id="subTest">听辨测试</button>' +
+      '</div>' +
+      (listenSub === 'test' ? '<div id="testBox" style="margin-top:8px;"></div>' : '') +
+      '<div class="prog-bar"><i style="width:' + ((idx + 1) / ws.length * 100) + '%"></i></div>' +
+      '<div class="prog-txt">' + (idx + 1) + ' / ' + ws.length + '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一词</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= ws.length - 1 ? 'disabled' : '') + '>下一词 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => play(w.audio));
+    $('#subLearn').addEventListener('click', () => { listenSub = 'learn'; render(); });
+    $('#subTest').addEventListener('click', () => { listenSub = 'test'; renderListenTest(); });
+    $('#prevBtn').addEventListener('click', () => { if (idx > 0) { idx--; listenSub = 'learn'; render(); } });
+    $('#nextBtn').addEventListener('click', () => { if (idx < ws.length - 1) { idx++; listenSub = 'learn'; render(); } });
+    if (listenSub === 'test') renderListenTest();
+    play(w.audio);
+  }
+  function renderListenTest() {
+    const w = word();
+    const ws = curWords();
+    // 生成 3 个选项：正确词义 + 2 个干扰（本组内随机）
+    const others = ws.filter(x => x.id !== w.id).map(x => x.meaning);
+    const dist = [];
+    while (dist.length < 2 && others.length) {
+      const k = Math.floor(Math.random() * others.length);
+      if (!dist.includes(others[k])) dist.push(others[k]);
+      others.splice(k, 1);
+    }
+    listenOpts = [w.meaning].concat(dist).sort(() => Math.random() - 0.5);
+    const box = $('#testBox');
+    if (!box) return;
+    box.innerHTML = '<div class="qtext">听录音，选出单词的正确词义</div>' +
+      listenOpts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('') +
+      '<div class="result" id="testRes"></div>';
+    box.querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      const pick = listenOpts[Number(el.dataset.i)];
+      const ok = pick === w.meaning;
+      box.querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) { el.classList.add('right'); markMastered(w.id); } else { el.classList.add('wrong'); box.querySelectorAll('.opt').forEach(x => { if (listenOpts[Number(x.dataset.i)] === w.meaning) x.classList.add('right'); }); }
+      $('#testRes').textContent = ok ? '✅ 正确！已标记掌握' : '❌ 正确词义：' + w.meaning;
+      $('#testRes').className = 'result ' + (ok ? 'ok' : 'bad');
+      $('#playBtn').click();
+    }));
+    play(w.audio);
+  }
+
+  // —— 读 ——
+  function renderRead(card) {
+    const w = word();
+    const ws = curWords();
+    const tip = tipFor(w.word, w.phonetic);
+    readMarked = null;
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + ws.length + ' 词 · 跟读练习</div>' +
+      '<div class="speak-panel">' +
+        '<div class="word-hero">' +
+          '<div class="w">' + esc(w.word) + '</div>' +
+          '<div class="ph">' + esc(w.phonetic) + '</div>' +
+          '<div class="pos">' + esc(w.pos) + '</div>' +
+          '<div class="me">' + esc(w.meaning) + '</div>' +
+        '</div>' +
+        '<div class="play-row"><button class="play" id="playBtn">▶</button></div>' +
+        '<div style="text-align:center;margin-top:12px;"><button class="mini" id="slowBtn">🐢 慢速播放</button></div>' +
+        '<div class="speak-hint">💡 发音提示：' + tip + '</div>' +
+        '<div class="rate-btns">' +
+          '<button id="rGood">😀 读得流利</button>' +
+          '<button id="rSoso">😐 一般，再练练</button>' +
+          '<button id="rAgain">🔁 再听一遍</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一词</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= ws.length - 1 ? 'disabled' : '') + '>下一词 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => play(w.audio));
+    $('#slowBtn').addEventListener('click', () => { try { const a = audioEl(w.audio); a.playbackRate = 0.7; a.play(); } catch (e) {} });
+    $('#rGood').addEventListener('click', () => { markMastered(w.id); $('#rGood').textContent = '✅ 已记录，继续加油！'; });
+    $('#rSoso').addEventListener('click', () => { play(w.audio); $('#rSoso').textContent = '🔁 再听一遍原音'; });
+    $('#rAgain').addEventListener('click', () => play(w.audio));
+    $('#prevBtn').addEventListener('click', () => { if (idx > 0) { idx--; render(); } });
+    $('#nextBtn').addEventListener('click', () => { if (idx < ws.length - 1) { idx++; render(); } });
+    play(w.audio);
+  }
+  function tipFor(word, phon) {
+    if (!phon || !phon.startsWith('/')) return '先听原音，注意重音与结尾辅音。';
+    const syls = (phon.match(/ˈ|ˌ/g) || []).length;
+    if (syls > 0) return '该词有 ' + (syls + 1) + ' 个音节，重音在' + (phon.indexOf('ˈ') > -1 ? '标注位置' : '第一个音节') + '，注意读准重音。';
+    return '单音节词，注意口型与结尾辅音要轻而清晰。';
+  }
+
+  // —— 背 ——
+  function renderMemorize(card) {
+    const ws = curWords();
+    if (!testState.q) testState.q = nextMemQ(ws);
+    const q = testState.q;
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 自测 ' + testState.correct + ' / ' + testState.total + '（本轮）· 全组已掌握 ' + masteredCount(ws) + '/' + ws.length + '</div>' +
+      '<div class="qtext">' + (q.kind === 'audio' ? '🎧 听录音' : '📖 看词义') + '，选出正确的单词</div>' +
+      '<div class="word-hero" style="padding-bottom:4px;">' +
+        (q.kind === 'audio' ? '<div class="ph" style="font-size:26px;color:#ff5e62;">点击 ▶ 播放</div>' : '<div class="me" style="font-size:26px;color:#222;">' + esc(q.prompt) + '</div>') +
+      '</div>' +
+      '<div class="play-row" style="margin-top:4px;"><button class="play" id="playBtn">▶</button></div>' +
+      '<div id="memBox" style="margin-top:10px;">' +
+        q.opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o.word) + ' <span style="color:#aaa;font-size:12px;">' + esc(o.phonetic) + '</span></div>').join('') +
+      '</div>' +
+      '<div class="result" id="memRes"></div>' +
+      '<div class="navbtns"><button id="skipBtn">跳过</button><button id="nextQ" class="primary">下一题</button></div>';
+    if (q.kind === 'audio') $('#playBtn').addEventListener('click', () => play(q.target.audio));
+    $('#memBox').querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      if (testState.answered) return;
+      testState.answered = true;
+      testState.total++;
+      const pick = q.opts[Number(el.dataset.i)];
+      const ok = pick.id === q.target.id;
+      if (ok) { testState.correct++; markMastered(q.target.id); } 
+      $('#memBox').querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) el.classList.add('right');
+      else { el.classList.add('wrong'); $('#memBox').querySelectorAll('.opt').forEach(x => { if (q.opts[Number(x.dataset.i)].id === q.target.id) x.classList.add('right'); }); }
+      $('#memRes').textContent = ok ? '✅ 答对了！' : '❌ 正确答案：' + q.target.word + '（' + q.target.meaning + '）';
+      $('#memRes').className = 'result ' + (ok ? 'ok' : 'bad');
+      render();
+      $('#memRes').textContent = ok ? '✅ 答对了！' : '❌ 正确答案：' + q.target.word + '（' + q.target.meaning + '）';
+      $('#memRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    }));
+    $('#skipBtn').addEventListener('click', () => { testState.q = null; render(); });
+    $('#nextQ').addEventListener('click', () => { testState.q = null; render(); });
+  }
+  function nextMemQ(ws) {
+    // 优先未掌握单词，随机 8 成；kind: audio（听音选词）/ mean（看义选词）随机
+    const p = loadProg();
+    const un = ws.filter(w => !(p[w.id] && p[w.id].m));
+    const pool = (un.length >= 2 && Math.random() < 0.8) ? un : ws;
+    const target = pool[Math.floor(Math.random() * pool.length)];
+    const kind = Math.random() < 0.5 ? 'audio' : 'mean';
+    const others = ws.filter(x => x.id !== target.id);
+    const opts = [target];
+    while (opts.length < 3 && others.length) {
+      const k = Math.floor(Math.random() * others.length);
+      if (!opts.includes(others[k])) opts.push(others[k]);
+      others.splice(k, 1);
+    }
+    opts.sort(() => Math.random() - 0.5);
+    return { kind, target, opts, prompt: kind === 'mean' ? target.meaning : '' };
+  }
+
+  // —— 记（拼写）——
+  function renderSpell(card) {
+    const ws = curWords();
+    const w = word();
+    const done = !!spellVal;
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 拼写练习 · 第 ' + (idx + 1) + ' / ' + ws.length + ' 词 · 已掌握 ' + masteredCount(ws) + '/' + ws.length + '</div>' +
+      '<div class="word-hero">' +
+        '<div class="me" style="font-size:26px;color:#222;">' + esc(w.meaning) + '</div>' +
+        '<div class="ph">' + esc(w.phonetic) + '</div>' +
+        '<div class="pos">' + esc(w.pos) + '</div>' +
+      '</div>' +
+      '<div class="play-row" style="margin-top:4px;"><button class="play" id="playBtn">▶</button></div>' +
+      '<input class="spell-input" id="spellIn" placeholder="输入英文拼写…" autocomplete="off" autocapitalize="off" spellcheck="false" ' + (done ? 'disabled' : '') + ' value="' + esc(spellVal) + '">' +
+      '<div class="result" id="spellRes"></div>' +
+      '<div class="navbtns">' +
+        '<button id="checkBtn" class="primary" ' + (done ? 'disabled' : '') + '>检查</button>' +
+        '<button id="skipBtn">跳过 / 显示答案</button>' +
+        '<button id="nextBtn" ' + (idx >= ws.length - 1 ? 'disabled' : '') + '>下一词 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => play(w.audio));
+    const input = $('#spellIn');
+    if (input) input.addEventListener('keydown', e => { if (e.key === 'Enter') checkSpell(w); });
+    $('#checkBtn').addEventListener('click', () => checkSpell(w));
+    $('#skipBtn').addEventListener('click', () => {
+      spellVal = w.word;
+      $('#spellIn').value = w.word;
+      $('#spellIn').disabled = true;
+      $('#spellRes').textContent = '正确答案：' + w.word;
+      $('#spellRes').className = 'result bad';
+      $('#checkBtn').disabled = true;
+    });
+    $('#nextBtn').addEventListener('click', () => { if (idx < ws.length - 1) { idx++; spellVal = ''; render(); } });
+    if (input && !done) input.focus();
+  }
+  function checkSpell(w) {
+    const v = ($('#spellIn').value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+    const ans = w.word.toLowerCase().replace(/\s+/g, ' ');
+    const ok = v === ans;
+    spellVal = $('#spellIn').value;
+    $('#spellRes').textContent = ok ? '✅ 拼写正确！已标记掌握' : '❌ 正确答案：' + w.word;
+    $('#spellRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    $('#spellIn').disabled = true;
+    $('#checkBtn').disabled = true;
+    if (ok) markMastered(w.id);
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+  // 键盘左右翻词（听/读/记模式）
+  document.addEventListener('keydown', e => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+    const ws = curWords();
+    if (e.key === 'ArrowRight' && idx < ws.length - 1 && (mode === 'listen' || mode === 'read')) { idx++; listenSub = 'learn'; render(); }
+    if (e.key === 'ArrowLeft' && idx > 0 && (mode === 'listen' || mode === 'read')) { idx--; listenSub = 'learn'; render(); }
+  });
+
+  init();
+})();
+</script>
+<script>
+(function(){try{var K='words';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

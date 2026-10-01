@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中考英语听说专项题库</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.9; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .tabs { display:flex; gap:8px; margin-bottom:14px; }
+  .tabs button { flex:1; padding:10px; border:none; border-radius:10px; background:#eee; font-size:15px; cursor:pointer; }
+  .tabs button.on { background:#ff5e62; color:#fff; }
+  label { display:block; font-size:13px; color:#666; margin:10px 0 4px; }
+  input { width:100%; padding:11px; border:1px solid #ddd; border-radius:10px; font-size:15px; }
+  .btn { width:100%; padding:12px; border:none; border-radius:10px; background:#ff5e62; color:#fff; font-size:16px; cursor:pointer; margin-top:14px; }
+  .msg { font-size:13px; margin-top:10px; min-height:18px; }
+  .msg.err { color:#e23; } .msg.ok { color:#2a8; }
+
+  /* —— 左侧菜单 + 右侧单题布局 —— */
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:250px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .vol-item { padding:11px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; }
+  .vol-item:hover { background:#fff3f2; }
+  .vol-item.on { background:#fff0ef; border-color:#ff5e62; }
+  .vol-item .t { font-weight:700; font-size:14px; }
+  .vol-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .dev-note b { color:#ff5e62; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .qhead { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px; }
+  .chip { background:#fff; border-radius:20px; padding:5px 12px; font-size:12px; color:#666; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .chip.brand { background:#ff5e62; color:#fff; }
+  .progress { margin-left:auto; font-size:13px; color:#888; }
+  .qcard { background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .part-label { color:#ff5e62; font-weight:700; font-size:13px; margin-bottom:6px; }
+  .audio-box { background:#fff7f5; padding:10px; border-radius:10px; margin:10px 0; }
+  .audio-box audio { width:100%; }
+  .audiotext { background:#f7f9ff; padding:10px 12px; border-radius:10px; font-size:13px; color:#555; margin:8px 0; line-height:1.6; }
+  .qtext { font-size:16px; font-weight:600; margin:12px 0 6px; line-height:1.5; }
+  .opt { padding:12px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#ff5e62; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .trap { display:inline-block; background:#ffece8; color:#ff5e62; font-size:12px; padding:3px 10px; border-radius:10px; margin-top:6px; }
+  .analysis { background:#fffbe8; padding:10px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:10px; line-height:1.6; }
+  .reveal-ans { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .navbtns { display:flex; gap:10px; margin-top:14px; }
+  .navbtns button { flex:1; padding:13px; border:none; border-radius:12px; font-size:15px; cursor:pointer; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06); color:#333; }
+  .navbtns button.primary { background:#ff5e62; color:#fff; }
+  .navbtns button:disabled { opacity:.35; cursor:not-allowed; }
+  .sp-box { background:#f6fff9; border:1px solid #d9f2e3; padding:12px; border-radius:10px; margin:8px 0; font-size:14px; line-height:1.6; }
+  .sp-sample { background:#fffbe8; padding:10px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:8px; line-height:1.6; }
+
+  @media (max-width:680px){
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+    #volMenu { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; }
+    .vol-item { min-width:170px; margin-bottom:0; }
+    .logout { width:auto; padding:9px 16px; }
+  }
+
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>中考英语听说专项题库</h1>
+    <p>中考英语听说 · 16 套模拟卷 · 英音男女双声 · 慢速跟练</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <!-- 体验模式横幅 -->
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ff9966">
+    <b>🎁 体验模式</b>：当前可免费练习 <b>试卷01</b>。解锁中考英语模块后即可练习全部试卷。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;background:#fff;border:1px dashed #d8c98a;border-radius:10px;padding:10px 12px;font-size:13px;color:#444;">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码" style="width:120px;height:auto;border-radius:8px;display:block;"></a></div>
+  </div>
+
+  <!-- 主界面：左侧菜单 + 右侧单题 -->
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📁 试卷列表</h3>
+      <div id="volMenu"></div>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一套试卷，开始逐题练习</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+if (!TOKEN) location.href = './index.html'; // 未登录回主页
+
+// —— 设备指纹：稳定标识当前浏览器/设备，用于后端设备绑定防共享 ——
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+
+let DEV = { n: 0, max: 2 };   // 已绑定设备数 / 上限
+let ACCT = { username: '', expiry: null };   // 当前帐号与授权到期（本模块）
+let AUTHED = false;           // 是否已授权（未授权 = 体验模式）
+let TRIAL = false;            // 体验模式标记（服务端返回）
+
+// —— 练习状态 ——
+let VOLS = [];                 // 试卷列表（侧栏）
+let CUR = null;                // { id, title, items, idx }
+const answered = {};           // qid -> 选中下标（保持答过的状态）
+const QZ_KEY = 'quiz_progress';  // 中考答题记录（按卷：qid->选中 + _done/_correct/_total/_last）
+function loadQZ() { try { return JSON.parse(localStorage.getItem(QZ_KEY) || '{}'); } catch (e) { return {}; } }
+function saveQZ(v) { try { localStorage.setItem(QZ_KEY, JSON.stringify(v)); } catch (e) {} }
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/volumes', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  VOLS = r.j.volumes;
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const menu = document.getElementById('volMenu'); menu.innerHTML = '';
+  VOLS.forEach(v => {
+    const d = document.createElement('div');
+    d.className = 'vol-item'; d.id = 'menu-' + v.id;
+    d.innerHTML = `<div class="t">${v.title}</div><div class="s">主攻：${v.mainTrap} · ${v.totalScore}分</div>`;
+    d.onclick = () => selectVol(v.id);
+    menu.appendChild(d);
+  });
+  renderEmpty();
+}
+
+function renderEmpty() {
+  CUR = null;
+  document.querySelectorAll('.vol-item').forEach(e => e.classList.remove('on'));
+  document.getElementById('mainArea').innerHTML = '<div class="empty">← 从左侧选择一套试卷，开始逐题练习</div>';
+}
+
+async function selectVol(id) {
+  const meta = VOLS.find(v => v.id === id);
+  const r = await api('/api/quiz?vol=' + id, { headers: H() });
+  if (r.s !== 200) { alert(r.j.error || '加载失败'); return; }
+  const items = [];
+  (r.j.parts || []).forEach(p => {
+    if (p.type === 'speaking') (p.tasks || []).forEach(t => items.push({ part: p, kind: 'speaking', t }));
+    else (p.questions || []).forEach(q => items.push({ part: p, kind: 'question', q }));
+  });
+  CUR = { id, title: meta ? meta.title : r.j.title, items, idx: 0 };
+  // 客观题总数（不含口语任务）
+  const objCount = items.filter(it => it.kind === 'question' && it.q && typeof it.q.answer === 'number').length;
+  const pz = loadQZ(); const rec = pz[id] = pz[id] || {}; rec._total = objCount; saveQZ(pz);
+  // 恢复该卷已作答记录
+  Object.keys(answered).forEach(k => delete answered[k]);
+  for (const k in rec) { if (k[0] === '_') continue; answered[k] = rec[k]; }
+  document.querySelectorAll('.vol-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('menu-' + id); if (m) m.classList.add('on');
+  renderCurrent();
+}
+
+function renderCurrent() {
+  if (!CUR) return;
+  const it = CUR.items[CUR.idx];
+  const ma = document.getElementById('mainArea');
+  const partName = `${it.part.part} · ${it.part.name}`;
+  let body = '';
+  if (it.kind === 'speaking') {
+    const t = it.t;
+    body += `<div class="sp-box"><b>口语任务：${t.type || ''}</b><br>${t.content || ''}`;
+    if (Array.isArray(t.questions) && t.questions.length) body += '<br>' + t.questions.join('<br>');
+    body += '</div>';
+    if (t.sample) body += `<div class="sp-sample">范例：${t.sample}</div>`;
+    if (t.note) body += `<div class="audiotext">💡 ${t.note}</div>`;
+  } else {
+    const q = it.q;
+    if (q.audio && typeof q.audio === 'string' && q.audio.startsWith('/audio/')) {
+      body += `<div class="audio-box">🎧 <audio controls preload="metadata" src="${q.audio}"></audio></div>`;
+    }
+    if (q.audioText && answered[q.id] != null) {
+      const t = Array.isArray(q.audioText) ? q.audioText.join('<br>') : q.audioText;
+      body += `<div class="audiotext">📝 原文：${t}</div>`;
+    }
+    if (q.question) body += `<div class="qtext">${q.question}</div>`;
+    if (q.trap) body += `<div><span class="trap">陷阱：${q.trap}</span></div>`;
+    if (Array.isArray(q.options) && typeof q.answer === 'number') {
+      q.options.forEach((o, i) => {
+        let cls = 'opt';
+        const sel = answered[q.id];
+        if (sel != null) {
+          cls += ' locked';
+          if (i === q.answer) cls += ' right';
+          else if (i === sel) cls += ' wrong';
+        }
+        body += `<div class="${cls}" onclick="pick(${i})">${String.fromCharCode(65 + i)}. ${o}</div>`;
+      });
+      if (answered[q.id] != null) {
+        body += `<div class="reveal-ans">✅ 正确答案：${String.fromCharCode(65 + q.answer)}</div>`;
+        if (q.analysis) body += `<div class="analysis">解析：${q.analysis}</div>`;
+      }
+    } else if (q.answer != null) {
+      body += `<div class="reveal-ans">✅ 答案：${typeof q.answer === 'number' ? String.fromCharCode(65 + q.answer) : q.answer}</div>`;
+      if (q.analysis) body += `<div class="analysis">解析：${q.analysis}</div>`;
+    }
+  }
+  ma.innerHTML = `
+    <div class="qhead">
+      <span class="chip brand">${CUR.title}</span>
+      <span class="chip">${partName}</span>
+      <span class="progress">第 ${CUR.idx + 1} / ${CUR.items.length} 题</span>
+    </div>
+    <div class="qcard">${body}</div>
+    <div class="navbtns">
+      <button onclick="prevQ()" ${CUR.idx === 0 ? 'disabled' : ''}>← 上一题</button>
+      <button class="primary" onclick="nextQ()" ${CUR.idx === CUR.items.length - 1 ? 'disabled' : ''}>下一题 →</button>
+    </div>`;
+  window.scrollTo({ top: 0 });
+}
+
+function pick(i) {
+  if (!CUR) return;
+  const q = CUR.items[CUR.idx].q;
+  if (answered[q.id] != null) return;
+  answered[q.id] = i;
+  const pz = loadQZ(); const rec = pz[CUR.id] = pz[CUR.id] || { _done: 0, _correct: 0, _total: 0, _last: 0 };
+  rec[q.id] = i;
+  rec._done = (rec._done || 0) + 1; if (i === q.answer) rec._correct = (rec._correct || 0) + 1;
+  rec._last = Date.now(); saveQZ(pz);
+  try { const t2 = localStorage.getItem('token') || ''; if (t2) { let d2 = ''; try { d2 = localStorage.getItem('devfp') || ''; } catch (e) {} fetch('/api/study/sync', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Device': d2, 'Authorization': t2 }, body: JSON.stringify({ log: {}, progress: { middle: loadQZ() } }) }).catch(function(){}); } } catch (e) {}
+  renderCurrent();
+}
+function prevQ() { if (CUR && CUR.idx > 0) { CUR.idx--; renderCurrent(); } }
+function nextQ() { if (CUR && CUR.idx < CUR.items.length - 1) { CUR.idx++; renderCurrent(); } }
+document.addEventListener('keydown', e => {
+  if (!CUR) return;
+  if (e.key === 'ArrowLeft') prevQ();
+  if (e.key === 'ArrowRight') nextQ();
+});
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).middle; // 中考英语模块是否解锁
+  showApp();   // 未解锁也进入体验模式（仅试卷01）
+}
+if (TOKEN) afterLogin();
+</script>
+<script>
+(function(){try{var K='quiz';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress.primary=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}try{body.progress.middle=JSON.parse(localStorage.getItem('quiz_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

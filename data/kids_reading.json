@@ -1,0 +1,360 @@
+{
+  "product": "幼儿启蒙英语 · 迷你绘本",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "8 本迷你绘本：整句点读 + 中文对照，起步阅读（衔接小学分级阅读）",
+  "books": [
+    {
+      "id": "kr1",
+      "title": "My Cat",
+      "zhTitle": "我的小猫",
+      "emoji": "🐱",
+      "pages": [
+        {
+          "id": "kr101",
+          "en": "This is my cat.",
+          "zh": "这是我的猫。",
+          "audio": "/audio/kr/kr101.mp3"
+        },
+        {
+          "id": "kr102",
+          "en": "My cat is small.",
+          "zh": "我的猫很小。",
+          "audio": "/audio/kr/kr102.mp3"
+        },
+        {
+          "id": "kr103",
+          "en": "My cat is white.",
+          "zh": "我的猫是白色的。",
+          "audio": "/audio/kr/kr103.mp3"
+        },
+        {
+          "id": "kr104",
+          "en": "My cat can jump.",
+          "zh": "我的猫会跳。",
+          "audio": "/audio/kr/kr104.mp3"
+        },
+        {
+          "id": "kr105",
+          "en": "My cat says meow.",
+          "zh": "我的猫说喵喵。",
+          "audio": "/audio/kr/kr105.mp3"
+        },
+        {
+          "id": "kr106",
+          "en": "I love my cat.",
+          "zh": "我爱我的猫。",
+          "audio": "/audio/kr/kr106.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr2",
+      "title": "Colours Around Me",
+      "zhTitle": "身边的颜色",
+      "emoji": "🌈",
+      "pages": [
+        {
+          "id": "kr201",
+          "en": "I see a red apple.",
+          "zh": "我看见一个红苹果。",
+          "audio": "/audio/kr/kr201.mp3"
+        },
+        {
+          "id": "kr202",
+          "en": "I see a yellow sun.",
+          "zh": "我看见一个黄太阳。",
+          "audio": "/audio/kr/kr202.mp3"
+        },
+        {
+          "id": "kr203",
+          "en": "I see a blue sky.",
+          "zh": "我看见蓝蓝的天。",
+          "audio": "/audio/kr/kr203.mp3"
+        },
+        {
+          "id": "kr204",
+          "en": "I see a green tree.",
+          "zh": "我看见一棵绿树。",
+          "audio": "/audio/kr/kr204.mp3"
+        },
+        {
+          "id": "kr205",
+          "en": "I see a pink flower.",
+          "zh": "我看见一朵粉花。",
+          "audio": "/audio/kr/kr205.mp3"
+        },
+        {
+          "id": "kr206",
+          "en": "Colours are so pretty.",
+          "zh": "颜色真漂亮。",
+          "audio": "/audio/kr/kr206.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr3",
+      "title": "I Can Run",
+      "zhTitle": "我会跑",
+      "emoji": "🏃",
+      "pages": [
+        {
+          "id": "kr301",
+          "en": "I can run.",
+          "zh": "我会跑。",
+          "audio": "/audio/kr/kr301.mp3"
+        },
+        {
+          "id": "kr302",
+          "en": "I can jump.",
+          "zh": "我会跳。",
+          "audio": "/audio/kr/kr302.mp3"
+        },
+        {
+          "id": "kr303",
+          "en": "I can clap my hands.",
+          "zh": "我会拍手。",
+          "audio": "/audio/kr/kr303.mp3"
+        },
+        {
+          "id": "kr304",
+          "en": "I can stamp my feet.",
+          "zh": "我会跺脚。",
+          "audio": "/audio/kr/kr304.mp3"
+        },
+        {
+          "id": "kr305",
+          "en": "I can sing a song.",
+          "zh": "我会唱歌。",
+          "audio": "/audio/kr/kr305.mp3"
+        },
+        {
+          "id": "kr306",
+          "en": "I can do it all day.",
+          "zh": "我能玩一整天。",
+          "audio": "/audio/kr/kr306.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr4",
+      "title": "Good Morning",
+      "zhTitle": "早上好",
+      "emoji": "☀️",
+      "pages": [
+        {
+          "id": "kr401",
+          "en": "Good morning, Mum.",
+          "zh": "早上好，妈妈。",
+          "audio": "/audio/kr/kr401.mp3"
+        },
+        {
+          "id": "kr402",
+          "en": "Good morning, Dad.",
+          "zh": "早上好，爸爸。",
+          "audio": "/audio/kr/kr402.mp3"
+        },
+        {
+          "id": "kr403",
+          "en": "I open my eyes.",
+          "zh": "我睁开眼睛。",
+          "audio": "/audio/kr/kr403.mp3"
+        },
+        {
+          "id": "kr404",
+          "en": "I wash my face.",
+          "zh": "我洗脸。",
+          "audio": "/audio/kr/kr404.mp3"
+        },
+        {
+          "id": "kr405",
+          "en": "I brush my teeth.",
+          "zh": "我刷牙。",
+          "audio": "/audio/kr/kr405.mp3"
+        },
+        {
+          "id": "kr406",
+          "en": "I am ready for the day.",
+          "zh": "我准备好过这一天了。",
+          "audio": "/audio/kr/kr406.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr5",
+      "title": "My Family",
+      "zhTitle": "我的家",
+      "emoji": "👨‍👩‍👧",
+      "pages": [
+        {
+          "id": "kr501",
+          "en": "This is my family.",
+          "zh": "这是我的家。",
+          "audio": "/audio/kr/kr501.mp3"
+        },
+        {
+          "id": "kr502",
+          "en": "This is my mum.",
+          "zh": "这是我的妈妈。",
+          "audio": "/audio/kr/kr502.mp3"
+        },
+        {
+          "id": "kr503",
+          "en": "This is my dad.",
+          "zh": "这是我的爸爸。",
+          "audio": "/audio/kr/kr503.mp3"
+        },
+        {
+          "id": "kr504",
+          "en": "This is my sister.",
+          "zh": "这是我的姐姐。",
+          "audio": "/audio/kr/kr504.mp3"
+        },
+        {
+          "id": "kr505",
+          "en": "We laugh together.",
+          "zh": "我们一起笑。",
+          "audio": "/audio/kr/kr505.mp3"
+        },
+        {
+          "id": "kr506",
+          "en": "I love my family.",
+          "zh": "我爱我的家。",
+          "audio": "/audio/kr/kr506.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr6",
+      "title": "At the Park",
+      "zhTitle": "在公园",
+      "emoji": "🌳",
+      "pages": [
+        {
+          "id": "kr601",
+          "en": "Let's go to the park.",
+          "zh": "我们去公园吧。",
+          "audio": "/audio/kr/kr601.mp3"
+        },
+        {
+          "id": "kr602",
+          "en": "I see a big tree.",
+          "zh": "我看见一棵大树。",
+          "audio": "/audio/kr/kr602.mp3"
+        },
+        {
+          "id": "kr603",
+          "en": "I see a little bird.",
+          "zh": "我看见一只小鸟。",
+          "audio": "/audio/kr/kr603.mp3"
+        },
+        {
+          "id": "kr604",
+          "en": "I play on the slide.",
+          "zh": "我玩滑梯。",
+          "audio": "/audio/kr/kr604.mp3"
+        },
+        {
+          "id": "kr605",
+          "en": "I run on the grass.",
+          "zh": "我在草地上跑。",
+          "audio": "/audio/kr/kr605.mp3"
+        },
+        {
+          "id": "kr606",
+          "en": "I am so happy.",
+          "zh": "我太开心了。",
+          "audio": "/audio/kr/kr606.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr7",
+      "title": "Bedtime",
+      "zhTitle": "睡觉时间",
+      "emoji": "🌙",
+      "pages": [
+        {
+          "id": "kr701",
+          "en": "It is night time.",
+          "zh": "到晚上了。",
+          "audio": "/audio/kr/kr701.mp3"
+        },
+        {
+          "id": "kr702",
+          "en": "The moon is bright.",
+          "zh": "月亮很亮。",
+          "audio": "/audio/kr/kr702.mp3"
+        },
+        {
+          "id": "kr703",
+          "en": "I take a bath.",
+          "zh": "我洗个澡。",
+          "audio": "/audio/kr/kr703.mp3"
+        },
+        {
+          "id": "kr704",
+          "en": "I put on my pyjamas.",
+          "zh": "我穿上睡衣。",
+          "audio": "/audio/kr/kr704.mp3"
+        },
+        {
+          "id": "kr705",
+          "en": "Mum reads me a book.",
+          "zh": "妈妈给我读书。",
+          "audio": "/audio/kr/kr705.mp3"
+        },
+        {
+          "id": "kr706",
+          "en": "Good night, sleep tight.",
+          "zh": "晚安，睡个好觉。",
+          "audio": "/audio/kr/kr706.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kr8",
+      "title": "Yummy Food",
+      "zhTitle": "美味的食物",
+      "emoji": "🍎",
+      "pages": [
+        {
+          "id": "kr801",
+          "en": "I like apples.",
+          "zh": "我喜欢苹果。",
+          "audio": "/audio/kr/kr801.mp3"
+        },
+        {
+          "id": "kr802",
+          "en": "I like bananas.",
+          "zh": "我喜欢香蕉。",
+          "audio": "/audio/kr/kr802.mp3"
+        },
+        {
+          "id": "kr803",
+          "en": "I drink milk.",
+          "zh": "我喝牛奶。",
+          "audio": "/audio/kr/kr803.mp3"
+        },
+        {
+          "id": "kr804",
+          "en": "I eat an egg.",
+          "zh": "我吃鸡蛋。",
+          "audio": "/audio/kr/kr804.mp3"
+        },
+        {
+          "id": "kr805",
+          "en": "Yummy, yummy, yummy!",
+          "zh": "好吃，好吃，真好吃！",
+          "audio": "/audio/kr/kr805.mp3"
+        },
+        {
+          "id": "kr806",
+          "en": "I like all my food.",
+          "zh": "我喜欢我所有的食物。",
+          "audio": "/audio/kr/kr806.mp3"
+        }
+      ]
+    }
+  ]
+}

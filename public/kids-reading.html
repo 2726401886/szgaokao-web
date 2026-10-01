@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿启蒙英语 · 迷你绘本</title>
+<style>
+  :root { --brand:#ff9f43; --brand2:#ffbe76; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff9f43,#ffbe76); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .vol-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .vol-item:hover { background:#fff7f0; }
+  .vol-item.on { background:#fff3e8; border-color:#ff9f43; }
+  .vol-item .t { font-weight:700; font-size:13.5px; }
+  .vol-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#fff3e8; color:#ff9f43; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .book-page { background:linear-gradient(160deg,#fffaf2,#fff); border:1.5px solid #ffe9cf; border-radius:18px; padding:26px 22px; text-align:center; position:relative; min-height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .page-no { position:absolute; top:12px; left:14px; font-size:12px; color:#c9a06a; font-weight:700; }
+  .book-emoji { font-size:52px; margin-bottom:14px; }
+  .book-en { font-size:24px; font-weight:800; line-height:1.5; color:#5a4632; }
+  .book-zh { font-size:15px; color:#a08a6e; margin-top:10px; }
+  .book-play { margin-top:18px; padding:11px 22px; border:none; border-radius:14px; background:linear-gradient(135deg,#ff9f43,#f77f2e); color:#fff; font-size:14px; font-weight:800; cursor:pointer; }
+  .nav-bar { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; justify-content:center; }
+  .nav-q { width:36px; height:36px; border-radius:10px; border:1.5px solid #e0e0e0; background:#fff; color:#666; font-size:13px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .nav-q.on { background:#ff9f43; border-color:#ff9f43; color:#fff; }
+  .nav-foot { display:flex; gap:10px; margin-top:16px; }
+  .nav-foot button { flex:1; padding:12px; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer; }
+  .btn-prev { background:#f0f0f0; color:#666; }
+  .btn-next { background:#ff9f43; color:#fff; }
+  .book-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .book-head .tt { font-size:18px; font-weight:800; }
+  .book-head .zh { font-size:13px; color:#999; }
+  .tip { background:#fff7e0; padding:9px 12px; border-radius:10px; font-size:12.5px; color:#7a5c00; margin-top:12px; line-height:1.6; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  @media (max-width:680px){ .layout { flex-direction:column; } .side { width:100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>📚 幼儿迷你绘本</h1>
+    <p>8 本起步绘本 · 整句点读 · 中文对照（衔接小学分级阅读）</p>
+    <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ffbe76">
+    <b>🎁 体验模式</b>：当前可免费读 <b>第 1 本</b>。解锁幼儿英语模块后即可阅读全部绘本。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📖 绘本列表</h3>
+      <div id="bookMenu"></div>
+      <button class="logout blue" onclick="location.href='./kids.html'">📖 单词听读背记</button>
+      <button class="logout" onclick="location.href='./kids-listening.html'">🎧 听说练习</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一本绘本开始阅读</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+let DEV = { n: 0, max: 2 };
+let ACCT = { username: '', expiry: null };
+let AUTHED = false;
+let TRIAL = false;
+let BOOKS = [];
+let CUR = null;
+let page = 0;
+let AUD = null;
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src) {
+  if (!src) return;
+  if (AUD) AUD.pause();
+  const a = new Audio(src);
+  a.play();
+  AUD = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/kids-reading', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  BOOKS = r.j.books || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const m = document.getElementById('bookMenu'); m.innerHTML = '';
+  BOOKS.forEach(b => {
+    const d = document.createElement('div');
+    d.className = 'vol-item'; d.id = 'book-' + b.id;
+    d.innerHTML = '<div class="t">' + b.emoji + ' ' + esc(b.title) + '</div><div class="s">' + esc(b.zhTitle) + ' · ' + b.pages + ' 页</div>';
+    d.onclick = () => selectBook(b.id);
+    m.appendChild(d);
+  });
+  if (BOOKS.length) selectBook(BOOKS[0].id);
+}
+
+function selectBook(id) {
+  document.querySelectorAll('.vol-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('book-' + id); if (m) m.classList.add('on');
+  loadBook(id);
+}
+
+async function loadBook(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/kids-reading?id=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  CUR = r.j;
+  page = 0;
+  renderBook();
+}
+
+function renderBook() {
+  const b = CUR;
+  const pages = b.pages || [];
+  page = Math.min(page, Math.max(0, pages.length - 1));
+  const p = pages[page];
+  const ma = document.getElementById('mainArea');
+  const nav = pages.map((x, i) => `<div class="nav-q ${i === page ? 'on' : ''}" onclick="goPage(${i})">${i + 1}</div>`).join('');
+  ma.innerHTML = `
+    <div class="card">
+      <div class="book-head">
+        <div style="font-size:34px;">${esc(b.emoji)}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="tt">${esc(b.title)}</div>
+          <div class="zh">${esc(b.zhTitle)} · 共 ${pages.length} 页</div>
+        </div>
+        <button class="book-play" onclick="playAudio('${esc(p.audio)}')">🔊 朗读本页</button>
+      </div>
+      <div class="nav-bar">${nav}</div>
+    </div>
+    <div class="book-page">
+      <div class="page-no">第 ${page + 1} / ${pages.length} 页</div>
+      <div class="book-emoji">${esc(b.emoji)}</div>
+      <div class="book-en">${esc(p.en)}</div>
+      <div class="book-zh">${esc(p.zh)}</div>
+      <button class="book-play" onclick="playAudio('${esc(p.audio)}')">🔊 再听一遍</button>
+    </div>
+    <div class="nav-foot">
+      <button class="btn-prev" onclick="goPage(${page - 1})" ${page === 0 ? 'disabled style="opacity:.4"' : ''}>← 上一页</button>
+      <button class="btn-next" onclick="goPage(${page + 1})" ${page >= pages.length - 1 ? 'disabled style="opacity:.4"' : ''}>下一页 →</button>
+    </div>
+    <div class="tip">💡 阅读建议：先听整页 → 宝宝跟读 → 家长指着画面说中文对应。读完 8 本即可衔接「小学分级阅读」入口。</div>`;
+  window.scrollTo({ top: 0 });
+}
+
+function goPage(i) {
+  const pages = (CUR.pages || []);
+  if (i < 0 || i >= pages.length) return;
+  page = i;
+  renderBook();
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).kids;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else {
+  show('appLayout', true);
+  document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#ff9f43;">前往登录页</a></div>';
+}
+</script>
+<script>
+(function(){try{var K='krd';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,938 @@
+{
+ "level": "KET",
+ "name": "KET 听说模拟（A2）",
+ "volumes": [
+  {
+   "id": "kx1a",
+   "title": "KET 模拟卷一 · 校园生活",
+   "topic": "校园 · 学习 · 考试",
+   "questions": [
+    {
+     "id": "kx1a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx1a01.mp3",
+     "audio_text": "library",
+     "options": [
+      "图书馆",
+      "实验室",
+      "食堂"
+     ],
+     "answer": 0,
+     "tip": "library = 图书馆，注意与 lab（实验室）区分。"
+    },
+    {
+     "id": "kx1a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx1a02.mp3",
+     "audio_text": "homework",
+     "options": [
+      "考试",
+      "作业",
+      "笔记"
+     ],
+     "answer": 1,
+     "tip": "homework 是不可数名词，意为家庭作业。"
+    },
+    {
+     "id": "kx1a03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx1a03.mp3",
+     "audio_text": "I have an English lesson at nine o'clock.",
+     "options": [
+      "我九点有一节英语课",
+      "我九点有一场考试",
+      "我九点要去图书馆"
+     ],
+     "answer": 0,
+     "tip": "have a lesson = 上课。"
+    },
+    {
+     "id": "kx1a04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx1a04.mp3",
+     "audio_text": "Our teacher is very kind to us.",
+     "options": [
+      "我们的老师对我们很严格",
+      "我们的老师对我们很和蔼",
+      "我们的老师经常表扬我们"
+     ],
+     "answer": 1,
+     "tip": "be kind to sb = 对某人友好/和蔼。"
+    },
+    {
+     "id": "kx1a05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1a05.mp3",
+     "audio_text": "A: Can I borrow your pen, please? B: Sure. Here you are.",
+     "options": [
+      "借给 A 一支钢笔",
+      "向 A 借钢笔",
+      "让 A 去买钢笔"
+     ],
+     "answer": 0,
+     "tip": "Here you are. = 给你。borrow = 借入。"
+    },
+    {
+     "id": "kx1a06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1a06.mp3",
+     "audio_text": "A: How often do you have P.E. class? B: Twice a week, on Tuesday and Friday.",
+     "options": [
+      "每周两次",
+      "每周一次",
+      "每天一次"
+     ],
+     "answer": 0,
+     "tip": "twice a week = 每周两次。"
+    },
+    {
+     "id": "kx1a07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1a07.mp3",
+     "audio_text": "A: I can't find my maths book. B: Maybe it's in your desk.",
+     "options": [
+      "在书桌里",
+      "在书包里",
+      "在家里"
+     ],
+     "answer": 0,
+     "tip": "maybe = 也许。注意推测语气。"
+    },
+    {
+     "id": "kx1a08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx1a08.mp3",
+     "audio_text": "Tom is a primary school student. He gets up at six thirty every morning. He walks to school with his best friend Jack. His favourite subject is science because he likes doing experiments. After school, he plays basketball for an hour.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx1a08a",
+       "q": "How does Tom go to school?",
+       "options": [
+        "On foot",
+        "By bus",
+        "By bike"
+       ],
+       "answer": 0,
+       "tip": "walks to school = 步行上学，即 on foot。"
+      },
+      {
+       "id": "kx1a08b",
+       "q": "Why does Tom like science?",
+       "options": [
+        "Because he likes doing experiments",
+        "Because his teacher is kind",
+        "Because it is easy"
+       ],
+       "answer": 0,
+       "tip": "because he likes doing experiments = 因为他喜欢做实验。"
+      },
+      {
+       "id": "kx1a08c",
+       "q": "What does Tom do after school?",
+       "options": [
+        "He plays football",
+        "He plays basketball",
+        "He reads books"
+       ],
+       "answer": 1,
+       "tip": "plays basketball for an hour = 打一小时篮球。"
+      }
+     ]
+    },
+    {
+     "id": "kx1a09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx1a09.mp3",
+     "audio_text": "My favourite subject is English, because I like speaking with my classmates.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 favourite 的重音在第一个音节，speaking 的 ng 音要读到位。"
+    },
+    {
+     "id": "kx1a10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1a10.mp3",
+     "audio_text": "A: Who is the girl in the photo? B: She is my cousin. She lives in Shanghai and she is two years older than me.",
+     "options": [
+      "她是我妹妹",
+      "她是我表姐，住在上海",
+      "她是我同学"
+     ],
+     "answer": 1,
+     "tip": "cousin = 堂（表）姐妹；older than = 比……大。"
+    },
+    {
+     "id": "kx1a11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx1a11.mp3",
+     "audio_text": "Our school has three interesting clubs. The Music Club meets on Monday afternoon. Students there play the guitar, the piano or sing songs. The Sports Club is very popular. Children play basketball and football after class on Tuesday and Thursday. The Art Club is on Friday. Students draw pictures and make cards. You can join the club you like at the office on the first floor.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx1a11a",
+       "q": "When does the Music Club meet?",
+       "options": [
+        "On Monday afternoon",
+        "On Tuesday",
+        "On Friday"
+       ],
+       "answer": 0,
+       "tip": "The Music Club meets on Monday afternoon."
+      },
+      {
+       "id": "kx1a11b",
+       "q": "What do students do in the Sports Club?",
+       "options": [
+        "Sing songs",
+        "Play basketball and football",
+        "Draw pictures"
+       ],
+       "answer": 1,
+       "tip": "Children play basketball and football after class on Tuesday and Thursday."
+      },
+      {
+       "id": "kx1a11c",
+       "q": "Where can students join a club?",
+       "options": [
+        "In the library",
+        "At the office on the first floor",
+        "In the dining hall"
+       ],
+       "answer": 1,
+       "tip": "You can join the club at the office on the first floor."
+      }
+     ]
+    },
+    {
+     "id": "kx1a12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx1a12.mp3",
+     "audio_text": "After school, I often go to the library to read story books with my friends.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 often 的 t 可轻读，story 的 o 音要饱满。"
+    }
+   ]
+  },
+  {
+   "id": "kx1b",
+   "title": "KET 模拟卷二 · 家庭与休闲",
+   "topic": "家庭 · 周末 · 爱好",
+   "questions": [
+    {
+     "id": "kx1b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx1b01.mp3",
+     "audio_text": "weekend",
+     "options": [
+      "周末",
+      "工作日",
+      "假期"
+     ],
+     "answer": 0,
+     "tip": "weekend = 周末，指周六和周日。"
+    },
+    {
+     "id": "kx1b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx1b02.mp3",
+     "audio_text": "hobby",
+     "options": [
+      "作业",
+      "爱好",
+      "习惯"
+     ],
+     "answer": 1,
+     "tip": "hobby = 爱好，如 collecting stamps 集邮。"
+    },
+    {
+     "id": "kx1b03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx1b03.mp3",
+     "audio_text": "My family usually have dinner together on Sundays.",
+     "options": [
+      "我们家通常在周日一起吃晚饭",
+      "我们家通常在周日一起去公园",
+      "我们家通常在周日一起看电视"
+     ],
+     "answer": 0,
+     "tip": "have dinner together = 一起吃晚饭。"
+    },
+    {
+     "id": "kx1b04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx1b04.mp3",
+     "audio_text": "She spends two hours playing the piano every day.",
+     "options": [
+      "她每天花两小时弹钢琴",
+      "她每天花两小时练跑步",
+      "她每天花两小时写作业"
+     ],
+     "answer": 0,
+     "tip": "spend time doing sth = 花时间做某事。"
+    },
+    {
+     "id": "kx1b05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1b05.mp3",
+     "audio_text": "A: What are you going to do this weekend? B: I'm going to visit my grandparents with my parents.",
+     "options": [
+      "去看望祖父母",
+      "在家做作业",
+      "去公园野餐"
+     ],
+     "answer": 0,
+     "tip": "be going to = 打算做某事。"
+    },
+    {
+     "id": "kx1b06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1b06.mp3",
+     "audio_text": "A: Do you like swimming? B: Yes, but I like cycling better.",
+     "options": [
+      "游泳",
+      "骑自行车",
+      "跑步"
+     ],
+     "answer": 1,
+     "tip": "like ... better = 更喜欢……。"
+    },
+    {
+     "id": "kx1b07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1b07.mp3",
+     "audio_text": "A: How was your holiday? B: It was wonderful! We went to the beach every day.",
+     "options": [
+      "每天去海滩",
+      "每天去爬山",
+      "每天在家休息"
+     ],
+     "answer": 0,
+     "tip": "wonderful = 棒极了。went to the beach = 去了海滩。"
+    },
+    {
+     "id": "kx1b08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx1b08.mp3",
+     "audio_text": "Linda's family has four people: her father, her mother, her brother and her. On Saturday morning, they go to the supermarket together. Her father buys some bread and milk. Her mother buys vegetables and fruit. Linda and her brother buy a big cake. They have a picnic in the park at noon.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx1b08a",
+       "q": "How many people are there in Linda's family?",
+       "options": [
+        "Three",
+        "Four",
+        "Five"
+       ],
+       "answer": 1,
+       "tip": "father, mother, brother and Linda = 4 人。"
+      },
+      {
+       "id": "kx1b08b",
+       "q": "What does her father buy?",
+       "options": [
+        "Vegetables and fruit",
+        "Bread and milk",
+        "A big cake"
+       ],
+       "answer": 1,
+       "tip": "Her father buys some bread and milk."
+      },
+      {
+       "id": "kx1b08c",
+       "q": "Where do they have a picnic?",
+       "options": [
+        "At home",
+        "In the park",
+        "At the supermarket"
+       ],
+       "answer": 1,
+       "tip": "They have a picnic in the park at noon."
+      }
+     ]
+    },
+    {
+     "id": "kx1b09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx1b09.mp3",
+     "audio_text": "On weekends, I like playing football with my friends in the park.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 weekends 的 s 要轻读，playing 的 ing 音清晰。"
+    },
+    {
+     "id": "kx1b10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx1b10.mp3",
+     "audio_text": "A: We planned a picnic tomorrow. But the weather report says it will rain. B: Then let's stay at home and watch a film instead.",
+     "options": [
+      "明天去野餐",
+      "下雨就待在家看电影",
+      "明天去游泳"
+     ],
+     "answer": 1,
+     "tip": "weather report = 天气预报；stay at home = 待在家。"
+    },
+    {
+     "id": "kx1b11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx1b11.mp3",
+     "audio_text": "Amy likes collecting stamps. She has stamps from more than twenty countries. Her friend Jack is interested in taking photos. He takes pictures of birds and flowers in the park. On Sunday afternoon, Amy and Jack usually go to the park with their families. They fly kites, ride bikes and have a small picnic under the big tree. Everyone enjoys the happy time together.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx1b11a",
+       "q": "What does Amy like doing?",
+       "options": [
+        "Taking photos",
+        "Collecting stamps",
+        "Riding bikes"
+       ],
+       "answer": 1,
+       "tip": "Amy likes collecting stamps."
+      },
+      {
+       "id": "kx1b11b",
+       "q": "What does Jack take pictures of?",
+       "options": [
+        "Birds and flowers",
+        "Cars and buses",
+        "Food and drinks"
+       ],
+       "answer": 0,
+       "tip": "He takes pictures of birds and flowers in the park."
+      },
+      {
+       "id": "kx1b11c",
+       "q": "Where do they have a small picnic?",
+       "options": [
+        "Under the big tree",
+        "At home",
+        "At school"
+       ],
+       "answer": 0,
+       "tip": "They have a small picnic under the big tree."
+      }
+     ]
+    },
+    {
+     "id": "kx1b12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx1b12.mp3",
+     "audio_text": "My hobby is collecting stamps from different countries around the world.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 collecting 双写 l，countries 的 ou 音。"
+    }
+   ]
+  },
+  {
+   "id": "kx2a",
+   "title": "KET 模拟卷三 · 饮食与购物",
+   "topic": "食物 · 餐厅 · 购物",
+   "questions": [
+    {
+     "id": "kx2a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx2a01.mp3",
+     "audio_text": "vegetable",
+     "options": [
+      "蔬菜",
+      "水果",
+      "肉类"
+     ],
+     "answer": 0,
+     "tip": "vegetable = 蔬菜，常与 fruit 一起记忆。"
+    },
+    {
+     "id": "kx2a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx2a02.mp3",
+     "audio_text": "expensive",
+     "options": [
+      "便宜的",
+      "昂贵的",
+      "好吃的"
+     ],
+     "answer": 1,
+     "tip": "expensive = 昂贵的，反义词 cheap。"
+    },
+    {
+     "id": "kx2a03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx2a03.mp3",
+     "audio_text": "I'd like a glass of orange juice, please.",
+     "options": [
+      "请给我一杯橙汁",
+      "请给我一个橙子",
+      "请给我一杯牛奶"
+     ],
+     "answer": 0,
+     "tip": "a glass of = 一杯（玻璃杯）。"
+    },
+    {
+     "id": "kx2a04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx2a04.mp3",
+     "audio_text": "The blue T-shirt is cheaper than the red one.",
+     "options": [
+      "蓝色T恤比红色那件便宜",
+      "蓝色T恤比红色那件贵",
+      "蓝色T恤和红色那件一样贵"
+     ],
+     "answer": 0,
+     "tip": "cheaper than = 比……更便宜。比较级。"
+    },
+    {
+     "id": "kx2a05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2a05.mp3",
+     "audio_text": "A: Can I help you? B: Yes, I'm looking for a school bag.",
+     "options": [
+      "在文具店",
+      "在医院",
+      "在车站"
+     ],
+     "answer": 0,
+     "tip": "Can I help you? = 购物时的招呼语。looking for = 寻找。"
+    },
+    {
+     "id": "kx2a06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2a06.mp3",
+     "audio_text": "A: What would you like for lunch? B: I'd like some noodles with vegetables.",
+     "options": [
+      "蔬菜面",
+      "牛肉面",
+      "鸡蛋面"
+     ],
+     "answer": 0,
+     "tip": "noodles with vegetables = 蔬菜面。"
+    },
+    {
+     "id": "kx2a07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2a07.mp3",
+     "audio_text": "A: How much is this jacket? B: It's fifty dollars. But it's on sale today, so you can get it for thirty.",
+     "options": [
+      "50 美元",
+      "30 美元",
+      "20 美元"
+     ],
+     "answer": 1,
+     "tip": "on sale = 打折促销，30 美元是折后价。"
+    },
+    {
+     "id": "kx2a08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx2a08.mp3",
+     "audio_text": "Yesterday was Jane's birthday. Her mother cooked a big dinner for her: chicken, fish, rice and vegetables. Her father bought a birthday cake with ten candles. Her friends came to her party and brought her presents. She got a new dress from her best friend Lucy. Everyone had a great time.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx2a08a",
+       "q": "Who cooked the dinner?",
+       "options": [
+        "Jane",
+        "Jane's mother",
+        "Jane's father"
+       ],
+       "answer": 1,
+       "tip": "Her mother cooked a big dinner for her."
+      },
+      {
+       "id": "kx2a08b",
+       "q": "What did her father buy?",
+       "options": [
+        "A new dress",
+        "A birthday cake",
+        "Some chicken"
+       ],
+       "answer": 1,
+       "tip": "Her father bought a birthday cake with ten candles."
+      },
+      {
+       "id": "kx2a08c",
+       "q": "Who gave Jane a new dress?",
+       "options": [
+        "Lucy",
+        "Her mother",
+        "Her father"
+       ],
+       "answer": 0,
+       "tip": "She got a new dress from her best friend Lucy."
+      }
+     ]
+    },
+    {
+     "id": "kx2a09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx2a09.mp3",
+     "audio_text": "I usually have bread and milk for breakfast, and I often eat fruit after dinner.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 breakfast 的重音在第一个音节，fruit 的 u 音。"
+    },
+    {
+     "id": "kx2a10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2a10.mp3",
+     "audio_text": "A: Are you ready to order, sir? B: Yes, I'd like beef with rice and a cup of tea, please.",
+     "options": [
+      "牛肉饭和一杯茶",
+      "鸡肉面和一杯咖啡",
+      "鱼和一瓶果汁"
+     ],
+     "answer": 0,
+     "tip": "order = 点餐；beef with rice = 牛肉饭。"
+    },
+    {
+     "id": "kx2a11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx2a11.mp3",
+     "audio_text": "Every Friday, the supermarket has a big sale. Milk is cheaper on that day, so many people buy it. Fruit like apples and bananas are also on sale. Linda's mother always makes a shopping list before going there. She buys food for the week and checks the prices carefully. She says it helps the family save a lot of money.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx2a11a",
+       "q": "When does the supermarket have a big sale?",
+       "options": [
+        "On Monday",
+        "On Friday",
+        "On Sunday"
+       ],
+       "answer": 1,
+       "tip": "Every Friday, the supermarket has a big sale."
+      },
+      {
+       "id": "kx2a11b",
+       "q": "What does Linda's mother do before going shopping?",
+       "options": [
+        "Makes a shopping list",
+        "Calls her friends",
+        "Watches TV"
+       ],
+       "answer": 0,
+       "tip": "She always makes a shopping list before going there."
+      },
+      {
+       "id": "kx2a11c",
+       "q": "Why does she check the prices carefully?",
+       "options": [
+        "To save money",
+        "To buy more",
+        "To sell the food"
+       ],
+       "answer": 0,
+       "tip": "It helps the family save a lot of money."
+      }
+     ]
+    },
+    {
+     "id": "kx2a12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx2a12.mp3",
+     "audio_text": "I often help my mother do some shopping at the supermarket on Saturday morning.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 shopping 双写 p，supermarket 的重音在第一个音节。"
+    }
+   ]
+  },
+  {
+   "id": "kx2b",
+   "title": "KET 模拟卷四 · 旅行与城市",
+   "topic": "旅行 · 问路 · 城市地标",
+   "questions": [
+    {
+     "id": "kx2b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx2b01.mp3",
+     "audio_text": "station",
+     "options": [
+      "车站",
+      "机场",
+      "码头"
+     ],
+     "answer": 0,
+     "tip": "station = 车站，train station 火车站。"
+    },
+    {
+     "id": "kx2b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/kx/kx2b02.mp3",
+     "audio_text": "museum",
+     "options": [
+      "电影院",
+      "博物馆",
+      "剧院"
+     ],
+     "answer": 1,
+     "tip": "museum = 博物馆，注意发音 /mjuˈziːəm/。"
+    },
+    {
+     "id": "kx2b03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx2b03.mp3",
+     "audio_text": "Excuse me, how can I get to the city library?",
+     "options": [
+      "请问去市图书馆怎么走",
+      "请问市图书馆几点关门",
+      "请问市图书馆在哪里工作"
+     ],
+     "answer": 0,
+     "tip": "How can I get to ...? = 我怎么去……？问路句型。"
+    },
+    {
+     "id": "kx2b04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/kx/kx2b04.mp3",
+     "audio_text": "The bus takes about twenty minutes to get to the airport.",
+     "options": [
+      "坐公交去机场大约需要二十分钟",
+      "坐地铁去机场大约需要二十分钟",
+      "走路去机场大约需要二十分钟"
+     ],
+     "answer": 0,
+     "tip": "It takes ... to do = 做某事需要（时间）。"
+    },
+    {
+     "id": "kx2b05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2b05.mp3",
+     "audio_text": "A: Excuse me, where is the nearest bank? B: Go straight on, and turn left at the second crossing.",
+     "options": [
+      "直走，第二个路口左转",
+      "直走，第二个路口右转",
+      "左转，第一个路口直走"
+     ],
+     "answer": 0,
+     "tip": "turn left at the second crossing = 在第二个十字路口左转。"
+    },
+    {
+     "id": "kx2b06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2b06.mp3",
+     "audio_text": "A: Shall we take the bus or the underground? B: The underground is faster. Let's take it.",
+     "options": [
+      "坐公交",
+      "坐地铁",
+      "坐出租车"
+     ],
+     "answer": 1,
+     "tip": "underground = 地铁（英式），faster = 更快。"
+    },
+    {
+     "id": "kx2b07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2b07.mp3",
+     "audio_text": "A: What time does the train leave? B: At half past nine. We still have thirty minutes.",
+     "options": [
+      "九点",
+      "九点半",
+      "十点"
+     ],
+     "answer": 0,
+     "tip": "half past nine = 九点半；还有三十分钟，所以现在是九点。"
+    },
+    {
+     "id": "kx2b08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx2b08.mp3",
+     "audio_text": "Last summer, Mike went to London with his parents. They visited the Tower Bridge and the British Museum. They took a boat trip on the River Thames and saw many famous buildings. Mike liked the food there, especially the fish and chips. They stayed in London for five days. Mike said he wanted to go there again.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx2b08a",
+       "q": "When did Mike go to London?",
+       "options": [
+        "Last summer",
+        "Last winter",
+        "This spring"
+       ],
+       "answer": 0,
+       "tip": "Last summer, Mike went to London with his parents."
+      },
+      {
+       "id": "kx2b08b",
+       "q": "What did they do on the River Thames?",
+       "options": [
+        "Swimming",
+        "A boat trip",
+        "Fishing"
+       ],
+       "answer": 1,
+       "tip": "They took a boat trip on the River Thames."
+      },
+      {
+       "id": "kx2b08c",
+       "q": "How long did they stay in London?",
+       "options": [
+        "Three days",
+        "Four days",
+        "Five days"
+       ],
+       "answer": 2,
+       "tip": "They stayed in London for five days."
+      }
+     ]
+    },
+    {
+     "id": "kx2b09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx2b09.mp3",
+     "audio_text": "I like travelling by train because I can see the beautiful scenery on the way.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 travelling 双写 l，scenery 的重音在第一个音节。"
+    },
+    {
+     "id": "kx2b10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/kx/kx2b10.mp3",
+     "audio_text": "A: Excuse me, where is the museum? B: It's next to the post office. Take the second turning on your left and walk straight.",
+     "options": [
+      "在邮局旁边",
+      "在银行对面",
+      "在公园后面"
+     ],
+     "answer": 0,
+     "tip": "next to = 在……旁边；take the second turning = 在第二个路口转弯。"
+    },
+    {
+     "id": "kx2b11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/kx/kx2b11.mp3",
+     "audio_text": "There are different ways to travel around the city. The underground is the fastest, but it can be very crowded in the morning. The bus is cheaper, but it is slow because there are many stops. Many people now ride bicycles, because it is good for the environment and keeps them healthy. On sunny days, more and more people choose to walk short distances instead of taking buses.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "kx2b11a",
+       "q": "Why is the underground not always good?",
+       "options": [
+        "It is too expensive",
+        "It can be very crowded",
+        "It is too slow"
+       ],
+       "answer": 1,
+       "tip": "It can be very crowded in the morning."
+      },
+      {
+       "id": "kx2b11b",
+       "q": "Why do many people ride bicycles?",
+       "options": [
+        "Because it is good for the environment and health",
+        "Because it is the fastest",
+        "Because it is free"
+       ],
+       "answer": 0,
+       "tip": "It is good for the environment and keeps them healthy."
+      },
+      {
+       "id": "kx2b11c",
+       "q": "What do people do on sunny days?",
+       "options": [
+        "Stay at home",
+        "Walk short distances",
+        "Take taxis"
+       ],
+       "answer": 1,
+       "tip": "People choose to walk short distances instead of taking buses."
+      }
+     ]
+    },
+    {
+     "id": "kx2b12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/kx/kx2b12.mp3",
+     "audio_text": "The underground is the fastest way to travel around the city centre.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 underground 的重音在第一个音节，centre 的 re 轻读。"
+    }
+   ]
+  }
+ ]
+}

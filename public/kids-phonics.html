@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿启蒙英语 · 自然拼读</title>
+<style>
+  :root { --brand:#ff9f43; --brand2:#ffbe76; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff9f43,#ffbe76); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .logout { padding:9px 14px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; margin-top:10px; }
+  .logout.blue { background:#fff3e8; color:#ff9f43; font-weight:700; }
+  .mode-tabs { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .mode-tab { padding:9px 16px; border:none; border-radius:12px; font-size:13.5px; font-weight:700; cursor:pointer; background:#f0f0f0; color:#666; }
+  .mode-tab.on { background:#ff9f43; color:#fff; }
+  .song-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .play-big { padding:12px 20px; border:none; border-radius:14px; background:linear-gradient(135deg,#ff9f43,#f77f2e); color:#fff; font-size:14px; font-weight:800; cursor:pointer; }
+  .song-txt { font-size:14px; color:#666; line-height:1.8; flex:1; min-width:220px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(86px,1fr)); gap:10px; }
+  .letter-card { border:1.5px solid #f0f0f0; border-radius:14px; padding:12px 6px; text-align:center; cursor:pointer; transition:all .15s; }
+  .letter-card:hover { border-color:#ffbe76; background:#fffaf4; }
+  .letter-card .L { font-size:30px; font-weight:800; line-height:1.1; }
+  .letter-card .w { font-size:12px; color:#888; margin-top:4px; }
+  .letter-card .zh { font-size:11px; color:#bbb; }
+  .letter-card.locked { opacity:.45; pointer-events:none; }
+  .detail { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .detail .big { font-size:56px; font-weight:800; line-height:1; min-width:80px; text-align:center; }
+  .detail .sound { font-size:18px; color:#ff9f43; font-weight:800; margin-top:6px; }
+  .detail .word { font-size:22px; font-weight:700; margin-top:4px; }
+  .detail .zh { font-size:14px; color:#888; margin-top:2px; }
+  .btn3 { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+  .btn3 button { padding:9px 14px; border:none; border-radius:10px; background:#fff3e8; color:#ff9f43; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn3 button:hover { background:#ffe8d6; }
+  .cvc-row { display:flex; gap:10px; flex-wrap:wrap; }
+  .cvc { border:1.5px solid #e8f8ee; background:#f7fdf9; border-radius:12px; padding:10px 14px; text-align:center; cursor:pointer; }
+  .cvc .w { font-size:20px; font-weight:800; color:#2a8; }
+  .cvc .z { font-size:12px; color:#888; margin-top:2px; }
+  .q-box { background:#fff; border-radius:16px; padding:18px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .tag { display:inline-block; padding:3px 10px; border-radius:12px; font-size:12px; font-weight:700; background:#fff3e8; color:#ff9f43; }
+  .q-title { font-size:14.5px; font-weight:700; flex:1; min-width:160px; }
+  .audio-btn { display:inline-block; padding:10px 16px; border:none; border-radius:12px; background:#ff9f43; color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; display:flex; align-items:center; gap:10px; }
+  .opt:hover { border-color:#ff9f43; }
+  .opt .L { font-size:22px; font-weight:800; width:34px; text-align:center; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .nav-foot { display:flex; gap:10px; justify-content:space-between; margin-top:16px; }
+  .nav-foot button { flex:1; padding:12px; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer; }
+  .btn-prev { background:#f0f0f0; color:#666; }
+  .btn-next { background:#ff9f43; color:#fff; }
+  .score { text-align:center; font-size:14px; font-weight:700; color:#2a8; padding:14px; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .sub-nav { display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 14px; }
+  .sub-nav a { padding:7px 13px; border-radius:12px; font-size:12.5px; font-weight:700; text-decoration:none; background:#f0f0f0; color:#666; }
+  .sub-nav a:hover { background:#fff3e8; color:#ff9f43; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🔤 幼儿自然拼读启蒙</h1>
+    <p>字母名 · 字母音 · 示例词 · CVC 拼读入门（英音慢速）</p>
+    <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ffbe76">
+    <b>🎁 体验模式</b>：当前可免费学 <b>A-C 字母音</b>。解锁幼儿英语模块后即可学习全部字母与 CVC 拼读。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="card">
+    <div class="sub-nav">
+      <a href="./kids.html">📖 单词听读背记</a>
+      <a href="./kids-listening.html">🎧 听说练习</a>
+      <a href="./kids-songs.html">🎵 儿歌磨耳朵</a>
+      <a href="./kids-tpr.html">🤸 TPR 指令</a>
+      <a href="./kids-reading.html">📚 迷你绘本</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="mode-tabs">
+      <button class="mode-tab on" id="tabLearn" onclick="setMode('learn')">🔤 字母音学习</button>
+      <button class="mode-tab" id="tabQuiz" onclick="setMode('quiz')">👂 听音选字母</button>
+    </div>
+    <div id="mainArea"></div>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+let ACCT = { username: '', expiry: null };
+let DEV = { n: 0, max: 2 };
+let AUTHED = false;
+let TRIAL = false;
+let DATA = null;
+let MODE = 'learn';
+let SEL = null;
+let quizQs = [];
+let quizIdx = 0;
+let quizScore = 0;
+let AUD = null;
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src) {
+  if (!src) return;
+  if (AUD) AUD.pause();
+  const a = new Audio(src);
+  a.play();
+  AUD = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+
+async function init() {
+  const r = await api('/api/kids-phonics', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div style="padding:60px;text-align:center;color:#b0b0b0;">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  DATA = r.j;
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  renderLearn();
+}
+
+function setMode(m) {
+  MODE = m;
+  document.getElementById('tabLearn').classList.toggle('on', m === 'learn');
+  document.getElementById('tabQuiz').classList.toggle('on', m === 'quiz');
+  if (m === 'learn') renderLearn();
+  else startQuiz();
+}
+
+function renderLearn() {
+  const ma = document.getElementById('mainArea');
+  const letters = DATA.letters || [];
+  const cards = letters.map(l => `
+    <div class="letter-card ${SEL && SEL.id === l.id ? '' : ''}" onclick="openLetter('${l.id}')">
+      <div class="L">${esc(l.upper)}${esc(l.lower)}</div>
+      <div class="w">${esc(l.word)}</div>
+      <div class="zh">${esc(l.zh)}</div>
+    </div>`).join('');
+  const cvc = (DATA.cvc || []).map(c => `
+    <div class="cvc" onclick="playAudio('${c.audio}')">
+      <div class="w">${esc(c.word)}</div>
+      <div class="z">${esc(c.zh)} · ${esc(c.phonetic)}</div>
+    </div>`).join('');
+  const s = SEL ? `
+    <div class="detail">
+      <div class="big">${esc(SEL.upper)}${esc(SEL.lower)}</div>
+      <div style="flex:1;min-width:200px;">
+        <div class="sound">字母音 ${esc(SEL.sound)}</div>
+        <div class="word">${esc(SEL.word)} <span style="font-size:14px;color:#888;">${esc(SEL.zh)}</span></div>
+        <div class="btn3">
+          <button onclick="playAudio('${SEL.nameAudio}')">🔤 字母名</button>
+          <button onclick="playAudio('${SEL.soundAudio}')">🔊 字母音</button>
+          <button onclick="playAudio('${SEL.wordAudio}')">🗣 示例词</button>
+        </div>
+      </div>
+    </div>` : '<div style="color:#b0b0b0;font-size:14px;">👆 点一个字母，听听它的名字、发音和示例词</div>';
+  ma.innerHTML = `
+    <div class="song-row" style="margin-bottom:16px;">
+      <button class="play-big" onclick="playAudio('${esc(DATA.song.audio)}')">🎵 播放字母歌</button>
+      <div class="song-txt">${esc(DATA.song.text)}</div>
+    </div>
+    ${s}
+    <div style="font-size:13px;color:#999;margin:16px 0 8px;">26 个字母 · 点击卡片学习</div>
+    <div class="grid">${cards}</div>
+    ${cvc ? `<div style="font-size:13px;color:#999;margin:18px 0 8px;">🧩 CVC 拼读入门（会拼读的单词）</div><div class="cvc-row">${cvc}</div>` : ''}`;
+}
+
+function openLetter(id) {
+  SEL = (DATA.letters || []).find(l => l.id === id);
+  renderLearn();
+}
+
+function startQuiz() {
+  const letters = DATA.letters || [];
+  if (letters.length < 4) return;
+  const arr = letters.slice();
+  for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; }
+  const n = Math.min(5, arr.length);
+  quizQs = arr.slice(0, n).map(target => {
+    const others = letters.filter(l => l.id !== target.id);
+    const opts = [target];
+    while (opts.length < 4 && others.length) {
+      const k = Math.floor(Math.random() * others.length);
+      opts.push(others.splice(k, 1)[0]);
+    }
+    for (let i = opts.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [opts[i], opts[j]] = [opts[j], opts[i]]; }
+    return { target, opts, picked: null };
+  });
+  quizIdx = 0;
+  quizScore = 0;
+  renderQuiz();
+}
+
+function renderQuiz() {
+  const ma = document.getElementById('mainArea');
+  if (quizIdx >= quizQs.length) {
+    ma.innerHTML = `<div class="score">🎉 练习完成！答对 ${quizScore} / ${quizQs.length} 题</div>
+      <div class="nav-foot"><button class="btn-prev" onclick="setMode('learn')">🔤 返回学习</button><button class="btn-next" onclick="startQuiz()">🔄 再来一轮</button></div>`;
+    return;
+  }
+  const q = quizQs[quizIdx];
+  const opts = q.opts.map((o, oi) => {
+    let cls = 'opt';
+    if (q.picked != null) {
+      cls += ' locked';
+      if (o.id === q.target.id) cls += ' right';
+      else if (oi === q.picked) cls += ' wrong';
+    }
+    return `<div class="${cls}" onclick="pickQuiz(${oi})"><div class="L">${esc(o.upper)}${esc(o.lower)}</div><div style="flex:1;">${esc(o.word)} · ${esc(o.zh)}</div></div>`;
+  }).join('');
+  const res = q.picked != null ? `<div class="q-answer">✅ 正确答案：${esc(q.target.upper)}${esc(q.target.lower)}（${esc(q.target.word)} · ${esc(q.target.zh)}）</div>` : '';
+  ma.innerHTML = `
+    <div class="q-head"><span class="tag">👂 听音选字母</span><span class="q-title">第 ${quizIdx + 1} / ${quizQs.length} 题 · 听字母音，选出正确的字母</span>
+      <button class="audio-btn" onclick="playAudio('${q.target.soundAudio}')">🔊 播放字母音</button></div>
+    ${opts}
+    ${res}
+    <div class="nav-foot">
+      <button class="btn-prev" onclick="setMode('learn')">🔤 返回学习</button>
+      <button class="btn-next" onclick="nextQuiz()" ${q.picked == null ? 'disabled style="opacity:.4"' : ''}>下一题 →</button>
+    </div>`;
+}
+
+function pickQuiz(oi) {
+  const q = quizQs[quizIdx];
+  if (q.picked != null) return;
+  q.picked = oi;
+  if (q.opts[oi].id === q.target.id) quizScore++;
+  renderQuiz();
+}
+function nextQuiz() {
+  if (quizQs[quizIdx].picked == null) return;
+  quizIdx++;
+  renderQuiz();
+}
+
+(async function main() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) {
+    document.getElementById('mainArea').innerHTML = '<div style="padding:60px;text-align:center;color:#b0b0b0;">请先登录：<a href="./index.html" style="color:#ff9f43;">前往登录页</a></div>';
+    return;
+  }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).kids;
+  init();
+})();
+</script>
+<script>
+(function(){try{var K='kph';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

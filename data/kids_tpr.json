@@ -1,0 +1,603 @@
+{
+  "product": "幼儿启蒙英语 · TPR 日常指令",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "5 组 × 16 条日常指令：听指令做动作（TPR 教学法），家长零基础可陪玩",
+  "groups": [
+    {
+      "id": "kt1",
+      "title": "晨间日常",
+      "emoji": "🌅",
+      "items": [
+        {
+          "id": "kt101",
+          "en": "Wake up!",
+          "zh": "起床啦！",
+          "emoji": "😴",
+          "audio": "/audio/kt/kt101.mp3"
+        },
+        {
+          "id": "kt102",
+          "en": "Get up, get up!",
+          "zh": "起来，起来！",
+          "emoji": "🛏️",
+          "audio": "/audio/kt/kt102.mp3"
+        },
+        {
+          "id": "kt103",
+          "en": "Stretch your arms.",
+          "zh": "伸伸你的胳膊。",
+          "emoji": "🙆",
+          "audio": "/audio/kt/kt103.mp3"
+        },
+        {
+          "id": "kt104",
+          "en": "Open your eyes.",
+          "zh": "睁开你的眼睛。",
+          "emoji": "👀",
+          "audio": "/audio/kt/kt104.mp3"
+        },
+        {
+          "id": "kt105",
+          "en": "Look at the sun.",
+          "zh": "看看太阳。",
+          "emoji": "🌞",
+          "audio": "/audio/kt/kt105.mp3"
+        },
+        {
+          "id": "kt106",
+          "en": "Say good morning.",
+          "zh": "说早上好。",
+          "emoji": "👋",
+          "audio": "/audio/kt/kt106.mp3"
+        },
+        {
+          "id": "kt107",
+          "en": "Comb your hair.",
+          "zh": "梳梳你的头发。",
+          "emoji": "💇",
+          "audio": "/audio/kt/kt107.mp3"
+        },
+        {
+          "id": "kt108",
+          "en": "Wash your face.",
+          "zh": "洗洗你的脸。",
+          "emoji": "🫧",
+          "audio": "/audio/kt/kt108.mp3"
+        },
+        {
+          "id": "kt109",
+          "en": "Brush your teeth.",
+          "zh": "刷刷你的牙齿。",
+          "emoji": "🪥",
+          "audio": "/audio/kt/kt109.mp3"
+        },
+        {
+          "id": "kt110",
+          "en": "Put on your clothes.",
+          "zh": "穿上你的衣服。",
+          "emoji": "👕",
+          "audio": "/audio/kt/kt110.mp3"
+        },
+        {
+          "id": "kt111",
+          "en": "Put on your shoes.",
+          "zh": "穿上你的鞋子。",
+          "emoji": "👟",
+          "audio": "/audio/kt/kt111.mp3"
+        },
+        {
+          "id": "kt112",
+          "en": "Eat your breakfast.",
+          "zh": "吃你的早餐。",
+          "emoji": "🥣",
+          "audio": "/audio/kt/kt112.mp3"
+        },
+        {
+          "id": "kt113",
+          "en": "Drink some milk.",
+          "zh": "喝点牛奶。",
+          "emoji": "🥛",
+          "audio": "/audio/kt/kt113.mp3"
+        },
+        {
+          "id": "kt114",
+          "en": "Go to school.",
+          "zh": "去上学。",
+          "emoji": "🏫",
+          "audio": "/audio/kt/kt114.mp3"
+        },
+        {
+          "id": "kt115",
+          "en": "Wave goodbye.",
+          "zh": "挥手说再见。",
+          "emoji": "👋",
+          "audio": "/audio/kt/kt115.mp3"
+        },
+        {
+          "id": "kt116",
+          "en": "Give me a hug.",
+          "zh": "给我一个拥抱。",
+          "emoji": "🤗",
+          "audio": "/audio/kt/kt116.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kt2",
+      "title": "洗漱清洁",
+      "emoji": "🧼",
+      "items": [
+        {
+          "id": "kt201",
+          "en": "Wash your hands.",
+          "zh": "洗洗你的手。",
+          "emoji": "🧼",
+          "audio": "/audio/kt/kt201.mp3"
+        },
+        {
+          "id": "kt202",
+          "en": "Rinse your mouth.",
+          "zh": "漱漱口。",
+          "emoji": "💧",
+          "audio": "/audio/kt/kt202.mp3"
+        },
+        {
+          "id": "kt203",
+          "en": "Take a bath.",
+          "zh": "洗个澡。",
+          "emoji": "🛁",
+          "audio": "/audio/kt/kt203.mp3"
+        },
+        {
+          "id": "kt204",
+          "en": "Dry your hands.",
+          "zh": "擦干你的手。",
+          "emoji": "🧻",
+          "audio": "/audio/kt/kt204.mp3"
+        },
+        {
+          "id": "kt205",
+          "en": "Blow your nose.",
+          "zh": "擤擤鼻子。",
+          "emoji": "🤧",
+          "audio": "/audio/kt/kt205.mp3"
+        },
+        {
+          "id": "kt206",
+          "en": "Clean your face.",
+          "zh": "擦擦脸。",
+          "emoji": "🧴",
+          "audio": "/audio/kt/kt206.mp3"
+        },
+        {
+          "id": "kt207",
+          "en": "Use the soap.",
+          "zh": "用一用肥皂。",
+          "emoji": "🧽",
+          "audio": "/audio/kt/kt207.mp3"
+        },
+        {
+          "id": "kt208",
+          "en": "Turn on the tap.",
+          "zh": "打开水龙头。",
+          "emoji": "🚰",
+          "audio": "/audio/kt/kt208.mp3"
+        },
+        {
+          "id": "kt209",
+          "en": "Turn off the tap.",
+          "zh": "关掉水龙头。",
+          "emoji": "🚱",
+          "audio": "/audio/kt/kt209.mp3"
+        },
+        {
+          "id": "kt210",
+          "en": "Dry your hair.",
+          "zh": "擦干头发。",
+          "emoji": "🧖",
+          "audio": "/audio/kt/kt210.mp3"
+        },
+        {
+          "id": "kt211",
+          "en": "Put on your socks.",
+          "zh": "穿上袜子。",
+          "emoji": "🧦",
+          "audio": "/audio/kt/kt211.mp3"
+        },
+        {
+          "id": "kt212",
+          "en": "Take off your shoes.",
+          "zh": "脱下鞋子。",
+          "emoji": "👞",
+          "audio": "/audio/kt/kt212.mp3"
+        },
+        {
+          "id": "kt213",
+          "en": "Wipe your mouth.",
+          "zh": "擦擦嘴。",
+          "emoji": "😋",
+          "audio": "/audio/kt/kt213.mp3"
+        },
+        {
+          "id": "kt214",
+          "en": "Flush the toilet.",
+          "zh": "冲一冲马桶。",
+          "emoji": "🚽",
+          "audio": "/audio/kt/kt214.mp3"
+        },
+        {
+          "id": "kt215",
+          "en": "Cut your nails.",
+          "zh": "剪剪指甲。",
+          "emoji": "💅",
+          "audio": "/audio/kt/kt215.mp3"
+        },
+        {
+          "id": "kt216",
+          "en": "Put on your pyjamas.",
+          "zh": "穿上睡衣。",
+          "emoji": "😴",
+          "audio": "/audio/kt/kt216.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kt3",
+      "title": "穿衣出行",
+      "emoji": "🚦",
+      "items": [
+        {
+          "id": "kt301",
+          "en": "Put on your coat.",
+          "zh": "穿上外套。",
+          "emoji": "🧥",
+          "audio": "/audio/kt/kt301.mp3"
+        },
+        {
+          "id": "kt302",
+          "en": "Take off your hat.",
+          "zh": "摘下帽子。",
+          "emoji": "🧢",
+          "audio": "/audio/kt/kt302.mp3"
+        },
+        {
+          "id": "kt303",
+          "en": "Button your shirt.",
+          "zh": "扣上扣子。",
+          "emoji": "👔",
+          "audio": "/audio/kt/kt303.mp3"
+        },
+        {
+          "id": "kt304",
+          "en": "Zip up your jacket.",
+          "zh": "拉上拉链。",
+          "emoji": "🤐",
+          "audio": "/audio/kt/kt304.mp3"
+        },
+        {
+          "id": "kt305",
+          "en": "Tie your shoes.",
+          "zh": "系好鞋带。",
+          "emoji": "🪢",
+          "audio": "/audio/kt/kt305.mp3"
+        },
+        {
+          "id": "kt306",
+          "en": "Wear your scarf.",
+          "zh": "戴上围巾。",
+          "emoji": "🧣",
+          "audio": "/audio/kt/kt306.mp3"
+        },
+        {
+          "id": "kt307",
+          "en": "Put on your gloves.",
+          "zh": "戴上手套。",
+          "emoji": "🧤",
+          "audio": "/audio/kt/kt307.mp3"
+        },
+        {
+          "id": "kt308",
+          "en": "Carry your bag.",
+          "zh": "背上书包。",
+          "emoji": "🎒",
+          "audio": "/audio/kt/kt308.mp3"
+        },
+        {
+          "id": "kt309",
+          "en": "Walk slowly.",
+          "zh": "慢慢走。",
+          "emoji": "🚶",
+          "audio": "/audio/kt/kt309.mp3"
+        },
+        {
+          "id": "kt310",
+          "en": "Run fast.",
+          "zh": "快快跑。",
+          "emoji": "🏃",
+          "audio": "/audio/kt/kt310.mp3"
+        },
+        {
+          "id": "kt311",
+          "en": "Stop! Wait!",
+          "zh": "停！等一等！",
+          "emoji": "✋",
+          "audio": "/audio/kt/kt311.mp3"
+        },
+        {
+          "id": "kt312",
+          "en": "Look left.",
+          "zh": "看看左边。",
+          "emoji": "👈",
+          "audio": "/audio/kt/kt312.mp3"
+        },
+        {
+          "id": "kt313",
+          "en": "Look right.",
+          "zh": "看看右边。",
+          "emoji": "👉",
+          "audio": "/audio/kt/kt313.mp3"
+        },
+        {
+          "id": "kt314",
+          "en": "Cross the road.",
+          "zh": "过马路。",
+          "emoji": "🚸",
+          "audio": "/audio/kt/kt314.mp3"
+        },
+        {
+          "id": "kt315",
+          "en": "Get on the bus.",
+          "zh": "上公交车。",
+          "emoji": "🚌",
+          "audio": "/audio/kt/kt315.mp3"
+        },
+        {
+          "id": "kt316",
+          "en": "Get off the bus.",
+          "zh": "下公交车。",
+          "emoji": "🚏",
+          "audio": "/audio/kt/kt316.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kt4",
+      "title": "吃饭时间",
+      "emoji": "🍽️",
+      "items": [
+        {
+          "id": "kt401",
+          "en": "Sit at the table.",
+          "zh": "坐到桌边。",
+          "emoji": "🪑",
+          "audio": "/audio/kt/kt401.mp3"
+        },
+        {
+          "id": "kt402",
+          "en": "Put your napkin on.",
+          "zh": "放好餐巾。",
+          "emoji": "🧻",
+          "audio": "/audio/kt/kt402.mp3"
+        },
+        {
+          "id": "kt403",
+          "en": "Use your spoon.",
+          "zh": "用你的勺子。",
+          "emoji": "🥄",
+          "audio": "/audio/kt/kt403.mp3"
+        },
+        {
+          "id": "kt404",
+          "en": "Use your fork.",
+          "zh": "用你的叉子。",
+          "emoji": "🍴",
+          "audio": "/audio/kt/kt404.mp3"
+        },
+        {
+          "id": "kt405",
+          "en": "Pick up your chopsticks.",
+          "zh": "拿起筷子。",
+          "emoji": "🥢",
+          "audio": "/audio/kt/kt405.mp3"
+        },
+        {
+          "id": "kt406",
+          "en": "Eat your rice.",
+          "zh": "吃你的米饭。",
+          "emoji": "🍚",
+          "audio": "/audio/kt/kt406.mp3"
+        },
+        {
+          "id": "kt407",
+          "en": "Drink your soup.",
+          "zh": "喝你的汤。",
+          "emoji": "🥣",
+          "audio": "/audio/kt/kt407.mp3"
+        },
+        {
+          "id": "kt408",
+          "en": "Chew your food.",
+          "zh": "嚼一嚼食物。",
+          "emoji": "😬",
+          "audio": "/audio/kt/kt408.mp3"
+        },
+        {
+          "id": "kt409",
+          "en": "Say yummy!",
+          "zh": "说真好吃！",
+          "emoji": "😋",
+          "audio": "/audio/kt/kt409.mp3"
+        },
+        {
+          "id": "kt410",
+          "en": "Wipe the table.",
+          "zh": "擦擦桌子。",
+          "emoji": "🧹",
+          "audio": "/audio/kt/kt410.mp3"
+        },
+        {
+          "id": "kt411",
+          "en": "Put away your bowl.",
+          "zh": "收好碗。",
+          "emoji": "🥣",
+          "audio": "/audio/kt/kt411.mp3"
+        },
+        {
+          "id": "kt412",
+          "en": "Wash the dishes.",
+          "zh": "洗洗盘子。",
+          "emoji": "🍽️",
+          "audio": "/audio/kt/kt412.mp3"
+        },
+        {
+          "id": "kt413",
+          "en": "Have a nap.",
+          "zh": "睡个午觉。",
+          "emoji": "😴",
+          "audio": "/audio/kt/kt413.mp3"
+        },
+        {
+          "id": "kt414",
+          "en": "Share your food.",
+          "zh": "分享你的食物。",
+          "emoji": "🤝",
+          "audio": "/audio/kt/kt414.mp3"
+        },
+        {
+          "id": "kt415",
+          "en": "Don't spill it.",
+          "zh": "别洒了。",
+          "emoji": "⚠️",
+          "audio": "/audio/kt/kt415.mp3"
+        },
+        {
+          "id": "kt416",
+          "en": "Drink some water.",
+          "zh": "喝点水。",
+          "emoji": "💧",
+          "audio": "/audio/kt/kt416.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kt5",
+      "title": "游戏课堂",
+      "emoji": "🎈",
+      "items": [
+        {
+          "id": "kt501",
+          "en": "Raise your hand.",
+          "zh": "举起你的手。",
+          "emoji": "🙋",
+          "audio": "/audio/kt/kt501.mp3"
+        },
+        {
+          "id": "kt502",
+          "en": "Stand up.",
+          "zh": "站起来。",
+          "emoji": "🧍",
+          "audio": "/audio/kt/kt502.mp3"
+        },
+        {
+          "id": "kt503",
+          "en": "Sit down.",
+          "zh": "坐下。",
+          "emoji": "🪑",
+          "audio": "/audio/kt/kt503.mp3"
+        },
+        {
+          "id": "kt504",
+          "en": "Listen to me.",
+          "zh": "听我说。",
+          "emoji": "👂",
+          "audio": "/audio/kt/kt504.mp3"
+        },
+        {
+          "id": "kt505",
+          "en": "Look at me.",
+          "zh": "看着我。",
+          "emoji": "👀",
+          "audio": "/audio/kt/kt505.mp3"
+        },
+        {
+          "id": "kt506",
+          "en": "Point to the cat.",
+          "zh": "指指小猫。",
+          "emoji": "🐱",
+          "audio": "/audio/kt/kt506.mp3"
+        },
+        {
+          "id": "kt507",
+          "en": "Touch your nose.",
+          "zh": "摸摸你的鼻子。",
+          "emoji": "👃",
+          "audio": "/audio/kt/kt507.mp3"
+        },
+        {
+          "id": "kt508",
+          "en": "Clap your hands.",
+          "zh": "拍拍你的手。",
+          "emoji": "👏",
+          "audio": "/audio/kt/kt508.mp3"
+        },
+        {
+          "id": "kt509",
+          "en": "Stamp your feet.",
+          "zh": "跺跺你的脚。",
+          "emoji": "🦶",
+          "audio": "/audio/kt/kt509.mp3"
+        },
+        {
+          "id": "kt510",
+          "en": "Jump up!",
+          "zh": "跳起来！",
+          "emoji": "🦘",
+          "audio": "/audio/kt/kt510.mp3"
+        },
+        {
+          "id": "kt511",
+          "en": "Turn around.",
+          "zh": "转个圈。",
+          "emoji": "🔄",
+          "audio": "/audio/kt/kt511.mp3"
+        },
+        {
+          "id": "kt512",
+          "en": "Sing a song.",
+          "zh": "唱首歌。",
+          "emoji": "🎤",
+          "audio": "/audio/kt/kt512.mp3"
+        },
+        {
+          "id": "kt513",
+          "en": "Say hello.",
+          "zh": "说你好。",
+          "emoji": "👋",
+          "audio": "/audio/kt/kt513.mp3"
+        },
+        {
+          "id": "kt514",
+          "en": "Draw a picture.",
+          "zh": "画幅画。",
+          "emoji": "✏️",
+          "audio": "/audio/kt/kt514.mp3"
+        },
+        {
+          "id": "kt515",
+          "en": "Colour it red.",
+          "zh": "涂成红色。",
+          "emoji": "🔴",
+          "audio": "/audio/kt/kt515.mp3"
+        },
+        {
+          "id": "kt516",
+          "en": "Clean up!",
+          "zh": "收拾好！",
+          "emoji": "🧹",
+          "audio": "/audio/kt/kt516.mp3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "product": "幼儿启蒙英语听说题库",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "3-6 岁听说启蒙：单词听力 + 短句听力，英音慢速",
+  "volumes": [
+    {
+      "id": "kl1",
+      "title": "问候与打招呼",
+      "desc": "Hello, Good morning, How are you? 日常问候",
+      "questions": [
+        {
+          "id": "kl101",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl101.mp3",
+          "audioText": "Hello! How are you?",
+          "options": [
+            "I am fine, thank you.",
+            "Goodbye.",
+            "I am a cat."
+          ],
+          "answer": 0,
+          "tip": "别人问 How are you，回答 I am fine, thank you."
+        },
+        {
+          "id": "kl102",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的中文意思",
+          "audio": "/audio/kl/kl102.mp3",
+          "audioText": "Good morning, Mum.",
+          "options": [
+            "早上好，妈妈。",
+            "晚安，妈妈。",
+            "再见，妈妈。"
+          ],
+          "answer": 0,
+          "tip": "Good morning 是早上好。"
+        },
+        {
+          "id": "kl103",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的中文意思",
+          "audio": "/audio/kl/kl103.mp3",
+          "audioText": "Goodbye, see you tomorrow.",
+          "options": [
+            "再见，明天见。",
+            "你好，明天见。",
+            "谢谢，明天见。"
+          ],
+          "answer": 0,
+          "tip": "Goodbye 是再见；see you tomorrow 是明天见。"
+        },
+        {
+          "id": "kl104",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl104.mp3",
+          "audioText": "What is your name?",
+          "options": [
+            "My name is Lily.",
+            "I am six.",
+            "I like milk."
+          ],
+          "answer": 0,
+          "tip": "问名字用 What is your name，回答 My name is..."
+        },
+        {
+          "id": "kl105",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl105.mp3",
+          "audioText": "How old are you?",
+          "options": [
+            "I am five years old.",
+            "My name is Tom.",
+            "I am a boy."
+          ],
+          "answer": 0,
+          "tip": "How old 问年龄，回答 I am five years old."
+        },
+        {
+          "id": "kl106",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl106.mp3",
+          "audioText": "Nice to meet you.",
+          "options": [
+            "Nice to meet you, too.",
+            "Thank you.",
+            "Good night."
+          ],
+          "answer": 0,
+          "tip": "Nice to meet you 的回应是 Nice to meet you, too."
+        },
+        {
+          "id": "kl107",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的中文意思",
+          "audio": "/audio/kl/kl107.mp3",
+          "audioText": "Thank you very much.",
+          "options": [
+            "非常感谢你。",
+            "对不起。",
+            "没关系。"
+          ],
+          "answer": 0,
+          "tip": "Thank you very much 是非常感谢。"
+        },
+        {
+          "id": "kl108",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的中文意思",
+          "audio": "/audio/kl/kl108.mp3",
+          "audioText": "Good night, baby.",
+          "options": [
+            "晚安，宝贝。",
+            "早上好，宝贝。",
+            "生日快乐，宝贝。"
+          ],
+          "answer": 0,
+          "tip": "Good night 是晚安。"
+        },
+        {
+          "id": "kl109",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl109.mp3",
+          "audioText": "How do you do?",
+          "options": [
+            "How do you do?",
+            "I am fine.",
+            "Goodbye."
+          ],
+          "answer": 0,
+          "tip": "How do you do 是正式问候，回应也是 How do you do."
+        },
+        {
+          "id": "kl110",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的中文意思",
+          "audio": "/audio/kl/kl110.mp3",
+          "audioText": "Welcome to our class.",
+          "options": [
+            "欢迎来到我们班。",
+            "欢迎来我家。",
+            "再见我们班。"
+          ],
+          "answer": 0,
+          "tip": "Welcome 是欢迎；our class 是我们班。"
+        }
+      ]
+    },
+    {
+      "id": "kl2",
+      "title": "动物乐园",
+      "desc": "听动物单词与简单句，认识小动物",
+      "questions": [
+        {
+          "id": "kl201",
+          "type": "listen-word",
+          "q": "听单词，选出正确的动物",
+          "audio": "/audio/kl/kl201.mp3",
+          "audioText": "cat",
+          "options": [
+            "猫",
+            "狗",
+            "鸟"
+          ],
+          "answer": 0,
+          "tip": "cat 是猫，喵喵叫的动物。"
+        },
+        {
+          "id": "kl202",
+          "type": "listen-word",
+          "q": "听单词，选出正确的动物",
+          "audio": "/audio/kl/kl202.mp3",
+          "audioText": "dog",
+          "options": [
+            "狗",
+            "鸭子",
+            "鱼"
+          ],
+          "answer": 0,
+          "tip": "dog 是狗，会汪汪叫。"
+        },
+        {
+          "id": "kl203",
+          "type": "listen-word",
+          "q": "听单词，选出正确的动物",
+          "audio": "/audio/kl/kl203.mp3",
+          "audioText": "duck",
+          "options": [
+            "鸭子",
+            "猪",
+            "羊"
+          ],
+          "answer": 0,
+          "tip": "duck 是鸭子，会嘎嘎叫。"
+        },
+        {
+          "id": "kl204",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的动物",
+          "audio": "/audio/kl/kl204.mp3",
+          "audioText": "The monkey is eating a banana.",
+          "options": [
+            "猴子",
+            "老虎",
+            "大象"
+          ],
+          "answer": 0,
+          "tip": "monkey 是猴子，喜欢吃香蕉。"
+        },
+        {
+          "id": "kl205",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的动物",
+          "audio": "/audio/kl/kl205.mp3",
+          "audioText": "The rabbit has long ears.",
+          "options": [
+            "兔子",
+            "马",
+            "蜜蜂"
+          ],
+          "answer": 0,
+          "tip": "rabbit 是兔子，有长长的耳朵。"
+        },
+        {
+          "id": "kl206",
+          "type": "listen-word",
+          "q": "听单词，选出正确的动物",
+          "audio": "/audio/kl/kl206.mp3",
+          "audioText": "bird",
+          "options": [
+            "鸟",
+            "青蛙",
+            "老鼠"
+          ],
+          "answer": 0,
+          "tip": "bird 是鸟，会飞。"
+        },
+        {
+          "id": "kl207",
+          "type": "listen-word",
+          "q": "听单词，选出正确的动物",
+          "audio": "/audio/kl/kl207.mp3",
+          "audioText": "elephant",
+          "options": [
+            "大象",
+            "狮子",
+            "熊猫"
+          ],
+          "answer": 0,
+          "tip": "elephant 是大象，有长长的鼻子。"
+        },
+        {
+          "id": "kl208",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的动物",
+          "audio": "/audio/kl/kl208.mp3",
+          "audioText": "The panda is black and white.",
+          "options": [
+            "熊猫",
+            "奶牛",
+            "老虎"
+          ],
+          "answer": 0,
+          "tip": "panda 是熊猫，黑白相间。"
+        },
+        {
+          "id": "kl209",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的动物",
+          "audio": "/audio/kl/kl209.mp3",
+          "audioText": "The bee makes honey.",
+          "options": [
+            "蜜蜂",
+            "蝴蝶",
+            "蚂蚁"
+          ],
+          "answer": 0,
+          "tip": "bee 是蜜蜂，会酿蜂蜜。"
+        },
+        {
+          "id": "kl210",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的动物",
+          "audio": "/audio/kl/kl210.mp3",
+          "audioText": "The fish is swimming in the water.",
+          "options": [
+            "鱼",
+            "鸟",
+            "猫"
+          ],
+          "answer": 0,
+          "tip": "fish 是鱼，在水里游。"
+        }
+      ]
+    },
+    {
+      "id": "kl3",
+      "title": "颜色与数字",
+      "desc": "听颜色单词与数字，认识红蓝黄绿",
+      "questions": [
+        {
+          "id": "kl301",
+          "type": "listen-word",
+          "q": "听单词，选出正确的颜色",
+          "audio": "/audio/kl/kl301.mp3",
+          "audioText": "red",
+          "options": [
+            "红色",
+            "蓝色",
+            "绿色"
+          ],
+          "answer": 0,
+          "tip": "red 是红色。"
+        },
+        {
+          "id": "kl302",
+          "type": "listen-word",
+          "q": "听单词，选出正确的颜色",
+          "audio": "/audio/kl/kl302.mp3",
+          "audioText": "blue",
+          "options": [
+            "蓝色",
+            "黄色",
+            "黑色"
+          ],
+          "answer": 0,
+          "tip": "blue 是蓝色，像天空。"
+        },
+        {
+          "id": "kl303",
+          "type": "listen-word",
+          "q": "听单词，选出正确的颜色",
+          "audio": "/audio/kl/kl303.mp3",
+          "audioText": "green",
+          "options": [
+            "绿色",
+            "白色",
+            "紫色"
+          ],
+          "answer": 0,
+          "tip": "green 是绿色，像小草。"
+        },
+        {
+          "id": "kl304",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的颜色",
+          "audio": "/audio/kl/kl304.mp3",
+          "audioText": "The sky is blue.",
+          "options": [
+            "蓝色",
+            "红色",
+            "橙色"
+          ],
+          "answer": 0,
+          "tip": "sky 是天空，天空是 blue 蓝色。"
+        },
+        {
+          "id": "kl305",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的颜色",
+          "audio": "/audio/kl/kl305.mp3",
+          "audioText": "The apple is red.",
+          "options": [
+            "红色",
+            "绿色",
+            "黄色"
+          ],
+          "answer": 0,
+          "tip": "apple 苹果是 red 红色。"
+        },
+        {
+          "id": "kl306",
+          "type": "listen-word",
+          "q": "听单词，选出正确的数字",
+          "audio": "/audio/kl/kl306.mp3",
+          "audioText": "five",
+          "options": [
+            "五",
+            "三",
+            "七"
+          ],
+          "answer": 0,
+          "tip": "five 是五。"
+        },
+        {
+          "id": "kl307",
+          "type": "listen-word",
+          "q": "听单词，选出正确的数字",
+          "audio": "/audio/kl/kl307.mp3",
+          "audioText": "ten",
+          "options": [
+            "十",
+            "六",
+            "八"
+          ],
+          "answer": 0,
+          "tip": "ten 是十。"
+        },
+        {
+          "id": "kl308",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的数字",
+          "audio": "/audio/kl/kl308.mp3",
+          "audioText": "I have three cats.",
+          "options": [
+            "三",
+            "五",
+            "九"
+          ],
+          "answer": 0,
+          "tip": "three 是三，我有三只猫。"
+        },
+        {
+          "id": "kl309",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的数字",
+          "audio": "/audio/kl/kl309.mp3",
+          "audioText": "She has two hands.",
+          "options": [
+            "二",
+            "四",
+            "六"
+          ],
+          "answer": 0,
+          "tip": "two 是二，她有两只手。"
+        },
+        {
+          "id": "kl310",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的数字",
+          "audio": "/audio/kl/kl310.mp3",
+          "audioText": "I am seven years old.",
+          "options": [
+            "七",
+            "五",
+            "十"
+          ],
+          "answer": 0,
+          "tip": "seven 是七，我七岁了。"
+        }
+      ]
+    },
+    {
+      "id": "kl4",
+      "title": "食物与喜好",
+      "desc": "听食物单词与喜好问答，I like / I don't like",
+      "questions": [
+        {
+          "id": "kl401",
+          "type": "listen-word",
+          "q": "听单词，选出正确的食物",
+          "audio": "/audio/kl/kl401.mp3",
+          "audioText": "apple",
+          "options": [
+            "苹果",
+            "香蕉",
+            "蛋糕"
+          ],
+          "answer": 0,
+          "tip": "apple 是苹果。"
+        },
+        {
+          "id": "kl402",
+          "type": "listen-word",
+          "q": "听单词，选出正确的食物",
+          "audio": "/audio/kl/kl402.mp3",
+          "audioText": "milk",
+          "options": [
+            "牛奶",
+            "果汁",
+            "茶"
+          ],
+          "answer": 0,
+          "tip": "milk 是牛奶。"
+        },
+        {
+          "id": "kl403",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的意思",
+          "audio": "/audio/kl/kl403.mp3",
+          "audioText": "I like bananas.",
+          "options": [
+            "我喜欢香蕉。",
+            "我不喜欢香蕉。",
+            "我要香蕉。"
+          ],
+          "answer": 0,
+          "tip": "I like 是我喜欢。"
+        },
+        {
+          "id": "kl404",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl404.mp3",
+          "audioText": "Do you like milk?",
+          "options": [
+            "Yes, I do.",
+            "Yes, it is.",
+            "Thank you."
+          ],
+          "answer": 0,
+          "tip": "Do you like...? 用 Yes, I do. / No, I don't. 回答。"
+        },
+        {
+          "id": "kl405",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的意思",
+          "audio": "/audio/kl/kl405.mp3",
+          "audioText": "I don't like candy.",
+          "options": [
+            "我不喜欢糖果。",
+            "我喜欢糖果。",
+            "我想要糖果。"
+          ],
+          "answer": 0,
+          "tip": "I don't like 是我不喜欢。"
+        },
+        {
+          "id": "kl406",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的回应",
+          "audio": "/audio/kl/kl406.mp3",
+          "audioText": "Would you like some tea?",
+          "options": [
+            "Yes, please.",
+            "Yes, I do.",
+            "No, thank you is wrong."
+          ],
+          "answer": 0,
+          "tip": "Would you like...? 礼貌回应 Yes, please."
+        },
+        {
+          "id": "kl407",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的意思",
+          "audio": "/audio/kl/kl407.mp3",
+          "audioText": "The cake is sweet.",
+          "options": [
+            "蛋糕是甜的。",
+            "蛋糕是酸的。",
+            "蛋糕是咸的。"
+          ],
+          "answer": 0,
+          "tip": "sweet 是甜的。"
+        },
+        {
+          "id": "kl408",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的意思",
+          "audio": "/audio/kl/kl408.mp3",
+          "audioText": "I eat an egg every day.",
+          "options": [
+            "我每天吃一个鸡蛋。",
+            "我每天喝牛奶。",
+            "我每天吃苹果。"
+          ],
+          "answer": 0,
+          "tip": "eat an egg 是吃鸡蛋；every day 是每天。"
+        },
+        {
+          "id": "kl409",
+          "type": "listen-word",
+          "q": "听单词，选出正确的食物",
+          "audio": "/audio/kl/kl409.mp3",
+          "audioText": "ice cream",
+          "options": [
+            "冰淇淋",
+            "饼干",
+            "面条"
+          ],
+          "answer": 0,
+          "tip": "ice cream 是冰淇淋。"
+        },
+        {
+          "id": "kl410",
+          "type": "listen-sentence",
+          "q": "听句子，选出正确的意思",
+          "audio": "/audio/kl/kl410.mp3",
+          "audioText": "Noodles are my favourite food.",
+          "options": [
+            "面条是我最喜欢的食物。",
+            "米饭是我最喜欢的食物。",
+            "面包是我最喜欢的食物。"
+          ],
+          "answer": 0,
+          "tip": "favourite 是最喜欢的；noodles 是面条。"
+        }
+      ]
+    }
+  ]
+}
