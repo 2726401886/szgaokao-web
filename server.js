@@ -41,6 +41,7 @@ const jbook = load('junior_textbook.json', { books: [] }); // 初中课本章节
 const TRIAL_JU = '7a01'; // 课本体验：未授权仅可学习第 1 单元
 const jgram = load('junior_grammar.json', { topics: [] }); // 初中英语语法知识点详解
 const TRIAL_JG = 'g01'; // 语法体验：未授权仅可学习第 1 专题
+const jexam = load('junior_exam.json', { questions: [] }); // 初中英语题库（中考真题格式原型·原创练习）
 const gread = load('graded_reading.json', { levels: [] }); // 分级阅读
 const TRIAL_RD = 'r1a1'; // 分级阅读体验模式：未授权仅可阅读第 1 篇
 const kw = load('ket_words.json', { groups: [] }); // KET 核心词
@@ -933,6 +934,30 @@ const srv = http.createServer(async (req, res) => {
       }
       const list = jgram.topics.map(t => ({ id: t.id, title: t.title, points: t.points.length }));
       return ok(res, { topics: authed ? list : list.filter(t => t.id === TRIAL_JG), trial: !authed });
+    }
+    // —— 初中英语题库：按 grade/type/book/unit/difficulty 过滤；ids 取题；体验模式预览前5 ——
+    if (u === '/api/junior-exam' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      if (user.expiry && Number(user.expiry) <= Date.now()) return err(res, 403, '授权已过期，请联系管理员续费或重新激活');
+      const authed = modAuthed(user, 'primary');
+      const qids = q.ids;
+      let list = jexam.questions;
+      if (qids) {
+        const want = qids.split(',');
+        const map = {}; list.forEach(x => { map[x.id] = x; });
+        return ok(res, { questions: want.filter(id => map[id]).map(id => map[id]) });
+      }
+      const g = q.grade, t = q.type, b = q.book, un = q.unit, d = q.difficulty;
+      let flt = list;
+      if (g) flt = flt.filter(x => String(x.grade) === g);
+      if (t) flt = flt.filter(x => x.type === t);
+      if (b) flt = flt.filter(x => x.book === b);
+      if (un) flt = flt.filter(x => x.unit === un);
+      if (d) flt = flt.filter(x => String(x.difficulty) === d);
+      if (!authed) flt = flt.slice(0, 5);
+      return ok(res, { questions: flt, trial: !authed, total: list.length });
     }
     // —— 分级阅读：级别列表 / 单篇（未授权 = 体验模式，仅放行第 1 篇）——
     if (u === '/api/graded-reading' && req.method === 'GET') {

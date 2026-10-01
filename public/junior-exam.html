@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>初中英语题库与组卷</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:1000px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff7e3f,#ff5e62); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .tab { flex:1; min-width:120px; text-align:center; padding:13px 10px; border-radius:14px; background:#fff; color:#ff5e62; font-weight:800; font-size:14px; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,.05); border:1.5px solid transparent; }
+  .tab.cur { background:#ff5e62; color:#fff; }
+  .sec-title { display:flex; align-items:center; gap:10px; margin:6px 0 12px; font-size:15px; font-weight:800; }
+  .sec-title .bar { width:4px; height:16px; border-radius:2px; background:#ff5e62; }
+  .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+  .lbl { font-size:13px; color:#888; font-weight:700; margin-right:2px; }
+  .seg { display:inline-flex; border:1.5px solid #eee; border-radius:12px; overflow:hidden; }
+  .seg button { border:none; background:#fff; padding:8px 14px; font-size:13px; cursor:pointer; color:#555; font-weight:700; }
+  .seg button.on { background:#ff5e62; color:#fff; }
+  select, input[type=text] { padding:8px 10px; border:1.5px solid #eee; border-radius:10px; font-size:13px; background:#fff; color:#333; }
+  input[type=text].ttl { width:100%; font-size:15px; font-weight:700; }
+  .btn { padding:10px 16px; border:none; border-radius:12px; background:#ff5e62; color:#fff; font-size:14px; cursor:pointer; font-weight:800; }
+  .btn.ghost { background:#fff; color:#ff5e62; border:1.5px solid #ff5e62; }
+  .btn.sm { padding:7px 12px; font-size:12.5px; }
+  .btn:disabled { opacity:.5; cursor:not-allowed; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .tip { font-size:12.5px; color:#999; line-height:1.6; }
+  .q { border:1.5px solid #eee; border-radius:12px; padding:12px 14px; margin-bottom:10px; }
+  .q .qh { font-weight:800; font-size:14px; margin-bottom:6px; color:#ff5e62; }
+  .q .stem { font-size:15px; line-height:1.7; }
+  .q .opts { margin-top:6px; font-size:14.5px; line-height:1.8; }
+  .q .given { margin-top:6px; font-size:13px; color:#666; }
+  .q .passage { font-size:14.5px; line-height:1.9; background:#fafafa; border-radius:10px; padding:10px 12px; margin-bottom:8px; }
+  .q .ans { font-size:13.5px; font-weight:800; color:#1a9e5c; margin-top:8px; }
+  .q .ana { font-size:13px; color:#777; margin-top:3px; line-height:1.6; }
+  .q .sub { border-top:1px dashed #eee; padding-top:8px; margin-top:8px; }
+  .q .sub .sq { font-weight:700; font-size:14px; margin:6px 0 2px; }
+  .req { font-size:13.5px; color:#444; line-height:1.8; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:8px; background:#fff0ef; color:#ff5e62; margin-left:6px; font-weight:700; }
+  .bank-item { border:1.5px solid #eee; border-radius:12px; padding:11px 13px; margin-bottom:9px; cursor:pointer; transition:border-color .15s; }
+  .bank-item:hover { border-color:#ff5e62; }
+  .bank-item.on { border-color:#ff5e62; background:#fff7f6; }
+  .bank-item .bt { font-weight:800; font-size:14px; display:flex; align-items:center; gap:8px; }
+  .bank-item .bs { font-size:13px; color:#555; margin-top:5px; line-height:1.6; }
+  .bank-item .meta { font-size:11.5px; color:#999; margin-top:5px; }
+  .chk { width:16px; height:16px; accent-color:#ff5e62; flex-shrink:0; }
+  .pill { display:inline-block; font-size:11.5px; padding:2px 8px; border-radius:8px; background:#eef2ff; color:#3b6fe0; margin-right:5px; }
+  .pill.diff { background:#fff3e0; color:#e08600; }
+  .selbar { position:sticky; bottom:0; background:#fff; border:1.5px solid #ff5e62; border-radius:14px; padding:12px 14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; box-shadow:0 -4px 16px rgba(0,0,0,.06); }
+  .selbar b { color:#ff5e62; font-size:15px; }
+  .paper { background:#fff; border-radius:16px; padding:26px 30px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .paper h2 { text-align:center; font-size:22px; }
+  .paper .pmeta { text-align:center; font-size:13px; color:#666; margin:8px 0 4px; }
+  .psec { margin-top:18px; }
+  .psec h3 { font-size:15px; font-weight:800; border-left:4px solid #ff5e62; padding-left:8px; margin-bottom:8px; }
+  .psec .pnote { font-size:12px; color:#999; margin-bottom:8px; }
+  .blankline { display:inline-block; border-bottom:1px solid #333; min-width:42px; height:1.1em; vertical-align:middle; }
+  .keysec { margin-top:22px; border-top:2px dashed #ff5e62; padding-top:14px; }
+  .keysec h3 { font-size:16px; font-weight:800; color:#1a9e5c; margin-bottom:10px; }
+  .kl { font-size:13.5px; line-height:1.9; }
+  .kl b { color:#1a9e5c; }
+  .sharebox { margin-top:12px; background:#fafafa; border:1px dashed #ddd; border-radius:10px; padding:10px 12px; font-size:12.5px; word-break:break-all; color:#555; }
+  @media print {
+    .no-print { display:none !important; }
+    body { background:#fff; }
+    .wrap { max-width:100%; padding:0; }
+    .paper { box-shadow:none; padding:0; }
+    .q { page-break-inside:avoid; border-color:#ddd; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar no-print">
+    <div>
+      <h1>📝 初中英语题库与组卷</h1>
+      <p>中考真题格式原型 · 期中/期末/中考模拟/章节练习一键组卷 · 老师自由组卷可打印分享</p>
+    </div>
+    <div class="topbar-r">
+      <button class="tb-btn" onclick="location.href='./junior.html'">📚 返回初中枢纽</button>
+      <button class="tb-btn" onclick="location.href='./index.html'">🏠 主页</button>
+      <button class="tb-btn" onclick="logout()">退出登录</button>
+    </div>
+  </div>
+
+  <div id="loginMsg" class="empty no-print" style="display:none">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>
+
+  <div id="app" style="display:none">
+    <div class="card no-print" id="trialCard" style="display:none;border-left:4px solid #ff9966">
+      <b>🎁 体验模式</b>：未解锁小学/初中授权时仅可预览前 5 题。解锁后可使用全部 72 题与组卷功能。<div style="font-size:13px;margin-top:8px;">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;">13538237315</b></div>
+    </div>
+
+    <div class="tabs no-print">
+      <div class="tab cur" id="tab-tpl" onclick="switchTab('tpl')">📋 模板组卷</div>
+      <div class="tab" id="tab-free" onclick="switchTab('free')">🗂️ 自由组卷（题库）</div>
+      <div class="tab" id="tab-prev" onclick="switchTab('prev')">👁️ 组卷预览</div>
+    </div>
+
+    <!-- 模板组卷 -->
+    <div id="p-tpl">
+      <div class="card no-print">
+        <div class="sec-title"><span class="bar"></span>选择年级</div>
+        <div class="row">
+          <div class="seg" id="tplGrade">
+            <button data-g="7" class="on" onclick="tplPickGrade(7,this)">七年级</button>
+            <button data-g="8" onclick="tplPickGrade(8,this)">八年级</button>
+            <button data-g="9" onclick="tplPickGrade(9,this)">九年级</button>
+          </div>
+        </div>
+        <div class="sec-title"><span class="bar"></span>选择试卷类型</div>
+        <div class="row">
+          <button class="btn ghost sm" onclick="genTemplate('mid')">📘 期中考试卷</button>
+          <button class="btn ghost sm" onclick="genTemplate('final')">📗 期末考试卷</button>
+          <button class="btn ghost sm" onclick="genTemplate('mock')">🎓 中考模拟卷</button>
+          <button class="btn ghost sm" onclick="showChapterRow()">📂 章节练习卷</button>
+        </div>
+        <div class="row" id="bookRow" style="display:none">
+          <span class="lbl">选择课本/分册：</span>
+          <select id="tplBook"></select>
+          <button class="btn sm" onclick="genChapter()">✅ 生成章节练习卷</button>
+        </div>
+        <div class="tip">模板组卷会按所选年级与题型配比自动抽取题目并载入「组卷预览」。章节练习卷将抽取该分册全部题目。生成前会先清空当前已选题目。</div>
+      </div>
+    </div>
+
+    <!-- 自由组卷 -->
+    <div id="p-free" style="display:none">
+      <div class="card no-print">
+        <div class="sec-title"><span class="bar"></span>筛选题库</div>
+        <div class="row">
+          <span class="lbl">年级</span>
+          <div class="seg" id="fGrade">
+            <button data-g="" class="on" onclick="fPick('grade','',this)">全部</button>
+            <button data-g="7" onclick="fPick('grade','7',this)">七</button>
+            <button data-g="8" onclick="fPick('grade','8',this)">八</button>
+            <button data-g="9" onclick="fPick('grade','9',this)">九</button>
+          </div>
+          <span class="lbl">题型</span>
+          <select id="fType"><option value="">全部题型</option></select>
+          <span class="lbl">分册</span>
+          <select id="fBook"><option value="">全部</option></select>
+          <span class="lbl">难度</span>
+          <select id="fDiff"><option value="">全部</option><option value="1">1 易</option><option value="2">2 中</option><option value="3">3 难</option></select>
+        </div>
+        <div class="row">
+          <input type="text" id="fKw" placeholder="搜索题干/知识点关键词…" style="flex:1;min-width:200px" oninput="freeSearch()">
+          <button class="btn sm" onclick="loadBank()">查询</button>
+          <button class="btn ghost sm" onclick="selectAllVisible(true)">全选当前</button>
+          <button class="btn ghost sm" onclick="selectAllVisible(false)">取消全选</button>
+        </div>
+        <div class="tip" id="bankStat"></div>
+      </div>
+      <div id="bankList"></div>
+    </div>
+
+    <!-- 组卷预览 -->
+    <div id="p-prev" style="display:none">
+      <div class="card no-print">
+        <div class="sec-title"><span class="bar"></span>试卷设置</div>
+        <input type="text" class="ttl" id="paperTitle" placeholder="试卷标题，如：七年级（上）英语期中模拟卷">
+        <div class="row" style="margin-top:12px">
+          <button class="btn" onclick="printPaper()">🖨️ 打印 / 导出 PDF</button>
+          <button class="btn ghost" onclick="toggleKey()" id="keyBtn">👁️ 显示答案</button>
+          <button class="btn ghost" onclick="makeShare()">🔗 生成分享链接</button>
+          <button class="btn ghost" onclick="clearPaper()">🗑️ 清空重选</button>
+        </div>
+        <div class="sharebox" id="shareBox" style="display:none"></div>
+      </div>
+      <div class="paper" id="paperView"></div>
+    </div>
+
+    <!-- 已选工具条 -->
+    <div class="selbar no-print" id="selBar" style="display:none">
+      <b>已选 <span id="selCount">0</span> 题</b>
+      <button class="btn sm" onclick="switchTab('prev')">查看试卷</button>
+      <button class="btn ghost sm" onclick="clearPaper()">清空</button>
+      <span class="tip" id="selHint"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas'); const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'"; ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages||[]).join(','),
+      screen.width+'x'+screen.height+'x'+screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency||0, navigator.deviceMemory||0].join('|');
+    let h = 0x811c9dc5; for (let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,0x01000193); }
+    return ('0000000'+(h>>>0).toString(16)).slice(-8);
+  } catch(e){ return 'fp-fallback'; }
+}
+const DEVFP = (()=>{ try{ let f=localStorage.getItem('devfp'); if(!f){f=fp();localStorage.setItem('devfp',f);} return f; }catch(e){return fp();} })();
+const H = () => ({ 'Content-Type':'application/json','X-Device':DEVFP, ...(TOKEN?{Authorization:TOKEN}:{}) });
+const TYP = {choice:'单项选择',cloze:'完形填空',reading:'阅读理解',vocab:'词汇运用',grammar:'语法填空',task:'任务型阅读',writing:'书面表达'};
+const TYPE_ORDER = ['choice','vocab','cloze','grammar','reading','task','writing'];
+const GBOOKS = {7:['7a','7b'],8:['8a','8b'],9:['9']};
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function L(n){ return String.fromCharCode(65+n); }
+function show(id,on){ const e=document.getElementById(id); if(e) e.style.display=on?'':'none'; }
+function logout(){ TOKEN=''; localStorage.removeItem('token'); location.href='./index.html'; }
+
+let AUTHED=false, TRIAL=false, PAPER=[], KEYSHOWN=false;
+let fState={grade:'',type:'',book:'',diff:'',kw:''};
+let tplGrade=7, bankCache=[];
+
+async function afterLogin(){
+  const r = await api('/api/me',{headers:H()});
+  if(r.s!==200){ show('loginMsg',true); show('app',false); return; }
+  AUTHED = !!(r.j.modules||{}).primary;
+  show('app',true);
+  show('trialCard', !AUTHED);
+  // init filter selects
+  const ft=document.getElementById('fType');
+  TYPE_ORDER.forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=TYP[t]; ft.appendChild(o); });
+  // try parse share hash
+  if(location.hash.startsWith('#p=')){ loadFromShare(location.hash.slice(3)); }
+  else { loadBank(); }
+}
+if(TOKEN) afterLogin();
+else { show('loginMsg',true); }
+
+function switchTab(t){
+  ['tpl','free','prev'].forEach(x=>{ document.getElementById('tab-'+x).classList.toggle('cur', x===t); document.getElementById('p-'+x).style.display = x===t?'':'none'; });
+  if(t==='free' && !bankCache.length) loadBank();
+  if(t==='prev') renderPaper();
+  if(t!=='free') document.getElementById('selBar').style.display = (PAPER.length && t!=='prev')?'flex':'none';
+  else document.getElementById('selBar').style.display = 'flex';
+}
+
+/* ---------- 模板组卷 ---------- */
+function tplPickGrade(g,el){ tplGrade=g; document.querySelectorAll('#tplGrade button').forEach(b=>b.classList.remove('on')); el.classList.add('on'); }
+async function genTemplate(kind){
+  const r = await api('/api/junior-exam?grade='+tplGrade,{headers:H()});
+  if(r.s!==200){ alert('加载失败：'+(r.j.error||'请重新登录')); return; }
+  let all = r.j.questions || [];
+  if(kind==='chapter'){
+    const b=document.getElementById('tplBook').value; if(!b){ alert('请先选择分册'); return; }
+    all = all.filter(q=>q.book===b);
+    if(!all.length){ alert('该分册暂无题目'); return; }
+  }
+  let pick=[];
+  if(kind==='mid') pick = pickByType(all,{choice:5,vocab:4,cloze:1,grammar:1,reading:2,task:1,writing:1});
+  else if(kind==='final') pick = all.slice();
+  else if(kind==='mock') pick = pickByType(all,{choice:8,vocab:5,cloze:1,grammar:1,reading:2,task:1,writing:1});
+  PAPER = pick; KEYSHOWN=false;
+  const names={mid:'期中考试卷',final:'期末考试卷',mock:'中考模拟卷'};
+  const gname={7:'七年级',8:'八年级',9:'九年级'}[tplGrade];
+  document.getElementById('paperTitle').value = gname+'英语'+names[kind];
+  switchTab('prev');
+}
+function showChapterRow(){
+  const sel=document.getElementById('tplBook'); sel.innerHTML='';
+  GBOOKS[tplGrade].forEach(b=>{ const o=document.createElement('option'); o.value=b; o.textContent=b+' 分册'; sel.appendChild(o); });
+  show('bookRow',true);
+}
+async function genChapter(){
+  const b=document.getElementById('tplBook').value; if(!b){ alert('请先选择分册'); return; }
+  const r=await api('/api/junior-exam?grade='+tplGrade,{headers:H()});
+  if(r.s!==200){ alert('加载失败：'+(r.j.error||'请重新登录')); return; }
+  const all=(r.j.questions||[]).filter(q=>q.book===b);
+  if(!all.length){ alert('该分册暂无题目'); return; }
+  PAPER=all.slice(); KEYSHOWN=false;
+  const gname={7:'七年级',8:'八年级',9:'九年级'}[tplGrade];
+  document.getElementById('paperTitle').value = gname+' '+b+' 章节练习卷';
+  switchTab('prev');
+}
+function pickByType(all,cnt){
+  const out=[];
+  TYPE_ORDER.forEach(t=>{
+    const need=cnt[t]||0; if(!need) return;
+    const pool=all.filter(q=>q.type===t);
+    for(let i=0;i<need && i<pool.length;i++) out.push(pool[i]);
+  });
+  return out;
+}
+
+/* ---------- 自由组卷 / 题库 ---------- */
+function fPick(key,val,el){
+  fState[key]=val;
+  el.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+}
+async function loadBank(){
+  const p=new URLSearchParams();
+  if(fState.grade) p.set('grade',fState.grade);
+  if(fState.type) p.set('type',fState.type);
+  if(fState.book) p.set('book',fState.book);
+  if(fState.diff) p.set('difficulty',fState.diff);
+  const r=await api('/api/junior-exam?'+p.toString(),{headers:H()});
+  if(r.s!==200){ alert('加载失败：'+(r.j.error||'请重新登录')); return; }
+  let list=r.j.questions||[];
+  if(fState.kw){ const k=fState.kw.toLowerCase(); list=list.filter(q=>(q.stem||'').toLowerCase().includes(k)||(q.topic||'').toLowerCase().includes(k)); }
+  bankCache=list;
+  renderBank();
+}
+function freeSearch(){ fState.kw=document.getElementById('fKw').value.trim(); loadBank(); }
+document.getElementById('fType').addEventListener('change',e=>{ fState.type=e.target.value; loadBank(); });
+document.getElementById('fBook').addEventListener('change',e=>{ fState.book=e.target.value; loadBank(); });
+document.getElementById('fDiff').addEventListener('change',e=>{ fState.diff=e.target.value; loadBank(); });
+function renderBank(){
+  const box=document.getElementById('bankList'); const stat=document.getElementById('bankStat');
+  stat.textContent='共 '+bankCache.length+' 题'+(TRIAL?'（体验模式仅返前 5 题，解锁后显示全部）':'')+' · 点击卡片加入/移出试卷';
+  if(!bankCache.length){ box.innerHTML='<div class="empty">该筛选条件下暂无题目</div>'; return; }
+  box.innerHTML=bankCache.map(q=>{
+    const on=PAPER.find(x=>x.id===q.id);
+    const meta='<span class="pill">'+TYP[q.type]+'</span><span class="pill">'+q.book+'</span><span class="pill diff">难度'+q.difficulty+'</span><span class="pill">'+esc(q.topic||'')+'</span>';
+    return '<div class="bank-item'+(on?' on':'')+'" id="bk-'+q.id+'" onclick="toggleSel(\''+q.id+'\')">'
+      +'<div class="bt"><input type="checkbox" class="chk" '+(on?'checked':'')+' onclick="event.stopPropagation();toggleSel(\''+q.id+'\')"> '+esc(shortStem(q))+'</div>'
+      +'<div class="meta">'+meta+'</div></div>';
+  }).join('');
+}
+function shortStem(q){
+  let s=q.stem||q.title||q.prompt||'';
+  return s.length>60? s.slice(0,60)+'…' : s;
+}
+function toggleSel(id){
+  const i=PAPER.findIndex(x=>x.id===id);
+  if(i>=0) PAPER.splice(i,1); else { const q=bankCache.find(x=>x.id===id); if(q) PAPER.push(q); }
+  const el=document.getElementById('bk-'+id); if(el){ el.classList.toggle('on'); const c=el.querySelector('.chk'); if(c) c.checked=i<0; }
+  updateSelBar();
+}
+function selectAllVisible(on){
+  bankCache.forEach(q=>{ const ex=PAPER.find(x=>x.id===q.id); if(on&&!ex) PAPER.push(q); if(!on&&ex) PAPER=PAPER.filter(x=>x.id!==q.id); });
+  renderBank(); updateSelBar();
+}
+function updateSelBar(){
+  document.getElementById('selCount').textContent=PAPER.length;
+  const bar=document.getElementById('selBar');
+  if(PAPER.length){ bar.style.display='flex'; document.getElementById('selHint').textContent='组卷预览中将按 单选→词汇→完形→语法→阅读→任务→写作 排版'; }
+  else bar.style.display='none';
+}
+function clearPaper(){ PAPER=[]; KEYSHOWN=false; updateSelBar(); if(document.getElementById('p-free').style.display!=='none') renderBank(); if(document.getElementById('p-prev').style.display!=='none') renderPaper(); }
+
+/* ---------- 组卷预览 / 渲染 ---------- */
+function scoreOf(q){
+  if(q.type==='choice'||q.type==='vocab') return 1;
+  if(q.type==='cloze'||q.type==='grammar') return (q.blanks||[]).length;
+  if(q.type==='reading') return (q.questions||[]).length;
+  if(q.type==='task') return (q.questions||[]).length*2;
+  if(q.type==='writing') return 15;
+  return 1;
+}
+function renderPaper(){
+  const view=document.getElementById('paperView');
+  if(!PAPER.length){ view.innerHTML='<div class="empty">尚未组卷。请到「模板组卷」或「自由组卷」选择题目。</div>'; return; }
+  const title=document.getElementById('paperTitle').value||'初中英语测试卷';
+  // group by type in TYPE_ORDER
+  const groups={}; TYPE_ORDER.forEach(t=>groups[t]=[]);
+  PAPER.forEach(q=>{ if(groups[q.type]) groups[q.type].push(q); });
+  let bigNo=0; const parts=[];
+  TYPE_ORDER.forEach(t=>{
+    const items=groups[t]; if(!items.length) return;
+    let subCount=0, subScore=0;
+    items.forEach(q=>{ subCount += (q.type==='cloze'||q.type==='grammar')?(q.blanks||[]).length : (q.type==='reading'||q.type==='task')?(q.questions||[]).length : 1; subScore += scoreOf(q); });
+    bigNo++;
+    const secName='一、二、三、四、五、六、七'.split('、')[bigNo-1];
+    parts.push('<div class="psec"><h3>'+secName+'、'+TYP[t]+'</h3><div class="pnote">（共 '+subCount+' 小题，计 '+subScore+' 分）</div>'+items.map(q=>renderQ(q,KEYSHOWN)).join('')+'</div>');
+  });
+  const totalScore=PAPER.reduce((a,q)=>a+scoreOf(q),0);
+  const totalSub=PAPER.reduce((a,q)=>a+((q.type==='cloze'||q.type==='grammar')?(q.blanks||[]).length:(q.type==='reading'||q.type==='task')?(q.questions||[]).length:1),0);
+  const time=Math.max(40, Math.round(totalScore*1.6));
+  const head='<h2>'+esc(title)+'</h2><div class="pmeta">学校：____________　班级：____________　姓名：____________　学号：____________</div>'
+    +'<div class="pmeta">满分 '+totalScore+' 分　考试时间 '+time+' 分钟　共 '+totalSub+' 小题</div>';
+  view.innerHTML=head+parts.join('')+(KEYSHOWN?renderKey():'');
+}
+function renderQ(q,key){
+  if(q.type==='choice'){
+    const opts=q.options.map((o,i)=>L(i)+'. '+esc(o)).join('　');
+    return '<div class="q"><div class="stem">'+esc(q.stem)+'</div><div class="opts">'+opts+'</div>'
+      +(key?'<div class="ans">答案：'+L(q.answer)+'</div><div class="ana">解析：'+esc(q.analysis)+'</div>':'')+'</div>';
+  }
+  if(q.type==='vocab'){
+    return '<div class="q"><div class="stem">'+esc(q.stem)+'</div>'
+      +(q.word?'<div class="given">所给词：'+esc(q.word)+'</div>':'')
+      +(key?'<div class="ans">答案：'+esc(q.answer)+'</div><div class="ana">解析：'+esc(q.analysis)+'</div>':'')+'</div>';
+  }
+  if(q.type==='cloze'||q.type==='grammar'){
+    const blanks=(q.blanks||[]).map((b,i)=>'('+(i+1)+')___').join(' ');
+    const passage=(q.passage||'').replace(/\((\d+)\)___/g,"($1)<span class='blankline'></span>");
+    let keyHtml='';
+    if(key){ keyHtml='<div class="ans">'+q.blanks.map((b,i)=>'('+(i+1)+') '+L(b.answer)+'. '+esc(b.options[b.answer])).join('　')+'</div>'
+      +'<div class="ana">'+q.blanks.map((b,i)=>'('+(i+1)+') '+esc(b.analysis)).join('；')+'</div>'; }
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+passage+'</div>'
+      +(key?keyHtml:'')+'</div>';
+  }
+  if(q.type==='reading'){
+    const qs=(q.questions||[]).map((sq,i)=>{
+      const opts=(sq.options||[]).map((o,j)=>L(j)+'. '+esc(o)).join('　');
+      return '<div class="sub"><div class="sq">'+(i+1)+'. '+esc(sq.stem)+'</div><div class="opts">'+opts+'</div>'
+        +(key?'<div class="ans">答案：'+L(sq.answer)+'</div><div class="ana">解析：'+esc(sq.analysis)+'</div>':'')+'</div>';
+    }).join('');
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+esc(q.passage)+'</div>'+qs+'</div>';
+  }
+  if(q.type==='task'){
+    const qs=(q.questions||[]).map((sq,i)=>{
+      return '<div class="sub"><div class="sq">'+(i+1)+'. '+esc(sq.stem)+'</div>'
+        +(key?'<div class="ans">答案：'+esc(sq.answer)+'</div><div class="ana">解析：'+esc(sq.analysis)+'</div>':'<div class="blankline" style="min-width:200px"></div>')+'</div>';
+    }).join('');
+    return '<div class="q">'+(q.title?'<div class="qh">'+esc(q.title)+'</div>':'')+'<div class="passage">'+esc(q.passage)+'</div>'+qs+'</div>';
+  }
+  if(q.type==='writing'){
+    const req=(q.requirements||[]).map(r=>'· '+esc(r)).join('<br>');
+    const pts=(q.points||[]).map(p=>'· '+esc(p)).join('<br>');
+    return '<div class="q"><div class="qh">'+esc(q.title||'书面表达')+'</div>'
+      +'<div class="stem">'+esc(q.prompt)+'</div>'
+      +'<div class="req" style="margin-top:8px"><b>要求：</b><br>'+req+'</div>'
+      +'<div class="req"><b>要点：</b><br>'+pts+'</div>'
+      +'<div class="req">词数要求：'+(q.wordLimit||'')+' 词左右</div>'
+      +(key?('<div class="ans">参考范文：</div><div class="ana">'+esc(q.sample)+'</div>'):'<div class="blankline" style="min-width:100%;height:120px"></div>')+'</div>';
+  }
+  return '';
+}
+function renderKey(){
+  let n=0; const lines=[];
+  TYPE_ORDER.forEach(t=>{
+    PAPER.filter(q=>q.type===t).forEach(q=>{
+      if(q.type==='choice'){ n++; lines.push('<div class="kl"><b>'+(t==='choice'?'':'' )+n+'</b>. 【单选】'+esc(shortStem(q))+' — <b>'+L(q.answer)+'</b> '+esc(q.analysis)); }
+      else if(q.type==='vocab'){ n++; lines.push('<div class="kl"><b>'+n+'</b>. 【词汇】'+esc(shortStem(q))+' — <b>'+esc(q.answer)+'</b> '+esc(q.analysis)); }
+      else if(q.type==='cloze'||q.type==='grammar'){ const ks=q.blanks.map((b,i)=>'('+(i+1)+')'+L(b.answer)+' '+esc(b.options[b.answer])).join('，'); lines.push('<div class="kl"><b>【'+(q.type==='cloze'?'完形':'语法')+'】'+esc(q.title||'')+'</b>：'+ks); }
+      else if(q.type==='reading'){ (q.questions||[]).forEach((sq,i)=>{ n++; lines.push('<div class="kl"><b>'+(n)+'</b>. 【阅读】'+esc(sq.stem)+' — <b>'+L(sq.answer)+'</b> '+esc(sq.analysis)); }); }
+      else if(q.type==='task'){ (q.questions||[]).forEach((sq,i)=>{ n++; lines.push('<div class="kl"><b>'+(n)+'</b>. 【任务】'+esc(sq.stem)+' — <b>'+esc(sq.answer)+'</b> '+esc(sq.analysis)); }); }
+      else if(q.type==='writing'){ lines.push('<div class="kl"><b>【写作】</b>'+esc(q.title||'')+' 参考范文：'+esc(q.sample)); }
+    });
+  });
+  return '<div class="keysec"><h3>参考答案</h3>'+lines.join('')+'</div>';
+}
+function toggleKey(){ KEYSHOWN=!KEYSHOWN; document.getElementById('keyBtn').textContent=KEYSHOWN?'🙈 隐藏答案':'👁️ 显示答案'; renderPaper(); }
+function printPaper(){ if(!PAPER.length){ alert('请先组卷'); return; } window.print(); }
+
+/* ---------- 分享链接 ---------- */
+function makeShare(){
+  if(!PAPER.length){ alert('请先组卷'); return; }
+  const title=document.getElementById('paperTitle').value||'初中英语测试卷';
+  const obj={t:title, ids:PAPER.map(q=>q.id)};
+  const b64=btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+  const url=location.origin+location.pathname+'#p='+b64;
+  const box=document.getElementById('shareBox');
+  box.style.display=''; box.innerHTML='分享链接（含试卷标题与选题，打开后需登录即可还原试卷）：<br>'+url+'<br><button class="btn sm" style="margin-top:8px" onclick="copyShare()">复制链接</button>';
+  window._shareUrl=url;
+}
+function copyShare(){ if(window._shareUrl){ navigator.clipboard.writeText(window._shareUrl).then(()=>alert('已复制'),()=>prompt('复制以下链接：',window._shareUrl)); } }
+async function loadFromShare(b64){
+  try{
+    const obj=JSON.parse(decodeURIComponent(escape(atob(b64))));
+    const r=await api('/api/junior-exam?ids='+obj.ids.join(','),{headers:H()});
+    if(r.s!==200){ alert('分享试卷加载失败：'+(r.j.error||'')); loadBank(); return; }
+    PAPER=r.j.questions||[]; KEYSHOWN=false;
+    document.getElementById('paperTitle').value=obj.t||'初中英语测试卷';
+    updateSelBar(); switchTab('prev');
+  }catch(e){ alert('分享链接解析失败'); loadBank(); }
+}
+</script>
+<script>
+(function(){try{var K='junior-exam';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+</script>
+</body>
+</html>
