@@ -1,8 +1,8 @@
 {
  "product": "初中英语题库（中考笔试真题格式原型·原创练习）",
- "version": "1.0",
- "schema_version": "1.0",
- "note": "题型：choice 单选 / cloze 完形 / reading 阅读 / vocab 词汇运用 / grammar 语法填空 / task 任务型阅读 / writing 书面表达；grade 7/8/9；book 7a~9；difficulty 1-3。组卷按 grade/type/book/unit/difficulty 过滤切片。",
+ "version": "1.1",
+ "schema_version": "1.1",
+ "note": "题型：choice 单选 / cloze 完形 / reading 阅读 / vocab 词汇运用 / grammar 语法填空 / task 任务型阅读 / writing 书面表达；grade 7/8/9；book 7a~9；difficulty 1-3。组卷按 grade/type/book/unit/difficulty 过滤切片；模板组卷支持随机抽题以生成多套不同试卷。",
  "questions": [
   {
    "id": "je0001",
@@ -1774,6 +1774,1693 @@
    ],
    "wordLimit": 100,
    "sample": "It is our duty to protect the environment. First, we should reduce plastic use and take reusable bags. Second, we must save water and electricity. Third, planting more trees can make the air cleaner. If everyone takes action, the earth will be more beautiful. Let's start from small things now."
+  },
+  {
+   "id": "je0073",
+   "grade": 7,
+   "type": "choice",
+   "book": "7a",
+   "unit": "7a01",
+   "topic": "there be",
+   "difficulty": 1,
+   "stem": "There ___ some milk in the glass.",
+   "options": [
+    "is",
+    "are",
+    "have",
+    "has"
+   ],
+   "answer": 0,
+   "analysis": "milk 不可数，there be 用 is。"
+  },
+  {
+   "id": "je0074",
+   "grade": 7,
+   "type": "choice",
+   "book": "7a",
+   "unit": "7a05",
+   "topic": "疑问词",
+   "difficulty": 1,
+   "stem": "— ___ books are these? — They are mine.",
+   "options": [
+    "Whose",
+    "Who",
+    "What",
+    "Which"
+   ],
+   "answer": 0,
+   "analysis": "问所属用 Whose。"
+  },
+  {
+   "id": "je0075",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b01",
+   "topic": "一般现在",
+   "difficulty": 1,
+   "stem": "He usually ___ up at 6:30 in the morning.",
+   "options": [
+    "get",
+    "gets",
+    "got",
+    "getting"
+   ],
+   "answer": 1,
+   "analysis": "第三人称单数 gets。"
+  },
+  {
+   "id": "je0076",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b02",
+   "topic": "建议句型",
+   "difficulty": 1,
+   "stem": "Let's ___ basketball after school.",
+   "options": [
+    "play",
+    "to play",
+    "playing",
+    "plays"
+   ],
+   "answer": 0,
+   "analysis": "Let's + 动词原形。"
+  },
+  {
+   "id": "je0077",
+   "grade": 7,
+   "type": "choice",
+   "book": "7a",
+   "unit": "7a02",
+   "topic": "冠词",
+   "difficulty": 1,
+   "stem": "She is ___ honest girl.",
+   "options": [
+    "a",
+    "an",
+    "the",
+    "/"
+   ],
+   "answer": 1,
+   "analysis": "honest 以元音音素开头，用 an。"
+  },
+  {
+   "id": "je0078",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b03",
+   "topic": "比较-代词",
+   "difficulty": 2,
+   "stem": "The weather in Guangzhou is hotter than ___ in Beijing.",
+   "options": [
+    "it",
+    "that",
+    "this",
+    "one"
+   ],
+   "answer": 1,
+   "analysis": "比较不可数/单数用 that 指代。"
+  },
+  {
+   "id": "je0079",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b04",
+   "topic": "频率",
+   "difficulty": 2,
+   "stem": "— How often do you read? — ___ a week.",
+   "options": [
+    "Two",
+    "Twice",
+    "Second",
+    "Two times"
+   ],
+   "answer": 1,
+   "analysis": "两次用 Twice。"
+  },
+  {
+   "id": "je0080",
+   "grade": 7,
+   "type": "choice",
+   "book": "7a",
+   "unit": "7a05",
+   "topic": "非谓语",
+   "difficulty": 2,
+   "stem": "My mother asks me ___ too many computer games.",
+   "options": [
+    "not play",
+    "not to play",
+    "to not play",
+    "don't play"
+   ],
+   "answer": 1,
+   "analysis": "ask sb not to do sth。"
+  },
+  {
+   "id": "je0081",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b01",
+   "topic": "固定句型",
+   "difficulty": 1,
+   "stem": "It's time ___ class.",
+   "options": [
+    "to",
+    "for",
+    "of",
+    "on"
+   ],
+   "answer": 1,
+   "analysis": "It's time for + 名词。"
+  },
+  {
+   "id": "je0082",
+   "grade": 7,
+   "type": "choice",
+   "book": "7b",
+   "unit": "7b06",
+   "topic": "spend",
+   "difficulty": 2,
+   "stem": "He spent two hours ___ his homework.",
+   "options": [
+    "on",
+    "in",
+    "at",
+    "for"
+   ],
+   "answer": 0,
+   "analysis": "spend time on sth。"
+  },
+  {
+   "id": "je0083",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7a",
+   "unit": "7a03",
+   "topic": "词形-名词",
+   "difficulty": 1,
+   "mode": "form",
+   "stem": "There are many ___ (leaf) on the tree.",
+   "word": "leaf",
+   "answer": "leaves",
+   "analysis": "leaf 复数 leaves。"
+  },
+  {
+   "id": "je0084",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7a",
+   "unit": "7b01",
+   "topic": "词形-动词",
+   "difficulty": 1,
+   "mode": "form",
+   "stem": "He ___ (brush) his teeth every morning.",
+   "word": "brush",
+   "answer": "brushes",
+   "analysis": "第三人称单数 brushes。"
+  },
+  {
+   "id": "je0085",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7a",
+   "unit": "7a03",
+   "topic": "词形-名词",
+   "difficulty": 1,
+   "mode": "form",
+   "stem": "The baby has two ___ (tooth).",
+   "word": "tooth",
+   "answer": "teeth",
+   "analysis": "tooth 复数 teeth。"
+  },
+  {
+   "id": "je0086",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7b",
+   "unit": "7b04",
+   "topic": "句意填词",
+   "difficulty": 2,
+   "mode": "blank",
+   "stem": "I want to be a s___ when I grow up.",
+   "answer": "scientist",
+   "analysis": "科学家 scientist。"
+  },
+  {
+   "id": "je0087",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7b",
+   "unit": "7b06",
+   "topic": "句意填词",
+   "difficulty": 2,
+   "mode": "blank",
+   "stem": "Please turn off the l___ before leaving.",
+   "answer": "light",
+   "analysis": "关灯 light。"
+  },
+  {
+   "id": "je0088",
+   "grade": 7,
+   "type": "vocab",
+   "book": "7a",
+   "unit": "7a05",
+   "topic": "词形-进行时",
+   "difficulty": 1,
+   "mode": "form",
+   "stem": "They are ___ (run) in the park now.",
+   "word": "run",
+   "answer": "running",
+   "analysis": "现在进行时 running。"
+  },
+  {
+   "id": "je0089",
+   "grade": 7,
+   "type": "cloze",
+   "book": "7b",
+   "unit": "7b03",
+   "topic": "记叙-礼物",
+   "difficulty": 2,
+   "title": "A Birthday Gift",
+   "passage": "Lucy wanted to buy a gift for her mother's (1)___. She (2)___ her pocket money and went to the shop. She (3)___ a nice scarf. Her mother was very (4)___ when she got it. 'Thank you, my (5)___,' she said. They (6)___ a big cake together. It was a (7)___ day. Lucy felt (8)___.",
+   "blanks": [
+    {
+     "options": [
+      "birthday",
+      "school",
+      "work",
+      "party"
+     ],
+     "answer": 0,
+     "analysis": "生日礼物 birthday。"
+    },
+    {
+     "options": [
+      "save",
+      "saved",
+      "saving",
+      "saves"
+     ],
+     "answer": 1,
+     "analysis": "过去时 saved。"
+    },
+    {
+     "options": [
+      "buy",
+      "bought",
+      "buys",
+      "buying"
+     ],
+     "answer": 1,
+     "analysis": "过去时 bought。"
+    },
+    {
+     "options": [
+      "sad",
+      "happy",
+      "angry",
+      "tired"
+     ],
+     "answer": 1,
+     "analysis": "收到礼物高兴。"
+    },
+    {
+     "options": [
+      "daughter",
+      "son",
+      "friend",
+      "teacher"
+     ],
+     "answer": 0,
+     "analysis": "Lucy 是女儿 daughter。"
+    },
+    {
+     "options": [
+      "make",
+      "made",
+      "makes",
+      "making"
+     ],
+     "answer": 1,
+     "analysis": "过去时 made。"
+    },
+    {
+     "options": [
+      "bad",
+      "good",
+      "cold",
+      "busy"
+     ],
+     "answer": 1,
+     "analysis": "美好的一天。"
+    },
+    {
+     "options": [
+      "sad",
+      "happy",
+      "bored",
+      "tired"
+     ],
+     "answer": 1,
+     "analysis": "Lucy 感到 happy。"
+    }
+   ]
+  },
+  {
+   "id": "je0090",
+   "grade": 7,
+   "type": "reading",
+   "book": "7a",
+   "unit": "7a06",
+   "topic": "说明-动物",
+   "difficulty": 2,
+   "title": "Pandas",
+   "passage": "Pandas are lovely animals. They are white and black. They live in China. They like eating bamboo. Baby pandas are very small. We should protect them because they are in danger.",
+   "questions": [
+    {
+     "stem": "What color are pandas?",
+     "options": [
+      "White and black",
+      "Red",
+      "Yellow",
+      "Green"
+     ],
+     "answer": 0,
+     "analysis": "黑白相间。"
+    },
+    {
+     "stem": "What do they like eating?",
+     "options": [
+      "Meat",
+      "Bamboo",
+      "Fish",
+      "Grass"
+     ],
+     "answer": 1,
+     "analysis": "吃竹子 bamboo。"
+    },
+    {
+     "stem": "Why should we protect them?",
+     "options": [
+      "They are big.",
+      "They are in danger.",
+      "They are scary.",
+      "They are fast."
+     ],
+     "answer": 1,
+     "analysis": "处于危险中需保护。"
+    }
+   ]
+  },
+  {
+   "id": "je0091",
+   "grade": 7,
+   "type": "reading",
+   "book": "7b",
+   "unit": "7b07",
+   "topic": "记叙-旅行",
+   "difficulty": 2,
+   "title": "A Trip to the Park",
+   "passage": "Last Sunday, Tom and his friends went to the park. They flew kites and rode bikes. They had a picnic under a tree. In the afternoon they took many photos. They went home at five. It was a happy day.",
+   "questions": [
+    {
+     "stem": "When did they go to the park?",
+     "options": [
+      "Last Sunday",
+      "Last Monday",
+      "Yesterday",
+      "Today"
+     ],
+     "answer": 0,
+     "analysis": "上周日。"
+    },
+    {
+     "stem": "What did they do there?",
+     "options": [
+      "Flew kites",
+      "Watched TV",
+      "Read books",
+      "Slept"
+     ],
+     "answer": 0,
+     "analysis": "放风筝。"
+    },
+    {
+     "stem": "What did they take in the afternoon?",
+     "options": [
+      "Photos",
+      "Buses",
+      "Cakes",
+      "Umbrellas"
+     ],
+     "answer": 0,
+     "analysis": "拍照 photos。"
+    }
+   ]
+  },
+  {
+   "id": "je0092",
+   "grade": 7,
+   "type": "grammar",
+   "book": "7b",
+   "unit": "7b02",
+   "topic": "过去+将来",
+   "difficulty": 2,
+   "title": "Grammar Fill-in",
+   "passage": "Yesterday I (1)___ (visit) my grandma. She (2)___ (cook) a big meal. We (3)___ (eat) together happily. Tomorrow I (4)___ (help) her clean the room. She (5)___ (be) very kind.",
+   "blanks": [
+    {
+     "options": [
+      "visit",
+      "visited",
+      "visits",
+      "visiting"
+     ],
+     "answer": 1,
+     "analysis": "过去时 visited。"
+    },
+    {
+     "options": [
+      "cook",
+      "cooked",
+      "cooks",
+      "cooking"
+     ],
+     "answer": 1,
+     "analysis": "过去时 cooked。"
+    },
+    {
+     "options": [
+      "eat",
+      "ate",
+      "eats",
+      "eating"
+     ],
+     "answer": 1,
+     "analysis": "过去时 ate。"
+    },
+    {
+     "options": [
+      "help",
+      "will help",
+      "helped",
+      "helps"
+     ],
+     "answer": 1,
+     "analysis": "tomorrow 将来时 will help。"
+    },
+    {
+     "options": [
+      "is",
+      "was",
+      "are",
+      "be"
+     ],
+     "answer": 1,
+     "analysis": "过去时 was。"
+    }
+   ]
+  },
+  {
+   "id": "je0093",
+   "grade": 7,
+   "type": "task",
+   "book": "7a",
+   "unit": "7a08",
+   "topic": "任务-通知",
+   "difficulty": 2,
+   "title": "A Notice",
+   "passage": "NOTICE: We will have a school trip on Saturday. Meet at the school gate at 8:00 a.m. Bring your lunch and water. Wear sports shoes. Call Mr. Li at 555-1234 for more information.",
+   "questions": [
+    {
+     "stem": "When is the school trip?",
+     "answer": "On Saturday",
+     "analysis": "周六。",
+     "kind": "answer"
+    },
+    {
+     "stem": "Where do they meet?",
+     "answer": "At the school gate",
+     "analysis": "校门口集合。"
+    },
+    {
+     "stem": "What should they wear?",
+     "answer": "Sports shoes",
+     "analysis": "穿运动鞋。"
+    }
+   ]
+  },
+  {
+   "id": "je0094",
+   "grade": 7,
+   "type": "writing",
+   "book": "7a",
+   "unit": "7a09",
+   "topic": "话题-周末",
+   "difficulty": 1,
+   "title": "My Weekend",
+   "prompt": "请以 'My Weekend' 为题写一篇不少于 60 词的英语短文，描述你上周末做了什么、感觉如何。",
+   "requirements": [
+    "写明时间",
+    "描述活动",
+    "表达感受"
+   ],
+   "points": [
+    "用一般过去时",
+    "语句连贯",
+    "不少于 60 词"
+   ],
+   "wordLimit": 60,
+   "sample": "Last weekend I was very happy. On Saturday morning I did my homework. In the afternoon I played basketball with my friends. On Sunday I visited my grandparents and had lunch with them. We talked and laughed a lot. I think weekends are the best time of the week."
+  },
+  {
+   "id": "je0095",
+   "grade": 8,
+   "type": "choice",
+   "book": "8a",
+   "unit": "8a01",
+   "topic": "非谓语",
+   "difficulty": 2,
+   "stem": "The teacher told us ___ in the classroom.",
+   "options": [
+    "not run",
+    "not to run",
+    "don't run",
+    "to not run"
+   ],
+   "answer": 1,
+   "analysis": "tell sb not to do sth。"
+  },
+  {
+   "id": "je0096",
+   "grade": 8,
+   "type": "choice",
+   "book": "8b",
+   "unit": "8b01",
+   "topic": "现在完成时",
+   "difficulty": 2,
+   "stem": "I have ___ seen the film, so I won't go again.",
+   "options": [
+    "yet",
+    "already",
+    "still",
+    "ever"
+   ],
+   "answer": 1,
+   "analysis": "肯定句已发生用 already。"
+  },
+  {
+   "id": "je0097",
+   "grade": 8,
+   "type": "choice",
+   "book": "8a",
+   "unit": "8a02",
+   "topic": "比较级",
+   "difficulty": 2,
+   "stem": "He is taller than ___ in his class.",
+   "options": [
+    "any boy",
+    "any other boy",
+    "all boys",
+    "other boys"
+   ],
+   "answer": 1,
+   "analysis": "同范围比较排除自身用 any other boy。"
+  },
+  {
+   "id": "je0098",
+   "grade": 8,
+   "type": "choice",
+   "book": "8a",
+   "unit": "8a03",
+   "topic": "状语从句",
+   "difficulty": 2,
+   "stem": "If it ___ tomorrow, we will stay at home.",
+   "options": [
+    "rains",
+    "will rain",
+    "rained",
+    "is raining"
+   ],
+   "answer": 0,
+   "analysis": "主将从现，if 从句用一般现在时。"
+  },
+  {
+   "id": "je0099",
+   "grade": 8,
+   "type": "choice",
+   "book": "8b",
+   "unit": "8b01",
+   "topic": "时态-介词",
+   "difficulty": 2,
+   "stem": "She has lived here ___ 2015.",
+   "options": [
+    "for",
+    "since",
+    "in",
+    "from"
+   ],
+   "answer": 1,
+   "analysis": "since + 过去时间点。"
+  },
+  {
+   "id": "je0100",
+   "grade": 8,
+   "type": "choice",
+   "book": "8b",
+   "unit": "8b02",
+   "topic": "形容词",
+   "difficulty": 2,
+   "stem": "The movie was so ___ that I fell asleep.",
+   "options": [
+    "boring",
+    "bored",
+    "interesting",
+    "excited"
+   ],
+   "answer": 0,
+   "analysis": "修饰物用 boring（令人厌烦的）。"
+  },
+  {
+   "id": "je0101",
+   "grade": 8,
+   "type": "choice",
+   "book": "8a",
+   "unit": "8a04",
+   "topic": "情态-请求",
+   "difficulty": 2,
+   "stem": "— Could you please pass me the salt? — ___.",
+   "options": [
+    "Yes, I could",
+    "Sure",
+    "No, I couldn't",
+    "Sorry, I can't"
+   ],
+   "answer": 1,
+   "analysis": "委婉请求的肯定回答用 Sure。"
+  },
+  {
+   "id": "je0102",
+   "grade": 8,
+   "type": "choice",
+   "book": "8b",
+   "unit": "8b06",
+   "topic": "spend",
+   "difficulty": 2,
+   "stem": "He spent two hours ___ the book.",
+   "options": [
+    "read",
+    "reading",
+    "to read",
+    "reads"
+   ],
+   "answer": 1,
+   "analysis": "spend time (in) doing sth。"
+  },
+  {
+   "id": "je0103",
+   "grade": 8,
+   "type": "choice",
+   "book": "8a",
+   "unit": "8a05",
+   "topic": "看病",
+   "difficulty": 1,
+   "stem": "— What's the matter? — I have a ___.",
+   "options": [
+    "headache",
+    "head",
+    "hair",
+    "hand"
+   ],
+   "answer": 0,
+   "analysis": "have a headache 头痛。"
+  },
+  {
+   "id": "je0104",
+   "grade": 8,
+   "type": "choice",
+   "book": "8b",
+   "unit": "8b08",
+   "topic": "使役-被动",
+   "difficulty": 2,
+   "stem": "My bike is broken. I need to have it ___.",
+   "options": [
+    "repair",
+    "repaired",
+    "repairing",
+    "to repair"
+   ],
+   "answer": 1,
+   "analysis": "have sth done 让别人做某事。"
+  },
+  {
+   "id": "je0105",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8b",
+   "unit": "8b02",
+   "topic": "词形-名词",
+   "difficulty": 2,
+   "mode": "form",
+   "stem": "He made a ___ (decide) to study harder.",
+   "word": "decide",
+   "answer": "decision",
+   "analysis": "decide→decision 名词。"
+  },
+  {
+   "id": "je0106",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8a",
+   "unit": "8a05",
+   "topic": "词形-被动",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "The book is ___ (write) by a famous author.",
+   "word": "write",
+   "answer": "written",
+   "analysis": "一般现在被动 written。"
+  },
+  {
+   "id": "je0107",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8a",
+   "unit": "8a06",
+   "topic": "词形-名词",
+   "difficulty": 2,
+   "mode": "form",
+   "stem": "We should eat more ___ (vegetable).",
+   "word": "vegetable",
+   "answer": "vegetables",
+   "analysis": "蔬菜复数 vegetables。"
+  },
+  {
+   "id": "je0108",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8b",
+   "unit": "8b07",
+   "topic": "句意填词",
+   "difficulty": 3,
+   "mode": "blank",
+   "stem": "The t___ is very heavy because of the rain.",
+   "answer": "traffic",
+   "analysis": "交通 traffic。"
+  },
+  {
+   "id": "je0109",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8a",
+   "unit": "8a03",
+   "topic": "句意填词",
+   "difficulty": 3,
+   "mode": "blank",
+   "stem": "You should f___ the rules at school.",
+   "answer": "follow",
+   "analysis": "遵守 follow。"
+  },
+  {
+   "id": "je0110",
+   "grade": 8,
+   "type": "vocab",
+   "book": "8b",
+   "unit": "8b01",
+   "topic": "词形-不规则",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "She has ___ (win) three prizes this term.",
+   "word": "win",
+   "answer": "won",
+   "analysis": "win 过去分词 won。"
+  },
+  {
+   "id": "je0111",
+   "grade": 8,
+   "type": "cloze",
+   "book": "8b",
+   "unit": "8b03",
+   "topic": "记叙-助人",
+   "difficulty": 3,
+   "title": "A Helpful Boy",
+   "passage": "Li Ming is a (1)___ boy. One day he (2)___ an old man fall down on the street. He (3)___ the old man up and (4)___ a doctor. The doctor (5)___ the old man quickly. The old man's family (6)___ Li Ming and gave him a gift. Li Ming was very (7)___. He said helping others is (8)___.",
+   "blanks": [
+    {
+     "options": [
+      "bad",
+      "kind",
+      "lazy",
+      "rude"
+     ],
+     "answer": 1,
+     "analysis": "善良的男孩 kind。"
+    },
+    {
+     "options": [
+      "see",
+      "saw",
+      "seeing",
+      "sees"
+     ],
+     "answer": 1,
+     "analysis": "过去时 saw。"
+    },
+    {
+     "options": [
+      "help",
+      "helped",
+      "helping",
+      "helps"
+     ],
+     "answer": 1,
+     "analysis": "过去时 helped。"
+    },
+    {
+     "options": [
+      "call",
+      "called",
+      "calls",
+      "calling"
+     ],
+     "answer": 1,
+     "analysis": "过去时 called。"
+    },
+    {
+     "options": [
+      "save",
+      "saved",
+      "saves",
+      "saving"
+     ],
+     "answer": 1,
+     "analysis": "过去时 saved。"
+    },
+    {
+     "options": [
+      "thank",
+      "thanked",
+      "thanks",
+      "thanking"
+     ],
+     "answer": 1,
+     "analysis": "过去时 thanked。"
+    },
+    {
+     "options": [
+      "sad",
+      "happy",
+      "angry",
+      "tired"
+     ],
+     "answer": 1,
+     "analysis": "受到感谢很高兴。"
+    },
+    {
+     "options": [
+      "bad",
+      "happy",
+      "boring",
+      "sorry"
+     ],
+     "answer": 1,
+     "analysis": "助人快乐 happy。"
+    }
+   ]
+  },
+  {
+   "id": "je0112",
+   "grade": 8,
+   "type": "reading",
+   "book": "8b",
+   "unit": "8b04",
+   "topic": "说明-志愿",
+   "difficulty": 3,
+   "title": "A Volunteer Day",
+   "passage": "Last month our school had a Volunteer Day. Students cleaned the park and planted trees. Some visited the old people's home and sang songs. Everyone worked hard and felt happy. We learned that giving is better than receiving.",
+   "questions": [
+    {
+     "stem": "What did students do in the park?",
+     "options": [
+      "Planted trees",
+      "Watched TV",
+      "Played games",
+      "Slept"
+     ],
+     "answer": 0,
+     "analysis": "植树打扫公园。"
+    },
+    {
+     "stem": "Who did some students visit?",
+     "options": [
+      "Teachers",
+      "Old people",
+      "Doctors",
+      "Workers"
+     ],
+     "answer": 1,
+     "analysis": "敬老院老人。"
+    },
+    {
+     "stem": "What did they learn?",
+     "options": [
+      "Receiving is better.",
+      "Giving is better.",
+      "Working is hard.",
+      "Singing is fun."
+     ],
+     "answer": 1,
+     "analysis": "付出比索取更有意义。"
+    }
+   ]
+  },
+  {
+   "id": "je0113",
+   "grade": 8,
+   "type": "reading",
+   "book": "8a",
+   "unit": "8a08",
+   "topic": "议论-职业",
+   "difficulty": 3,
+   "title": "My Dream Job",
+   "passage": "I want to be a teacher when I grow up. Teachers help students learn knowledge and become good people. It is a meaningful job. To make my dream come true, I must study hard and read more books now.",
+   "questions": [
+    {
+     "stem": "What does the writer want to be?",
+     "options": [
+      "A doctor",
+      "A teacher",
+      "A driver",
+      "A farmer"
+     ],
+     "answer": 1,
+     "analysis": "想当老师。"
+    },
+    {
+     "stem": "Why is it meaningful?",
+     "options": [
+      "It pays well.",
+      "It helps students.",
+      "It is easy.",
+      "It is free."
+     ],
+     "answer": 1,
+     "analysis": "帮助学生有意义。"
+    },
+    {
+     "stem": "How to make the dream come true?",
+     "options": [
+      "Play more.",
+      "Study hard.",
+      "Sleep more.",
+      "Travel."
+     ],
+     "answer": 1,
+     "analysis": "努力学习。"
+    }
+   ]
+  },
+  {
+   "id": "je0114",
+   "grade": 8,
+   "type": "grammar",
+   "book": "8b",
+   "unit": "8b05",
+   "topic": "完成+被动",
+   "difficulty": 3,
+   "title": "Grammar Fill-in",
+   "passage": "I (1)___ (finish) my homework already. The letter (2)___ (write) by my sister. We (3)___ (not see) the film yet. He (4)___ (work) here since 2018. The house (5)___ (build) last year.",
+   "blanks": [
+    {
+     "options": [
+      "finish",
+      "have finished",
+      "finished",
+      "finishes"
+     ],
+     "answer": 1,
+     "analysis": "already 现在完成时。"
+    },
+    {
+     "options": [
+      "writes",
+      "wrote",
+      "was written",
+      "is writing"
+     ],
+     "answer": 2,
+     "analysis": "过去被动 was written。"
+    },
+    {
+     "options": [
+      "don't see",
+      "haven't seen",
+      "didn't see",
+      "saw"
+     ],
+     "answer": 1,
+     "analysis": "yet 现在完成时否定。"
+    },
+    {
+     "options": [
+      "works",
+      "worked",
+      "has worked",
+      "is working"
+     ],
+     "answer": 2,
+     "analysis": "since 现在完成时。"
+    },
+    {
+     "options": [
+      "build",
+      "built",
+      "was built",
+      "builds"
+     ],
+     "answer": 2,
+     "analysis": "last year 过去被动。"
+    }
+   ]
+  },
+  {
+   "id": "je0115",
+   "grade": 8,
+   "type": "task",
+   "book": "8a",
+   "unit": "8a09",
+   "topic": "任务-调查",
+   "difficulty": 3,
+   "title": "A Survey",
+   "passage": "We did a survey about free time. 40% of students read books. 30% play sports. 20% watch TV. 10% use the computer. Most students think reading is the best way to relax.",
+   "questions": [
+    {
+     "stem": "What do 30% of students do?",
+     "answer": "Play sports",
+     "analysis": "30% 运动。",
+     "kind": "answer"
+    },
+    {
+     "stem": "How many use the computer?",
+     "answer": "10%",
+     "analysis": "10% 用电脑。"
+    },
+    {
+     "stem": "What is the best way to relax?",
+     "answer": "Reading",
+     "analysis": "多数认为阅读最佳。"
+    }
+   ]
+  },
+  {
+   "id": "je0116",
+   "grade": 8,
+   "type": "writing",
+   "book": "8a",
+   "unit": "8a10",
+   "topic": "话题-理想",
+   "difficulty": 3,
+   "title": "My Dream Job",
+   "prompt": "请以 'My Dream Job' 为题写一篇不少于 80 词的短文，说明你的理想职业、原因以及为实现它要做的事。",
+   "requirements": [
+    "点明职业",
+    "说明原因",
+    "写明行动"
+   ],
+   "points": [
+    "用将来时表达理想",
+    "理由充分",
+    "不少于 80 词"
+   ],
+   "wordLimit": 80,
+   "sample": "My dream job is to be a teacher. Teachers help students grow and learn. I like children and books. To make it come true, I will study hard and read widely. I will also learn how to get on with others. I believe I can become a good teacher one day."
+  },
+  {
+   "id": "je0117",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a01",
+   "topic": "非谓语",
+   "difficulty": 3,
+   "stem": "The doctor advised him ___ smoking.",
+   "options": [
+    "stop",
+    "to stop",
+    "stopping",
+    "stopped"
+   ],
+   "answer": 1,
+   "analysis": "advise sb to do sth。"
+  },
+  {
+   "id": "je0118",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a02",
+   "topic": "建议句型",
+   "difficulty": 3,
+   "stem": "— I'm tired. — Why not ___ a rest?",
+   "options": [
+    "have",
+    "to have",
+    "having",
+    "had"
+   ],
+   "answer": 0,
+   "analysis": "Why not + 动词原形。"
+  },
+  {
+   "id": "je0119",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a03",
+   "topic": "最高级",
+   "difficulty": 3,
+   "stem": "He is the ___ student in our class.",
+   "options": [
+    "tall",
+    "taller",
+    "tallest",
+    "most tall"
+   ],
+   "answer": 2,
+   "analysis": "三者及以上用最高级 tallest。"
+  },
+  {
+   "id": "je0120",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a04",
+   "topic": "被动-过去",
+   "difficulty": 3,
+   "stem": "The window is broken. It ___ yesterday.",
+   "options": [
+    "broke",
+    "was broken",
+    "broke down",
+    "breaks"
+   ],
+   "answer": 1,
+   "analysis": "过去被动 was broken。"
+  },
+  {
+   "id": "je0121",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a05",
+   "topic": "过去完成",
+   "difficulty": 3,
+   "stem": "By the end of last year, she ___ English for 5 years.",
+   "options": [
+    "learns",
+    "learned",
+    "had learned",
+    "has learned"
+   ],
+   "answer": 2,
+   "analysis": "过去的过去用过去完成时。"
+  },
+  {
+   "id": "je0122",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a06",
+   "topic": "prefer",
+   "difficulty": 3,
+   "stem": "I prefer ___ to ___.",
+   "options": [
+    "read; watch TV",
+    "reading; watching TV",
+    "to read; watch TV",
+    "reading; watch TV"
+   ],
+   "answer": 1,
+   "analysis": "prefer doing to doing。"
+  },
+  {
+   "id": "je0123",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a07",
+   "topic": "encourage",
+   "difficulty": 3,
+   "stem": "The teacher encouraged us ___ hard.",
+   "options": [
+    "study",
+    "to study",
+    "studying",
+    "studied"
+   ],
+   "answer": 1,
+   "analysis": "encourage sb to do sth。"
+  },
+  {
+   "id": "je0124",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a08",
+   "topic": "情态-必要",
+   "difficulty": 3,
+   "stem": "— Must I go now? — No, you ___.",
+   "options": [
+    "mustn't",
+    "needn't",
+    "can't",
+    "shouldn't"
+   ],
+   "answer": 1,
+   "analysis": "Must 否定回答用 needn't。"
+  },
+  {
+   "id": "je0125",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a09",
+   "topic": "used to",
+   "difficulty": 3,
+   "stem": "He is used to ___ early.",
+   "options": [
+    "get up",
+    "getting up",
+    "got up",
+    "get"
+   ],
+   "answer": 1,
+   "analysis": "be used to doing 习惯于。"
+  },
+  {
+   "id": "je0126",
+   "grade": 9,
+   "type": "choice",
+   "book": "9",
+   "unit": "9a10",
+   "topic": "介词",
+   "difficulty": 3,
+   "stem": "___ the help of my teacher, I passed the exam.",
+   "options": [
+    "With",
+    "Under",
+    "By",
+    "For"
+   ],
+   "answer": 0,
+   "analysis": "with the help of 在…帮助下。"
+  },
+  {
+   "id": "je0127",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a03",
+   "topic": "词形-名词",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "His ___ (succeed) made his parents proud.",
+   "word": "succeed",
+   "answer": "success",
+   "analysis": "succeed→success 名词。"
+  },
+  {
+   "id": "je0128",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a01",
+   "topic": "词形-名词",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "The ___ (invent) of the light bulb helped people a lot.",
+   "word": "invent",
+   "answer": "invention",
+   "analysis": "invent→invention 名词。"
+  },
+  {
+   "id": "je0129",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a02",
+   "topic": "词形-不规则",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "She has ___ (learn) 2000 words so far.",
+   "word": "learn",
+   "answer": "learned",
+   "analysis": "learn 过去分词 learned。"
+  },
+  {
+   "id": "je0130",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a04",
+   "topic": "句意填词",
+   "difficulty": 3,
+   "mode": "blank",
+   "stem": "We must p___ the environment for our children.",
+   "answer": "protect",
+   "analysis": "保护 protect。"
+  },
+  {
+   "id": "je0131",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a09",
+   "topic": "句意填词",
+   "difficulty": 3,
+   "mode": "blank",
+   "stem": "It's our d___ to help others.",
+   "answer": "duty",
+   "analysis": "责任 duty。"
+  },
+  {
+   "id": "je0132",
+   "grade": 9,
+   "type": "vocab",
+   "book": "9",
+   "unit": "9a07",
+   "topic": "词形-被动",
+   "difficulty": 3,
+   "mode": "form",
+   "stem": "The bridge ___ (build) by workers last year.",
+   "word": "build",
+   "answer": "was built",
+   "analysis": "过去被动 was built。"
+  },
+  {
+   "id": "je0133",
+   "grade": 9,
+   "type": "cloze",
+   "book": "9",
+   "unit": "9a05",
+   "topic": "记叙-勇敢",
+   "difficulty": 3,
+   "title": "A Brave Girl",
+   "passage": "On her way home, Lucy (1)___ a little boy crying near the river. She (2)___ his hand and (3)___ him to safety. Then she (4)___ the police. The police (5)___ the boy's parents. They thanked Lucy and said she was very (6)___. The teacher praised her in (7)___. Lucy felt (8)___ of herself.",
+   "blanks": [
+    {
+     "options": [
+      "see",
+      "saw",
+      "seeing",
+      "sees"
+     ],
+     "answer": 1,
+     "analysis": "过去时 saw。"
+    },
+    {
+     "options": [
+      "take",
+      "took",
+      "taking",
+      "takes"
+     ],
+     "answer": 1,
+     "analysis": "过去时 took。"
+    },
+    {
+     "options": [
+      "lead",
+      "led",
+      "leading",
+      "leads"
+     ],
+     "answer": 1,
+     "analysis": "过去时 led。"
+    },
+    {
+     "options": [
+      "call",
+      "called",
+      "calls",
+      "calling"
+     ],
+     "answer": 1,
+     "analysis": "过去时 called。"
+    },
+    {
+     "options": [
+      "find",
+      "found",
+      "finds",
+      "finding"
+     ],
+     "answer": 1,
+     "analysis": "过去时 found。"
+    },
+    {
+     "options": [
+      "brave",
+      "lazy",
+      "shy",
+      "rude"
+     ],
+     "answer": 0,
+     "analysis": "勇敢的女孩 brave。"
+    },
+    {
+     "options": [
+      "class",
+      "home",
+      "bed",
+      "shop"
+     ],
+     "answer": 0,
+     "analysis": "在班上表扬 in class。"
+    },
+    {
+     "options": [
+      "proud",
+      "sad",
+      "tired",
+      "angry"
+     ],
+     "answer": 0,
+     "analysis": "为自己自豪 proud。"
+    }
+   ]
+  },
+  {
+   "id": "je0134",
+   "grade": 9,
+   "type": "reading",
+   "book": "9",
+   "unit": "9a07",
+   "topic": "说明-学习",
+   "difficulty": 3,
+   "title": "Online Learning",
+   "passage": "Online learning is popular now. Students can watch lessons at home. They can review videos many times. But they need self-control. Some students find it hard to focus. Good time management is the key to success.",
+   "questions": [
+    {
+     "stem": "Where can students watch lessons?",
+     "options": [
+      "At school",
+      "At home",
+      "In the library",
+      "In the park"
+     ],
+     "answer": 1,
+     "analysis": "在家看课。"
+    },
+    {
+     "stem": "What can they do with videos?",
+     "options": [
+      "Delete them",
+      "Review many times",
+      "Sell them",
+      "Ignore them"
+     ],
+     "answer": 1,
+     "analysis": "反复回看。"
+    },
+    {
+     "stem": "What is the key to success?",
+     "options": [
+      "Luck",
+      "Good time management",
+      "More money",
+      "New books"
+     ],
+     "answer": 1,
+     "analysis": "良好的时间管理。"
+    }
+   ]
+  },
+  {
+   "id": "je0135",
+   "grade": 9,
+   "type": "reading",
+   "book": "9",
+   "unit": "9a08",
+   "topic": "说明-健康",
+   "difficulty": 3,
+   "title": "Healthy Lifestyle",
+   "passage": "A healthy lifestyle means eating well and exercising often. We should eat fruit and vegetables every day. Walking or running for 30 minutes helps the heart. Enough sleep keeps us energetic. Bad habits like smoking hurt our body.",
+   "questions": [
+    {
+     "stem": "What does a healthy lifestyle mean?",
+     "options": [
+      "Eating fast food",
+      "Eating well and exercising",
+      "Sleeping all day",
+      "Watching TV"
+     ],
+     "answer": 1,
+     "analysis": "饮食与运动。"
+    },
+    {
+     "stem": "How long is good exercise?",
+     "options": [
+      "5 minutes",
+      "30 minutes",
+      "2 hours",
+      "All day"
+     ],
+     "answer": 1,
+     "analysis": "30 分钟运动。"
+    },
+    {
+     "stem": "Which is a bad habit?",
+     "options": [
+      "Running",
+      "Smoking",
+      "Sleeping",
+      "Eating vegetables"
+     ],
+     "answer": 1,
+     "analysis": "吸烟有害。"
+    }
+   ]
+  },
+  {
+   "id": "je0136",
+   "grade": 9,
+   "type": "grammar",
+   "book": "9",
+   "unit": "9a02",
+   "topic": "综合时态",
+   "difficulty": 3,
+   "title": "Grammar Fill-in",
+   "passage": "When I (1)___ (be) young, I (2)___ (live) in a small town. Now I (3)___ (study) in a big city. I (4)___ (make) many friends since I came. We (5)___ (go) to the park tomorrow.",
+   "blanks": [
+    {
+     "options": [
+      "am",
+      "was",
+      "were",
+      "be"
+     ],
+     "answer": 1,
+     "analysis": "过去时 was。"
+    },
+    {
+     "options": [
+      "live",
+      "lived",
+      "lives",
+      "living"
+     ],
+     "answer": 1,
+     "analysis": "过去时 lived。"
+    },
+    {
+     "options": [
+      "study",
+      "am studying",
+      "studied",
+      "studies"
+     ],
+     "answer": 1,
+     "analysis": "现在进行时 am studying。"
+    },
+    {
+     "options": [
+      "make",
+      "made",
+      "have made",
+      "makes"
+     ],
+     "answer": 2,
+     "analysis": "since 现在完成时。"
+    },
+    {
+     "options": [
+      "go",
+      "went",
+      "will go",
+      "going"
+     ],
+     "answer": 2,
+     "analysis": "tomorrow 将来时 will go。"
+    }
+   ]
+  },
+  {
+   "id": "je0137",
+   "grade": 9,
+   "type": "task",
+   "book": "9",
+   "unit": "9a07",
+   "topic": "任务-校规",
+   "difficulty": 3,
+   "title": "School Rules Survey",
+   "passage": "Our school made new rules. Students must wear uniforms. They should arrive before 8:00. Phones are not allowed in class. Homework must be handed in on time. Most students think the rules are helpful.",
+   "questions": [
+    {
+     "stem": "What must students wear?",
+     "answer": "Uniforms",
+     "analysis": "穿校服。",
+     "kind": "answer"
+    },
+    {
+     "stem": "When should they arrive?",
+     "answer": "Before 8:00",
+     "analysis": "8 点前到校。"
+    },
+    {
+     "stem": "Are phones allowed in class?",
+     "answer": "No, they are not",
+     "analysis": "课堂上禁止手机。"
+    }
+   ]
+  },
+  {
+   "id": "je0138",
+   "grade": 9,
+   "type": "writing",
+   "book": "9",
+   "unit": "9a09",
+   "topic": "话题-梦想",
+   "difficulty": 3,
+   "title": "My Dream",
+   "prompt": "请以 'My Dream' 为题写一篇不少于 100 词的短文，描述你的梦想、为什么以及你打算如何实现它。",
+   "requirements": [
+    "点明梦想",
+    "说明原因",
+    "规划行动",
+    "表达决心"
+   ],
+   "points": [
+    "使用将来时",
+    "连接词清晰",
+    "不少于 100 词"
+   ],
+   "wordLimit": 100,
+   "sample": "My dream is to travel around the world and learn about different cultures. I love meeting new people and seeing beautiful places. To make it come true, I will study English hard and save money. I will also keep a healthy body by exercising. I believe if I work hard, my dream will come true one day."
   }
  ]
 }

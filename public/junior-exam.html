@@ -115,6 +115,12 @@
             <button data-g="9" onclick="tplPickGrade(9,this)">九年级</button>
           </div>
         </div>
+        <div class="row">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#555;cursor:pointer;">
+            <input type="checkbox" id="shuffleChk" class="chk" onchange="shuffleOn=this.checked"> 🎲 随机抽题（可生成多套不同试卷）
+          </label>
+          <span class="tip">勾选后，每次点击模板都会从题库中随机抽取，可生成多套不重复的试卷；不勾选则按固定顺序组卷（便于对照）。</span>
+        </div>
         <div class="sec-title"><span class="bar"></span>选择试卷类型</div>
         <div class="row">
           <button class="btn ghost sm" onclick="genTemplate('mid')">📘 期中考试卷</button>
@@ -212,7 +218,7 @@ function L(n){ return String.fromCharCode(65+n); }
 function show(id,on){ const e=document.getElementById(id); if(e) e.style.display=on?'':'none'; }
 function logout(){ TOKEN=''; localStorage.removeItem('token'); location.href='./index.html'; }
 
-let AUTHED=false, TRIAL=false, PAPER=[], KEYSHOWN=false;
+let AUTHED=false, TRIAL=false, PAPER=[], KEYSHOWN=false, shuffleOn=false;
 let fState={grade:'',type:'',book:'',diff:'',kw:''};
 let tplGrade=7, bankCache=[];
 
@@ -252,9 +258,9 @@ async function genTemplate(kind){
     if(!all.length){ alert('该分册暂无题目'); return; }
   }
   let pick=[];
-  if(kind==='mid') pick = pickByType(all,{choice:5,vocab:4,cloze:1,grammar:1,reading:2,task:1,writing:1});
+  if(kind==='mid') pick = pickByType(all,{choice:12,vocab:8,cloze:1,grammar:1,reading:3,task:1,writing:1});
   else if(kind==='final') pick = all.slice();
-  else if(kind==='mock') pick = pickByType(all,{choice:8,vocab:5,cloze:1,grammar:1,reading:2,task:1,writing:1});
+  else if(kind==='mock') pick = pickByType(all,{choice:18,vocab:10,cloze:1,grammar:1,reading:4,task:1,writing:1});
   PAPER = pick; KEYSHOWN=false;
   const names={mid:'期中考试卷',final:'期末考试卷',mock:'中考模拟卷'};
   const gname={7:'七年级',8:'八年级',9:'九年级'}[tplGrade];
@@ -281,7 +287,8 @@ function pickByType(all,cnt){
   const out=[];
   TYPE_ORDER.forEach(t=>{
     const need=cnt[t]||0; if(!need) return;
-    const pool=all.filter(q=>q.type===t);
+    let pool=all.filter(q=>q.type===t);
+    if(shuffleOn){ for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; } }
     for(let i=0;i<need && i<pool.length;i++) out.push(pool[i]);
   });
   return out;
