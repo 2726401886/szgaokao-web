@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小升初英语衔接包</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .un-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .un-item:hover { background:#fff3f2; }
+  .un-item.on { background:#fff0ef; border-color:#ff5e62; }
+  .un-item .t { font-weight:700; font-size:13.5px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#fff0ef; color:#ff5e62; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .sec-title { display:flex; align-items:center; gap:10px; margin:16px 0 10px; font-size:15px; font-weight:800; }
+  .sec-title .bar { width:4px; height:16px; border-radius:2px; background:#ff5e62; }
+  .gram { background:#fff8f7; border:1.5px solid #ffe3e0; border-radius:12px; padding:12px 14px; margin-bottom:10px; }
+  .gram .p { font-weight:800; font-size:14px; }
+  .gram .e { font-size:15px; margin-top:5px; color:#333; }
+  .gram .c { font-size:12.5px; color:#999; margin-top:3px; }
+  .gram .play { margin-top:8px; padding:6px 12px; border:none; border-radius:8px; background:#ff5e62; color:#fff; font-size:12px; cursor:pointer; font-weight:700; }
+  .w-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+  .w-card { background:#fff; border:1.5px solid #eee; border-radius:12px; padding:12px; }
+  .w-card .w { font-size:16px; font-weight:800; }
+  .w-card .ph { font-size:12px; color:#999; margin-top:2px; }
+  .w-card .m { font-size:13px; color:#666; margin-top:4px; }
+  .w-card .play { margin-top:8px; padding:6px 12px; border:none; border-radius:8px; background:#1a56db; color:#fff; font-size:12px; cursor:pointer; font-weight:700; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#ff5e62; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .q-tip { background:#fffbe8; padding:9px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:10px; line-height:1.6; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  @media (max-width:680px){ .layout { flex-direction:column; } .side { width:100%; } }
+
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🚀 小升初英语衔接包</h1>
+    <p>8 大初中预备语法 · 衔接词汇 · 随学小测（小学毕业升初中必备）</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ff9966">
+    <b>🎁 体验模式</b>：当前可免费学习 <b>第 1 单元</b>。解锁小学英语模块后即可学习全部 8 单元。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📚 衔接单元</h3>
+      <div id="unMenu"></div>
+      <button class="logout blue" onclick="location.href='./longman.html'">📘 朗文同步</button>
+      <button class="logout blue" onclick="location.href='./words.html'">📖 单词听读背记</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一个衔接单元开始学习</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+let DEV = { n: 0, max: 2 }, ACCT = { username: '', expiry: null }, AUTHED = false, TRIAL = false;
+let UNITS = [], CUR = null, answered = {}, AUD_CUR = null;
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src, el) {
+  if (!src) return;
+  if (AUD_CUR && AUD_CUR !== el) AUD_CUR.pause();
+  const a = el || new Audio(src);
+  if (!el) { a.src = src; a.play(); }
+  AUD_CUR = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else { const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5); exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期'); }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/junior-link', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  UNITS = r.j.units || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const m = document.getElementById('unMenu'); m.innerHTML = '';
+  UNITS.forEach(u => {
+    const d = document.createElement('div');
+    d.className = 'un-item'; d.id = 'un-' + u.id;
+    d.innerHTML = '<div class="t">' + esc(u.title) + '</div>';
+    d.onclick = () => selectUnit(u.id);
+    m.appendChild(d);
+  });
+  if (UNITS.length) selectUnit(UNITS[0].id);
+}
+function selectUnit(id) {
+  document.querySelectorAll('.un-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('un-' + id); if (m) m.classList.add('on');
+  loadUnit(id);
+}
+async function loadUnit(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/junior-link?unit=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  CUR = r.j;
+  answered = {};
+  renderUnit();
+}
+function renderUnit(keepPos) {
+  const u = CUR;
+  const ma = document.getElementById('mainArea');
+  const grams = (u.grammar || []).map(g => `
+    <div class="gram">
+      <div class="p">📌 ${esc(g.point)}</div>
+      <div class="e">${esc(g.example)}</div>
+      <div class="c">${esc(g.cn)}</div>
+      <button class="play" onclick="playAudio('${g.audio}')">🔊 听例句</button>
+    </div>`).join('');
+  const wg = (u.words || []).map(w => `
+    <div class="w-card">
+      <div class="w">${esc(w.word)}</div>
+      <div class="ph">/${esc(w.phonetic)}/</div>
+      <div class="m">${esc(w.meaning)}</div>
+      <button class="play" onclick="playAudio('${w.audio}')">🔊</button>
+    </div>`).join('');
+  const ps = (u.practice || []).map(p => {
+    const sel = answered[p.id];
+    const opts = p.options.map((o, oi) => {
+      let cls = 'opt';
+      if (sel != null) { cls += ' locked'; if (oi === p.answer) cls += ' right'; else if (oi === sel) cls += ' wrong'; }
+      return `<div class="${cls}" onclick="pick('${p.id}', ${oi})">${String.fromCharCode(65 + oi)}. ${esc(o)}</div>`;
+    }).join('');
+    const res = sel != null ? `<div class="q-answer">✅ 正确答案：${String.fromCharCode(65 + p.answer)}. ${esc(p.options[p.answer])}</div><div class="q-tip">💡 ${esc(p.tip)}</div>` : '';
+    return `<div class="card"><div style="font-weight:800;margin-bottom:6px;">✏️ ${esc(p.q)}</div>${opts}${res}</div>`;
+  }).join('');
+  ma.innerHTML = `
+    <div class="card">
+      <h2 style="font-size:18px;">${esc(u.title)}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">语法要点 ${(u.grammar||[]).length} 条 · 衔接词 ${(u.words||[]).length} 个 · 小测 ${(u.practice||[]).length} 题</div>
+    </div>
+    <div class="sec-title"><span class="bar"></span>语法要点</div>
+    ${grams}
+    <div class="sec-title"><span class="bar"></span>衔接词汇</div>
+    <div class="w-grid">${wg}</div>
+    <div class="sec-title"><span class="bar"></span>随学小测</div>
+    ${ps}`;
+  if (!keepPos) window.scrollTo({ top: 0 });
+}
+function pick(pid, i) {
+  if (answered[pid] != null) return;
+  answered[pid] = i;
+  renderUnit(true);
+}
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).primary;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else { show('appLayout', true); document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>'; }
+</script>
+<script>
+(function(){try{var K='junior';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

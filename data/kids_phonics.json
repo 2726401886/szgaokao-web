@@ -1,0 +1,382 @@
+{
+  "product": "幼儿启蒙英语 · 自然拼读启蒙",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "26 个字母名/字母音 + 字母歌 + CVC 拼读入门（对标牛津拼读体系轻量版）",
+  "song": {
+    "text": "A, B, C, D, E, F, G. H, I, J, K, L, M, N. O, P, Q. R, S, T. U, V, W, X, Y, Z. Now I know my ABC. Next time won't you sing with me.",
+    "audio": "/audio/kp/ksong.mp3"
+  },
+  "letters": [
+    {
+      "id": "kp01",
+      "upper": "A",
+      "lower": "A",
+      "name": "a",
+      "sound": "/æ/",
+      "word": "apple",
+      "zh": "苹果",
+      "nameAudio": "/audio/kp/kp01n.mp3",
+      "soundAudio": "/audio/kp/kp01s.mp3",
+      "wordAudio": "/audio/kp/kp01w.mp3"
+    },
+    {
+      "id": "kp02",
+      "upper": "B",
+      "lower": "B",
+      "name": "b",
+      "sound": "/b/",
+      "word": "ball",
+      "zh": "球",
+      "nameAudio": "/audio/kp/kp02n.mp3",
+      "soundAudio": "/audio/kp/kp02s.mp3",
+      "wordAudio": "/audio/kp/kp02w.mp3"
+    },
+    {
+      "id": "kp03",
+      "upper": "C",
+      "lower": "C",
+      "name": "c",
+      "sound": "/k/",
+      "word": "cat",
+      "zh": "猫",
+      "nameAudio": "/audio/kp/kp03n.mp3",
+      "soundAudio": "/audio/kp/kp03s.mp3",
+      "wordAudio": "/audio/kp/kp03w.mp3"
+    },
+    {
+      "id": "kp04",
+      "upper": "D",
+      "lower": "D",
+      "name": "d",
+      "sound": "/d/",
+      "word": "dog",
+      "zh": "狗",
+      "nameAudio": "/audio/kp/kp04n.mp3",
+      "soundAudio": "/audio/kp/kp04s.mp3",
+      "wordAudio": "/audio/kp/kp04w.mp3"
+    },
+    {
+      "id": "kp05",
+      "upper": "E",
+      "lower": "E",
+      "name": "e",
+      "sound": "/e/",
+      "word": "egg",
+      "zh": "鸡蛋",
+      "nameAudio": "/audio/kp/kp05n.mp3",
+      "soundAudio": "/audio/kp/kp05s.mp3",
+      "wordAudio": "/audio/kp/kp05w.mp3"
+    },
+    {
+      "id": "kp06",
+      "upper": "F",
+      "lower": "F",
+      "name": "f",
+      "sound": "/f/",
+      "word": "fish",
+      "zh": "鱼",
+      "nameAudio": "/audio/kp/kp06n.mp3",
+      "soundAudio": "/audio/kp/kp06s.mp3",
+      "wordAudio": "/audio/kp/kp06w.mp3"
+    },
+    {
+      "id": "kp07",
+      "upper": "G",
+      "lower": "G",
+      "name": "g",
+      "sound": "/ɡ/",
+      "word": "goat",
+      "zh": "山羊",
+      "nameAudio": "/audio/kp/kp07n.mp3",
+      "soundAudio": "/audio/kp/kp07s.mp3",
+      "wordAudio": "/audio/kp/kp07w.mp3"
+    },
+    {
+      "id": "kp08",
+      "upper": "H",
+      "lower": "H",
+      "name": "h",
+      "sound": "/h/",
+      "word": "hat",
+      "zh": "帽子",
+      "nameAudio": "/audio/kp/kp08n.mp3",
+      "soundAudio": "/audio/kp/kp08s.mp3",
+      "wordAudio": "/audio/kp/kp08w.mp3"
+    },
+    {
+      "id": "kp09",
+      "upper": "I",
+      "lower": "I",
+      "name": "i",
+      "sound": "/ɪ/",
+      "word": "ink",
+      "zh": "墨水",
+      "nameAudio": "/audio/kp/kp09n.mp3",
+      "soundAudio": "/audio/kp/kp09s.mp3",
+      "wordAudio": "/audio/kp/kp09w.mp3"
+    },
+    {
+      "id": "kp10",
+      "upper": "J",
+      "lower": "J",
+      "name": "j",
+      "sound": "/dʒ/",
+      "word": "juice",
+      "zh": "果汁",
+      "nameAudio": "/audio/kp/kp10n.mp3",
+      "soundAudio": "/audio/kp/kp10s.mp3",
+      "wordAudio": "/audio/kp/kp10w.mp3"
+    },
+    {
+      "id": "kp11",
+      "upper": "K",
+      "lower": "K",
+      "name": "k",
+      "sound": "/k/",
+      "word": "kite",
+      "zh": "风筝",
+      "nameAudio": "/audio/kp/kp11n.mp3",
+      "soundAudio": "/audio/kp/kp11s.mp3",
+      "wordAudio": "/audio/kp/kp11w.mp3"
+    },
+    {
+      "id": "kp12",
+      "upper": "L",
+      "lower": "L",
+      "name": "l",
+      "sound": "/l/",
+      "word": "lion",
+      "zh": "狮子",
+      "nameAudio": "/audio/kp/kp12n.mp3",
+      "soundAudio": "/audio/kp/kp12s.mp3",
+      "wordAudio": "/audio/kp/kp12w.mp3"
+    },
+    {
+      "id": "kp13",
+      "upper": "M",
+      "lower": "M",
+      "name": "m",
+      "sound": "/m/",
+      "word": "milk",
+      "zh": "牛奶",
+      "nameAudio": "/audio/kp/kp13n.mp3",
+      "soundAudio": "/audio/kp/kp13s.mp3",
+      "wordAudio": "/audio/kp/kp13w.mp3"
+    },
+    {
+      "id": "kp14",
+      "upper": "N",
+      "lower": "N",
+      "name": "n",
+      "sound": "/n/",
+      "word": "nose",
+      "zh": "鼻子",
+      "nameAudio": "/audio/kp/kp14n.mp3",
+      "soundAudio": "/audio/kp/kp14s.mp3",
+      "wordAudio": "/audio/kp/kp14w.mp3"
+    },
+    {
+      "id": "kp15",
+      "upper": "O",
+      "lower": "O",
+      "name": "o",
+      "sound": "/ɒ/",
+      "word": "orange",
+      "zh": "橙子",
+      "nameAudio": "/audio/kp/kp15n.mp3",
+      "soundAudio": "/audio/kp/kp15s.mp3",
+      "wordAudio": "/audio/kp/kp15w.mp3"
+    },
+    {
+      "id": "kp16",
+      "upper": "P",
+      "lower": "P",
+      "name": "p",
+      "sound": "/p/",
+      "word": "pig",
+      "zh": "猪",
+      "nameAudio": "/audio/kp/kp16n.mp3",
+      "soundAudio": "/audio/kp/kp16s.mp3",
+      "wordAudio": "/audio/kp/kp16w.mp3"
+    },
+    {
+      "id": "kp17",
+      "upper": "Q",
+      "lower": "Q",
+      "name": "q",
+      "sound": "/kw/",
+      "word": "queen",
+      "zh": "女王",
+      "nameAudio": "/audio/kp/kp17n.mp3",
+      "soundAudio": "/audio/kp/kp17s.mp3",
+      "wordAudio": "/audio/kp/kp17w.mp3"
+    },
+    {
+      "id": "kp18",
+      "upper": "R",
+      "lower": "R",
+      "name": "r",
+      "sound": "/r/",
+      "word": "rabbit",
+      "zh": "兔子",
+      "nameAudio": "/audio/kp/kp18n.mp3",
+      "soundAudio": "/audio/kp/kp18s.mp3",
+      "wordAudio": "/audio/kp/kp18w.mp3"
+    },
+    {
+      "id": "kp19",
+      "upper": "S",
+      "lower": "S",
+      "name": "s",
+      "sound": "/s/",
+      "word": "sun",
+      "zh": "太阳",
+      "nameAudio": "/audio/kp/kp19n.mp3",
+      "soundAudio": "/audio/kp/kp19s.mp3",
+      "wordAudio": "/audio/kp/kp19w.mp3"
+    },
+    {
+      "id": "kp20",
+      "upper": "T",
+      "lower": "T",
+      "name": "t",
+      "sound": "/t/",
+      "word": "tiger",
+      "zh": "老虎",
+      "nameAudio": "/audio/kp/kp20n.mp3",
+      "soundAudio": "/audio/kp/kp20s.mp3",
+      "wordAudio": "/audio/kp/kp20w.mp3"
+    },
+    {
+      "id": "kp21",
+      "upper": "U",
+      "lower": "U",
+      "name": "u",
+      "sound": "/ʌ/",
+      "word": "umbrella",
+      "zh": "雨伞",
+      "nameAudio": "/audio/kp/kp21n.mp3",
+      "soundAudio": "/audio/kp/kp21s.mp3",
+      "wordAudio": "/audio/kp/kp21w.mp3"
+    },
+    {
+      "id": "kp22",
+      "upper": "V",
+      "lower": "V",
+      "name": "v",
+      "sound": "/v/",
+      "word": "van",
+      "zh": "货车",
+      "nameAudio": "/audio/kp/kp22n.mp3",
+      "soundAudio": "/audio/kp/kp22s.mp3",
+      "wordAudio": "/audio/kp/kp22w.mp3"
+    },
+    {
+      "id": "kp23",
+      "upper": "W",
+      "lower": "W",
+      "name": "w",
+      "sound": "/w/",
+      "word": "water",
+      "zh": "水",
+      "nameAudio": "/audio/kp/kp23n.mp3",
+      "soundAudio": "/audio/kp/kp23s.mp3",
+      "wordAudio": "/audio/kp/kp23w.mp3"
+    },
+    {
+      "id": "kp24",
+      "upper": "X",
+      "lower": "X",
+      "name": "x",
+      "sound": "/ks/",
+      "word": "box",
+      "zh": "盒子",
+      "nameAudio": "/audio/kp/kp24n.mp3",
+      "soundAudio": "/audio/kp/kp24s.mp3",
+      "wordAudio": "/audio/kp/kp24w.mp3"
+    },
+    {
+      "id": "kp25",
+      "upper": "Y",
+      "lower": "Y",
+      "name": "y",
+      "sound": "/j/",
+      "word": "yellow",
+      "zh": "黄色",
+      "nameAudio": "/audio/kp/kp25n.mp3",
+      "soundAudio": "/audio/kp/kp25s.mp3",
+      "wordAudio": "/audio/kp/kp25w.mp3"
+    },
+    {
+      "id": "kp26",
+      "upper": "Z",
+      "lower": "Z",
+      "name": "z",
+      "sound": "/z/",
+      "word": "zebra",
+      "zh": "斑马",
+      "nameAudio": "/audio/kp/kp26n.mp3",
+      "soundAudio": "/audio/kp/kp26s.mp3",
+      "wordAudio": "/audio/kp/kp26w.mp3"
+    }
+  ],
+  "cvc": [
+    {
+      "id": "kc01",
+      "word": "cat",
+      "phonetic": "/kæt/",
+      "zh": "猫",
+      "audio": "/audio/kp/kc01.mp3"
+    },
+    {
+      "id": "kc02",
+      "word": "hat",
+      "phonetic": "/hæt/",
+      "zh": "帽子",
+      "audio": "/audio/kp/kc02.mp3"
+    },
+    {
+      "id": "kc03",
+      "word": "dog",
+      "phonetic": "/dɒɡ/",
+      "zh": "狗",
+      "audio": "/audio/kp/kc03.mp3"
+    },
+    {
+      "id": "kc04",
+      "word": "pig",
+      "phonetic": "/pɪɡ/",
+      "zh": "猪",
+      "audio": "/audio/kp/kc04.mp3"
+    },
+    {
+      "id": "kc05",
+      "word": "sun",
+      "phonetic": "/sʌn/",
+      "zh": "太阳",
+      "audio": "/audio/kp/kc05.mp3"
+    },
+    {
+      "id": "kc06",
+      "word": "bed",
+      "phonetic": "/bed/",
+      "zh": "床",
+      "audio": "/audio/kp/kc06.mp3"
+    },
+    {
+      "id": "kc07",
+      "word": "pen",
+      "phonetic": "/pen/",
+      "zh": "钢笔",
+      "audio": "/audio/kp/kc07.mp3"
+    },
+    {
+      "id": "kc08",
+      "word": "bus",
+      "phonetic": "/bʌs/",
+      "zh": "公交车",
+      "audio": "/audio/kp/kc08.mp3"
+    }
+  ]
+}

@@ -1,0 +1,938 @@
+{
+ "level": "PET",
+ "name": "PET 听说模拟（B1）",
+ "volumes": [
+  {
+   "id": "px1a",
+   "title": "PET 模拟卷一 · 教育与社会",
+   "topic": "教育 · 社会 · 公共事务",
+   "questions": [
+    {
+     "id": "px1a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px1a01.mp3",
+     "audio_text": "environment",
+     "options": [
+      "环境",
+      "政府",
+      "教育"
+     ],
+     "answer": 0,
+     "tip": "environment = 环境，注意重音在第二个音节。"
+    },
+    {
+     "id": "px1a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px1a02.mp3",
+     "audio_text": "opportunity",
+     "options": [
+      "机会",
+      "困难",
+      "责任"
+     ],
+     "answer": 0,
+     "tip": "opportunity = 机会，复数 opportunities。"
+    },
+    {
+     "id": "px1a03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px1a03.mp3",
+     "audio_text": "Education plays an important role in modern society.",
+     "options": [
+      "教育在现代社会中起着重要作用",
+      "教育在现代社会中越来越昂贵",
+      "教育在现代社会中受到限制"
+     ],
+     "answer": 0,
+     "tip": "play a role in = 在……中起作用。"
+    },
+    {
+     "id": "px1a04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px1a04.mp3",
+     "audio_text": "The government has decided to build more public libraries.",
+     "options": [
+      "政府决定拆除更多公共图书馆",
+      "政府决定修建更多公共图书馆",
+      "政府决定关闭更多公共图书馆"
+     ],
+     "answer": 1,
+     "tip": "decide to do = 决定做某事。"
+    },
+    {
+     "id": "px1a05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1a05.mp3",
+     "audio_text": "A: Have you applied for the university scholarship? B: Not yet. I'm still preparing my application documents.",
+     "options": [
+      "还没申请，正在准备材料",
+      "已经申请成功",
+      "决定放弃申请"
+     ],
+     "answer": 0,
+     "tip": "apply for = 申请；scholarship = 奖学金。"
+    },
+    {
+     "id": "px1a06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1a06.mp3",
+     "audio_text": "A: Why do you think online courses are popular? B: Because they are flexible and you can study at your own pace.",
+     "options": [
+      "因为课程便宜",
+      "因为灵活，可以按自己的节奏学习",
+      "因为老师更好"
+     ],
+     "answer": 1,
+     "tip": "at your own pace = 按自己的节奏。"
+    },
+    {
+     "id": "px1a07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1a07.mp3",
+     "audio_text": "A: Would you like to donate books to the school library? B: Of course. I have many books that I no longer need.",
+     "options": [
+      "拒绝捐书",
+      "愿意捐出不再需要的书",
+      "建议卖书"
+     ],
+     "answer": 1,
+     "tip": "donate = 捐赠；no longer = 不再。"
+    },
+    {
+     "id": "px1a08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px1a08.mp3",
+     "audio_text": "Volunteering has become a popular activity among young people. Many students spend their weekends helping in community centres, teaching children or cleaning public parks. Research shows that volunteers not only help others but also develop important skills such as communication and teamwork. Some schools even include volunteer work in their graduation requirements.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px1a08a",
+       "q": "What do many students do at weekends?",
+       "options": [
+        "Work part-time",
+        "Volunteer in the community",
+        "Stay at home"
+       ],
+       "answer": 1,
+       "tip": "Many students spend their weekends helping in community centres."
+      },
+      {
+       "id": "px1a08b",
+       "q": "What skills can volunteers develop?",
+       "options": [
+        "Cooking and driving",
+        "Communication and teamwork",
+        "Painting and singing"
+       ],
+       "answer": 1,
+       "tip": "They develop important skills such as communication and teamwork."
+      },
+      {
+       "id": "px1a08c",
+       "q": "What do some schools do about volunteer work?",
+       "options": [
+        "Include it in graduation requirements",
+        "Forbid students from volunteering",
+        "Pay students for volunteering"
+       ],
+       "answer": 0,
+       "tip": "Some schools include volunteer work in their graduation requirements."
+      }
+     ]
+    },
+    {
+     "id": "px1a09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px1a09.mp3",
+     "audio_text": "In my opinion, young people should take part in more social activities to broaden their horizons.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 broaden 的 oa 音，horizons 的重音在第一个音节。"
+    },
+    {
+     "id": "px1a10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1a10.mp3",
+     "audio_text": "A: Have you heard about the community garden project? B: Yes. Neighbours plant vegetables together and share the harvest. I've already signed up to join.",
+     "options": [
+      "邻居们一起种菜分享收成，已报名参加",
+      "项目已取消",
+      "只有老年人可以参加"
+     ],
+     "answer": 0,
+     "tip": "sign up = 报名；community garden = 社区菜园。"
+    },
+    {
+     "id": "px1a11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px1a11.mp3",
+     "audio_text": "Lifelong learning has become a necessity in today's fast-changing world. Technology develops so quickly that skills from ten years ago may no longer be useful. More and more adults are taking online courses to learn new skills, such as programming and digital design. Online learning makes it possible for busy people to study at home in the evening. Experts believe that those who keep learning will have more chances to succeed in their careers.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px1a11a",
+       "q": "Why is lifelong learning necessary?",
+       "options": [
+        "Because technology develops quickly and old skills may become useless",
+        "Because schools are closing",
+        "Because people have too much free time"
+       ],
+       "answer": 0,
+       "tip": "Technology develops so quickly that old skills may no longer be useful."
+      },
+      {
+       "id": "px1a11b",
+       "q": "What skills are mentioned as examples of new learning?",
+       "options": [
+        "Cooking and cleaning",
+        "Programming and digital design",
+        "Driving and flying"
+       ],
+       "answer": 1,
+       "tip": "They learn new skills, such as programming and digital design."
+      },
+      {
+       "id": "px1a11c",
+       "q": "What do experts believe about continuous learning?",
+       "options": [
+        "It leads to more career success chances",
+        "It wastes time",
+        "It is only for young people"
+       ],
+       "answer": 0,
+       "tip": "Those who keep learning will have more chances to succeed in their careers."
+      }
+     ]
+    },
+    {
+     "id": "px1a12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px1a12.mp3",
+     "audio_text": "Lifelong learning has become necessary in the modern world, especially for young people.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 especially 的重音在第二个音节，necessary 的 ce 轻读。"
+    }
+   ]
+  },
+  {
+   "id": "px1b",
+   "title": "PET 模拟卷二 · 科技与媒体",
+   "topic": "科技 · 网络 · 媒体",
+   "questions": [
+    {
+     "id": "px1b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px1b01.mp3",
+     "audio_text": "technology",
+     "options": [
+      "技术",
+      "传统",
+      "理论"
+     ],
+     "answer": 0,
+     "tip": "technology = 技术，形容词 technological。"
+    },
+    {
+     "id": "px1b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px1b02.mp3",
+     "audio_text": "advertisement",
+     "options": [
+      "广告",
+      "娱乐",
+      "娱乐节目"
+     ],
+     "answer": 0,
+     "tip": "advertisement = 广告，常缩写为 ad。"
+    },
+    {
+     "id": "px1b03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px1b03.mp3",
+     "audio_text": "More and more people prefer reading news online to buying newspapers.",
+     "options": [
+      "越来越多的人更喜欢在网上看新闻而不是买报纸",
+      "越来越多的人更喜欢买报纸而不是上网",
+      "越来越多的人既不看新闻也不买报纸"
+     ],
+     "answer": 0,
+     "tip": "prefer A to B = 比起 B 更喜欢 A。"
+    },
+    {
+     "id": "px1b04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px1b04.mp3",
+     "audio_text": "This mobile app allows users to share photos instantly.",
+     "options": [
+      "这款手机应用让用户无法分享照片",
+      "这款手机应用让用户能即时分享照片",
+      "这款手机应用让用户付费分享照片"
+     ],
+     "answer": 1,
+     "tip": "allow sb to do = 允许某人做某事；instantly = 即时地。"
+    },
+    {
+     "id": "px1b05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1b05.mp3",
+     "audio_text": "A: I heard that some websites collect personal information without permission. B: That's true. We should always read the privacy policy before using an app.",
+     "options": [
+      "下载应用前应阅读隐私政策",
+      "应用都会保护隐私",
+      "个人信息不重要"
+     ],
+     "answer": 0,
+     "tip": "privacy policy = 隐私政策；without permission = 未经许可。"
+    },
+    {
+     "id": "px1b06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1b06.mp3",
+     "audio_text": "A: How do you usually keep in touch with your friends abroad? B: I use video calls. It feels like we are in the same room.",
+     "options": [
+      "发邮件",
+      "打视频电话",
+      "寄明信片"
+     ],
+     "answer": 1,
+     "tip": "keep in touch with = 与……保持联系；video calls = 视频通话。"
+    },
+    {
+     "id": "px1b07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1b07.mp3",
+     "audio_text": "A: Do you think artificial intelligence will replace teachers? B: I don't think so. AI can assist teaching, but it can't understand students' feelings like human teachers.",
+     "options": [
+      "会完全取代老师",
+      "AI 能辅助教学，但无法取代老师",
+      "AI 很快会取代所有职业"
+     ],
+     "answer": 1,
+     "tip": "assist = 辅助；replace = 取代。"
+    },
+    {
+     "id": "px1b08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px1b08.mp3",
+     "audio_text": "Social media has changed the way we communicate. People can share their lives with friends around the world in seconds. However, experts warn that too much time on social media may cause problems. It can make young people compare themselves with others and feel unhappy. Experts suggest that we should spend more time on outdoor activities and face-to-face communication with family and friends.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px1b08a",
+       "q": "What can people do on social media in seconds?",
+       "options": [
+        "Share their lives with friends worldwide",
+        "Learn new languages",
+        "Buy tickets"
+       ],
+       "answer": 0,
+       "tip": "People can share their lives with friends around the world in seconds."
+      },
+      {
+       "id": "px1b08b",
+       "q": "What problem may social media cause?",
+       "options": [
+        "Sleep problems",
+        "Comparing with others and feeling unhappy",
+        "Memory loss"
+       ],
+       "answer": 1,
+       "tip": "It can make young people compare themselves with others and feel unhappy."
+      },
+      {
+       "id": "px1b08c",
+       "q": "What do experts suggest?",
+       "options": [
+        "Spend more time online",
+        "Spend more time on outdoor activities and face-to-face communication",
+        "Delete all social media accounts"
+       ],
+       "answer": 1,
+       "tip": "Experts suggest spending more time on outdoor activities and face-to-face communication."
+      }
+     ]
+    },
+    {
+     "id": "px1b09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px1b09.mp3",
+     "audio_text": "Technology has brought us great convenience, but we should also learn to use it wisely.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 convenience 的重音在第二个音节，wisely 的 ly 轻读。"
+    },
+    {
+     "id": "px1b10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px1b10.mp3",
+     "audio_text": "A: My parents limit my screen time to two hours a day. B: That sounds reasonable. Too much screen time is bad for your eyes.",
+     "options": [
+      "父母限制每天屏幕时间两小时",
+      "父母不限制屏幕时间",
+      "父母要求整天玩手机"
+     ],
+     "answer": 0,
+     "tip": "limit ... to = 把……限制在；reasonable = 合理的。"
+    },
+    {
+     "id": "px1b11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px1b11.mp3",
+     "audio_text": "A survey among middle school students shows that most of them still prefer paper books to e-books. When asked why, many students said that reading paper books is easier on the eyes and gives them a stronger sense of achievement. Some students also mentioned that they like the feeling of turning real pages. However, e-books are still popular because they are convenient and easy to carry. Many students use e-books when travelling or waiting for buses.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px1b11a",
+       "q": "What do most students prefer according to the survey?",
+       "options": [
+        "E-books",
+        "Paper books",
+        "Audio books"
+       ],
+       "answer": 1,
+       "tip": "Most students still prefer paper books to e-books."
+      },
+      {
+       "id": "px1b11b",
+       "q": "Why do students like paper books?",
+       "options": [
+        "Easier on the eyes and a sense of achievement",
+        "Cheaper than e-books",
+        "Lighter to carry"
+       ],
+       "answer": 0,
+       "tip": "Reading paper books is easier on the eyes and gives a stronger sense of achievement."
+      },
+      {
+       "id": "px1b11c",
+       "q": "When do students use e-books?",
+       "options": [
+        "When travelling or waiting for buses",
+        "When studying at home",
+        "When sleeping"
+       ],
+       "answer": 0,
+       "tip": "Many students use e-books when travelling or waiting for buses."
+      }
+     ]
+    },
+    {
+     "id": "px1b12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px1b12.mp3",
+     "audio_text": "Reading paper books is still popular among students because it is good for their eyes.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 popular 的重音在第一个音节，among 的 ng 音。"
+    }
+   ]
+  },
+  {
+   "id": "px2a",
+   "title": "PET 模拟卷三 · 健康与环境",
+   "topic": "健康 · 运动 · 环保",
+   "questions": [
+    {
+     "id": "px2a01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px2a01.mp3",
+     "audio_text": "nutrition",
+     "options": [
+      "营养",
+      "健康",
+      "疾病"
+     ],
+     "answer": 0,
+     "tip": "nutrition = 营养，形容词 nutritious。"
+    },
+    {
+     "id": "px2a02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px2a02.mp3",
+     "audio_text": "pollution",
+     "options": [
+      "污染",
+      "保护",
+      "资源"
+     ],
+     "answer": 0,
+     "tip": "pollution = 污染，动词 pollute。"
+    },
+    {
+     "id": "px2a03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px2a03.mp3",
+     "audio_text": "Regular exercise is essential for keeping a healthy body.",
+     "options": [
+      "规律锻炼对保持健康至关重要",
+      "偶尔锻炼对保持健康有帮助",
+      "锻炼对健康没有影响"
+     ],
+     "answer": 0,
+     "tip": "be essential for = 对……必不可少。"
+    },
+    {
+     "id": "px2a04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px2a04.mp3",
+     "audio_text": "We should recycle waste paper instead of throwing it away.",
+     "options": [
+      "我们应该回收废纸而不是扔掉它",
+      "我们应该把废纸卖掉",
+      "我们应该减少废纸的使用"
+     ],
+     "answer": 0,
+     "tip": "instead of = 而不是。throw away = 扔掉。"
+    },
+    {
+     "id": "px2a05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2a05.mp3",
+     "audio_text": "A: I've been feeling tired these days. B: Maybe you should go to bed earlier and do some exercise.",
+     "options": [
+      "建议早点睡并锻炼",
+      "建议去看心理医生",
+      "建议多喝咖啡"
+     ],
+     "answer": 0,
+     "tip": "should = 应该，提建议的常用词。"
+    },
+    {
+     "id": "px2a06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2a06.mp3",
+     "audio_text": "A: Have you tried the new vegetable salad at the school canteen? B: Yes. It's delicious and healthy. I have it almost every day.",
+     "options": [
+      "几乎每天吃蔬菜沙拉",
+      "觉得很难吃",
+      "没吃过学校食堂的沙拉"
+     ],
+     "answer": 0,
+     "tip": "almost every day = 几乎每天。"
+    },
+    {
+     "id": "px2a07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2a07.mp3",
+     "audio_text": "A: What can we do to protect the environment? B: For a start, we can bring our own bags when shopping instead of using plastic bags.",
+     "options": [
+      "购物时自带袋子代替塑料袋",
+      "尽量网购",
+      "减少购物次数"
+     ],
+     "answer": 0,
+     "tip": "For a start = 首先。plastic bags = 塑料袋。"
+    },
+    {
+     "id": "px2a08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px2a08.mp3",
+     "audio_text": "A healthy lifestyle includes a balanced diet, regular exercise and enough sleep. Doctors say that eating too much fast food can lead to serious health problems, such as obesity and heart disease. To stay healthy, teenagers should eat more fruit and vegetables, drink plenty of water and exercise at least three times a week. They should also avoid staying up late, because sleep helps the body recover.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px2a08a",
+       "q": "What can eating too much fast food lead to?",
+       "options": [
+        "Obesity and heart disease",
+        "Better memory",
+        "Stronger bones"
+       ],
+       "answer": 0,
+       "tip": "Eating too much fast food can lead to obesity and heart disease."
+      },
+      {
+       "id": "px2a08b",
+       "q": "How often should teenagers exercise?",
+       "options": [
+        "Every day",
+        "At least three times a week",
+        "Once a month"
+       ],
+       "answer": 1,
+       "tip": "They should exercise at least three times a week."
+      },
+      {
+       "id": "px2a08c",
+       "q": "Why should teenagers avoid staying up late?",
+       "options": [
+        "Because sleep helps the body recover",
+        "Because it costs money",
+        "Because it is boring"
+       ],
+       "answer": 0,
+       "tip": "Sleep helps the body recover."
+      }
+     ]
+    },
+    {
+     "id": "px2a09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px2a09.mp3",
+     "audio_text": "To live a healthy life, we should develop good habits and keep a positive attitude.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 develop 的重音在第二个音节，attitude 的重音在第一个音节。"
+    },
+    {
+     "id": "px2a10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2a10.mp3",
+     "audio_text": "A: I want to join the gym, but the yearly card is quite expensive. B: Why not try the monthly card first? It's cheaper and you can decide later.",
+     "options": [
+      "先办月卡试试，更便宜且灵活",
+      "办年卡更划算",
+      "不建议办卡"
+     ],
+     "answer": 0,
+     "tip": "Why not ...? = 为什么不……？提建议。"
+    },
+    {
+     "id": "px2a11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px2a11.mp3",
+     "audio_text": "Planting trees in cities brings many benefits. Trees can lower the temperature on hot summer days because they provide shade. They also help clean the air by absorbing harmful gases. Besides, green trees make the city more beautiful and give people a peaceful place to relax. Many cities have started tree-planting programmes and encourage citizens to take part. Even planting one tree in your neighbourhood can make a difference.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px2a11a",
+       "q": "How do trees help on hot summer days?",
+       "options": [
+        "They lower the temperature by providing shade",
+        "They make the city noisy",
+        "They use more water"
+       ],
+       "answer": 0,
+       "tip": "Trees can lower the temperature because they provide shade."
+      },
+      {
+       "id": "px2a11b",
+       "q": "What do trees do to the air?",
+       "options": [
+        "They absorb harmful gases",
+        "They produce harmful gases",
+        "They have no effect"
+       ],
+       "answer": 0,
+       "tip": "They help clean the air by absorbing harmful gases."
+      },
+      {
+       "id": "px2a11c",
+       "q": "What do many cities encourage citizens to do?",
+       "options": [
+        "Take part in tree-planting programmes",
+        "Cut down trees",
+        "Move to the countryside"
+       ],
+       "answer": 0,
+       "tip": "Cities encourage citizens to take part in tree-planting programmes."
+      }
+     ]
+    },
+    {
+     "id": "px2a12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px2a12.mp3",
+     "audio_text": "Planting more trees in the city can improve our living environment and reduce pollution.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 improve 的重音在第二个音节，environment 的重音在第二个音节。"
+    }
+   ]
+  },
+  {
+   "id": "px2b",
+   "title": "PET 模拟卷四 · 工作与旅行",
+   "topic": "职业 · 求职 · 旅行体验",
+   "questions": [
+    {
+     "id": "px2b01",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px2b01.mp3",
+     "audio_text": "interview",
+     "options": [
+      "面试",
+      "合同",
+      "培训"
+     ],
+     "answer": 0,
+     "tip": "interview = 面试；job interview 求职面试。"
+    },
+    {
+     "id": "px2b02",
+     "type": "word",
+     "q": "听单词，选出正确的中文意思",
+     "audio": "/audio/px/px2b02.mp3",
+     "audio_text": "destination",
+     "options": [
+      "目的地",
+      "护照",
+      "航班"
+     ],
+     "answer": 0,
+     "tip": "destination = 目的地，travel destination 旅游目的地。"
+    },
+    {
+     "id": "px2b03",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px2b03.mp3",
+     "audio_text": "She has gained a lot of experience since she joined the company.",
+     "options": [
+      "自从加入公司以来她积累了很多经验",
+      "她加入公司之前就有很多经验",
+      "她因为经验丰富而被公司录取"
+     ],
+     "answer": 0,
+     "tip": "since + 过去时间点 = 自从……以来。gain experience = 积累经验。"
+    },
+    {
+     "id": "px2b04",
+     "type": "sentence",
+     "q": "听短句，选出正确的翻译",
+     "audio": "/audio/px/px2b04.mp3",
+     "audio_text": "Travelling abroad can open your eyes and enrich your mind.",
+     "options": [
+      "出国旅行能开阔眼界、丰富思想",
+      "出国旅行花费很高",
+      "出国旅行很浪费时间"
+     ],
+     "answer": 0,
+     "tip": "open your eyes = 开阔眼界；enrich = 丰富。"
+    },
+    {
+     "id": "px2b05",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2b05.mp3",
+     "audio_text": "A: Why did you apply for this position? B: Because it offers more opportunities for career development and a better working environment.",
+     "options": [
+      "因为工资更高",
+      "因为提供更多职业发展机会和更好的工作环境",
+      "因为离家更近"
+     ],
+     "answer": 1,
+     "tip": "career development = 职业发展。"
+    },
+    {
+     "id": "px2b06",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2b06.mp3",
+     "audio_text": "A: What impressed you most during your trip to Japan? B: The local people's politeness and the cleanliness of the streets impressed me most.",
+     "options": [
+      "当地美食",
+      "当地人的礼貌和街道的整洁",
+      "当地的气候"
+     ],
+     "answer": 1,
+     "tip": "impress = 给……留下深刻印象。"
+    },
+    {
+     "id": "px2b07",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2b07.mp3",
+     "audio_text": "A: Is it your first time to work as a tour guide? B: No, I've been working in this field for five years.",
+     "options": [
+      "第一次当导游",
+      "在这个行业工作五年了",
+      "想转行当导游"
+     ],
+     "answer": 1,
+     "tip": "have been working = 现在完成进行时，表示持续至今的动作。"
+    },
+    {
+     "id": "px2b08",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px2b08.mp3",
+     "audio_text": "Choosing a career is one of the most important decisions in life. Experts suggest that young people should consider their interests, abilities and the job market before making a choice. It is also wise to gain some work experience through internships. Some people change careers several times during their lifetime, which is quite normal today. The key is to keep learning and stay open to new opportunities.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px2b08a",
+       "q": "What should young people consider before choosing a career?",
+       "options": [
+        "Their interests, abilities and the job market",
+        "Their salary only",
+        "Their family's opinion only"
+       ],
+       "answer": 0,
+       "tip": "They should consider their interests, abilities and the job market."
+      },
+      {
+       "id": "px2b08b",
+       "q": "What is a wise way to gain work experience?",
+       "options": [
+        "Changing jobs often",
+        "Taking internships",
+        "Retiring early"
+       ],
+       "answer": 1,
+       "tip": "It is wise to gain work experience through internships."
+      },
+      {
+       "id": "px2b08c",
+       "q": "What is the key to career success according to the passage?",
+       "options": [
+        "Staying in one job forever",
+        "Keeping learning and staying open to new opportunities",
+        "Working overtime"
+       ],
+       "answer": 1,
+       "tip": "The key is to keep learning and stay open to new opportunities."
+      }
+     ]
+    },
+    {
+     "id": "px2b09",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px2b09.mp3",
+     "audio_text": "I believe that a good job is not only about the salary, but also about personal satisfaction and growth.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 satisfaction 的重音在第三个音节，growth 的 th 音要轻。"
+    },
+    {
+     "id": "px2b10",
+     "type": "dialogue",
+     "q": "听对话，选择正确的答案",
+     "audio": "/audio/px/px2b10.mp3",
+     "audio_text": "A: I have a business trip to Shanghai next Monday. Could you help me book a hotel near the station? B: Sure. I'll find a comfortable one and send you the information today.",
+     "options": [
+      "出差去上海，帮忙订车站附近的酒店",
+      "去上海度假，订海边酒店",
+      "取消出差"
+     ],
+     "answer": 0,
+     "tip": "business trip = 出差；book a hotel = 订酒店。"
+    },
+    {
+     "id": "px2b11",
+     "type": "passage",
+     "q": "听短文，回答问题",
+     "audio": "/audio/px/px2b11.mp3",
+     "audio_text": "Remote work has become a new trend in recent years. Working from home saves a lot of time because people do not need to commute. It also gives employees more flexible schedules, so they can balance work and family life better. However, remote work is not perfect. Some people find it hard to concentrate at home, and others miss talking with their colleagues face to face. Experts say that the key is to make a clear plan and set a comfortable working space at home.",
+     "options": null,
+     "answer": 0,
+     "tip": "",
+     "questions": [
+      {
+       "id": "px2b11a",
+       "q": "What is one advantage of remote work?",
+       "options": [
+        "No need to commute and more flexible schedules",
+        "Higher salary",
+        "Longer holidays"
+       ],
+       "answer": 0,
+       "tip": "It saves time and gives employees more flexible schedules."
+      },
+      {
+       "id": "px2b11b",
+       "q": "What problem may remote workers face?",
+       "options": [
+        "Hard to concentrate at home",
+        "Too many meetings",
+        "No salary"
+       ],
+       "answer": 0,
+       "tip": "Some people find it hard to concentrate at home."
+      },
+      {
+       "id": "px2b11c",
+       "q": "What do experts suggest for remote workers?",
+       "options": [
+        "Make a clear plan and set a comfortable working space",
+        "Work at the office every day",
+        "Avoid using computers"
+       ],
+       "answer": 0,
+       "tip": "The key is to make a clear plan and set a comfortable working space at home."
+      }
+     ]
+    },
+    {
+     "id": "px2b12",
+     "type": "speaking",
+     "q": "跟读下列句子（口语题）",
+     "audio": "/audio/px/px2b12.mp3",
+     "audio_text": "Working from home has become a new trend in recent years, and it gives people more flexibility.",
+     "options": [
+      "✅ 点击播放并跟读"
+     ],
+     "answer": 0,
+     "tip": "注意 flexibility 的重音在第三个音节，trend 的 tr 音。"
+    }
+   ]
+  }
+ ]
+}

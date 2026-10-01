@@ -1,0 +1,2010 @@
+{
+ "level": "PET",
+ "name": "PET 核心词（B1）",
+ "groups": [
+  {
+   "id": "pw1",
+   "title": "教育与社会",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw1-w1",
+     "word": "education",
+     "phonetic": "ˌedʒuˈkeɪʃn",
+     "pos": "n.",
+     "meaning": "教育",
+     "audio": "/audio/pw/pw1-w1.mp3"
+    },
+    {
+     "id": "pw1-w2",
+     "word": "society",
+     "phonetic": "səˈsaɪəti",
+     "pos": "n.",
+     "meaning": "社会",
+     "audio": "/audio/pw/pw1-w2.mp3"
+    },
+    {
+     "id": "pw1-w3",
+     "word": "government",
+     "phonetic": "ˈɡʌvənmənt",
+     "pos": "n.",
+     "meaning": "政府",
+     "audio": "/audio/pw/pw1-w3.mp3"
+    },
+    {
+     "id": "pw1-w4",
+     "word": "public",
+     "phonetic": "ˈpʌblɪk",
+     "pos": "adj.",
+     "meaning": "公共的",
+     "audio": "/audio/pw/pw1-w4.mp3"
+    },
+    {
+     "id": "pw1-w5",
+     "word": "private",
+     "phonetic": "ˈpraɪvət",
+     "pos": "adj.",
+     "meaning": "私人的",
+     "audio": "/audio/pw/pw1-w5.mp3"
+    },
+    {
+     "id": "pw1-w6",
+     "word": "university",
+     "phonetic": "ˌjuːnɪˈvɜːsəti",
+     "pos": "n.",
+     "meaning": "大学",
+     "audio": "/audio/pw/pw1-w6.mp3"
+    },
+    {
+     "id": "pw1-w7",
+     "word": "degree",
+     "phonetic": "dɪˈɡriː",
+     "pos": "n.",
+     "meaning": "学位；程度",
+     "audio": "/audio/pw/pw1-w7.mp3"
+    },
+    {
+     "id": "pw1-w8",
+     "word": "research",
+     "phonetic": "rɪˈsɜːtʃ",
+     "pos": "n.",
+     "meaning": "研究",
+     "audio": "/audio/pw/pw1-w8.mp3"
+    },
+    {
+     "id": "pw1-w9",
+     "word": "knowledge",
+     "phonetic": "ˈnɒlɪdʒ",
+     "pos": "n.",
+     "meaning": "知识",
+     "audio": "/audio/pw/pw1-w9.mp3"
+    },
+    {
+     "id": "pw1-w10",
+     "word": "skill",
+     "phonetic": "skɪl",
+     "pos": "n.",
+     "meaning": "技能",
+     "audio": "/audio/pw/pw1-w10.mp3"
+    },
+    {
+     "id": "pw1-w11",
+     "word": "training",
+     "phonetic": "ˈtreɪnɪŋ",
+     "pos": "n.",
+     "meaning": "培训；训练",
+     "audio": "/audio/pw/pw1-w11.mp3"
+    },
+    {
+     "id": "pw1-w12",
+     "word": "course",
+     "phonetic": "kɔːs",
+     "pos": "n.",
+     "meaning": "课程",
+     "audio": "/audio/pw/pw1-w12.mp3"
+    },
+    {
+     "id": "pw1-w13",
+     "word": "result",
+     "phonetic": "rɪˈzʌlt",
+     "pos": "n.",
+     "meaning": "结果；成绩",
+     "audio": "/audio/pw/pw1-w13.mp3"
+    },
+    {
+     "id": "pw1-w14",
+     "word": "grade",
+     "phonetic": "ɡreɪd",
+     "pos": "n.",
+     "meaning": "成绩等级",
+     "audio": "/audio/pw/pw1-w14.mp3"
+    },
+    {
+     "id": "pw1-w15",
+     "word": "pupil",
+     "phonetic": "ˈpjuːpl",
+     "pos": "n.",
+     "meaning": "小学生",
+     "audio": "/audio/pw/pw1-w15.mp3"
+    },
+    {
+     "id": "pw1-w16",
+     "word": "academy",
+     "phonetic": "əˈkædəmi",
+     "pos": "n.",
+     "meaning": "学院",
+     "audio": "/audio/pw/pw1-w16.mp3"
+    },
+    {
+     "id": "pw1-w17",
+     "word": "scholar",
+     "phonetic": "ˈskɒlə",
+     "pos": "n.",
+     "meaning": "学者",
+     "audio": "/audio/pw/pw1-w17.mp3"
+    },
+    {
+     "id": "pw1-w18",
+     "word": "tuition",
+     "phonetic": "tjuˈɪʃn",
+     "pos": "n.",
+     "meaning": "学费",
+     "audio": "/audio/pw/pw1-w18.mp3"
+    },
+    {
+     "id": "pw1-w19",
+     "word": "certificate",
+     "phonetic": "səˈtɪfɪkət",
+     "pos": "n.",
+     "meaning": "证书",
+     "audio": "/audio/pw/pw1-w19.mp3"
+    },
+    {
+     "id": "pw1-w20",
+     "word": "qualification",
+     "phonetic": "ˌkwɒlɪfɪˈkeɪʃn",
+     "pos": "n.",
+     "meaning": "资格",
+     "audio": "/audio/pw/pw1-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw2",
+   "title": "科技与媒体",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw2-w1",
+     "word": "technology",
+     "phonetic": "tekˈnɒlədʒi",
+     "pos": "n.",
+     "meaning": "技术",
+     "audio": "/audio/pw/pw2-w1.mp3"
+    },
+    {
+     "id": "pw2-w2",
+     "word": "computer",
+     "phonetic": "kəmˈpjuːtə",
+     "pos": "n.",
+     "meaning": "电脑",
+     "audio": "/audio/pw/pw2-w2.mp3"
+    },
+    {
+     "id": "pw2-w3",
+     "word": "internet",
+     "phonetic": "ˈɪntənet",
+     "pos": "n.",
+     "meaning": "互联网",
+     "audio": "/audio/pw/pw2-w3.mp3"
+    },
+    {
+     "id": "pw2-w4",
+     "word": "website",
+     "phonetic": "ˈwebsaɪt",
+     "pos": "n.",
+     "meaning": "网站",
+     "audio": "/audio/pw/pw2-w4.mp3"
+    },
+    {
+     "id": "pw2-w5",
+     "word": "email",
+     "phonetic": "ˈiːmeɪl",
+     "pos": "n.",
+     "meaning": "电子邮件",
+     "audio": "/audio/pw/pw2-w5.mp3"
+    },
+    {
+     "id": "pw2-w6",
+     "word": "message",
+     "phonetic": "ˈmesɪdʒ",
+     "pos": "n.",
+     "meaning": "消息",
+     "audio": "/audio/pw/pw2-w6.mp3"
+    },
+    {
+     "id": "pw2-w7",
+     "word": "screen",
+     "phonetic": "skriːn",
+     "pos": "n.",
+     "meaning": "屏幕",
+     "audio": "/audio/pw/pw2-w7.mp3"
+    },
+    {
+     "id": "pw2-w8",
+     "word": "keyboard",
+     "phonetic": "ˈkiːbɔːd",
+     "pos": "n.",
+     "meaning": "键盘",
+     "audio": "/audio/pw/pw2-w8.mp3"
+    },
+    {
+     "id": "pw2-w9",
+     "word": "mobile",
+     "phonetic": "ˈməʊbaɪl",
+     "pos": "n.",
+     "meaning": "手机",
+     "audio": "/audio/pw/pw2-w9.mp3"
+    },
+    {
+     "id": "pw2-w10",
+     "word": "app",
+     "phonetic": "æp",
+     "pos": "n.",
+     "meaning": "应用程序",
+     "audio": "/audio/pw/pw2-w10.mp3"
+    },
+    {
+     "id": "pw2-w11",
+     "word": "information",
+     "phonetic": "ˌɪnfəˈmeɪʃn",
+     "pos": "n.",
+     "meaning": "信息",
+     "audio": "/audio/pw/pw2-w11.mp3"
+    },
+    {
+     "id": "pw2-w12",
+     "word": "news",
+     "phonetic": "njuːz",
+     "pos": "n.",
+     "meaning": "新闻",
+     "audio": "/audio/pw/pw2-w12.mp3"
+    },
+    {
+     "id": "pw2-w13",
+     "word": "newspaper",
+     "phonetic": "ˈnjuːzpeɪpə",
+     "pos": "n.",
+     "meaning": "报纸",
+     "audio": "/audio/pw/pw2-w13.mp3"
+    },
+    {
+     "id": "pw2-w14",
+     "word": "radio",
+     "phonetic": "ˈreɪdiəʊ",
+     "pos": "n.",
+     "meaning": "收音机",
+     "audio": "/audio/pw/pw2-w14.mp3"
+    },
+    {
+     "id": "pw2-w15",
+     "word": "television",
+     "phonetic": "ˈtelɪvɪʒn",
+     "pos": "n.",
+     "meaning": "电视",
+     "audio": "/audio/pw/pw2-w15.mp3"
+    },
+    {
+     "id": "pw2-w16",
+     "word": "advertisement",
+     "phonetic": "ədˈvɜːtɪsmənt",
+     "pos": "n.",
+     "meaning": "广告",
+     "audio": "/audio/pw/pw2-w16.mp3"
+    },
+    {
+     "id": "pw2-w17",
+     "word": "social",
+     "phonetic": "ˈsəʊʃl",
+     "pos": "adj.",
+     "meaning": "社交的；社会的",
+     "audio": "/audio/pw/pw2-w17.mp3"
+    },
+    {
+     "id": "pw2-w18",
+     "word": "online",
+     "phonetic": "ˌɒnˈlaɪn",
+     "pos": "adj.",
+     "meaning": "在线的",
+     "audio": "/audio/pw/pw2-w18.mp3"
+    },
+    {
+     "id": "pw2-w19",
+     "word": "download",
+     "phonetic": "ˌdaʊnˈləʊd",
+     "pos": "v.",
+     "meaning": "下载",
+     "audio": "/audio/pw/pw2-w19.mp3"
+    },
+    {
+     "id": "pw2-w20",
+     "word": "upload",
+     "phonetic": "ˌʌpˈləʊd",
+     "pos": "v.",
+     "meaning": "上传",
+     "audio": "/audio/pw/pw2-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw3",
+   "title": "环境与环保",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw3-w1",
+     "word": "environment",
+     "phonetic": "ɪnˈvaɪrənmənt",
+     "pos": "n.",
+     "meaning": "环境",
+     "audio": "/audio/pw/pw3-w1.mp3"
+    },
+    {
+     "id": "pw3-w2",
+     "word": "pollution",
+     "phonetic": "pəˈluːʃn",
+     "pos": "n.",
+     "meaning": "污染",
+     "audio": "/audio/pw/pw3-w2.mp3"
+    },
+    {
+     "id": "pw3-w3",
+     "word": "climate",
+     "phonetic": "ˈklaɪmət",
+     "pos": "n.",
+     "meaning": "气候",
+     "audio": "/audio/pw/pw3-w3.mp3"
+    },
+    {
+     "id": "pw3-w4",
+     "word": "energy",
+     "phonetic": "ˈenədʒi",
+     "pos": "n.",
+     "meaning": "能源；能量",
+     "audio": "/audio/pw/pw3-w4.mp3"
+    },
+    {
+     "id": "pw3-w5",
+     "word": "recycle",
+     "phonetic": "ˌriːˈsaɪkl",
+     "pos": "v.",
+     "meaning": "回收利用",
+     "audio": "/audio/pw/pw3-w5.mp3"
+    },
+    {
+     "id": "pw3-w6",
+     "word": "waste",
+     "phonetic": "weɪst",
+     "pos": "n.",
+     "meaning": "浪费；废料",
+     "audio": "/audio/pw/pw3-w6.mp3"
+    },
+    {
+     "id": "pw3-w7",
+     "word": "rubbish",
+     "phonetic": "ˈrʌbɪʃ",
+     "pos": "n.",
+     "meaning": "垃圾",
+     "audio": "/audio/pw/pw3-w7.mp3"
+    },
+    {
+     "id": "pw3-w8",
+     "word": "plastic",
+     "phonetic": "ˈplæstɪk",
+     "pos": "n.",
+     "meaning": "塑料",
+     "audio": "/audio/pw/pw3-w8.mp3"
+    },
+    {
+     "id": "pw3-w9",
+     "word": "ocean",
+     "phonetic": "ˈəʊʃn",
+     "pos": "n.",
+     "meaning": "海洋",
+     "audio": "/audio/pw/pw3-w9.mp3"
+    },
+    {
+     "id": "pw3-w10",
+     "word": "nature",
+     "phonetic": "ˈneɪtʃə",
+     "pos": "n.",
+     "meaning": "大自然",
+     "audio": "/audio/pw/pw3-w10.mp3"
+    },
+    {
+     "id": "pw3-w11",
+     "word": "protect",
+     "phonetic": "prəˈtekt",
+     "pos": "v.",
+     "meaning": "保护",
+     "audio": "/audio/pw/pw3-w11.mp3"
+    },
+    {
+     "id": "pw3-w12",
+     "word": "reduce",
+     "phonetic": "rɪˈdjuːs",
+     "pos": "v.",
+     "meaning": "减少",
+     "audio": "/audio/pw/pw3-w12.mp3"
+    },
+    {
+     "id": "pw3-w13",
+     "word": "reuse",
+     "phonetic": "ˌriːˈjuːz",
+     "pos": "v.",
+     "meaning": "重复使用",
+     "audio": "/audio/pw/pw3-w13.mp3"
+    },
+    {
+     "id": "pw3-w14",
+     "word": "global",
+     "phonetic": "ˈɡləʊbl",
+     "pos": "adj.",
+     "meaning": "全球的",
+     "audio": "/audio/pw/pw3-w14.mp3"
+    },
+    {
+     "id": "pw3-w15",
+     "word": "warming",
+     "phonetic": "ˈwɔːmɪŋ",
+     "pos": "n.",
+     "meaning": "变暖",
+     "audio": "/audio/pw/pw3-w15.mp3"
+    },
+    {
+     "id": "pw3-w16",
+     "word": "resource",
+     "phonetic": "rɪˈsɔːs",
+     "pos": "n.",
+     "meaning": "资源",
+     "audio": "/audio/pw/pw3-w16.mp3"
+    },
+    {
+     "id": "pw3-w17",
+     "word": "wildlife",
+     "phonetic": "ˈwaɪldlaɪf",
+     "pos": "n.",
+     "meaning": "野生动物",
+     "audio": "/audio/pw/pw3-w17.mp3"
+    },
+    {
+     "id": "pw3-w18",
+     "word": "sustainable",
+     "phonetic": "səˈsteɪnəbl",
+     "pos": "adj.",
+     "meaning": "可持续的",
+     "audio": "/audio/pw/pw3-w18.mp3"
+    },
+    {
+     "id": "pw3-w19",
+     "word": "greenhouse",
+     "phonetic": "ˈɡriːnhaʊs",
+     "pos": "n.",
+     "meaning": "温室",
+     "audio": "/audio/pw/pw3-w19.mp3"
+    },
+    {
+     "id": "pw3-w20",
+     "word": "carbon",
+     "phonetic": "ˈkɑːbən",
+     "pos": "n.",
+     "meaning": "碳",
+     "audio": "/audio/pw/pw3-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw4",
+   "title": "文化与艺术",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw4-w1",
+     "word": "culture",
+     "phonetic": "ˈkʌltʃə",
+     "pos": "n.",
+     "meaning": "文化",
+     "audio": "/audio/pw/pw4-w1.mp3"
+    },
+    {
+     "id": "pw4-w2",
+     "word": "art",
+     "phonetic": "ɑːt",
+     "pos": "n.",
+     "meaning": "艺术",
+     "audio": "/audio/pw/pw4-w2.mp3"
+    },
+    {
+     "id": "pw4-w3",
+     "word": "painting",
+     "phonetic": "ˈpeɪntɪŋ",
+     "pos": "n.",
+     "meaning": "绘画；油画",
+     "audio": "/audio/pw/pw4-w3.mp3"
+    },
+    {
+     "id": "pw4-w4",
+     "word": "drawing",
+     "phonetic": "ˈdrɔːɪŋ",
+     "pos": "n.",
+     "meaning": "素描",
+     "audio": "/audio/pw/pw4-w4.mp3"
+    },
+    {
+     "id": "pw4-w5",
+     "word": "sculpture",
+     "phonetic": "ˈskʌlptʃə",
+     "pos": "n.",
+     "meaning": "雕塑",
+     "audio": "/audio/pw/pw4-w5.mp3"
+    },
+    {
+     "id": "pw4-w6",
+     "word": "concert",
+     "phonetic": "ˈkɒnsət",
+     "pos": "n.",
+     "meaning": "音乐会",
+     "audio": "/audio/pw/pw4-w6.mp3"
+    },
+    {
+     "id": "pw4-w7",
+     "word": "gallery",
+     "phonetic": "ˈɡæləri",
+     "pos": "n.",
+     "meaning": "画廊",
+     "audio": "/audio/pw/pw4-w7.mp3"
+    },
+    {
+     "id": "pw4-w8",
+     "word": "exhibition",
+     "phonetic": "ˌeksɪˈbɪʃn",
+     "pos": "n.",
+     "meaning": "展览",
+     "audio": "/audio/pw/pw4-w8.mp3"
+    },
+    {
+     "id": "pw4-w9",
+     "word": "traditional",
+     "phonetic": "trəˈdɪʃənl",
+     "pos": "adj.",
+     "meaning": "传统的",
+     "audio": "/audio/pw/pw4-w9.mp3"
+    },
+    {
+     "id": "pw4-w10",
+     "word": "modern",
+     "phonetic": "ˈmɒdn",
+     "pos": "adj.",
+     "meaning": "现代的",
+     "audio": "/audio/pw/pw4-w10.mp3"
+    },
+    {
+     "id": "pw4-w11",
+     "word": "festival",
+     "phonetic": "ˈfestɪvl",
+     "pos": "n.",
+     "meaning": "节日",
+     "audio": "/audio/pw/pw4-w11.mp3"
+    },
+    {
+     "id": "pw4-w12",
+     "word": "celebration",
+     "phonetic": "ˌselɪˈbreɪʃn",
+     "pos": "n.",
+     "meaning": "庆祝",
+     "audio": "/audio/pw/pw4-w12.mp3"
+    },
+    {
+     "id": "pw4-w13",
+     "word": "literature",
+     "phonetic": "ˈlɪtrətʃə",
+     "pos": "n.",
+     "meaning": "文学",
+     "audio": "/audio/pw/pw4-w13.mp3"
+    },
+    {
+     "id": "pw4-w14",
+     "word": "poem",
+     "phonetic": "ˈpəʊɪm",
+     "pos": "n.",
+     "meaning": "诗",
+     "audio": "/audio/pw/pw4-w14.mp3"
+    },
+    {
+     "id": "pw4-w15",
+     "word": "novel",
+     "phonetic": "ˈnɒvl",
+     "pos": "n.",
+     "meaning": "小说",
+     "audio": "/audio/pw/pw4-w15.mp3"
+    },
+    {
+     "id": "pw4-w16",
+     "word": "drama",
+     "phonetic": "ˈdrɑːmə",
+     "pos": "n.",
+     "meaning": "戏剧",
+     "audio": "/audio/pw/pw4-w16.mp3"
+    },
+    {
+     "id": "pw4-w17",
+     "word": "musician",
+     "phonetic": "mjuˈzɪʃn",
+     "pos": "n.",
+     "meaning": "音乐家",
+     "audio": "/audio/pw/pw4-w17.mp3"
+    },
+    {
+     "id": "pw4-w18",
+     "word": "composer",
+     "phonetic": "kəmˈpəʊzə",
+     "pos": "n.",
+     "meaning": "作曲家",
+     "audio": "/audio/pw/pw4-w18.mp3"
+    },
+    {
+     "id": "pw4-w19",
+     "word": "performance",
+     "phonetic": "pəˈfɔːməns",
+     "pos": "n.",
+     "meaning": "表演",
+     "audio": "/audio/pw/pw4-w19.mp3"
+    },
+    {
+     "id": "pw4-w20",
+     "word": "audience",
+     "phonetic": "ˈɔːdiəns",
+     "pos": "n.",
+     "meaning": "观众",
+     "audio": "/audio/pw/pw4-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw5",
+   "title": "经济与购物",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw5-w1",
+     "word": "economy",
+     "phonetic": "ɪˈkɒnəmi",
+     "pos": "n.",
+     "meaning": "经济",
+     "audio": "/audio/pw/pw5-w1.mp3"
+    },
+    {
+     "id": "pw5-w2",
+     "word": "business",
+     "phonetic": "ˈbɪznəs",
+     "pos": "n.",
+     "meaning": "商业；生意",
+     "audio": "/audio/pw/pw5-w2.mp3"
+    },
+    {
+     "id": "pw5-w3",
+     "word": "company",
+     "phonetic": "ˈkʌmpəni",
+     "pos": "n.",
+     "meaning": "公司",
+     "audio": "/audio/pw/pw5-w3.mp3"
+    },
+    {
+     "id": "pw5-w4",
+     "word": "customer",
+     "phonetic": "ˈkʌstəmə",
+     "pos": "n.",
+     "meaning": "顾客",
+     "audio": "/audio/pw/pw5-w4.mp3"
+    },
+    {
+     "id": "pw5-w5",
+     "word": "product",
+     "phonetic": "ˈprɒdʌkt",
+     "pos": "n.",
+     "meaning": "产品",
+     "audio": "/audio/pw/pw5-w5.mp3"
+    },
+    {
+     "id": "pw5-w6",
+     "word": "service",
+     "phonetic": "ˈsɜːvɪs",
+     "pos": "n.",
+     "meaning": "服务",
+     "audio": "/audio/pw/pw5-w6.mp3"
+    },
+    {
+     "id": "pw5-w7",
+     "word": "quality",
+     "phonetic": "ˈkwɒləti",
+     "pos": "n.",
+     "meaning": "质量",
+     "audio": "/audio/pw/pw5-w7.mp3"
+    },
+    {
+     "id": "pw5-w8",
+     "word": "cost",
+     "phonetic": "kɒst",
+     "pos": "n.",
+     "meaning": "成本；花费",
+     "audio": "/audio/pw/pw5-w8.mp3"
+    },
+    {
+     "id": "pw5-w9",
+     "word": "budget",
+     "phonetic": "ˈbʌdʒɪt",
+     "pos": "n.",
+     "meaning": "预算",
+     "audio": "/audio/pw/pw5-w9.mp3"
+    },
+    {
+     "id": "pw5-w10",
+     "word": "income",
+     "phonetic": "ˈɪnkʌm",
+     "pos": "n.",
+     "meaning": "收入",
+     "audio": "/audio/pw/pw5-w10.mp3"
+    },
+    {
+     "id": "pw5-w11",
+     "word": "profit",
+     "phonetic": "ˈprɒfɪt",
+     "pos": "n.",
+     "meaning": "利润",
+     "audio": "/audio/pw/pw5-w11.mp3"
+    },
+    {
+     "id": "pw5-w12",
+     "word": "brand",
+     "phonetic": "brænd",
+     "pos": "n.",
+     "meaning": "品牌",
+     "audio": "/audio/pw/pw5-w12.mp3"
+    },
+    {
+     "id": "pw5-w13",
+     "word": "sale",
+     "phonetic": "seɪl",
+     "pos": "n.",
+     "meaning": "销售；促销",
+     "audio": "/audio/pw/pw5-w13.mp3"
+    },
+    {
+     "id": "pw5-w14",
+     "word": "discount",
+     "phonetic": "ˈdɪskaʊnt",
+     "pos": "n.",
+     "meaning": "折扣",
+     "audio": "/audio/pw/pw5-w14.mp3"
+    },
+    {
+     "id": "pw5-w15",
+     "word": "purchase",
+     "phonetic": "ˈpɜːtʃəs",
+     "pos": "v.",
+     "meaning": "购买",
+     "audio": "/audio/pw/pw5-w15.mp3"
+    },
+    {
+     "id": "pw5-w16",
+     "word": "payment",
+     "phonetic": "ˈpeɪmənt",
+     "pos": "n.",
+     "meaning": "付款",
+     "audio": "/audio/pw/pw5-w16.mp3"
+    },
+    {
+     "id": "pw5-w17",
+     "word": "receipt",
+     "phonetic": "rɪˈsiːt",
+     "pos": "n.",
+     "meaning": "收据",
+     "audio": "/audio/pw/pw5-w17.mp3"
+    },
+    {
+     "id": "pw5-w18",
+     "word": "delivery",
+     "phonetic": "dɪˈlɪvəri",
+     "pos": "n.",
+     "meaning": "送货",
+     "audio": "/audio/pw/pw5-w18.mp3"
+    },
+    {
+     "id": "pw5-w19",
+     "word": "currency",
+     "phonetic": "ˈkʌrənsi",
+     "pos": "n.",
+     "meaning": "货币",
+     "audio": "/audio/pw/pw5-w19.mp3"
+    },
+    {
+     "id": "pw5-w20",
+     "word": "exchange",
+     "phonetic": "ɪksˈtʃeɪndʒ",
+     "pos": "v.",
+     "meaning": "兑换；交换",
+     "audio": "/audio/pw/pw5-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw6",
+   "title": "健康与医疗",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw6-w1",
+     "word": "medical",
+     "phonetic": "ˈmedɪkl",
+     "pos": "adj.",
+     "meaning": "医疗的",
+     "audio": "/audio/pw/pw6-w1.mp3"
+    },
+    {
+     "id": "pw6-w2",
+     "word": "treatment",
+     "phonetic": "ˈtriːtmənt",
+     "pos": "n.",
+     "meaning": "治疗",
+     "audio": "/audio/pw/pw6-w2.mp3"
+    },
+    {
+     "id": "pw6-w3",
+     "word": "patient",
+     "phonetic": "ˈpeɪʃnt",
+     "pos": "n.",
+     "meaning": "病人",
+     "audio": "/audio/pw/pw6-w3.mp3"
+    },
+    {
+     "id": "pw6-w4",
+     "word": "disease",
+     "phonetic": "dɪˈziːz",
+     "pos": "n.",
+     "meaning": "疾病",
+     "audio": "/audio/pw/pw6-w4.mp3"
+    },
+    {
+     "id": "pw6-w5",
+     "word": "virus",
+     "phonetic": "ˈvaɪrəs",
+     "pos": "n.",
+     "meaning": "病毒",
+     "audio": "/audio/pw/pw6-w5.mp3"
+    },
+    {
+     "id": "pw6-w6",
+     "word": "infection",
+     "phonetic": "ɪnˈfekʃn",
+     "pos": "n.",
+     "meaning": "感染",
+     "audio": "/audio/pw/pw6-w6.mp3"
+    },
+    {
+     "id": "pw6-w7",
+     "word": "symptom",
+     "phonetic": "ˈsɪmptəm",
+     "pos": "n.",
+     "meaning": "症状",
+     "audio": "/audio/pw/pw6-w7.mp3"
+    },
+    {
+     "id": "pw6-w8",
+     "word": "surgery",
+     "phonetic": "ˈsɜːdʒəri",
+     "pos": "n.",
+     "meaning": "外科手术",
+     "audio": "/audio/pw/pw6-w8.mp3"
+    },
+    {
+     "id": "pw6-w9",
+     "word": "emergency",
+     "phonetic": "ɪˈmɜːdʒənsi",
+     "pos": "n.",
+     "meaning": "紧急情况",
+     "audio": "/audio/pw/pw6-w9.mp3"
+    },
+    {
+     "id": "pw6-w10",
+     "word": "fitness",
+     "phonetic": "ˈfɪtnəs",
+     "pos": "n.",
+     "meaning": "健康；体能",
+     "audio": "/audio/pw/pw6-w10.mp3"
+    },
+    {
+     "id": "pw6-w11",
+     "word": "diet",
+     "phonetic": "ˈdaɪət",
+     "pos": "n.",
+     "meaning": "饮食",
+     "audio": "/audio/pw/pw6-w11.mp3"
+    },
+    {
+     "id": "pw6-w12",
+     "word": "nutrition",
+     "phonetic": "njuˈtrɪʃn",
+     "pos": "n.",
+     "meaning": "营养",
+     "audio": "/audio/pw/pw6-w12.mp3"
+    },
+    {
+     "id": "pw6-w13",
+     "word": "mental",
+     "phonetic": "ˈmentl",
+     "pos": "adj.",
+     "meaning": "心理的；精神的",
+     "audio": "/audio/pw/pw6-w13.mp3"
+    },
+    {
+     "id": "pw6-w14",
+     "word": "physical",
+     "phonetic": "ˈfɪzɪkl",
+     "pos": "adj.",
+     "meaning": "身体的",
+     "audio": "/audio/pw/pw6-w14.mp3"
+    },
+    {
+     "id": "pw6-w15",
+     "word": "prevent",
+     "phonetic": "prɪˈvent",
+     "pos": "v.",
+     "meaning": "预防",
+     "audio": "/audio/pw/pw6-w15.mp3"
+    },
+    {
+     "id": "pw6-w16",
+     "word": "recover",
+     "phonetic": "rɪˈkʌvə",
+     "pos": "v.",
+     "meaning": "康复",
+     "audio": "/audio/pw/pw6-w16.mp3"
+    },
+    {
+     "id": "pw6-w17",
+     "word": "prescription",
+     "phonetic": "prɪˈskrɪpʃn",
+     "pos": "n.",
+     "meaning": "处方",
+     "audio": "/audio/pw/pw6-w17.mp3"
+    },
+    {
+     "id": "pw6-w18",
+     "word": "vaccine",
+     "phonetic": "ˈvæksiːn",
+     "pos": "n.",
+     "meaning": "疫苗",
+     "audio": "/audio/pw/pw6-w18.mp3"
+    },
+    {
+     "id": "pw6-w19",
+     "word": "appointment",
+     "phonetic": "əˈpɔɪntmənt",
+     "pos": "n.",
+     "meaning": "预约",
+     "audio": "/audio/pw/pw6-w19.mp3"
+    },
+    {
+     "id": "pw6-w20",
+     "word": "insurance",
+     "phonetic": "ɪnˈʃʊərəns",
+     "pos": "n.",
+     "meaning": "保险",
+     "audio": "/audio/pw/pw6-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw7",
+   "title": "旅行与冒险",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw7-w1",
+     "word": "adventure",
+     "phonetic": "ədˈventʃə",
+     "pos": "n.",
+     "meaning": "冒险",
+     "audio": "/audio/pw/pw7-w1.mp3"
+    },
+    {
+     "id": "pw7-w2",
+     "word": "explore",
+     "phonetic": "ɪkˈsplɔː",
+     "pos": "v.",
+     "meaning": "探索",
+     "audio": "/audio/pw/pw7-w2.mp3"
+    },
+    {
+     "id": "pw7-w3",
+     "word": "destination",
+     "phonetic": "ˌdestɪˈneɪʃn",
+     "pos": "n.",
+     "meaning": "目的地",
+     "audio": "/audio/pw/pw7-w3.mp3"
+    },
+    {
+     "id": "pw7-w4",
+     "word": "flight",
+     "phonetic": "flaɪt",
+     "pos": "n.",
+     "meaning": "航班",
+     "audio": "/audio/pw/pw7-w4.mp3"
+    },
+    {
+     "id": "pw7-w5",
+     "word": "passport",
+     "phonetic": "ˈpɑːspɔːt",
+     "pos": "n.",
+     "meaning": "护照",
+     "audio": "/audio/pw/pw7-w5.mp3"
+    },
+    {
+     "id": "pw7-w6",
+     "word": "visa",
+     "phonetic": "ˈviːzə",
+     "pos": "n.",
+     "meaning": "签证",
+     "audio": "/audio/pw/pw7-w6.mp3"
+    },
+    {
+     "id": "pw7-w7",
+     "word": "sightseeing",
+     "phonetic": "ˈsaɪtsiːɪŋ",
+     "pos": "n.",
+     "meaning": "观光",
+     "audio": "/audio/pw/pw7-w7.mp3"
+    },
+    {
+     "id": "pw7-w8",
+     "word": "experience",
+     "phonetic": "ɪkˈspɪəriəns",
+     "pos": "n.",
+     "meaning": "经历；体验",
+     "audio": "/audio/pw/pw7-w8.mp3"
+    },
+    {
+     "id": "pw7-w9",
+     "word": "beach",
+     "phonetic": "biːtʃ",
+     "pos": "n.",
+     "meaning": "海滩",
+     "audio": "/audio/pw/pw7-w9.mp3"
+    },
+    {
+     "id": "pw7-w10",
+     "word": "island",
+     "phonetic": "ˈaɪlənd",
+     "pos": "n.",
+     "meaning": "岛屿",
+     "audio": "/audio/pw/pw7-w10.mp3"
+    },
+    {
+     "id": "pw7-w11",
+     "word": "desert",
+     "phonetic": "ˈdezət",
+     "pos": "n.",
+     "meaning": "沙漠",
+     "audio": "/audio/pw/pw7-w11.mp3"
+    },
+    {
+     "id": "pw7-w12",
+     "word": "guide",
+     "phonetic": "ɡaɪd",
+     "pos": "n.",
+     "meaning": "导游；指南",
+     "audio": "/audio/pw/pw7-w12.mp3"
+    },
+    {
+     "id": "pw7-w13",
+     "word": "campsite",
+     "phonetic": "ˈkæmpsaɪt",
+     "pos": "n.",
+     "meaning": "露营地",
+     "audio": "/audio/pw/pw7-w13.mp3"
+    },
+    {
+     "id": "pw7-w14",
+     "word": "tent",
+     "phonetic": "tent",
+     "pos": "n.",
+     "meaning": "帐篷",
+     "audio": "/audio/pw/pw7-w14.mp3"
+    },
+    {
+     "id": "pw7-w15",
+     "word": "backpack",
+     "phonetic": "ˈbækpæk",
+     "pos": "n.",
+     "meaning": "背包",
+     "audio": "/audio/pw/pw7-w15.mp3"
+    },
+    {
+     "id": "pw7-w16",
+     "word": "route",
+     "phonetic": "ruːt",
+     "pos": "n.",
+     "meaning": "路线",
+     "audio": "/audio/pw/pw7-w16.mp3"
+    },
+    {
+     "id": "pw7-w17",
+     "word": "expedition",
+     "phonetic": "ˌekspəˈdɪʃn",
+     "pos": "n.",
+     "meaning": "远征；探险",
+     "audio": "/audio/pw/pw7-w17.mp3"
+    },
+    {
+     "id": "pw7-w18",
+     "word": "voyage",
+     "phonetic": "ˈvɔɪɪdʒ",
+     "pos": "n.",
+     "meaning": "航行",
+     "audio": "/audio/pw/pw7-w18.mp3"
+    },
+    {
+     "id": "pw7-w19",
+     "word": "cruise",
+     "phonetic": "kruːz",
+     "pos": "n.",
+     "meaning": "邮轮旅行",
+     "audio": "/audio/pw/pw7-w19.mp3"
+    },
+    {
+     "id": "pw7-w20",
+     "word": "landmark",
+     "phonetic": "ˈlændmɑːk",
+     "pos": "n.",
+     "meaning": "地标",
+     "audio": "/audio/pw/pw7-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw8",
+   "title": "人际关系",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw8-w1",
+     "word": "relationship",
+     "phonetic": "rɪˈleɪʃnʃɪp",
+     "pos": "n.",
+     "meaning": "关系",
+     "audio": "/audio/pw/pw8-w1.mp3"
+    },
+    {
+     "id": "pw8-w2",
+     "word": "friendship",
+     "phonetic": "ˈfrendʃɪp",
+     "pos": "n.",
+     "meaning": "友谊",
+     "audio": "/audio/pw/pw8-w2.mp3"
+    },
+    {
+     "id": "pw8-w3",
+     "word": "relative",
+     "phonetic": "ˈrelətɪv",
+     "pos": "n.",
+     "meaning": "亲戚",
+     "audio": "/audio/pw/pw8-w3.mp3"
+    },
+    {
+     "id": "pw8-w4",
+     "word": "partner",
+     "phonetic": "ˈpɑːtnə",
+     "pos": "n.",
+     "meaning": "伙伴",
+     "audio": "/audio/pw/pw8-w4.mp3"
+    },
+    {
+     "id": "pw8-w5",
+     "word": "colleague",
+     "phonetic": "ˈkɒliːɡ",
+     "pos": "n.",
+     "meaning": "同事",
+     "audio": "/audio/pw/pw8-w5.mp3"
+    },
+    {
+     "id": "pw8-w6",
+     "word": "trust",
+     "phonetic": "trʌst",
+     "pos": "v.",
+     "meaning": "信任",
+     "audio": "/audio/pw/pw8-w6.mp3"
+    },
+    {
+     "id": "pw8-w7",
+     "word": "respect",
+     "phonetic": "rɪˈspekt",
+     "pos": "v.",
+     "meaning": "尊重",
+     "audio": "/audio/pw/pw8-w7.mp3"
+    },
+    {
+     "id": "pw8-w8",
+     "word": "support",
+     "phonetic": "səˈpɔːt",
+     "pos": "v.",
+     "meaning": "支持",
+     "audio": "/audio/pw/pw8-w8.mp3"
+    },
+    {
+     "id": "pw8-w9",
+     "word": "argue",
+     "phonetic": "ˈɑːɡjuː",
+     "pos": "v.",
+     "meaning": "争论",
+     "audio": "/audio/pw/pw8-w9.mp3"
+    },
+    {
+     "id": "pw8-w10",
+     "word": "apologise",
+     "phonetic": "əˈpɒlədʒaɪz",
+     "pos": "v.",
+     "meaning": "道歉",
+     "audio": "/audio/pw/pw8-w10.mp3"
+    },
+    {
+     "id": "pw8-w11",
+     "word": "forgive",
+     "phonetic": "fəˈɡɪv",
+     "pos": "v.",
+     "meaning": "原谅",
+     "audio": "/audio/pw/pw8-w11.mp3"
+    },
+    {
+     "id": "pw8-w12",
+     "word": "communicate",
+     "phonetic": "kəˈmjuːnɪkeɪt",
+     "pos": "v.",
+     "meaning": "交流",
+     "audio": "/audio/pw/pw8-w12.mp3"
+    },
+    {
+     "id": "pw8-w13",
+     "word": "community",
+     "phonetic": "kəˈmjuːnəti",
+     "pos": "n.",
+     "meaning": "社区",
+     "audio": "/audio/pw/pw8-w13.mp3"
+    },
+    {
+     "id": "pw8-w14",
+     "word": "together",
+     "phonetic": "təˈɡeðə",
+     "pos": "adv.",
+     "meaning": "一起",
+     "audio": "/audio/pw/pw8-w14.mp3"
+    },
+    {
+     "id": "pw8-w15",
+     "word": "lonely",
+     "phonetic": "ˈləʊnli",
+     "pos": "adj.",
+     "meaning": "孤独的",
+     "audio": "/audio/pw/pw8-w15.mp3"
+    },
+    {
+     "id": "pw8-w16",
+     "word": "friendly",
+     "phonetic": "ˈfrendli",
+     "pos": "adj.",
+     "meaning": "友好的",
+     "audio": "/audio/pw/pw8-w16.mp3"
+    },
+    {
+     "id": "pw8-w17",
+     "word": "generous",
+     "phonetic": "ˈdʒenərəs",
+     "pos": "adj.",
+     "meaning": "慷慨的",
+     "audio": "/audio/pw/pw8-w17.mp3"
+    },
+    {
+     "id": "pw8-w18",
+     "word": "honest",
+     "phonetic": "ˈɒnɪst",
+     "pos": "adj.",
+     "meaning": "诚实的",
+     "audio": "/audio/pw/pw8-w18.mp3"
+    },
+    {
+     "id": "pw8-w19",
+     "word": "patient",
+     "phonetic": "ˈpeɪʃnt",
+     "pos": "adj.",
+     "meaning": "有耐心的",
+     "audio": "/audio/pw/pw8-w19.mp3"
+    },
+    {
+     "id": "pw8-w20",
+     "word": "cooperate",
+     "phonetic": "kəʊˈɒpəreɪt",
+     "pos": "v.",
+     "meaning": "合作",
+     "audio": "/audio/pw/pw8-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw9",
+   "title": "工作与职业",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw9-w1",
+     "word": "career",
+     "phonetic": "kəˈrɪə",
+     "pos": "n.",
+     "meaning": "职业；生涯",
+     "audio": "/audio/pw/pw9-w1.mp3"
+    },
+    {
+     "id": "pw9-w2",
+     "word": "profession",
+     "phonetic": "prəˈfeʃn",
+     "pos": "n.",
+     "meaning": "职业",
+     "audio": "/audio/pw/pw9-w2.mp3"
+    },
+    {
+     "id": "pw9-w3",
+     "word": "employee",
+     "phonetic": "ɪmˈplɔɪiː",
+     "pos": "n.",
+     "meaning": "雇员",
+     "audio": "/audio/pw/pw9-w3.mp3"
+    },
+    {
+     "id": "pw9-w4",
+     "word": "employer",
+     "phonetic": "ɪmˈplɔɪə",
+     "pos": "n.",
+     "meaning": "雇主",
+     "audio": "/audio/pw/pw9-w4.mp3"
+    },
+    {
+     "id": "pw9-w5",
+     "word": "director",
+     "phonetic": "dəˈrektə",
+     "pos": "n.",
+     "meaning": "董事；导演",
+     "audio": "/audio/pw/pw9-w5.mp3"
+    },
+    {
+     "id": "pw9-w6",
+     "word": "secretary",
+     "phonetic": "ˈsekrətri",
+     "pos": "n.",
+     "meaning": "秘书",
+     "audio": "/audio/pw/pw9-w6.mp3"
+    },
+    {
+     "id": "pw9-w7",
+     "word": "scientist",
+     "phonetic": "ˈsaɪəntɪst",
+     "pos": "n.",
+     "meaning": "科学家",
+     "audio": "/audio/pw/pw9-w7.mp3"
+    },
+    {
+     "id": "pw9-w8",
+     "word": "lawyer",
+     "phonetic": "ˈlɔːjə",
+     "pos": "n.",
+     "meaning": "律师",
+     "audio": "/audio/pw/pw9-w8.mp3"
+    },
+    {
+     "id": "pw9-w9",
+     "word": "accountant",
+     "phonetic": "əˈkaʊntənt",
+     "pos": "n.",
+     "meaning": "会计师",
+     "audio": "/audio/pw/pw9-w9.mp3"
+    },
+    {
+     "id": "pw9-w10",
+     "word": "architect",
+     "phonetic": "ˈɑːkɪtekt",
+     "pos": "n.",
+     "meaning": "建筑师",
+     "audio": "/audio/pw/pw9-w10.mp3"
+    },
+    {
+     "id": "pw9-w11",
+     "word": "designer",
+     "phonetic": "dɪˈzaɪnə",
+     "pos": "n.",
+     "meaning": "设计师",
+     "audio": "/audio/pw/pw9-w11.mp3"
+    },
+    {
+     "id": "pw9-w12",
+     "word": "journalist",
+     "phonetic": "ˈdʒɜːnəlɪst",
+     "pos": "n.",
+     "meaning": "记者",
+     "audio": "/audio/pw/pw9-w12.mp3"
+    },
+    {
+     "id": "pw9-w13",
+     "word": "opportunity",
+     "phonetic": "ˌɒpəˈtjuːnəti",
+     "pos": "n.",
+     "meaning": "机会",
+     "audio": "/audio/pw/pw9-w13.mp3"
+    },
+    {
+     "id": "pw9-w14",
+     "word": "promotion",
+     "phonetic": "prəˈməʊʃn",
+     "pos": "n.",
+     "meaning": "晋升",
+     "audio": "/audio/pw/pw9-w14.mp3"
+    },
+    {
+     "id": "pw9-w15",
+     "word": "resign",
+     "phonetic": "rɪˈzaɪn",
+     "pos": "v.",
+     "meaning": "辞职",
+     "audio": "/audio/pw/pw9-w15.mp3"
+    },
+    {
+     "id": "pw9-w16",
+     "word": "hire",
+     "phonetic": "ˈhaɪə",
+     "pos": "v.",
+     "meaning": "雇用",
+     "audio": "/audio/pw/pw9-w16.mp3"
+    },
+    {
+     "id": "pw9-w17",
+     "word": "dismiss",
+     "phonetic": "dɪsˈmɪs",
+     "pos": "v.",
+     "meaning": "解雇",
+     "audio": "/audio/pw/pw9-w17.mp3"
+    },
+    {
+     "id": "pw9-w18",
+     "word": "pension",
+     "phonetic": "ˈpenʃn",
+     "pos": "n.",
+     "meaning": "养老金",
+     "audio": "/audio/pw/pw9-w18.mp3"
+    },
+    {
+     "id": "pw9-w19",
+     "word": "colleague",
+     "phonetic": "ˈkɒliːɡ",
+     "pos": "n.",
+     "meaning": "同事",
+     "audio": "/audio/pw/pw9-w19.mp3"
+    },
+    {
+     "id": "pw9-w20",
+     "word": "workplace",
+     "phonetic": "ˈwɜːkpleɪs",
+     "pos": "n.",
+     "meaning": "工作场所",
+     "audio": "/audio/pw/pw9-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw10",
+   "title": "法律与社会",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw10-w1",
+     "word": "law",
+     "phonetic": "lɔː",
+     "pos": "n.",
+     "meaning": "法律",
+     "audio": "/audio/pw/pw10-w1.mp3"
+    },
+    {
+     "id": "pw10-w2",
+     "word": "legal",
+     "phonetic": "ˈliːɡl",
+     "pos": "adj.",
+     "meaning": "合法的",
+     "audio": "/audio/pw/pw10-w2.mp3"
+    },
+    {
+     "id": "pw10-w3",
+     "word": "illegal",
+     "phonetic": "ɪˈliːɡl",
+     "pos": "adj.",
+     "meaning": "非法的",
+     "audio": "/audio/pw/pw10-w3.mp3"
+    },
+    {
+     "id": "pw10-w4",
+     "word": "rule",
+     "phonetic": "ruːl",
+     "pos": "n.",
+     "meaning": "规则",
+     "audio": "/audio/pw/pw10-w4.mp3"
+    },
+    {
+     "id": "pw10-w5",
+     "word": "regulation",
+     "phonetic": "ˌreɡjuˈleɪʃn",
+     "pos": "n.",
+     "meaning": "规章",
+     "audio": "/audio/pw/pw10-w5.mp3"
+    },
+    {
+     "id": "pw10-w6",
+     "word": "crime",
+     "phonetic": "kraɪm",
+     "pos": "n.",
+     "meaning": "犯罪",
+     "audio": "/audio/pw/pw10-w6.mp3"
+    },
+    {
+     "id": "pw10-w7",
+     "word": "criminal",
+     "phonetic": "ˈkrɪmɪnl",
+     "pos": "n.",
+     "meaning": "罪犯",
+     "audio": "/audio/pw/pw10-w7.mp3"
+    },
+    {
+     "id": "pw10-w8",
+     "word": "police",
+     "phonetic": "pəˈliːs",
+     "pos": "n.",
+     "meaning": "警察",
+     "audio": "/audio/pw/pw10-w8.mp3"
+    },
+    {
+     "id": "pw10-w9",
+     "word": "court",
+     "phonetic": "kɔːt",
+     "pos": "n.",
+     "meaning": "法庭",
+     "audio": "/audio/pw/pw10-w9.mp3"
+    },
+    {
+     "id": "pw10-w10",
+     "word": "judge",
+     "phonetic": "dʒʌdʒ",
+     "pos": "n.",
+     "meaning": "法官",
+     "audio": "/audio/pw/pw10-w10.mp3"
+    },
+    {
+     "id": "pw10-w11",
+     "word": "justice",
+     "phonetic": "ˈdʒʌstɪs",
+     "pos": "n.",
+     "meaning": "正义",
+     "audio": "/audio/pw/pw10-w11.mp3"
+    },
+    {
+     "id": "pw10-w12",
+     "word": "rights",
+     "phonetic": "raɪts",
+     "pos": "n.",
+     "meaning": "权利",
+     "audio": "/audio/pw/pw10-w12.mp3"
+    },
+    {
+     "id": "pw10-w13",
+     "word": "freedom",
+     "phonetic": "ˈfriːdəm",
+     "pos": "n.",
+     "meaning": "自由",
+     "audio": "/audio/pw/pw10-w13.mp3"
+    },
+    {
+     "id": "pw10-w14",
+     "word": "citizen",
+     "phonetic": "ˈsɪtɪzn",
+     "pos": "n.",
+     "meaning": "公民",
+     "audio": "/audio/pw/pw10-w14.mp3"
+    },
+    {
+     "id": "pw10-w15",
+     "word": "responsibility",
+     "phonetic": "rɪˌspɒnsəˈbɪləti",
+     "pos": "n.",
+     "meaning": "责任",
+     "audio": "/audio/pw/pw10-w15.mp3"
+    },
+    {
+     "id": "pw10-w16",
+     "word": "duty",
+     "phonetic": "ˈdjuːti",
+     "pos": "n.",
+     "meaning": "义务",
+     "audio": "/audio/pw/pw10-w16.mp3"
+    },
+    {
+     "id": "pw10-w17",
+     "word": "safety",
+     "phonetic": "ˈseɪfti",
+     "pos": "n.",
+     "meaning": "安全",
+     "audio": "/audio/pw/pw10-w17.mp3"
+    },
+    {
+     "id": "pw10-w18",
+     "word": "punishment",
+     "phonetic": "ˈpʌnɪʃmənt",
+     "pos": "n.",
+     "meaning": "惩罚",
+     "audio": "/audio/pw/pw10-w18.mp3"
+    },
+    {
+     "id": "pw10-w19",
+     "word": "evidence",
+     "phonetic": "ˈevɪdəns",
+     "pos": "n.",
+     "meaning": "证据",
+     "audio": "/audio/pw/pw10-w19.mp3"
+    },
+    {
+     "id": "pw10-w20",
+     "word": "permission",
+     "phonetic": "pəˈmɪʃn",
+     "pos": "n.",
+     "meaning": "许可",
+     "audio": "/audio/pw/pw10-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw11",
+   "title": "抽象概念",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw11-w1",
+     "word": "idea",
+     "phonetic": "aɪˈdɪə",
+     "pos": "n.",
+     "meaning": "想法；主意",
+     "audio": "/audio/pw/pw11-w1.mp3"
+    },
+    {
+     "id": "pw11-w2",
+     "word": "opinion",
+     "phonetic": "əˈpɪnjən",
+     "pos": "n.",
+     "meaning": "意见；看法",
+     "audio": "/audio/pw/pw11-w2.mp3"
+    },
+    {
+     "id": "pw11-w3",
+     "word": "decision",
+     "phonetic": "dɪˈsɪʒn",
+     "pos": "n.",
+     "meaning": "决定",
+     "audio": "/audio/pw/pw11-w3.mp3"
+    },
+    {
+     "id": "pw11-w4",
+     "word": "choice",
+     "phonetic": "tʃɔɪs",
+     "pos": "n.",
+     "meaning": "选择",
+     "audio": "/audio/pw/pw11-w4.mp3"
+    },
+    {
+     "id": "pw11-w5",
+     "word": "problem",
+     "phonetic": "ˈprɒbləm",
+     "pos": "n.",
+     "meaning": "问题",
+     "audio": "/audio/pw/pw11-w5.mp3"
+    },
+    {
+     "id": "pw11-w6",
+     "word": "solution",
+     "phonetic": "səˈluːʃn",
+     "pos": "n.",
+     "meaning": "解决办法",
+     "audio": "/audio/pw/pw11-w6.mp3"
+    },
+    {
+     "id": "pw11-w7",
+     "word": "reason",
+     "phonetic": "ˈriːzn",
+     "pos": "n.",
+     "meaning": "原因；理由",
+     "audio": "/audio/pw/pw11-w7.mp3"
+    },
+    {
+     "id": "pw11-w8",
+     "word": "importance",
+     "phonetic": "ɪmˈpɔːtns",
+     "pos": "n.",
+     "meaning": "重要性",
+     "audio": "/audio/pw/pw11-w8.mp3"
+    },
+    {
+     "id": "pw11-w9",
+     "word": "value",
+     "phonetic": "ˈvæljuː",
+     "pos": "n.",
+     "meaning": "价值",
+     "audio": "/audio/pw/pw11-w9.mp3"
+    },
+    {
+     "id": "pw11-w10",
+     "word": "success",
+     "phonetic": "səkˈses",
+     "pos": "n.",
+     "meaning": "成功",
+     "audio": "/audio/pw/pw11-w10.mp3"
+    },
+    {
+     "id": "pw11-w11",
+     "word": "failure",
+     "phonetic": "ˈfeɪljə",
+     "pos": "n.",
+     "meaning": "失败",
+     "audio": "/audio/pw/pw11-w11.mp3"
+    },
+    {
+     "id": "pw11-w12",
+     "word": "challenge",
+     "phonetic": "ˈtʃælɪndʒ",
+     "pos": "n.",
+     "meaning": "挑战",
+     "audio": "/audio/pw/pw11-w12.mp3"
+    },
+    {
+     "id": "pw11-w13",
+     "word": "goal",
+     "phonetic": "ɡəʊl",
+     "pos": "n.",
+     "meaning": "目标",
+     "audio": "/audio/pw/pw11-w13.mp3"
+    },
+    {
+     "id": "pw11-w14",
+     "word": "plan",
+     "phonetic": "plæn",
+     "pos": "n.",
+     "meaning": "计划",
+     "audio": "/audio/pw/pw11-w14.mp3"
+    },
+    {
+     "id": "pw11-w15",
+     "word": "future",
+     "phonetic": "ˈfjuːtʃə",
+     "pos": "n.",
+     "meaning": "未来",
+     "audio": "/audio/pw/pw11-w15.mp3"
+    },
+    {
+     "id": "pw11-w16",
+     "word": "luck",
+     "phonetic": "lʌk",
+     "pos": "n.",
+     "meaning": "运气",
+     "audio": "/audio/pw/pw11-w16.mp3"
+    },
+    {
+     "id": "pw11-w17",
+     "word": "courage",
+     "phonetic": "ˈkʌrɪdʒ",
+     "pos": "n.",
+     "meaning": "勇气",
+     "audio": "/audio/pw/pw11-w17.mp3"
+    },
+    {
+     "id": "pw11-w18",
+     "word": "confidence",
+     "phonetic": "ˈkɒnfɪdəns",
+     "pos": "n.",
+     "meaning": "信心",
+     "audio": "/audio/pw/pw11-w18.mp3"
+    },
+    {
+     "id": "pw11-w19",
+     "word": "effort",
+     "phonetic": "ˈefət",
+     "pos": "n.",
+     "meaning": "努力",
+     "audio": "/audio/pw/pw11-w19.mp3"
+    },
+    {
+     "id": "pw11-w20",
+     "word": "progress",
+     "phonetic": "ˈprəʊɡres",
+     "pos": "n.",
+     "meaning": "进步",
+     "audio": "/audio/pw/pw11-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "pw12",
+   "title": "学术与语言",
+   "count": 20,
+   "words": [
+    {
+     "id": "pw12-w1",
+     "word": "academic",
+     "phonetic": "ˌækəˈdemɪk",
+     "pos": "adj.",
+     "meaning": "学术的",
+     "audio": "/audio/pw/pw12-w1.mp3"
+    },
+    {
+     "id": "pw12-w2",
+     "word": "language",
+     "phonetic": "ˈlæŋɡwɪdʒ",
+     "pos": "n.",
+     "meaning": "语言",
+     "audio": "/audio/pw/pw12-w2.mp3"
+    },
+    {
+     "id": "pw12-w3",
+     "word": "grammar",
+     "phonetic": "ˈɡræmə",
+     "pos": "n.",
+     "meaning": "语法",
+     "audio": "/audio/pw/pw12-w3.mp3"
+    },
+    {
+     "id": "pw12-w4",
+     "word": "vocabulary",
+     "phonetic": "vəˈkæbjələri",
+     "pos": "n.",
+     "meaning": "词汇",
+     "audio": "/audio/pw/pw12-w4.mp3"
+    },
+    {
+     "id": "pw12-w5",
+     "word": "pronunciation",
+     "phonetic": "prəˌnʌnsiˈeɪʃn",
+     "pos": "n.",
+     "meaning": "发音",
+     "audio": "/audio/pw/pw12-w5.mp3"
+    },
+    {
+     "id": "pw12-w6",
+     "word": "conversation",
+     "phonetic": "ˌkɒnvəˈseɪʃn",
+     "pos": "n.",
+     "meaning": "对话",
+     "audio": "/audio/pw/pw12-w6.mp3"
+    },
+    {
+     "id": "pw12-w7",
+     "word": "translate",
+     "phonetic": "trænzˈleɪt",
+     "pos": "v.",
+     "meaning": "翻译",
+     "audio": "/audio/pw/pw12-w7.mp3"
+    },
+    {
+     "id": "pw12-w8",
+     "word": "dictionary",
+     "phonetic": "ˈdɪkʃənri",
+     "pos": "n.",
+     "meaning": "词典",
+     "audio": "/audio/pw/pw12-w8.mp3"
+    },
+    {
+     "id": "pw12-w9",
+     "word": "essay",
+     "phonetic": "ˈeseɪ",
+     "pos": "n.",
+     "meaning": "文章；短文",
+     "audio": "/audio/pw/pw12-w9.mp3"
+    },
+    {
+     "id": "pw12-w10",
+     "word": "report",
+     "phonetic": "rɪˈpɔːt",
+     "pos": "n.",
+     "meaning": "报告",
+     "audio": "/audio/pw/pw12-w10.mp3"
+    },
+    {
+     "id": "pw12-w11",
+     "word": "presentation",
+     "phonetic": "ˌpreznˈteɪʃn",
+     "pos": "n.",
+     "meaning": "演示；报告",
+     "audio": "/audio/pw/pw12-w11.mp3"
+    },
+    {
+     "id": "pw12-w12",
+     "word": "discuss",
+     "phonetic": "dɪˈskʌs",
+     "pos": "v.",
+     "meaning": "讨论",
+     "audio": "/audio/pw/pw12-w12.mp3"
+    },
+    {
+     "id": "pw12-w13",
+     "word": "explain",
+     "phonetic": "ɪkˈspleɪn",
+     "pos": "v.",
+     "meaning": "解释",
+     "audio": "/audio/pw/pw12-w13.mp3"
+    },
+    {
+     "id": "pw12-w14",
+     "word": "describe",
+     "phonetic": "dɪˈskraɪb",
+     "pos": "v.",
+     "meaning": "描述",
+     "audio": "/audio/pw/pw12-w14.mp3"
+    },
+    {
+     "id": "pw12-w15",
+     "word": "compare",
+     "phonetic": "kəmˈpeə",
+     "pos": "v.",
+     "meaning": "比较",
+     "audio": "/audio/pw/pw12-w15.mp3"
+    },
+    {
+     "id": "pw12-w16",
+     "word": "analyse",
+     "phonetic": "ˈænəlaɪz",
+     "pos": "v.",
+     "meaning": "分析",
+     "audio": "/audio/pw/pw12-w16.mp3"
+    },
+    {
+     "id": "pw12-w17",
+     "word": "summarise",
+     "phonetic": "ˈsʌməraɪz",
+     "pos": "v.",
+     "meaning": "总结",
+     "audio": "/audio/pw/pw12-w17.mp3"
+    },
+    {
+     "id": "pw12-w18",
+     "word": "argument",
+     "phonetic": "ˈɑːɡjumənt",
+     "pos": "n.",
+     "meaning": "论点；争论",
+     "audio": "/audio/pw/pw12-w18.mp3"
+    },
+    {
+     "id": "pw12-w19",
+     "word": "paragraph",
+     "phonetic": "ˈpærəɡrɑːf",
+     "pos": "n.",
+     "meaning": "段落",
+     "audio": "/audio/pw/pw12-w19.mp3"
+    },
+    {
+     "id": "pw12-w20",
+     "word": "reference",
+     "phonetic": "ˈrefrəns",
+     "pos": "n.",
+     "meaning": "参考",
+     "audio": "/audio/pw/pw12-w20.mp3"
+    }
+   ]
+  }
+ ]
+}

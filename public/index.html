@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>szgaokao.科科通 · 小学 / 中考 / 高考 多学科题库</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; --ok:#2a8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:960px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:20px 18px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:22px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:5px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .tabs { display:flex; gap:8px; margin-bottom:14px; }
+  .tabs button { flex:1; padding:10px; border:none; border-radius:10px; background:#eee; font-size:15px; cursor:pointer; }
+  .tabs button.on { background:#ff5e62; color:#fff; }
+  label { display:block; font-size:13px; color:#666; margin:10px 0 4px; }
+  input { width:100%; padding:11px; border:1px solid #ddd; border-radius:10px; font-size:15px; }
+  .btn { width:100%; padding:12px; border:none; border-radius:10px; background:#ff5e62; color:#fff; font-size:16px; cursor:pointer; margin-top:14px; }
+  .btn.gray { background:#f0f0f0; color:#999; }
+  .msg { font-size:13px; margin-top:10px; min-height:18px; }
+  .msg.err { color:#e23; } .msg.ok { color:#2a8; }
+
+  /* —— 模块入口 —— */
+  .mods { display:flex; gap:14px; flex-wrap:wrap; }
+  .mod-card { flex:1; min-width:250px; background:#fff; border-radius:16px; padding:20px 18px; box-shadow:0 4px 16px rgba(0,0,0,.05); border:2px solid transparent; transition:border-color .15s; }
+  .mod-card .icon { font-size:30px; margin-bottom:10px; }
+  .mod-card .name { font-size:17px; font-weight:800; }
+  .mod-card .desc { font-size:12.5px; color:#999; margin:6px 0 4px; line-height:1.5; }
+  .mod-card .state { display:inline-block; font-size:12px; padding:3px 12px; border-radius:12px; margin-top:4px; font-weight:700; }
+  .state.ok { background:#e8f8ee; color:#2a8; }
+  .state.trial { background:#fffbe8; color:#b8860b; }
+  .state.no { background:#f0f0f0; color:#999; }
+  .mod-card .go { width:100%; margin-top:14px; padding:12px; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer; }
+  .go.on { background:#ff5e62; color:#fff; }
+  .go.off { background:#f0f0f0; color:#b5b5b5; cursor:not-allowed; }
+
+  /* —— 账号条 —— */
+  .acctbar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .acctbar .u { font-weight:800; font-size:15px; }
+  .acctbar .tag { background:#fff0ef; color:#ff5e62; font-size:12px; padding:4px 12px; border-radius:12px; }
+  .acctbar .spacer { flex:1; }
+  .logout { padding:9px 16px; border:none; border-radius:12px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .dev-note { font-size:12px; color:#999; margin-top:8px; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fffbe8; border:1px dashed #d8c98a; border-radius:12px; padding:12px 14px; font-size:13px; color:#7a5c00; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  .hint { font-size:12px; color:#aaa; text-align:center; margin-top:14px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🎓 szgaokao.科科通 · 多学科题库</h1>
+    <p>幼儿 · 小学 · 中考 · 高考全学段 ｜ 英语听说 / 单词，数学等学科持续上新 — 注册登录后按模块授权使用</p>
+  </div>
+
+  <!-- 学情工作台 顶部导航 -->
+  <div class="card" style="background:linear-gradient(135deg,#6a5cff,#9b6cff);color:#fff;border:none;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:16px;font-weight:800;">📊 学情工作台</div>
+        <div style="font-size:12px;opacity:.92;margin-top:3px;">自主学习辅助 · 跨模块学情打通（不授课 · 不保分）</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+        <a href="./study.html#check" style="padding:7px 14px;border-radius:14px;background:rgba(255,255,255,.25);color:#fff;text-decoration:none;font-size:13px;font-weight:700;">🔍 基础自检中心</a>
+        <a href="./study.html#weak" style="padding:7px 14px;border-radius:14px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:13px;">📉 我的薄弱点</a>
+        <a href="./study.html#wrong" style="padding:7px 14px;border-radius:14px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:13px;">📕 错题本</a>
+        <a href="./study.html#report" style="padding:7px 14px;border-radius:14px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:13px;">📈 学习报告</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 登录/注册 -->
+  <div class="card" id="authCard">
+    <div class="tabs">
+      <button id="tabLogin" class="on" onclick="switchTab('login')">登录</button>
+      <button id="tabReg" onclick="switchTab('reg')">注册</button>
+    </div>
+    <div id="regBox" class="hidden">
+      <label>用户名</label><input id="regUser" placeholder="字母/数字">
+      <label>密码（至少 6 位）</label><input id="regPw" type="password">
+      <button class="btn" onclick="register()">注册并登录</button>
+    </div>
+    <div id="loginBox">
+      <label>用户名</label><input id="loginUser" placeholder="用户名">
+      <label>密码</label><input id="loginPw" type="password">
+      <button class="btn" onclick="login()">登录</button>
+    </div>
+    <div class="msg" id="authMsg"></div>
+  </div>
+
+  <!-- 已登录账号条 -->
+  <div class="card" id="acctBar" style="display:none">
+    <div class="acctbar">
+      <span class="u" id="acctName">—</span>
+      <span class="tag" id="acctTag">体验模式</span>
+      <div class="spacer"></div>
+      <button class="logout" onclick="logout()">退出登录</button>
+    </div>
+    <div class="dev-note" id="devNote"></div>
+  </div>
+
+  <!-- 激活授权码 -->
+  <div class="card" id="actCard" style="display:none">
+    <b>🔑 激活授权码</b>（一个授权码解锁全部模块）
+    <label>授权码（8 位，购买/领取后填入）</label>
+    <input id="code" placeholder="如 K7M2P9QX" style="text-transform:uppercase">
+    <button class="btn" onclick="activate()">激活并解锁</button>
+    <div class="msg" id="actMsg"></div>
+  </div>
+
+  <!-- 模块入口 -->
+  <div class="mods">
+    <div class="mod-card" id="mod-kids">
+      <div class="icon">🧸</div>
+      <div class="name">幼儿启蒙英语 · 听读背记</div>
+      <div class="desc">6 大主题 · 120 个启蒙词 + 4 套听说练习，标准英音慢速，从零开始磨耳朵</div>
+      <div><span class="state" id="st-kids">加载中</span></div>
+      <button class="go" id="go-kids" onclick="enterMod('kids')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-primary">
+      <div class="icon">📖</div>
+      <div class="name">小学英语 · 听读背记</div>
+      <div class="desc">12 组主题 · 240 个单词，标准英音拼读、跟读、听写背记</div>
+      <div><span class="state" id="st-primary">加载中</span></div>
+      <button class="go" id="go-primary" onclick="enterMod('primary')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-middle">
+      <div class="icon">🎧</div>
+      <div class="name">中考英语 · 听说专项</div>
+      <div class="desc">16 套模拟卷 · 448 题，英音男女双声 · 慢速跟练</div>
+      <div><span class="state" id="st-middle">加载中</span></div>
+      <button class="go" id="go-middle" onclick="enterMod('middle')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-gk">
+      <div class="icon">🎓</div>
+      <div class="name">高考英语 · 三问五答</div>
+      <div class="desc">12 套 Part B 角色扮演，情景对话 → 三问 → 五答 → 解析</div>
+      <div><span class="state" id="st-gk">加载中</span></div>
+      <button class="go" id="go-gk" onclick="enterMod('gk')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-math">
+      <div class="icon">🧮</div>
+      <div class="name">数学 · 思维训练</div>
+      <div class="desc">小学三年级至初中一年级 · 同步校内 · 选择/判断即时判分 · 讲清思路</div>
+      <div><span class="state" id="st-math">加载中</span></div>
+      <button class="go" id="go-math" onclick="enterMod('math')">进入模块</button>
+    </div>
+  </div>
+
+  <!-- 微信联系卡 -->
+  <div class="card" id="wxCard" style="display:none">
+    <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元</div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+const MODINFO = {
+  kids:    { url: './kids.html', name: '幼儿启蒙英语 · 听读背记' },
+  primary: { url: './words.html', name: '小学英语 · 听读背记' },
+  middle:  { url: './quiz.html',  name: '中考英语 · 听说专项' },
+  gk:      { url: './gaokao.html', name: '高考英语 · 三问五答' },
+  math:    { url: './math.html',  name: '数学 · 思维训练' },
+};
+let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
+let ACCT = { username: '', expiry: null, authorized: false };
+let DEV = { n: 0, max: 2 };
+
+function $(id) { return document.getElementById(id); }
+function show(id, on) { $(id).style.display = on ? '' : 'none'; }
+function setMsg(id, t, cls) { const e = $(id); e.textContent = t; e.className = 'msg ' + (cls || ''); }
+function switchTab(t) {
+  $('tabLogin').className = t === 'login' ? 'on' : '';
+  $('tabReg').className = t === 'reg' ? 'on' : '';
+  $('loginBox').classList.toggle('hidden', t !== 'login');
+  $('regBox').classList.toggle('hidden', t !== 'reg');
+  show('loginBox', t === 'login'); show('regBox', t === 'reg');
+}
+
+async function register() {
+  const r = await api('/api/register', { method: 'POST', headers: H(), body: JSON.stringify({ username: regUser.value, password: regPw.value }) });
+  if (r.s === 200) { TOKEN = r.j.token; localStorage.setItem('token', TOKEN); afterLogin(); }
+  else setMsg('authMsg', r.j.error || '注册失败', 'err');
+}
+async function login() {
+  const r = await api('/api/login', { method: 'POST', headers: H(), body: JSON.stringify({ username: loginUser.value, password: loginPw.value }) });
+  if (r.s === 200) { TOKEN = r.j.token; localStorage.setItem('token', TOKEN); afterLogin(); }
+  else setMsg('authMsg', r.j.error || '登录失败', 'err');
+}
+async function activate() {
+  const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, middle: 1, gk: 1, math: 1 }; renderHome(); }
+  else setMsg('actMsg', r.j.error || '激活失败', 'err');
+}
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
+
+function renderMod(m, el) {
+  const st = $('st-' + m), go = $('go-' + m);
+  const locked = !MODS[m];
+  if (locked) {
+    st.className = 'state trial'; st.textContent = TOKEN ? '未授权此模块 · 可体验' : '登录后可用';
+    go.className = 'go off'; go.textContent = TOKEN ? '🔒 未解锁' : '登录后进入';
+  } else {
+    st.className = 'state ok'; st.textContent = '已解锁';
+    go.className = 'go on'; go.textContent = '进入模块 →';
+  }
+}
+function enterMod(m) {
+  if (!TOKEN) { setMsg('authMsg', '请先登录后再进入模块', 'err'); $('authCard').scrollIntoView({ behavior: 'smooth' }); return; }
+  if (!MODS[m]) {
+    if ($('actCard').style.display !== 'none') $('actCard').scrollIntoView({ behavior: 'smooth' });
+    alert(MODINFO[m].name + ' 未授权：输入授权码可一键解锁全部模块，或联系管理员微信 13538237315 开通对应模块。');
+    return;
+  }
+  location.href = MODINFO[m].url;
+}
+function renderHome() {
+  if (TOKEN) {
+    show('authCard', false);
+    show('acctBar', true);
+    $('acctName').textContent = ACCT.username;
+    $('acctTag').textContent = ACCT.authorized ? (ACCT.expiry ? '已授权' : '已授权') : '体验模式';
+    $('devNote').textContent = `本账号已绑定设备 ${DEV.n} / ${DEV.max} 台`;
+    const anyLocked = !MODS.kids || !MODS.primary || !MODS.middle || !MODS.gk || !MODS.math;
+    show('actCard', anyLocked);
+    show('wxCard', anyLocked || !ACCT.authorized);
+    if (anyLocked) setMsg('actMsg', ACCT.authorized ? '当前部分模块未解锁，输入授权码解锁全部模块，或联系管理员开通对应模块。' : '当前为体验模式，每个模块可免费体验一个单元。');
+  } else {
+    show('authCard', true);
+    show('acctBar', false);
+    show('actCard', false);
+    show('wxCard', true);
+  }
+  ['kids', 'primary', 'middle', 'gk', 'math'].forEach(m => renderMod(m));
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { logout(); return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null, authorized: !!r.j.authorized };
+  MODS = r.j.modules || {};
+  renderHome();
+}
+if (TOKEN) afterLogin(); else renderHome();
+</script>
+</body>
+</html>

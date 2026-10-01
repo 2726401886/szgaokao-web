@@ -1,0 +1,996 @@
+{
+  "product": "小升初英语衔接包（8 单元）",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "语法要点 + 衔接词 + 小测；内容 AI 生成待创始人校对",
+  "units": [
+    {
+      "id": "jl1",
+      "title": "be 动词与自我介绍",
+      "grammar": [
+        {
+          "point": "be 动词三兄弟：am / is / are",
+          "example": "I am Tom. You are my friend. He is a pupil.",
+          "cn": "我是汤姆。你是我的朋友。他是小学生。",
+          "audio": "/audio/jl/jl1-g1.mp3"
+        },
+        {
+          "point": "I 用 am，he/she/it 用 is，you/we/they 用 are",
+          "example": "She is a teacher. We are students.",
+          "cn": "她是老师。我们是学生。",
+          "audio": "/audio/jl/jl1-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl1-w1",
+          "word": "name",
+          "phonetic": "neɪm",
+          "meaning": "名字",
+          "audio": "/audio/jl/jl1-w1.mp3"
+        },
+        {
+          "id": "jl1-w2",
+          "word": "age",
+          "phonetic": "eɪdʒ",
+          "meaning": "年龄",
+          "audio": "/audio/jl/jl1-w2.mp3"
+        },
+        {
+          "id": "jl1-w3",
+          "word": "hobby",
+          "phonetic": "ˈhɒbi",
+          "meaning": "爱好",
+          "audio": "/audio/jl/jl1-w3.mp3"
+        },
+        {
+          "id": "jl1-w4",
+          "word": "birthday",
+          "phonetic": "ˈbɜːθdeɪ",
+          "meaning": "生日",
+          "audio": "/audio/jl/jl1-w4.mp3"
+        },
+        {
+          "id": "jl1-w5",
+          "word": "address",
+          "phonetic": "əˈdres",
+          "meaning": "地址",
+          "audio": "/audio/jl/jl1-w5.mp3"
+        },
+        {
+          "id": "jl1-w6",
+          "word": "email",
+          "phonetic": "ˈiːmeɪl",
+          "meaning": "电子邮件",
+          "audio": "/audio/jl/jl1-w6.mp3"
+        },
+        {
+          "id": "jl1-w7",
+          "word": "phone",
+          "phonetic": "fəʊn",
+          "meaning": "电话",
+          "audio": "/audio/jl/jl1-w7.mp3"
+        },
+        {
+          "id": "jl1-w8",
+          "word": "introduce",
+          "phonetic": "ˌɪntrəˈdjuːs",
+          "meaning": "介绍",
+          "audio": "/audio/jl/jl1-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl1-p1",
+          "q": "I ___ a pupil.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 0,
+          "tip": "I 用 am。"
+        },
+        {
+          "id": "jl1-p2",
+          "q": "She ___ my sister.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 1,
+          "tip": "she 用 is。"
+        },
+        {
+          "id": "jl1-p3",
+          "q": "We ___ good friends.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 2,
+          "tip": "we 用 are。"
+        },
+        {
+          "id": "jl1-p4",
+          "q": "___ you Tom? Yes, I am.",
+          "options": [
+            "Is",
+            "Are",
+            "Am"
+          ],
+          "answer": 1,
+          "tip": "you 用 are。"
+        }
+      ]
+    },
+    {
+      "id": "jl2",
+      "title": "名词复数",
+      "grammar": [
+        {
+          "point": "规则复数：一般加 -s；s/x/ch/sh 结尾加 -es",
+          "example": "book → books; box → boxes; watch → watches",
+          "cn": "书；盒子；手表。",
+          "audio": "/audio/jl/jl2-g1.mp3"
+        },
+        {
+          "point": "辅音字母 + y 结尾：变 y 为 i 加 -es",
+          "example": "city → cities; baby → babies",
+          "cn": "城市；婴儿。",
+          "audio": "/audio/jl/jl2-g2.mp3"
+        },
+        {
+          "point": "不规则复数要牢记",
+          "example": "man → men; child → children; foot → feet",
+          "cn": "男人；孩子；脚。",
+          "audio": "/audio/jl/jl2-g3.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl2-w1",
+          "word": "book",
+          "phonetic": "bʊk",
+          "meaning": "书",
+          "audio": "/audio/jl/jl2-w1.mp3"
+        },
+        {
+          "id": "jl2-w2",
+          "word": "box",
+          "phonetic": "bɒks",
+          "meaning": "盒子",
+          "audio": "/audio/jl/jl2-w2.mp3"
+        },
+        {
+          "id": "jl2-w3",
+          "word": "city",
+          "phonetic": "ˈsɪti",
+          "meaning": "城市",
+          "audio": "/audio/jl/jl2-w3.mp3"
+        },
+        {
+          "id": "jl2-w4",
+          "word": "baby",
+          "phonetic": "ˈbeɪbi",
+          "meaning": "婴儿",
+          "audio": "/audio/jl/jl2-w4.mp3"
+        },
+        {
+          "id": "jl2-w5",
+          "word": "man",
+          "phonetic": "mæn",
+          "meaning": "男人",
+          "audio": "/audio/jl/jl2-w5.mp3"
+        },
+        {
+          "id": "jl2-w6",
+          "word": "child",
+          "phonetic": "tʃaɪld",
+          "meaning": "孩子",
+          "audio": "/audio/jl/jl2-w6.mp3"
+        },
+        {
+          "id": "jl2-w7",
+          "word": "foot",
+          "phonetic": "fʊt",
+          "meaning": "脚",
+          "audio": "/audio/jl/jl2-w7.mp3"
+        },
+        {
+          "id": "jl2-w8",
+          "word": "tooth",
+          "phonetic": "tuːθ",
+          "meaning": "牙齿",
+          "audio": "/audio/jl/jl2-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl2-p1",
+          "q": "one box, two ___",
+          "options": [
+            "boxs",
+            "boxes",
+            "box"
+          ],
+          "answer": 1,
+          "tip": "box 加 -es。"
+        },
+        {
+          "id": "jl2-p2",
+          "q": "one city, two ___",
+          "options": [
+            "citys",
+            "cities",
+            "cityes"
+          ],
+          "answer": 1,
+          "tip": "city → cities。"
+        },
+        {
+          "id": "jl2-p3",
+          "q": "one man, two ___",
+          "options": [
+            "mans",
+            "men",
+            "mens"
+          ],
+          "answer": 1,
+          "tip": "man 不规则，men。"
+        },
+        {
+          "id": "jl2-p4",
+          "q": "one child, three ___",
+          "options": [
+            "childs",
+            "children",
+            "childrens"
+          ],
+          "answer": 1,
+          "tip": "child → children。"
+        }
+      ]
+    },
+    {
+      "id": "jl3",
+      "title": "代词",
+      "grammar": [
+        {
+          "point": "主格做主语：I / you / he / she / it / we / they",
+          "example": "I like English. They are my friends.",
+          "cn": "我喜欢英语。他们是我的朋友。",
+          "audio": "/audio/jl/jl3-g1.mp3"
+        },
+        {
+          "point": "宾格做宾语：me / you / him / her / it / us / them",
+          "example": "Please help me. I like her.",
+          "cn": "请帮帮我。我喜欢她。",
+          "audio": "/audio/jl/jl3-g2.mp3"
+        },
+        {
+          "point": "物主代词表所属：my / your / his / her / its / our / their",
+          "example": "This is my book. That is your pen.",
+          "cn": "这是我的书。那是你的钢笔。",
+          "audio": "/audio/jl/jl3-g3.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl3-w1",
+          "word": "I",
+          "phonetic": "aɪ",
+          "meaning": "我",
+          "audio": "/audio/jl/jl3-w1.mp3"
+        },
+        {
+          "id": "jl3-w2",
+          "word": "you",
+          "phonetic": "juː",
+          "meaning": "你",
+          "audio": "/audio/jl/jl3-w2.mp3"
+        },
+        {
+          "id": "jl3-w3",
+          "word": "he",
+          "phonetic": "hiː",
+          "meaning": "他",
+          "audio": "/audio/jl/jl3-w3.mp3"
+        },
+        {
+          "id": "jl3-w4",
+          "word": "she",
+          "phonetic": "ʃiː",
+          "meaning": "她",
+          "audio": "/audio/jl/jl3-w4.mp3"
+        },
+        {
+          "id": "jl3-w5",
+          "word": "we",
+          "phonetic": "wiː",
+          "meaning": "我们",
+          "audio": "/audio/jl/jl3-w5.mp3"
+        },
+        {
+          "id": "jl3-w6",
+          "word": "they",
+          "phonetic": "ðeɪ",
+          "meaning": "他们",
+          "audio": "/audio/jl/jl3-w6.mp3"
+        },
+        {
+          "id": "jl3-w7",
+          "word": "my",
+          "phonetic": "maɪ",
+          "meaning": "我的",
+          "audio": "/audio/jl/jl3-w7.mp3"
+        },
+        {
+          "id": "jl3-w8",
+          "word": "their",
+          "phonetic": "ðeə",
+          "meaning": "他们的",
+          "audio": "/audio/jl/jl3-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl3-p1",
+          "q": "___ am a pupil.",
+          "options": [
+            "I",
+            "Me",
+            "My"
+          ],
+          "answer": 0,
+          "tip": "主格 I 做主语。"
+        },
+        {
+          "id": "jl3-p2",
+          "q": "Please give ___ the book.",
+          "options": [
+            "I",
+            "me",
+            "my"
+          ],
+          "answer": 1,
+          "tip": "give 后接宾格 me。"
+        },
+        {
+          "id": "jl3-p3",
+          "q": "This is ___ new bag.",
+          "options": [
+            "I",
+            "me",
+            "my"
+          ],
+          "answer": 2,
+          "tip": "我的书包 my bag。"
+        },
+        {
+          "id": "jl3-p4",
+          "q": "___ are good students.",
+          "options": [
+            "She",
+            "They",
+            "Her"
+          ],
+          "answer": 1,
+          "tip": "复数主格 they。"
+        }
+      ]
+    },
+    {
+      "id": "jl4",
+      "title": "一般现在时",
+      "grammar": [
+        {
+          "point": "表示经常性动作：动词原形（第三人称单数加 -s/-es）",
+          "example": "I get up at seven. She gets up at seven too.",
+          "cn": "我七点起床。她也七点起床。",
+          "audio": "/audio/jl/jl4-g1.mp3"
+        },
+        {
+          "point": "频率词：always / usually / often / sometimes",
+          "example": "I usually walk to school.",
+          "cn": "我通常步行上学。",
+          "audio": "/audio/jl/jl4-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl4-w1",
+          "word": "always",
+          "phonetic": "ˈɔːlweɪz",
+          "meaning": "总是",
+          "audio": "/audio/jl/jl4-w1.mp3"
+        },
+        {
+          "id": "jl4-w2",
+          "word": "usually",
+          "phonetic": "ˈjuːʒuəli",
+          "meaning": "通常",
+          "audio": "/audio/jl/jl4-w2.mp3"
+        },
+        {
+          "id": "jl4-w3",
+          "word": "often",
+          "phonetic": "ˈɒfn",
+          "meaning": "经常",
+          "audio": "/audio/jl/jl4-w3.mp3"
+        },
+        {
+          "id": "jl4-w4",
+          "word": "sometimes",
+          "phonetic": "ˈsʌmtaɪmz",
+          "meaning": "有时",
+          "audio": "/audio/jl/jl4-w4.mp3"
+        },
+        {
+          "id": "jl4-w5",
+          "word": "never",
+          "phonetic": "ˈnevə",
+          "meaning": "从不",
+          "audio": "/audio/jl/jl4-w5.mp3"
+        },
+        {
+          "id": "jl4-w6",
+          "word": "get up",
+          "phonetic": "ɡet ʌp",
+          "meaning": "起床",
+          "audio": "/audio/jl/jl4-w6.mp3"
+        },
+        {
+          "id": "jl4-w7",
+          "word": "go to school",
+          "phonetic": "ɡəʊ tuː skuːl",
+          "meaning": "去上学",
+          "audio": "/audio/jl/jl4-w7.mp3"
+        },
+        {
+          "id": "jl4-w8",
+          "word": "every day",
+          "phonetic": "ˈevri deɪ",
+          "meaning": "每天",
+          "audio": "/audio/jl/jl4-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl4-p1",
+          "q": "She ___ to school by bus.",
+          "options": [
+            "go",
+            "goes",
+            "going"
+          ],
+          "answer": 1,
+          "tip": "第三人称单数 goes。"
+        },
+        {
+          "id": "jl4-p2",
+          "q": "I ___ my homework every day.",
+          "options": [
+            "do",
+            "does",
+            "doing"
+          ],
+          "answer": 0,
+          "tip": "I 用原形 do。"
+        },
+        {
+          "id": "jl4-p3",
+          "q": "He ___ English very much.",
+          "options": [
+            "like",
+            "likes",
+            "liking"
+          ],
+          "answer": 1,
+          "tip": "he 用 likes。"
+        },
+        {
+          "id": "jl4-p4",
+          "q": "They ___ football on Sundays.",
+          "options": [
+            "play",
+            "plays",
+            "playing"
+          ],
+          "answer": 0,
+          "tip": "they 用原形 play。"
+        }
+      ]
+    },
+    {
+      "id": "jl5",
+      "title": "现在进行时",
+      "grammar": [
+        {
+          "point": "表示正在发生：be + 动词-ing",
+          "example": "I am reading. She is singing.",
+          "cn": "我正在看书。她正在唱歌。",
+          "audio": "/audio/jl/jl5-g1.mp3"
+        },
+        {
+          "point": "动词加 -ing 的规则",
+          "example": "run → running; make → making; read → reading",
+          "cn": "双写；去 e；直接加。",
+          "audio": "/audio/jl/jl5-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl5-w1",
+          "word": "read",
+          "phonetic": "riːd",
+          "meaning": "读",
+          "audio": "/audio/jl/jl5-w1.mp3"
+        },
+        {
+          "id": "jl5-w2",
+          "word": "write",
+          "phonetic": "raɪt",
+          "meaning": "写",
+          "audio": "/audio/jl/jl5-w2.mp3"
+        },
+        {
+          "id": "jl5-w3",
+          "word": "run",
+          "phonetic": "rʌn",
+          "meaning": "跑",
+          "audio": "/audio/jl/jl5-w3.mp3"
+        },
+        {
+          "id": "jl5-w4",
+          "word": "swim",
+          "phonetic": "swɪm",
+          "meaning": "游泳",
+          "audio": "/audio/jl/jl5-w4.mp3"
+        },
+        {
+          "id": "jl5-w5",
+          "word": "draw",
+          "phonetic": "drɔː",
+          "meaning": "画",
+          "audio": "/audio/jl/jl5-w5.mp3"
+        },
+        {
+          "id": "jl5-w6",
+          "word": "listen",
+          "phonetic": "ˈlɪsn",
+          "meaning": "听",
+          "audio": "/audio/jl/jl5-w6.mp3"
+        },
+        {
+          "id": "jl5-w7",
+          "word": "watch",
+          "phonetic": "wɒtʃ",
+          "meaning": "看",
+          "audio": "/audio/jl/jl5-w7.mp3"
+        },
+        {
+          "id": "jl5-w8",
+          "word": "now",
+          "phonetic": "naʊ",
+          "meaning": "现在",
+          "audio": "/audio/jl/jl5-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl5-p1",
+          "q": "Look! She ___ dancing.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 0,
+          "tip": "she 用 is + dancing。"
+        },
+        {
+          "id": "jl5-p2",
+          "q": "I ___ my homework now.",
+          "options": [
+            "am doing",
+            "is doing",
+            "do"
+          ],
+          "answer": 0,
+          "tip": "I am doing 现在进行。"
+        },
+        {
+          "id": "jl5-p3",
+          "q": "They ___ playing games.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 1,
+          "tip": "they 用 are。"
+        },
+        {
+          "id": "jl5-p4",
+          "q": "run 的 -ing 形式是 ___",
+          "options": [
+            "runing",
+            "running",
+            "run"
+          ],
+          "answer": 1,
+          "tip": "run 双写 n。"
+        }
+      ]
+    },
+    {
+      "id": "jl6",
+      "title": "介词",
+      "grammar": [
+        {
+          "point": "in / on / at 表时间与位置",
+          "example": "in the morning; on Monday; at 8 o'clock",
+          "cn": "在早上；在周一；在八点。",
+          "audio": "/audio/jl/jl6-g1.mp3"
+        },
+        {
+          "point": "under / behind / next to 表方位",
+          "example": "The cat is under the desk. The boy is behind the door.",
+          "cn": "猫在桌子下面。男孩在门后面。",
+          "audio": "/audio/jl/jl6-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl6-w1",
+          "word": "in",
+          "phonetic": "ɪn",
+          "meaning": "在…里",
+          "audio": "/audio/jl/jl6-w1.mp3"
+        },
+        {
+          "id": "jl6-w2",
+          "word": "on",
+          "phonetic": "ɒn",
+          "meaning": "在…上",
+          "audio": "/audio/jl/jl6-w2.mp3"
+        },
+        {
+          "id": "jl6-w3",
+          "word": "at",
+          "phonetic": "æt",
+          "meaning": "在（时刻）",
+          "audio": "/audio/jl/jl6-w3.mp3"
+        },
+        {
+          "id": "jl6-w4",
+          "word": "under",
+          "phonetic": "ˈʌndə",
+          "meaning": "在…下面",
+          "audio": "/audio/jl/jl6-w4.mp3"
+        },
+        {
+          "id": "jl6-w5",
+          "word": "behind",
+          "phonetic": "bɪˈhaɪnd",
+          "meaning": "在…后面",
+          "audio": "/audio/jl/jl6-w5.mp3"
+        },
+        {
+          "id": "jl6-w6",
+          "word": "next to",
+          "phonetic": "nekst tuː",
+          "meaning": "在…旁边",
+          "audio": "/audio/jl/jl6-w6.mp3"
+        },
+        {
+          "id": "jl6-w7",
+          "word": "between",
+          "phonetic": "bɪˈtwiːn",
+          "meaning": "在…之间",
+          "audio": "/audio/jl/jl6-w7.mp3"
+        },
+        {
+          "id": "jl6-w8",
+          "word": "in front of",
+          "phonetic": "ɪn frʌnt ɒv",
+          "meaning": "在…前面",
+          "audio": "/audio/jl/jl6-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl6-p1",
+          "q": "I get up ___ seven.",
+          "options": [
+            "in",
+            "at",
+            "on"
+          ],
+          "answer": 1,
+          "tip": "时刻用 at。"
+        },
+        {
+          "id": "jl6-p2",
+          "q": "We have PE ___ Monday.",
+          "options": [
+            "in",
+            "at",
+            "on"
+          ],
+          "answer": 2,
+          "tip": "星期用 on。"
+        },
+        {
+          "id": "jl6-p3",
+          "q": "The ball is ___ the chair.",
+          "options": [
+            "under",
+            "at",
+            "on time"
+          ],
+          "answer": 0,
+          "tip": "在椅子下面 under。"
+        },
+        {
+          "id": "jl6-p4",
+          "q": "She is sitting ___ me.",
+          "options": [
+            "between",
+            "next to",
+            "at"
+          ],
+          "answer": 1,
+          "tip": "在我旁边 next to。"
+        }
+      ]
+    },
+    {
+      "id": "jl7",
+      "title": "一般过去时",
+      "grammar": [
+        {
+          "point": "表示过去发生：be 动词 was/were；行为动词过去式",
+          "example": "I was at home yesterday. She went to the park.",
+          "cn": "我昨天在家。她去了公园。",
+          "audio": "/audio/jl/jl7-g1.mp3"
+        },
+        {
+          "point": "常见规则过去式加 -ed；不规则要记忆",
+          "example": "play → played; go → went; see → saw",
+          "cn": "玩过；去过；看见过。",
+          "audio": "/audio/jl/jl7-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl7-w1",
+          "word": "yesterday",
+          "phonetic": "ˈjestədeɪ",
+          "meaning": "昨天",
+          "audio": "/audio/jl/jl7-w1.mp3"
+        },
+        {
+          "id": "jl7-w2",
+          "word": "last",
+          "phonetic": "lɑːst",
+          "meaning": "上一个",
+          "audio": "/audio/jl/jl7-w2.mp3"
+        },
+        {
+          "id": "jl7-w3",
+          "word": "ago",
+          "phonetic": "əˈɡəʊ",
+          "meaning": "以前",
+          "audio": "/audio/jl/jl7-w3.mp3"
+        },
+        {
+          "id": "jl7-w4",
+          "word": "went",
+          "phonetic": "went",
+          "meaning": "去过",
+          "audio": "/audio/jl/jl7-w4.mp3"
+        },
+        {
+          "id": "jl7-w5",
+          "word": "saw",
+          "phonetic": "sɔː",
+          "meaning": "看见过",
+          "audio": "/audio/jl/jl7-w5.mp3"
+        },
+        {
+          "id": "jl7-w6",
+          "word": "was",
+          "phonetic": "wɒz",
+          "meaning": "是（过去）",
+          "audio": "/audio/jl/jl7-w6.mp3"
+        },
+        {
+          "id": "jl7-w7",
+          "word": "were",
+          "phonetic": "wɜː",
+          "meaning": "是（过去复数）",
+          "audio": "/audio/jl/jl7-w7.mp3"
+        },
+        {
+          "id": "jl7-w8",
+          "word": "visited",
+          "phonetic": "ˈvɪzɪtɪd",
+          "meaning": "参观过",
+          "audio": "/audio/jl/jl7-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl7-p1",
+          "q": "I ___ at home yesterday.",
+          "options": [
+            "am",
+            "was",
+            "is"
+          ],
+          "answer": 1,
+          "tip": "过去用 was。"
+        },
+        {
+          "id": "jl7-p2",
+          "q": "They ___ in the park last Sunday.",
+          "options": [
+            "was",
+            "were",
+            "are"
+          ],
+          "answer": 1,
+          "tip": "复数过去 were。"
+        },
+        {
+          "id": "jl7-p3",
+          "q": "She ___ to Beijing last month.",
+          "options": [
+            "go",
+            "goes",
+            "went"
+          ],
+          "answer": 2,
+          "tip": "过去式 went。"
+        },
+        {
+          "id": "jl7-p4",
+          "q": "We ___ a film last night.",
+          "options": [
+            "see",
+            "saw",
+            "seeing"
+          ],
+          "answer": 1,
+          "tip": "过去式 saw。"
+        }
+      ]
+    },
+    {
+      "id": "jl8",
+      "title": "there be 句型",
+      "grammar": [
+        {
+          "point": "表示某地有某物：There is + 单数；There are + 复数",
+          "example": "There is a book on the desk. There are two pens in the bag.",
+          "cn": "书桌上有一本书。书包里有两支钢笔。",
+          "audio": "/audio/jl/jl8-g1.mp3"
+        },
+        {
+          "point": "就近原则：靠近 be 的名词决定 is/are",
+          "example": "There is a pen and two books. / There are two books and a pen.",
+          "cn": "一支钢笔和两本书。/ 两本书和一支钢笔。",
+          "audio": "/audio/jl/jl8-g2.mp3"
+        }
+      ],
+      "words": [
+        {
+          "id": "jl8-w1",
+          "word": "there",
+          "phonetic": "ðeə",
+          "meaning": "那里",
+          "audio": "/audio/jl/jl8-w1.mp3"
+        },
+        {
+          "id": "jl8-w2",
+          "word": "is",
+          "phonetic": "ɪz",
+          "meaning": "是（单数）",
+          "audio": "/audio/jl/jl8-w2.mp3"
+        },
+        {
+          "id": "jl8-w3",
+          "word": "are",
+          "phonetic": "ɑː",
+          "meaning": "是（复数）",
+          "audio": "/audio/jl/jl8-w3.mp3"
+        },
+        {
+          "id": "jl8-w4",
+          "word": "some",
+          "phonetic": "sʌm",
+          "meaning": "一些",
+          "audio": "/audio/jl/jl8-w4.mp3"
+        },
+        {
+          "id": "jl8-w5",
+          "word": "any",
+          "phonetic": "ˈeni",
+          "meaning": "任何",
+          "audio": "/audio/jl/jl8-w5.mp3"
+        },
+        {
+          "id": "jl8-w6",
+          "word": "room",
+          "phonetic": "ruːm",
+          "meaning": "房间",
+          "audio": "/audio/jl/jl8-w6.mp3"
+        },
+        {
+          "id": "jl8-w7",
+          "word": "place",
+          "phonetic": "pleɪs",
+          "meaning": "地方",
+          "audio": "/audio/jl/jl8-w7.mp3"
+        },
+        {
+          "id": "jl8-w8",
+          "word": "everything",
+          "phonetic": "ˈevriθɪŋ",
+          "meaning": "一切",
+          "audio": "/audio/jl/jl8-w8.mp3"
+        }
+      ],
+      "practice": [
+        {
+          "id": "jl8-p1",
+          "q": "There ___ a book on the desk.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 0,
+          "tip": "单数用 is。"
+        },
+        {
+          "id": "jl8-p2",
+          "q": "There ___ many students in the school.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 1,
+          "tip": "复数用 are。"
+        },
+        {
+          "id": "jl8-p3",
+          "q": "There ___ an apple and two oranges.",
+          "options": [
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 0,
+          "tip": "就近 apple 单数。"
+        },
+        {
+          "id": "jl8-p4",
+          "q": "Are there ___ books in your bag?",
+          "options": [
+            "some",
+            "any",
+            "a"
+          ],
+          "answer": 1,
+          "tip": "疑问句用 any。"
+        }
+      ]
+    }
+  ]
+}

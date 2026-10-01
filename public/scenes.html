@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小学英语单词场景化 · 词句对话</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .sc-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .sc-item:hover { background:#fff3f2; }
+  .sc-item.on { background:#fff0ef; border-color:#ff5e62; }
+  .sc-item .t { font-weight:700; font-size:13.5px; }
+  .sc-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#fff0ef; color:#ff5e62; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .sec-title { display:flex; align-items:center; gap:10px; margin:16px 0 10px; font-size:15px; font-weight:800; }
+  .sec-title .bar { width:4px; height:16px; border-radius:2px; background:#ff5e62; }
+  .sent { display:flex; align-items:center; gap:12px; background:#fff8f7; border:1.5px solid #ffe3e0; border-radius:12px; padding:12px 14px; margin-bottom:10px; flex-wrap:wrap; }
+  .sent .w { background:#ff5e62; color:#fff; font-weight:800; padding:3px 10px; border-radius:8px; font-size:13px; }
+  .sent .e { flex:1; min-width:200px; font-size:16px; font-weight:700; }
+  .sent .c { width:100%; font-size:13px; color:#888; }
+  .play { padding:8px 14px; border:none; border-radius:10px; background:#ff5e62; color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .dlg { background:#fff; border:1.5px solid #eee; border-radius:12px; overflow:hidden; }
+  .dlg-row { display:flex; gap:10px; padding:12px 14px; border-bottom:1px solid #f4f4f4; align-items:flex-start; }
+  .dlg-row:last-child { border-bottom:none; }
+  .dlg-row .who { width:26px; height:26px; border-radius:50%; background:#fff0ef; color:#ff5e62; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+  .dlg-row .body { flex:1; min-width:0; }
+  .dlg-row .tx { font-size:15px; line-height:1.5; }
+  .dlg-row .cn { font-size:12.5px; color:#999; margin-top:3px; }
+  .dlg-row .play { background:#fff0ef; color:#ff5e62; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  @media (max-width:680px){
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+  }
+
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>💬 小学英语单词场景化</h1>
+    <p>词 → 句 → 对话：12 个生活场景 · 在真实句子里学单词</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ff9966">
+    <b>🎁 体验模式</b>：当前可免费学习 <b>第 1 个场景</b>。解锁小学英语模块后即可学习全部场景。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📚 生活场景</h3>
+      <div id="scMenu"></div>
+      <button class="logout blue" onclick="location.href='./phonics.html'">🔤 自然拼读专项</button>
+      <button class="logout blue" onclick="location.href='./words.html'">📖 单词听读背记</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一个生活场景，学习词→句→对话</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+
+let DEV = { n: 0, max: 2 };
+let ACCT = { username: '', expiry: null };
+let AUTHED = false;
+let TRIAL = false;
+let SCENES = [];        // [{id,grade,title,count}]
+let CUR = null;         // 当前场景完整数据
+let AUD_CUR = null;     // 全局单源播放（音频互斥）
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src, el) {
+  if (!src) return;
+  if (AUD_CUR && AUD_CUR !== el) AUD_CUR.pause();
+  const a = el || new Audio(src);
+  if (!el) { a.src = src; a.play(); }
+  AUD_CUR = a;
+}
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/scenes', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  SCENES = r.j.scenes || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const m = document.getElementById('scMenu'); m.innerHTML = '';
+  SCENES.forEach(sc => {
+    const d = document.createElement('div');
+    d.className = 'sc-item'; d.id = 'sc-' + sc.id;
+    d.innerHTML = '<div class="t">' + esc(sc.title) + '</div><div class="s">Grade ' + sc.grade + ' · ' + (sc.count || 0) + ' 句</div>';
+    d.onclick = () => selectScene(sc.id);
+    m.appendChild(d);
+  });
+  if (SCENES.length) selectScene(SCENES[0].id);
+}
+
+function selectScene(id) {
+  document.querySelectorAll('.sc-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('sc-' + id); if (m) m.classList.add('on');
+  loadScene(id);
+}
+
+async function loadScene(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/scenes?scene=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  CUR = r.j;
+  renderScene();
+}
+
+function renderScene() {
+  const sc = CUR;
+  const ma = document.getElementById('mainArea');
+  const sents = (sc.sentences || []).map(s => `
+    <div class="sent">
+      <span class="w">${esc(s.word)}</span>
+      <span class="e">${esc(s.sentence)}</span>
+      <button class="play" onclick="playAudio('${s.audio}')">🔊 播放</button>
+      <span class="c">${esc(s.cn)}</span>
+    </div>`).join('');
+  const dl = (sc.dialogue && sc.dialogue.lines || []).map(l => `
+    <div class="dlg-row">
+      <div class="who">${esc(l.role)}</div>
+      <div class="body">
+        <div class="tx">${esc(l.text)}</div>
+        <div class="cn">${esc(l.cn)}</div>
+      </div>
+      <button class="play" onclick="playAudio('${l.audio}')">🔊</button>
+    </div>`).join('');
+  ma.innerHTML = `
+    <div class="card">
+      <h2 style="font-size:18px;">${esc(sc.title)}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">Grade ${sc.grade} · 词→句：把单词放进真实句子</div>
+    </div>
+    <div class="sec-title"><span class="bar"></span>词 → 句（${(sc.sentences||[]).length} 句）</div>
+    ${sents || '<div class="empty">暂无句子</div>'}
+    <div class="sec-title"><span class="bar"></span>情景对话《${esc(sc.dialogue ? sc.dialogue.title : '')}》</div>
+    <div class="dlg">${dl || '<div class="empty">暂无对话</div>'}</div>`;
+  window.scrollTo({ top: 0 });
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).primary;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else {
+  show('appLayout', true);
+  document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>';
+}
+</script>
+<script>
+(function(){try{var K='scenes';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

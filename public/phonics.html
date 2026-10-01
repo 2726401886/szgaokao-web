@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小学英语自然拼读专项</title>
+<style>
+  :root { --brand:#1a56db; --brand2:#4f8cff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#1a56db,#4f8cff); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.9; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:250px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .lv-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .lv-item:hover { background:#eef3ff; }
+  .lv-item.on { background:#eef3ff; border-color:#1a56db; }
+  .rule-item { padding:8px 12px; border-radius:10px; cursor:pointer; margin-bottom:4px; font-size:13px; color:#555; }
+  .rule-item:hover { background:#eef3ff; }
+  .rule-item.on { background:#1a56db; color:#fff; font-weight:700; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#eef3ff; color:#1a56db; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .rhead { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px; }
+  .chip { background:#fff; border-radius:20px; padding:5px 12px; font-size:12px; color:#666; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .chip.brand { background:#1a56db; color:#fff; }
+  .rule-big { font-size:28px; font-weight:800; color:#1a56db; }
+  .sound-big { font-size:22px; color:#e67e22; margin-left:10px; font-weight:700; }
+  .r-cn { font-size:14px; color:#555; margin-top:6px; }
+  .r-tip { font-size:13px; color:#888; margin-top:4px; background:#fffbe8; padding:8px 12px; border-radius:10px; }
+  .words { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .w-card { flex:1; min-width:140px; background:#f7f9ff; border:1.5px solid #e4e9f7; border-radius:12px; padding:12px; text-align:center; }
+  .w-card .w { font-size:18px; font-weight:700; }
+  .w-card .p { font-size:12px; color:#888; margin-top:2px; }
+  .w-card .m { font-size:12px; color:#555; margin-top:2px; }
+  .w-card .play { margin-top:8px; padding:6px 14px; border:none; border-radius:8px; background:#1a56db; color:#fff; font-size:13px; cursor:pointer; }
+  .q-box { background:#fff; border-radius:16px; padding:18px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-top:14px; }
+  .q-box h4 { font-size:15px; margin-bottom:10px; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#1a56db; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .q-tip { background:#fffbe8; padding:9px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:10px; line-height:1.6; }
+  .write-row { display:flex; gap:10px; align-items:center; margin-top:10px; flex-wrap:wrap; }
+  .write-row input { flex:1; min-width:160px; padding:11px; border:1px solid #ddd; border-radius:10px; font-size:16px; }
+  .write-row button { padding:11px 18px; border:none; border-radius:10px; background:#1a56db; color:#fff; font-size:14px; cursor:pointer; }
+  .audio-btn { display:inline-block; padding:8px 14px; border:none; border-radius:10px; background:#eef3ff; color:#1a56db; font-size:14px; cursor:pointer; font-weight:700; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  @media (max-width:680px){
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+    .logout { width:auto; padding:9px 16px; }
+  }
+
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>小学英语自然拼读专项</h1>
+    <p>5 级 42 条拼读规则 · 见词能读、听音能写 · 英音示范</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <!-- 体验模式横幅 -->
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #4f8cff">
+    <b>🎁 体验模式</b>：当前可免费学习 <b>第 1 级 · 第 1 条规则</b>。解锁小学英语模块后即可学习全部规则。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;background:#fff;border:1px dashed #d8c98a;border-radius:10px;padding:10px 12px;font-size:13px;color:#444;">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码" style="width:120px;height:auto;border-radius:8px;display:block;"></a></div>
+  </div>
+
+  <!-- 主界面 -->
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📚 拼读级别</h3>
+      <div id="lvMenu"></div>
+      <h3 style="margin-top:14px;">🔤 规则列表</h3>
+      <div id="ruleMenu"></div>
+      <button class="logout blue" onclick="location.href='./words.html'">📖 小学单词 · 听读背记</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一条拼读规则，开始学习与练习</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+
+let DEV = { n: 0, max: 2 };
+let ACCT = { username: '', expiry: null };
+let AUTHED = false;
+let TRIAL = false;
+let LEVELS = [];
+let CUR = null;          // { lvId, rid, rule }
+const answered = {};     // qid -> 选中下标 / 已核对
+let AUD_CUR = null;      // 全局单源播放（音频互斥）
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function playAudio(src, el) {
+  if (!src) return;
+  if (AUD_CUR && AUD_CUR !== el) AUD_CUR.pause();
+  const a = el || new Audio(src);
+  if (!el) { a.src = src; a.play(); }
+  AUD_CUR = a;
+}
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  const r = await api('/api/phonics', { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  LEVELS = r.j.levels || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  show('appLayout', true);
+  const lvm = document.getElementById('lvMenu'); lvm.innerHTML = '';
+  LEVELS.forEach((lv, i) => {
+    const d = document.createElement('div');
+    d.className = 'lv-item'; d.id = 'lv-' + lv.id;
+    d.innerHTML = `第 ${i + 1} 级 · ${lv.name.replace(/第[一二三四五]级 · /, '')}（${lv.rules.length} 条）`;
+    d.onclick = () => selectLevel(lv.id);
+    lvm.appendChild(d);
+  });
+  const rm = document.getElementById('ruleMenu'); rm.innerHTML = '';
+  LEVELS.forEach(lv => {
+    lv.rules.forEach(r => {
+      const d = document.createElement('div');
+      d.className = 'rule-item'; d.id = 'rule-' + r.id;
+      d.textContent = r.rule + '  ' + r.sound;
+      d.onclick = () => selectRule(lv.id, r.id);
+      rm.appendChild(d);
+    });
+  });
+  if (LEVELS.length) selectLevel(LEVELS[0].id);
+}
+
+function selectLevel(id) {
+  document.querySelectorAll('.lv-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('lv-' + id); if (m) m.classList.add('on');
+  const lv = LEVELS.find(l => l.id === id);
+  if (lv && lv.rules.length) selectRule(id, lv.rules[0].id);
+  else renderEmpty();
+}
+
+function renderEmpty() {
+  CUR = null;
+  document.getElementById('mainArea').innerHTML = '<div class="empty">← 从左侧选择一条拼读规则，开始学习与练习</div>';
+}
+
+function selectRule(lvId, rid) {
+  const lv = LEVELS.find(l => l.id === lvId);
+  const r = lv && lv.rules.find(x => x.id === rid);
+  if (!r) return;
+  CUR = { lvId, rid, rule: r };
+  document.querySelectorAll('.rule-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('rule-' + rid); if (m) m.classList.add('on');
+  renderRule();
+}
+
+function renderRule() {
+  const r = CUR.rule;
+  const ma = document.getElementById('mainArea');
+  const wc = r.words.map((w, i) => `
+    <div class="w-card">
+      <div class="w">${w.word}</div>
+      <div class="p">${w.phonetic}</div>
+      <div class="m">${w.meaning}</div>
+      <button class="play" onclick="playAudio('${w.audio}')">🔊 听发音</button>
+    </div>`).join('');
+  let qhtml = '';
+  r.quiz.forEach((q, qi) => {
+    if (q.type === 'write') {
+      qhtml += `
+        <div class="q-box" id="qbox-${qi}">
+          <h4>✍️ 第 ${qi + 1} 题 · ${q.q}</h4>
+          <button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放单词</button>
+          <div class="write-row">
+            <input id="win-${qi}" type="text" placeholder="用拼读规则拼出来" autocomplete="off">
+            <button onclick="checkWrite(${qi})">核对</button>
+          </div>
+          <div id="wres-${qi}"></div>
+        </div>`;
+    } else {
+      qhtml += `
+        <div class="q-box" id="qbox-${qi}">
+          <h4>${q.type === 'listen' ? '🎧' : '🔎'} 第 ${qi + 1} 题 · ${q.q}${q.type === 'find' ? '（<b>' + q.sound + '</b>）' : ''}</h4>
+          ${q.type === 'listen' ? `<button class="audio-btn" onclick="playAudio('${q.audio}')">🔊 播放发音</button>` : ''}
+          <div id="qopts-${qi}"></div>
+          <div id="qres-${qi}"></div>
+        </div>`;
+      setTimeout(() => renderOpts(qi), 0);
+    }
+  });
+  ma.innerHTML = `
+    <div class="rhead">
+      <span class="chip brand">第 ${CUR.lvId.slice(1)} 级</span>
+      <span class="chip">${(LEVELS.find(l => l.id === CUR.lvId) || {}).name || ''}</span>
+      <span class="rule-big">${r.rule}</span><span class="sound-big">${r.sound}</span>
+    </div>
+    <div class="card">
+      <div class="r-cn">📖 ${r.cn}</div>
+      <div class="r-tip">💡 发音技巧：${r.tip}</div>
+      <button class="audio-btn" style="margin-top:12px;" onclick="playAudio('${r.audio}')">🔊 听规则发音</button>
+      <div class="words">${wc}</div>
+    </div>
+    <h3 style="font-size:14px;color:#999;margin:14px 0 8px;">📝 随学随练（每规则 3 题）</h3>
+    ${qhtml}`;
+  window.scrollTo({ top: 0 });
+}
+
+function renderOpts(qi) {
+  const q = CUR.rule.quiz[qi];
+  const box = document.getElementById('qopts-' + qi);
+  if (!box) return;
+  box.innerHTML = q.options.map((o, i) => {
+    let cls = 'opt';
+    const sel = answered[CUR.rid + '-' + qi];
+    if (sel != null) {
+      cls += ' locked';
+      if (i === q.answer) cls += ' right';
+      else if (i === sel) cls += ' wrong';
+    }
+    return `<div class="${cls}" onclick="pick(${qi}, ${i})">${String.fromCharCode(65 + i)}. ${o}</div>`;
+  }).join('');
+  const res = document.getElementById('qres-' + qi);
+  if (res && answered[CUR.rid + '-' + qi] != null) {
+    res.innerHTML = `<div class="q-answer">✅ 正确答案：${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer]}</div><div class="q-tip">💡 ${q.tip}</div>`;
+  }
+}
+
+function pick(qi, i) {
+  if (!CUR) return;
+  const key = CUR.rid + '-' + qi;
+  if (answered[key] != null) return;
+  answered[key] = i;
+  renderOpts(qi);
+}
+
+function checkWrite(qi) {
+  const q = CUR.rule.quiz[qi];
+  const input = document.getElementById('win-' + qi);
+  const res = document.getElementById('wres-' + qi);
+  const ans = String(input.value || '').trim().toLowerCase();
+  const right = ans === q.answer.toLowerCase();
+  res.innerHTML = right
+    ? `<div class="q-answer">✅ 拼写正确！${q.answer} ${q.phonetic}</div><div class="q-tip">💡 ${q.tip}</div>`
+    : `<div class="q-answer" style="color:#e23;">❌ 再想想（答案：${q.answer} ${q.phonetic}）</div><div class="q-tip">💡 ${q.tip}</div>`;
+  answered[CUR.rid + '-' + qi] = right ? 1 : 0;
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).primary;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else {
+  show('appLayout', true);
+  document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#1a56db;">前往登录页</a></div>';
+}
+</script>
+<script>
+(function(){try{var K='phonics';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress=JSON.parse(localStorage.getItem('primary_words_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>管理后台｜中考英语听说专项题库</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; -webkit-tap-highlight-color:transparent; }
+  .wrap { max-width:640px; margin:0 auto; padding:14px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:16px; border-radius:16px; margin-bottom:14px; }
+  .topbar h1 { font-size:19px; }
+  .topbar p { font-size:12px; opacity:.9; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:16px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .card h3 { font-size:15px; margin-bottom:10px; color:#333; }
+  label { display:block; font-size:13px; color:#666; margin:10px 0 4px; }
+  input, select { width:100%; padding:11px; border:1px solid #ddd; border-radius:10px; font-size:15px; background:#fff; }
+  .btn { width:100%; padding:12px; border:none; border-radius:10px; background:#ff5e62; color:#fff; font-size:15px; cursor:pointer; margin-top:12px; }
+  .btn.gray { background:#f0f0f0; color:#555; }
+  .btn.sm { width:auto; padding:7px 14px; font-size:13px; margin-top:0; }
+  .btn:disabled { opacity:.5; }
+  .msg { font-size:13px; margin-top:10px; min-height:18px; }
+  .msg.err { color:#e23; } .msg.ok { color:#2a8; }
+  .row { display:flex; gap:10px; }
+  .row > div { flex:1; }
+  /* 码列表 */
+  .code-item { display:flex; align-items:center; gap:10px; padding:10px 12px; border:1.5px solid #f0f0f0; border-radius:10px; margin-bottom:8px; }
+  .code-item .c { font-family:Consolas,Menlo,monospace; font-size:16px; font-weight:700; letter-spacing:1px; color:#333; flex:1; }
+  .tag { font-size:11px; padding:3px 9px; border-radius:10px; white-space:nowrap; }
+  .tag.perm { background:#fff0ef; color:#ff5e62; }
+  .tag.annual { background:#fff7e8; color:#b8860b; }
+  .tag.ok { background:#e8f8ee; color:#2a8; }
+  .tag.used { background:#f0f0f0; color:#999; }
+  /* 用户卡片 */
+  .user { border:1.5px solid #f0f0f0; border-radius:12px; padding:12px; margin-bottom:10px; }
+  .user .u-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .user .u-name { font-weight:700; font-size:15px; flex:1; }
+  .user .u-meta { font-size:12px; color:#888; margin-top:4px; }
+  .dev-line { display:flex; align-items:center; gap:8px; background:#f8f9fc; border-radius:8px; padding:8px 10px; margin-top:8px; font-size:12px; color:#555; }
+  .dev-line code { font-family:Consolas,Menlo,monospace; flex:1; word-break:break-all; }
+  .dev-line button { padding:5px 10px; border:none; border-radius:8px; background:#fdecea; color:#e23; font-size:12px; cursor:pointer; white-space:nowrap; }
+  .u-actions { display:flex; gap:8px; margin-top:10px; }
+  .u-actions button { flex:1; padding:9px; border:none; border-radius:10px; font-size:13px; cursor:pointer; }
+  .u-actions .grant { background:#e8f8ee; color:#2a8; }
+  .u-actions .revoke { background:#fdecea; color:#e23; }
+  .grant-panel { background:#f8f9fc; border-radius:10px; padding:10px; margin-top:10px; }
+  .gp-row { display:flex; gap:8px; }
+  .gp-row select, .gp-row input { flex:1; padding:9px; border:1px solid #ddd; border-radius:8px; font-size:14px; background:#fff; }
+  .grant-panel .btn.sm { margin-top:8px; width:100%; padding:10px; text-align:center; }
+  .gp-mods { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .mod-chk { display:flex; align-items:center; gap:6px; background:#fff; border:1.5px solid #e0e0e0; border-radius:8px; padding:7px 12px; font-size:13px; color:#444; cursor:pointer; }
+  .mod-chk input { width:auto; margin:0; }
+  .mod-chk.on { border-color:#2a8; background:#e8f8ee; color:#2a8; }
+  .mod-tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+  .mod-tag { font-size:11px; padding:2px 8px; border-radius:8px; background:#f0f0f0; color:#999; }
+  .mod-tag.on { background:#e8f8ee; color:#2a8; }
+  .logout-btn { background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.4); color:#fff; padding:6px 14px; border-radius:10px; font-size:13px; cursor:pointer; margin-top:10px; }
+  #genResult { background:#fff8f6; border-radius:12px; padding:12px; margin-top:10px; display:none; }
+  #genResult pre { font-family:Consolas,Menlo,monospace; font-size:15px; line-height:1.9; letter-spacing:1px; user-select:all; white-space:pre-wrap; }
+  .tip { font-size:12px; color:#999; margin-top:8px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>管理后台</h1>
+    <p>授权码生成 / 用户与设备管理（手机可用）</p>
+    <button class="logout-btn" id="btnLogout" style="display:none" onclick="admLogout()">退出管理</button>
+  </div>
+
+  <!-- 登录 -->
+  <div class="card" id="loginCard">
+    <h3>管理员登录</h3>
+    <label>管理员密钥（ADMIN_SECRET）</label>
+    <input id="admSecret" type="password" placeholder="输入管理密钥" autocomplete="off">
+    <button class="btn" onclick="admLogin()">登录后台</button>
+    <div class="msg" id="loginMsg"></div>
+    <div class="tip">生产环境请通过环境变量 ADMIN_SECRET 设置强密钥，默认 admin123 仅供本地调试。</div>
+  </div>
+
+  <div id="panel" style="display:none">
+    <!-- 体验授权开关 -->
+    <div class="card">
+      <h3>🎁 体验授权开关</h3>
+      <label style="display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;line-height:1.6">
+        <input type="checkbox" id="trialOpen"> 开启后，<b>新注册用户</b>自动获得 <b>全部模块</b>（幼儿 / 小学 / 初中 / 高考 / 数学）全功能免费体验
+      </label>
+      <div style="margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px">
+        <span>体验天数：</span>
+        <input type="number" id="trialDays" min="1" max="3650" value="7" style="width:88px;padding:6px 8px;border:1px solid #ddd;border-radius:8px">
+        <span>天</span>
+        <button class="btn sm gray" type="button" onclick="setDays(7)">7</button>
+        <button class="btn sm gray" type="button" onclick="setDays(10)">10</button>
+        <button class="btn sm gray" type="button" onclick="setDays(30)">30</button>
+      </div>
+      <button class="btn" style="margin-top:10px" onclick="saveTrial()">保存设置</button>
+      <div class="msg" id="trialMsg"></div>
+      <div class="tip">仅影响开关开启后<b>新注册</b>的用户；已注册用户不受影响。关闭后新注册不再自动赠送（已赠送的天数权益保留至到期）。</div>
+    </div>
+    <!-- 生成授权码 -->
+    <div class="card">
+      <h3>🔑 生成授权码</h3>
+      <div class="row">
+        <div>
+          <label>数量（1–50）</label>
+          <input id="genCount" type="number" min="1" max="50" value="10">
+        </div>
+        <div>
+          <label>类型</label>
+          <select id="genPlan" onchange="planChanged()">
+            <option value="permanent">永久码</option>
+            <option value="annual">学年（365 天）</option>
+            <option value="semester">学期（180 天）</option>
+            <option value="custom">自定义天数</option>
+          </select>
+        </div>
+      </div>
+      <div id="customDaysRow" style="display:none">
+        <label>自定义时长（天，1–3650，从激活日起算）</label>
+        <input id="genDays" type="number" min="1" max="3650" value="90">
+      </div>
+      <label>每码可激活账号数（默认 1，防多人共用）</label>
+      <input id="genMax" type="number" min="1" max="99" value="1">
+      <button class="btn" id="btnGen" onclick="genCodes()">生成</button>
+      <div class="msg" id="genMsg"></div>
+      <div id="genResult">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <b style="font-size:13px;color:#ff5e62;">本次生成（点框全选复制）</b>
+          <button class="btn sm gray" onclick="copyCodes()">复制全部</button>
+        </div>
+        <pre id="genPre"></pre>
+      </div>
+    </div>
+
+    <!-- 授权码列表 -->
+    <div class="card">
+      <h3>📋 授权码列表 <button class="btn sm gray" style="float:right" onclick="loadCodes()">刷新</button></h3>
+      <div id="codeList" style="clear:both"><div class="msg">加载中…</div></div>
+    </div>
+
+    <!-- 用户管理 -->
+    <div class="card">
+      <h3>👥 用户与设备管理 <button class="btn sm gray" style="float:right" onclick="loadUsers()">刷新</button></h3>
+      <div id="userList" style="clear:both"><div class="msg">加载中…</div></div>
+      <div class="tip">设备解绑：用户换手机/达到设备上限时，点对应设备「解绑」释放名额；撤销授权会立即把用户踢下线。</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let TOKEN = localStorage.getItem('admintoken') || '';
+const H = () => ({ 'Content-Type': 'application/json', ...(TOKEN ? { Authorization: TOKEN } : {}) });
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
+
+function setMsg(id, t, cls) { const e = $(id); e.textContent = t; e.className = 'msg ' + (cls || ''); }
+
+// —— 登录 ——
+async function admLogin() {
+  const r = await api('/api/admin/login', { method: 'POST', headers: H(), body: JSON.stringify({ secret: $('admSecret').value }) });
+  if (r.s === 200) { TOKEN = r.j.token; localStorage.setItem('admintoken', TOKEN); enterPanel(); }
+  else setMsg('loginMsg', r.j.error || '登录失败', 'err');
+}
+function admLogout() { TOKEN = ''; localStorage.removeItem('admintoken'); location.reload(); }
+function enterPanel() {
+  $('loginCard').style.display = 'none';
+  $('panel').style.display = '';
+  $('btnLogout').style.display = '';
+  loadCodes(); loadUsers(); loadTrial();
+}
+// —— 体验授权开关 ——
+function setDays(n) { $('trialDays').value = n; }
+async function loadTrial() {
+  const r = await api('/api/admin/settings', { headers: H() });
+  if (r.s === 200) { $('trialOpen').checked = !!r.j.trialOpen; $('trialDays').value = r.j.trialDays || 7; }
+}
+async function saveTrial() {
+  const on = $('trialOpen').checked;
+  const days = Math.min(3650, Math.max(1, parseInt($('trialDays').value, 10) || 7));
+  const r = await api('/api/admin/settings', { method: 'POST', headers: H(), body: JSON.stringify({ trialOpen: on, trialDays: days }) });
+  if (r.s === 200) setMsg('trialMsg', '已保存：' + (on ? ('开启（新用户 ' + days + ' 天全模块）') : '关闭'), 'ok');
+  else setMsg('trialMsg', r.j.error || '保存失败', 'err');
+}
+
+// —— 生成授权码 ——
+let LAST = [];
+const PLAN_LABEL = { permanent: '永久', annual: '学年 365 天', semester: '学期 180 天' };
+function planLabel(plan, days) {
+  if (plan === 'permanent') return '永久';
+  if (PLAN_LABEL[plan]) return PLAN_LABEL[plan];
+  return '自定义 ' + (days || '?') + ' 天';
+}
+function planChanged() { $('customDaysRow').style.display = $('genPlan').value === 'custom' ? '' : 'none'; }
+async function genCodes() {
+  const btn = $('btnGen'); btn.disabled = true;
+  const r = await api('/api/admin/gen-codes', { method: 'POST', headers: H(), body: JSON.stringify({ count: $('genCount').value, plan: $('genPlan').value, maxActs: $('genMax').value, days: $('genDays').value }) });
+  btn.disabled = false;
+  if (r.s === 200) {
+    LAST = r.j.codes;
+    $('genPre').textContent = LAST.join('\n');
+    $('genResult').style.display = '';
+    setMsg('genMsg', `已生成 ${LAST.length} 个「${planLabel(r.j.plan, r.j.days)}」码（每码可激活 ${r.j.maxActs} 账号），已写入 codes.json`, 'ok');
+    loadCodes();
+  } else setMsg('genMsg', r.j.error || '生成失败', 'err');
+}
+function copyCodes() {
+  const t = LAST.join('\n');
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => setMsg('genMsg', '已复制到剪贴板', 'ok'));
+  else { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); setMsg('genMsg', '已复制', 'ok'); }
+}
+
+// —— 授权码列表 ——
+async function loadCodes() {
+  const r = await api('/api/admin/codes', { headers: H() });
+  const box = $('codeList');
+  if (r.s !== 200) { box.innerHTML = '<div class="msg err">' + esc(r.j.error || '加载失败') + '</div>'; return; }
+  if (!r.j.codes.length) { box.innerHTML = '<div class="msg">暂无授权码</div>'; return; }
+  box.innerHTML = r.j.codes.map(c => {
+    const planTag = '<span class="tag ' + (c.plan === 'annual' ? 'annual' : 'perm') + '">' + esc(planLabel(c.plan, c.days)) + '</span>';
+    const useTag = c.used >= c.maxActs ? '<span class="tag used">已用完</span>' : '<span class="tag ok">可用 ' + (c.maxActs - c.used) + '</span>';
+    return `<div class="code-item"><span class="c">${esc(c.code)}</span>${planTag}${useTag}<span class="tag" style="background:#f5f5f5;color:#888">${c.used}/${c.maxActs}</span></div>`;
+  }).join('');
+}
+
+// —— 用户管理 ——
+let LAST_USERS = [];
+async function loadUsers() {
+  const r = await api('/api/admin/users', { headers: H() });
+  const box = $('userList');
+  if (r.s !== 200) { box.innerHTML = '<div class="msg err">' + esc(r.j.error || '加载失败') + '</div>'; return; }
+  if (!r.j.users.length) { box.innerHTML = '<div class="msg">暂无用户</div>'; return; }
+  LAST_USERS = r.j.users;
+  box.innerHTML = r.j.users.map((u, i) => {
+    const auth = u.authorized ? '<span class="tag ok">已授权</span>' : '<span class="tag used">未授权</span>';
+    let exp = '';
+    if (u.authorized) {
+      if (u.expiry) {
+        const rem = Math.ceil((u.expiry - Date.now()) / 864e5);
+        exp = ` · 到期 ${new Date(u.expiry).toLocaleDateString()}（剩 ${rem > 0 ? rem : 0} 天）`;
+      } else exp = ' · 永久';
+    }
+    const devs = (u.devices || []).map(d =>
+      `<div class="dev-line"><code>${esc(d)}</code><button onclick="unbind(${i},'${esc(d)}')">解绑</button></div>`
+    ).join('') || '<div class="dev-line" style="color:#bbb">暂无绑定设备</div>';
+    return `<div class="user">
+      <div class="u-head"><span class="u-name">${esc(u.username)}</span>${auth}</div>
+      <div class="u-meta">授权码 ${esc(u.code || '—')}${exp} · 绑定设备 ${(u.devices || []).length} 台</div>
+      <div class="mod-tags">${modTags(u)}</div>
+      ${devs}
+      <div class="u-actions">
+        <button class="grant" onclick="toggleGrant(${i})">${u.authorized ? '调整授权' : '授予授权'}</button>
+        ${u.authorized ? `<button class="revoke" onclick="revoke(${i})">撤销授权（踢下线）</button>` : ''}
+      </div>
+      <div class="grant-panel" id="gp-${i}" style="display:none">
+        <div class="gp-row">
+          <select id="gplan-${i}" onchange="gplanChanged(${i})">
+            <option value="permanent">永久</option>
+            <option value="annual">学年（365 天）</option>
+            <option value="semester">学期（180 天）</option>
+            <option value="custom">自定义天数</option>
+          </select>
+          <input id="gdays-${i}" type="number" min="1" max="3650" value="90" style="display:none">
+        </div>
+        <div class="gp-mods">
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-kids" checked>🧸 幼儿英语</label>
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-primary" checked>📖 小学英语</label>
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-middle" checked>🎧 中考英语</label>
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-gk" checked>🎓 高考英语</label>
+          <label class="mod-chk on"><input type="checkbox" id="gmod-${i}-math" checked>🧮 数学</label>
+        </div>
+        <button class="btn sm" onclick="doGrant(${i})">确认授权</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+const MOD_LABEL = { kids: '🧸 幼儿英语', primary: '📖 小学英语', middle: '🎧 中考英语', gk: '🎓 高考英语', math: '🧮 数学' };
+function modTags(u) {
+  const mods = u.modules || {};
+  return ['kids', 'primary', 'middle', 'gk', 'math'].map(m =>
+    '<span class="mod-tag' + (mods[m] ? ' on' : '') + '">' + (mods[m] ? '✓ ' : '✗ ') + MOD_LABEL[m] + '</span>'
+  ).join('');
+}
+function toggleGrant(i) {
+  const p = $('gp-' + i); p.style.display = p.style.display === 'none' ? '' : 'none';
+  const u = LAST_USERS[i], mods = u.modules || {};
+  const defAll = !u.authorized || !mods.kids && !mods.primary && !mods.middle && !mods.gk && !mods.math; // 未授权/全空 → 默认全选
+  ['kids', 'primary', 'middle', 'gk', 'math'].forEach(m => {
+    const c = $('gmod-' + i + '-' + m); if (c) { c.checked = defAll ? true : !!mods[m]; c.dispatchEvent(new Event('change')); }
+  });
+}
+function gplanChanged(i) { $('gdays-' + i).style.display = $('gplan-' + i).value === 'custom' ? '' : 'none'; }
+async function doGrant(i) {
+  const u = LAST_USERS[i];
+  const plan = $('gplan-' + i).value, days = $('gdays-' + i).value;
+  const mods = ['kids', 'primary', 'middle', 'gk', 'math'].filter(m => { const c = $('gmod-' + i + '-' + m); return c && c.checked; });
+  if (!mods.length) { alert('请至少勾选一个授权模块'); return; }
+  const r = await api('/api/admin/users/grant', { method: 'POST', headers: H(), body: JSON.stringify({ username: u.username, plan, days, modules: mods }) });
+  if (r.s === 200) { alert('已授权' + (r.j.expiry ? '，到期 ' + new Date(r.j.expiry).toLocaleDateString() : '（永久）') + '｜模块：' + mods.map(m => MOD_LABEL[m]).join('、')); loadUsers(); }
+  else alert(r.j.error || '操作失败');
+}
+// 复选框高亮联动
+document.addEventListener('change', e => {
+  if (e.target && e.target.type === 'checkbox' && e.target.id && e.target.id.indexOf('gmod-') === 0) {
+    e.target.closest('.mod-chk').classList.toggle('on', e.target.checked);
+  }
+});
+async function unbind(i, device) {
+  const u = LAST_USERS[i];
+  if (!confirm('确认为用户 ' + u.username + ' 解绑该设备？')) return;
+  const r = await api('/api/admin/users/unbind', { method: 'POST', headers: H(), body: JSON.stringify({ username: u.username, device }) });
+  alert(r.s === 200 ? '已解绑' : (r.j.error || '操作失败'));
+  loadUsers();
+}
+async function revoke(i) {
+  const u = LAST_USERS[i];
+  if (!confirm('确认撤销 ' + u.username + ' 的授权？该用户会被立即踢下线，需重新激活授权码。')) return;
+  const r = await api('/api/admin/users/revoke', { method: 'POST', headers: H(), body: JSON.stringify({ username: u.username }) });
+  alert(r.s === 200 ? '已撤销' : (r.j.error || '操作失败'));
+  loadUsers();
+}
+
+// 回车登录
+$('admSecret').addEventListener('keydown', e => { if (e.key === 'Enter') admLogin(); });
+if (TOKEN) enterPanel();
+</script>
+</body>
+</html>

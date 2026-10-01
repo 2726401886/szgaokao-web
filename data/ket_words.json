@@ -1,0 +1,2010 @@
+{
+ "level": "KET",
+ "name": "KET 核心词（A2）",
+ "groups": [
+  {
+   "id": "kw1",
+   "title": "家庭与朋友",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw1-w1",
+     "word": "family",
+     "phonetic": "ˈfæməli",
+     "pos": "n.",
+     "meaning": "家庭",
+     "audio": "/audio/kw/kw1-w1.mp3"
+    },
+    {
+     "id": "kw1-w2",
+     "word": "father",
+     "phonetic": "ˈfɑːðə",
+     "pos": "n.",
+     "meaning": "父亲",
+     "audio": "/audio/kw/kw1-w2.mp3"
+    },
+    {
+     "id": "kw1-w3",
+     "word": "mother",
+     "phonetic": "ˈmʌðə",
+     "pos": "n.",
+     "meaning": "母亲",
+     "audio": "/audio/kw/kw1-w3.mp3"
+    },
+    {
+     "id": "kw1-w4",
+     "word": "brother",
+     "phonetic": "ˈbrʌðə",
+     "pos": "n.",
+     "meaning": "兄弟",
+     "audio": "/audio/kw/kw1-w4.mp3"
+    },
+    {
+     "id": "kw1-w5",
+     "word": "sister",
+     "phonetic": "ˈsɪstə",
+     "pos": "n.",
+     "meaning": "姐妹",
+     "audio": "/audio/kw/kw1-w5.mp3"
+    },
+    {
+     "id": "kw1-w6",
+     "word": "grandfather",
+     "phonetic": "ˈɡrænfɑːðə",
+     "pos": "n.",
+     "meaning": "祖父",
+     "audio": "/audio/kw/kw1-w6.mp3"
+    },
+    {
+     "id": "kw1-w7",
+     "word": "grandmother",
+     "phonetic": "ˈɡrænmʌðə",
+     "pos": "n.",
+     "meaning": "祖母",
+     "audio": "/audio/kw/kw1-w7.mp3"
+    },
+    {
+     "id": "kw1-w8",
+     "word": "uncle",
+     "phonetic": "ˈʌŋkl",
+     "pos": "n.",
+     "meaning": "叔叔；舅舅",
+     "audio": "/audio/kw/kw1-w8.mp3"
+    },
+    {
+     "id": "kw1-w9",
+     "word": "aunt",
+     "phonetic": "ɑːnt",
+     "pos": "n.",
+     "meaning": "阿姨；姑姑",
+     "audio": "/audio/kw/kw1-w9.mp3"
+    },
+    {
+     "id": "kw1-w10",
+     "word": "cousin",
+     "phonetic": "ˈkʌzn",
+     "pos": "n.",
+     "meaning": "堂（表）兄弟姐妹",
+     "audio": "/audio/kw/kw1-w10.mp3"
+    },
+    {
+     "id": "kw1-w11",
+     "word": "friend",
+     "phonetic": "frend",
+     "pos": "n.",
+     "meaning": "朋友",
+     "audio": "/audio/kw/kw1-w11.mp3"
+    },
+    {
+     "id": "kw1-w12",
+     "word": "classmate",
+     "phonetic": "ˈklɑːsmeɪt",
+     "pos": "n.",
+     "meaning": "同学",
+     "audio": "/audio/kw/kw1-w12.mp3"
+    },
+    {
+     "id": "kw1-w13",
+     "word": "neighbour",
+     "phonetic": "ˈneɪbə",
+     "pos": "n.",
+     "meaning": "邻居",
+     "audio": "/audio/kw/kw1-w13.mp3"
+    },
+    {
+     "id": "kw1-w14",
+     "word": "parent",
+     "phonetic": "ˈpeərənt",
+     "pos": "n.",
+     "meaning": "父亲或母亲",
+     "audio": "/audio/kw/kw1-w14.mp3"
+    },
+    {
+     "id": "kw1-w15",
+     "word": "child",
+     "phonetic": "tʃaɪld",
+     "pos": "n.",
+     "meaning": "孩子",
+     "audio": "/audio/kw/kw1-w15.mp3"
+    },
+    {
+     "id": "kw1-w16",
+     "word": "baby",
+     "phonetic": "ˈbeɪbi",
+     "pos": "n.",
+     "meaning": "婴儿",
+     "audio": "/audio/kw/kw1-w16.mp3"
+    },
+    {
+     "id": "kw1-w17",
+     "word": "wife",
+     "phonetic": "waɪf",
+     "pos": "n.",
+     "meaning": "妻子",
+     "audio": "/audio/kw/kw1-w17.mp3"
+    },
+    {
+     "id": "kw1-w18",
+     "word": "husband",
+     "phonetic": "ˈhʌzbənd",
+     "pos": "n.",
+     "meaning": "丈夫",
+     "audio": "/audio/kw/kw1-w18.mp3"
+    },
+    {
+     "id": "kw1-w19",
+     "word": "daughter",
+     "phonetic": "ˈdɔːtə",
+     "pos": "n.",
+     "meaning": "女儿",
+     "audio": "/audio/kw/kw1-w19.mp3"
+    },
+    {
+     "id": "kw1-w20",
+     "word": "son",
+     "phonetic": "sʌn",
+     "pos": "n.",
+     "meaning": "儿子",
+     "audio": "/audio/kw/kw1-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw2",
+   "title": "学校与学习",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw2-w1",
+     "word": "school",
+     "phonetic": "skuːl",
+     "pos": "n.",
+     "meaning": "学校",
+     "audio": "/audio/kw/kw2-w1.mp3"
+    },
+    {
+     "id": "kw2-w2",
+     "word": "teacher",
+     "phonetic": "ˈtiːtʃə",
+     "pos": "n.",
+     "meaning": "老师",
+     "audio": "/audio/kw/kw2-w2.mp3"
+    },
+    {
+     "id": "kw2-w3",
+     "word": "student",
+     "phonetic": "ˈstjuːdnt",
+     "pos": "n.",
+     "meaning": "学生",
+     "audio": "/audio/kw/kw2-w3.mp3"
+    },
+    {
+     "id": "kw2-w4",
+     "word": "classroom",
+     "phonetic": "ˈklɑːsrʊm",
+     "pos": "n.",
+     "meaning": "教室",
+     "audio": "/audio/kw/kw2-w4.mp3"
+    },
+    {
+     "id": "kw2-w5",
+     "word": "lesson",
+     "phonetic": "ˈlesn",
+     "pos": "n.",
+     "meaning": "课",
+     "audio": "/audio/kw/kw2-w5.mp3"
+    },
+    {
+     "id": "kw2-w6",
+     "word": "homework",
+     "phonetic": "ˈhəʊmwɜːk",
+     "pos": "n.",
+     "meaning": "家庭作业",
+     "audio": "/audio/kw/kw2-w6.mp3"
+    },
+    {
+     "id": "kw2-w7",
+     "word": "exam",
+     "phonetic": "ɪɡˈzæm",
+     "pos": "n.",
+     "meaning": "考试",
+     "audio": "/audio/kw/kw2-w7.mp3"
+    },
+    {
+     "id": "kw2-w8",
+     "word": "book",
+     "phonetic": "bʊk",
+     "pos": "n.",
+     "meaning": "书",
+     "audio": "/audio/kw/kw2-w8.mp3"
+    },
+    {
+     "id": "kw2-w9",
+     "word": "pen",
+     "phonetic": "pen",
+     "pos": "n.",
+     "meaning": "钢笔",
+     "audio": "/audio/kw/kw2-w9.mp3"
+    },
+    {
+     "id": "kw2-w10",
+     "word": "pencil",
+     "phonetic": "ˈpensl",
+     "pos": "n.",
+     "meaning": "铅笔",
+     "audio": "/audio/kw/kw2-w10.mp3"
+    },
+    {
+     "id": "kw2-w11",
+     "word": "ruler",
+     "phonetic": "ˈruːlə",
+     "pos": "n.",
+     "meaning": "尺子",
+     "audio": "/audio/kw/kw2-w11.mp3"
+    },
+    {
+     "id": "kw2-w12",
+     "word": "bag",
+     "phonetic": "bæɡ",
+     "pos": "n.",
+     "meaning": "书包；袋子",
+     "audio": "/audio/kw/kw2-w12.mp3"
+    },
+    {
+     "id": "kw2-w13",
+     "word": "subject",
+     "phonetic": "ˈsʌbdʒɪkt",
+     "pos": "n.",
+     "meaning": "学科；科目",
+     "audio": "/audio/kw/kw2-w13.mp3"
+    },
+    {
+     "id": "kw2-w14",
+     "word": "maths",
+     "phonetic": "mæθs",
+     "pos": "n.",
+     "meaning": "数学",
+     "audio": "/audio/kw/kw2-w14.mp3"
+    },
+    {
+     "id": "kw2-w15",
+     "word": "science",
+     "phonetic": "ˈsaɪəns",
+     "pos": "n.",
+     "meaning": "科学",
+     "audio": "/audio/kw/kw2-w15.mp3"
+    },
+    {
+     "id": "kw2-w16",
+     "word": "history",
+     "phonetic": "ˈhɪstri",
+     "pos": "n.",
+     "meaning": "历史",
+     "audio": "/audio/kw/kw2-w16.mp3"
+    },
+    {
+     "id": "kw2-w17",
+     "word": "geography",
+     "phonetic": "dʒiˈɒɡrəfi",
+     "pos": "n.",
+     "meaning": "地理",
+     "audio": "/audio/kw/kw2-w17.mp3"
+    },
+    {
+     "id": "kw2-w18",
+     "word": "art",
+     "phonetic": "ɑːt",
+     "pos": "n.",
+     "meaning": "美术；艺术",
+     "audio": "/audio/kw/kw2-w18.mp3"
+    },
+    {
+     "id": "kw2-w19",
+     "word": "music",
+     "phonetic": "ˈmjuːzɪk",
+     "pos": "n.",
+     "meaning": "音乐",
+     "audio": "/audio/kw/kw2-w19.mp3"
+    },
+    {
+     "id": "kw2-w20",
+     "word": "library",
+     "phonetic": "ˈlaɪbrəri",
+     "pos": "n.",
+     "meaning": "图书馆",
+     "audio": "/audio/kw/kw2-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw3",
+   "title": "食物与饮品",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw3-w1",
+     "word": "food",
+     "phonetic": "fuːd",
+     "pos": "n.",
+     "meaning": "食物",
+     "audio": "/audio/kw/kw3-w1.mp3"
+    },
+    {
+     "id": "kw3-w2",
+     "word": "bread",
+     "phonetic": "bred",
+     "pos": "n.",
+     "meaning": "面包",
+     "audio": "/audio/kw/kw3-w2.mp3"
+    },
+    {
+     "id": "kw3-w3",
+     "word": "rice",
+     "phonetic": "raɪs",
+     "pos": "n.",
+     "meaning": "米饭",
+     "audio": "/audio/kw/kw3-w3.mp3"
+    },
+    {
+     "id": "kw3-w4",
+     "word": "meat",
+     "phonetic": "miːt",
+     "pos": "n.",
+     "meaning": "肉",
+     "audio": "/audio/kw/kw3-w4.mp3"
+    },
+    {
+     "id": "kw3-w5",
+     "word": "chicken",
+     "phonetic": "ˈtʃɪkɪn",
+     "pos": "n.",
+     "meaning": "鸡肉",
+     "audio": "/audio/kw/kw3-w5.mp3"
+    },
+    {
+     "id": "kw3-w6",
+     "word": "fish",
+     "phonetic": "fɪʃ",
+     "pos": "n.",
+     "meaning": "鱼",
+     "audio": "/audio/kw/kw3-w6.mp3"
+    },
+    {
+     "id": "kw3-w7",
+     "word": "egg",
+     "phonetic": "eɡ",
+     "pos": "n.",
+     "meaning": "鸡蛋",
+     "audio": "/audio/kw/kw3-w7.mp3"
+    },
+    {
+     "id": "kw3-w8",
+     "word": "milk",
+     "phonetic": "mɪlk",
+     "pos": "n.",
+     "meaning": "牛奶",
+     "audio": "/audio/kw/kw3-w8.mp3"
+    },
+    {
+     "id": "kw3-w9",
+     "word": "juice",
+     "phonetic": "dʒuːs",
+     "pos": "n.",
+     "meaning": "果汁",
+     "audio": "/audio/kw/kw3-w9.mp3"
+    },
+    {
+     "id": "kw3-w10",
+     "word": "water",
+     "phonetic": "ˈwɔːtə",
+     "pos": "n.",
+     "meaning": "水",
+     "audio": "/audio/kw/kw3-w10.mp3"
+    },
+    {
+     "id": "kw3-w11",
+     "word": "tea",
+     "phonetic": "tiː",
+     "pos": "n.",
+     "meaning": "茶",
+     "audio": "/audio/kw/kw3-w11.mp3"
+    },
+    {
+     "id": "kw3-w12",
+     "word": "coffee",
+     "phonetic": "ˈkɒfi",
+     "pos": "n.",
+     "meaning": "咖啡",
+     "audio": "/audio/kw/kw3-w12.mp3"
+    },
+    {
+     "id": "kw3-w13",
+     "word": "fruit",
+     "phonetic": "fruːt",
+     "pos": "n.",
+     "meaning": "水果",
+     "audio": "/audio/kw/kw3-w13.mp3"
+    },
+    {
+     "id": "kw3-w14",
+     "word": "apple",
+     "phonetic": "ˈæpl",
+     "pos": "n.",
+     "meaning": "苹果",
+     "audio": "/audio/kw/kw3-w14.mp3"
+    },
+    {
+     "id": "kw3-w15",
+     "word": "banana",
+     "phonetic": "bəˈnɑːnə",
+     "pos": "n.",
+     "meaning": "香蕉",
+     "audio": "/audio/kw/kw3-w15.mp3"
+    },
+    {
+     "id": "kw3-w16",
+     "word": "orange",
+     "phonetic": "ˈɒrɪndʒ",
+     "pos": "n.",
+     "meaning": "橙子",
+     "audio": "/audio/kw/kw3-w16.mp3"
+    },
+    {
+     "id": "kw3-w17",
+     "word": "vegetable",
+     "phonetic": "ˈvedʒtəbl",
+     "pos": "n.",
+     "meaning": "蔬菜",
+     "audio": "/audio/kw/kw3-w17.mp3"
+    },
+    {
+     "id": "kw3-w18",
+     "word": "lunch",
+     "phonetic": "lʌntʃ",
+     "pos": "n.",
+     "meaning": "午餐",
+     "audio": "/audio/kw/kw3-w18.mp3"
+    },
+    {
+     "id": "kw3-w19",
+     "word": "dinner",
+     "phonetic": "ˈdɪnə",
+     "pos": "n.",
+     "meaning": "晚餐",
+     "audio": "/audio/kw/kw3-w19.mp3"
+    },
+    {
+     "id": "kw3-w20",
+     "word": "breakfast",
+     "phonetic": "ˈbrekfəst",
+     "pos": "n.",
+     "meaning": "早餐",
+     "audio": "/audio/kw/kw3-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw4",
+   "title": "衣服与购物",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw4-w1",
+     "word": "clothes",
+     "phonetic": "kləʊðz",
+     "pos": "n.",
+     "meaning": "衣服",
+     "audio": "/audio/kw/kw4-w1.mp3"
+    },
+    {
+     "id": "kw4-w2",
+     "word": "shirt",
+     "phonetic": "ʃɜːt",
+     "pos": "n.",
+     "meaning": "衬衫",
+     "audio": "/audio/kw/kw4-w2.mp3"
+    },
+    {
+     "id": "kw4-w3",
+     "word": "dress",
+     "phonetic": "dres",
+     "pos": "n.",
+     "meaning": "连衣裙",
+     "audio": "/audio/kw/kw4-w3.mp3"
+    },
+    {
+     "id": "kw4-w4",
+     "word": "skirt",
+     "phonetic": "skɜːt",
+     "pos": "n.",
+     "meaning": "短裙",
+     "audio": "/audio/kw/kw4-w4.mp3"
+    },
+    {
+     "id": "kw4-w5",
+     "word": "trousers",
+     "phonetic": "ˈtraʊzəz",
+     "pos": "n.",
+     "meaning": "长裤",
+     "audio": "/audio/kw/kw4-w5.mp3"
+    },
+    {
+     "id": "kw4-w6",
+     "word": "jeans",
+     "phonetic": "dʒiːnz",
+     "pos": "n.",
+     "meaning": "牛仔裤",
+     "audio": "/audio/kw/kw4-w6.mp3"
+    },
+    {
+     "id": "kw4-w7",
+     "word": "coat",
+     "phonetic": "kəʊt",
+     "pos": "n.",
+     "meaning": "外套",
+     "audio": "/audio/kw/kw4-w7.mp3"
+    },
+    {
+     "id": "kw4-w8",
+     "word": "jacket",
+     "phonetic": "ˈdʒækɪt",
+     "pos": "n.",
+     "meaning": "夹克",
+     "audio": "/audio/kw/kw4-w8.mp3"
+    },
+    {
+     "id": "kw4-w9",
+     "word": "shoe",
+     "phonetic": "ʃuː",
+     "pos": "n.",
+     "meaning": "鞋",
+     "audio": "/audio/kw/kw4-w9.mp3"
+    },
+    {
+     "id": "kw4-w10",
+     "word": "hat",
+     "phonetic": "hæt",
+     "pos": "n.",
+     "meaning": "帽子",
+     "audio": "/audio/kw/kw4-w10.mp3"
+    },
+    {
+     "id": "kw4-w11",
+     "word": "scarf",
+     "phonetic": "skɑːf",
+     "pos": "n.",
+     "meaning": "围巾",
+     "audio": "/audio/kw/kw4-w11.mp3"
+    },
+    {
+     "id": "kw4-w12",
+     "word": "glove",
+     "phonetic": "ɡlʌv",
+     "pos": "n.",
+     "meaning": "手套",
+     "audio": "/audio/kw/kw4-w12.mp3"
+    },
+    {
+     "id": "kw4-w13",
+     "word": "shop",
+     "phonetic": "ʃɒp",
+     "pos": "n.",
+     "meaning": "商店",
+     "audio": "/audio/kw/kw4-w13.mp3"
+    },
+    {
+     "id": "kw4-w14",
+     "word": "market",
+     "phonetic": "ˈmɑːkɪt",
+     "pos": "n.",
+     "meaning": "市场",
+     "audio": "/audio/kw/kw4-w14.mp3"
+    },
+    {
+     "id": "kw4-w15",
+     "word": "buy",
+     "phonetic": "baɪ",
+     "pos": "v.",
+     "meaning": "买",
+     "audio": "/audio/kw/kw4-w15.mp3"
+    },
+    {
+     "id": "kw4-w16",
+     "word": "sell",
+     "phonetic": "sel",
+     "pos": "v.",
+     "meaning": "卖",
+     "audio": "/audio/kw/kw4-w16.mp3"
+    },
+    {
+     "id": "kw4-w17",
+     "word": "price",
+     "phonetic": "praɪs",
+     "pos": "n.",
+     "meaning": "价格",
+     "audio": "/audio/kw/kw4-w17.mp3"
+    },
+    {
+     "id": "kw4-w18",
+     "word": "money",
+     "phonetic": "ˈmʌni",
+     "pos": "n.",
+     "meaning": "钱",
+     "audio": "/audio/kw/kw4-w18.mp3"
+    },
+    {
+     "id": "kw4-w19",
+     "word": "cheap",
+     "phonetic": "tʃiːp",
+     "pos": "adj.",
+     "meaning": "便宜的",
+     "audio": "/audio/kw/kw4-w19.mp3"
+    },
+    {
+     "id": "kw4-w20",
+     "word": "expensive",
+     "phonetic": "ɪkˈspensɪv",
+     "pos": "adj.",
+     "meaning": "昂贵的",
+     "audio": "/audio/kw/kw4-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw5",
+   "title": "健康与身体",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw5-w1",
+     "word": "health",
+     "phonetic": "helθ",
+     "pos": "n.",
+     "meaning": "健康",
+     "audio": "/audio/kw/kw5-w1.mp3"
+    },
+    {
+     "id": "kw5-w2",
+     "word": "body",
+     "phonetic": "ˈbɒdi",
+     "pos": "n.",
+     "meaning": "身体",
+     "audio": "/audio/kw/kw5-w2.mp3"
+    },
+    {
+     "id": "kw5-w3",
+     "word": "head",
+     "phonetic": "hed",
+     "pos": "n.",
+     "meaning": "头",
+     "audio": "/audio/kw/kw5-w3.mp3"
+    },
+    {
+     "id": "kw5-w4",
+     "word": "hair",
+     "phonetic": "heə",
+     "pos": "n.",
+     "meaning": "头发",
+     "audio": "/audio/kw/kw5-w4.mp3"
+    },
+    {
+     "id": "kw5-w5",
+     "word": "face",
+     "phonetic": "feɪs",
+     "pos": "n.",
+     "meaning": "脸",
+     "audio": "/audio/kw/kw5-w5.mp3"
+    },
+    {
+     "id": "kw5-w6",
+     "word": "eye",
+     "phonetic": "aɪ",
+     "pos": "n.",
+     "meaning": "眼睛",
+     "audio": "/audio/kw/kw5-w6.mp3"
+    },
+    {
+     "id": "kw5-w7",
+     "word": "ear",
+     "phonetic": "ɪə",
+     "pos": "n.",
+     "meaning": "耳朵",
+     "audio": "/audio/kw/kw5-w7.mp3"
+    },
+    {
+     "id": "kw5-w8",
+     "word": "nose",
+     "phonetic": "nəʊz",
+     "pos": "n.",
+     "meaning": "鼻子",
+     "audio": "/audio/kw/kw5-w8.mp3"
+    },
+    {
+     "id": "kw5-w9",
+     "word": "mouth",
+     "phonetic": "maʊθ",
+     "pos": "n.",
+     "meaning": "嘴",
+     "audio": "/audio/kw/kw5-w9.mp3"
+    },
+    {
+     "id": "kw5-w10",
+     "word": "hand",
+     "phonetic": "hænd",
+     "pos": "n.",
+     "meaning": "手",
+     "audio": "/audio/kw/kw5-w10.mp3"
+    },
+    {
+     "id": "kw5-w11",
+     "word": "arm",
+     "phonetic": "ɑːm",
+     "pos": "n.",
+     "meaning": "手臂",
+     "audio": "/audio/kw/kw5-w11.mp3"
+    },
+    {
+     "id": "kw5-w12",
+     "word": "leg",
+     "phonetic": "leɡ",
+     "pos": "n.",
+     "meaning": "腿",
+     "audio": "/audio/kw/kw5-w12.mp3"
+    },
+    {
+     "id": "kw5-w13",
+     "word": "foot",
+     "phonetic": "fʊt",
+     "pos": "n.",
+     "meaning": "脚",
+     "audio": "/audio/kw/kw5-w13.mp3"
+    },
+    {
+     "id": "kw5-w14",
+     "word": "doctor",
+     "phonetic": "ˈdɒktə",
+     "pos": "n.",
+     "meaning": "医生",
+     "audio": "/audio/kw/kw5-w14.mp3"
+    },
+    {
+     "id": "kw5-w15",
+     "word": "nurse",
+     "phonetic": "nɜːs",
+     "pos": "n.",
+     "meaning": "护士",
+     "audio": "/audio/kw/kw5-w15.mp3"
+    },
+    {
+     "id": "kw5-w16",
+     "word": "hospital",
+     "phonetic": "ˈhɒspɪtl",
+     "pos": "n.",
+     "meaning": "医院",
+     "audio": "/audio/kw/kw5-w16.mp3"
+    },
+    {
+     "id": "kw5-w17",
+     "word": "medicine",
+     "phonetic": "ˈmedsn",
+     "pos": "n.",
+     "meaning": "药",
+     "audio": "/audio/kw/kw5-w17.mp3"
+    },
+    {
+     "id": "kw5-w18",
+     "word": "ill",
+     "phonetic": "ɪl",
+     "pos": "adj.",
+     "meaning": "生病的",
+     "audio": "/audio/kw/kw5-w18.mp3"
+    },
+    {
+     "id": "kw5-w19",
+     "word": "cold",
+     "phonetic": "kəʊld",
+     "pos": "n.",
+     "meaning": "感冒",
+     "audio": "/audio/kw/kw5-w19.mp3"
+    },
+    {
+     "id": "kw5-w20",
+     "word": "healthy",
+     "phonetic": "ˈhelθi",
+     "pos": "adj.",
+     "meaning": "健康的",
+     "audio": "/audio/kw/kw5-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw6",
+   "title": "旅行与交通",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw6-w1",
+     "word": "travel",
+     "phonetic": "ˈtrævl",
+     "pos": "v.",
+     "meaning": "旅行",
+     "audio": "/audio/kw/kw6-w1.mp3"
+    },
+    {
+     "id": "kw6-w2",
+     "word": "trip",
+     "phonetic": "trɪp",
+     "pos": "n.",
+     "meaning": "短途旅行",
+     "audio": "/audio/kw/kw6-w2.mp3"
+    },
+    {
+     "id": "kw6-w3",
+     "word": "journey",
+     "phonetic": "ˈdʒɜːni",
+     "pos": "n.",
+     "meaning": "旅程",
+     "audio": "/audio/kw/kw6-w3.mp3"
+    },
+    {
+     "id": "kw6-w4",
+     "word": "train",
+     "phonetic": "treɪn",
+     "pos": "n.",
+     "meaning": "火车",
+     "audio": "/audio/kw/kw6-w4.mp3"
+    },
+    {
+     "id": "kw6-w5",
+     "word": "bus",
+     "phonetic": "bʌs",
+     "pos": "n.",
+     "meaning": "公交车",
+     "audio": "/audio/kw/kw6-w5.mp3"
+    },
+    {
+     "id": "kw6-w6",
+     "word": "car",
+     "phonetic": "kɑː",
+     "pos": "n.",
+     "meaning": "小汽车",
+     "audio": "/audio/kw/kw6-w6.mp3"
+    },
+    {
+     "id": "kw6-w7",
+     "word": "bike",
+     "phonetic": "baɪk",
+     "pos": "n.",
+     "meaning": "自行车",
+     "audio": "/audio/kw/kw6-w7.mp3"
+    },
+    {
+     "id": "kw6-w8",
+     "word": "plane",
+     "phonetic": "pleɪn",
+     "pos": "n.",
+     "meaning": "飞机",
+     "audio": "/audio/kw/kw6-w8.mp3"
+    },
+    {
+     "id": "kw6-w9",
+     "word": "ship",
+     "phonetic": "ʃɪp",
+     "pos": "n.",
+     "meaning": "轮船",
+     "audio": "/audio/kw/kw6-w9.mp3"
+    },
+    {
+     "id": "kw6-w10",
+     "word": "taxi",
+     "phonetic": "ˈtæksi",
+     "pos": "n.",
+     "meaning": "出租车",
+     "audio": "/audio/kw/kw6-w10.mp3"
+    },
+    {
+     "id": "kw6-w11",
+     "word": "station",
+     "phonetic": "ˈsteɪʃn",
+     "pos": "n.",
+     "meaning": "车站",
+     "audio": "/audio/kw/kw6-w11.mp3"
+    },
+    {
+     "id": "kw6-w12",
+     "word": "airport",
+     "phonetic": "ˈeəpɔːt",
+     "pos": "n.",
+     "meaning": "机场",
+     "audio": "/audio/kw/kw6-w12.mp3"
+    },
+    {
+     "id": "kw6-w13",
+     "word": "ticket",
+     "phonetic": "ˈtɪkɪt",
+     "pos": "n.",
+     "meaning": "票",
+     "audio": "/audio/kw/kw6-w13.mp3"
+    },
+    {
+     "id": "kw6-w14",
+     "word": "luggage",
+     "phonetic": "ˈlʌɡɪdʒ",
+     "pos": "n.",
+     "meaning": "行李",
+     "audio": "/audio/kw/kw6-w14.mp3"
+    },
+    {
+     "id": "kw6-w15",
+     "word": "map",
+     "phonetic": "mæp",
+     "pos": "n.",
+     "meaning": "地图",
+     "audio": "/audio/kw/kw6-w15.mp3"
+    },
+    {
+     "id": "kw6-w16",
+     "word": "arrive",
+     "phonetic": "əˈraɪv",
+     "pos": "v.",
+     "meaning": "到达",
+     "audio": "/audio/kw/kw6-w16.mp3"
+    },
+    {
+     "id": "kw6-w17",
+     "word": "leave",
+     "phonetic": "liːv",
+     "pos": "v.",
+     "meaning": "离开",
+     "audio": "/audio/kw/kw6-w17.mp3"
+    },
+    {
+     "id": "kw6-w18",
+     "word": "road",
+     "phonetic": "rəʊd",
+     "pos": "n.",
+     "meaning": "公路；道路",
+     "audio": "/audio/kw/kw6-w18.mp3"
+    },
+    {
+     "id": "kw6-w19",
+     "word": "street",
+     "phonetic": "striːt",
+     "pos": "n.",
+     "meaning": "街道",
+     "audio": "/audio/kw/kw6-w19.mp3"
+    },
+    {
+     "id": "kw6-w20",
+     "word": "tourist",
+     "phonetic": "ˈtʊərɪst",
+     "pos": "n.",
+     "meaning": "游客",
+     "audio": "/audio/kw/kw6-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw7",
+   "title": "城市与地点",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw7-w1",
+     "word": "city",
+     "phonetic": "ˈsɪti",
+     "pos": "n.",
+     "meaning": "城市",
+     "audio": "/audio/kw/kw7-w1.mp3"
+    },
+    {
+     "id": "kw7-w2",
+     "word": "town",
+     "phonetic": "taʊn",
+     "pos": "n.",
+     "meaning": "城镇",
+     "audio": "/audio/kw/kw7-w2.mp3"
+    },
+    {
+     "id": "kw7-w3",
+     "word": "village",
+     "phonetic": "ˈvɪlɪdʒ",
+     "pos": "n.",
+     "meaning": "村庄",
+     "audio": "/audio/kw/kw7-w3.mp3"
+    },
+    {
+     "id": "kw7-w4",
+     "word": "square",
+     "phonetic": "skweə",
+     "pos": "n.",
+     "meaning": "广场",
+     "audio": "/audio/kw/kw7-w4.mp3"
+    },
+    {
+     "id": "kw7-w5",
+     "word": "park",
+     "phonetic": "pɑːk",
+     "pos": "n.",
+     "meaning": "公园",
+     "audio": "/audio/kw/kw7-w5.mp3"
+    },
+    {
+     "id": "kw7-w6",
+     "word": "zoo",
+     "phonetic": "zuː",
+     "pos": "n.",
+     "meaning": "动物园",
+     "audio": "/audio/kw/kw7-w6.mp3"
+    },
+    {
+     "id": "kw7-w7",
+     "word": "museum",
+     "phonetic": "mjuˈziːəm",
+     "pos": "n.",
+     "meaning": "博物馆",
+     "audio": "/audio/kw/kw7-w7.mp3"
+    },
+    {
+     "id": "kw7-w8",
+     "word": "cinema",
+     "phonetic": "ˈsɪnəmə",
+     "pos": "n.",
+     "meaning": "电影院",
+     "audio": "/audio/kw/kw7-w8.mp3"
+    },
+    {
+     "id": "kw7-w9",
+     "word": "theatre",
+     "phonetic": "ˈθɪətə",
+     "pos": "n.",
+     "meaning": "剧院",
+     "audio": "/audio/kw/kw7-w9.mp3"
+    },
+    {
+     "id": "kw7-w10",
+     "word": "restaurant",
+     "phonetic": "ˈrestrɒnt",
+     "pos": "n.",
+     "meaning": "餐厅",
+     "audio": "/audio/kw/kw7-w10.mp3"
+    },
+    {
+     "id": "kw7-w11",
+     "word": "bank",
+     "phonetic": "bæŋk",
+     "pos": "n.",
+     "meaning": "银行",
+     "audio": "/audio/kw/kw7-w11.mp3"
+    },
+    {
+     "id": "kw7-w12",
+     "word": "post",
+     "phonetic": "pəʊst",
+     "pos": "n.",
+     "meaning": "邮局",
+     "audio": "/audio/kw/kw7-w12.mp3"
+    },
+    {
+     "id": "kw7-w13",
+     "word": "office",
+     "phonetic": "ˈɒfɪs",
+     "pos": "n.",
+     "meaning": "办公室",
+     "audio": "/audio/kw/kw7-w13.mp3"
+    },
+    {
+     "id": "kw7-w14",
+     "word": "bridge",
+     "phonetic": "brɪdʒ",
+     "pos": "n.",
+     "meaning": "桥",
+     "audio": "/audio/kw/kw7-w14.mp3"
+    },
+    {
+     "id": "kw7-w15",
+     "word": "tower",
+     "phonetic": "ˈtaʊə",
+     "pos": "n.",
+     "meaning": "塔",
+     "audio": "/audio/kw/kw7-w15.mp3"
+    },
+    {
+     "id": "kw7-w16",
+     "word": "building",
+     "phonetic": "ˈbɪldɪŋ",
+     "pos": "n.",
+     "meaning": "建筑物",
+     "audio": "/audio/kw/kw7-w16.mp3"
+    },
+    {
+     "id": "kw7-w17",
+     "word": "hotel",
+     "phonetic": "həʊˈtel",
+     "pos": "n.",
+     "meaning": "旅馆",
+     "audio": "/audio/kw/kw7-w17.mp3"
+    },
+    {
+     "id": "kw7-w18",
+     "word": "supermarket",
+     "phonetic": "ˈsuːpəmɑːkɪt",
+     "pos": "n.",
+     "meaning": "超市",
+     "audio": "/audio/kw/kw7-w18.mp3"
+    },
+    {
+     "id": "kw7-w19",
+     "word": "church",
+     "phonetic": "tʃɜːtʃ",
+     "pos": "n.",
+     "meaning": "教堂",
+     "audio": "/audio/kw/kw7-w19.mp3"
+    },
+    {
+     "id": "kw7-w20",
+     "word": "library",
+     "phonetic": "ˈlaɪbrəri",
+     "pos": "n.",
+     "meaning": "图书馆",
+     "audio": "/audio/kw/kw7-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw8",
+   "title": "天气与自然",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw8-w1",
+     "word": "weather",
+     "phonetic": "ˈweðə",
+     "pos": "n.",
+     "meaning": "天气",
+     "audio": "/audio/kw/kw8-w1.mp3"
+    },
+    {
+     "id": "kw8-w2",
+     "word": "sun",
+     "phonetic": "sʌn",
+     "pos": "n.",
+     "meaning": "太阳",
+     "audio": "/audio/kw/kw8-w2.mp3"
+    },
+    {
+     "id": "kw8-w3",
+     "word": "rain",
+     "phonetic": "reɪn",
+     "pos": "n.",
+     "meaning": "雨",
+     "audio": "/audio/kw/kw8-w3.mp3"
+    },
+    {
+     "id": "kw8-w4",
+     "word": "snow",
+     "phonetic": "snəʊ",
+     "pos": "n.",
+     "meaning": "雪",
+     "audio": "/audio/kw/kw8-w4.mp3"
+    },
+    {
+     "id": "kw8-w5",
+     "word": "wind",
+     "phonetic": "wɪnd",
+     "pos": "n.",
+     "meaning": "风",
+     "audio": "/audio/kw/kw8-w5.mp3"
+    },
+    {
+     "id": "kw8-w6",
+     "word": "cloud",
+     "phonetic": "klaʊd",
+     "pos": "n.",
+     "meaning": "云",
+     "audio": "/audio/kw/kw8-w6.mp3"
+    },
+    {
+     "id": "kw8-w7",
+     "word": "sky",
+     "phonetic": "skaɪ",
+     "pos": "n.",
+     "meaning": "天空",
+     "audio": "/audio/kw/kw8-w7.mp3"
+    },
+    {
+     "id": "kw8-w8",
+     "word": "sea",
+     "phonetic": "siː",
+     "pos": "n.",
+     "meaning": "大海",
+     "audio": "/audio/kw/kw8-w8.mp3"
+    },
+    {
+     "id": "kw8-w9",
+     "word": "river",
+     "phonetic": "ˈrɪvə",
+     "pos": "n.",
+     "meaning": "河流",
+     "audio": "/audio/kw/kw8-w9.mp3"
+    },
+    {
+     "id": "kw8-w10",
+     "word": "lake",
+     "phonetic": "leɪk",
+     "pos": "n.",
+     "meaning": "湖",
+     "audio": "/audio/kw/kw8-w10.mp3"
+    },
+    {
+     "id": "kw8-w11",
+     "word": "mountain",
+     "phonetic": "ˈmaʊntən",
+     "pos": "n.",
+     "meaning": "山",
+     "audio": "/audio/kw/kw8-w11.mp3"
+    },
+    {
+     "id": "kw8-w12",
+     "word": "forest",
+     "phonetic": "ˈfɒrɪst",
+     "pos": "n.",
+     "meaning": "森林",
+     "audio": "/audio/kw/kw8-w12.mp3"
+    },
+    {
+     "id": "kw8-w13",
+     "word": "tree",
+     "phonetic": "triː",
+     "pos": "n.",
+     "meaning": "树",
+     "audio": "/audio/kw/kw8-w13.mp3"
+    },
+    {
+     "id": "kw8-w14",
+     "word": "flower",
+     "phonetic": "ˈflaʊə",
+     "pos": "n.",
+     "meaning": "花",
+     "audio": "/audio/kw/kw8-w14.mp3"
+    },
+    {
+     "id": "kw8-w15",
+     "word": "grass",
+     "phonetic": "ɡrɑːs",
+     "pos": "n.",
+     "meaning": "草",
+     "audio": "/audio/kw/kw8-w15.mp3"
+    },
+    {
+     "id": "kw8-w16",
+     "word": "animal",
+     "phonetic": "ˈænɪml",
+     "pos": "n.",
+     "meaning": "动物",
+     "audio": "/audio/kw/kw8-w16.mp3"
+    },
+    {
+     "id": "kw8-w17",
+     "word": "bird",
+     "phonetic": "bɜːd",
+     "pos": "n.",
+     "meaning": "鸟",
+     "audio": "/audio/kw/kw8-w17.mp3"
+    },
+    {
+     "id": "kw8-w18",
+     "word": "dog",
+     "phonetic": "dɒɡ",
+     "pos": "n.",
+     "meaning": "狗",
+     "audio": "/audio/kw/kw8-w18.mp3"
+    },
+    {
+     "id": "kw8-w19",
+     "word": "cat",
+     "phonetic": "kæt",
+     "pos": "n.",
+     "meaning": "猫",
+     "audio": "/audio/kw/kw8-w19.mp3"
+    },
+    {
+     "id": "kw8-w20",
+     "word": "horse",
+     "phonetic": "hɔːs",
+     "pos": "n.",
+     "meaning": "马",
+     "audio": "/audio/kw/kw8-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw9",
+   "title": "运动与爱好",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw9-w1",
+     "word": "sport",
+     "phonetic": "spɔːt",
+     "pos": "n.",
+     "meaning": "体育运动",
+     "audio": "/audio/kw/kw9-w1.mp3"
+    },
+    {
+     "id": "kw9-w2",
+     "word": "football",
+     "phonetic": "ˈfʊtbɔːl",
+     "pos": "n.",
+     "meaning": "足球",
+     "audio": "/audio/kw/kw9-w2.mp3"
+    },
+    {
+     "id": "kw9-w3",
+     "word": "basketball",
+     "phonetic": "ˈbɑːskɪtbɔːl",
+     "pos": "n.",
+     "meaning": "篮球",
+     "audio": "/audio/kw/kw9-w3.mp3"
+    },
+    {
+     "id": "kw9-w4",
+     "word": "tennis",
+     "phonetic": "ˈtenɪs",
+     "pos": "n.",
+     "meaning": "网球",
+     "audio": "/audio/kw/kw9-w4.mp3"
+    },
+    {
+     "id": "kw9-w5",
+     "word": "swimming",
+     "phonetic": "ˈswɪmɪŋ",
+     "pos": "n.",
+     "meaning": "游泳",
+     "audio": "/audio/kw/kw9-w5.mp3"
+    },
+    {
+     "id": "kw9-w6",
+     "word": "running",
+     "phonetic": "ˈrʌnɪŋ",
+     "pos": "n.",
+     "meaning": "跑步",
+     "audio": "/audio/kw/kw9-w6.mp3"
+    },
+    {
+     "id": "kw9-w7",
+     "word": "cycling",
+     "phonetic": "ˈsaɪklɪŋ",
+     "pos": "n.",
+     "meaning": "骑自行车",
+     "audio": "/audio/kw/kw9-w7.mp3"
+    },
+    {
+     "id": "kw9-w8",
+     "word": "hobby",
+     "phonetic": "ˈhɒbi",
+     "pos": "n.",
+     "meaning": "爱好",
+     "audio": "/audio/kw/kw9-w8.mp3"
+    },
+    {
+     "id": "kw9-w9",
+     "word": "guitar",
+     "phonetic": "ɡɪˈtɑː",
+     "pos": "n.",
+     "meaning": "吉他",
+     "audio": "/audio/kw/kw9-w9.mp3"
+    },
+    {
+     "id": "kw9-w10",
+     "word": "piano",
+     "phonetic": "piˈænəʊ",
+     "pos": "n.",
+     "meaning": "钢琴",
+     "audio": "/audio/kw/kw9-w10.mp3"
+    },
+    {
+     "id": "kw9-w11",
+     "word": "dance",
+     "phonetic": "dɑːns",
+     "pos": "v.",
+     "meaning": "跳舞",
+     "audio": "/audio/kw/kw9-w11.mp3"
+    },
+    {
+     "id": "kw9-w12",
+     "word": "painting",
+     "phonetic": "ˈpeɪntɪŋ",
+     "pos": "n.",
+     "meaning": "绘画",
+     "audio": "/audio/kw/kw9-w12.mp3"
+    },
+    {
+     "id": "kw9-w13",
+     "word": "photo",
+     "phonetic": "ˈfəʊtəʊ",
+     "pos": "n.",
+     "meaning": "照片",
+     "audio": "/audio/kw/kw9-w13.mp3"
+    },
+    {
+     "id": "kw9-w14",
+     "word": "game",
+     "phonetic": "ɡeɪm",
+     "pos": "n.",
+     "meaning": "游戏；比赛",
+     "audio": "/audio/kw/kw9-w14.mp3"
+    },
+    {
+     "id": "kw9-w15",
+     "word": "team",
+     "phonetic": "tiːm",
+     "pos": "n.",
+     "meaning": "队",
+     "audio": "/audio/kw/kw9-w15.mp3"
+    },
+    {
+     "id": "kw9-w16",
+     "word": "match",
+     "phonetic": "mætʃ",
+     "pos": "n.",
+     "meaning": "比赛",
+     "audio": "/audio/kw/kw9-w16.mp3"
+    },
+    {
+     "id": "kw9-w17",
+     "word": "win",
+     "phonetic": "wɪn",
+     "pos": "v.",
+     "meaning": "赢",
+     "audio": "/audio/kw/kw9-w17.mp3"
+    },
+    {
+     "id": "kw9-w18",
+     "word": "lose",
+     "phonetic": "luːz",
+     "pos": "v.",
+     "meaning": "输；丢失",
+     "audio": "/audio/kw/kw9-w18.mp3"
+    },
+    {
+     "id": "kw9-w19",
+     "word": "exercise",
+     "phonetic": "ˈeksəsaɪz",
+     "pos": "n.",
+     "meaning": "锻炼",
+     "audio": "/audio/kw/kw9-w19.mp3"
+    },
+    {
+     "id": "kw9-w20",
+     "word": "volleyball",
+     "phonetic": "ˈvɒlibɔːl",
+     "pos": "n.",
+     "meaning": "排球",
+     "audio": "/audio/kw/kw9-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw10",
+   "title": "时间与日期",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw10-w1",
+     "word": "time",
+     "phonetic": "taɪm",
+     "pos": "n.",
+     "meaning": "时间",
+     "audio": "/audio/kw/kw10-w1.mp3"
+    },
+    {
+     "id": "kw10-w2",
+     "word": "clock",
+     "phonetic": "klɒk",
+     "pos": "n.",
+     "meaning": "钟",
+     "audio": "/audio/kw/kw10-w2.mp3"
+    },
+    {
+     "id": "kw10-w3",
+     "word": "hour",
+     "phonetic": "ˈaʊə",
+     "pos": "n.",
+     "meaning": "小时",
+     "audio": "/audio/kw/kw10-w3.mp3"
+    },
+    {
+     "id": "kw10-w4",
+     "word": "minute",
+     "phonetic": "ˈmɪnɪt",
+     "pos": "n.",
+     "meaning": "分钟",
+     "audio": "/audio/kw/kw10-w4.mp3"
+    },
+    {
+     "id": "kw10-w5",
+     "word": "second",
+     "phonetic": "ˈsekənd",
+     "pos": "n.",
+     "meaning": "秒",
+     "audio": "/audio/kw/kw10-w5.mp3"
+    },
+    {
+     "id": "kw10-w6",
+     "word": "morning",
+     "phonetic": "ˈmɔːnɪŋ",
+     "pos": "n.",
+     "meaning": "早晨",
+     "audio": "/audio/kw/kw10-w6.mp3"
+    },
+    {
+     "id": "kw10-w7",
+     "word": "afternoon",
+     "phonetic": "ˌɑːftəˈnuːn",
+     "pos": "n.",
+     "meaning": "下午",
+     "audio": "/audio/kw/kw10-w7.mp3"
+    },
+    {
+     "id": "kw10-w8",
+     "word": "evening",
+     "phonetic": "ˈiːvnɪŋ",
+     "pos": "n.",
+     "meaning": "傍晚",
+     "audio": "/audio/kw/kw10-w8.mp3"
+    },
+    {
+     "id": "kw10-w9",
+     "word": "night",
+     "phonetic": "naɪt",
+     "pos": "n.",
+     "meaning": "夜晚",
+     "audio": "/audio/kw/kw10-w9.mp3"
+    },
+    {
+     "id": "kw10-w10",
+     "word": "today",
+     "phonetic": "təˈdeɪ",
+     "pos": "n.",
+     "meaning": "今天",
+     "audio": "/audio/kw/kw10-w10.mp3"
+    },
+    {
+     "id": "kw10-w11",
+     "word": "tomorrow",
+     "phonetic": "təˈmɒrəʊ",
+     "pos": "n.",
+     "meaning": "明天",
+     "audio": "/audio/kw/kw10-w11.mp3"
+    },
+    {
+     "id": "kw10-w12",
+     "word": "yesterday",
+     "phonetic": "ˈjestədeɪ",
+     "pos": "n.",
+     "meaning": "昨天",
+     "audio": "/audio/kw/kw10-w12.mp3"
+    },
+    {
+     "id": "kw10-w13",
+     "word": "week",
+     "phonetic": "wiːk",
+     "pos": "n.",
+     "meaning": "星期；周",
+     "audio": "/audio/kw/kw10-w13.mp3"
+    },
+    {
+     "id": "kw10-w14",
+     "word": "month",
+     "phonetic": "mʌnθ",
+     "pos": "n.",
+     "meaning": "月份",
+     "audio": "/audio/kw/kw10-w14.mp3"
+    },
+    {
+     "id": "kw10-w15",
+     "word": "year",
+     "phonetic": "jɪə",
+     "pos": "n.",
+     "meaning": "年",
+     "audio": "/audio/kw/kw10-w15.mp3"
+    },
+    {
+     "id": "kw10-w16",
+     "word": "date",
+     "phonetic": "deɪt",
+     "pos": "n.",
+     "meaning": "日期",
+     "audio": "/audio/kw/kw10-w16.mp3"
+    },
+    {
+     "id": "kw10-w17",
+     "word": "birthday",
+     "phonetic": "ˈbɜːθdeɪ",
+     "pos": "n.",
+     "meaning": "生日",
+     "audio": "/audio/kw/kw10-w17.mp3"
+    },
+    {
+     "id": "kw10-w18",
+     "word": "holiday",
+     "phonetic": "ˈhɒlədeɪ",
+     "pos": "n.",
+     "meaning": "假期",
+     "audio": "/audio/kw/kw10-w18.mp3"
+    },
+    {
+     "id": "kw10-w19",
+     "word": "season",
+     "phonetic": "ˈsiːzn",
+     "pos": "n.",
+     "meaning": "季节",
+     "audio": "/audio/kw/kw10-w19.mp3"
+    },
+    {
+     "id": "kw10-w20",
+     "word": "weekend",
+     "phonetic": "ˌwiːkˈend",
+     "pos": "n.",
+     "meaning": "周末",
+     "audio": "/audio/kw/kw10-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw11",
+   "title": "工作与职业",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw11-w1",
+     "word": "work",
+     "phonetic": "wɜːk",
+     "pos": "v.",
+     "meaning": "工作",
+     "audio": "/audio/kw/kw11-w1.mp3"
+    },
+    {
+     "id": "kw11-w2",
+     "word": "job",
+     "phonetic": "dʒɒb",
+     "pos": "n.",
+     "meaning": "工作；职业",
+     "audio": "/audio/kw/kw11-w2.mp3"
+    },
+    {
+     "id": "kw11-w3",
+     "word": "driver",
+     "phonetic": "ˈdraɪvə",
+     "pos": "n.",
+     "meaning": "司机",
+     "audio": "/audio/kw/kw11-w3.mp3"
+    },
+    {
+     "id": "kw11-w4",
+     "word": "farmer",
+     "phonetic": "ˈfɑːmə",
+     "pos": "n.",
+     "meaning": "农民",
+     "audio": "/audio/kw/kw11-w4.mp3"
+    },
+    {
+     "id": "kw11-w5",
+     "word": "cook",
+     "phonetic": "kʊk",
+     "pos": "n.",
+     "meaning": "厨师",
+     "audio": "/audio/kw/kw11-w5.mp3"
+    },
+    {
+     "id": "kw11-w6",
+     "word": "waiter",
+     "phonetic": "ˈweɪtə",
+     "pos": "n.",
+     "meaning": "服务员",
+     "audio": "/audio/kw/kw11-w6.mp3"
+    },
+    {
+     "id": "kw11-w7",
+     "word": "engineer",
+     "phonetic": "ˌendʒɪˈnɪə",
+     "pos": "n.",
+     "meaning": "工程师",
+     "audio": "/audio/kw/kw11-w7.mp3"
+    },
+    {
+     "id": "kw11-w8",
+     "word": "policeman",
+     "phonetic": "pəˈliːsmən",
+     "pos": "n.",
+     "meaning": "警察",
+     "audio": "/audio/kw/kw11-w8.mp3"
+    },
+    {
+     "id": "kw11-w9",
+     "word": "singer",
+     "phonetic": "ˈsɪŋə",
+     "pos": "n.",
+     "meaning": "歌手",
+     "audio": "/audio/kw/kw11-w9.mp3"
+    },
+    {
+     "id": "kw11-w10",
+     "word": "actor",
+     "phonetic": "ˈæktə",
+     "pos": "n.",
+     "meaning": "演员",
+     "audio": "/audio/kw/kw11-w10.mp3"
+    },
+    {
+     "id": "kw11-w11",
+     "word": "writer",
+     "phonetic": "ˈraɪtə",
+     "pos": "n.",
+     "meaning": "作家",
+     "audio": "/audio/kw/kw11-w11.mp3"
+    },
+    {
+     "id": "kw11-w12",
+     "word": "manager",
+     "phonetic": "ˈmænɪdʒə",
+     "pos": "n.",
+     "meaning": "经理",
+     "audio": "/audio/kw/kw11-w12.mp3"
+    },
+    {
+     "id": "kw11-w13",
+     "word": "office",
+     "phonetic": "ˈɒfɪs",
+     "pos": "n.",
+     "meaning": "办公室",
+     "audio": "/audio/kw/kw11-w13.mp3"
+    },
+    {
+     "id": "kw11-w14",
+     "word": "factory",
+     "phonetic": "ˈfæktri",
+     "pos": "n.",
+     "meaning": "工厂",
+     "audio": "/audio/kw/kw11-w14.mp3"
+    },
+    {
+     "id": "kw11-w15",
+     "word": "salary",
+     "phonetic": "ˈsæləri",
+     "pos": "n.",
+     "meaning": "薪水",
+     "audio": "/audio/kw/kw11-w15.mp3"
+    },
+    {
+     "id": "kw11-w16",
+     "word": "interview",
+     "phonetic": "ˈɪntəvjuː",
+     "pos": "n.",
+     "meaning": "面试",
+     "audio": "/audio/kw/kw11-w16.mp3"
+    },
+    {
+     "id": "kw11-w17",
+     "word": "career",
+     "phonetic": "kəˈrɪə",
+     "pos": "n.",
+     "meaning": "职业生涯",
+     "audio": "/audio/kw/kw11-w17.mp3"
+    },
+    {
+     "id": "kw11-w18",
+     "word": "shopkeeper",
+     "phonetic": "ˈʃɒpkiːpə",
+     "pos": "n.",
+     "meaning": "店主",
+     "audio": "/audio/kw/kw11-w18.mp3"
+    },
+    {
+     "id": "kw11-w19",
+     "word": "businessman",
+     "phonetic": "ˈbɪznəsmæn",
+     "pos": "n.",
+     "meaning": "商人",
+     "audio": "/audio/kw/kw11-w19.mp3"
+    },
+    {
+     "id": "kw11-w20",
+     "word": "artist",
+     "phonetic": "ˈɑːtɪst",
+     "pos": "n.",
+     "meaning": "艺术家",
+     "audio": "/audio/kw/kw11-w20.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kw12",
+   "title": "日常活动",
+   "count": 20,
+   "words": [
+    {
+     "id": "kw12-w1",
+     "word": "wake",
+     "phonetic": "weɪk",
+     "pos": "v.",
+     "meaning": "醒来",
+     "audio": "/audio/kw/kw12-w1.mp3"
+    },
+    {
+     "id": "kw12-w2",
+     "word": "wash",
+     "phonetic": "wɒʃ",
+     "pos": "v.",
+     "meaning": "洗",
+     "audio": "/audio/kw/kw12-w2.mp3"
+    },
+    {
+     "id": "kw12-w3",
+     "word": "brush",
+     "phonetic": "brʌʃ",
+     "pos": "v.",
+     "meaning": "刷",
+     "audio": "/audio/kw/kw12-w3.mp3"
+    },
+    {
+     "id": "kw12-w4",
+     "word": "dress",
+     "phonetic": "dres",
+     "pos": "v.",
+     "meaning": "穿衣",
+     "audio": "/audio/kw/kw12-w4.mp3"
+    },
+    {
+     "id": "kw12-w5",
+     "word": "study",
+     "phonetic": "ˈstʌdi",
+     "pos": "v.",
+     "meaning": "学习",
+     "audio": "/audio/kw/kw12-w5.mp3"
+    },
+    {
+     "id": "kw12-w6",
+     "word": "play",
+     "phonetic": "pleɪ",
+     "pos": "v.",
+     "meaning": "玩；打（球）",
+     "audio": "/audio/kw/kw12-w6.mp3"
+    },
+    {
+     "id": "kw12-w7",
+     "word": "watch",
+     "phonetic": "wɒtʃ",
+     "pos": "v.",
+     "meaning": "观看",
+     "audio": "/audio/kw/kw12-w7.mp3"
+    },
+    {
+     "id": "kw12-w8",
+     "word": "read",
+     "phonetic": "riːd",
+     "pos": "v.",
+     "meaning": "阅读",
+     "audio": "/audio/kw/kw12-w8.mp3"
+    },
+    {
+     "id": "kw12-w9",
+     "word": "write",
+     "phonetic": "raɪt",
+     "pos": "v.",
+     "meaning": "写",
+     "audio": "/audio/kw/kw12-w9.mp3"
+    },
+    {
+     "id": "kw12-w10",
+     "word": "listen",
+     "phonetic": "ˈlɪsn",
+     "pos": "v.",
+     "meaning": "听",
+     "audio": "/audio/kw/kw12-w10.mp3"
+    },
+    {
+     "id": "kw12-w11",
+     "word": "speak",
+     "phonetic": "spiːk",
+     "pos": "v.",
+     "meaning": "说（话）",
+     "audio": "/audio/kw/kw12-w11.mp3"
+    },
+    {
+     "id": "kw12-w12",
+     "word": "sleep",
+     "phonetic": "sliːp",
+     "pos": "v.",
+     "meaning": "睡觉",
+     "audio": "/audio/kw/kw12-w12.mp3"
+    },
+    {
+     "id": "kw12-w13",
+     "word": "rest",
+     "phonetic": "rest",
+     "pos": "v.",
+     "meaning": "休息",
+     "audio": "/audio/kw/kw12-w13.mp3"
+    },
+    {
+     "id": "kw12-w14",
+     "word": "clean",
+     "phonetic": "kliːn",
+     "pos": "v.",
+     "meaning": "打扫",
+     "audio": "/audio/kw/kw12-w14.mp3"
+    },
+    {
+     "id": "kw12-w15",
+     "word": "cook",
+     "phonetic": "kʊk",
+     "pos": "v.",
+     "meaning": "做饭",
+     "audio": "/audio/kw/kw12-w15.mp3"
+    },
+    {
+     "id": "kw12-w16",
+     "word": "walk",
+     "phonetic": "wɔːk",
+     "pos": "v.",
+     "meaning": "走路",
+     "audio": "/audio/kw/kw12-w16.mp3"
+    },
+    {
+     "id": "kw12-w17",
+     "word": "phone",
+     "phonetic": "fəʊn",
+     "pos": "v.",
+     "meaning": "打电话",
+     "audio": "/audio/kw/kw12-w17.mp3"
+    },
+    {
+     "id": "kw12-w18",
+     "word": "visit",
+     "phonetic": "ˈvɪzɪt",
+     "pos": "v.",
+     "meaning": "拜访；参观",
+     "audio": "/audio/kw/kw12-w18.mp3"
+    },
+    {
+     "id": "kw12-w19",
+     "word": "swim",
+     "phonetic": "swɪm",
+     "pos": "v.",
+     "meaning": "游泳",
+     "audio": "/audio/kw/kw12-w19.mp3"
+    },
+    {
+     "id": "kw12-w20",
+     "word": "run",
+     "phonetic": "rʌn",
+     "pos": "v.",
+     "meaning": "跑",
+     "audio": "/audio/kw/kw12-w20.mp3"
+    }
+   ]
+  }
+ ]
+}

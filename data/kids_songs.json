@@ -1,0 +1,348 @@
+{
+  "product": "幼儿启蒙英语 · 儿歌磨耳朵",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "10 首原创韵律儿歌：整首跟唱 + 逐句点读，歌词中文对照（可理解性输入）",
+  "songs": [
+    {
+      "id": "ks1",
+      "title": "Hello Song",
+      "zhTitle": "你好歌",
+      "emoji": "👋",
+      "theme": "问候",
+      "lines": [
+        {
+          "id": "ks1s01",
+          "en": "Hello, hello, how are you?",
+          "zh": "你好，你好，你好吗？",
+          "audio": "/audio/ks/ks1s01.mp3"
+        },
+        {
+          "id": "ks1s02",
+          "en": "I am fine, how are you too?",
+          "zh": "我很好，你也好吗？",
+          "audio": "/audio/ks/ks1s02.mp3"
+        },
+        {
+          "id": "ks1s03",
+          "en": "Hello, hello, say hello.",
+          "zh": "你好，你好，说声你好。",
+          "audio": "/audio/ks/ks1s03.mp3"
+        },
+        {
+          "id": "ks1s04",
+          "en": "Come and sing with me, let's go!",
+          "zh": "来和我一起唱，我们出发吧！",
+          "audio": "/audio/ks/ks1s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks1f.mp3"
+    },
+    {
+      "id": "ks2",
+      "title": "Colour Song",
+      "zhTitle": "颜色歌",
+      "emoji": "🎨",
+      "theme": "颜色",
+      "lines": [
+        {
+          "id": "ks2s01",
+          "en": "Red and blue, green and yellow.",
+          "zh": "红和蓝，绿和黄。",
+          "audio": "/audio/ks/ks2s01.mp3"
+        },
+        {
+          "id": "ks2s02",
+          "en": "Colours, colours, bright and mellow.",
+          "zh": "颜色，颜色，又亮又柔。",
+          "audio": "/audio/ks/ks2s02.mp3"
+        },
+        {
+          "id": "ks2s03",
+          "en": "I see red, I see blue.",
+          "zh": "我看见红色，我看见蓝色。",
+          "audio": "/audio/ks/ks2s03.mp3"
+        },
+        {
+          "id": "ks2s04",
+          "en": "Pretty colours, I love you!",
+          "zh": "漂亮的颜色，我爱你们！",
+          "audio": "/audio/ks/ks2s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks2f.mp3"
+    },
+    {
+      "id": "ks3",
+      "title": "Counting Song",
+      "zhTitle": "数数歌",
+      "emoji": "🔢",
+      "theme": "数字",
+      "lines": [
+        {
+          "id": "ks3s01",
+          "en": "One, two, three, look at me.",
+          "zh": "一，二，三，看看我。",
+          "audio": "/audio/ks/ks3s01.mp3"
+        },
+        {
+          "id": "ks3s02",
+          "en": "Four, five, six, count with me.",
+          "zh": "四，五，六，和我一起数。",
+          "audio": "/audio/ks/ks3s02.mp3"
+        },
+        {
+          "id": "ks3s03",
+          "en": "Seven, eight, nine, ten.",
+          "zh": "七，八，九，十。",
+          "audio": "/audio/ks/ks3s03.mp3"
+        },
+        {
+          "id": "ks3s04",
+          "en": "Let's count again, my friend!",
+          "zh": "朋友，我们再数一次！",
+          "audio": "/audio/ks/ks3s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks3f.mp3"
+    },
+    {
+      "id": "ks4",
+      "title": "Animal Sounds",
+      "zhTitle": "动物叫声歌",
+      "emoji": "🐾",
+      "theme": "动物",
+      "lines": [
+        {
+          "id": "ks4s01",
+          "en": "The cat says meow, meow.",
+          "zh": "小猫说喵，喵。",
+          "audio": "/audio/ks/ks4s01.mp3"
+        },
+        {
+          "id": "ks4s02",
+          "en": "The dog says woof, woof.",
+          "zh": "小狗说汪，汪。",
+          "audio": "/audio/ks/ks4s02.mp3"
+        },
+        {
+          "id": "ks4s03",
+          "en": "The duck says quack, quack.",
+          "zh": "小鸭说嘎，嘎。",
+          "audio": "/audio/ks/ks4s03.mp3"
+        },
+        {
+          "id": "ks4s04",
+          "en": "Animals are my friends!",
+          "zh": "动物是我的朋友！",
+          "audio": "/audio/ks/ks4s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks4f.mp3"
+    },
+    {
+      "id": "ks5",
+      "title": "Yummy Food",
+      "zhTitle": "美味食物歌",
+      "emoji": "🍎",
+      "theme": "食物",
+      "lines": [
+        {
+          "id": "ks5s01",
+          "en": "Apple and banana, yummy, yummy.",
+          "zh": "苹果和香蕉，美味，美味。",
+          "audio": "/audio/ks/ks5s01.mp3"
+        },
+        {
+          "id": "ks5s02",
+          "en": "Milk and egg, good for my tummy.",
+          "zh": "牛奶和鸡蛋，对身体好。",
+          "audio": "/audio/ks/ks5s02.mp3"
+        },
+        {
+          "id": "ks5s03",
+          "en": "Cake and ice cream, sweet, sweet, sweet.",
+          "zh": "蛋糕和冰淇淋，甜，甜，甜。",
+          "audio": "/audio/ks/ks5s03.mp3"
+        },
+        {
+          "id": "ks5s04",
+          "en": "I love yummy food to eat!",
+          "zh": "我爱吃美味的食物！",
+          "audio": "/audio/ks/ks5s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks5f.mp3"
+    },
+    {
+      "id": "ks6",
+      "title": "My Body",
+      "zhTitle": "身体歌",
+      "emoji": "🧍",
+      "theme": "身体",
+      "lines": [
+        {
+          "id": "ks6s01",
+          "en": "Head and shoulders, knees and toes.",
+          "zh": "头和肩膀，膝盖和脚趾。",
+          "audio": "/audio/ks/ks6s01.mp3"
+        },
+        {
+          "id": "ks6s02",
+          "en": "Eyes and ears and mouth and nose.",
+          "zh": "眼睛耳朵嘴巴和鼻子。",
+          "audio": "/audio/ks/ks6s02.mp3"
+        },
+        {
+          "id": "ks6s03",
+          "en": "Clap your hands, stamp your feet.",
+          "zh": "拍拍手，跺跺脚。",
+          "audio": "/audio/ks/ks6s03.mp3"
+        },
+        {
+          "id": "ks6s04",
+          "en": "My body is so neat!",
+          "zh": "我的身体真棒！",
+          "audio": "/audio/ks/ks6s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks6f.mp3"
+    },
+    {
+      "id": "ks7",
+      "title": "Rain and Sun",
+      "zhTitle": "雨和太阳歌",
+      "emoji": "🌦️",
+      "theme": "天气",
+      "lines": [
+        {
+          "id": "ks7s01",
+          "en": "Rain, rain, go away.",
+          "zh": "雨啊雨啊快走开。",
+          "audio": "/audio/ks/ks7s01.mp3"
+        },
+        {
+          "id": "ks7s02",
+          "en": "Come again another day.",
+          "zh": "改天你再来。",
+          "audio": "/audio/ks/ks7s02.mp3"
+        },
+        {
+          "id": "ks7s03",
+          "en": "Sun, sun, shine so bright.",
+          "zh": "太阳太阳闪闪亮。",
+          "audio": "/audio/ks/ks7s03.mp3"
+        },
+        {
+          "id": "ks7s04",
+          "en": "Play with me all day and night!",
+          "zh": "白天黑夜和我玩！",
+          "audio": "/audio/ks/ks7s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks7f.mp3"
+    },
+    {
+      "id": "ks8",
+      "title": "Let's Move",
+      "zhTitle": "动起来歌",
+      "emoji": "🏃",
+      "theme": "动作",
+      "lines": [
+        {
+          "id": "ks8s01",
+          "en": "Jump, jump, jump so high.",
+          "zh": "跳，跳，跳得高。",
+          "audio": "/audio/ks/ks8s01.mp3"
+        },
+        {
+          "id": "ks8s02",
+          "en": "Run, run, run and fly.",
+          "zh": "跑，跑，跑得快。",
+          "audio": "/audio/ks/ks8s02.mp3"
+        },
+        {
+          "id": "ks8s03",
+          "en": "Clap, clap, clap your hands.",
+          "zh": "拍，拍，拍拍你的手。",
+          "audio": "/audio/ks/ks8s03.mp3"
+        },
+        {
+          "id": "ks8s04",
+          "en": "Move your body, be my friends!",
+          "zh": "动动身体，做我的好朋友！",
+          "audio": "/audio/ks/ks8s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks8f.mp3"
+    },
+    {
+      "id": "ks9",
+      "title": "My Family",
+      "zhTitle": "家人歌",
+      "emoji": "👨‍👩‍👧",
+      "theme": "家庭",
+      "lines": [
+        {
+          "id": "ks9s01",
+          "en": "Mum and Dad, I love you.",
+          "zh": "妈妈爸爸，我爱你们。",
+          "audio": "/audio/ks/ks9s01.mp3"
+        },
+        {
+          "id": "ks9s02",
+          "en": "Grandma and Grandpa, love you too.",
+          "zh": "爷爷奶奶，也爱你们。",
+          "audio": "/audio/ks/ks9s02.mp3"
+        },
+        {
+          "id": "ks9s03",
+          "en": "Brother, sister, all my family.",
+          "zh": "哥哥姐姐，我的全家。",
+          "audio": "/audio/ks/ks9s03.mp3"
+        },
+        {
+          "id": "ks9s04",
+          "en": "We are happy, you and me!",
+          "zh": "我们很快乐，你和我！",
+          "audio": "/audio/ks/ks9s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks9f.mp3"
+    },
+    {
+      "id": "ks10",
+      "title": "Let's Go Out",
+      "zhTitle": "出行歌",
+      "emoji": "🚌",
+      "theme": "出行",
+      "lines": [
+        {
+          "id": "ks10s01",
+          "en": "The car goes beep, beep, beep.",
+          "zh": "小汽车嘟嘟嘟。",
+          "audio": "/audio/ks/ks10s01.mp3"
+        },
+        {
+          "id": "ks10s02",
+          "en": "The bike goes ring, ring, ring.",
+          "zh": "自行车铃铃铃。",
+          "audio": "/audio/ks/ks10s02.mp3"
+        },
+        {
+          "id": "ks10s03",
+          "en": "The bus goes vroom, vroom, vroom.",
+          "zh": "公交车轰轰轰。",
+          "audio": "/audio/ks/ks10s03.mp3"
+        },
+        {
+          "id": "ks10s04",
+          "en": "Let's go to the zoo!",
+          "zh": "我们去动物园吧！",
+          "audio": "/audio/ks/ks10s04.mp3"
+        }
+      ],
+      "fullAudio": "/audio/ks/ks10f.mp3"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考英语听说 · Part B 三问五答专项</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:16px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .topbar h1 { font-size:19px; }
+  .topbar .sub { font-size:12px; opacity:.92; margin-top:3px; }
+  .topbar .spacer { flex:1; }
+  .topbar a.back { color:#fff; text-decoration:none; background:rgba(255,255,255,.22); padding:7px 14px; border-radius:20px; font-size:13px; }
+  .trial-note { background:#fffbe8; border:1px solid #f3e6b8; color:#7a5c00; padding:10px 14px; border-radius:12px; font-size:13px; margin-bottom:14px; display:none; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:10px; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:120px; height:auto; border-radius:8px; display:block; }
+  .layout { display:flex; gap:14px; align-items:flex-start; }
+  .side { width:250px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:12px; color:#999; margin:14px 0 8px; font-weight:700; }
+  .side h3:first-child { margin-top:0; }
+  .gset-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; }
+  .gset-item:hover { background:#fff3f2; }
+  .gset-item.on { background:#fff0ef; border-color:var(--brand,#ff5e62); }
+  .gset-item .t { font-weight:700; font-size:13.5px; }
+  .gset-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .main { flex:1; min-width:0; }
+  .card { background:#fff; border-radius:16px; padding:22px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-bottom:14px; }
+  .step-head { font-size:15px; font-weight:800; margin-bottom:12px; }
+  .step-head span { display:inline-block; background:var(--brand,#ff5e62); color:#fff; border-radius:10px; padding:2px 10px; font-size:12px; margin-right:8px; }
+  .scene-text { background:#f7f9ff; border-radius:12px; padding:14px; font-size:14px; line-height:1.8; color:#444; }
+  .audio-row { display:flex; align-items:center; gap:10px; margin:12px 0; flex-wrap:wrap; }
+  .audio-row audio { flex:1; min-width:200px; height:40px; }
+  .mini { padding:9px 16px; border:none; border-radius:20px; background:#f0f0f0; color:#555; font-size:13px; cursor:pointer; }
+  .mini.on { background:#ff5e62; color:#fff; }
+  .dlg { border-left:3px solid #eee; padding:8px 12px; margin:6px 0; border-radius:8px; }
+  .dlg.W { border-left-color:#ff5e62; background:#fff5f4; }
+  .dlg.M { border-left-color:#7c9cff; background:#f4f7ff; }
+  .dlg .who { font-size:11px; color:#999; margin-bottom:3px; font-weight:700; }
+  .dlg .txt { font-size:14px; line-height:1.6; }
+  .q3-card { border:1.5px solid #eee; border-radius:12px; padding:12px 14px; margin:10px 0; }
+  .q3-card .cn { font-size:14px; font-weight:700; margin-bottom:8px; }
+  .q3-card .en { font-size:13.5px; color:#1a56db; }
+  .a5-card { border:1.5px solid #eee; border-radius:12px; padding:12px 14px; margin:10px 0; }
+  .a5-card .q { font-size:14px; font-weight:700; }
+  .a5-card .a { font-size:13.5px; color:#2a8; margin-top:6px; }
+  .a5-card .pts { font-size:12px; color:#999; margin-top:4px; }
+  .hid { display:none; }
+  .ans-btn { margin-top:8px; padding:6px 14px; border:none; border-radius:10px; background:#ff5e62; color:#fff; font-size:12px; cursor:pointer; }
+  .analysis ul { padding-left:20px; font-size:13px; line-height:1.9; color:#444; }
+  .analysis li::marker { color:#ff5e62; }
+  .steps { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .steps button { flex:1; min-width:90px; padding:10px 6px; border:none; border-radius:12px; background:#fff; font-size:13px; font-weight:700; color:#555; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .steps button.on { background:#ff5e62; color:#fff; }
+  .navbtns { display:flex; gap:10px; margin-top:14px; }
+  .navbtns button { flex:1; padding:12px; border:none; border-radius:12px; font-size:14px; cursor:pointer; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06); color:#333; }
+  .navbtns button.primary { background:#ff5e62; color:#fff; }
+  .navbtns button:disabled { opacity:.35; cursor:not-allowed; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .err-msg { color:#e23; font-size:14px; text-align:center; padding:30px 10px; }
+  @media (max-width:720px) {
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+    .side .grps { display:flex; overflow-x:auto; gap:6px; padding-bottom:6px; }
+    .side .gset-item { min-width:150px; margin-bottom:0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>🎓 高考英语听说 · Part B 三问五答专项</h1>
+      <div class="sub">角色扮演（16 分）· 情景对话 → 三问（6分）→ 五答（10分）· 广东卷题型</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="back" href="./index.html">← 返回题库首页</a>
+  
+    <a class="back" style="cursor:pointer;" onclick="logout()">退出登录</a></div>
+
+  <div class="trial-note" id="trialNote"></div>
+
+  <div class="layout">
+    <div class="side">
+      <h3>模拟卷列表（12 套）</h3>
+      <div id="setList"><div class="empty" style="box-shadow:none;padding:20px;">加载中…</div></div>
+    </div>
+    <div class="main" id="mainArea"><div class="empty">请从左侧选择一套模拟卷开始学习</div></div>
+  </div>
+</div>
+
+<script>
+function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href='./index.html'; }
+
+(function () {
+  const $ = s => document.querySelector(s);
+  const TOKEN = localStorage.getItem('token') || '';
+  let DEVFP = '';
+  try { DEVFP = localStorage.getItem('devfp') || ''; } catch (e) {}
+  const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+  let SETS = [], CUR = null, STEP = 0;
+  const GK_KEY = 'gk_progress';  // 高考听说完成记录（setId -> {done,last}）
+  function loadGK() { try { return JSON.parse(localStorage.getItem(GK_KEY) || '{}'); } catch (e) { return {}; } }
+  function saveGK(v) { try { localStorage.setItem(GK_KEY, JSON.stringify(v)); } catch (e) {} }
+
+  async function api(path, opts) {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), 12000);
+    try {
+      const r = await fetch(path, Object.assign({ headers: H(), signal: ctl.signal }, opts || {}));
+      const j = await r.json().catch(() => ({}));
+      return { s: r.status, j };
+    } catch (e) {
+      return { s: 0, j: { error: '网络异常或请求超时，请检查网络后重试' } };
+    } finally { clearTimeout(tm); }
+  }
+  let AUD_CUR = null;       // 当前按钮触发的音频
+  const AUDIOS = [];        // 页面内所有原生 <audio> 播放器
+  function stopAll(except) {
+    if (AUD_CUR && AUD_CUR !== except) { try { AUD_CUR.pause(); } catch (e) {} AUD_CUR = null; }
+    AUDIOS.forEach(a => { if (a !== except) { try { a.pause(); } catch (e) {} } });
+  }
+  function trackAudio(el) { AUDIOS.push(el); el.addEventListener('play', () => stopAll(el)); }
+  function play(src, rate) {
+    stopAll(null);
+    AUD_CUR = new Audio();
+    AUD_CUR.src = src;
+    if (rate) AUD_CUR.playbackRate = rate;
+    window.__gkCur = AUD_CUR;
+    AUD_CUR.play().catch(() => {});
+  }
+
+  const WX = '<div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>';
+
+  async function init() {
+    const r = await api('/api/gk/volumes');
+    if (r.s === 0) {
+      $('#setList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">网络异常 <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#ff5e62;color:#fff;cursor:pointer;">重试</button></div>';
+      $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>';
+      return;
+    }
+    if (r.s === 401) {
+      $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>';
+      $('#setList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">未登录</div>';
+      return;
+    }
+    SETS = (r.j && r.j.sets) || [];
+    if (!SETS.length) { $('#setList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">暂无数据</div>'; return; }
+    if (r.j.trial) {
+      $('#trialNote').style.display = 'block';
+      $('#trialNote').innerHTML = '🎁 体验模式：可学习 <b>' + SETS[0].title + '</b>。输入授权码或联系管理员授权，即可解锁全部试卷。' + WX;
+    }
+    renderSide();
+    loadSet(SETS[0]);
+  }
+
+  function renderSide() {
+    const byTopic = {};
+    SETS.forEach(s => { (byTopic[s.topic] = byTopic[s.topic] || []).push(s); });
+    $('#setList').innerHTML = Object.keys(byTopic).map(tp => {
+      const items = byTopic[tp].map(s => {
+        const on = CUR && CUR.id === s.id ? ' on' : '';
+        return '<div class="gset-item' + on + '" data-g="' + s.id + '"><div class="t">' + s.title + '</div><div class="s">' + s.id.toUpperCase() + '</div></div>';
+      }).join('');
+      return '<h3>' + tp + '</h3>' + items;
+    }).join('');
+    document.querySelectorAll('.gset-item').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.gset-item').forEach(x => x.classList.remove('on'));
+        el.classList.add('on');
+        loadSet(SETS.find(s => s.id === el.dataset.g));
+      });
+    });
+  }
+
+  async function loadSet(s) {
+    const r = await api('/api/gk/quiz?set=' + s.id);
+    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常') + ' <button onclick="location.reload()" style="margin-left:8px;padding:4px 10px;border:none;border-radius:8px;background:#ff5e62;color:#fff;cursor:pointer;">重试</button></div>'; return; }
+    if (r.s !== 200 || !r.j) { $('#mainArea').innerHTML = '<div class="err-msg">加载失败（' + r.s + '）' + (r.j.error || '') + '</div>'; return; }
+    CUR = r.j; STEP = 0; renderSide(); renderMain();
+  }
+
+  function stepTitles() { return ['情景', '对话', '三问', '五答', '解析']; }
+
+  function renderMain() {
+    if (!CUR) return;
+    if (STEP === 4) {  // 到达解析步视为完成本套
+      const g = loadGK(); const rec = g[CUR.id] = g[CUR.id] || { done: 0, last: 0 };
+      rec.done = (rec.done || 0) + 1; rec.last = Date.now(); saveGK(g);
+      try { const t2 = localStorage.getItem('token') || ''; if (t2) { let d2 = ''; try { d2 = localStorage.getItem('devfp') || ''; } catch (e) {} fetch('/api/study/sync', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Device': d2, 'Authorization': t2 }, body: JSON.stringify({ log: {}, progress: { gk: loadGK() } }) }).catch(function(){}); } } catch (e) {}
+    }
+    $('#mainArea').innerHTML =
+      '<div class="steps">' + stepTitles().map((t, i) =>
+        '<button class="' + (i === STEP ? 'on' : '') + '" data-st="' + i + '">' + (i + 1) + '. ' + t + '</button>').join('') + '</div>' +
+      '<div class="card">' + renderStep() + '</div>' +
+      '<div class="navbtns"><button id="prevB" ' + (STEP === 0 ? 'disabled' : '') + '>← 上一步</button>' +
+      '<button id="nextB" class="primary" ' + (STEP === 4 ? 'disabled' : '') + '>下一步 →</button></div>';
+    document.querySelectorAll('.steps button').forEach(b => b.addEventListener('click', () => { STEP = +b.dataset.st; renderMain(); }));
+    const p = $('#prevB'); if (p) p.addEventListener('click', () => { if (STEP > 0) { STEP--; renderMain(); } });
+    const n = $('#nextB'); if (n) n.addEventListener('click', () => { if (STEP < 4) { STEP++; renderMain(); } });
+    document.querySelectorAll('audio[data-track]').forEach(a => { if (!a.dataset.reg) { a.dataset.reg = '1'; trackAudio(a); } });
+    document.querySelectorAll('.ans-btn').forEach(b => b.addEventListener('click', () => {
+      const t = b.dataset.t;
+      const el = document.getElementById(t);
+      if (el) { el.classList.remove('hid'); b.style.display = 'none'; }
+    }));
+    document.querySelectorAll('[data-play]').forEach(b => b.addEventListener('click', () => play(b.dataset.play, b.dataset.rate || '')));
+  }
+
+  function renderStep() {
+    const s = CUR;
+    if (STEP === 0) {
+      return '<div class="step-head"><span>Step 1</span>情景介绍（考生阅读）</div>' +
+        '<div class="scene-text">' + s.scene + '</div>' +
+        '<div class="audio-row"><button class="mini on" data-play="' + s.audio.dialogue + '">▶ 播放情景对话</button><span style="font-size:12px;color:#999;">对话视频仅播放一次，先听再做笔记</span></div>';
+    }
+    if (STEP === 1) {
+      return '<div class="step-head"><span>Step 2</span>情景对话原文（一男一女 · 信息点 ≥ 6）</div>' +
+        '<div class="audio-row"><audio controls src="' + s.audio.dialogue + '" data-track></audio></div>' +
+        s.dialogue.map(d => '<div class="dlg ' + d.s + '"><div class="who">' + (d.s === 'W' ? '女生 · 电脑角色' : '男生 · 电脑角色') + '</div><div class="txt">' + d.t + '</div></div>').join('') +
+        '<div style="font-size:12px;color:#999;margin-top:10px;">提示：留意人物 / 时间 / 地点 / 数字 / 频率等信息，五答答案来源于此。</div>';
+    }
+    if (STEP === 2) {
+      return '<div class="step-head"><span>Step 3</span>三问（看中文提示 → 用英语提问 · 每题 10 秒准备）</div>' +
+        s.q3.map((q, i) =>
+          '<div class="q3-card"><div class="cn">Q' + (i + 1) + '. ' + q.cn + '</div>' +
+          '<button class="ans-btn" data-t="q3a' + i + '">查看参考提问</button>' +
+          '<div class="en hid" id="q3a' + i + '">' + q.en + '</div></div>').join('') +
+        '<div style="font-size:12px;color:#999;margin-top:10px;">评分以语言维度为主：助动词 / 时态 / 语序是高频失分点。</div>';
+    }
+    if (STEP === 3) {
+      return '<div class="step-head"><span>Step 4</span>五答（听电脑提问 → 用英语回答 · 每题 5 秒准备）</div>' +
+        '<div class="audio-row"><button class="mini on" data-play="' + s.audio.questions + '">▶ 原速提问</button>' +
+        '<button class="mini" data-play="' + s.audio.questionsSlow + '" data-rate="0.8">🐢 慢速跟练</button></div>' +
+        s.a5.map((a, i) =>
+          '<div class="a5-card"><div class="q">A' + (i + 1) + '. ' + a.q + '</div>' +
+          '<button class="ans-btn" data-t="a5a' + i + '">查看参考回答</button>' +
+          '<div class="a hid" id="a5a' + i + '">' + a.a + '</div>' +
+          '<div class="pts hid" id="a5p' + i + '">信息要点：' + a.points + '</div></div>').join('') +
+        '<div style="font-size:12px;color:#999;margin-top:10px;">评分以信息维度为主：关键信息遗漏、时态不一致是高频失分点。</div>';
+    }
+    return '<div class="step-head"><span>Step 5</span>逐题解析 · 易错点（本套：' + s.trap + '）</div>' +
+      '<div class="analysis"><div style="font-weight:700;font-size:13.5px;margin:6px 0 4px;">三问易错点</div><ul>' +
+      s.analysis.q3.map(t => '<li>' + t + '</li>').join('') + '</ul>' +
+      '<div style="font-weight:700;font-size:13.5px;margin:10px 0 4px;">五答易错点</div><ul>' +
+      s.analysis.a5.map(t => '<li>' + t + '</li>').join('') + '</ul></div>' +
+      '<div style="font-size:12px;color:#bbb;margin-top:12px;">英语内容为 AI 初稿，请以人工校对版为准；考试分值以广东省教育考试院当年公布为准。</div>';
+  }
+
+  init();
+})();
+</script>
+<script>
+(function(){try{var K='gk';var s=JSON.parse(localStorage.getItem('study_log')||'{}');var e=s[K]||{last:0,times:0};e.last=Date.now();e.times=(e.times||0)+1;s[K]=e;localStorage.setItem('study_log',JSON.stringify(s));}catch(err){}}());
+(function(){try{var t=localStorage.getItem('token')||'';if(!t)return;var d='';try{d=localStorage.getItem('devfp')||''}catch(e){}var body={log:{},progress:{}};try{body.log=JSON.parse(localStorage.getItem('study_log')||'{}')}catch(e){}try{body.progress.gk=JSON.parse(localStorage.getItem('gk_progress')||'{}')}catch(e){}fetch('/api/study/sync',{method:'POST',headers:{'Content-Type':'application/json','X-Device':d,'Authorization':t},body:JSON.stringify(body)}).catch(function(){});}catch(err){}})();
+</script>
+</body>
+</html>

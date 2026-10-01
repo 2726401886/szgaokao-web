@@ -1,0 +1,1028 @@
+{
+  "product": "小学英语单词场景化（词→句→对话）",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "12 组场景：每组 6 个场景句（含核心词）+ 1 个情景对话；audio 为英音女声",
+  "scenes": [
+    {
+      "id": "s3a",
+      "grade": 3,
+      "title": "颜色与数字",
+      "sentences": [
+        {
+          "id": "s3a01",
+          "word": "red",
+          "sentence": "I see a red apple.",
+          "cn": "我看见一个红苹果。",
+          "audio": "/audio/sc/s3a01.mp3"
+        },
+        {
+          "id": "s3a02",
+          "word": "blue",
+          "sentence": "The sky is blue.",
+          "cn": "天空是蓝色的。",
+          "audio": "/audio/sc/s3a02.mp3"
+        },
+        {
+          "id": "s3a03",
+          "word": "green",
+          "sentence": "The grass is green.",
+          "cn": "草地是绿色的。",
+          "audio": "/audio/sc/s3a03.mp3"
+        },
+        {
+          "id": "s3a04",
+          "word": "three",
+          "sentence": "I have three books.",
+          "cn": "我有三本书。",
+          "audio": "/audio/sc/s3a04.mp3"
+        },
+        {
+          "id": "s3a05",
+          "word": "five",
+          "sentence": "There are five birds.",
+          "cn": "有五只鸟。",
+          "audio": "/audio/sc/s3a05.mp3"
+        },
+        {
+          "id": "s3a06",
+          "word": "ten",
+          "sentence": "Ten plus two is twelve.",
+          "cn": "十加二等于十二。",
+          "audio": "/audio/sc/s3a06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s3ad1",
+        "title": "数一数",
+        "lines": [
+          {
+            "role": "A",
+            "text": "Hello, Lily! How many crayons do you have?",
+            "cn": "你好，莉莉！你有多少支蜡笔？",
+            "audio": "/audio/sc/s3ad1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "I have ten crayons.",
+            "cn": "我有十支蜡笔。",
+            "audio": "/audio/sc/s3ad1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "What colour is your favourite one?",
+            "cn": "你最喜欢哪一支？",
+            "audio": "/audio/sc/s3ad1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "It's blue. Blue is my favourite colour.",
+            "cn": "是蓝色的。蓝色是我最喜欢的颜色。",
+            "audio": "/audio/sc/s3ad1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Wow, blue is nice!",
+            "cn": "哇，蓝色真好看！",
+            "audio": "/audio/sc/s3ad1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3b",
+      "grade": 3,
+      "title": "文具与身体",
+      "sentences": [
+        {
+          "id": "s3b01",
+          "word": "pen",
+          "sentence": "This is my pen.",
+          "cn": "这是我的钢笔。",
+          "audio": "/audio/sc/s3b01.mp3"
+        },
+        {
+          "id": "s3b02",
+          "word": "pencil",
+          "sentence": "I write with a pencil.",
+          "cn": "我用铅笔写字。",
+          "audio": "/audio/sc/s3b02.mp3"
+        },
+        {
+          "id": "s3b03",
+          "word": "book",
+          "sentence": "Open your book, please.",
+          "cn": "请打开你的书。",
+          "audio": "/audio/sc/s3b03.mp3"
+        },
+        {
+          "id": "s3b04",
+          "word": "bag",
+          "sentence": "My bag is heavy.",
+          "cn": "我的书包很重。",
+          "audio": "/audio/sc/s3b04.mp3"
+        },
+        {
+          "id": "s3b05",
+          "word": "eye",
+          "sentence": "I have two eyes.",
+          "cn": "我有两只眼睛。",
+          "audio": "/audio/sc/s3b05.mp3"
+        },
+        {
+          "id": "s3b06",
+          "word": "ear",
+          "sentence": "I listen with my ears.",
+          "cn": "我用耳朵听。",
+          "audio": "/audio/sc/s3b06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s3bd1",
+        "title": "借文具",
+        "lines": [
+          {
+            "role": "A",
+            "text": "May I borrow your ruler?",
+            "cn": "我可以借你的尺子吗？",
+            "audio": "/audio/sc/s3bd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Sure. Here you are.",
+            "cn": "当然可以。给你。",
+            "audio": "/audio/sc/s3bd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Thank you! It's very nice.",
+            "cn": "谢谢你！它真好用。",
+            "audio": "/audio/sc/s3bd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "You're welcome. Don't forget to give it back.",
+            "cn": "不客气。别忘了还给我。",
+            "audio": "/audio/sc/s3bd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "OK, I will. See you later!",
+            "cn": "好的，我会的。回头见！",
+            "audio": "/audio/sc/s3bd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3c",
+      "grade": 3,
+      "title": "动物与水果",
+      "sentences": [
+        {
+          "id": "s3c01",
+          "word": "cat",
+          "sentence": "The cat likes fish.",
+          "cn": "猫喜欢鱼。",
+          "audio": "/audio/sc/s3c01.mp3"
+        },
+        {
+          "id": "s3c02",
+          "word": "dog",
+          "sentence": "The dog can run fast.",
+          "cn": "狗跑得很快。",
+          "audio": "/audio/sc/s3c02.mp3"
+        },
+        {
+          "id": "s3c03",
+          "word": "duck",
+          "sentence": "The duck is in the water.",
+          "cn": "鸭子在水中。",
+          "audio": "/audio/sc/s3c03.mp3"
+        },
+        {
+          "id": "s3c04",
+          "word": "apple",
+          "sentence": "I like apples.",
+          "cn": "我喜欢苹果。",
+          "audio": "/audio/sc/s3c04.mp3"
+        },
+        {
+          "id": "s3c05",
+          "word": "banana",
+          "sentence": "The banana is yellow.",
+          "cn": "香蕉是黄色的。",
+          "audio": "/audio/sc/s3c05.mp3"
+        },
+        {
+          "id": "s3c06",
+          "word": "orange",
+          "sentence": "I eat an orange.",
+          "cn": "我吃了一个橙子。",
+          "audio": "/audio/sc/s3c06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s3cd1",
+        "title": "在农场",
+        "lines": [
+          {
+            "role": "A",
+            "text": "Look! What's that?",
+            "cn": "看！那是什么？",
+            "audio": "/audio/sc/s3cd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "It's a cow. It's white and black.",
+            "cn": "那是一头奶牛。它是黑白相间的。",
+            "audio": "/audio/sc/s3cd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "And what are those?",
+            "cn": "那些是什么？",
+            "audio": "/audio/sc/s3cd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "They are ducks. Quack, quack!",
+            "cn": "它们是鸭子。嘎嘎！",
+            "audio": "/audio/sc/s3cd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Ha ha! The ducks are funny. I like them.",
+            "cn": "哈哈！鸭子真有趣。我喜欢它们。",
+            "audio": "/audio/sc/s3cd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4a",
+      "grade": 4,
+      "title": "家庭与房间",
+      "sentences": [
+        {
+          "id": "s4a01",
+          "word": "father",
+          "sentence": "My father is tall.",
+          "cn": "我爸爸个子很高。",
+          "audio": "/audio/sc/s4a01.mp3"
+        },
+        {
+          "id": "s4a02",
+          "word": "mother",
+          "sentence": "My mother cooks dinner.",
+          "cn": "我妈妈做晚饭。",
+          "audio": "/audio/sc/s4a02.mp3"
+        },
+        {
+          "id": "s4a03",
+          "word": "sister",
+          "sentence": "My sister is six years old.",
+          "cn": "我妹妹六岁。",
+          "audio": "/audio/sc/s4a03.mp3"
+        },
+        {
+          "id": "s4a04",
+          "word": "brother",
+          "sentence": "My brother plays football.",
+          "cn": "我哥哥踢足球。",
+          "audio": "/audio/sc/s4a04.mp3"
+        },
+        {
+          "id": "s4a05",
+          "word": "room",
+          "sentence": "My room is clean and tidy.",
+          "cn": "我的房间干净整洁。",
+          "audio": "/audio/sc/s4a05.mp3"
+        },
+        {
+          "id": "s4a06",
+          "word": "kitchen",
+          "sentence": "We eat in the kitchen.",
+          "cn": "我们在厨房吃饭。",
+          "audio": "/audio/sc/s4a06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s4ad1",
+        "title": "我的家人",
+        "lines": [
+          {
+            "role": "A",
+            "text": "How many people are there in your family?",
+            "cn": "你家有几口人？",
+            "audio": "/audio/sc/s4ad1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "There are four: my father, my mother, my sister and me.",
+            "cn": "有四口：爸爸、妈妈、妹妹和我。",
+            "audio": "/audio/sc/s4ad1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "What does your father do at home?",
+            "cn": "你爸爸在家做什么？",
+            "audio": "/audio/sc/s4ad1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "He reads books in the living room.",
+            "cn": "他在客厅看书。",
+            "audio": "/audio/sc/s4ad1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Your family is nice!",
+            "cn": "你的家庭真温馨！",
+            "audio": "/audio/sc/s4ad1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4b",
+      "grade": 4,
+      "title": "食物与饮料",
+      "sentences": [
+        {
+          "id": "s4b01",
+          "word": "rice",
+          "sentence": "I eat rice every day.",
+          "cn": "我每天吃米饭。",
+          "audio": "/audio/sc/s4b01.mp3"
+        },
+        {
+          "id": "s4b02",
+          "word": "bread",
+          "sentence": "I have bread for breakfast.",
+          "cn": "我早餐吃面包。",
+          "audio": "/audio/sc/s4b02.mp3"
+        },
+        {
+          "id": "s4b03",
+          "word": "milk",
+          "sentence": "I drink milk in the morning.",
+          "cn": "我早上喝牛奶。",
+          "audio": "/audio/sc/s4b03.mp3"
+        },
+        {
+          "id": "s4b04",
+          "word": "juice",
+          "sentence": "Orange juice is my favourite.",
+          "cn": "橙汁是我的最爱。",
+          "audio": "/audio/sc/s4b04.mp3"
+        },
+        {
+          "id": "s4b05",
+          "word": "egg",
+          "sentence": "There is an egg on the plate.",
+          "cn": "盘子里有一个鸡蛋。",
+          "audio": "/audio/sc/s4b05.mp3"
+        },
+        {
+          "id": "s4b06",
+          "word": "water",
+          "sentence": "Drink some water, please.",
+          "cn": "请喝点水。",
+          "audio": "/audio/sc/s4b06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s4bd1",
+        "title": "早餐时间",
+        "lines": [
+          {
+            "role": "A",
+            "text": "What do you want for breakfast?",
+            "cn": "你早餐想吃什么？",
+            "audio": "/audio/sc/s4bd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "I want some bread and milk.",
+            "cn": "我想要面包和牛奶。",
+            "audio": "/audio/sc/s4bd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Would you like an egg too?",
+            "cn": "还要一个鸡蛋吗？",
+            "audio": "/audio/sc/s4bd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Yes, please. Eggs are yummy.",
+            "cn": "好的，谢谢。鸡蛋很好吃。",
+            "audio": "/audio/sc/s4bd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "OK, breakfast is ready. Enjoy!",
+            "cn": "好，早餐准备好了。慢慢享用！",
+            "audio": "/audio/sc/s4bd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4c",
+      "grade": 4,
+      "title": "衣物与天气",
+      "sentences": [
+        {
+          "id": "s4c01",
+          "word": "shirt",
+          "sentence": "He is wearing a white shirt.",
+          "cn": "他穿着一件白衬衫。",
+          "audio": "/audio/sc/s4c01.mp3"
+        },
+        {
+          "id": "s4c02",
+          "word": "coat",
+          "sentence": "Put on your coat, it's cold.",
+          "cn": "穿上外套，天冷了。",
+          "audio": "/audio/sc/s4c02.mp3"
+        },
+        {
+          "id": "s4c03",
+          "word": "hat",
+          "sentence": "She has a red hat.",
+          "cn": "她有一顶红帽子。",
+          "audio": "/audio/sc/s4c03.mp3"
+        },
+        {
+          "id": "s4c04",
+          "word": "shoes",
+          "sentence": "My shoes are new.",
+          "cn": "我的鞋子是新的。",
+          "audio": "/audio/sc/s4c04.mp3"
+        },
+        {
+          "id": "s4c05",
+          "word": "rainy",
+          "sentence": "It's rainy today. Take an umbrella.",
+          "cn": "今天下雨，带把伞。",
+          "audio": "/audio/sc/s4c05.mp3"
+        },
+        {
+          "id": "s4c06",
+          "word": "sunny",
+          "sentence": "It's sunny and warm.",
+          "cn": "天气晴朗又暖和。",
+          "audio": "/audio/sc/s4c06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s4cd1",
+        "title": "出门穿衣",
+        "lines": [
+          {
+            "role": "A",
+            "text": "What's the weather like today?",
+            "cn": "今天天气怎么样？",
+            "audio": "/audio/sc/s4cd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "It's windy and cold.",
+            "cn": "刮风又冷。",
+            "audio": "/audio/sc/s4cd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Then I should wear my coat and hat.",
+            "cn": "那我应该穿外套戴帽子。",
+            "audio": "/audio/sc/s4cd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Yes, and don't forget your gloves.",
+            "cn": "对，别忘了戴手套。",
+            "audio": "/audio/sc/s4cd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Good idea! Let's go.",
+            "cn": "好主意！我们走吧。",
+            "audio": "/audio/sc/s4cd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5a",
+      "grade": 5,
+      "title": "科目与学校",
+      "sentences": [
+        {
+          "id": "s5a01",
+          "word": "math",
+          "sentence": "We have a math class today.",
+          "cn": "我们今天有数学课。",
+          "audio": "/audio/sc/s5a01.mp3"
+        },
+        {
+          "id": "s5a02",
+          "word": "English",
+          "sentence": "I like English very much.",
+          "cn": "我非常喜欢英语。",
+          "audio": "/audio/sc/s5a02.mp3"
+        },
+        {
+          "id": "s5a03",
+          "word": "science",
+          "sentence": "Science is interesting.",
+          "cn": "科学很有趣。",
+          "audio": "/audio/sc/s5a03.mp3"
+        },
+        {
+          "id": "s5a04",
+          "word": "music",
+          "sentence": "She sings in the music class.",
+          "cn": "她在音乐课上唱歌。",
+          "audio": "/audio/sc/s5a04.mp3"
+        },
+        {
+          "id": "s5a05",
+          "word": "art",
+          "sentence": "I draw pictures in art class.",
+          "cn": "我在美术课上画画。",
+          "audio": "/audio/sc/s5a05.mp3"
+        },
+        {
+          "id": "s5a06",
+          "word": "library",
+          "sentence": "We read books in the library.",
+          "cn": "我们在图书馆看书。",
+          "audio": "/audio/sc/s5a06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s5ad1",
+        "title": "课表",
+        "lines": [
+          {
+            "role": "A",
+            "text": "What classes do you have today?",
+            "cn": "你今天有什么课？",
+            "audio": "/audio/sc/s5ad1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "We have English, math and music.",
+            "cn": "我们有英语、数学和音乐。",
+            "audio": "/audio/sc/s5ad1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Music is my favourite class!",
+            "cn": "音乐是我最喜欢的课！",
+            "audio": "/audio/sc/s5ad1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Me too. I love singing.",
+            "cn": "我也是。我喜欢唱歌。",
+            "audio": "/audio/sc/s5ad1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Let's sing together at lunch break.",
+            "cn": "午休时我们一起唱歌吧。",
+            "audio": "/audio/sc/s5ad1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5b",
+      "grade": 5,
+      "title": "场所与出行",
+      "sentences": [
+        {
+          "id": "s5b01",
+          "word": "park",
+          "sentence": "Let's go to the park on Sunday.",
+          "cn": "我们星期天去公园吧。",
+          "audio": "/audio/sc/s5b01.mp3"
+        },
+        {
+          "id": "s5b02",
+          "word": "zoo",
+          "sentence": "We saw many animals at the zoo.",
+          "cn": "我们在动物园看到很多动物。",
+          "audio": "/audio/sc/s5b02.mp3"
+        },
+        {
+          "id": "s5b03",
+          "word": "hospital",
+          "sentence": "The hospital is near my home.",
+          "cn": "医院在我家附近。",
+          "audio": "/audio/sc/s5b03.mp3"
+        },
+        {
+          "id": "s5b04",
+          "word": "supermarket",
+          "sentence": "My mother goes to the supermarket.",
+          "cn": "我妈妈去超市。",
+          "audio": "/audio/sc/s5b04.mp3"
+        },
+        {
+          "id": "s5b05",
+          "word": "restaurant",
+          "sentence": "We had dinner at the restaurant.",
+          "cn": "我们在餐馆吃的晚饭。",
+          "audio": "/audio/sc/s5b05.mp3"
+        },
+        {
+          "id": "s5b06",
+          "word": "station",
+          "sentence": "The bus station is over there.",
+          "cn": "公交站在那边。",
+          "audio": "/audio/sc/s5b06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s5bd1",
+        "title": "问路",
+        "lines": [
+          {
+            "role": "A",
+            "text": "Excuse me, where is the museum?",
+            "cn": "打扰一下，博物馆在哪里？",
+            "audio": "/audio/sc/s5bd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Go straight and turn left. It's next to the park.",
+            "cn": "直走然后左转。它在公园旁边。",
+            "audio": "/audio/sc/s5bd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Is it far from here?",
+            "cn": "离这儿远吗？",
+            "audio": "/audio/sc/s5bd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "No, you can walk there in five minutes.",
+            "cn": "不远，步行五分钟就到。",
+            "audio": "/audio/sc/s5bd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Thank you so much!",
+            "cn": "非常感谢！",
+            "audio": "/audio/sc/s5bd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5c",
+      "grade": 5,
+      "title": "活动与爱好",
+      "sentences": [
+        {
+          "id": "s5c01",
+          "word": "swim",
+          "sentence": "I can swim in summer.",
+          "cn": "夏天我能游泳。",
+          "audio": "/audio/sc/s5c01.mp3"
+        },
+        {
+          "id": "s5c02",
+          "word": "dance",
+          "sentence": "She dances very well.",
+          "cn": "她跳舞跳得很好。",
+          "audio": "/audio/sc/s5c02.mp3"
+        },
+        {
+          "id": "s5c03",
+          "word": "sing",
+          "sentence": "He likes to sing songs.",
+          "cn": "他喜欢唱歌。",
+          "audio": "/audio/sc/s5c03.mp3"
+        },
+        {
+          "id": "s5c04",
+          "word": "read",
+          "sentence": "I read books before bed.",
+          "cn": "我睡觉前看书。",
+          "audio": "/audio/sc/s5c04.mp3"
+        },
+        {
+          "id": "s5c05",
+          "word": "draw",
+          "sentence": "My sister can draw a cat.",
+          "cn": "我妹妹会画猫。",
+          "audio": "/audio/sc/s5c05.mp3"
+        },
+        {
+          "id": "s5c06",
+          "word": "play",
+          "sentence": "We play basketball after school.",
+          "cn": "放学后我们打篮球。",
+          "audio": "/audio/sc/s5c06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s5cd1",
+        "title": "周末爱好",
+        "lines": [
+          {
+            "role": "A",
+            "text": "What do you do on weekends?",
+            "cn": "你周末做什么？",
+            "audio": "/audio/sc/s5cd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "I like swimming. It's fun!",
+            "cn": "我喜欢游泳，很好玩！",
+            "audio": "/audio/sc/s5cd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "I can't swim. I like drawing.",
+            "cn": "我不会游泳。我喜欢画画。",
+            "audio": "/audio/sc/s5cd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Can you draw a dog for me?",
+            "cn": "你能给我画一只狗吗？",
+            "audio": "/audio/sc/s5cd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Of course! I'll show you tomorrow.",
+            "cn": "当然！明天画给你看。",
+            "audio": "/audio/sc/s5cd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6a",
+      "grade": 6,
+      "title": "职业与工作",
+      "sentences": [
+        {
+          "id": "s6a01",
+          "word": "doctor",
+          "sentence": "The doctor helps sick people.",
+          "cn": "医生帮助生病的人。",
+          "audio": "/audio/sc/s6a01.mp3"
+        },
+        {
+          "id": "s6a02",
+          "word": "nurse",
+          "sentence": "The nurse works in the hospital.",
+          "cn": "护士在医院工作。",
+          "audio": "/audio/sc/s6a02.mp3"
+        },
+        {
+          "id": "s6a03",
+          "word": "farmer",
+          "sentence": "The farmer grows vegetables.",
+          "cn": "农民种蔬菜。",
+          "audio": "/audio/sc/s6a03.mp3"
+        },
+        {
+          "id": "s6a04",
+          "word": "driver",
+          "sentence": "The bus driver is friendly.",
+          "cn": "公交车司机很友好。",
+          "audio": "/audio/sc/s6a04.mp3"
+        },
+        {
+          "id": "s6a05",
+          "word": "cook",
+          "sentence": "My uncle is a cook.",
+          "cn": "我叔叔是一名厨师。",
+          "audio": "/audio/sc/s6a05.mp3"
+        },
+        {
+          "id": "s6a06",
+          "word": "teacher",
+          "sentence": "She is a good teacher.",
+          "cn": "她是一位好老师。",
+          "audio": "/audio/sc/s6a06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s6ad1",
+        "title": "职业梦想",
+        "lines": [
+          {
+            "role": "A",
+            "text": "What do you want to be in the future?",
+            "cn": "你将来想做什么？",
+            "audio": "/audio/sc/s6ad1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "I want to be a doctor. I want to help people.",
+            "cn": "我想当医生，我想帮助别人。",
+            "audio": "/audio/sc/s6ad1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "That's great! What about your brother?",
+            "cn": "太棒了！你哥哥呢？",
+            "audio": "/audio/sc/s6ad1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "He wants to be a cook. He loves cooking.",
+            "cn": "他想当厨师，他喜欢做饭。",
+            "audio": "/audio/sc/s6ad1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "A doctor and a cook! Your family will be busy.",
+            "cn": "医生和厨师！你们家会很忙。",
+            "audio": "/audio/sc/s6ad1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6b",
+      "grade": 6,
+      "title": "感受与情绪",
+      "sentences": [
+        {
+          "id": "s6b01",
+          "word": "happy",
+          "sentence": "I feel happy today.",
+          "cn": "我今天很开心。",
+          "audio": "/audio/sc/s6b01.mp3"
+        },
+        {
+          "id": "s6b02",
+          "word": "sad",
+          "sentence": "Don't be sad. Everything will be OK.",
+          "cn": "别难过，一切都会好起来的。",
+          "audio": "/audio/sc/s6b02.mp3"
+        },
+        {
+          "id": "s6b03",
+          "word": "tired",
+          "sentence": "I'm tired after the long walk.",
+          "cn": "走了很远的路，我很累。",
+          "audio": "/audio/sc/s6b03.mp3"
+        },
+        {
+          "id": "s6b04",
+          "word": "hungry",
+          "sentence": "I'm hungry. Let's have lunch.",
+          "cn": "我饿了，我们吃午饭吧。",
+          "audio": "/audio/sc/s6b04.mp3"
+        },
+        {
+          "id": "s6b05",
+          "word": "thirsty",
+          "sentence": "After running, I feel thirsty.",
+          "cn": "跑完步我觉得口渴。",
+          "audio": "/audio/sc/s6b05.mp3"
+        },
+        {
+          "id": "s6b06",
+          "word": "excited",
+          "sentence": "I'm excited about the trip.",
+          "cn": "我对这次旅行感到兴奋。",
+          "audio": "/audio/sc/s6b06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s6bd1",
+        "title": "你还好吗",
+        "lines": [
+          {
+            "role": "A",
+            "text": "You look tired. Are you OK?",
+            "cn": "你看起来很累。你还好吗？",
+            "audio": "/audio/sc/s6bd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "Not very well. I'm hungry and thirsty.",
+            "cn": "不太好。我又饿又渴。",
+            "audio": "/audio/sc/s6bd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Let's get some food and water.",
+            "cn": "我们去弄点吃的和水吧。",
+            "audio": "/audio/sc/s6bd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "That sounds great. Thanks!",
+            "cn": "听起来不错。谢谢！",
+            "audio": "/audio/sc/s6bd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "After eating, you will feel happy again.",
+            "cn": "吃完东西你就会又开心起来。",
+            "audio": "/audio/sc/s6bd1-5.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6c",
+      "grade": 6,
+      "title": "自然与环境",
+      "sentences": [
+        {
+          "id": "s6c01",
+          "word": "sun",
+          "sentence": "The sun rises in the east.",
+          "cn": "太阳从东方升起。",
+          "audio": "/audio/sc/s6c01.mp3"
+        },
+        {
+          "id": "s6c02",
+          "word": "moon",
+          "sentence": "The moon is bright at night.",
+          "cn": "月亮在夜里很亮。",
+          "audio": "/audio/sc/s6c02.mp3"
+        },
+        {
+          "id": "s6c03",
+          "word": "cloud",
+          "sentence": "There are white clouds in the sky.",
+          "cn": "天空中有白云。",
+          "audio": "/audio/sc/s6c03.mp3"
+        },
+        {
+          "id": "s6c04",
+          "word": "rain",
+          "sentence": "It often rains in spring.",
+          "cn": "春天经常下雨。",
+          "audio": "/audio/sc/s6c04.mp3"
+        },
+        {
+          "id": "s6c05",
+          "word": "snow",
+          "sentence": "It snows in winter.",
+          "cn": "冬天会下雪。",
+          "audio": "/audio/sc/s6c05.mp3"
+        },
+        {
+          "id": "s6c06",
+          "word": "flower",
+          "sentence": "The flowers are beautiful.",
+          "cn": "这些花很漂亮。",
+          "audio": "/audio/sc/s6c06.mp3"
+        }
+      ],
+      "dialogue": {
+        "id": "s6cd1",
+        "title": "四季",
+        "lines": [
+          {
+            "role": "A",
+            "text": "Which season do you like best?",
+            "cn": "你最喜欢哪个季节？",
+            "audio": "/audio/sc/s6cd1-1.mp3"
+          },
+          {
+            "role": "B",
+            "text": "I like winter best. I can make a snowman.",
+            "cn": "我最喜欢冬天。我可以堆雪人。",
+            "audio": "/audio/sc/s6cd1-2.mp3"
+          },
+          {
+            "role": "A",
+            "text": "I like spring. The flowers are beautiful.",
+            "cn": "我喜欢春天。花儿很漂亮。",
+            "audio": "/audio/sc/s6cd1-3.mp3"
+          },
+          {
+            "role": "B",
+            "text": "And the trees turn green in spring.",
+            "cn": "而且春天树都变绿了。",
+            "audio": "/audio/sc/s6cd1-4.mp3"
+          },
+          {
+            "role": "A",
+            "text": "Every season is beautiful!",
+            "cn": "每个季节都很美！",
+            "audio": "/audio/sc/s6cd1-5.mp3"
+          }
+        ]
+      }
+    }
+  ]
+}

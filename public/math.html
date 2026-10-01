@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学 · 思维训练</title>
+<style>
+  :root { --brand:#ff5e62; --brand2:#ff9966; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5e62,#ff9966); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:16px; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.92; margin-top:4px; }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .layout { display:flex; gap:16px; align-items:flex-start; }
+  .side { width:240px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:13px; color:#999; margin-bottom:10px; font-weight:600; }
+  .lv-tabs { display:flex; gap:6px; margin-bottom:12px; }
+  .lv-tabs button { flex:1; padding:8px; border:none; border-radius:10px; background:#eee; font-size:13px; cursor:pointer; }
+  .lv-tabs button.on { background:#ff5e62; color:#fff; font-weight:700; }
+  .vol-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; font-size:13px; }
+  .vol-item:hover { background:#fff3f2; }
+  .vol-item.on { background:#fff0ef; border-color:#ff5e62; }
+  .vol-item .t { font-weight:700; font-size:13.5px; }
+  .vol-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .logout { width:100%; margin-top:10px; padding:9px; border:none; border-radius:10px; background:#f0f0f0; color:#666; cursor:pointer; font-size:13px; }
+  .logout.blue { background:#fff0ef; color:#ff5e62; font-weight:700; }
+  .main { flex:1; min-width:0; }
+  .empty { background:#fff; border-radius:16px; padding:70px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .q-box { background:#fff; border-radius:16px; padding:18px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .tag { display:inline-block; padding:3px 10px; border-radius:12px; font-size:12px; font-weight:700; }
+  .tag.choice { background:#fff0ef; color:#ff5e62; }
+  .tag.judge { background:#eef3ff; color:#1a56db; }
+  .tag.scene { background:#e8f8ee; color:#2a8; }
+  .tag.logic { background:#f4eefb; color:#8a4fd3; }
+  .q-title { font-size:15px; font-weight:700; flex:1; min-width:160px; }
+  .opt { padding:11px 14px; border:1.5px solid #eee; border-radius:10px; margin:8px 0; font-size:15px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#ff5e62; }
+  .opt.right { background:#e8f8ee; border-color:#2a8; }
+  .opt.wrong { background:#fdecea; border-color:#e23; }
+  .opt.locked { pointer-events:none; }
+  .q-answer { font-size:14px; font-weight:700; color:#2a8; margin-top:10px; }
+  .q-tip { background:#fffbe8; padding:9px 12px; border-radius:10px; font-size:13px; color:#7a5c00; margin-top:10px; line-height:1.6; }
+  .nav-bar { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+  .nav-q { width:38px; height:38px; border-radius:10px; border:1.5px solid #e0e0e0; background:#fff; color:#666; font-size:14px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; }
+  .nav-q:hover { border-color:#ff5e62; color:#ff5e62; }
+  .nav-q.on { background:#ff5e62; border-color:#ff5e62; color:#fff; }
+  .nav-q.done { background:#e8f8ee; border-color:#2a8; color:#2a8; }
+  .nav-q.wrong { background:#fdecea; border-color:#e23; color:#e23; }
+  .nav-foot { display:flex; gap:10px; justify-content:space-between; margin-top:16px; }
+  .nav-foot button { flex:1; padding:12px; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer; }
+  .btn-prev { background:#f0f0f0; color:#666; }
+  .btn-prev:hover { background:#e8e8e8; }
+  .btn-next { background:#ff5e62; color:#fff; }
+  .btn-next:hover { background:#f04d51; }
+  .nav-count { text-align:center; font-size:12px; color:#999; margin-top:8px; }
+  .dev-note { font-size:12px; color:#999; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; }
+  .wx-card { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px dashed #d8c98a; border-radius:10px; padding:10px 12px; font-size:13px; color:#444; }
+  .wx-card b { color:#1a56db; font-size:15px; }
+  .wx-card img { width:110px; height:auto; border-radius:8px; display:block; }
+  .progress-wrap { background:#fff; border-radius:16px; padding:14px 18px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .progress-bar { height:12px; background:#eee; border-radius:8px; overflow:hidden; margin-top:8px; }
+  .progress-bar > div { height:100%; background:linear-gradient(90deg,#ff5e62,#ff9966); width:0%; transition:width .3s; }
+  .progress-meta { display:flex; justify-content:space-between; font-size:13px; color:#666; }
+  @media (max-width:680px){
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+  }
+  .topbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🧮 数学 · 思维训练</h1>
+    <p>小学三年级至高中一年级 · 同步校内 · 选择 / 判断即时判分 · 讲清思路</p>
+  <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button><button class="tb-btn" onclick="logout()">退出登录</button></div>
+  </div>
+
+  <div class="card" id="trialCard" style="display:none;border-left:4px solid #ff9966">
+    <b>🎁 体验模式</b>：当前可免费练习 <b>第 1 单元</b>。解锁数学模块后即可练习全部单元。<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;" class="wx-card">需要解锁或购买，请添加管理员微信：<b style="color:#1a56db;font-size:15px;">13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
+  </div>
+
+  <div class="layout" id="appLayout" style="display:none">
+    <aside class="side">
+      <h3>📚 学段</h3>
+      <div class="lv-tabs">
+        <button id="lv-p" class="on" onclick="switchLevel('p')">小学</button>
+        <button id="lv-m" onclick="switchLevel('m')">初中</button>
+        <button id="lv-h" onclick="switchLevel('h')">高中</button>
+      </div>
+      <h3>📖 单元</h3>
+      <div id="volMenu"></div>
+      <button class="logout blue" onclick="location.href='./index.html'">🏠 返回主页</button>
+      <div class="dev-note" id="acctNote"></div>
+      <div class="dev-note" id="devNote"></div>
+    </aside>
+    <main class="main" id="mainArea">
+      <div class="empty">← 从左侧选择一个单元开始练习</div>
+    </main>
+  </div>
+</div>
+
+<script>
+const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+let TOKEN = localStorage.getItem('token') || '';
+
+function fp() {
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'";
+    ctx.fillText('szgaokao-fp', 2, 2);
+    const px = c.toDataURL();
+    const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+      screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+      navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+    let h = 0x811c9dc5;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+  } catch (e) { return 'fp-fallback'; }
+}
+const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+
+let DEV = { n: 0, max: 2 };
+let ACCT = { username: '', expiry: null };
+let AUTHED = false;
+let TRIAL = false;
+let LEVEL = 'p';
+let VOLS = [];
+let CUR = null;
+let answered = {};      // qid -> 选中下标
+let correct = {};       // qid -> true/false
+let cur = 0;
+
+function show(id, on) { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; }
+function logout() { TOKEN = ''; localStorage.removeItem('token'); location.href = './index.html'; }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+const TAG = { choice: ['choice', '选择题'], judge: ['judge', '判断题'], scene: ['scene', '应用题'], logic: ['logic', '逻辑题'], fill: ['fill', '填空题'] };
+
+async function showApp() {
+  const an = document.getElementById('acctNote');
+  if (an) {
+    let exp;
+    if (!AUTHED) exp = '体验模式（未授权）';
+    else if (!ACCT.expiry) exp = '永久有效';
+    else {
+      const rem = Math.ceil((ACCT.expiry - Date.now()) / 864e5);
+      exp = rem > 0 ? ('到期 ' + new Date(ACCT.expiry).toLocaleDateString() + '（剩 ' + rem + ' 天）') : ('已于 ' + new Date(ACCT.expiry).toLocaleDateString() + ' 到期');
+    }
+    an.innerHTML = '帐号 <b>' + esc(ACCT.username) + '</b><br>授权：' + exp;
+  }
+  const note = document.getElementById('devNote');
+  if (note) note.innerHTML = `本账号已绑定设备 <b>${DEV.n}</b> / ${DEV.max} 台`;
+  show('appLayout', true);
+  loadLevel('p');
+}
+
+async function loadLevel(lvl) {
+  LEVEL = lvl;
+  document.getElementById('lv-p').className = lvl === 'p' ? 'on' : '';
+  document.getElementById('lv-m').className = lvl === 'm' ? 'on' : '';
+  document.getElementById('lv-h').className = lvl === 'h' ? 'on' : '';
+  const r = await api('/api/math?level=' + lvl, { headers: H() });
+  if (r.s !== 200) { document.getElementById('mainArea').innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  VOLS = r.j.volumes || [];
+  TRIAL = !!r.j.trial;
+  document.getElementById('trialCard').style.display = TRIAL ? '' : 'none';
+  const m = document.getElementById('volMenu'); m.innerHTML = '';
+  VOLS.forEach(v => {
+    const d = document.createElement('div');
+    d.className = 'vol-item'; d.id = 'vol-' + v.id;
+    const gl = v.grade ? ('Grade ' + v.grade + ' · ') : '';
+    d.innerHTML = '<div class="t">' + esc(v.title) + '</div><div class="s">' + gl + (v.count || 0) + ' 题</div>';
+    d.onclick = () => selectVol(v.id);
+    m.appendChild(d);
+  });
+  if (VOLS.length) selectVol(VOLS[0].id);
+  else document.getElementById('mainArea').innerHTML = '<div class="empty">该学段暂无可练习单元</div>';
+}
+function switchLevel(lvl) { loadLevel(lvl); }
+
+function selectVol(id) {
+  document.querySelectorAll('.vol-item').forEach(e => e.classList.remove('on'));
+  const m = document.getElementById('vol-' + id); if (m) m.classList.add('on');
+  loadVol(id);
+}
+
+async function loadVol(id) {
+  const ma = document.getElementById('mainArea');
+  ma.innerHTML = '<div class="empty">加载中…</div>';
+  const r = await api('/api/math?level=' + LEVEL + '&vol=' + id, { headers: H() });
+  if (r.s !== 200) { ma.innerHTML = '<div class="empty">加载失败：' + (r.j.error || '请返回主页重新登录') + '</div>'; return; }
+  CUR = r.j;
+  answered = {};
+  correct = {};
+  cur = 0;
+  renderVol();
+}
+
+function renderVol() {
+  const v = CUR;
+  const ma = document.getElementById('mainArea');
+  const qs = v.questions || [];
+  cur = Math.min(cur, Math.max(0, qs.length - 1));
+  // restore any saved progress for this vol
+  const saved = loadProgress(LEVEL + ':' + v.id);
+  if (saved && saved.ans) { answered = saved.ans; correct = saved.cor || {}; }
+  const nav = qs.map((q, i) =>
+    `<div class="nav-q ${i === cur ? 'on' : ''} ${answered[q.id] != null ? (correct[q.id] ? 'done' : 'wrong') : ''}" onclick="goTo(${i})">${i + 1}</div>`).join('');
+  ma.innerHTML = `
+    <div class="card">
+      <h2 style="font-size:18px;">${esc(v.title)}</h2>
+      <div style="font-size:12px;color:#999;margin-top:4px;">${esc(v.topic || '')} · 共 ${qs.length} 题</div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-meta"><span>闯关进度</span><span id="pgText">0 / ${qs.length}</span></div>
+      <div class="progress-bar"><div id="pgBar"></div></div>
+    </div>
+    <div class="nav-bar">${nav}</div>
+    <div class="nav-count">${qs.length} 题 · 绿=答对 红=答错</div>
+    <div id="qArea"></div>
+    <div class="nav-foot">
+      <button class="btn-prev" onclick="prevQ()" ${cur === 0 ? 'disabled style="opacity:.4"' : ''}>← 上一题</button>
+      <button class="btn-next" onclick="nextQ()" ${cur >= qs.length - 1 ? 'disabled style="opacity:.4"' : ''}>下一题 →</button>
+    </div>`;
+  renderCurrent();
+  updateProgress();
+  window.scrollTo({ top: 0 });
+}
+
+function renderCurrent() {
+  const qs = CUR.questions || [];
+  const q = qs[cur];
+  const ma = document.getElementById('qArea');
+  if (!q) { ma.innerHTML = '<div class="empty">暂无题目</div>'; return; }
+  ma.innerHTML = renderQ(q, cur + 1);
+  const nav = document.querySelectorAll('.nav-q');
+  nav.forEach((e, i) => { e.classList.toggle('on', i === cur); });
+}
+
+function goTo(i) {
+  const qs = CUR.questions || [];
+  if (i < 0 || i >= qs.length) return;
+  cur = i;
+  renderCurrent();
+  window.scrollTo({ top: 0 });
+}
+function prevQ() { goTo(cur - 1); }
+function nextQ() { goTo(cur + 1); }
+
+function eqNum(a, b) {
+  const num = s => { s = String(s).replace(/[^\d.\-]/g, ''); if (s === '' || s === '-' || s === '.') return null; const v = parseFloat(s); return isNaN(v) ? null : v; };
+  const na = num(a), nb = num(b);
+  if (na !== null && nb !== null) return Math.abs(na - nb) < 1e-6;
+  return false;
+}
+
+function renderFill(q, sel) {
+  const key = q.id;
+  if (sel != null) {
+    const isOk = correct[key];
+    const verdict = isOk
+      ? '<div class="q-answer">✅ 答对了！</div>'
+      : '<div class="q-answer" style="color:#e23">❌ 答错了，正确答案：' + esc(q.answer) + '</div>';
+    const why = q.analysis || q.tip || '';
+    return `<div style="font-size:15.5px;font-weight:600;line-height:1.6;margin-bottom:6px;">${esc(q.q)}</div>
+      <div style="margin:10px 0;padding:10px;border:1.5px solid ${isOk ? '#2a8' : '#e23'};border-radius:10px;background:${isOk ? '#e8f8ee' : '#fdecea'};font-size:15px;">你的答案：${esc(sel)}</div>
+      ${verdict}
+      ${why ? `<div class="q-tip">💡 ${esc(why)}</div>` : ''}`;
+  }
+  return `<div style="font-size:15.5px;font-weight:600;line-height:1.6;margin-bottom:6px;">${esc(q.q)}</div>
+    <div style="display:flex;gap:8px;margin:10px 0;">
+      <input id="fill-${q.id}" type="text" placeholder="请输入答案" style="flex:1;padding:11px 14px;border:1.5px solid #eee;border-radius:10px;font-size:15px;" onkeydown="if(event.key==='Enter')submitFill('${q.id}')">
+      <button onclick="submitFill('${q.id}')" style="padding:11px 18px;border:none;border-radius:10px;background:#ff5e62;color:#fff;font-weight:700;cursor:pointer;">提交</button>
+    </div>
+    <div id="fillres-${q.id}"></div>`;
+}
+
+function submitFill(qid) {
+  if (answered[qid] != null) return;
+  const el = document.getElementById('fill-' + qid);
+  if (!el) return;
+  let raw = el.value.trim();
+  if (raw === '') { el.focus(); return; }
+  let val = raw.replace(/[０-９]/g, d => String.fromCharCode(d.charCodeAt(0) - 0xFEE0))
+    .replace(/[＋]/g, '+').replace(/[－−]/g, '-').replace(/[×]/g, '*').replace(/[÷]/g, '/').replace(/\s+/g, '');
+  const q = CUR.questions.find(x => x.id === qid);
+  const acc = [q.answer].concat(q.accept || []).map(s => String(s));
+  const isOk = acc.indexOf(val) >= 0 || acc.some(a => eqNum(a, val));
+  answered[qid] = raw;
+  correct[qid] = isOk;
+  renderCurrent();
+  markDone();
+  saveProgress();
+}
+
+function renderQ(q, n) {
+  const t = TAG[q.type] || ['choice', q.type];
+  const key = q.id;
+  const sel = answered[key];
+  const imgHtml = q.img
+    ? `<div style="margin:8px 0 4px;"><img src="${esc(q.img)}" alt="情境图" loading="lazy" decoding="async" style="max-width:100%;max-height:240px;border-radius:12px;border:1px solid #eee;"></div>`
+    : '';
+  let body;
+  if (q.type === 'fill') {
+    body = renderFill(q, sel);
+  } else {
+    const opts = q.options.map((o, oi) => {
+      let cls = 'opt';
+      if (sel != null) {
+        cls += ' locked';
+        if (oi === q.answer) cls += ' right';
+        else if (oi === sel) cls += ' wrong';
+      }
+      const hasImg = !!(q.optionImgs && q.optionImgs[oi]);
+      const oimg = hasImg
+        ? `<img src="${esc(q.optionImgs[oi])}" alt="选项图" loading="lazy" decoding="async" style="display:block;max-width:180px;max-height:130px;margin:8px auto 0;border-radius:8px;border:1px solid #eee;">`
+        : '';
+      const olabel = o ? `${String.fromCharCode(65 + oi)}. ${esc(o)}` : `${String.fromCharCode(65 + oi)}.`;
+      const align = hasImg ? 'text-align:center;' : '';
+      return `<div class="${cls}" onclick="pick('${q.id}', ${oi})" style="${align}">${olabel}${hasImg ? '<br>' + oimg : ''}</div>`;
+    }).join('');
+    let res = '';
+    if (sel != null) {
+      const isOk = sel === q.answer;
+      const verdict = isOk
+        ? '<div class="q-answer">✅ 答对了！</div>'
+        : '<div class="q-answer" style="color:#e23">❌ 答错了，正确答案：' + String.fromCharCode(65 + q.answer) + '. ' + esc(q.options[q.answer]) + '</div>';
+      const why = q.analysis || q.tip || '';
+      res = verdict + (why ? `<div class="q-tip">💡 ${esc(why)}</div>` : '');
+    }
+    body = imgHtml + `<div style="font-size:15.5px;font-weight:600;line-height:1.6;margin-bottom:6px;">${esc(q.q)}</div>` + opts + res;
+  }
+  return `
+    <div class="q-box" id="qb-${q.id}">
+      <div class="q-head"><span class="tag ${t[0]}">${t[1]}</span><span class="q-title">第 ${n} 题</span></div>
+      ${body}
+    </div>`;
+}
+
+function pick(qid, i) {
+  if (answered[qid] != null) return;
+  answered[qid] = i;
+  correct[qid] = (i === CUR.questions.find(x => x.id === qid).answer);
+  renderCurrent();
+  markDone();
+  saveProgress();
+}
+function markDone() {
+  const qs = CUR.questions || [];
+  qs.forEach((q, idx) => {
+    const e = document.querySelectorAll('.nav-q')[idx];
+    if (!e) return;
+    e.classList.remove('done', 'wrong');
+    if (answered[q.id] != null) e.classList.add(correct[q.id] ? 'done' : 'wrong');
+  });
+}
+function updateProgress() {
+  const qs = CUR.questions || [];
+  const done = qs.filter(q => answered[q.id] != null).length;
+  const right = qs.filter(q => correct[q.id]).length;
+  const bar = document.getElementById('pgBar');
+  const txt = document.getElementById('pgText');
+  if (bar) bar.style.width = (done / Math.max(1, qs.length) * 100) + '%';
+  if (txt) txt.textContent = done + ' / ' + qs.length + '（答对 ' + right + '）';
+}
+
+// —— 本地进度 + 云端同步 —— //
+function loadProgress(key) {
+  try { return JSON.parse(localStorage.getItem('math_progress') || '{}')[key]; } catch (e) { return null; }
+}
+function saveProgress() {
+  try {
+    const all = JSON.parse(localStorage.getItem('math_progress') || '{}');
+    all[LEVEL + ':' + CUR.id] = { ans: answered, cor: correct, t: Date.now() };
+    localStorage.setItem('math_progress', JSON.stringify(all));
+  } catch (e) {}
+  // 云同步（不阻塞）
+  try {
+    const body = { log: {}, progress: {} };
+    body.progress.math = { t: Date.now(), data: { vol: LEVEL + ':' + CUR.id, ans: answered, cor: correct } };
+    fetch('/api/study/sync', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Device': DEVFP, Authorization: TOKEN }, body: JSON.stringify(body) }).catch(() => {});
+  } catch (e) {}
+}
+
+async function afterLogin() {
+  const r = await api('/api/me', { headers: H() });
+  if (r.s !== 200) { location.href = './index.html'; return; }
+  DEV = { n: r.j.devices || 0, max: r.j.maxDevices || 2 };
+  ACCT = { username: r.j.username || '', expiry: r.j.expiry || null };
+  AUTHED = !!(r.j.modules || {}).math;
+  showApp();
+}
+if (TOKEN) afterLogin();
+else {
+  show('appLayout', true);
+  document.getElementById('mainArea').innerHTML = '<div class="empty">请先登录：<a href="./index.html" style="color:#ff5e62;">前往登录页</a></div>';
+}
+</script>
+</body>
+</html>

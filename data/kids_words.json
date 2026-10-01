@@ -1,0 +1,1010 @@
+{
+  "product": "幼儿启蒙英语单词听读背记",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "note": "3-6 岁启蒙词汇，按主题分组；audio 为单词发音；支持听/读/背/记四模式",
+  "groups": [
+    {
+      "id": "k1",
+      "grade": 0,
+      "title": "动物乐园",
+      "words": [
+        {
+          "id": "k101",
+          "word": "cat",
+          "phonetic": "/kæt/",
+          "pos": "n.",
+          "meaning": "猫",
+          "audio": "/audio/ki/k101.mp3"
+        },
+        {
+          "id": "k102",
+          "word": "dog",
+          "phonetic": "/dɒɡ/",
+          "pos": "n.",
+          "meaning": "狗",
+          "audio": "/audio/ki/k102.mp3"
+        },
+        {
+          "id": "k103",
+          "word": "duck",
+          "phonetic": "/dʌk/",
+          "pos": "n.",
+          "meaning": "鸭子",
+          "audio": "/audio/ki/k103.mp3"
+        },
+        {
+          "id": "k104",
+          "word": "pig",
+          "phonetic": "/pɪɡ/",
+          "pos": "n.",
+          "meaning": "猪",
+          "audio": "/audio/ki/k104.mp3"
+        },
+        {
+          "id": "k105",
+          "word": "cow",
+          "phonetic": "/kaʊ/",
+          "pos": "n.",
+          "meaning": "奶牛",
+          "audio": "/audio/ki/k105.mp3"
+        },
+        {
+          "id": "k106",
+          "word": "sheep",
+          "phonetic": "/ʃiːp/",
+          "pos": "n.",
+          "meaning": "绵羊",
+          "audio": "/audio/ki/k106.mp3"
+        },
+        {
+          "id": "k107",
+          "word": "bird",
+          "phonetic": "/bɜːd/",
+          "pos": "n.",
+          "meaning": "鸟",
+          "audio": "/audio/ki/k107.mp3"
+        },
+        {
+          "id": "k108",
+          "word": "fish",
+          "phonetic": "/fɪʃ/",
+          "pos": "n.",
+          "meaning": "鱼",
+          "audio": "/audio/ki/k108.mp3"
+        },
+        {
+          "id": "k109",
+          "word": "rabbit",
+          "phonetic": "/ˈræbɪt/",
+          "pos": "n.",
+          "meaning": "兔子",
+          "audio": "/audio/ki/k109.mp3"
+        },
+        {
+          "id": "k110",
+          "word": "elephant",
+          "phonetic": "/ˈelɪfənt/",
+          "pos": "n.",
+          "meaning": "大象",
+          "audio": "/audio/ki/k110.mp3"
+        },
+        {
+          "id": "k111",
+          "word": "lion",
+          "phonetic": "/ˈlaɪən/",
+          "pos": "n.",
+          "meaning": "狮子",
+          "audio": "/audio/ki/k111.mp3"
+        },
+        {
+          "id": "k112",
+          "word": "tiger",
+          "phonetic": "/ˈtaɪɡə(r)/",
+          "pos": "n.",
+          "meaning": "老虎",
+          "audio": "/audio/ki/k112.mp3"
+        },
+        {
+          "id": "k113",
+          "word": "monkey",
+          "phonetic": "/ˈmʌŋki/",
+          "pos": "n.",
+          "meaning": "猴子",
+          "audio": "/audio/ki/k113.mp3"
+        },
+        {
+          "id": "k114",
+          "word": "bear",
+          "phonetic": "/beə(r)/",
+          "pos": "n.",
+          "meaning": "熊",
+          "audio": "/audio/ki/k114.mp3"
+        },
+        {
+          "id": "k115",
+          "word": "panda",
+          "phonetic": "/ˈpændə/",
+          "pos": "n.",
+          "meaning": "熊猫",
+          "audio": "/audio/ki/k115.mp3"
+        },
+        {
+          "id": "k116",
+          "word": "hen",
+          "phonetic": "/hen/",
+          "pos": "n.",
+          "meaning": "母鸡",
+          "audio": "/audio/ki/k116.mp3"
+        },
+        {
+          "id": "k117",
+          "word": "frog",
+          "phonetic": "/frɒɡ/",
+          "pos": "n.",
+          "meaning": "青蛙",
+          "audio": "/audio/ki/k117.mp3"
+        },
+        {
+          "id": "k118",
+          "word": "bee",
+          "phonetic": "/biː/",
+          "pos": "n.",
+          "meaning": "蜜蜂",
+          "audio": "/audio/ki/k118.mp3"
+        },
+        {
+          "id": "k119",
+          "word": "horse",
+          "phonetic": "/hɔːs/",
+          "pos": "n.",
+          "meaning": "马",
+          "audio": "/audio/ki/k119.mp3"
+        },
+        {
+          "id": "k120",
+          "word": "mouse",
+          "phonetic": "/maʊs/",
+          "pos": "n.",
+          "meaning": "老鼠",
+          "audio": "/audio/ki/k120.mp3"
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "grade": 0,
+      "title": "颜色与数字",
+      "words": [
+        {
+          "id": "k201",
+          "word": "red",
+          "phonetic": "/red/",
+          "pos": "adj.",
+          "meaning": "红色的",
+          "audio": "/audio/ki/k201.mp3"
+        },
+        {
+          "id": "k202",
+          "word": "blue",
+          "phonetic": "/bluː/",
+          "pos": "adj.",
+          "meaning": "蓝色的",
+          "audio": "/audio/ki/k202.mp3"
+        },
+        {
+          "id": "k203",
+          "word": "green",
+          "phonetic": "/ɡriːn/",
+          "pos": "adj.",
+          "meaning": "绿色的",
+          "audio": "/audio/ki/k203.mp3"
+        },
+        {
+          "id": "k204",
+          "word": "yellow",
+          "phonetic": "/ˈjeləʊ/",
+          "pos": "adj.",
+          "meaning": "黄色的",
+          "audio": "/audio/ki/k204.mp3"
+        },
+        {
+          "id": "k205",
+          "word": "white",
+          "phonetic": "/waɪt/",
+          "pos": "adj.",
+          "meaning": "白色的",
+          "audio": "/audio/ki/k205.mp3"
+        },
+        {
+          "id": "k206",
+          "word": "black",
+          "phonetic": "/blæk/",
+          "pos": "adj.",
+          "meaning": "黑色的",
+          "audio": "/audio/ki/k206.mp3"
+        },
+        {
+          "id": "k207",
+          "word": "orange",
+          "phonetic": "/ˈɒrɪndʒ/",
+          "pos": "adj.",
+          "meaning": "橙色的",
+          "audio": "/audio/ki/k207.mp3"
+        },
+        {
+          "id": "k208",
+          "word": "pink",
+          "phonetic": "/pɪŋk/",
+          "pos": "adj.",
+          "meaning": "粉色的",
+          "audio": "/audio/ki/k208.mp3"
+        },
+        {
+          "id": "k209",
+          "word": "purple",
+          "phonetic": "/ˈpɜːpl/",
+          "pos": "adj.",
+          "meaning": "紫色的",
+          "audio": "/audio/ki/k209.mp3"
+        },
+        {
+          "id": "k210",
+          "word": "brown",
+          "phonetic": "/braʊn/",
+          "pos": "adj.",
+          "meaning": "棕色的",
+          "audio": "/audio/ki/k210.mp3"
+        },
+        {
+          "id": "k211",
+          "word": "one",
+          "phonetic": "/wʌn/",
+          "pos": "num.",
+          "meaning": "一",
+          "audio": "/audio/ki/k211.mp3"
+        },
+        {
+          "id": "k212",
+          "word": "two",
+          "phonetic": "/tuː/",
+          "pos": "num.",
+          "meaning": "二",
+          "audio": "/audio/ki/k212.mp3"
+        },
+        {
+          "id": "k213",
+          "word": "three",
+          "phonetic": "/θriː/",
+          "pos": "num.",
+          "meaning": "三",
+          "audio": "/audio/ki/k213.mp3"
+        },
+        {
+          "id": "k214",
+          "word": "four",
+          "phonetic": "/fɔː(r)/",
+          "pos": "num.",
+          "meaning": "四",
+          "audio": "/audio/ki/k214.mp3"
+        },
+        {
+          "id": "k215",
+          "word": "five",
+          "phonetic": "/faɪv/",
+          "pos": "num.",
+          "meaning": "五",
+          "audio": "/audio/ki/k215.mp3"
+        },
+        {
+          "id": "k216",
+          "word": "six",
+          "phonetic": "/sɪks/",
+          "pos": "num.",
+          "meaning": "六",
+          "audio": "/audio/ki/k216.mp3"
+        },
+        {
+          "id": "k217",
+          "word": "seven",
+          "phonetic": "/ˈsevn/",
+          "pos": "num.",
+          "meaning": "七",
+          "audio": "/audio/ki/k217.mp3"
+        },
+        {
+          "id": "k218",
+          "word": "eight",
+          "phonetic": "/eɪt/",
+          "pos": "num.",
+          "meaning": "八",
+          "audio": "/audio/ki/k218.mp3"
+        },
+        {
+          "id": "k219",
+          "word": "nine",
+          "phonetic": "/naɪn/",
+          "pos": "num.",
+          "meaning": "九",
+          "audio": "/audio/ki/k219.mp3"
+        },
+        {
+          "id": "k220",
+          "word": "ten",
+          "phonetic": "/ten/",
+          "pos": "num.",
+          "meaning": "十",
+          "audio": "/audio/ki/k220.mp3"
+        }
+      ]
+    },
+    {
+      "id": "k3",
+      "grade": 0,
+      "title": "美味食物",
+      "words": [
+        {
+          "id": "k301",
+          "word": "apple",
+          "phonetic": "/ˈæpl/",
+          "pos": "n.",
+          "meaning": "苹果",
+          "audio": "/audio/ki/k301.mp3"
+        },
+        {
+          "id": "k302",
+          "word": "banana",
+          "phonetic": "/bəˈnɑːnə/",
+          "pos": "n.",
+          "meaning": "香蕉",
+          "audio": "/audio/ki/k302.mp3"
+        },
+        {
+          "id": "k303",
+          "word": "orange",
+          "phonetic": "/ˈɒrɪndʒ/",
+          "pos": "n.",
+          "meaning": "橙子",
+          "audio": "/audio/ki/k303.mp3"
+        },
+        {
+          "id": "k304",
+          "word": "milk",
+          "phonetic": "/mɪlk/",
+          "pos": "n.",
+          "meaning": "牛奶",
+          "audio": "/audio/ki/k304.mp3"
+        },
+        {
+          "id": "k305",
+          "word": "egg",
+          "phonetic": "/eɡ/",
+          "pos": "n.",
+          "meaning": "鸡蛋",
+          "audio": "/audio/ki/k305.mp3"
+        },
+        {
+          "id": "k306",
+          "word": "bread",
+          "phonetic": "/bred/",
+          "pos": "n.",
+          "meaning": "面包",
+          "audio": "/audio/ki/k306.mp3"
+        },
+        {
+          "id": "k307",
+          "word": "rice",
+          "phonetic": "/raɪs/",
+          "pos": "n.",
+          "meaning": "米饭",
+          "audio": "/audio/ki/k307.mp3"
+        },
+        {
+          "id": "k308",
+          "word": "cake",
+          "phonetic": "/keɪk/",
+          "pos": "n.",
+          "meaning": "蛋糕",
+          "audio": "/audio/ki/k308.mp3"
+        },
+        {
+          "id": "k309",
+          "word": "candy",
+          "phonetic": "/ˈkændi/",
+          "pos": "n.",
+          "meaning": "糖果",
+          "audio": "/audio/ki/k309.mp3"
+        },
+        {
+          "id": "k310",
+          "word": "water",
+          "phonetic": "/ˈwɔːtə(r)/",
+          "pos": "n.",
+          "meaning": "水",
+          "audio": "/audio/ki/k310.mp3"
+        },
+        {
+          "id": "k311",
+          "word": "juice",
+          "phonetic": "/dʒuːs/",
+          "pos": "n.",
+          "meaning": "果汁",
+          "audio": "/audio/ki/k311.mp3"
+        },
+        {
+          "id": "k312",
+          "word": "tea",
+          "phonetic": "/tiː/",
+          "pos": "n.",
+          "meaning": "茶",
+          "audio": "/audio/ki/k312.mp3"
+        },
+        {
+          "id": "k313",
+          "word": "cookie",
+          "phonetic": "/ˈkʊki/",
+          "pos": "n.",
+          "meaning": "饼干",
+          "audio": "/audio/ki/k313.mp3"
+        },
+        {
+          "id": "k314",
+          "word": "ice cream",
+          "phonetic": "/ˌaɪs ˈkriːm/",
+          "pos": "n.",
+          "meaning": "冰淇淋",
+          "audio": "/audio/ki/k314.mp3"
+        },
+        {
+          "id": "k315",
+          "word": "grape",
+          "phonetic": "/ɡreɪp/",
+          "pos": "n.",
+          "meaning": "葡萄",
+          "audio": "/audio/ki/k315.mp3"
+        },
+        {
+          "id": "k316",
+          "word": "pear",
+          "phonetic": "/peə(r)/",
+          "pos": "n.",
+          "meaning": "梨",
+          "audio": "/audio/ki/k316.mp3"
+        },
+        {
+          "id": "k317",
+          "word": "meat",
+          "phonetic": "/miːt/",
+          "pos": "n.",
+          "meaning": "肉",
+          "audio": "/audio/ki/k317.mp3"
+        },
+        {
+          "id": "k318",
+          "word": "fish",
+          "phonetic": "/fɪʃ/",
+          "pos": "n.",
+          "meaning": "鱼",
+          "audio": "/audio/ki/k318.mp3"
+        },
+        {
+          "id": "k319",
+          "word": "noodle",
+          "phonetic": "/ˈnuːdl/",
+          "pos": "n.",
+          "meaning": "面条",
+          "audio": "/audio/ki/k319.mp3"
+        },
+        {
+          "id": "k320",
+          "word": "soup",
+          "phonetic": "/suːp/",
+          "pos": "n.",
+          "meaning": "汤",
+          "audio": "/audio/ki/k320.mp3"
+        }
+      ]
+    },
+    {
+      "id": "k4",
+      "grade": 0,
+      "title": "我的家庭与身体",
+      "words": [
+        {
+          "id": "k401",
+          "word": "mum",
+          "phonetic": "/mʌm/",
+          "pos": "n.",
+          "meaning": "妈妈",
+          "audio": "/audio/ki/k401.mp3"
+        },
+        {
+          "id": "k402",
+          "word": "dad",
+          "phonetic": "/dæd/",
+          "pos": "n.",
+          "meaning": "爸爸",
+          "audio": "/audio/ki/k402.mp3"
+        },
+        {
+          "id": "k403",
+          "word": "baby",
+          "phonetic": "/ˈbeɪbi/",
+          "pos": "n.",
+          "meaning": "婴儿",
+          "audio": "/audio/ki/k403.mp3"
+        },
+        {
+          "id": "k404",
+          "word": "brother",
+          "phonetic": "/ˈbrʌðə(r)/",
+          "pos": "n.",
+          "meaning": "哥哥；弟弟",
+          "audio": "/audio/ki/k404.mp3"
+        },
+        {
+          "id": "k405",
+          "word": "sister",
+          "phonetic": "/ˈsɪstə(r)/",
+          "pos": "n.",
+          "meaning": "姐姐；妹妹",
+          "audio": "/audio/ki/k405.mp3"
+        },
+        {
+          "id": "k406",
+          "word": "grandpa",
+          "phonetic": "/ˈɡrænpɑː/",
+          "pos": "n.",
+          "meaning": "爷爷；外公",
+          "audio": "/audio/ki/k406.mp3"
+        },
+        {
+          "id": "k407",
+          "word": "grandma",
+          "phonetic": "/ˈɡrænmɑː/",
+          "pos": "n.",
+          "meaning": "奶奶；外婆",
+          "audio": "/audio/ki/k407.mp3"
+        },
+        {
+          "id": "k408",
+          "word": "family",
+          "phonetic": "/ˈfæməli/",
+          "pos": "n.",
+          "meaning": "家庭",
+          "audio": "/audio/ki/k408.mp3"
+        },
+        {
+          "id": "k409",
+          "word": "eye",
+          "phonetic": "/aɪ/",
+          "pos": "n.",
+          "meaning": "眼睛",
+          "audio": "/audio/ki/k409.mp3"
+        },
+        {
+          "id": "k410",
+          "word": "ear",
+          "phonetic": "/ɪə(r)/",
+          "pos": "n.",
+          "meaning": "耳朵",
+          "audio": "/audio/ki/k410.mp3"
+        },
+        {
+          "id": "k411",
+          "word": "nose",
+          "phonetic": "/nəʊz/",
+          "pos": "n.",
+          "meaning": "鼻子",
+          "audio": "/audio/ki/k411.mp3"
+        },
+        {
+          "id": "k412",
+          "word": "mouth",
+          "phonetic": "/maʊθ/",
+          "pos": "n.",
+          "meaning": "嘴",
+          "audio": "/audio/ki/k412.mp3"
+        },
+        {
+          "id": "k413",
+          "word": "hand",
+          "phonetic": "/hænd/",
+          "pos": "n.",
+          "meaning": "手",
+          "audio": "/audio/ki/k413.mp3"
+        },
+        {
+          "id": "k414",
+          "word": "foot",
+          "phonetic": "/fʊt/",
+          "pos": "n.",
+          "meaning": "脚",
+          "audio": "/audio/ki/k414.mp3"
+        },
+        {
+          "id": "k415",
+          "word": "head",
+          "phonetic": "/hed/",
+          "pos": "n.",
+          "meaning": "头",
+          "audio": "/audio/ki/k415.mp3"
+        },
+        {
+          "id": "k416",
+          "word": "hair",
+          "phonetic": "/heə(r)/",
+          "pos": "n.",
+          "meaning": "头发",
+          "audio": "/audio/ki/k416.mp3"
+        },
+        {
+          "id": "k417",
+          "word": "arm",
+          "phonetic": "/ɑːm/",
+          "pos": "n.",
+          "meaning": "手臂",
+          "audio": "/audio/ki/k417.mp3"
+        },
+        {
+          "id": "k418",
+          "word": "leg",
+          "phonetic": "/leɡ/",
+          "pos": "n.",
+          "meaning": "腿",
+          "audio": "/audio/ki/k418.mp3"
+        },
+        {
+          "id": "k419",
+          "word": "face",
+          "phonetic": "/feɪs/",
+          "pos": "n.",
+          "meaning": "脸",
+          "audio": "/audio/ki/k419.mp3"
+        },
+        {
+          "id": "k420",
+          "word": "tooth",
+          "phonetic": "/tuːθ/",
+          "pos": "n.",
+          "meaning": "牙齿",
+          "audio": "/audio/ki/k420.mp3"
+        }
+      ]
+    },
+    {
+      "id": "k5",
+      "grade": 0,
+      "title": "玩具与学校",
+      "words": [
+        {
+          "id": "k501",
+          "word": "toy",
+          "phonetic": "/tɔɪ/",
+          "pos": "n.",
+          "meaning": "玩具",
+          "audio": "/audio/ki/k501.mp3"
+        },
+        {
+          "id": "k502",
+          "word": "ball",
+          "phonetic": "/bɔːl/",
+          "pos": "n.",
+          "meaning": "球",
+          "audio": "/audio/ki/k502.mp3"
+        },
+        {
+          "id": "k503",
+          "word": "doll",
+          "phonetic": "/dɒl/",
+          "pos": "n.",
+          "meaning": "娃娃",
+          "audio": "/audio/ki/k503.mp3"
+        },
+        {
+          "id": "k504",
+          "word": "kite",
+          "phonetic": "/kaɪt/",
+          "pos": "n.",
+          "meaning": "风筝",
+          "audio": "/audio/ki/k504.mp3"
+        },
+        {
+          "id": "k505",
+          "word": "bike",
+          "phonetic": "/baɪk/",
+          "pos": "n.",
+          "meaning": "自行车",
+          "audio": "/audio/ki/k505.mp3"
+        },
+        {
+          "id": "k506",
+          "word": "car",
+          "phonetic": "/kɑː(r)/",
+          "pos": "n.",
+          "meaning": "小汽车",
+          "audio": "/audio/ki/k506.mp3"
+        },
+        {
+          "id": "k507",
+          "word": "book",
+          "phonetic": "/bʊk/",
+          "pos": "n.",
+          "meaning": "书",
+          "audio": "/audio/ki/k507.mp3"
+        },
+        {
+          "id": "k508",
+          "word": "bag",
+          "phonetic": "/bæɡ/",
+          "pos": "n.",
+          "meaning": "书包",
+          "audio": "/audio/ki/k508.mp3"
+        },
+        {
+          "id": "k509",
+          "word": "pen",
+          "phonetic": "/pen/",
+          "pos": "n.",
+          "meaning": "钢笔",
+          "audio": "/audio/ki/k509.mp3"
+        },
+        {
+          "id": "k510",
+          "word": "pencil",
+          "phonetic": "/ˈpensl/",
+          "pos": "n.",
+          "meaning": "铅笔",
+          "audio": "/audio/ki/k510.mp3"
+        },
+        {
+          "id": "k511",
+          "word": "desk",
+          "phonetic": "/desk/",
+          "pos": "n.",
+          "meaning": "课桌",
+          "audio": "/audio/ki/k511.mp3"
+        },
+        {
+          "id": "k512",
+          "word": "chair",
+          "phonetic": "/tʃeə(r)/",
+          "pos": "n.",
+          "meaning": "椅子",
+          "audio": "/audio/ki/k512.mp3"
+        },
+        {
+          "id": "k513",
+          "word": "teacher",
+          "phonetic": "/ˈtiːtʃə(r)/",
+          "pos": "n.",
+          "meaning": "老师",
+          "audio": "/audio/ki/k513.mp3"
+        },
+        {
+          "id": "k514",
+          "word": "student",
+          "phonetic": "/ˈstjuːdnt/",
+          "pos": "n.",
+          "meaning": "学生",
+          "audio": "/audio/ki/k514.mp3"
+        },
+        {
+          "id": "k515",
+          "word": "school",
+          "phonetic": "/skuːl/",
+          "pos": "n.",
+          "meaning": "学校",
+          "audio": "/audio/ki/k515.mp3"
+        },
+        {
+          "id": "k516",
+          "word": "classroom",
+          "phonetic": "/ˈklɑːsruːm/",
+          "pos": "n.",
+          "meaning": "教室",
+          "audio": "/audio/ki/k516.mp3"
+        },
+        {
+          "id": "k517",
+          "word": "picture",
+          "phonetic": "/ˈpɪktʃə(r)/",
+          "pos": "n.",
+          "meaning": "图画",
+          "audio": "/audio/ki/k517.mp3"
+        },
+        {
+          "id": "k518",
+          "word": "crayon",
+          "phonetic": "/ˈkreɪən/",
+          "pos": "n.",
+          "meaning": "蜡笔",
+          "audio": "/audio/ki/k518.mp3"
+        },
+        {
+          "id": "k519",
+          "word": "ruler",
+          "phonetic": "/ˈruːlə(r)/",
+          "pos": "n.",
+          "meaning": "尺子",
+          "audio": "/audio/ki/k519.mp3"
+        },
+        {
+          "id": "k520",
+          "word": "eraser",
+          "phonetic": "/ɪˈreɪzə(r)/",
+          "pos": "n.",
+          "meaning": "橡皮",
+          "audio": "/audio/ki/k520.mp3"
+        }
+      ]
+    },
+    {
+      "id": "k6",
+      "grade": 0,
+      "title": "自然与天气",
+      "words": [
+        {
+          "id": "k601",
+          "word": "sun",
+          "phonetic": "/sʌn/",
+          "pos": "n.",
+          "meaning": "太阳",
+          "audio": "/audio/ki/k601.mp3"
+        },
+        {
+          "id": "k602",
+          "word": "moon",
+          "phonetic": "/muːn/",
+          "pos": "n.",
+          "meaning": "月亮",
+          "audio": "/audio/ki/k602.mp3"
+        },
+        {
+          "id": "k603",
+          "word": "star",
+          "phonetic": "/stɑː(r)/",
+          "pos": "n.",
+          "meaning": "星星",
+          "audio": "/audio/ki/k603.mp3"
+        },
+        {
+          "id": "k604",
+          "word": "sky",
+          "phonetic": "/skaɪ/",
+          "pos": "n.",
+          "meaning": "天空",
+          "audio": "/audio/ki/k604.mp3"
+        },
+        {
+          "id": "k605",
+          "word": "cloud",
+          "phonetic": "/klaʊd/",
+          "pos": "n.",
+          "meaning": "云",
+          "audio": "/audio/ki/k605.mp3"
+        },
+        {
+          "id": "k606",
+          "word": "rain",
+          "phonetic": "/reɪn/",
+          "pos": "n.",
+          "meaning": "雨",
+          "audio": "/audio/ki/k606.mp3"
+        },
+        {
+          "id": "k607",
+          "word": "snow",
+          "phonetic": "/snəʊ/",
+          "pos": "n.",
+          "meaning": "雪",
+          "audio": "/audio/ki/k607.mp3"
+        },
+        {
+          "id": "k608",
+          "word": "wind",
+          "phonetic": "/wɪnd/",
+          "pos": "n.",
+          "meaning": "风",
+          "audio": "/audio/ki/k608.mp3"
+        },
+        {
+          "id": "k609",
+          "word": "tree",
+          "phonetic": "/triː/",
+          "pos": "n.",
+          "meaning": "树",
+          "audio": "/audio/ki/k609.mp3"
+        },
+        {
+          "id": "k610",
+          "word": "flower",
+          "phonetic": "/ˈflaʊə(r)/",
+          "pos": "n.",
+          "meaning": "花",
+          "audio": "/audio/ki/k610.mp3"
+        },
+        {
+          "id": "k611",
+          "word": "grass",
+          "phonetic": "/ɡrɑːs/",
+          "pos": "n.",
+          "meaning": "草",
+          "audio": "/audio/ki/k611.mp3"
+        },
+        {
+          "id": "k612",
+          "word": "water",
+          "phonetic": "/ˈwɔːtə(r)/",
+          "pos": "n.",
+          "meaning": "水",
+          "audio": "/audio/ki/k612.mp3"
+        },
+        {
+          "id": "k613",
+          "word": "hill",
+          "phonetic": "/hɪl/",
+          "pos": "n.",
+          "meaning": "小山",
+          "audio": "/audio/ki/k613.mp3"
+        },
+        {
+          "id": "k614",
+          "word": "river",
+          "phonetic": "/ˈrɪvə(r)/",
+          "pos": "n.",
+          "meaning": "河流",
+          "audio": "/audio/ki/k614.mp3"
+        },
+        {
+          "id": "k615",
+          "word": "sea",
+          "phonetic": "/siː/",
+          "pos": "n.",
+          "meaning": "大海",
+          "audio": "/audio/ki/k615.mp3"
+        },
+        {
+          "id": "k616",
+          "word": "day",
+          "phonetic": "/deɪ/",
+          "pos": "n.",
+          "meaning": "白天",
+          "audio": "/audio/ki/k616.mp3"
+        },
+        {
+          "id": "k617",
+          "word": "night",
+          "phonetic": "/naɪt/",
+          "pos": "n.",
+          "meaning": "夜晚",
+          "audio": "/audio/ki/k617.mp3"
+        },
+        {
+          "id": "k618",
+          "word": "hot",
+          "phonetic": "/hɒt/",
+          "pos": "adj.",
+          "meaning": "热的",
+          "audio": "/audio/ki/k618.mp3"
+        },
+        {
+          "id": "k619",
+          "word": "cold",
+          "phonetic": "/kəʊld/",
+          "pos": "adj.",
+          "meaning": "冷的",
+          "audio": "/audio/ki/k619.mp3"
+        },
+        {
+          "id": "k620",
+          "word": "warm",
+          "phonetic": "/wɔːm/",
+          "pos": "adj.",
+          "meaning": "温暖的",
+          "audio": "/audio/ki/k620.mp3"
+        }
+      ]
+    }
+  ]
+}

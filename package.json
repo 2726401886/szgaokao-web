@@ -1,0 +1,11 @@
+{
+  "name": "szgaokao-web",
+  "version": "1.0.0",
+  "description": "初高中英语听说专项题库 · 注册+授权码网页程序",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "gencodes": "node tools/gen-codes.js"
+  },
+  "engines": { "node": ">=18" }
+}
