@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小学语文 · 拼音识字古诗阅读</title>
+<style>
+  :root { --brand:#1aa179; --brand2:#33c79e; --ok:#2a8; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:1000px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#1aa179,#33c79e); color:#fff; padding:14px 16px; border-radius:16px; margin-bottom:12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:18px; }
+  .topbar .sub { font-size:12px; opacity:.92; margin-top:2px; }
+  .topbar .spacer { flex:1; }
+  .topbar a.back { color:#fff; text-decoration:none; background:rgba(255,255,255,.22); padding:6px 12px; border-radius:20px; font-size:13px; }
+  .tabs { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .tabs button { flex:1; min-width:120px; padding:12px 6px; border:none; border-radius:12px; background:#fff; font-size:15px; font-weight:700; color:#555; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .tabs button.on { background:#1aa179; color:#fff; }
+  .trial-note { background:#fff7e0; border:1px solid #f3e6b8; color:#7a5c00; padding:10px 14px; border-radius:12px; font-size:13px; margin-bottom:12px; display:none; }
+  .layout { display:flex; gap:14px; align-items:flex-start; }
+  .side { width:230px; flex-shrink:0; background:#fff; border-radius:16px; padding:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .side h3 { font-size:12px; color:#999; margin:0 0 8px; font-weight:700; }
+  .grp-item { padding:10px 12px; border-radius:12px; cursor:pointer; border:1.5px solid transparent; margin-bottom:6px; }
+  .grp-item:hover { background:#eefaf5; }
+  .grp-item.on { background:#e6f7f1; border-color:var(--brand,#1aa179); }
+  .grp-item .t { font-weight:700; font-size:13.5px; }
+  .grp-item .s { font-size:11px; color:#999; margin-top:2px; }
+  .grp-item .s b { color:#1aa179; }
+  .side .me { font-size:12px; color:#999; margin-top:12px; padding-top:10px; border-top:1px dashed #eee; }
+  .main { flex:1; min-width:0; }
+  .modes { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .modes button { flex:1; min-width:90px; padding:10px 6px; border:none; border-radius:12px; background:#fff; font-size:14px; font-weight:700; color:#555; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .modes button.on { background:#1aa179; color:#fff; }
+  .card { background:#fff; border-radius:16px; padding:22px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .group-title { font-size:13px; color:#999; margin-bottom:14px; }
+  .hero { text-align:center; padding:8px 0 12px; }
+  .hero .big { font-size:54px; font-weight:800; letter-spacing:2px; color:#1aa179; }
+  .hero .ph { font-size:17px; color:#888; margin-top:6px; }
+  .hero .pos { display:inline-block; background:#f0f0f0; color:#666; font-size:12px; padding:2px 8px; border-radius:8px; margin-top:6px; }
+  .hero .ex { font-size:20px; color:#222; font-weight:700; margin-top:10px; }
+  .hero .ex-py { font-size:14px; color:#888; }
+  .hero .bus { font-size:13px; color:#999; margin-top:6px; }
+  .hero .zuci { font-size:14px; color:#444; margin-top:6px; }
+  .hero .jx { font-size:14px; color:#666; margin-top:8px; line-height:1.7; }
+  .play-row { display:flex; justify-content:center; gap:10px; margin-top:14px; }
+  .play { width:52px; height:52px; border-radius:50%; border:none; background:linear-gradient(135deg,#1aa179,#33c79e); color:#fff; font-size:22px; cursor:pointer; box-shadow:0 6px 16px rgba(26,161,121,.35); }
+  .play:active { transform:scale(.94); }
+  .mini { padding:9px 16px; border:none; border-radius:20px; background:#f0f0f0; color:#555; font-size:13px; cursor:pointer; }
+  .mini.on { background:#1aa179; color:#fff; }
+  .navbtns { display:flex; gap:10px; margin-top:18px; }
+  .navbtns button { flex:1; padding:13px; border:none; border-radius:12px; font-size:15px; cursor:pointer; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06); color:#333; }
+  .navbtns button.primary { background:#1aa179; color:#fff; }
+  .navbtns button:disabled { opacity:.35; cursor:not-allowed; }
+  .qtext { font-size:16px; font-weight:600; margin:6px 0 12px; }
+  .opt { padding:12px 14px; border:1.5px solid #eee; border-radius:12px; margin:8px 0; font-size:16px; cursor:pointer; transition:border-color .15s; }
+  .opt:hover { border-color:#1aa179; }
+  .opt.right { background:#e8f8ee; border-color:var(--ok,#2a8); }
+  .opt.wrong { background:#fdecea; border-color:var(--err,#e23); }
+  .opt.locked { pointer-events:none; }
+  .result { text-align:center; padding:8px; border-radius:10px; margin-top:10px; font-size:14px; font-weight:700; }
+  .result.ok { background:#e8f8ee; color:#2a8; }
+  .result.bad { background:#fdecea; color:#e23; }
+  .spell-input { width:100%; padding:16px; border:2px solid #eee; border-radius:12px; font-size:26px; text-align:center; letter-spacing:4px; margin-top:12px; outline:none; }
+  .spell-input:focus { border-color:#1aa179; }
+  .prog-bar { height:6px; background:#f0f0f0; border-radius:6px; margin-top:12px; overflow:hidden; }
+  .prog-bar i { display:block; height:100%; background:linear-gradient(90deg,#1aa179,#33c79e); width:0; transition:width .3s; }
+  .prog-txt { font-size:12px; color:#999; margin-top:6px; text-align:center; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .err-msg { color:#e23; font-size:14px; text-align:center; padding:30px 10px; }
+  .read-text { font-size:15px; line-height:2; background:#fafcff; border-radius:12px; padding:16px; color:#333; }
+  .read-text b { color:#1aa179; }
+  .poem-line { font-size:19px; line-height:1.9; text-align:center; color:#222; }
+  .poem-meta { text-align:center; color:#999; font-size:13px; margin-bottom:10px; }
+  .notes { font-size:13px; color:#666; background:#f6fbf9; border-radius:10px; padding:10px 12px; margin-top:12px; line-height:1.7; }
+  /* —— 题库组卷 / 小升初衔接 专用 —— */
+  .xtabs { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .xtabs button { padding:9px 14px; border:none; border-radius:20px; background:#fff; font-size:13.5px; font-weight:700; color:#555; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .xtabs button.on { background:#1aa179; color:#fff; }
+  .filters { margin-bottom:12px; }
+  .filters .frow { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:9px; }
+  .filters .lbl { font-size:12.5px; color:#888; font-weight:700; }
+  .seg { display:inline-flex; border:1.5px solid #e8e8e8; border-radius:10px; overflow:hidden; }
+  .seg button { border:none; background:#fff; padding:6px 11px; font-size:12.5px; cursor:pointer; color:#555; font-weight:700; }
+  .seg button.on { background:#1aa179; color:#fff; }
+  .filters select { padding:7px 9px; border:1.5px solid #e8e8e8; border-radius:10px; font-size:12.5px; background:#fff; color:#333; }
+  .bank-item { border:1.5px solid #eee; border-radius:12px; padding:11px 13px; margin-bottom:9px; cursor:pointer; transition:border-color .15s; background:#fff; }
+  .bank-item:hover { border-color:#1aa179; }
+  .bank-item.on { border-color:#1aa179; background:#eefaf5; }
+  .bank-item .bt { font-weight:700; font-size:14px; display:flex; align-items:flex-start; gap:8px; line-height:1.5; }
+  .bank-item .meta { font-size:11.5px; color:#999; margin-top:6px; }
+  .chk { width:16px; height:16px; accent-color:#1aa179; flex-shrink:0; margin-top:2px; }
+  .pill { display:inline-block; font-size:11.5px; padding:2px 8px; border-radius:8px; background:#eef2ff; color:#3b6fe0; margin-right:5px; }
+  .pill.diff { background:#fff3e0; color:#e08600; }
+  .pill.g { background:#e8f8ee; color:#1a9e5c; }
+  .selbar { position:sticky; bottom:0; background:#fff; border:1.5px solid #1aa179; border-radius:14px; padding:11px 14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; box-shadow:0 -4px 16px rgba(0,0,0,.06); margin-top:12px; }
+  .selbar b { color:#1aa179; font-size:15px; }
+  .paper { background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .paper h2 { text-align:center; font-size:20px; }
+  .paper .pmeta { text-align:center; font-size:12.5px; color:#666; margin:7px 0 3px; }
+  .psec { margin-top:16px; }
+  .psec h3 { font-size:14.5px; font-weight:800; border-left:4px solid #1aa179; padding-left:8px; margin-bottom:8px; }
+  .psec .pnote { font-size:12px; color:#999; margin-bottom:8px; }
+  .pq { border-bottom:1px dashed #eee; padding:9px 0; font-size:14.5px; line-height:1.8; }
+  .pq .pqhead { font-weight:700; color:#1aa179; font-size:14px; margin-bottom:4px; }
+  .pq .pqans { color:#1a9e5c; font-weight:700; font-size:13.5px; margin-top:5px; }
+  .pq .pqana { color:#777; font-size:12.5px; margin-top:3px; line-height:1.6; }
+  .pq .blankline { display:inline-block; border-bottom:1px solid #333; min-width:120px; height:1.05em; vertical-align:middle; }
+  .blank-input { width:150px; padding:5px 8px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; margin:4px 4px 4px 0; }
+  .keytitle { margin-top:20px; border-top:2px dashed #1aa179; padding-top:12px; font-size:15px; font-weight:800; color:#1a9e5c; }
+  .unit-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+  .unit-head .ut { font-size:17px; font-weight:800; }
+  .unit-head .tag { background:#e8f8ee; color:#1a9e5c; font-size:11.5px; padding:2px 9px; border-radius:8px; font-weight:700; }
+  .unit-sum { font-size:13.5px; color:#666; line-height:1.7; margin-bottom:14px; }
+  .point { border:1.5px solid #eef4f1; border-radius:12px; padding:13px 15px; margin-bottom:11px; }
+  .point h4 { font-size:14.5px; color:#1aa179; margin-bottom:6px; }
+  .point .pb { font-size:14.5px; line-height:1.85; color:#333; }
+  .point .peg { font-size:14px; color:#444; background:#f6fbf9; border-left:3px solid #1aa179; padding:7px 11px; border-radius:6px; margin-top:8px; }
+  .point .ptip { font-size:12.5px; color:#8a6d00; background:#fffbe8; padding:7px 11px; border-radius:8px; margin-top:8px; line-height:1.6; }
+  .quizwrap { margin-top:18px; border-top:1px dashed #e5e5e5; padding-top:14px; }
+  .quizwrap .qtitle { font-size:15px; font-weight:800; color:#1aa179; margin-bottom:10px; }
+  .qitem { border:1.5px solid #eef4f1; border-radius:12px; padding:13px 15px; margin-bottom:11px; }
+  .qitem .qs { font-size:14.5px; font-weight:700; line-height:1.7; margin-bottom:8px; }
+  .qitem .opt { padding:10px 13px; font-size:14.5px; margin:7px 0; }
+  .qitem .qexp { font-size:13px; color:#666; background:#f6fbf9; border-radius:8px; padding:8px 11px; margin-top:8px; line-height:1.7; display:none; }
+  .opt.pick { border-color:#1aa179; background:#eefaf5; }
+  @media print {
+    .no-print { display:none !important; }
+    body { background:#fff; }
+    .wrap { max-width:100%; padding:0; }
+    .paper { box-shadow:none; padding:0; }
+    .pq { page-break-inside:avoid; }
+  }
+  @media (max-width:720px) {
+    .layout { flex-direction:column; }
+    .side { width:100%; }
+    .side .grps { display:flex; overflow-x:auto; gap:6px; padding-bottom:6px; }
+    .side .grp-item { min-width:150px; margin-bottom:0; }
+    .hero .big { font-size:42px; }
+  }
+</style>
+<script src="./device.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>📚 小学语文 · 拼音识字古诗阅读</h1>
+      <div class="sub">汉语拼音 · 识字写字 · 古诗文积累 · 阅读理解（点 🔊 可听读）</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="back" href="./index.html">← 返回主页</a>
+    <a class="back" style="cursor:pointer;" onclick="logout()">退出登录</a>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="trial-note" id="trialNote"></div>
+
+  <div class="layout">
+    <div class="side" id="sidePane">
+      <h3>选择分组</h3>
+      <div class="grps" id="grpList"><div class="empty" style="box-shadow:none;padding:20px;">加载中…</div></div>
+      <div class="me" id="meNote"></div>
+    </div>
+    <div class="main" id="mainArea"><div class="empty">请选择左侧的分组开始学习</div></div>
+  </div>
+</div>
+
+<script>
+function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href='./index.html'; }
+
+(function () {
+  const $ = s => document.querySelector(s);
+  const TOKEN = localStorage.getItem('token') || '';
+  let DEVFP = '';
+  try { DEVFP = localStorage.getItem('devfp') || ''; } catch (e) {}
+  const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+  const PROG_KEY = 'chinese_progress';
+  const SECTIONS = [
+    { k: 'pinyin', t: '🔤 汉语拼音', modes: [
+        { k: 'read', t: '📖 认读' }, { k: 'quiz', t: '🎯 辨析' } ] },
+    { k: 'zi', t: '✍️ 识字写字', modes: [
+        { k: 'read', t: '📖 认读' }, { k: 'spell', t: '✍️ 看拼音写汉字' }, { k: 'pick', t: '🔍 选拼音' } ] },
+    { k: 'poem', t: '📜 古诗文', modes: [
+        { k: 'read', t: '📖 诵读' }, { k: 'link', t: '🔗 接句' }, { k: 'who', t: '🧠 作者朝代' } ] },
+    { k: 'read', t: '📝 阅读理解', modes: [
+        { k: 'do', t: '✏️ 答题' } ] },
+    { k: 'exam', t: '📋 题库组卷', modes: [] },
+    { k: 'link', t: '🌉 小升初衔接', modes: [] },
+  ];
+
+  let DATA = null;       // { sections, trial }
+  let section = 'pinyin';
+  let mode = 'read';
+  let curGroup = null;   // 当前分组对象
+  let idx = 0;
+  let qState = null;     // 选择题状态
+  let spellVal = '';
+
+  // —— 进度 ——
+  function loadProg() { try { return JSON.parse(localStorage.getItem(PROG_KEY) || '{}'); } catch (e) { return {}; } }
+  function progOf(sec) { const p = loadProg(); return p[sec] || {}; }
+  function markMastered(sec, id) { const p = loadProg(); p[sec] = p[sec] || {}; p[sec][id] = 1; localStorage.setItem(PROG_KEY, JSON.stringify(p)); renderSide(); }
+  function masteredCount(sec, ids) { const m = progOf(sec); return ids.filter(id => m[id]).length; }
+
+  // —— 听读（浏览器 TTS，无需音频文件）——
+  function speak(text) {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'zh-CN'; u.rate = 0.85; u.pitch = 1;
+      const vs = window.speechSynthesis.getVoices();
+      const zh = vs.find(v => /zh|Chinese|中文|普通话/i.test(v.lang + v.name));
+      if (zh) u.voice = zh;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+  // 某些浏览器需预加载语音列表
+  try { if ('speechSynthesis' in window) window.speechSynthesis.getVoices(); } catch (e) {}
+
+  // —— API ——
+  async function api(path, opts) {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), 12000);
+    try {
+      const r = await fetch(path, Object.assign({ headers: H(), signal: ctl.signal }, opts || {}));
+      const j = await r.json().catch(() => ({}));
+      return { s: r.status, j };
+    } catch (e) { return { s: 0, j: { error: '网络异常或请求超时，请检查网络后重试' } }; }
+    finally { clearTimeout(tm); }
+  }
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+  // —— 初始化 ——
+  async function init() {
+    const r = await api('/api/chinese');
+    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常') + '</div>'; $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">网络异常</div>'; return; }
+    if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#1aa179;">前往登录页</a></div>'; $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">未登录</div>'; return; }
+    DATA = r.j;
+    if (DATA.trial) {
+      $('#trialNote').style.display = 'block';
+      $('#trialNote').innerHTML = '🎁 体验模式：每板块可学习第一个分组。输入授权码或联系管理员（微信 13538237315）解锁全部内容。';
+    }
+    buildTabs();
+    selectSection('exam');
+  }
+
+  function buildTabs() {
+    $('#tabs').innerHTML = SECTIONS.map(s =>
+      '<button class="' + (s.k === section ? 'on' : '') + '" data-s="' + s.k + '">' + s.t + '</button>').join('');
+    document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => selectSection(b.dataset.s)));
+  }
+
+  function selectSection(k) {
+    section = k; mode = (SECTIONS.find(s => s.k === k).modes[0] || {}).k || '';
+    buildTabs();
+    if (k === 'exam' || k === 'link') {
+      // 独立板块：隐藏左侧分组栏，整幅渲染
+      $('#sidePane').style.display = 'none';
+      $('#mainArea').style.flex = '1 1 100%';
+      if (k === 'exam') renderExamPage();
+      else renderLinkPage();
+      return;
+    }
+    $('#sidePane').style.display = '';
+    $('#mainArea').style.flex = '';
+    const sec = DATA.sections[k];
+    const groups = sec ? sec.groups : [];
+    renderSide();
+    if (!groups.length) { $('#mainArea').innerHTML = '<div class="empty">该板块暂无分组</div>'; return; }
+    loadGroup(groups[0]);
+  }
+
+  function curGroups() { const sec = DATA.sections[section]; return sec ? sec.groups : []; }
+  function itemsOf(g) {
+    if (section === 'pinyin') return g.items || [];
+    if (section === 'zi') return g.words || [];
+    if (section === 'poem') return g.poems || [];
+    if (section === 'read') return g.passages || [];
+    return [];
+  }
+
+  function renderSide() {
+    if (section === 'exam' || section === 'link') return;
+    const groups = curGroups();
+    const ids = groups.flatMap(g => itemsOf(g).map(it => it.id));
+    const mc = masteredCount(section, ids);
+    $('#grpList').innerHTML = groups.map(g => {
+      const on = curGroup && curGroup.id === g.id ? ' on' : '';
+      const its = itemsOf(g);
+      const gmc = masteredCount(section, its.map(it => it.id));
+      return '<div class="grp-item' + on + '" data-g="' + g.id + '"><div class="t">' + esc(g.title) + '</div>' +
+        '<div class="s">' + its.length + ' 项 · 已掌握 <b>' + gmc + '</b>/' + its.length + '</div></div>';
+    }).join('');
+    document.querySelectorAll('.grp-item').forEach(el => el.addEventListener('click', () => {
+      document.querySelectorAll('.grp-item').forEach(x => x.classList.remove('on'));
+      el.classList.add('on');
+      loadGroup(groups.find(g => g.id === el.dataset.g));
+    }));
+    $('#meNote').innerHTML = '本板块累计掌握 <b>' + mc + '</b> / ' + ids.length + ' 项';
+  }
+
+  async function loadGroup(g) {
+    curGroup = g; idx = 0; qState = null; spellVal = '';
+    renderSide();
+    renderModes();
+    renderMain();
+  }
+
+  function renderModes() {
+    const secDef = SECTIONS.find(s => s.k === section);
+    if (!secDef.modes.length) return;
+    $('#mainArea').innerHTML = '<div class="modes" id="modeBar"></div><div class="card" id="modeCard"></div>';
+    $('#modeBar').innerHTML = secDef.modes.map(m =>
+      '<button class="' + (m.k === mode ? 'on' : '') + '" data-m="' + m.k + '">' + m.t + '</button>').join('');
+    document.querySelectorAll('.modes button').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; idx = 0; qState = null; spellVal = ''; renderModes(); renderMain(); }));
+  }
+
+  function renderMain() {
+    const card = $('#modeCard');
+    if (section === 'pinyin') {      if (mode === 'read') renderPyRead(card);
+      else renderPyQuiz(card);
+    } else if (section === 'zi') {
+      if (mode === 'read') renderZiRead(card);
+      else if (mode === 'spell') renderZiSpell(card);
+      else renderZiPick(card);
+    } else if (section === 'poem') {
+      if (mode === 'read') renderPoemRead(card);
+      else if (mode === 'link') renderPoemLink(card);
+      else renderPoemWho(card);
+    } else if (section === 'read') {
+      renderReadDo(card);
+    }
+  }
+
+  function navHtml(total) {
+    return '<div class="prog-bar"><i style="width:' + ((idx + 1) / total * 100) + '%"></i></div>' +
+      '<div class="prog-txt">' + (idx + 1) + ' / ' + total + '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一个</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button>' +
+      '</div>';
+  }
+  function bindNav(total) {
+    const p = $('#prevBtn'), n = $('#nextBtn');
+    if (p) p.addEventListener('click', () => { if (idx > 0) { idx--; qState = null; spellVal = ''; renderMain(); } });
+    if (n) n.addEventListener('click', () => { if (idx < total - 1) { idx++; qState = null; spellVal = ''; renderMain(); } });
+  }
+
+  // ===== 拼音：认读 =====
+  function renderPyRead(card) {
+    const its = itemsOf(curGroup); const it = its[idx]; const total = its.length;
+    const mc = masteredCount(section, its.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="hero">' +
+        '<div class="big">' + esc(it.label) + '</div>' +
+        '<div class="ph">' + esc(it.read) + '</div>' +
+        '<div class="pos">' + esc(it.type) + '</div>' +
+        '<div class="ex">' + esc(it.example) + ' <span class="ex-py">（' + esc(it.ex_py) + '）</span></div>' +
+      '</div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊</button></div>' +
+      '<div class="prog-bar"><i style="width:' + ((idx + 1) / total * 100) + '%"></i></div>' +
+      '<div class="prog-txt">' + (idx + 1) + ' / ' + total + '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一个</button>' +
+        '<button id="markBtn">✅ 标记掌握</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => speak(it.example));
+    $('#markBtn').addEventListener('click', () => markMastered(section, it.id));
+    bindNav(total);
+  }
+
+  // ===== 拼音：辨析（双向）=====
+  function renderPyQuiz(card) {
+    const its = itemsOf(curGroup); const total = its.length;
+    if (!qState || qState.idx !== idx) qState = nextPyQ(its, idx);
+    const q = qState;
+    const mc = masteredCount(section, its.map(x => x.id));
+    let prompt, optsHtml;
+    if (q.kind === 'topin') { // 看例字选拼音
+      prompt = '「' + q.target.example + '」的拼音是？';
+      optsHtml = q.opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('');
+    } else { // 看拼音选例字
+      prompt = '拼音「' + q.target.ex_py + '」对应的字是？';
+      optsHtml = q.opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('');
+    }
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 辨析 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="qtext">' + prompt + '</div>' +
+      '<div id="qbox">' + optsHtml + '<div class="result" id="qRes"></div></div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊 听例字</button></div>' +
+      '<div class="navbtns"><button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一个</button><button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button></div>';
+    $('#playBtn').addEventListener('click', () => speak(q.target.example));
+    $('#qbox').querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      if (qState.answered) return; qState.answered = true;
+      const pick = q.opts[Number(el.dataset.i)];
+      const ok = pick === q.ans;
+      $('#qbox').querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) { el.classList.add('right'); markMastered(section, q.target.id); }
+      else { el.classList.add('wrong'); $('#qbox').querySelectorAll('.opt').forEach(x => { if (q.opts[Number(x.dataset.i)] === q.ans) x.classList.add('right'); }); }
+      $('#qRes').textContent = ok ? '✅ 正确！' : '❌ 正确答案：' + q.ans;
+      $('#qRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    }));
+    bindNav(total);
+  }
+  function nextPyQ(its, i) {
+    const t = its[i];
+    const kind = Math.random() < 0.5 ? 'topin' : 'topzi';
+    let opts = [];
+    if (kind === 'topin') {
+      opts = [t.ex_py];
+      const pool = its.filter(x => x.id !== t.id).map(x => x.ex_py);
+      while (opts.length < 3 && pool.length) { const k = Math.floor(Math.random() * pool.length); if (!opts.includes(pool[k])) opts.push(pool[k]); pool.splice(k, 1); }
+      return { idx: i, kind, target: t, opts: opts.sort(() => Math.random() - 0.5), ans: t.ex_py, answered: false };
+    } else {
+      opts = [t.example];
+      const pool = its.filter(x => x.id !== t.id).map(x => x.example);
+      while (opts.length < 3 && pool.length) { const k = Math.floor(Math.random() * pool.length); if (!opts.includes(pool[k])) opts.push(pool[k]); pool.splice(k, 1); }
+      return { idx: i, kind, target: t, opts: opts.sort(() => Math.random() - 0.5), ans: t.example, answered: false };
+    }
+  }
+
+  // ===== 识字：认读 =====
+  function renderZiRead(card) {
+    const ws = itemsOf(curGroup); const w = ws[idx]; const total = ws.length;
+    const mc = masteredCount(section, ws.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="hero">' +
+        '<div class="big">' + esc(w.word) + '</div>' +
+        '<div class="ph">' + esc(w.pinyin) + '</div>' +
+        '<div class="bus">部首：' + esc(w.bushou) + '</div>' +
+        '<div class="zuci">组词：' + w.zuci.map(z => esc(z)).join('、') + '</div>' +
+        '<div class="jx">例句：' + esc(w.juxing) + '</div>' +
+      '</div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊 朗读</button></div>' +
+      '<div class="prog-bar"><i style="width:' + ((idx + 1) / total * 100) + '%"></i></div>' +
+      '<div class="prog-txt">' + (idx + 1) + ' / ' + total + '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一个</button>' +
+        '<button id="markBtn">✅ 标记掌握</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => speak(w.word));
+    $('#markBtn').addEventListener('click', () => markMastered(section, w.id));
+    bindNav(total);
+  }
+
+  // ===== 识字：看拼音写汉字 =====
+  function renderZiSpell(card) {
+    const ws = itemsOf(curGroup); const w = ws[idx]; const total = ws.length; const done = !!spellVal;
+    const mc = masteredCount(section, ws.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 拼写 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="hero">' +
+        '<div class="ph" style="font-size:26px;color:#1aa179;">' + esc(w.pinyin) + '</div>' +
+        '<div class="zuci">提示组词：' + w.zuci.map(z => esc(z)).join('、') + '</div>' +
+        '<div class="jx">释义：' + esc(w.juxing) + '</div>' +
+      '</div>' +
+      '<input class="spell-input" id="spellIn" placeholder="写出汉字…" autocomplete="off" ' + (done ? 'disabled' : '') + ' value="' + esc(spellVal) + '">' +
+      '<div class="result" id="spellRes"></div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊 朗读</button></div>' +
+      '<div class="navbtns">' +
+        '<button id="checkBtn" class="primary" ' + (done ? 'disabled' : '') + '>检查</button>' +
+        '<button id="skipBtn">跳过 / 显示答案</button>' +
+        '<button id="nextBtn" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => speak(w.word));
+    const input = $('#spellIn');
+    if (input && !done) input.addEventListener('keydown', e => { if (e.key === 'Enter') checkSpell(w); });
+    $('#checkBtn').addEventListener('click', () => checkSpell(w));
+    $('#skipBtn').addEventListener('click', () => { spellVal = w.word; $('#spellIn').value = w.word; $('#spellIn').disabled = true; $('#spellRes').textContent = '正确答案：' + w.word; $('#spellRes').className = 'result bad'; $('#checkBtn').disabled = true; });
+    $('#nextBtn').addEventListener('click', () => { if (idx < total - 1) { idx++; spellVal = ''; renderMain(); } });
+    if (input && !done) input.focus();
+  }
+  function checkSpell(w) {
+    const v = ($('#spellIn').value || '').trim();
+    const ok = v === w.word;
+    spellVal = v;
+    $('#spellRes').textContent = ok ? '✅ 写对了！已标记掌握' : '❌ 正确答案：' + w.word;
+    $('#spellRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    $('#spellIn').disabled = true; $('#checkBtn').disabled = true;
+    if (ok) markMastered(section, w.id);
+  }
+
+  // ===== 识字：选拼音 =====
+  function renderZiPick(card) {
+    const ws = itemsOf(curGroup); const w = ws[idx]; const total = ws.length;
+    const others = ws.filter(x => x.id !== w.id).map(x => x.pinyin);
+    const opts = [w.pinyin];
+    while (opts.length < 3 && others.length) { const k = Math.floor(Math.random() * others.length); if (!opts.includes(others[k])) opts.push(others[k]); others.splice(k, 1); }
+    opts.sort(() => Math.random() - 0.5);
+    const mc = masteredCount(section, ws.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 选拼音 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="hero"><div class="big">' + esc(w.word) + '</div><div class="bus">部首：' + esc(w.bushou) + '</div></div>' +
+      '<div class="qtext">这个字的读音是？</div>' +
+      '<div id="qbox">' + opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('') + '<div class="result" id="qRes"></div></div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊 朗读</button></div>' +
+      '<div class="navbtns"><button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一个</button><button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一个 →</button></div>';
+    $('#playBtn').addEventListener('click', () => speak(w.word));
+    $('#qbox').querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      const pick = opts[Number(el.dataset.i)]; const ok = pick === w.pinyin;
+      $('#qbox').querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) { el.classList.add('right'); markMastered(section, w.id); } else { el.classList.add('wrong'); $('#qbox').querySelectorAll('.opt').forEach(x => { if (opts[Number(x.dataset.i)] === w.pinyin) x.classList.add('right'); }); }
+      $('#qRes').textContent = ok ? '✅ 正确！' : '❌ 正确读音：' + w.pinyin;
+      $('#qRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    }));
+    bindNav(total);
+  }
+
+  // ===== 古诗文：诵读 =====
+  function renderPoemRead(card) {
+    const ps = itemsOf(curGroup); const p = ps[idx]; const total = ps.length;
+    const mc = masteredCount(section, ps.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="poem-meta">《' + esc(p.title) + '》　' + esc(p.dynasty) + '·' + esc(p.author) + '</div>' +
+      '<div class="hero">' + p.lines.map(l => '<div class="poem-line">' + esc(l) + '</div>').join('') + '</div>' +
+      '<div class="notes">📖 注释：' + p.notes.map(n => esc(n)).join('；') + '</div>' +
+      '<div class="play-row"><button class="play" id="playBtn">🔊 朗读全诗</button></div>' +
+      '<div class="prog-bar"><i style="width:' + ((idx + 1) / total * 100) + '%"></i></div>' +
+      '<div class="prog-txt">' + (idx + 1) + ' / ' + total + '</div>' +
+      '<div class="navbtns">' +
+        '<button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一首</button>' +
+        '<button id="markBtn">✅ 标记背诵</button>' +
+        '<button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一首 →</button>' +
+      '</div>';
+    $('#playBtn').addEventListener('click', () => speak(p.lines.join(' ')));
+    $('#markBtn').addEventListener('click', () => markMastered(section, p.id));
+    bindNav(total);
+  }
+
+  // ===== 古诗文：接句 =====
+  function renderPoemLink(card) {
+    const ps = itemsOf(curGroup); const p = ps[idx]; const total = ps.length;
+    const lines = p.lines;
+    if (!qState || qState.idx !== idx) {
+      const li = Math.floor(Math.random() * (lines.length - 1)); // 保证存在下一句
+      const ans = lines[li + 1];
+      const opts = [ans];
+      const pool = lines.filter((_, k) => k !== li && k !== li + 1); // 同诗其他句作干扰
+      while (opts.length < 3 && pool.length) { const k = Math.floor(Math.random() * pool.length); opts.push(pool[k]); pool.splice(k, 1); }
+      if (opts.length < 3) { // 不足则从同组其他古诗取句补位
+        const others = [];
+        ps.forEach(x => { if (x.id !== p.id) x.lines.forEach(l => { if (!opts.includes(l) && l !== ans) others.push(l); }); });
+        while (opts.length < 3 && others.length) { const k = Math.floor(Math.random() * others.length); opts.push(others[k]); others.splice(k, 1); }
+      }
+      qState = { idx, promptLine: lines[li], opts: opts.sort(() => Math.random() - 0.5), ans: ans, answered: false };
+    }
+    const q = qState; const mc = masteredCount(section, ps.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 接句 ' + (idx + 1) + ' / ' + total + ' · 《' + esc(p.title) + '》· 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="poem-meta">《' + esc(p.title) + '》　接出下一句</div>' +
+      '<div class="hero"><div class="poem-line" style="color:#1aa179;">' + esc(q.promptLine) + '</div></div>' +
+      '<div class="qtext">请选出下一句：</div>' +
+      '<div id="qbox">' + q.opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('') + '<div class="result" id="qRes"></div></div>' +
+      '<div class="navbtns"><button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一首</button><button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一首 →</button></div>';
+    $('#qbox').querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      if (q.answered) return; q.answered = true;
+      const pick = q.opts[Number(el.dataset.i)]; const ok = pick === q.ans;
+      $('#qbox').querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) { el.classList.add('right'); markMastered(section, p.id); } else { el.classList.add('wrong'); $('#qbox').querySelectorAll('.opt').forEach(x => { if (q.opts[Number(x.dataset.i)] === q.ans) x.classList.add('right'); }); }
+      $('#qRes').textContent = ok ? '✅ 正确！' : '❌ 正确答案：' + q.ans;
+      $('#qRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    }));
+    bindNav(total);
+  }
+
+  // ===== 古诗文：作者朝代 =====
+  function renderPoemWho(card) {
+    const ps = itemsOf(curGroup); const p = ps[idx]; const total = ps.length;
+    const all = itemsOf(curGroup);
+    const authors = Array.from(new Set(all.map(x => x.author)));
+    const opts = [p.author];
+    const pool = authors.filter(a => a !== p.author);
+    while (opts.length < 3 && pool.length) { opts.push(pool.pop()); }
+    opts.sort(() => Math.random() - 0.5);
+    const mc = masteredCount(section, ps.map(x => x.id));
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 作者 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div class="poem-meta">《' + esc(p.title) + '》　' + esc(p.dynasty) + '</div>' +
+      '<div class="hero"><div class="poem-line" style="color:#1aa179;">' + esc(p.lines[0]) + '</div></div>' +
+      '<div class="qtext">这首诗的作者是？</div>' +
+      '<div id="qbox">' + opts.map((o, i) => '<div class="opt" data-i="' + i + '">' + esc(o) + '</div>').join('') + '<div class="result" id="qRes"></div></div>' +
+      '<div class="navbtns"><button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一首</button><button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一首 →</button></div>';
+    $('#qbox').querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+      const pick = opts[Number(el.dataset.i)]; const ok = pick === p.author;
+      $('#qbox').querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+      if (ok) { el.classList.add('right'); markMastered(section, p.id); } else { el.classList.add('wrong'); $('#qbox').querySelectorAll('.opt').forEach(x => { if (opts[Number(x.dataset.i)] === p.author) x.classList.add('right'); }); }
+      $('#qRes').textContent = ok ? '✅ 正确！' : '❌ 正确答案：' + p.author;
+      $('#qRes').className = 'result ' + (ok ? 'ok' : 'bad');
+    }));
+    bindNav(total);
+  }
+
+  // ===== 阅读理解 =====
+  function renderReadDo(card) {
+    const ps = itemsOf(curGroup); const p = ps[idx]; const total = ps.length;
+    const mc = masteredCount(section, ps.map(x => x.id));
+    let qHtml = p.questions.map((q, qi) => {
+      return '<div style="margin-top:14px;"><div class="qtext">' + (qi + 1) + '. ' + esc(q.q) + '</div>' +
+        '<div id="rbox-' + qi + '">' + q.options.map((o, oi) => '<div class="opt" data-q="' + qi + '" data-o="' + oi + '">' + esc(o) + '</div>').join('') +
+        '<div class="result" id="rRes-' + qi + '"></div></div>';
+    }).join('');
+    card.innerHTML =
+      '<div class="group-title">' + curGroup.title + ' · 第 ' + (idx + 1) + ' / ' + total + ' · 已掌握 ' + mc + '/' + total + '</div>' +
+      '<div style="font-weight:700;font-size:15px;margin-bottom:8px;">📄 ' + esc(p.title) + '</div>' +
+      '<div class="read-text">' + esc(p.text).replace(/，/g, '，<b></b>').replace(/。/g, '。<b></b>') + '</div>' +
+      '<div style="margin-top:16px;font-weight:700;">答题：</div>' + qHtml +
+      '<div class="navbtns"><button id="prevBtn" ' + (idx === 0 ? 'disabled' : '') + '>← 上一篇</button><button id="nextBtn" class="primary" ' + (idx >= total - 1 ? 'disabled' : '') + '>下一篇 →</button></div>';
+    p.questions.forEach((q, qi) => {
+      const box = $('#rbox-' + qi);
+      box.querySelectorAll('.opt').forEach(el => el.addEventListener('click', () => {
+        if (el.classList.contains('locked')) return;
+        const oi = Number(el.dataset.o);
+        box.querySelectorAll('.opt').forEach(x => x.classList.add('locked'));
+        const ok = oi === q.answer;
+        if (ok) { el.classList.add('right'); markMastered(section, p.id); } else { el.classList.add('wrong'); box.querySelectorAll('.opt').forEach(x => { if (Number(x.dataset.o) === q.answer) x.classList.add('right'); }); }
+        $('#rRes-' + qi).textContent = ok ? '✅ 答对了！' : '❌ 正确答案：' + q.options[q.answer];
+        $('#rRes-' + qi).className = 'result ' + (ok ? 'ok' : 'bad');
+      }));
+    });
+    bindNav(total);
+  }
+
+  // ================== 板块：题库组卷 ==================
+  const QTYPE = { choice: '单项选择', fill: '填空默写', read: '阅读理解', write: '写作表达' };
+  const QORDER = ['choice', 'fill', 'read', 'write'];
+  let EX = { loaded: false, all: [], topics: [], f: { grade: '', topic: '', type: '', diff: '' }, sel: [], showKey: false, ans: {} };
+  let EXVIEW = 'bank';
+
+  async function renderExamPage() {
+    $('#mainArea').innerHTML = '<div class="empty">题库加载中…</div>';
+    if (!EX.loaded) {
+      const r = await api('/api/chinese-exam');
+      if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#1aa179;">前往登录页</a></div>'; return; }
+      if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + ((r.j && r.j.error) || '题库加载失败') + '</div>'; return; }
+      EX.all = r.j.questions || [];
+      EX.topics = r.j.topics || [];
+      EX.loaded = true;
+      EX.trial = !!r.j.trial;
+      EX.total = r.j.total || EX.all.length;
+    }
+    renderExamShell();
+  }
+
+  function renderExamShell() {
+    const trial = EX.trial ? '<div class="trial-note" style="display:block;margin-bottom:12px;">🎁 体验模式：题库仅开放前 5 题。输入授权码或联系管理员（微信 13538237315）解锁全部 ' + (EX.total || '') + ' 题与组卷功能。</div>' : '';
+    $('#mainArea').innerHTML = trial +
+      '<div class="xtabs" id="exTabs">' +
+        '<button data-v="bank" class="' + (EXVIEW === 'bank' ? 'on' : '') + '">🗂️ 题库选题</button>' +
+        '<button data-v="tpl" class="' + (EXVIEW === 'tpl' ? 'on' : '') + '">📋 模板组卷</button>' +
+        '<button data-v="paper" class="' + (EXVIEW === 'paper' ? 'on' : '') + '">📄 组卷预览</button>' +
+        '<button data-v="exam" class="' + (EXVIEW === 'exam' ? 'on' : '') + '">📝 在线作答</button>' +
+      '</div>' +
+      '<div id="exBody"></div>' +
+      '<div class="selbar no-print" id="exSelBar" style="display:none;"><b>已选 <span id="exSelCount">0</span> 题</b>' +
+        '<button class="mini on" id="exGoPaper">查看试卷</button>' +
+        '<button class="mini" id="exClear">清空</button>' +
+        '<span style="font-size:12px;color:#999;">组卷预览中将按 选择→填空→阅读→写作 排版，可打印或导出 PDF</span></div>';
+    document.querySelectorAll('#exTabs button').forEach(b => b.addEventListener('click', () => { EXVIEW = b.dataset.v; renderExamShell(); }));
+    $('#exGoPaper').addEventListener('click', () => { EXVIEW = 'paper'; renderExamShell(); });
+    $('#exClear').addEventListener('click', () => { EX.sel = []; renderExamShell(); });
+    updateSelBar();
+    if (EXVIEW === 'bank') renderBank();
+    else if (EXVIEW === 'tpl') renderTpl();
+    else if (EXVIEW === 'paper') renderPaper();
+    else renderExamDo();
+  }
+
+  function updateSelBar() {
+    const bar = $('#exSelBar'); if (!bar) return;
+    $('#exSelCount').textContent = EX.sel.length;
+    bar.style.display = EX.sel.length ? 'flex' : 'none';
+  }
+
+  function filteredBank() {
+    return EX.all.filter(q => {
+      if (EX.f.grade && String(q.grade) !== EX.f.grade) return false;
+      if (EX.f.topic && q.topic !== EX.f.topic) return false;
+      if (EX.f.type && q.type !== EX.f.type) return false;
+      if (EX.f.diff && String(q.difficulty) !== EX.f.diff) return false;
+      return true;
+    });
+  }
+
+  function renderBank() {
+    const list = filteredBank();
+    const topicOpts = EX.topics.map(t => '<option value="' + esc(t) + '"' + (EX.f.topic === t ? ' selected' : '') + '>' + esc(t) + '</option>').join('');
+    const typeOpts = QORDER.map(t => '<option value="' + t + '"' + (EX.f.type === t ? ' selected' : '') + '>' + QTYPE[t] + '</option>').join('');
+    $('#exBody').innerHTML =
+      '<div class="card filters">' +
+        '<div class="frow"><span class="lbl">年级</span><div class="seg" id="exGrade">' +
+          ['', '1', '2', '3', '4', '5', '6'].map(g => '<button data-v="' + g + '" class="' + (EX.f.grade === g ? 'on' : '') + '">' + (g ? g + '年级' : '全部') + '</button>').join('') +
+        '</div></div>' +
+        '<div class="frow"><span class="lbl">考点</span><select id="exTopic"><option value="">全部考点</option>' + topicOpts + '</select>' +
+          '<span class="lbl">题型</span><select id="exType"><option value="">全部题型</option>' + typeOpts + '</select>' +
+          '<span class="lbl">难度</span><select id="exDiff"><option value="">全部</option><option value="1"' + (EX.f.diff === '1' ? ' selected' : '') + '>1 易</option><option value="2"' + (EX.f.diff === '2' ? ' selected' : '') + '>2 中</option><option value="3"' + (EX.f.diff === '3' ? ' selected' : '') + '>3 难</option></select>' +
+        '</div>' +
+        '<div class="frow"><span style="font-size:12.5px;color:#999;">共 ' + list.length + ' 题 · 点击卡片加入/移出试卷</span>' +
+          '<button class="mini" id="exSelAll">全选当前</button><button class="mini" id="exUnselAll">取消全选</button></div>' +
+      '</div>' +
+      (list.length ? list.map(q => bankItem(q)).join('') : '<div class="empty">该筛选条件下暂无题目</div>');
+    document.querySelectorAll('#exGrade button').forEach(b => b.addEventListener('click', () => { EX.f.grade = b.dataset.v; renderBank(); }));
+    $('#exTopic').addEventListener('change', e => { EX.f.topic = e.target.value; renderBank(); });
+    $('#exType').addEventListener('change', e => { EX.f.type = e.target.value; renderBank(); });
+    $('#exDiff').addEventListener('change', e => { EX.f.diff = e.target.value; renderBank(); });
+    $('#exSelAll').addEventListener('click', () => { list.forEach(q => { if (!EX.sel.find(x => x.id === q.id)) EX.sel.push(q); }); renderBank(); updateSelBar(); });
+    $('#exUnselAll').addEventListener('click', () => { const ids = list.map(q => q.id); EX.sel = EX.sel.filter(x => ids.indexOf(x.id) < 0); renderBank(); updateSelBar(); });
+    document.querySelectorAll('.bank-item').forEach(el => el.addEventListener('click', () => toggleSel(el.dataset.id)));
+  }
+
+  function shortStem(q) {
+    let s = (q.stem || q.title || '').replace(/\n/g, ' ');
+    return s.length > 64 ? s.slice(0, 64) + '…' : s;
+  }
+
+  function bankItem(q) {
+    const on = !!EX.sel.find(x => x.id === q.id);
+    const nsub = q.type === 'read' ? '<span class="pill">' + q.questions.length + ' 小题</span>' : '';
+    return '<div class="bank-item' + (on ? ' on' : '') + '" data-id="' + q.id + '">' +
+      '<div class="bt"><input type="checkbox" class="chk" ' + (on ? 'checked' : '') + ' data-id="' + q.id + '"> <span>' + esc(shortStem(q)) + '</span></div>' +
+      '<div class="meta"><span class="pill g">' + q.grade + '年级</span><span class="pill">' + esc(q.topic) + '</span><span class="pill">' + QTYPE[q.type] + '</span>' + nsub + '<span class="pill diff">难度' + q.difficulty + '</span></div></div>';
+  }
+
+  function toggleSel(id) {
+    const i = EX.sel.findIndex(x => x.id === id);
+    if (i >= 0) EX.sel.splice(i, 1); else { const q = EX.all.find(x => x.id === id); if (q) EX.sel.push(q); }
+    renderBank(); updateSelBar();
+  }
+
+  // 模板组卷
+  const TPL = {
+    basics: { name: '基础积累卷', cnt: { choice: 20, fill: 8 } },
+    poem: { name: '古诗文专练卷', cnt: { fill: 12, choice: 8 } },
+    read: { name: '阅读专项卷', cnt: { read: 6, choice: 6 } },
+    final: { name: '小升初模拟卷', cnt: { choice: 16, fill: 10, read: 4, write: 1 } },
+  };
+  function renderTpl() {
+    $('#exBody').innerHTML =
+      '<div class="card">' +
+        '<div style="font-weight:800;font-size:15px;margin-bottom:6px;">📋 模板组卷</div>' +
+        '<div style="font-size:13px;color:#888;line-height:1.7;margin-bottom:12px;">选择年级与试卷类型，系统按题型配比自动抽题并载入「组卷预览」，可打印或导出 PDF。勾选随机抽题可生成多套不同试卷。</div>' +
+        '<div class="frow" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;"><span class="lbl">年级</span><div class="seg" id="tplGrade">' +
+          ['1', '2', '3', '4', '5', '6'].map(g => '<button data-v="' + g + '" class="' + (String(EX.f.grade) === g ? 'on' : '') + '">' + g + '年级</button>').join('') +
+        '</div><label style="font-size:13px;font-weight:700;color:#555;display:flex;align-items:center;gap:6px;"><input type="checkbox" id="tplShuffle" class="chk"> 🎲 随机抽题</label></div>' +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;">' +
+          Object.keys(TPL).map(k => '<button class="mini on" data-k="' + k + '" style="padding:10px 16px;">📘 ' + TPL[k].name + '</button>').join('') +
+        '</div>' +
+      '</div>';
+    document.querySelectorAll('#tplGrade button').forEach(b => b.addEventListener('click', () => { EX.f.grade = b.dataset.v; document.querySelectorAll('#tplGrade button').forEach(x => x.classList.remove('on')); b.classList.add('on'); }));
+    document.querySelectorAll('#exBody button[data-k]').forEach(b => b.addEventListener('click', () => genTemplate(b.dataset.k)));
+  }
+
+  function genTemplate(kind) {
+    const cfg = TPL[kind];
+    const g = EX.f.grade;
+    const shuffle = $('#tplShuffle') && $('#tplShuffle').checked;
+    let pool = EX.all.filter(q => !g || String(q.grade) === g);
+    if (!pool.length) { alert('该年级暂无题目，请切换年级或到题库选题'); return; }
+    const picked = [];
+    QORDER.forEach(t => {
+      const need = cfg.cnt[t] || 0; if (!need) return;
+      let arr = pool.filter(q => q.type === t);
+      if (shuffle) arr = arr.slice().sort(() => Math.random() - 0.5);
+      for (let i = 0; i < need && i < arr.length; i++) picked.push(arr[i]);
+    });
+    if (!picked.length) { alert('该模板在当前年级下没有可用题目'); return; }
+    EX.sel = picked;
+    EX.showKey = false; EX.ans = {};
+    EXVIEW = 'paper';
+    renderExamShell();
+  }
+
+  // 组卷预览 / 打印
+  function selSorted() {
+    const out = [];
+    QORDER.forEach(t => EX.sel.filter(q => q.type === t).forEach(q => out.push(q)));
+    return out;
+  }
+  function renderPaper() {
+    if (!EX.sel.length) { $('#exBody').innerHTML = '<div class="empty">尚未组卷。请到「题库选题」或「模板组卷」选择题目。</div>'; return; }
+    const items = selSorted();
+    const groups = {}; QORDER.forEach(t => groups[t] = []);
+    items.forEach(q => groups[q.type].push(q));
+    let secNo = 0; const parts = [];
+    const CN = ['一', '二', '三', '四'];
+    QORDER.forEach(t => {
+      const arr = groups[t]; if (!arr.length) return;
+      secNo++;
+      parts.push('<div class="psec"><h3>' + CN[secNo - 1] + '、' + QTYPE[t] + '</h3>' +
+        arr.map(q => paperQ(q, EX.showKey)).join('') + '</div>');
+    });
+    let totalSub = 0;
+    items.forEach(q => { totalSub += (q.type === 'read') ? q.questions.length : 1; });
+    const title = EX.title || ('小学语文' + (EX.f.grade ? EX.f.grade + '年级' : '') + '测试卷');
+    $('#exBody').innerHTML =
+      '<div class="card no-print" style="margin-bottom:12px;">' +
+        '<input type="text" id="exTitle" value="' + esc(title) + '" placeholder="试卷标题" style="width:100%;padding:9px 11px;border:1.5px solid #e8e8e8;border-radius:10px;font-size:14.5px;font-weight:700;">' +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">' +
+          '<button class="mini on" id="exPrint">🖨️ 打印 / 导出 PDF</button>' +
+          '<button class="mini" id="exKey">' + (EX.showKey ? '🙈 隐藏答案' : '👁️ 显示答案') + '</button>' +
+          '<button class="mini" id="exClear2">🗑️ 清空重选</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="paper" id="exPaperView"><h2>' + esc(title) + '</h2>' +
+        '<div class="pmeta">学校：____________　班级：____________　姓名：____________　学号：____________</div>' +
+        '<div class="pmeta">共 ' + totalSub + ' 小题　考试时间 ' + Math.max(30, totalSub * 2) + ' 分钟</div>' +
+        parts.join('') +
+        (EX.showKey ? paperKey(items) : '') +
+      '</div>';
+    $('#exTitle').addEventListener('input', e => { EX.title = e.target.value; });
+    $('#exPrint').addEventListener('click', () => window.print());
+    $('#exKey').addEventListener('click', () => { EX.showKey = !EX.showKey; renderPaper(); });
+    $('#exClear2').addEventListener('click', () => { EX.sel = []; EXVIEW = 'bank'; EX.showKey = false; renderExamShell(); });
+  }
+  function L(n) { return String.fromCharCode(65 + n); }
+  function paperQ(q, key) {
+    if (q.type === 'choice') {
+      return '<div class="pq"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + esc(q.stem) +
+        '<div style="margin-top:4px;">' + q.options.map((o, i) => L(i) + '. ' + esc(o)).join('　') + '</div>' +
+        (key ? '<div class="pqans">答案：' + L(q.answer) + '. ' + esc(q.options[q.answer]) + '</div><div class="pqana">解析：' + esc(q.analysis) + '</div>' : '') + '</div>';
+    }
+    if (q.type === 'fill') {
+      return '<div class="pq"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + esc(q.stem).replace(/_{3,}/g, '<span class="blankline"></span>') +
+        (key ? '<div class="pqans">答案：' + esc(q.answer) + '</div><div class="pqana">' + esc(q.analysis) + '</div>' : '') + '</div>';
+    }
+    if (q.type === 'read') {
+      const qs = q.questions.map((sq, i) => '<div style="margin-top:7px;"><div style="font-weight:700;">' + (i + 1) + '. ' + esc(sq.stem) + '</div>' +
+        '<div>' + sq.options.map((o, j) => L(j) + '. ' + esc(o)).join('　') + '</div>' +
+        (key ? '<div class="pqans">答案：' + L(sq.answer) + '</div><div class="pqana">解析：' + esc(sq.analysis) + '</div>' : '') + '</div>').join('');
+      return '<div class="pq"><div class="pqhead">【阅读 · ' + esc(q.title || q.topic) + '】</div><div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
+    }
+    if (q.type === 'write') {
+      return '<div class="pq"><div class="pqhead">【' + esc(q.topic) + '】</div>' + esc(q.stem) +
+        (key ? '<div class="pqans">' + esc(q.answer) + '</div>' : '<div class="blankline" style="min-width:100%;height:90px;border-bottom:none;"></div>') + '</div>';
+    }
+    return '';
+  }
+  function paperKey(items) {
+    let n = 0; const lines = [];
+    items.forEach(q => {
+      if (q.type === 'choice') { n++; lines.push('<div style="font-size:13px;line-height:1.9;"><b>' + n + '</b>. ' + L(q.answer) + '　' + esc(shortStem(q)) + '</div>'); }
+      else if (q.type === 'fill') { n++; lines.push('<div style="font-size:13px;line-height:1.9;"><b>' + n + '</b>. ' + esc(q.answer) + '</div>'); }
+      else if (q.type === 'read') { q.questions.forEach(sq => { n++; lines.push('<div style="font-size:13px;line-height:1.9;"><b>' + n + '</b>. ' + L(sq.answer) + '　' + esc(sq.stem) + '</div>'); }); }
+    });
+    return '<div class="keytitle">参考答案</div>' + lines.join('');
+  }
+
+  // 在线作答
+  function renderExamDo() {
+    if (!EX.sel.length) { $('#exBody').innerHTML = '<div class="empty">尚未组卷。请先在「题库选题」或「模板组卷」中生成试卷，再来在线作答。</div>'; return; }
+    const items = selSorted();
+    const groups = {}; QORDER.forEach(t => groups[t] = []);
+    items.forEach(q => groups[q.type].push(q));
+    let secNo = 0; const parts = []; const CN = ['一', '二', '三', '四'];
+    QORDER.forEach(t => {
+      const arr = groups[t]; if (!arr.length) return; secNo++;
+      parts.push('<div class="psec"><h3>' + CN[secNo - 1] + '、' + QTYPE[t] + '</h3>' + arr.map(q => doQ(q)).join('') + '</div>');
+    });
+    $('#exBody').innerHTML =
+      '<div class="card no-print" style="margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">' +
+        '<button class="mini on" id="exSubmit">📤 交卷</button>' +
+        '<button class="mini" id="exRetry">🔄 重做</button>' +
+        '<span id="exScore" style="font-size:14px;font-weight:800;color:#1aa179;"></span>' +
+        '<span style="font-size:12px;color:#999;">写作表达为开放式作答，建议人工核对，不计入机评得分。</span>' +
+      '</div>' +
+      '<div class="paper">' + parts.join('') + '</div>';
+    items.forEach(q => {
+      if (q.type === 'choice') {
+        document.querySelectorAll('.opt[data-q="' + q.id + '"]').forEach(el => el.addEventListener('click', () => {
+          if (EX.done) return; EX.ans[q.id] = Number(el.dataset.i);
+          document.querySelectorAll('.opt[data-q="' + q.id + '"]').forEach(x => x.classList.remove('pick'));
+          el.classList.add('pick');
+        }));
+      }
+    });
+    $('#exSubmit').addEventListener('click', submitExam);
+    $('#exRetry').addEventListener('click', () => { EX.ans = {}; EX.done = false; delete EX.score; renderExamDo(); });
+  }
+  function doQ(q) {
+    const dis = EX.done ? ' locked' : '';
+    if (q.type === 'choice') {
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + esc(q.stem) +
+        '<div>' + q.options.map((o, i) => '<div class="opt' + dis + (EX.done && i === q.answer ? ' right' : '') + (EX.done && EX.ans[q.id] === i && i !== q.answer ? ' wrong' : '') + '" data-q="' + q.id + '" data-i="' + i + '">' + L(i) + '. ' + esc(o) + '</div>').join('') + '</div></div>';
+    }
+    if (q.type === 'fill') {
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + esc(q.stem).replace(/_{3,}/g, '<input class="blank-input" data-q="' + q.id + '" ' + (EX.done ? 'disabled' : '') + ' placeholder="填写答案">') +
+        (EX.done ? '<div class="pqans">答案：' + esc(q.answer) + '</div><div class="pqana">' + esc(q.analysis) + '</div>' : '') + '</div>';
+    }
+    if (q.type === 'read') {
+      const qs = q.questions.map((sq, i) => '<div style="margin-top:8px;"><div style="font-weight:700;">' + (i + 1) + '. ' + esc(sq.stem) + '</div>' +
+        sq.options.map((o, j) => '<div class="opt' + dis + (EX.done && j === sq.answer ? ' right' : '') + '" data-q="' + q.id + '#r' + i + '" data-i="' + j + '">' + L(j) + '. ' + esc(o) + '</div>').join('') +
+        (EX.done ? '<div class="pqans">答案：' + L(sq.answer) + '</div><div class="pqana">' + esc(sq.analysis) + '</div>' : '') + '</div>').join('');
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【阅读 · ' + esc(q.title || '') + '】</div><div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
+    }
+    if (q.type === 'write') {
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【' + esc(q.topic) + '】</div>' + esc(q.stem) +
+        '<textarea class="blank-input" data-q="' + q.id + '" ' + (EX.done ? 'disabled' : '') + ' placeholder="在此作答（开放式，人工批改）" style="width:100%;min-height:80px;margin-top:6px;"></textarea></div>';
+    }
+    return '';
+  }
+  function submitExam() {
+    // 收集填空作答
+    document.querySelectorAll('.blank-input').forEach(el => { if (el.dataset.q && el.tagName === 'INPUT') EX.ans[el.dataset.q] = el.value; });
+    let got = 0, full = 0;
+    EX.sel.forEach(q => {
+      if (q.type === 'choice') { full++; if (EX.ans[q.id] === q.answer) got++; }
+      else if (q.type === 'fill') { full++; const a = (EX.ans[q.id] || '').replace(/\s/g, ''); if (a && a === q.answer.replace(/\s/g, '')) got++; }
+      else if (q.type === 'read') { q.questions.forEach((sq, i) => { full++; if (EX.ans[q.id + '#r' + i] === sq.answer) got++; }); }
+    });
+    EX.done = true; EX.ans._got = got; EX.ans._full = full;
+    renderExamDo();
+    const el = $('#exScore'); if (el) el.textContent = '机评得分：' + got + ' / ' + full;
+  }
+
+  // ================== 板块：小升初衔接包 ==================
+  let LK = { loaded: false, units: [], cur: null };
+  async function renderLinkPage() {
+    $('#mainArea').innerHTML = '<div class="empty">衔接包加载中…</div>';
+    if (!LK.loaded) {
+      const r = await api('/api/chinese-link');
+      if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#1aa179;">前往登录页</a></div>'; return; }
+      if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + ((r.j && r.j.error) || '衔接包加载失败') + '</div>'; return; }
+      LK.units = r.j.units || [];
+      LK.trial = !!r.j.trial;
+      LK.loaded = true;
+    }
+    renderLinkShell();
+  }
+  function renderLinkShell() {
+    const trial = LK.trial ? '<div class="trial-note" style="display:block;margin-bottom:12px;">🎁 体验模式：衔接包仅开放第 1 单元。输入授权码或联系管理员（微信 13538237315）解锁全部 8 个单元。</div>' : '';
+    $('#mainArea').innerHTML = trial +
+      '<div class="card" style="margin-bottom:12px;">' +
+        '<div style="font-weight:800;font-size:15px;margin-bottom:6px;">🌉 小升初语文衔接包（初中预备）</div>' +
+        '<div style="font-size:13px;color:#888;line-height:1.7;">面向六年级毕业、即将升入初中的学生：提前预习初中文言文、必背古诗文、阅读答题方法、记叙文写作、语法基础与名著导读，每单元含知识讲解与小测。</div>' +
+      '</div>' +
+      '<div class="card" style="margin-bottom:12px;"><div class="xtabs" id="lkTabs">' +
+        LK.units.map(u => '<button data-u="' + u.id + '" class="' + (LK.cur && LK.cur.id === u.id ? 'on' : '') + '">' + esc(u.title) + '</button>').join('') +
+      '</div></div>' +
+      '<div id="lkBody"></div>';
+    document.querySelectorAll('#lkTabs button').forEach(b => b.addEventListener('click', () => loadUnit(b.dataset.u)));
+    if (LK.cur) renderUnit();
+    else if (LK.units.length) loadUnit(LK.units[0].id);
+  }
+  async function loadUnit(uid) {
+    $('#lkBody').innerHTML = '<div class="empty">单元加载中…</div>';
+    const r = await api('/api/chinese-link?unit=' + encodeURIComponent(uid));
+    if (r.s !== 200) { $('#lkBody').innerHTML = '<div class="err-msg">' + ((r.j && r.j.error) || '单元加载失败') + '</div>'; return; }
+    LK.cur = r.j;
+    renderLinkShell();
+  }
+  function renderUnit() {
+    const u = LK.cur;
+    const points = u.points.map(p => '<div class="point"><h4>' + esc(p.h) + '</h4><div class="pb">' + esc(p.body) + '</div>' +
+      (p.eg ? '<div class="peg">例：' + esc(p.eg) + '</div>' : '') +
+      (p.tip ? '<div class="ptip">💡 ' + esc(p.tip) + '</div>' : '') + '</div>').join('');
+    const quiz = u.quiz.map((q, i) => '<div class="qitem" data-qid="' + q.id + '"><div class="qs">' + (i + 1) + '. ' + esc(q.stem) + '</div>' +
+      q.options.map((o, j) => '<div class="opt" data-q="' + q.id + '" data-i="' + j + '">' + L(j) + '. ' + esc(o) + '</div>').join('') +
+      '<div class="qexp" id="exp-' + q.id + '">解析：' + esc(q.analysis) + '</div></div>').join('');
+    $('#lkBody').innerHTML =
+      '<div class="card">' +
+        '<div class="unit-head"><span class="ut">' + esc(u.title) + '</span><span class="tag">' + esc(u.grade_tag || '') + '</span></div>' +
+        '<div class="unit-sum">' + esc(u.summary) + '</div>' +
+        points +
+        '<div class="quizwrap"><div class="qtitle">📝 单元小测（' + u.quiz.length + ' 题）</div>' + quiz + '</div>' +
+      '</div>';
+    // 小测判分
+    u.quiz.forEach(q => {
+      const els = document.querySelectorAll('.opt[data-q="' + q.id + '"]');
+      els.forEach(el => el.addEventListener('click', () => {
+        if (el.classList.contains('locked')) return;
+        els.forEach(x => x.classList.add('locked'));
+        const pick = Number(el.dataset.i); const ok = pick === q.answer;
+        if (ok) el.classList.add('right'); else { el.classList.add('wrong'); els.forEach(x => { if (Number(x.dataset.i) === q.answer) x.classList.add('right'); }); }
+        const exp = $('#exp-' + q.id); if (exp) { exp.style.display = 'block'; }
+        markMastered('link', q.id);
+      }));
+    });
+  }
+
+  // 键盘左右翻（认读模式）
+  document.addEventListener('keydown', e => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+    const total = curGroup ? itemsOf(curGroup).length : 0;
+    if (!total) return;
+    const navMode = (section === 'read') || (section === 'poem' && mode === 'read') || (section === 'zi' && mode === 'read') || (section === 'pinyin' && mode === 'read');
+    if (navMode) {
+      if (e.key === 'ArrowRight' && idx < total - 1) { idx++; qState = null; spellVal = ''; renderMain(); }
+      if (e.key === 'ArrowLeft' && idx > 0) { idx--; qState = null; spellVal = ''; renderMain(); }
+    }
+  });
+
+  init();
+})();
+</script>
+</body>
+</html>
