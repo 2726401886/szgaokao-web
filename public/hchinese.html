@@ -819,7 +819,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
     $('#mainArea').innerHTML =
       '<div class="tb-wrap">' +
         '<div class="tb-hd">📖 高中语文 · 课本同步<span class="tb-ed">' + esc(TB_DATA.edition || '') + '</span></div>' +
-        '<div class="tb-tip">按教材册 → 单元 → 课文顺序同步：每单元含<b>课文清单</b>、<b>重点字词</b>、<b>必背默写</b>、<b>同步练习</b>。先选册，再选单元。</div>' +
+        '<div class="tb-tip">按教材册 → 单元 → 课文顺序同步：每单元含<b>课文清单</b>、<b>重点字词</b>、<b>必背默写</b>、<b>同步练习</b>。先选册，再选单元。<br><span style="color:#8e44ad;font-weight:700">教材共 5 册（高一上~高二下）；高三全年无新课教材，已按高考考点另设「高三总复习」5 个专题（一轮夯实 + 二轮冲刺）。</span></div>' +
         (TB_DATA.trial ? '<div class="tb-warn">🎁 体验模式：课本同步仅开放每册第 1 单元。输入授权码可解锁全部五册。</div>' : '') +
         '<div class="tb-books">' + cards + '</div>' +
       '</div>';
