@@ -1,0 +1,2452 @@
+{
+  "product": "高中语文 · 课本同步（人教版 2019 统编版）",
+  "version": 1,
+  "edition": "人教版（2019 统编版）",
+  "books": [
+    {
+      "id": "tb1",
+      "name": "必修上册",
+      "grade": 10,
+      "term": "高一上",
+      "theme": "青春、劳动、自然、思考",
+      "units": [
+        {
+          "id": "b1u1",
+          "title": "第一单元",
+          "theme": "青春激扬",
+          "textbooks": [
+            {
+              "title": "沁园春·长沙",
+              "author": "毛泽东",
+              "genre": "词",
+              "recite": true,
+              "note": "全篇背诵"
+            },
+            {
+              "title": "立在地球边上放号/红烛",
+              "author": "郭沫若/闻一多",
+              "genre": "诗",
+              "recite": true,
+              "note": "立放下阕、红烛全篇"
+            },
+            {
+              "title": "峨日朵雪峰之侧/致云雀",
+              "author": "昌耀/雪莱",
+              "genre": "诗",
+              "recite": true,
+              "note": "单元自选课文"
+            },
+            {
+              "title": "百合花/哦，香雪",
+              "author": "茹志鹃/铁凝",
+              "genre": "小说",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "寥廓",
+              "pinyin": "liáo kuò",
+              "jieshi": "宽阔空旷。"
+            },
+            {
+              "word": "峥嵘",
+              "pinyin": "zhēng róng",
+              "jieshi": "山势高峻；亦指出众。"
+            },
+            {
+              "word": "慷慨",
+              "pinyin": "kāng kǎi",
+              "jieshi": "意气激昂。"
+            },
+            {
+              "word": "风华正茂",
+              "pinyin": "fēng huá zhèng mào",
+              "jieshi": "形容青年才华焕发。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "沁园春·长沙",
+              "lines": [
+                "独立寒秋，湘江北去，橘子洲头。",
+                "看万山红遍，层林尽染；漫江碧透，百舸争流。",
+                "鹰击长空，鱼翔浅底，万类霜天竞自由。",
+                "怅寥廓，问苍茫大地，谁主沉浮？"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《沁园春·长沙》中“问苍茫大地，谁主沉浮”表达的是（　）",
+              "options": [
+                "对自然景色的赞叹",
+                "以天下为己任的豪情与担当",
+                "对往事的追忆",
+                "失恋后的苦闷"
+              ],
+              "answer": 1,
+              "analysis": "“问苍茫大地，谁主沉浮”以 设问 抒发主宰国家命运的豪情，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "本单元的语文要素中，“诗歌”的学习重点是（　）",
+              "options": [
+                "了解写作背景",
+                "体会情感的象征意义与表达方式",
+                "背诵全文",
+                "分析用典"
+              ],
+              "answer": 1,
+              "analysis": "本单元要求体会诗歌的意象与象征意义，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u2",
+          "title": "第二单元",
+          "theme": "劳动光荣",
+          "textbooks": [
+            {
+              "title": "喜看稻菽千重浪——记首届国家最高科技奖获得者袁隆平",
+              "author": "沈英甲",
+              "genre": "人物通讯",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "心有一团火，温暖众人心/“探界者”钟扬",
+              "author": "林为民/叶雨婷",
+              "genre": "人物通讯",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "以工匠精神雕琢时代品质",
+              "author": "李斌",
+              "genre": "新闻评论",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "芣苢/插秧歌",
+              "author": "《诗经·周南》/杨万里",
+              "genre": "诗",
+              "recite": true,
+              "note": "芣苢全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "禾黍",
+              "pinyin": "hé shǔ",
+              "jieshi": "泛指农作物。黍读 shǔ。"
+            },
+            {
+              "word": "兜售",
+              "pinyin": "dōu shòu",
+              "jieshi": "沿街叫卖；引申为大力宣扬。"
+            },
+            {
+              "word": "攥",
+              "pinyin": "zuàn",
+              "jieshi": "握紧。"
+            },
+            {
+              "word": "播撒",
+              "pinyin": "bō sǎ",
+              "jieshi": "撒播；多用于比喻。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "芣苢（节选）",
+              "lines": [
+                "采采芣苢，薄言采之。",
+                "采采芣苢，薄言采有。",
+                "采采芣苢，薄言捋之。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《芣苢》中叠词“采采”反复出现的表达效果是（　）",
+              "options": [
+                "单纯追求音韵",
+                "渲染劳动场景的欢快与节奏感",
+                "表示犹豫",
+                "表示愤怒"
+              ],
+              "answer": 1,
+              "analysis": "叠词既有音乐美，又强化采集动作的节奏与欢快，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "人物通讯的写作中，最能体现袁隆平精神价值的写法是（　）",
+              "options": [
+                "外貌描写",
+                "通过具体事例与细节表现人物品格",
+                "环境烘托",
+                "直接抒情"
+              ],
+              "answer": 1,
+              "analysis": "人物通讯重在用典型事例表现人物，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u3",
+          "title": "第三单元",
+          "theme": "古诗词",
+          "textbooks": [
+            {
+              "title": "短歌行/归园田居（其一）",
+              "author": "曹操/陶渊明",
+              "genre": "诗",
+              "recite": true,
+              "note": "短歌行全篇"
+            },
+            {
+              "title": "梦游天姥吟留别/登高",
+              "author": "李白/杜甫",
+              "genre": "诗",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "琵琶行并序",
+              "author": "白居易",
+              "genre": "诗",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "念奴娇·赤壁怀古/永遇乐·京口北固亭怀古/声声慢",
+              "author": "苏轼/辛弃疾/李清照",
+              "genre": "词",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "扃",
+              "pinyin": "jiōng",
+              "jieshi": "从外面关门的门闩。"
+            },
+            {
+              "word": "阚",
+              "pinyin": "kàn",
+              "jieshi": "门；望。阚读 kàn，不读 què。"
+            },
+            {
+              "word": "栖",
+              "pinyin": "qī",
+              "jieshi": "鸟停在树上。"
+            },
+            {
+              "word": "萧萧",
+              "pinyin": "xiāo xiāo",
+              "jieshi": "形容声音轻微而凄凉。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "短歌行（节选）",
+              "lines": [
+                "对酒当歌，人生几何！",
+                "譬如朝露，去日苦多。",
+                "月明星稀，乌鹊南飞。绕树三匝，何枝可依？",
+                "周公吐哺，天下归心。"
+              ]
+            },
+            {
+              "title": "登高（节选）",
+              "lines": [
+                "风急天高猿啸哀，渚清沙白鸟飞回。",
+                "无边落木萧萧下，不尽长江滚滚来。"
+              ]
+            },
+            {
+              "title": "琵琶行（节选）",
+              "lines": [
+                "同是天涯沦落人，相逢何必曾相识！"
+              ]
+            },
+            {
+              "title": "念奴娇·赤壁怀古（节选）",
+              "lines": [
+                "大江东去，浪淘尽，千古风流人物。",
+                "乱石穿空，惊涛拍岸，卷起千堆雪。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "“无边落木萧萧下，不尽长江滚滚来”主要运用的表现手法是（　）",
+              "options": [
+                "比喻",
+                "对比",
+                "虚实结合",
+                "夸张"
+              ],
+              "answer": 2,
+              "analysis": "以“落木之萧萧”衬“长江之滚滚”，一静一动，属虚实结合，选 C。"
+            },
+            {
+              "type": "choice",
+              "stem": "《声声慢》中“梧桐更兼细雨”的情感基调是（　）",
+              "options": [
+                "欢快",
+                "哀愁",
+                "激昂",
+                "旷达"
+              ],
+              "answer": 1,
+              "analysis": "李清照南渡后作品基调为浓重哀愁，选 B。"
+            },
+            {
+              "type": "fill",
+              "stem": "《短歌行》中比喻求贤若渴的名句是“＿＿＿＿，天下归心”。",
+              "options": [],
+              "answer": "周公吐哺",
+              "analysis": "以周公吐哺待贤比喻求贤若渴。"
+            }
+          ]
+        },
+        {
+          "id": "b1u4",
+          "title": "第四单元",
+          "theme": "家乡文化生活",
+          "textbooks": [
+            {
+              "title": "学习活动：记录家乡的人和物",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "家乡文化生活现状调查",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "参与家乡文化建设",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "本单元属于（　）",
+              "options": [
+                "文学创作单元",
+                "综合性学习单元",
+                "文言文单元",
+                "口语交际单元"
+              ],
+              "answer": 1,
+              "analysis": "家乡文化生活是综合性学习单元，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "调查家乡文化时，最应重视的是（　）",
+              "options": [
+                "材料的华丽",
+                "资料的真实性与来源标注",
+                "字数多少",
+                "格式美观"
+              ],
+              "answer": 1,
+              "analysis": "综合性学习强调真实、有据，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u5",
+          "title": "第五单元",
+          "theme": "整本书阅读《乡土中国》",
+          "textbooks": [
+            {
+              "title": "乡土中国",
+              "author": "费孝通",
+              "genre": "学术著作",
+              "recite": false,
+              "note": "整本书阅读"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《乡土中国》中“差序格局”指的是（　）",
+              "options": [
+                "人人平等的社会结构",
+                "以己为中心波纹式推及他人的关系",
+                "严格的法治秩序",
+                "统一的组织体系"
+              ],
+              "answer": 1,
+              "analysis": "选 B。差序格局是本书核心概念。"
+            },
+            {
+              "type": "choice",
+              "stem": "阅读学术著作，下列做法恰当的是（　）",
+              "options": [
+                "只看结论",
+                "关注概念界定与论证逻辑",
+                "只看插图",
+                "跳过注释"
+              ],
+              "answer": 1,
+              "analysis": "读学术著作要抓概念与论证，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u6",
+          "title": "第六单元",
+          "theme": "学习",
+          "textbooks": [
+            {
+              "title": "劝学/师说",
+              "author": "荀子/韩愈",
+              "genre": "论说文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "反对党八股（节选）",
+              "author": "毛泽东",
+              "genre": "论说文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "拿来主义",
+              "author": "鲁迅",
+              "genre": "论说文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "读书：目的和前提/上图书馆",
+              "author": "黑塞/王佐良",
+              "genre": "议论文",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "劝学（节选）",
+              "lines": [
+                "君子曰：学不可以已。",
+                "故木受绳则直，金就砺则利。"
+              ]
+            },
+            {
+              "title": "师说（节选）",
+              "lines": [
+                "古之学者必有师。",
+                "是故弟子不必不如师，师不必贤于弟子。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《师说》中“师者，所以传道受业解惑也”的“所以”意思是（　）",
+              "options": [
+                "因为",
+                "用来……的",
+                "所以",
+                "理由"
+              ],
+              "answer": 1,
+              "analysis": "选 B，表用途。"
+            },
+            {
+              "type": "choice",
+              "stem": "《拿来主义》中“大宅子”的比喻指的是（　）",
+              "options": [
+                "作者的家乡",
+                "整个国家",
+                "个人的小房间",
+                "学校"
+              ],
+              "answer": 1,
+              "analysis": "大宅子比喻整个国家/传统文化，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u7",
+          "title": "第七单元",
+          "theme": "自然情怀",
+          "textbooks": [
+            {
+              "title": "故都的秋/荷塘月色",
+              "author": "郁达夫/朱自清",
+              "genre": "散文",
+              "recite": true,
+              "note": "故都的秋全篇"
+            },
+            {
+              "title": "我与地坛（节选）",
+              "author": "史铁生",
+              "genre": "散文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "赤壁赋/登泰山记",
+              "author": "苏轼/姚鼐",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "故都的秋（节选）",
+              "lines": [
+                "秋天，无论在什么地方的秋天，总是好的；可是啊，北国的秋，却特别地来得清，来得静，来得悲凉。"
+              ]
+            },
+            {
+              "title": "赤壁赋（节选）",
+              "lines": [
+                "清风徐来，水波不兴。",
+                "寄蜉蝣于天地，渺沧海之一粟。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《故都的秋》开篇写“秋天，无论在什么地方的秋天，总是好的；可是啊，北国的秋，却特别地来得清，来得静，来得悲凉”，体现的结构手法是（　）",
+              "options": [
+                "欲扬先抑",
+                "对比（北国秋与南国秋）",
+                "托物言志",
+                "首尾呼应"
+              ],
+              "answer": 1,
+              "analysis": "开篇对比南北秋，突出北国秋，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《赤壁赋》中“其声呜呜然，如怨如慕，如泣如诉”运用的修辞是（　）",
+              "options": [
+                "比喻",
+                "排比",
+                "拟人",
+                "夸张"
+              ],
+              "answer": 1,
+              "analysis": "三个“如”构成排比兼比喻，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b1u8",
+          "title": "第八单元",
+          "theme": "词语积累与词语解释",
+          "textbooks": [
+            {
+              "title": "丰富词语积累/把握古今词义联系与区别/词义辨析与词语积累",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": "含古诗词诵读：静女、涉江采芙蓉、虞美人、鹊桥仙"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "静女（节选）",
+              "lines": [
+                "静女其姝，俟我于城隅。"
+              ]
+            },
+            {
+              "title": "虞美人（节选）",
+              "lines": [
+                "春花秋月何时了？往事知多少。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "古今词义中，“涕”在古汉语中常指（　）",
+              "options": [
+                "眼泪",
+                "鼻涕",
+                "唾液",
+                "汗水"
+              ],
+              "answer": 0,
+              "analysis": "古汉语“涕”多指眼泪，选 A。"
+            },
+            {
+              "type": "choice",
+              "stem": "辨析词义最可靠的方法是（　）",
+              "options": [
+                "看注释",
+                "结合语境与字形本义推敲",
+                "背词典",
+                "看译文"
+              ],
+              "answer": 1,
+              "analysis": "词义辨析要结合语境，选 B。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb2",
+      "name": "必修下册",
+      "grade": 10,
+      "term": "高一下",
+      "theme": "探索、审美、使命、小说",
+      "units": [
+        {
+          "id": "b2u1",
+          "title": "第一单元",
+          "theme": "探索与创新",
+          "textbooks": [
+            {
+              "title": "子路、曾皙、冉有、公西华侍坐/齐桓晋文之事",
+              "author": "《论语》/《孟子》",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "庖丁解牛",
+              "author": "《庄子》",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "烛之武退秦师",
+              "author": "《左传》",
+              "genre": "文言文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "鸿门宴",
+              "author": "司马迁",
+              "genre": "文言文",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "风物",
+              "pinyin": "fēng wù",
+              "jieshi": "风景和事物。"
+            },
+            {
+              "word": "民俗",
+              "pinyin": "mín sú",
+              "jieshi": "民间流传的风俗习惯。"
+            },
+            {
+              "word": "乡贤",
+              "pinyin": "xiāng xián",
+              "jieshi": "乡里有名望、有德行的人。"
+            },
+            {
+              "word": "访谈",
+              "pinyin": "fǎng tán",
+              "jieshi": "访问交谈。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "子路、曾皙、冉有、公西华侍坐（节选）",
+              "lines": [
+                "莫春者，春服既成……浴乎沂，风乎舞雩，咏而归。"
+              ]
+            },
+            {
+              "title": "烛之武退秦师（节选）",
+              "lines": [
+                "若使烛之武见秦君，师必退。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《烛之武退秦师》中“若使烛之武见秦君”的“见”读音与意思是（　）",
+              "options": [
+                "jiàn 看见",
+                "xiàn 拜见、通“现”",
+                "jiàn 见识",
+                "xiàn 出现"
+              ],
+              "answer": 1,
+              "analysis": "见秦君即拜见秦君，读 xiàn，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "庖丁解牛中“合于《桑林》之舞，乃中《经首》之音”运用的修辞是（　）",
+              "options": [
+                "比喻",
+                "夸张",
+                "排比",
+                "拟人"
+              ],
+              "answer": 1,
+              "analysis": "以音乐比喻解牛动作的优美，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u2",
+          "title": "第二单元",
+          "theme": "审美与Sight",
+          "textbooks": [
+            {
+              "title": "窦娥冤（节选）",
+              "author": "关汉卿",
+              "genre": "元杂剧",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "雷雨（节选）",
+              "author": "曹禺",
+              "genre": "话剧",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "哈姆莱特（节选）",
+              "author": "莎士比亚",
+              "genre": "话剧",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "喑哑",
+              "pinyin": "yīn yǎ",
+              "jieshi": "声音低哑。"
+            },
+            {
+              "word": "迍邇",
+              "pinyin": "zhūn yǐ",
+              "jieshi": "艰难而遥远。"
+            },
+            {
+              "word": "桀骜",
+              "pinyin": "jié ào",
+              "jieshi": "形容人倔强不驯。"
+            },
+            {
+              "word": "台阁",
+              "pinyin": "tái gé",
+              "jieshi": "古代高级官署。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "窦娥冤（节选）",
+              "lines": [
+                "有日月朝暮悬，有鬼神掌着生死权。",
+                "这都是我在法场使耍子，不知日后我怎样死法。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《窦娥冤》中“有日月朝暮悬，有鬼神掌着生死权”一句主要表达（　）",
+              "options": [
+                "对自然界的赞美",
+                "对官府滥权的控诉与对清白的坚信",
+                "对命运的妥协",
+                "对人物的同情"
+              ],
+              "answer": 1,
+              "analysis": "该句既是控诉又是坚信，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "话剧《雷雨》中周朴园这一人物形象的典型特点是（　）",
+              "options": [
+                "热情奔放",
+                "专制虚伪",
+                "柔弱顺从",
+                "机智幽默"
+              ],
+              "answer": 1,
+              "analysis": "周朴园专制而虚伪，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u3",
+          "title": "第三单元",
+          "theme": "探索与研究",
+          "textbooks": [
+            {
+              "title": "青蒿素：人类征服疾病的一小步",
+              "author": "屠呦呦",
+              "genre": "科普文章",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "一名物理学家的教育历程/中国建筑的特征/说“木叶”",
+              "author": "加来道雄/梁思成/林庚",
+              "genre": "论说文",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "青蒿素",
+              "pinyin": "qīng hāo sù",
+              "jieshi": "从黄花蒿中提取的抗疟药。"
+            },
+            {
+              "word": "麻沸散",
+              "pinyin": "má fèi sǎn",
+              "jieshi": "古代麻醉药。"
+            },
+            {
+              "word": "求真",
+              "pinyin": "qiú zhēn",
+              "jieshi": "追求真实。"
+            },
+            {
+              "word": "坐标系",
+              "pinyin": "zuò biāo xì",
+              "jieshi": "参照体系。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《青蒿素》一文体现的科学家精神是（　）",
+              "options": [
+                "因循守旧",
+                "严谨求实、敢于突破",
+                "急功近利",
+                "自我封闭"
+              ],
+              "answer": 1,
+              "analysis": "屠呦呦团队严谨求实，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "论述类文章中，判断“结构与思路”最有效的方法是（　）",
+              "options": [
+                "只看标题",
+                "梳理论证脉络与段落关系",
+                "只看首段",
+                "数段落数"
+              ],
+              "answer": 1,
+              "analysis": "梳理论证脉络，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u4",
+          "title": "第四单元",
+          "theme": "信息时代的语文生活",
+          "textbooks": [
+            {
+              "title": "认识多媒介",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "善用多媒介",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "辨识媒介信息",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "媒介",
+              "pinyin": "méi jiè",
+              "jieshi": "传递信息的载体。"
+            },
+            {
+              "word": "辨识",
+              "pinyin": "biàn shí",
+              "jieshi": "辨别识别。"
+            },
+            {
+              "word": "效能",
+              "pinyin": "xiào néng",
+              "jieshi": "效率与能力。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "辨识网络信息时，最应注意的是（　）",
+              "options": [
+                "信息量越大越好",
+                "来源可靠性与时效性",
+                "转发量",
+                "标题醒目"
+              ],
+              "answer": 1,
+              "analysis": "辨识媒介信息重在来源可靠性，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "本单元的核心素养指向是（　）",
+              "options": [
+                "语言文字运用与信息素养",
+                "体能",
+                "音乐",
+                "美术"
+              ],
+              "answer": 0,
+              "analysis": "本单元指向信息时代的语文生活素养，选 A。"
+            }
+          ]
+        },
+        {
+          "id": "b2u5",
+          "title": "第五单元",
+          "theme": "使命与担当",
+          "textbooks": [
+            {
+              "title": "在《人民报》创刊纪念会上的演说/在马克思墓前的讲话",
+              "author": "马克思/恩格斯",
+              "genre": "演讲",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "谏逐客书/与妻书",
+              "author": "李斯/林觉民",
+              "genre": "文言文/书信",
+              "recite": true,
+              "note": "谏逐客书全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "大业",
+              "pinyin": "dà yè",
+              "jieshi": "宏大的事业。"
+            },
+            {
+              "word": "逐客",
+              "pinyin": "zhú kè",
+              "jieshi": "驱逐客卿。"
+            },
+            {
+              "word": "浩荡",
+              "pinyin": "hào dàng",
+              "jieshi": "气势壮阔。"
+            },
+            {
+              "word": "隽永",
+              "pinyin": "juàn yǒng",
+              "jieshi": "意味深长。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "谏逐客书（节选）",
+              "lines": [
+                "因宾客至寡，陛下乃能听臣言。",
+                "弃逐客之心，而收宾客之功。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《谏逐客书》作者李斯论证的核心目的是（　）",
+              "options": [
+                "劝秦王驱逐六国客卿",
+                "劝秦王广纳贤才、成就霸业",
+                "歌颂秦王",
+                "批评六国"
+              ],
+              "answer": 1,
+              "analysis": "表面逐客实为劝谏，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《与妻书》中作者表达的主要情感是（　）",
+              "options": [
+                "对妻子的怨恨",
+                "为国牺牲的豪情与对妻子的深情",
+                "离别时的悲伤",
+                "对战争的恐惧"
+              ],
+              "answer": 1,
+              "analysis": "家国情怀与儿女深情并存，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u6",
+          "title": "第六单元",
+          "theme": "小说之美",
+          "textbooks": [
+            {
+              "title": "祝福",
+              "author": "鲁迅",
+              "genre": "小说",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "林教头风雪山神庙/装在套子里的人",
+              "author": "施耐庵/契诃夫",
+              "genre": "小说",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "促织/变形记（节选）",
+              "author": "蒲松龄/卡夫卡",
+              "genre": "小说",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "彷徨",
+              "pinyin": "páng huáng",
+              "jieshi": "走来走去，犹疑不决。"
+            },
+            {
+              "word": "寒噤",
+              "pinyin": "hán jìn",
+              "jieshi": "因寒冷或恐惧而哆嗦。"
+            },
+            {
+              "word": "吝啬",
+              "pinyin": "lìn sè",
+              "jieshi": "过分爱惜财物。"
+            },
+            {
+              "word": "诡谲",
+              "pinyin": "guǐ jué",
+              "jieshi": "多变而奇异。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "祝福（节选）",
+              "lines": [
+                "我想：这真应了那句老话——阎王好见，小鬼难当。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《祝福》中祥林嫂这一形象主要揭示了（　）",
+              "options": [
+                "封建礼教对人的压迫",
+                "个人性格软弱",
+                "经济贫困是唯一原因",
+                "运气不好"
+              ],
+              "answer": 0,
+              "analysis": "祥林嫂的遭遇指向封建礼教与冷漠的人性，选 A。"
+            },
+            {
+              "type": "choice",
+              "stem": "《装在套子里的人》中“别里可夫”的讽刺效果主要来自（　）",
+              "options": [
+                "夸张的语言",
+                "对生活常态的戏仿与反常",
+                "深刻的说理",
+                "大段抒情"
+              ],
+              "answer": 1,
+              "analysis": "以常写反、以常为奇形成讽刺，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u7",
+          "title": "第七单元",
+          "theme": "整本书阅读《红楼梦》",
+          "textbooks": [
+            {
+              "title": "红楼梦",
+              "author": "曹雪芹",
+              "genre": "长篇小说",
+              "recite": false,
+              "note": "整本书阅读"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "荣国府",
+              "pinyin": "róng guó fǔ",
+              "jieshi": "《红楼梦》中的宁荣二府之一。"
+            },
+            {
+              "word": "凤姐",
+              "pinyin": "fèng jiě",
+              "jieshi": "王熙凤的称呼。"
+            },
+            {
+              "word": "丫鬟",
+              "pinyin": "yā huán",
+              "jieshi": "旧时供人使唤的侍女。"
+            },
+            {
+              "word": "世情",
+              "pinyin": "shì qíng",
+              "jieshi": "人情世故。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《红楼梦》中王熙凤的性格特点是（　）",
+              "options": [
+                "精明能干、心狠手辣",
+                "纯真善良",
+                "孤僻敏感",
+                "迂腐呆板"
+              ],
+              "answer": 0,
+              "analysis": "王熙凤精明强干而狠毒，选 A。"
+            },
+            {
+              "type": "choice",
+              "stem": "读整本书时，最有助于把握人物关系的是（　）",
+              "options": [
+                "只看开头",
+                "梳理人物与情节的关联，绘制关系图",
+                "只看结尾",
+                "只读注解"
+              ],
+              "answer": 1,
+              "analysis": "梳理人物关系图，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b2u8",
+          "title": "第八单元",
+          "theme": "文言文与古代文化",
+          "textbooks": [
+            {
+              "title": "谏太宗十思疏/答司马谏议书",
+              "author": "魏征/王安石",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "阿房宫赋/六国论",
+              "author": "杜牧/苏洵",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "奢",
+              "pinyin": "shē",
+              "jieshi": "奢侈。"
+            },
+            {
+              "word": "隳坏",
+              "pinyin": "huī huài",
+              "jieshi": "毁坏。隳读 huì。"
+            },
+            {
+              "word": "暴霜露",
+              "pinyin": "bào shuāng lù",
+              "jieshi": "冒着霜露，形容路途艰苦。"
+            },
+            {
+              "word": "沟洫",
+              "pinyin": "gōu xù",
+              "jieshi": "沟渠。洫读 xù。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "谏太宗十思疏（节选）",
+              "lines": [
+                "求木之长者，必固其根本；欲流之远者，必浚其泉源。"
+              ]
+            },
+            {
+              "title": "六国论（节选）",
+              "lines": [
+                "以赂秦而丧邦，固双臂而之不阙。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《六国论》中“赂秦而亡”这句的论证作用是（　）",
+              "options": [
+                "提出中心论点",
+                "承上启下，引出下文的中心论点",
+                "举例论证",
+                "反驳论点"
+              ],
+              "answer": 1,
+              "analysis": "承上启下引出中心论点“赂秦而力亏”，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《阿房宫赋》中“后人哀之而不鉴之”一句的“鉴”意思是（　）",
+              "options": [
+                "借鉴",
+                "镜子",
+                "鉴定",
+                "鉴赏"
+              ],
+              "answer": 0,
+              "analysis": "鉴：以……为鉴，选 A。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb3",
+      "name": "选择性必修上册",
+      "grade": 11,
+      "term": "高二上",
+      "theme": "复兴、先秦诸子、外国小说、逻辑",
+      "units": [
+        {
+          "id": "b3u1",
+          "title": "第一单元",
+          "theme": "伟大复兴",
+          "textbooks": [
+            {
+              "title": "中国人民站起来了",
+              "author": "毛泽东",
+              "genre": "政论",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "长征胜利万岁/大战中的插曲",
+              "author": "杨成武/聂荣臻",
+              "genre": "回忆性散文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "别了，“不列颠尼亚”/县委书记的榜样——焦裕禄",
+              "author": "周婷、杨兴/穆青等",
+              "genre": "消息通讯",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "在民族复兴的历史丰碑上——2020 中国抗疫记",
+              "author": "钟华论",
+              "genre": "通讯",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "九天",
+              "pinyin": "jiǔ tiān",
+              "jieshi": "极高的天空。"
+            },
+            {
+              "word": "沧桑",
+              "pinyin": "cāng sāng",
+              "jieshi": "沧海桑田的简称。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "中国人民站起来了（节选）",
+              "lines": [
+                "中国人民从此站起来了。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《在民族复兴的历史丰碑上——2020 中国抗疫记》所属文体是（　）",
+              "options": [
+                "消息",
+                "通讯",
+                "评论",
+                "说明文"
+              ],
+              "answer": 1,
+              "analysis": "该文为通讯，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "通讯与消息的主要区别是（　）",
+              "options": [
+                "通讯更注重深度与细节",
+                "消息更长",
+                "通讯不需要事实",
+                "消息没有导语"
+              ],
+              "answer": 0,
+              "analysis": "通讯讲究深入报道，选 A。"
+            }
+          ]
+        },
+        {
+          "id": "b3u2",
+          "title": "第二单元",
+          "theme": "先秦诸子",
+          "textbooks": [
+            {
+              "title": "《论语》十二章/大学之道/人皆有不忍人之心",
+              "author": "《论语》/《礼记》/《孟子》",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "《老子》四章/五石之瓠",
+              "author": "《老子》/《庄子》",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "兼爱",
+              "author": "《墨子》",
+              "genre": "文言文",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "仁者爱人",
+              "pinyin": "rén zhě ài rén",
+              "jieshi": "儒家仁爱思想。"
+            },
+            {
+              "word": "尚贤",
+              "pinyin": "shàng xián",
+              "jieshi": "推崇贤才。"
+            },
+            {
+              "word": "休戚",
+              "pinyin": "xiū qī",
+              "jieshi": "忧喜、利害。"
+            },
+            {
+              "word": "择善",
+              "pinyin": "zé shàn",
+              "jieshi": "选择好的、坏的方面。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "《论语》十二章（节选）",
+              "lines": [
+                "子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？",
+                "子曰：“博学而笃志，切问而近思，仁在其中矣。”"
+              ]
+            },
+            {
+              "title": "大学之道（节选）",
+              "lines": [
+                "大学之道，在明明德，在亲民，在止于至善。"
+              ]
+            },
+            {
+              "title": "《老子》四章（节选）",
+              "lines": [
+                "合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "“大学之道，在明明德”的“亲民”有版本作“新民”，朱熹注为（　）",
+              "options": [
+                "爱护百姓",
+                "使民日新",
+                "亲近人民",
+                "新式百姓"
+              ],
+              "answer": 1,
+              "analysis": "朱熹主张“亲民”当作“新民”，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《论语》十二章中“君子不器”体现的孔子思想是（　）",
+              "options": [
+                "君子求全责备",
+                "君子不应局限于一技之长",
+                "君子要会器皿制作",
+                "君子要多才多艺"
+              ],
+              "answer": 1,
+              "analysis": "器为专用，君子当求道，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b3u3",
+          "title": "第三单元",
+          "theme": "外国小说",
+          "textbooks": [
+            {
+              "title": "大卫·科波菲尔（节选）/复活（节选）",
+              "author": "狄更斯/托尔斯泰",
+              "genre": "长篇小说节选",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "老人与海（节选）/百年孤独（节选）",
+              "author": "海明威/马尔克斯",
+              "genre": "小说节选",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《老人与海》中“一个人可以被毁灭，但不能被打败”体现的精神是（　）",
+              "options": [
+                "顺从命运",
+                "不屈不挠的抗争精神",
+                "知足常乐",
+                "孤僻自守"
+              ],
+              "answer": 1,
+              "analysis": "选 B，体现硬汉精神。"
+            },
+            {
+              "type": "choice",
+              "stem": "《百年孤独》的作者是（　）",
+              "options": [
+                "海明威",
+                "加西亚·马尔克斯",
+                "狄更斯",
+                "莫言"
+              ],
+              "answer": 1,
+              "analysis": "《百年孤独》作者是哥伦比亚作家马尔克斯，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b3u4",
+          "title": "第四单元",
+          "theme": "逻辑的力量",
+          "textbooks": [
+            {
+              "title": "发现潜藏的逻辑谬误",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "运用有效的推理形式",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "采用合理的论证方法",
+              "author": "学习活动",
+              "genre": "活动",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "谬误",
+              "pinyin": "miù wù",
+              "jieshi": "错误的逻辑推理。"
+            },
+            {
+              "word": "预后",
+              "pinyin": "yù hòu",
+              "jieshi": "对事物发展趋势的预测。"
+            },
+            {
+              "word": "排中律",
+              "pinyin": "pái zhōng lǜ",
+              "jieshi": "两个相反命题必有一真一假。"
+            },
+            {
+              "word": "偷换概念",
+              "pinyin": "tōu huàn gài niàn",
+              "jieshi": "暗中改变概念的外延。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "“所有天鹅都是白色的”被“黑天鹅存在”推翻，这属于（　）",
+              "options": [
+                "演绎推理",
+                "归纳推理的反例",
+                "类比推理",
+                "类比谬误"
+              ],
+              "answer": 1,
+              "analysis": "一个反例即可推翻全称归纳，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "下列属于偷换概念的是（　）",
+              "options": [
+                "偷换论题",
+                "把“人”换成“天使”并偷换论域",
+                "转移论题",
+                "诉诸权威"
+              ],
+              "answer": 1,
+              "analysis": "偷换概念即把概念换成另一概念，选 B。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb4",
+      "name": "选择性必修中册",
+      "grade": 11,
+      "term": "高二下",
+      "theme": "理论、中国革命、史论、戏剧诗歌",
+      "units": [
+        {
+          "id": "b4u1",
+          "title": "第一单元",
+          "theme": "理论指导实践",
+          "textbooks": [
+            {
+              "title": "社会历史的决定性基础/改造我们的学习/人的正确思想是从哪里来的？",
+              "author": "恩格斯/毛泽东",
+              "genre": "理论文章",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "实践是检验真理的唯一标准",
+              "author": "《光明日报》特约评论员",
+              "genre": "评论",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "修辞立其诚/怜悯是人的天性/人应当坚持正义",
+              "author": "张岱年/卢梭/柏拉图",
+              "genre": "理论文章",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "本原",
+              "pinyin": "běn yuán",
+              "jieshi": "根源。"
+            },
+            {
+              "word": "纯粹",
+              "pinyin": "chún cuì",
+              "jieshi": "不掺杂。"
+            },
+            {
+              "word": "批判",
+              "pinyin": "pī pàn",
+              "jieshi": "辨别是非"
+            },
+            {
+              "word": "纯化",
+              "pinyin": "chún huà",
+              "jieshi": "使单纯纯净。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "人的正确思想是从哪里来的？（节选）",
+              "lines": [
+                "人的正确思想是从哪里来的？是从天下ّن"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "“实践是检验真理的唯一标准”的哲学依据是（　）",
+              "options": [
+                "实践是认识的目的",
+                "实践是检验认识真理性的唯一标准",
+                "实践决定一切",
+                "认识源于实践"
+              ],
+              "answer": 1,
+              "analysis": "题干即观点，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《修辞立其诚》中“立其诚”的含义是（　）",
+              "options": [
+                "树立真诚的品格",
+                "建立修辞学",
+                "确立标准",
+                "说真话办真事"
+              ],
+              "answer": 0,
+              "analysis": "“立其诚”指诚实不欺，选 A。"
+            }
+          ]
+        },
+        {
+          "id": "b4u2",
+          "title": "第二单元",
+          "theme": "中国革命历程",
+          "textbooks": [
+            {
+              "title": "记念刘和珍君/为了忘却的记念",
+              "author": "鲁迅",
+              "genre": "散文",
+              "recite": true,
+              "note": "记念刘和珍君全篇"
+            },
+            {
+              "title": "包身工",
+              "author": "夏衍",
+              "genre": "报告文学",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "荷花淀/小二黑结婚（节选）/党费",
+              "author": "孙犁/赵树理/王愿坚",
+              "genre": "小说",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "茂",
+              "pinyin": "mào",
+              "jieshi": "草木繁盛；亦喻勤奋。"
+            },
+            {
+              "word": "荷叶",
+              "pinyin": "hé yè",
+              "jieshi": "荷的叶子。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "记念刘和珍君（节选）",
+              "lines": [
+                "真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《记念刘和珍君》中“真的猛士”一句的语法功能与作用是（　）",
+              "options": [
+                "总领全文、奠定基调",
+                "结尾抒情",
+                "举例论证",
+                "设置悬念"
+              ],
+              "answer": 0,
+              "analysis": "该句开篇独立成段，总领全文，选 A。"
+            },
+            {
+              "type": "choice",
+              "stem": "《荷花淀》中“编结”情节在全篇结构中的作用是（　）",
+              "options": [
+                "推动情节发展",
+                "作为线索贯穿全文",
+                "交代背景",
+                "塑造反面人物"
+              ],
+              "answer": 1,
+              "analysis": "编为贯穿全篇的线索，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b4u3",
+          "title": "第三单元",
+          "theme": "史论",
+          "textbooks": [
+            {
+              "title": "屈原列传",
+              "author": "司马迁",
+              "genre": "史传",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "苏武传",
+              "author": "班固",
+              "genre": "史传",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "过秦论/五代史伶官传序",
+              "author": "贾谊/欧阳修",
+              "genre": "史论",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "法家",
+              "pinyin": "fǎ jiā",
+              "jieshi": "主张以法治国的学派。"
+            },
+            {
+              "word": "偏安",
+              "pinyin": "piān ān",
+              "jieshi": "政权偏居一隅。"
+            },
+            {
+              "word": "明君",
+              "pinyin": "míng jūn",
+              "jieshi": "贤明的君主。"
+            },
+            {
+              "word": "削弱",
+              "pinyin": "xuē ruò",
+              "jieshi": "使变弱。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "过秦论（节选）",
+              "lines": [
+                "秦孝公据崤函之固，拥帝王之业。",
+                "蹑足行伍之间，而倔起阡陌之中。"
+              ]
+            },
+            {
+              "title": "五代史伶官传序（节选）",
+              "lines": [
+                "祸患常积于忽微，智勇多困于所溺。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《过秦论》中“仁义不施而攻守之势异也”一句的含义是（　）",
+              "options": [
+                "秦不施仁义",
+                "秦统一后攻守形势变了",
+                "秦亡于无仁义",
+                "秦王不仁"
+              ],
+              "answer": 1,
+              "analysis": "攻守之势异指统一前后形势不同，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《屈原列传》中“举世混浊而我独清”运用的表现手法是（　）",
+              "options": [
+                "对比",
+                "衬托（以众人浊衬己清）",
+                "对比与衬托",
+                "借代"
+              ],
+              "answer": 2,
+              "analysis": "以众人之浊反衬自己之清，属对比衬托，选 C。"
+            }
+          ]
+        },
+        {
+          "id": "b4u4",
+          "title": "第四单元",
+          "theme": "外国戏剧诗歌",
+          "textbooks": [
+            {
+              "title": "玩偶之家（节选）",
+              "author": "易卜生",
+              "genre": "话剧",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "迷娘（之一）",
+              "author": "歌德",
+              "genre": "诗",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "致大海/自己之歌（节选）/树和天空",
+              "author": "普希金/惠特曼/特朗斯特罗姆",
+              "genre": "诗",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "拟人",
+              "pinyin": "nǐ rén",
+              "jieshi": "把物当作人写。"
+            },
+            {
+              "word": "象征",
+              "pinyin": "xiàng zhēng",
+              "jieshi": "用具体事物表示抽象意义。"
+            },
+            {
+              "word": "自由",
+              "pinyin": "zì yóu",
+              "jieshi": "不受束缚。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《玩偶之家》中娜拉离家出走的主要原因是（　）",
+              "options": [
+                "与丈夫吵架",
+                "认清“家庭”是伪造的牢笼，追求人格独立",
+                "经济贫困",
+                "喜欢跳舞"
+              ],
+              "answer": 1,
+              "analysis": "娜拉认清家庭本质为牢笼，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《致大海》运用的主要表现手法是（　）",
+              "options": [
+                "象征",
+                "对比",
+                "夸张",
+                "用典"
+              ],
+              "answer": 0,
+              "analysis": "以大海象征自由，选 A。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb5",
+      "name": "选择性必修下册",
+      "grade": 12,
+      "term": "高三上",
+      "theme": "诗歌、现当代、古代散文、科学",
+      "units": [
+        {
+          "id": "b5u1",
+          "title": "第一单元",
+          "theme": "诗的探寻",
+          "textbooks": [
+            {
+              "title": "氓/离骚（节选）",
+              "author": "《诗经》/屈原",
+              "genre": "诗/楚辞",
+              "recite": true,
+              "note": "氓全篇、离骚节选"
+            },
+            {
+              "title": "孔雀东南飞并序",
+              "author": "汉乐府",
+              "genre": "叙事诗",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "蜀道难/蜀相",
+              "author": "李白/杜甫",
+              "genre": "诗",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "望海潮（东南形胜）/扬州慢（淮左名都）",
+              "author": "柳永/姜夔",
+              "genre": "词",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "盟誓",
+              "pinyin": "méng shì",
+              "jieshi": "盟约誓言。"
+            },
+            {
+              "word": "灵修",
+              "pinyin": "líng xiū",
+              "jieshi": "精神上的修养。"
+            },
+            {
+              "word": "惆怅",
+              "pinyin": "chóu chàng",
+              "jieshi": "失意沮丧。"
+            },
+            {
+              "word": "幽冥",
+              "pinyin": "yōu míng",
+              "jieshi": "阴间；幽暗。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "氓（节选）",
+              "lines": [
+                "氓之蚩蚩，抱布自贸。",
+                "于嗟鸠兮，无食桑葚。"
+              ]
+            },
+            {
+              "title": "孔雀东南飞（节选）",
+              "lines": [
+                "两家求合葬，合葬华山傍。",
+                "枝枝相覆盖，叶叶相交通。"
+              ]
+            },
+            {
+              "title": "蜀道难（节选）",
+              "lines": [
+                "噫吁嚱，危乎高哉！蜀道之难，难于上青天！"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《氓》中“于嗟鸠兮，无食桑葚”运用的修辞是（　）",
+              "options": [
+                "比喻",
+                "拟人",
+                "夸张",
+                "对偶"
+              ],
+              "answer": 0,
+              "analysis": "以鸠食桑葞喻人，选 A。"
+            },
+            {
+              "type": "choice",
+              "stem": "《孔雀东南飞》中“君当作磐石，妾当作蒲苇”表达的是（　）",
+              "options": [
+                "夫妻反目",
+                "坚贞不屈的爱情誓约",
+                "抱怨",
+                "劝解"
+              ],
+              "answer": 1,
+              "analysis": "以石与蒲苇比况坚贞，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b5u2",
+          "title": "第二单元",
+          "theme": "现当代文学",
+          "textbooks": [
+            {
+              "title": "阿Q正传（节选）/边城（节选）",
+              "author": "鲁迅/沈从文",
+              "genre": "小说",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "大堰河——我的保姆/再别康桥",
+              "author": "艾青/徐志摩",
+              "genre": "诗",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "一个消逝了的山村/秦腔",
+              "author": "冯至/贾平凹",
+              "genre": "散文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "茶馆（节选）",
+              "author": "老舍",
+              "genre": "话剧",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "体制",
+              "pinyin": "tǐ zhì",
+              "jieshi": "制度。"
+            },
+            {
+              "word": "稗",
+              "pinyin": "bài",
+              "jieshi": "杂草；引申为小人。"
+            },
+            {
+              "word": "捶",
+              "pinyin": "chuí",
+              "jieshi": "敲打。"
+            },
+            {
+              "word": "安妥",
+              "pinyin": "ān tuǒ",
+              "jieshi": "安稳妥当。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "再别康桥（节选）",
+              "lines": [
+                "轻轻的我走了，正如我轻轻的来；",
+                "我轻轻的招手，作别西天的云彩。"
+              ]
+            },
+            {
+              "title": "大堰河——我的保姆（节选）",
+              "lines": [
+                "我是在保姆的舂床上Uc度我的童年的。"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《再别康桥》中“悄悄的我走了，正如我悄悄的来”采用的结构是（　）",
+              "options": [
+                "先扬后抑",
+                "首尾呼应（回环）",
+                "对比",
+                "铺垫"
+              ],
+              "answer": 1,
+              "analysis": "首尾呼应构成回环，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《茶馆》通过王利发这一人物折射出（　）",
+              "options": [
+                "掌柜的贪财",
+                "清末至民国初年社会的变迁与世相",
+                "农民的生活",
+                "知识分子的苦闷"
+              ],
+              "answer": 1,
+              "analysis": "小人物折射大时代，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b5u3",
+          "title": "第三单元",
+          "theme": "古代散文",
+          "textbooks": [
+            {
+              "title": "陈情表/项脊轩志",
+              "author": "李密/归有光",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "兰亭集序/归去来兮辞并序",
+              "author": "王羲之/陶渊明",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            },
+            {
+              "title": "种树郭橐驼传",
+              "author": "柳宗元",
+              "genre": "文言文",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "石钟山记",
+              "author": "苏轼",
+              "genre": "文言文",
+              "recite": true,
+              "note": "全篇"
+            }
+          ],
+          "keywords": [
+            {
+              "word": "体制",
+              "pinyin": "tǐ zhì",
+              "jieshi": "制度。"
+            },
+            {
+              "word": "稗",
+              "pinyin": "bài",
+              "jieshi": "杂草；引申为小人。"
+            },
+            {
+              "word": "捶",
+              "pinyin": "chuí",
+              "jieshi": "敲打。"
+            },
+            {
+              "word": "安妥",
+              "pinyin": "ān tuǒ",
+              "jieshi": "安稳妥当。"
+            }
+          ],
+          "recite": [
+            {
+              "title": "陈情表（节选）",
+              "lines": [
+                "臣以险衅，夙遭闵凶。生孩六月，慈父见背。",
+                "臣欲奉诏奔驰，则刘病日笃。"
+              ]
+            },
+            {
+              "title": "兰亭集序（节选）",
+              "lines": [
+                "群贤毕至，少长咸集。",
+                "仰观宇宙之大，俯察品类之盛。"
+              ]
+            },
+            {
+              "title": "石钟山记（节选）",
+              "lines": [
+                "事不目见耳闻，而臆断其有无，可乎？"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《石钟山记》中“事不目见耳闻，而臆断其有无，可乎？”一句运用的论证方法是（　）",
+              "options": [
+                "举例论证",
+                "道理论证（驳斥臆断）",
+                "对比论证",
+                "比喻论证"
+              ],
+              "answer": 1,
+              "analysis": "以理驳理，属道理论证，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "《项脊轩志》中“庭有枇杷树，吾妻死之年所手植也”一句的妙处在于（　）",
+              "options": [
+                "写树精美",
+                "睹物思人，以物寄情，不言深情而情深",
+                "交代环境",
+                "显示财力"
+              ],
+              "answer": 1,
+              "analysis": "以物寄情是本文最大特色，选 B。"
+            }
+          ]
+        },
+        {
+          "id": "b5u4",
+          "title": "第四单元",
+          "theme": "科学与人文",
+          "textbooks": [
+            {
+              "title": "自然选择的证明/宇宙的边疆",
+              "author": "达尔文/卡尔·萨根",
+              "genre": "科普作品",
+              "recite": false,
+              "note": ""
+            },
+            {
+              "title": "天文学上的旷世之争",
+              "author": "关增建",
+              "genre": "科普作品",
+              "recite": false,
+              "note": ""
+            }
+          ],
+          "keywords": [
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "语段",
+              "pinyin": "yǔ duàn",
+              "jieshi": "教材重点词语，需结合语境理解。"
+            },
+            {
+              "word": "宇宙",
+              "pinyin": "yǔ zhòu",
+              "jieshi": "时间和空间的统称。"
+            },
+            {
+              "word": "演化",
+              "pinyin": "yǎn huà",
+              "jieshi": "演变发展。"
+            }
+          ],
+          "recite": [],
+          "practice": [
+            {
+              "type": "choice",
+              "stem": "《宇宙的边疆》一文在写法上最突出的特点是（　）",
+              "options": [
+                "严谨的科学论证",
+                "以抒情笔调引发对宇宙的思考",
+                "考据",
+                "幽默"
+              ],
+              "answer": 1,
+              "analysis": "萨根以抒情笔调写科普，选 B。"
+            },
+            {
+              "type": "choice",
+              "stem": "科普作品的阅读，重在（　）",
+              "options": [
+                "只记住结论",
+                "理解科学原理与其中的思维方法",
+                "背诵定义",
+                "看插图"
+              ],
+              "answer": 1,
+              "analysis": "重在理解思维方法，选 B。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
