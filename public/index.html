@@ -50,6 +50,7 @@
   .hint { font-size:12px; color:#aaa; text-align:center; margin-top:14px; }
   .hidden { display:none; }
 </style>
+<script src="./device.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -89,6 +90,7 @@
       <label>用户名</label><input id="loginUser" placeholder="用户名">
       <label>密码</label><input id="loginPw" type="password">
       <button class="btn" onclick="login()">登录</button>
+      <button class="btn warn hidden" id="devResetBtn" style="display:none;background:#fffbe8;color:#7a5c00;border:1px dashed #d8c98a;" onclick="resetDevices()">🔑 解绑全部设备并重绑本机（需输入上方账号密码）</button>
     </div>
     <div class="msg" id="authMsg"></div>
   </div>
@@ -102,6 +104,11 @@
       <button class="logout" onclick="logout()">退出登录</button>
     </div>
     <div class="dev-note" id="devNote"></div>
+    <div class="dev-actions">
+      <button class="btn-sm" onclick="unbindOthers()">解绑其他设备</button>
+      <button class="btn-sm ghost" onclick="unbindSelf()">解绑本设备并退出</button>
+      <span class="msg" id="devMsg"></span>
+    </div>
   </div>
 
   <!-- 激活授权码 -->
@@ -164,6 +171,41 @@
       <div><span class="state" id="st-senior">加载中</span></div>
       <button class="go" id="go-senior" onclick="enterMod('senior')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-senior-grammar">
+      <div class="icon">📘</div>
+      <div class="name">高中英语 · 语法详解</div>
+      <div class="desc">高考 12 个核心语法专题 · 定语从句 / 非谓语 / 虚拟 / 特殊句式 · 讲解+易错+例题</div>
+      <div><span class="state" id="st-senior-grammar">加载中</span></div>
+      <button class="go" id="go-senior-grammar" onclick="enterMod('senior-grammar')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-senior-exam">
+      <div class="icon">📝</div>
+      <div class="name">高中英语 · 题库组卷</div>
+      <div class="desc">高考题型原型 · 单选/完形/阅读/词汇/语法/任务/写作 · 模板组卷+在线作答</div>
+      <div><span class="state" id="st-senior-exam">加载中</span></div>
+      <button class="go" id="go-senior-exam" onclick="enterMod('senior-exam')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-chinese">
+      <div class="icon">📚</div>
+      <div class="name">小学语文 · 拼音识字古诗阅读</div>
+      <div class="desc">拼音 63 条 · 识字 60 字 · 古诗 12 首 · 阅读 4 篇，认读/辨析/默写/答题，浏览器朗读辅助</div>
+      <div><span class="state" id="st-chinese">加载中</span></div>
+      <button class="go" id="go-chinese" onclick="enterMod('chinese')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-jchinese">
+      <div class="icon">📕</div>
+      <div class="name">初中语文 · 字词古诗文文言文阅读名著写作</div>
+      <div class="desc">6 大板块 · 72 项：字词 / 古诗文默写赏析 / 文言文 / 现代文阅读 / 名著导读 / 写作；题库 107 题组卷 + 中考衔接 8 单元</div>
+      <div><span class="state" id="st-jchinese">加载中</span></div>
+      <button class="go" id="go-jchinese" onclick="enterMod('jchinese')">进入模块</button>
+    </div>
+    <div class="mod-card tool-card" id="mod-mindmap" style="border-color:var(--brand,#6a5cff);">
+      <div class="icon">🧠</div>
+      <div class="name">学习思维导图</div>
+      <div class="desc">一图看懂每个模块的知识结构：章节 · 专题 · 题型 · 题量，随课程自动更新，可筛选定位。</div>
+      <div><span class="state ok">全局工具</span></div>
+      <button class="go on" onclick="location.href='./mindmap.html'">打开思维导图 →</button>
+    </div>
   </div>
 
   <!-- 微信联系卡 -->
@@ -171,7 +213,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组</div>
 </div>
 
 <script>
@@ -202,6 +244,10 @@ const MODINFO = {
   gk:      { url: './gaokao.html', name: '高考英语 · 三问五答' },
   math:    { url: './math.html',  name: '数学 · 思维训练' },
   senior:  { url: './senior-textbook.html', name: '高中英语 · 课本同步' },
+  'senior-grammar': { url: './senior-grammar.html', name: '高中英语 · 语法详解' },
+  'senior-exam':    { url: './senior-exam.html', name: '高中英语 · 题库组卷' },
+  chinese:          { url: './chinese.html', name: '小学语文 · 拼音识字古诗阅读' },
+  jchinese:        { url: './jchinese.html', name: '初中语文 · 字词古诗文文言文阅读名著写作' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -226,14 +272,41 @@ async function register() {
 async function login() {
   const r = await api('/api/login', { method: 'POST', headers: H(), body: JSON.stringify({ username: loginUser.value, password: loginPw.value }) });
   if (r.s === 200) { TOKEN = r.j.token; localStorage.setItem('token', TOKEN); afterLogin(); }
+  else if (r.s === 403) {
+    setMsg('authMsg', (r.j.error || '登录失败') + ' · 若这是你的常用设备，可点下方「解绑全部设备并重绑本机」一键恢复', 'err');
+    $('devResetBtn').style.display = '';
+  }
   else setMsg('authMsg', r.j.error || '登录失败', 'err');
+}
+async function resetDevices() {
+  const u = loginUser.value.trim(), p = loginPw.value;
+  if (!u || !p) { setMsg('authMsg', '请先在上方输入账号和密码，再点重绑', 'err'); return; }
+  const r = await api('/api/device/reset', { method: 'POST', headers: H(), body: JSON.stringify({ username: u, password: p }) });
+  if (r.s === 200) {
+    $('devResetBtn').style.display = 'none';
+    setMsg('authMsg', '已解绑全部旧设备并绑定本机，正在重新登录…', 'ok');
+    login();
+  } else {
+    setMsg('authMsg', r.j.error || '重绑失败', 'err');
+  }
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
+async function unbindOthers() {
+  if (!TOKEN) { setMsg('authMsg', '请先登录', 'err'); return; }
+  const r = await api('/api/device/unbind-others', { method: 'POST', headers: H() });
+  if (r.s === 200) { setMsg('devMsg', '已解绑其他设备 ' + (r.j.removed || 0) + ' 台，当前设备保留', 'ok'); DEV = { n: r.j.devices, max: r.j.maxDevices }; renderHome(); }
+  else setMsg('devMsg', r.j.error || '解绑失败', 'err');
+}
+async function unbindSelf() {
+  if (!TOKEN) return;
+  await api('/api/device/unbind', { method: 'POST', headers: H() });
+  logout();
+}
 
 function renderMod(m, el) {
   const st = $('st-' + m), go = $('go-' + m);
@@ -272,7 +345,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {
