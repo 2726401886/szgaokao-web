@@ -199,6 +199,13 @@
       <div><span class="state" id="st-jchinese">加载中</span></div>
       <button class="go" id="go-jchinese" onclick="enterMod('jchinese')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-hchinese">
+      <div class="icon">📗</div>
+      <div class="name">高中语文 · 字词古诗文文言文阅读名著写作</div>
+      <div class="desc">6 大板块 · 59 项：字音字形词语 / 古诗文默写赏析 / 文言文 / 现代文阅读 / 名著导读 / 高考作文；题库 110 题组卷 + 高考衔接 8 单元</div>
+      <div><span class="state" id="st-hchinese">加载中</span></div>
+      <button class="go" id="go-hchinese" onclick="enterMod('hchinese')">进入模块</button>
+    </div>
     <div class="mod-card tool-card" id="mod-mindmap" style="border-color:var(--brand,#6a5cff);">
       <div class="icon">🧠</div>
       <div class="name">学习思维导图</div>
@@ -213,7 +220,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组</div>
 </div>
 
 <script>
@@ -248,6 +255,7 @@ const MODINFO = {
   'senior-exam':    { url: './senior-exam.html', name: '高中英语 · 题库组卷' },
   chinese:          { url: './chinese.html', name: '小学语文 · 拼音识字古诗阅读' },
   jchinese:        { url: './jchinese.html', name: '初中语文 · 字词古诗文文言文阅读名著写作' },
+  hchinese:        { url: './hchinese.html', name: '高中语文 · 字词古诗文文言文阅读名著写作' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -292,7 +300,7 @@ async function resetDevices() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
@@ -345,7 +353,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {
