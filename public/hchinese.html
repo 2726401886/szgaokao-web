@@ -1463,7 +1463,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   }
   function renderUnit() {
     const u = LK.cur;
-    const points = u.points.map(p => '<div class="point"><h4>' + esc(p.h) + '</h4><div class="pb">' + esc(p.body) + '</div>' +
+    const points = u.points.map(p => '<div class="point"><h4>' + esc(p.title || p.h) + '</h4><div class="pb">' + esc(p.content || p.body) + '</div>' +
       (p.eg ? '<div class="peg">例：' + esc(p.eg) + '</div>' : '') +
       (p.tip ? '<div class="ptip">💡 ' + esc(p.tip) + '</div>' : '') + '</div>').join('');
     const quiz = u.quiz.map((q, i) => '<div class="qitem" data-qid="' + q.id + '"><div class="qs">' + (i + 1) + '. ' + esc(q.stem) + '</div>' +
