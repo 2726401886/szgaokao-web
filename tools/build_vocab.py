@@ -26,6 +26,14 @@ STAGE = {
     'senior':  ('高中英语', 'senior'),
     'ket':     ('出国考', 'ket'),
     'pet':     ('出国考', 'pet'),
+    # 考试类词书（由 tools/build_exam_books.py 生成，schema 略有差异）
+    'ky':      ('考研', 'ky'),
+    'cet4':    ('四六级', 'cet4'),
+    'cet6':    ('四六级', 'cet6'),
+    'tem8':    ('四六级', 'tem8'),
+    'ielts':   ('出国考', 'ielts'),
+    'toefl':   ('出国考', 'toefl'),
+    'oral':    ('出国考', 'oral'),
 }
 
 # 小学阶段需要音节切分与自然拼读提示
@@ -107,11 +115,70 @@ def mk(wid, w, level, unit, unitId, **kw):
     }
     if kw.get('tag'):
         item['tag'] = kw['tag']
+    if kw.get('freq'):
+        item['freq'] = kw['freq']
+    # 例句音频（若有）
+    if kw.get('audioSent'):
+        item['audioSent'] = kw['audioSent']
     return item
 
+
+# 考试类词书（vocab_<key>.json）：schema 为 books[].units[].words[]
+def collect_exam(key):
+    """加载 tools/build_exam_books.py 生成的词书，并回填 TTS 生成的音频路径。"""
+    p = os.path.join(DATA, 'vocab_%s.json' % key)
+    d = load('vocab_%s.json' % key)
+    if not d:
+        return None
+    audio_root = r'E:/szgaokao.cn/worker/public/audio'
+    local_root = os.path.join(os.path.dirname(DATA), 'public', 'audio')
+    root = audio_root if os.path.isdir(audio_root) else local_root
+
+    books = []
+    for b in d.get('books', []):
+        units = []
+        for u in b.get('units', []):
+            ws = []
+            for w in u.get('words', []):
+                wid = w['id']
+                safe = (w.get('word') or '').replace(' ', '_').replace('/', '_')
+                wdir = os.path.join(root, key, wid)
+                wa = os.path.join(wdir, safe + '.mp3')
+                sa = os.path.join(wdir, 'sent.mp3')
+                has_wa = os.path.exists(wa)
+                has_sa = os.path.exists(sa)
+                ws.append(mk(wid, w.get('word'), key, u.get('title', ''), u.get('id'),
+                             phonetic=w.get('phonetic', ''), pos=w.get('pos', ''),
+                             meaning=w.get('meaning', ''),
+                             audio=('/audio/%s/%s/%s.mp3' % (key, wid, safe)) if has_wa else '',
+                             sentence=w.get('sentence', ''), sentenceCn=w.get('sentenceCn', ''),
+                             tag=w.get('tag', ''), freq=w.get('freq', ''),
+                             audioSent=('/audio/%s/%s/sent.mp3' % (key, wid)) if has_sa else ''))
+            units.append({'id': u.get('id'), 'title': u.get('title', ''), 'words': ws})
+        books.append({'id': b.get('id', key), 'title': b.get('title', d.get('level', key)),
+                      'units': units})
+    # 词书中文名：优先 books[0].title（build_exam_books 写入），否则回退 STAGE
+    disp = ''
+    try:
+        disp = (d.get('books') or [{}])[0].get('title', '') or ''
+    except Exception:
+        pass
+    if not disp:
+        disp = d.get('product', '') or d.get('level', key)
+    return {
+        'level': key,
+        'title': disp,
+        'stage': d.get('stage', STAGE.get(key, ('其他', 'primary'))[0]),
+        'mod': d.get('mod', STAGE.get(key, ('其他', 'primary'))[1]),
+        'count': sum(len(u['words']) for b in books for u in b['units']),
+        'note': d.get('note', ''),
+        'books': books,
+    }
+
 def collect():
-    levels = []   # [{level, stage, mod, books:[{id,title,units:[{id,title,words:[...]}]}], count}]
+    levels = []   # [{level, title, stage, mod, books:[{id,title,units:[{id,title,words:[...]}]}], count}]
     allitems = {}
+    NOTES = {}     # level -> 词书说明（考试类词书自带 note）
 
     def add_level(level, title, books):
         stage, mod = STAGE.get(level, ('其他', 'primary'))
@@ -233,6 +300,14 @@ def collect():
             books.append({'id': g.get('id'), 'title': g.get('title', ''),
                           'units': [{'id': g.get('id'), 'title': g.get('title', ''), 'words': ws}]})
         add_level('pet', 'PET / B1 剑桥英语', books)
+
+    # ---- 8~13. 考试类词书（ky/cet4/cet6/tem8/ielts/toefl/oral，存在才加载）----
+    for key in ['ky', 'cet4', 'cet6', 'tem8', 'ielts', 'toefl', 'oral']:
+        lv = collect_exam(key)
+        if lv:
+            add_level(lv['level'], lv['title'], lv['books'])
+            if lv.get('note'):
+                NOTES[lv['level']] = lv['note']
 
     return levels, allitems
 
