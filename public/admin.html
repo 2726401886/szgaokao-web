@@ -59,6 +59,21 @@
   #genResult { background:#fff8f6; border-radius:12px; padding:12px; margin-top:10px; display:none; }
   #genResult pre { font-family:Consolas,Menlo,monospace; font-size:15px; line-height:1.9; letter-spacing:1px; user-select:all; white-space:pre-wrap; }
   .tip { font-size:12px; color:#999; margin-top:8px; line-height:1.6; }
+  /* 访问统计 */
+  .stat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+  .stat-box { background:linear-gradient(135deg,#fff,#fbfcff); border:1.5px solid #eef1f8; border-radius:12px; padding:14px; text-align:center; }
+  .stat-num { font-size:26px; font-weight:800; color:#ff5e62; line-height:1; }
+  .stat-lbl { font-size:12px; color:#888; margin-top:6px; }
+  .stat-daily { display:flex; align-items:flex-end; gap:3px; height:84px; margin-top:8px; padding-bottom:2px; }
+  .stat-bar { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
+  .stat-bar .b { width:100%; background:linear-gradient(180deg,#ff9966,#ff5e62); border-radius:4px 4px 0 0; min-height:2px; }
+  .stat-bar .d { font-size:9px; color:#aaa; margin-top:3px; transform:rotate(-45deg); transform-origin:center; white-space:nowrap; }
+  .stat-top { margin-top:8px; }
+  .stat-top .tp { display:flex; align-items:center; gap:8px; padding:8px 10px; border-bottom:1px solid #f2f2f2; font-size:13px; }
+  .stat-top .tp:last-child { border-bottom:none; }
+  .stat-top .tp .p { flex:1; font-family:Consolas,Menlo,monospace; font-size:12px; color:#444; word-break:break-all; }
+  .stat-top .tp .uv { color:#2a8; font-weight:700; }
+  .stat-top .tp .pv { color:#ff5e62; font-weight:700; }
 </style>
 </head>
 <body>
@@ -80,6 +95,21 @@
   </div>
 
   <div id="panel" style="display:none">
+    <!-- 访问统计 -->
+    <div class="card">
+      <h3>📊 网站访问统计 <button class="btn sm gray" style="float:right" onclick="loadStats()">刷新</button></h3>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="stat-num" id="stTotalPv">—</div><div class="stat-lbl">累计浏览量 PV</div></div>
+        <div class="stat-box"><div class="stat-num" id="stTotalUv">—</div><div class="stat-lbl">累计访客 UV</div></div>
+        <div class="stat-box"><div class="stat-num" id="stTodayPv">—</div><div class="stat-lbl">今日 PV</div></div>
+        <div class="stat-box"><div class="stat-num" id="stTodayUv">—</div><div class="stat-lbl">今日 UV</div></div>
+      </div>
+      <h3 style="margin-top:16px;font-size:14px">近 14 天趋势（PV）</h3>
+      <div id="stDaily" class="stat-daily"><div class="msg">加载中…</div></div>
+      <h3 style="margin-top:16px;font-size:14px">热门页面 TOP</h3>
+      <div id="stTop" class="stat-top"><div class="msg">加载中…</div></div>
+      <div class="tip">PV＝页面被打开次数；UV＝当日去重访客（按 IP）。数据实时写入 D1 stats 表，新访问后约数秒刷新。</div>
+    </div>
     <!-- 体验授权开关 -->
     <div class="card">
       <h3>🎁 体验授权开关</h3>
@@ -168,7 +198,26 @@ function enterPanel() {
   $('loginCard').style.display = 'none';
   $('panel').style.display = '';
   $('btnLogout').style.display = '';
-  loadCodes(); loadUsers(); loadTrial();
+  loadCodes(); loadUsers(); loadTrial(); loadStats();
+}
+
+// —— 访问统计 ——
+async function loadStats() {
+  const r = await api('/api/admin/stats', { headers: H() });
+  if (r.s !== 200) { $('stDaily').innerHTML = '<div class="msg err">' + esc(r.j.error || '加载失败') + '</div>'; return; }
+  const d = r.j;
+  $('stTotalPv').textContent = d.total.pv;
+  $('stTotalUv').textContent = d.total.uv;
+  $('stTodayPv').textContent = d.today.pv;
+  $('stTodayUv').textContent = d.today.uv;
+  const maxv = Math.max(1, ...d.daily.map((x) => x.pv));
+  $('stDaily').innerHTML = d.daily.map((x) => {
+    const h = Math.round((x.pv / maxv) * 100);
+    const label = x.day.slice(5);
+    return `<div class="stat-bar" title="${x.day}　PV ${x.pv}　UV ${x.uv}"><div class="b" style="height:${h}%"></div><div class="d">${label}</div></div>`;
+  }).join('');
+  if (!d.top.length) $('stTop').innerHTML = '<div class="msg">暂无数据</div>';
+  else $('stTop').innerHTML = d.top.map((t) => `<div class="tp"><span class="p">${esc(t.path)}</span><span class="uv">UV ${t.uv}</span><span class="pv">PV ${t.pv}</span></div>`).join('');
 }
 // —— 体验授权开关 ——
 function setDays(n) { $('trialDays').value = n; }
