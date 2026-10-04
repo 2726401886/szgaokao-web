@@ -217,6 +217,8 @@
   .pq .pqhead { font-weight:700; color:#8e44ad; font-size:14px; margin-bottom:4px; }
   .pq .pqans { color:#7d3c98; font-weight:700; font-size:13.5px; margin-top:5px; }
   .pq .pqana { color:#777; font-size:12.5px; margin-top:3px; line-height:1.6; }
+  .pqkao { display:inline-block; margin:2px 0 6px; padding:2px 9px; border-radius:20px; background:#f3ecfb; color:#8e44ad; font-size:12px; font-weight:600; }
+  .pqkao::before { content:'🎯 考点：'; font-weight:700; }
   .pq .blankline { display:inline-block; border-bottom:1px solid #333; min-width:120px; height:1.05em; vertical-align:middle; }
   .blank-input { width:150px; padding:5px 8px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; margin:4px 4px 4px 0; }
   .keytitle { margin-top:20px; border-top:2px dashed #8e44ad; padding-top:12px; font-size:15px; font-weight:800; color:#7d3c98; }
@@ -1323,24 +1325,25 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
     $('#exClear2').addEventListener('click', () => { EX.sel = []; EXVIEW = 'bank'; EX.showKey = false; renderExamShell(); });
   }
   function L(n) { return String.fromCharCode(65 + n); }
+  function kaoBadge(q) { return q.kaodian ? '<div class="pqkao">' + esc(q.kaodian) + '</div>' : ''; }
   function paperQ(q, key) {
     if (q.type === 'choice') {
-      return '<div class="pq"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + esc(q.stem) +
+      return '<div class="pq"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem) +
         '<div style="margin-top:4px;">' + q.options.map((o, i) => L(i) + '. ' + esc(o)).join('　') + '</div>' +
         (key ? '<div class="pqans">答案：' + L(q.answer) + '. ' + esc(q.options[q.answer]) + '</div><div class="pqana">解析：' + esc(q.analysis) + '</div>' : '') + '</div>';
     }
     if (q.type === 'fill') {
-      return '<div class="pq"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + esc(q.stem).replace(/_{3,}/g, '<span class="blankline"></span>') +
+      return '<div class="pq"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem).replace(/_{3,}/g, '<span class="blankline"></span>') +
         (key ? '<div class="pqans">答案：' + esc(q.answer) + '</div><div class="pqana">' + esc(q.analysis) + '</div>' : '') + '</div>';
     }
     if (q.type === 'read') {
       const qs = q.questions.map((sq, i) => '<div style="margin-top:7px;"><div style="font-weight:700;">' + (i + 1) + '. ' + esc(sq.stem) + '</div>' +
         '<div>' + sq.options.map((o, j) => L(j) + '. ' + esc(o)).join('　') + '</div>' +
         (key ? '<div class="pqans">答案：' + L(sq.answer) + '</div><div class="pqana">解析：' + esc(sq.analysis) + '</div>' : '') + '</div>').join('');
-      return '<div class="pq"><div class="pqhead">【阅读 · ' + esc(q.title || q.topic) + '】</div><div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
+      return '<div class="pq"><div class="pqhead">【阅读 · ' + esc(q.title || q.topic) + '】</div>' + kaoBadge(q) + '<div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
     }
     if (q.type === 'write') {
-      return '<div class="pq"><div class="pqhead">【' + esc(q.topic) + '】</div>' + esc(q.stem) +
+      return '<div class="pq"><div class="pqhead">【' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem) +
         (key ? '<div class="pqans">' + esc(q.answer) + '</div>' : '<div class="blankline" style="min-width:100%;height:90px;border-bottom:none;"></div>') + '</div>';
     }
     return '';
@@ -1389,21 +1392,21 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   function doQ(q) {
     const dis = EX.done ? ' locked' : '';
     if (q.type === 'choice') {
-      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + esc(q.stem) +
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【选择 · ' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem) +
         '<div>' + q.options.map((o, i) => '<div class="opt' + dis + (EX.done && i === q.answer ? ' right' : '') + (EX.done && EX.ans[q.id] === i && i !== q.answer ? ' wrong' : '') + '" data-q="' + q.id + '" data-i="' + i + '">' + L(i) + '. ' + esc(o) + '</div>').join('') + '</div></div>';
     }
     if (q.type === 'fill') {
-      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + esc(q.stem).replace(/_{3,}/g, '<input class="blank-input" data-q="' + q.id + '" ' + (EX.done ? 'disabled' : '') + ' placeholder="填写答案">') +
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【默写 · ' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem).replace(/_{3,}/g, '<input class="blank-input" data-q="' + q.id + '" ' + (EX.done ? 'disabled' : '') + ' placeholder="填写答案">') +
         (EX.done ? '<div class="pqans">答案：' + esc(q.answer) + '</div><div class="pqana">' + esc(q.analysis) + '</div>' : '') + '</div>';
     }
     if (q.type === 'read') {
       const qs = q.questions.map((sq, i) => '<div style="margin-top:8px;"><div style="font-weight:700;">' + (i + 1) + '. ' + esc(sq.stem) + '</div>' +
         sq.options.map((o, j) => '<div class="opt' + dis + (EX.done && j === sq.answer ? ' right' : '') + '" data-q="' + q.id + '#r' + i + '" data-i="' + j + '">' + L(j) + '. ' + esc(o) + '</div>').join('') +
         (EX.done ? '<div class="pqans">答案：' + L(sq.answer) + '</div><div class="pqana">' + esc(sq.analysis) + '</div>' : '') + '</div>').join('');
-      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【阅读 · ' + esc(q.title || '') + '】</div><div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【阅读 · ' + esc(q.title || '') + '】</div>' + kaoBadge(q) + '<div style="background:#fafcf8;border-radius:8px;padding:10px 12px;line-height:1.9;">' + esc(q.passage) + '</div>' + qs + '</div>';
     }
     if (q.type === 'write') {
-      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【' + esc(q.topic) + '】</div>' + esc(q.stem) +
+      return '<div class="pq" style="border:none;padding:8px 0;"><div class="pqhead">【' + esc(q.topic) + '】</div>' + kaoBadge(q) + esc(q.stem) +
         '<textarea class="blank-input" data-q="' + q.id + '" ' + (EX.done ? 'disabled' : '') + ' placeholder="在此作答（开放式，人工批改）" style="width:100%;min-height:80px;margin-top:6px;"></textarea></div>';
     }
     return '';
