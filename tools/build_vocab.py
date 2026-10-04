@@ -175,6 +175,26 @@ def collect_exam(key):
         'books': books,
     }
 
+def collect_core(level, title):
+    """加载 tools/gen_curriculum.py 生成的课标词书（data/<level>_core.json）。
+
+    数据来自 ECDICT 真实词典 + 当代语料库词频排序，音标/词性/释义均为词典原生，
+    非 AI 杜撰；音频路径指向共享目录 public/audio/_core/<word>/<word>.mp3。
+    """
+    d = load('%s_core.json' % level)
+    if not d:
+        return None
+    units = []
+    for u in d.get('units', []):
+        ws = [mk(w['id'], w.get('word'), level, u.get('title', ''), u.get('id'),
+                 phonetic=w.get('phonetic', ''), pos=w.get('pos', ''),
+                 meaning=w.get('meaning', ''), audio=w.get('audio', ''),
+                 sentence=w.get('sentence', ''), sentenceCn=w.get('sentenceCn', ''))
+              for w in u.get('words', [])]
+        units.append({'id': u.get('id'), 'title': u.get('title', ''), 'words': ws})
+    return {'id': level, 'title': title, 'units': units}
+
+
 def collect():
     levels = []   # [{level, title, stage, mod, books:[{id,title,units:[{id,title,words:[...]}]}], count}]
     allitems = {}
@@ -204,23 +224,10 @@ def collect():
         books.append({'id': 'kids', 'title': '幼儿启蒙 3-6 岁', 'units': units})
         add_level('kids', '幼儿启蒙 3-6 岁', books)
 
-    # ---- 2. 小学（主题词书）----
-    d = load('words.json')
-    if d:
-        books = []
-        by_grade = {}
-        for g in d.get('groups', []):
-            by_grade.setdefault(g.get('grade', 0), []).append(g)
-        for gr in sorted(by_grade):
-            units = []
-            for g in by_grade[gr]:
-                ws = [mk(w['id'], w.get('word'), 'primary', g.get('title', ''), g.get('id'),
-                         phonetic=w.get('phonetic', ''), pos=w.get('pos', ''),
-                         meaning=w.get('meaning', ''), audio=w.get('audio', ''))
-                      for w in g.get('words', [])]
-                units.append({'id': g['id'], 'title': g.get('title', ''), 'words': ws})
-            books.append({'id': 'p%d' % gr, 'title': '%d 年级' % gr, 'units': units})
-        add_level('primary', '小学英语 3-6 年级', books)
+    # ---- 2. 小学（课标词书，ECDICT 词频 Top 800）----
+    b = collect_core('primary', '小学英语（课标）')
+    if b:
+        add_level('primary', '小学英语（课标）', [b])
 
     # ---- 3. 朗文小学同步 ----
     d = load('longman.json')
@@ -237,43 +244,15 @@ def collect():
             books.append({'id': b.get('level', b.get('id')), 'title': b.get('title', ''), 'units': units})
         add_level('longman', '朗文小学同步 1A-6B', books)
 
-    # ---- 4. 初中 ----
-    d = load('junior_words.json')
-    if d:
-        books = []
-        by_grade = {}
-        for g in d.get('groups', []):
-            by_grade.setdefault(g.get('grade', 7), []).append(g)
-        for gr in sorted(by_grade):
-            units = []
-            for g in by_grade[gr]:
-                ws = [mk(w['id'], w.get('word'), 'junior', g.get('title', ''), g.get('id'),
-                         phonetic=w.get('phonetic', ''), pos=w.get('pos', ''),
-                         meaning=w.get('meaning', ''), audio=w.get('audio', ''),
-                         sentence=w.get('sentence', ''), sentenceCn=w.get('sentenceCn', ''))
-                      for w in g.get('words', [])]
-                units.append({'id': g['id'], 'title': g.get('title', ''), 'words': ws})
-            books.append({'id': 'j%d' % gr, 'title': '%d 年级' % gr, 'units': units})
-        add_level('junior', '初中英语 7-9 年级', books)
+    # ---- 4. 初中（课标词书，ECDICT 词频 Top 1600 累计）----
+    b = collect_core('junior', '初中英语（课标）')
+    if b:
+        add_level('junior', '初中英语（课标）', [b])
 
-    # ---- 5. 高中课本 ----
-    d = load('senior_textbook.json')
-    if d:
-        books = []
-        for b in d.get('books', []):
-            bid = b.get('id') or b.get('name') or 'b'
-            units = []
-            for u in b.get('units', []):
-                ws = []
-                for i, w in enumerate(u.get('words', [])):
-                    wid = w.get('id') or ('senior-%s-w%d' % (u.get('id', 'u'), i + 1))
-                    ws.append(mk(wid, w.get('word'), 'senior', u.get('title', ''), u.get('id'),
-                                 phonetic=w.get('phonetic', ''), pos=w.get('pos', ''),
-                                 meaning=w.get('meaning', ''), audio=w.get('audio', ''),
-                                 sentence=w.get('sentence', ''), sentenceCn=w.get('sentenceCn', '')))
-                units.append({'id': u.get('id'), 'title': u.get('title', ''), 'words': ws})
-            books.append({'id': bid, 'title': b.get('name') or bid, 'units': units})
-        add_level('senior', '高中英语 课本同步', books)
+    # ---- 5. 高中（课标词书，ECDICT 词频 Top 3500 累计）----
+    b = collect_core('senior', '高中英语（课标 3500）')
+    if b:
+        add_level('senior', '高中英语（课标 3500）', [b])
 
     # ---- 6. KET ----
     d = load('ket_words.json')
