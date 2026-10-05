@@ -213,6 +213,13 @@
       <div><span class="state" id="st-politics">加载中</span></div>
       <button class="go" id="go-politics" onclick="enterMod('politics')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-geography">
+      <div class="icon">🌍</div>
+      <div class="name">初高中地理 · 知识点梳理·题库组卷·专题突破</div>
+      <div class="desc">七年级至高三 · 45 个核心知识点（带自测）+ 题库 54 题（选择/填空/读图/论述）+ 5 大专题包；经纬网·中国四大区域·大气海洋·地球运动·工业区位</div>
+      <div><span class="state" id="st-geography">加载中</span></div>
+      <button class="go" id="go-geography" onclick="enterMod('geography')">进入模块</button>
+    </div>
     <div class="mod-card tool-card" id="mod-mindmap" style="border-color:var(--brand,#6a5cff);">
       <div class="icon">🧠</div>
       <div class="name">学习思维导图</div>
@@ -227,7 +234,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组 / 初高中地理每个板块第 1 组</div>
 </div>
 
 <script>
@@ -264,6 +271,7 @@ const MODINFO = {
   jchinese:        { url: './jchinese.html', name: '初中语文 · 字词古诗文文言文阅读名著写作' },
   hchinese:        { url: './hchinese.html', name: '高中语文 · 字词古诗文文言文阅读名著写作' },
   politics:        { url: './politics.html', name: '初高中道法·政治 · 知识点梳理·题库组卷·专题突破' },
+  geography:       { url: './geography.html', name: '初高中地理 · 知识点梳理·题库组卷·专题突破' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -308,7 +316,7 @@ async function resetDevices() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1, geography: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
@@ -351,7 +359,7 @@ function renderHome() {
     $('acctName').textContent = ACCT.username;
     $('acctTag').textContent = ACCT.authorized ? (ACCT.expiry ? '已授权' : '已授权') : '体验模式';
     $('devNote').textContent = `本账号已绑定设备 ${DEV.n} / ${DEV.max} 台`;
-    const anyLocked = !MODS.kids || !MODS.primary || !MODS.middle || !MODS.gk || !MODS.math || !MODS.politics;
+    const anyLocked = !MODS.kids || !MODS.primary || !MODS.middle || !MODS.gk || !MODS.math || !MODS.politics || !MODS.geography;
     show('actCard', anyLocked);
     show('wxCard', anyLocked || !ACCT.authorized);
     if (anyLocked) setMsg('actMsg', ACCT.authorized ? '当前部分模块未解锁，输入授权码解锁全部模块，或联系管理员开通对应模块。' : '当前为体验模式，每个模块可免费体验一个单元。');
@@ -361,7 +369,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics', 'geography'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {
