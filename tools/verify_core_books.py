@@ -45,7 +45,7 @@ def check(name, cond, detail=''):
 # ---------- 登录并授权 ----------
 U = 'vexa%d' % int(time.time() % 100000)
 DEV = 'verify-core-dev'
-st, r = req('POST', BASE + '/api/register', {'username': U, 'password': 'test123456', 'device': DEV})
+st, r = req('POST', BASE + '/api/register', {'username': U, 'password': 'test123456', 'device': DEV, 'is_test': True})
 T = r.get('token', '')
 st, r = req('POST', BASE + '/api/admin/login', {'secret': SECRET})
 AT = r.get('token', '')
