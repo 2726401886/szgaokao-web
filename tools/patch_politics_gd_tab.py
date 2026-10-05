@@ -100,14 +100,14 @@ add("  function renderSide() {\n    if (section === 'exam' || section === 'link'
 # ---------- 5) GD 渲染器（插在 link 板块注释之前）----------
 GD_ANCHOR = "  // ================== 板块：题库组卷 =================="
 GD_JS = r'''  // ================== 板块：广东高考卷（结构仿真卷） ==================
-  let GD = { loaded: false, meta: null, papers: [], cur: null, showKey: {}, picks: {} };
+  let GD = { loaded: false, meta: null, papers: [], cur: null, showKey: {} };
 
   async function renderGdPage() {
     $('#mainArea').innerHTML = '<div class="gd-wrap"><div class="empty">加载中…</div></div>';
     if (!GD.loaded) {
       const r = await api('/api/politics-gd');
       if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="empty">加载失败，请稍后重试</div>'; return; }
-      GD.loaded = true; GD.meta = r.j;
+      GD.loaded = true; GD.meta = r.j; GD.papers = r.j.papers || [];
     }
     renderGdList();
   }
@@ -140,7 +140,7 @@ GD_JS = r'''  // ================== 板块：广东高考卷（结构仿真卷�
     const r = await api('/api/politics-gd?paper=' + encodeURIComponent(pid));
     if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="empty">试卷加载失败</div>'; return; }
     GD.cur = r.j;
-    GD.showKey = {}; GD.picks = {};
+    GD.showKey = {};
     renderGdPaper();
   }
 

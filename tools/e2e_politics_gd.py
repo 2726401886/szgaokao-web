@@ -123,8 +123,38 @@ try:
     check('含 /api/politics-gd 调用', '/api/politics-gd' in html)
     check('含 renderGdPage 渲染器', 'renderGdPage' in html)
     check('含 gd- 样式类', 'gd-paper' in html)
+    # —— 关键回归断言：接口数据必须被赋给渲染用的状态变量 ——
+    # 教训：曾漏写 GD.papers = r.j.papers，导致「可选试卷（0 套）」、点击无反应
+    check('GD.papers 已从接口赋值', 'GD.papers = r.j.papers' in html)
+    check('GD.meta 已从接口赋值', 'GD.meta = r.j' in html)
+    # 渲染用的字段必须都有数据来源（papers 是唯一入口）
+    check('试卷卡片用 GD.papers 渲染', "GD.papers.map(p =>" in html or "GD.papers.map(function" in html)
+    # 试卷 id 必须出现在点击处理器里，否则 data-p 绑不上
+    check('点击处理器 openGdPaper 存在', 'openGdPaper' in html)
 except Exception as e:
     check('politics 页面可访问', False, str(e)[:60])
+
+print('\n=== 步骤6b：GD 渲染器字段自洽（静态审计）===')
+import re as _re
+gd_block = _re.search(r'板块：广东高考卷.*?// ================== 板块：题库组卷', html, _re.S)
+check('GD 代码块可提取', gd_block is not None)
+if gd_block:
+    g = gd_block.group(0)
+    # 声明的 GD 字段每个都要有写入点
+    for fld in ['meta', 'papers', 'cur', 'showKey', 'loaded']:
+        reads = len(_re.findall(r'GD\.' + fld + r'\b(?!\s*=)', g))
+        writes = len(_re.findall(r'GD\.' + fld + r'\s*=', g))
+        check('GD.%-7s 有读有写' % fld, writes >= 1, '读=%d 写=%d' % (reads, writes))
+    # 所有内部函数都有定义
+    defs = set(_re.findall(r'function (\w*[Gg]d\w*)', g))
+    calls = set(_re.findall(r'\b(\w*[Gg]d\w*)\s*\(', g)) - {'esc', 'speak', 'api', 'renderMain', 'if', 'for', 'while', 'switch', 'catch', 'return', 'function'}
+    undef = calls - defs
+    check('无「调用但未定义」的内部函数', not undef, '未定义=%s' % sorted(undef) if undef else '')
+    # CSS 类名对账
+    css = set(_re.findall(r'\.(gd-[a-z-]+)\s*\{', html))
+    used = {t for u in _re.findall(r'class="(gd-[a-z- ]+)', html) for t in u.split()}
+    missing = used - css
+    check('gd-* 类名 CSS 全部已定义', not missing, '缺失=%s' % sorted(missing) if missing else '')
 
 print('\n=== 步骤7：不存在的卷返回 404 ===')
 st, _ = req('GET', BASE + '/api/politics-gd?paper=gdzz9999', headers=H)
