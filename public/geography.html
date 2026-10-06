@@ -712,7 +712,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
       '<div class="gd2-wrap">' +
         '<div class="gd2-hd">📄 广东省高考地理 · 真题练习<span class="gd2-ed">真题原卷</span></div>' +
         (m.notice ? '<div class="gd2-warn">⚠️ ' + esc(m.notice.replace(/\*\*/g, '')) + '</div>' : '') +
-        '<div class="gd2-tip">本卷为广东省普通高中学业水平选择性考试真题，<b>题干与选项为真题原文</b>，图表已转为文字描述；答案与解析来源详见各卷说明（2021–2023 为真题配套解析，2024 为参考解析），均非官方标准答案，建议配合官方答案册核对。</div>' +
+        '<div class="gd2-tip">本卷为广东省普通高中学业水平选择性考试真题，<b>题干与选项为真题原文</b>，图表已转为文字描述；答案与解析来源详见各卷说明（2021–2025 为真题配套解析，2026 为考生回忆版），均非官方标准答案，建议配合官方答案册核对。</div>' +
         '<div class="gd2-st-h">📋 试卷结构</div>' +
         '<div class="gd2-cards" style="margin-bottom:16px;">' +
           m.structure.map(st => '<div class="gd2-card" style="cursor:default;"><div class="gd2-card-y" style="font-size:13px;">' + st.score + '</div>' +

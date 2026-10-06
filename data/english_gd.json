@@ -1,0 +1,4089 @@
+{
+ "region": "广东",
+ "examType": "新高考Ⅰ卷·英语",
+ "kind": "real-paper",
+ "notice": "2021–2024 为官方原版真题原文；2025–2026 为考生回忆整理版（无官方完整原文），均非官方标准答案。听力无音频，仅保留题干/选项（2021 完整，其余仅答案）。",
+ "structure": "听力（20题/30分）+ 阅读（15题/37.5分）+ 七选五（5题/12.5分）+ 完形填空（15题/15分）+ 语法填空（10题/15分）+ 写作（应用文15分+读后续写25分=40分），满分150分，时长120分钟。",
+ "papers": [
+  {
+   "id": "gdeng2026",
+   "year": 2026,
+   "kind": "recalled",
+   "title": "2026 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "听力第 1 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "听力第 2 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "听力第 3 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "听力第 4 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "听力第 5 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "听力第 6 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "听力第 7 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "听力第 8 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "听力第 9 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "听力第 10 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "听力第 11 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "听力第 12 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "听力第 13 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "听力第 14 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "听力第 15 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "听力第 16 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "听力第 17 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "听力第 18 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "听力第 19 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "听力第 20 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "How to improve sleep quality. Sleep is very important for health. Poor sleep causes low energy and bad mood. Experts give advice: Keep regular sleep time. Do not stay up late. Keep bedroom dark and quiet. Avoid coffee after noon. Do not use phones before bedtime. If you cannot fall asleep for 20 minutes, get up and do quiet reading until you feel sleepy.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "What result does poor sleep bring?",
+         "options": [
+          "A. More energy.",
+          "B. Low energy and bad mood.",
+          "C. Better memory.",
+          "D. Quick thinking."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "Which habit helps sleep?",
+         "options": [
+          "A. Drink coffee at 4 p.m.",
+          "B. Use mobile before bed.",
+          "C. Go to bed at fixed time.",
+          "D. Stay up late on weekends."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "What should you do if you cannot fall asleep after 20 min?",
+         "options": [
+          "A. Keep lying in bed.",
+          "B. Get up and read quietly.",
+          "C. Watch videos.",
+          "D. Drink hot tea with sugar."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "Emily loved her boyfriend deeply. One winter, she planned to drive to visit him for Christmas. The weather forecast warned of heavy snow. Her parents told her not to go, but she refused. She set off in the afternoon. Soon snow became heavy. The road was slippery. Her car slid off the road and got stuck. It was freezing. She felt helpless. Luckily, a local farmer passed by and found her. He helped her get out of the snow and took her to his warm house. She was safe.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "Why did Emily want to drive out?",
+         "options": [
+          "A. To visit her boyfriend for Christmas.",
+          "B. To visit her parents.",
+          "C. To attend a party.",
+          "D. To buy Christmas gifts."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "What warning did the weather report give?",
+         "options": [
+          "A. Heavy snow.",
+          "B. Heavy rain.",
+          "C. Strong wind.",
+          "D. Fog."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "What happened to Emily’s car?",
+         "options": [
+          "A. It ran out of petrol.",
+          "B. It slid off road and got stuck.",
+          "C. It hit a tree.",
+          "D. It broke down."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 27,
+         "type": "single",
+         "q": "Who saved Emily?",
+         "options": [
+          "A. Her boyfriend.",
+          "B. Her parents.",
+          "C. A local farmer.",
+          "D. A policeman."
+         ],
+         "answer": 2,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "Many young people choose to take a gap year after high school. A gap year means taking one year off before entering university. Some students travel, some work or volunteer. Gap year helps students know themselves better. They can gain work experience and clear their goals. But there are disadvantages. It costs money. Some students lose motivation and do not go to college later.",
+       "questions": [
+        {
+         "no": 28,
+         "type": "single",
+         "q": "What is a gap year?",
+         "options": [
+          "A. One-year break before university.",
+          "B. One year study abroad.",
+          "C. Part-time study in college.",
+          "D. Summer vacation."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What is an advantage of gap year?",
+         "options": [
+          "A. Save tuition fees.",
+          "B. Help students find clear goals.",
+          "C. Finish college faster.",
+          "D. Get free travelling."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "What risk does gap year have?",
+         "options": [
+          "A. Hard to find jobs.",
+          "B. May lose motivation for college.",
+          "C. Waste of study time in high school.",
+          "D. Cannot get university admission."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 31,
+         "type": "single",
+         "q": "What is the text about?",
+         "options": [
+          "A. Advantages and risks of gap year.",
+          "B. How to apply for gap year.",
+          "C. Popular gap year jobs.",
+          "D. College admission rules."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Ocean waves can produce clean electricity. Wave energy is renewable. It does not produce greenhouse gas. However, wave energy technology is still developing. The equipment must be strong enough to stand rough sea conditions. The cost is high at present. Many countries are testing wave power stations. Scientists hope wave energy can become an important clean energy source in the future.",
+       "questions": [
+        {
+         "no": 32,
+         "type": "single",
+         "q": "What is the advantage of wave energy?",
+         "options": [
+          "A. Cheap and easy to build.",
+          "B. Renewable and no greenhouse gas.",
+          "C. Can be used everywhere.",
+          "D. Works well in calm lakes."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "What difficulty does wave energy face?",
+         "options": [
+          "A. Waves are not steady.",
+          "B. Equipment needs to resist rough sea and high cost.",
+          "C. It pollutes seawater.",
+          "D. Hard to transport electricity."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "What is scientists’ hope?",
+         "options": [
+          "A. Stop using all fossil fuels.",
+          "B. Wave energy becomes important clean energy.",
+          "C. Build wave power on every coast.",
+          "D. Use wave energy for desalination."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What is the text about?",
+         "options": [
+          "A. Wave energy: clean energy with challenges.",
+          "B. Different kinds of new energy.",
+          "C. How waves form in oceans.",
+          "D. Ocean environmental protection."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分）",
+       "passage": "College life brings many new choices. Sleep, social life and study are three important parts. ___36___ We need to decide which is the most important and arrange them in order. ___37___ Good sleep keeps you energetic for study. Social life helps you make friends, but do not spend too much time on parties. ___38___ Study is the main task of college. Balance does not mean equal time for everything. ___39___ Adjust your plan when needed. Everyone has different priorities. ___40___",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. Sleep is the base of everything.",
+          "B. Study should never be ignored.",
+          "C. We need to balance them properly.",
+          "D. You can make your own suitable plan.",
+          "E. Spend all your time on study.",
+          "F. Avoid all social activities.",
+          "G. Sleep is less important than study."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. Sleep is the base of everything.",
+          "B. Study should never be ignored.",
+          "C. We need to balance them properly.",
+          "D. You can make your own suitable plan.",
+          "E. Spend all your time on study.",
+          "F. Avoid all social activities.",
+          "G. Sleep is less important than study."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. Sleep is the base of everything.",
+          "B. Study should never be ignored.",
+          "C. We need to balance them properly.",
+          "D. You can make your own suitable plan.",
+          "E. Spend all your time on study.",
+          "F. Avoid all social activities.",
+          "G. Sleep is less important than study."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. Sleep is the base of everything.",
+          "B. Study should never be ignored.",
+          "C. We need to balance them properly.",
+          "D. You can make your own suitable plan.",
+          "E. Spend all your time on study.",
+          "F. Avoid all social activities.",
+          "G. Sleep is less important than study."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. Sleep is the base of everything.",
+          "B. Study should never be ignored.",
+          "C. We need to balance them properly.",
+          "D. You can make your own suitable plan.",
+          "E. Spend all your time on study.",
+          "F. Avoid all social activities.",
+          "G. Sleep is less important than study."
+         ],
+         "answer": 3,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；选项以考场原卷为准）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "完形填空第 41 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "完形填空第 42 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "完形填空第 43 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "完形填空第 44 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "完形填空第 45 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "完形填空第 46 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "完形填空第 47 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "完形填空第 48 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "完形填空第 49 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "完形填空第 50 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（51–52）",
+       "passage": "Chinese tea has a long history. Tea is served to guests as a sign of respect. Different kinds of tea have different tastes. Green tea is fresh. Black tea is strong. Tea culture has spread worldwide.",
+       "questions": [
+        {
+         "no": 51,
+         "type": "fill",
+         "q": "Tea ___51___ (serve) to guests as a sign of respect.",
+         "answer": "is served",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 52,
+         "type": "fill",
+         "q": "Drinking tea ___52___ (be) a quiet way to slow down our busy life.",
+         "answer": "is",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是Emily，你需要从睡眠、社交、学习三件大学生活事项中选出最重要的一项，并排序，阐述理由。（2026新题型，无李华）写作要求：80词左右，说明排序+理由。",
+         "reference": "Among sleep, social life and study, I regard sleep as the most important, followed by study and social life. Good sleep keeps us energetic and healthy. Without enough sleep, we cannot focus on study. Study is our main task in college. Social activities are helpful but should not take too much time. Proper balance helps us enjoy college life."
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "Emily’s car was stuck in heavy snow. She sat in the cold car, worried and helpless. She thought about her parents’ warning and regretted her decision to drive in the snowstorm.\nParagraph 1: Just as she was losing hope, she saw a light coming from far away.\nParagraph 2: After she recovered in the farmer’s warm house, she called her parents to tell them she was safe.\n（参考范文略）",
+         "reference": ""
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  },
+  {
+   "id": "gdeng2025",
+   "year": 2025,
+   "kind": "recalled",
+   "title": "2025 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "听力第 1 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "听力第 2 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "听力第 3 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "听力第 4 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "听力第 5 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "听力第 6 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "听力第 7 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "听力第 8 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "听力第 9 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "听力第 10 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "听力第 11 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "听力第 12 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "听力第 13 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "听力第 14 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "听力第 15 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "听力第 16 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "听力第 17 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "听力第 18 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "听力第 19 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "听力第 20 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "The growing of planes, trains and automobiles is a large part of global CO₂ emissions. As transport demand rises worldwide, we need new clean energy. Data from 2018 global transport emissions: Road passenger vehicles 45.1%, Road goods 29.4%, Shipping 10.6%, Airplanes 10%, Rail 4.9%. Trains using electricity can be clean if power comes from renewable sources. Cars can use batteries or hydrogen. Ships are testing liquid fuels made from plants. We need to speed up development of renewable fuels.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "What percentage of global transport emissions came from road passenger vehicles in 2018?",
+         "options": [
+          "A. 11.6%.",
+          "B. 45.1%.",
+          "C. 74.5%.",
+          "D. 88.1%."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "Which transport can become green comparatively easily?",
+         "options": [
+          "A. Planes.",
+          "B. Trains.",
+          "C. Ships.",
+          "D. Trucks."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "What is the writer’s opinion?",
+         "options": [
+          "A. Limiting fuel consumption.",
+          "B. Making cleaner energy.",
+          "C. Limiting transport speed.",
+          "D. Banning private cars."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "In my ninth-grade teaching class year, I met a cowboy who told his story. I found that his way of raising his son was amazing. The cowboy was a modern-day Juliet. He created these people and a cowboy story. Slowly I understood the problem was not students’ ability, but our teaching method. When I walked into class with a new teaching plan, students were surprised. I used stories with characters, not boring textbooks. The result was amazing. Students became willing to write.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "What was the problem in the first year?",
+         "options": [
+          "A. Poor teaching methods.",
+          "B. Too little homework.",
+          "C. No good textbooks.",
+          "D. Students were lazy."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "How did students feel at first seeing the new plan?",
+         "options": [
+          "A. Mixed.",
+          "B. Amazed.",
+          "C. Excited.",
+          "D. Doubting."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "What does the author’s experience show?",
+         "options": [
+          "A. Teaching is learning.",
+          "B. Still waters run deep.",
+          "C. Knowledge is power.",
+          "D. Practice makes perfect."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "While safety improvements have been made in cars in recent years, traffic studies show a decline in pedestrian mobility, especially among young children. Many children now get driven everywhere. Researchers studied kids in Australia. They found that many children were not allowed to walk independently. Parents worried about safety. This reduced children’s chance to practice road skills. Although these worries were understandable, the number of car accidents in Australia over the years has been dropping. The risk was largely ineffective fear.",
+       "questions": [
+        {
+         "no": 27,
+         "type": "single",
+         "q": "What is the main point in paragraph 1?",
+         "options": [
+          "A. Kids walk less and ride more.",
+          "B. Parents worry about traffic safety.",
+          "C. People drive more slowly.",
+          "D. Pedestrians get more protection."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 28,
+         "type": "single",
+         "q": "What was the Australian researchers’ finding?",
+         "options": [
+          "A. Kids lost chances to practice road skills.",
+          "B. Parents never let kids go out.",
+          "C. Traffic accidents increased greatly.",
+          "D. Schools did not teach road safety."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What does “turned out largely ineffective” mean?",
+         "options": [
+          "A. The risk was not as big as feared.",
+          "B. Safety rules were useless.",
+          "C. Police did not work well.",
+          "D. Parents did not protect kids."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "What is the purpose of the text?",
+         "options": [
+          "A. To explain why kids walk less.",
+          "B. To praise Australian parents.",
+          "C. To call for more road rules.",
+          "D. To reduce car use."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Microplastics have settled in the deep sea and Himalayas. They are even found inside human bodies. Scientists are trying to find ways to remove microplastics from drinking water. One team developed a material with calcium carbonate. It can catch nearly 90% microplastics in water. The material is cheap and easy to produce. However, the material cannot remove all types of microplastics. More research is still needed.",
+       "questions": [
+        {
+         "no": 31,
+         "type": "single",
+         "q": "Where have microplastics been found?",
+         "options": [
+          "A. Only in oceans.",
+          "B. Sea, mountains and human bodies.",
+          "C. Only in drinking water.",
+          "D. In plastic factories."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 32,
+         "type": "single",
+         "q": "What can the new material do?",
+         "options": [
+          "A. Produce clean water.",
+          "B. Catch most microplastics.",
+          "C. Kill bacteria.",
+          "D. Turn plastic into fuel."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "What is the limitation of the material?",
+         "options": [
+          "A. It costs too much.",
+          "B. It cannot remove all microplastics.",
+          "C. It breaks down quickly.",
+          "D. It is hard to transport."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "What is the author’s attitude?",
+         "options": [
+          "A. Hopeful but cautious.",
+          "B. Negative.",
+          "C. Uninterested.",
+          "D. Doubtful."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What is the text mainly about?",
+         "options": [
+          "A. Harm of microplastics.",
+          "B. New material to remove microplastics.",
+          "C. Sources of microplastics.",
+          "D. How to produce clean water."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分；选项原文未完整提供）",
+       "passage": "Catherine Murphy works in a university cafe. She serves students every day. Being a mother and wife has helped her become the woman she is. She believes she is here to serve. One thing Murphy may not know is that her smile is contagious. Joanna Wright, a student, visits the cafe often. ___36___ “Catherine always has a huge smile on her face.” “I enjoy working in the cafe,” Murphy said. ___37___ She has every intention of staying and continuing doing what she loves.",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. （选项 A）",
+          "B. （选项 B）",
+          "C. （选项 C）",
+          "D. （选项 D）",
+          "E. （选项 E）",
+          "F. （选项 F）",
+          "G. （选项 G）"
+         ],
+         "answer": 4,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. （选项 A）",
+          "B. （选项 B）",
+          "C. （选项 C）",
+          "D. （选项 D）",
+          "E. （选项 E）",
+          "F. （选项 F）",
+          "G. （选项 G）"
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. （选项 A）",
+          "B. （选项 B）",
+          "C. （选项 C）",
+          "D. （选项 D）",
+          "E. （选项 E）",
+          "F. （选项 F）",
+          "G. （选项 G）"
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. （选项 A）",
+          "B. （选项 B）",
+          "C. （选项 C）",
+          "D. （选项 D）",
+          "E. （选项 E）",
+          "F. （选项 F）",
+          "G. （选项 G）"
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. （选项 A）",
+          "B. （选项 B）",
+          "C. （选项 C）",
+          "D. （选项 D）",
+          "E. （选项 E）",
+          "F. （选项 F）",
+          "G. （选项 G）"
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；选项以考场原卷为准）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "完形填空第 41 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "完形填空第 42 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "完形填空第 43 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "完形填空第 44 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "完形填空第 45 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "完形填空第 46 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "完形填空第 47 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "完形填空第 48 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "完形填空第 49 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "完形填空第 50 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（61–64）",
+       "passage": "Go is an ancient board game. Tu is a top player. A decent winner always tries to beat the opponent by no more than one or two points as a gesture of respect. Tu says that the balance between black and white stones, the beauty in the strategic placement of the pieces inspired artists to create paintings and digital pictures.",
+       "questions": [
+        {
+         "no": 61,
+         "type": "fill",
+         "q": "A decent winner always ___61___ (try) to beat the opponent by no more than one or two points.",
+         "answer": "tries",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 62,
+         "type": "fill",
+         "q": "as a gesture ___62___ respect",
+         "answer": "of",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 63,
+         "type": "fill",
+         "q": "the ___63___ (strategy) placement of the pieces",
+         "answer": "strategic",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 64,
+         "type": "fill",
+         "q": "___64___ (digital) generated pictures",
+         "answer": "digitally",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是李华，学校英文报计划新增栏目，外教Jenny给出两个选项：“Fun at my school”和“Guess who I am”。请写邮件，选择一个栏目并说明理由。",
+         "reference": "Dear Jenny,\nI’m writing to offer my suggestion for the new column of our school English newspaper. I choose “Fun at my school”.\nThis column can show interesting activities in our school, such as sports meetings and art festivals. It helps students share happy moments and build a positive campus culture.\nI hope my suggestion will be helpful.\nYours,\nLi Hua"
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "My pride had kept me from calling my old friend for years. Last month I met a common friend, who told me my old friend still remembered me. I decided to call him.\nParagraph 1: I picked up my phone and dialed his number slowly.\nParagraph 2: We talked for hours, laughing, remembering old times, and slowly rebuilding what had been lost.\n（参考范文略）",
+         "reference": ""
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  },
+  {
+   "id": "gdeng2024",
+   "year": 2024,
+   "kind": "real-paper",
+   "title": "2024 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "听力第 1 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "听力第 2 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "听力第 3 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "听力第 4 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "听力第 5 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "听力第 6 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "听力第 7 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "听力第 8 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "听力第 9 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "听力第 10 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "听力第 11 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "听力第 12 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "听力第 13 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "听力第 14 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "听力第 15 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "听力第 16 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "听力第 17 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "听力第 18 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "听力第 19 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "听力第 20 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "City Museum Ticket Guide. Opening: 9:00–17:00, closed Mondays. Tickets: Adults 40 yuan; Students 20 yuan; under 12 free. Free guided tour: 10 a.m. and 3 p.m. every day. Book tickets online to avoid queuing.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "When is the museum closed?",
+         "options": [
+          "A. Every Monday.",
+          "B. Sunday.",
+          "C. Friday.",
+          "D. Public holidays."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "How much for a student ticket?",
+         "options": [
+          "A. Free.",
+          "B. 20 yuan.",
+          "C. 40 yuan.",
+          "D. 60 yuan."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "What is the advantage of online booking?",
+         "options": [
+          "A. Cheaper tickets.",
+          "B. Skip the queue.",
+          "C. Free guide.",
+          "D. Free souvenir."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "I started growing vegetables on my balcony two years ago. I planted tomatoes and green beans. At first many seeds failed to grow. I searched online to learn watering and sunlight skills. Finally I got harvest. Fresh vegetables tasted much better than supermarket ones. Balcony gardening brings me joy and teaches me patience.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "Where did the author grow vegetables?",
+         "options": [
+          "A. Backyard.",
+          "B. Balcony.",
+          "C. Farm.",
+          "D. Community garden."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "What difficulty did he meet at first?",
+         "options": [
+          "A. No soil.",
+          "B. Seeds did not grow well.",
+          "C. Lack of space.",
+          "D. Too much rain."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "What did he learn?",
+         "options": [
+          "A. How to sell vegetables.",
+          "B. Patience.",
+          "C. Make money.",
+          "D. Design buildings."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 27,
+         "type": "single",
+         "q": "What is the text?",
+         "options": [
+          "A. A personal experience.",
+          "B. Science report.",
+          "C. Advertisement.",
+          "D. Guidebook."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "Online learning becomes popular. It is flexible. Students can study at any time and anywhere. But online learning also has weaknesses. Students need strong self-discipline. Without teachers watching, some students get distracted easily. Experts suggest setting fixed timetable and creating quiet study space for online classes.",
+       "questions": [
+        {
+         "no": 28,
+         "type": "single",
+         "q": "What is the advantage of online learning?",
+         "options": [
+          "A. Free of charge.",
+          "B. Flexible time and place.",
+          "C. No homework.",
+          "D. No exams."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What is the main challenge?",
+         "options": [
+          "A. Slow internet.",
+          "B. Need self-discipline.",
+          "C. Too many courses.",
+          "D. No textbooks."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "What suggestion do experts give?",
+         "options": [
+          "A. Study in cafes.",
+          "B. Make fixed timetable and quiet space.",
+          "C. Study all day long.",
+          "D. Ask teachers to watch live."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 31,
+         "type": "single",
+         "q": "What is the text about?",
+         "options": [
+          "A. Advantages and challenges of online learning.",
+          "B. How to choose online courses.",
+          "C. The future of schools.",
+          "D. Problems of internet."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Bees are very important insects. They pollinate flowering plants. One third of our food depends on bee pollination. In recent years, bee numbers are dropping. Pesticides, habitat loss and climate change are main reasons. Many scientists are working to protect bees. We can help by planting native flowers in our yards and reducing pesticide use.",
+       "questions": [
+        {
+         "no": 32,
+         "type": "single",
+         "q": "Why are bees important?",
+         "options": [
+          "A. They produce honey only.",
+          "B. They pollinate plants for food.",
+          "C. They kill pests.",
+          "D. They clean air."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "Which is NOT the reason for bee decline?",
+         "options": [
+          "A. Habitat loss.",
+          "B. Pesticides.",
+          "C. Climate change.",
+          "D. Lack of honey."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "What can ordinary people do to help bees?",
+         "options": [
+          "A. Raise bees at home.",
+          "B. Plant native flowers.",
+          "C. Stop eating honey.",
+          "D. Build bee houses in cities."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What is the purpose of the text?",
+         "options": [
+          "A. To introduce bees and call for protection.",
+          "B. Teach how to keep bees.",
+          "C. Explain how honey is made.",
+          "D. Study bee behaviour."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分）",
+       "passage": "Tips for travelling alone. Travelling alone can be wonderful. ___36___ Plan your trip carefully. Book hotels and research local transport. Keep your family informed. Send them your daily plan. ___37___ Keep your valuables safe. Do not carry too much cash. ___38___ Talk to local people but keep alert. Enjoy your own pace. You can change plans freely. ___39___ It is a great chance to know yourself. ___40___",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. But you need to keep safe.",
+          "B. Be friendly but careful.",
+          "C. It helps them know your location.",
+          "D. You do not need to follow others’ timetable.",
+          "E. Never take photos in public places.",
+          "F. Bring lots of cash.",
+          "G. You will get unforgettable experience."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. But you need to keep safe.",
+          "B. Be friendly but careful.",
+          "C. It helps them know your location.",
+          "D. You do not need to follow others’ timetable.",
+          "E. Never take photos in public places.",
+          "F. Bring lots of cash.",
+          "G. You will get unforgettable experience."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. But you need to keep safe.",
+          "B. Be friendly but careful.",
+          "C. It helps them know your location.",
+          "D. You do not need to follow others’ timetable.",
+          "E. Never take photos in public places.",
+          "F. Bring lots of cash.",
+          "G. You will get unforgettable experience."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. But you need to keep safe.",
+          "B. Be friendly but careful.",
+          "C. It helps them know your location.",
+          "D. You do not need to follow others’ timetable.",
+          "E. Never take photos in public places.",
+          "F. Bring lots of cash.",
+          "G. You will get unforgettable experience."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. But you need to keep safe.",
+          "B. Be friendly but careful.",
+          "C. It helps them know your location.",
+          "D. You do not need to follow others’ timetable.",
+          "E. Never take photos in public places.",
+          "F. Bring lots of cash.",
+          "G. You will get unforgettable experience."
+         ],
+         "answer": 6,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；选项以考场原卷为准）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "完形填空第 41 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "完形填空第 42 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "完形填空第 43 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "完形填空第 44 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "完形填空第 45 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "完形填空第 46 题",
+         "options": [],
+         "answer": -33,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "完形填空第 47 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "完形填空第 48 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "完形填空第 49 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "完形填空第 50 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（51）",
+       "passage": "Paper was invented in China thousands of years ago. Before paper, people wrote on bamboo or silk. Paper making spread to other countries later. Paper made knowledge easier to spread. Now digital screens are popular, but paper is still widely used in books and packages.",
+       "questions": [
+        {
+         "no": 51,
+         "type": "fill",
+         "q": "Paper ___51___ (invent) in China thousands of years ago.",
+         "answer": "was invented",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是李华，你校英文报社邀请外籍教师写一篇关于西方节日的短文，请你写邮件邀请Mr. Smith。要点：1. 写信目的；2. 文章要求（介绍一个西方节日，80词左右）；3. 截稿时间。",
+         "reference": "Dear Mr. Smith,\nI’m writing on behalf of our school English newspaper. We would like to invite you to write an article about one western festival.\nYou can introduce its origin and customs. The article should be around 80 words. Please send it before June 15.\nWe will greatly appreciate your contribution.\nYours,\nLi Hua"
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "On a cold winter morning, I walked to school and saw a stray cat trembling beside the wall…（原文与续写开头略）",
+         "reference": ""
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  },
+  {
+   "id": "gdeng2023",
+   "year": 2023,
+   "kind": "real-paper",
+   "title": "2023 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "听力第 1 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "听力第 2 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "听力第 3 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "听力第 4 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "听力第 5 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "听力第 6 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "听力第 7 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "听力第 8 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "听力第 9 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "听力第 10 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "听力第 11 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "听力第 12 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "听力第 13 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "听力第 14 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "听力第 15 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "听力第 16 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "听力第 17 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "听力第 18 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "听力第 19 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "听力第 20 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "Summer Youth Camp. Time: July 10–24. Activities: hiking, handcraft, English speech, campfire. Price: 1600 yuan, including meals and accommodation. For students aged 13–17. Apply before June 25.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "Who can join?",
+         "options": [
+          "A. 12-year-old boy.",
+          "B. 15-year-old girl.",
+          "C. 18-year-old student.",
+          "D. 10-year-old kid."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "What is included in the price?",
+         "options": [
+          "A. Transportation.",
+          "B. Books.",
+          "C. Meals.",
+          "D. Souvenirs."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "When is the application deadline?",
+         "options": [
+          "A. June 25.",
+          "B. July 10.",
+          "C. July 24.",
+          "D. August 1."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "I used to hate running. I felt tired quickly and out of breath. My PE teacher encouraged me to try short runs. I started with 5 minutes every day. Gradually I increased my time. Half a year later, I could finish a 5km run. Running changed me. I became stronger and more confident. When I meet difficulties in study, I think of running and keep going.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "What was the author’s feeling about running at first?",
+         "options": [
+          "A. Enjoyable.",
+          "B. Dislike.",
+          "C. Excited.",
+          "D. Relaxed."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "Who encouraged the author?",
+         "options": [
+          "A. Parents.",
+          "B. Classmate.",
+          "C. PE teacher.",
+          "D. Coach."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "What change did running bring?",
+         "options": [
+          "A. He became taller.",
+          "B. More confident.",
+          "C. Better grades overnight.",
+          "D. More friends."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 27,
+         "type": "single",
+         "q": "What can we learn?",
+         "options": [
+          "A. Never give up step by step.",
+          "B. Running is the best sport.",
+          "C. PE class is very important.",
+          "D. Long running is easy."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "Urban gardens are small gardens built inside cities. They can be on rooftops, empty lots or balconies. City residents grow vegetables and flowers there. Urban gardens improve city environment. Plants cool the air and absorb CO₂. They also bring people together. Neighbors work and chat in gardens. Some cities offer free seeds and tools to support urban gardening.",
+       "questions": [
+        {
+         "no": 28,
+         "type": "single",
+         "q": "Where can urban gardens be built?",
+         "options": [
+          "A. Farmland outside cities.",
+          "B. Rooftops and empty city land.",
+          "C. Forests.",
+          "D. Riversides."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What benefit do urban gardens bring?",
+         "options": [
+          "A. More jobs.",
+          "B. Cool air and social connection.",
+          "C. Cheaper housing.",
+          "D. More rainfall."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "What support do cities give?",
+         "options": [
+          "A. Free land.",
+          "B. Free seeds and tools.",
+          "C. Money reward.",
+          "D. Garden training classes."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 31,
+         "type": "single",
+         "q": "What is the text about?",
+         "options": [
+          "A. Urban gardens in cities.",
+          "B. How to grow vegetables.",
+          "C. City environment pollution.",
+          "D. Green travel."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Many animals use colors to protect themselves. Some animals have colors similar to their surroundings. This is camouflage. They can hide from enemies. Some animals have bright warning colors. Bright colors tell predators they are poisonous or dangerous. Colors can also be used for communication. Butterflies use bright wings to attract mates.",
+       "questions": [
+        {
+         "no": 32,
+         "type": "single",
+         "q": "What is camouflage?",
+         "options": [
+          "A. Colors matching surroundings to hide.",
+          "B. Bright colors to warn enemies.",
+          "C. Changing colors with temperature.",
+          "D. Colors for attracting partners."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "Why do some animals have bright warning colors?",
+         "options": [
+          "A. To attract friends.",
+          "B. To show they are dangerous.",
+          "C. To look beautiful.",
+          "D. To change skin color."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "What function of color is mentioned for butterflies?",
+         "options": [
+          "A. Hide from hunters.",
+          "B. Keep warm.",
+          "C. Attract mates.",
+          "D. Warn enemies."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What is the main topic?",
+         "options": [
+          "A. Animal colors and their functions.",
+          "B. How animals change colors.",
+          "C. Dangerous animals in nature.",
+          "D. Animal protection."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分）",
+       "passage": "How to protect our eyes. Eyes are very important. ___36___ Take breaks when using screens. Follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds. ___37___ Do not read in dark or moving places. Eat healthy food. Carrots, eggs and fish are good for eyes. ___38___ Wear sunglasses in strong sunlight. Have regular eye checks. ___39___ Small habits protect your eyes. ___40___",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. Good eyesight helps us enjoy the world.",
+          "B. Protect your eyes from strong sunlight.",
+          "C. Keep proper distance when reading.",
+          "D. Doctors can find eye problems early.",
+          "E. Avoid eating sweet food.",
+          "F. Stop using phones forever.",
+          "G. It is worth developing these habits."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. Good eyesight helps us enjoy the world.",
+          "B. Protect your eyes from strong sunlight.",
+          "C. Keep proper distance when reading.",
+          "D. Doctors can find eye problems early.",
+          "E. Avoid eating sweet food.",
+          "F. Stop using phones forever.",
+          "G. It is worth developing these habits."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. Good eyesight helps us enjoy the world.",
+          "B. Protect your eyes from strong sunlight.",
+          "C. Keep proper distance when reading.",
+          "D. Doctors can find eye problems early.",
+          "E. Avoid eating sweet food.",
+          "F. Stop using phones forever.",
+          "G. It is worth developing these habits."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. Good eyesight helps us enjoy the world.",
+          "B. Protect your eyes from strong sunlight.",
+          "C. Keep proper distance when reading.",
+          "D. Doctors can find eye problems early.",
+          "E. Avoid eating sweet food.",
+          "F. Stop using phones forever.",
+          "G. It is worth developing these habits."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. Good eyesight helps us enjoy the world.",
+          "B. Protect your eyes from strong sunlight.",
+          "C. Keep proper distance when reading.",
+          "D. Doctors can find eye problems early.",
+          "E. Avoid eating sweet food.",
+          "F. Stop using phones forever.",
+          "G. It is worth developing these habits."
+         ],
+         "answer": 6,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；选项以考场原卷为准）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "完形填空第 41 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "完形填空第 42 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "完形填空第 43 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "完形填空第 44 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "完形填空第 45 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "完形填空第 46 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "完形填空第 47 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "完形填空第 48 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "完形填空第 49 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "完形填空第 50 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（51–52）",
+       "passage": "The Silk Road was an ancient network of trade routes. It connected China with Europe and Africa. Merchants traded silk, tea, fruit and handicrafts. Not only goods but also cultures spread along the road. Today, the old Silk Road still inspires international cooperation.",
+       "questions": [
+        {
+         "no": 51,
+         "type": "fill",
+         "q": "The Silk Road ___51___ (connect) China with Europe and Africa.",
+         "answer": "connected",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 52,
+         "type": "fill",
+         "q": "Many countries work together ___52___ (build) modern trade links.",
+         "answer": "to build",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是李华，学校英语角要举办读书分享会，请写通知，邀请全体同学参加。要点：时间地点，活动内容，欢迎分享好书。",
+         "reference": "# Notice\nOur school English corner will hold a book sharing meeting. It will take place in the school hall at 4 p.m. next Friday.\nWe will share our favourite books and talk about our feelings after reading. You can introduce your favourite books and exchange ideas.\nAll students are welcome. Please come and enjoy the fun of reading.\nEnglish Corner"
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "My family and I went camping last weekend. We set up our tent near a lake. On the first night, we heard strange noise outside the tent…（原文与续写开头略）",
+         "reference": ""
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  },
+  {
+   "id": "gdeng2022",
+   "year": 2022,
+   "kind": "real-paper",
+   "title": "2022 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "听力第 1 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "听力第 2 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "听力第 3 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "听力第 4 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "听力第 5 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "听力第 6 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "听力第 7 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "听力第 8 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "听力第 9 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "听力第 10 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "听力第 11 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "听力第 12 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "听力第 13 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "听力第 14 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "听力第 15 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "听力第 16 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "听力第 17 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "听力第 18 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "听力第 19 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "听力第 20 题（无音频，题干与选项以考场原卷为准）",
+         "options": [],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "The hotel offers special packages for families. It has a large swimming pool, children playground and free breakfast. Family rooms have two beds and a balcony. Prices: Weekdays: 280 yuan per night; weekends: 350 yuan. Book online 7 days ahead for a 10% discount.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "What service is free?",
+         "options": [
+          "A. Breakfast.",
+          "B. Parking.",
+          "C. Laundry.",
+          "D. Wifi."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "How much for a family room booked online for Saturday?",
+         "options": [
+          "A. 280.",
+          "B. 315.",
+          "C. 350.",
+          "D. 385."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "Where is the text from?",
+         "options": [
+          "A. A travel blog.",
+          "B. Hotel advertisement.",
+          "C. News report.",
+          "D. Diary."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "My father was a baker. He got up at 4 every morning to make bread. When I was young, I often helped him in the bakery. I learned to mix dough and shape bread. He told me baking was not only making food. Good bread needed patience and care. Every loaf was made with respect. Later I went to college. I rarely helped him. After graduation, I worked in a big city. Last year I returned home. I worked beside him again. I understood his words better.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "What was the author’s father?",
+         "options": [
+          "A. Farmer.",
+          "B. Baker.",
+          "C. Teacher.",
+          "D. Driver."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "What did father think of baking?",
+         "options": [
+          "A. It needs patience and care.",
+          "B. It brings big money.",
+          "C. It is easy work.",
+          "D. It is a boring job."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "Why did the author return home?",
+         "options": [
+          "A. To take over the bakery.",
+          "B. To visit his father.",
+          "C. To find a new job.",
+          "D. To sell bread online."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 27,
+         "type": "single",
+         "q": "What is the best title?",
+         "options": [
+          "A. Bread and Life",
+          "B. My Father’s Bakery",
+          "C. Learning to Bake",
+          "D. Returning Home"
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "Many cities are building bike lanes to encourage cycling. Cycling reduces traffic jams and air pollution. It also helps people keep fit. However, bike lanes face problems. Some people park cars on bike lanes. Some pedestrians walk on them. Cities are adding cameras and signs to protect bike lanes. Experts say city planners need to design safe and connected bike networks so people feel confident to ride bikes.",
+       "questions": [
+        {
+         "no": 28,
+         "type": "single",
+         "q": "What is the benefit of cycling?",
+         "options": [
+          "A. Saving energy only.",
+          "B. Reducing traffic and pollution.",
+          "C. Building more roads.",
+          "D. Changing city planning."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What problem do bike lanes meet?",
+         "options": [
+          "A. Too few riders.",
+          "B. Lack of repair.",
+          "C. Occupied by cars and walkers.",
+          "D. High building cost."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "What do experts advise?",
+         "options": [
+          "A. Fine bike lane violators.",
+          "B. Build connected safe bike networks.",
+          "C. Reduce car numbers.",
+          "D. Close some roads for bikes."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 31,
+         "type": "single",
+         "q": "What is the text about?",
+         "options": [
+          "A. The development of cycling cities.",
+          "B. How to ride bikes safely.",
+          "C. Pollution in big cities.",
+          "D. Advantages of public transport."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Human beings have kept dogs for thousands of years. Dogs were first used for hunting and guarding. Today dogs work as guides for blind people, search and rescue workers. Dogs can read human emotions. They can tell if we are happy, sad or afraid. Scientists believe dogs developed this ability through long living together with humans. Keeping dogs brings benefits. Dog owners usually have lower stress and more social contact. But raising a dog takes responsibility.",
+       "questions": [
+        {
+         "no": 32,
+         "type": "single",
+         "q": "What was dogs’ earliest job?",
+         "options": [
+          "A. Guide the blind.",
+          "B. Search for survivors.",
+          "C. Hunt and guard.",
+          "D. Keep people company."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "Why can dogs understand human feelings?",
+         "options": [
+          "A. They are clever by birth.",
+          "B. Long coexistence with humans.",
+          "C. Special training.",
+          "D. They have good hearing."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "What benefit do dog owners get?",
+         "options": [
+          "A. Richer life.",
+          "B. Less stress.",
+          "C. More free time.",
+          "D. Better sleep."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What message does the text send?",
+         "options": [
+          "A. Dogs are human’s old friends.",
+          "B. How to train dogs.",
+          "C. History of pet keeping.",
+          "D. Different kinds of working dogs."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分）",
+       "passage": "How to develop good reading habits. Reading opens our mind. ___36___ Set fixed reading time. It can be 20 minutes before sleep. ___37___ Choose books you are interested in. If you hate the book, stop reading it. Take notes while reading. Write down useful ideas. ___38___ Share what you read. Talk with friends about the book. ___39___ Do not rush. Good reading takes time. Slow reading helps deep thinking. ___40___",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. It helps you remember better.",
+          "B. You will enjoy sharing ideas.",
+          "C. Keep this time every day.",
+          "D. Here are simple tips for you.",
+          "E. Buy expensive books.",
+          "F. Finish every book you start.",
+          "G. You will get more from reading."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. It helps you remember better.",
+          "B. You will enjoy sharing ideas.",
+          "C. Keep this time every day.",
+          "D. Here are simple tips for you.",
+          "E. Buy expensive books.",
+          "F. Finish every book you start.",
+          "G. You will get more from reading."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. It helps you remember better.",
+          "B. You will enjoy sharing ideas.",
+          "C. Keep this time every day.",
+          "D. Here are simple tips for you.",
+          "E. Buy expensive books.",
+          "F. Finish every book you start.",
+          "G. You will get more from reading."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. It helps you remember better.",
+          "B. You will enjoy sharing ideas.",
+          "C. Keep this time every day.",
+          "D. Here are simple tips for you.",
+          "E. Buy expensive books.",
+          "F. Finish every book you start.",
+          "G. You will get more from reading."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. It helps you remember better.",
+          "B. You will enjoy sharing ideas.",
+          "C. Keep this time every day.",
+          "D. Here are simple tips for you.",
+          "E. Buy expensive books.",
+          "F. Finish every book you start.",
+          "G. You will get more from reading."
+         ],
+         "answer": 6,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；选项以考场原卷为准）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "完形填空第 41 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "完形填空第 42 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "完形填空第 43 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "完形填空第 44 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "完形填空第 45 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "完形填空第 46 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "完形填空第 47 题",
+         "options": [],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "完形填空第 48 题",
+         "options": [],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "完形填空第 49 题",
+         "options": [],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "完形填空第 50 题",
+         "options": [],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（51–54）",
+       "passage": "The Chinese tea culture has a long history. Tea has been drunk in China for thousands of years. Tea plants grow in warm and wet areas. People pick fresh leaves and process them. There are many kinds of tea: green tea, black tea, oolong tea. Drinking tea is more than a habit. It is part of Chinese culture. People serve tea to guests to show respect. Nowadays Chinese tea is popular worldwide.",
+       "questions": [
+        {
+         "no": 51,
+         "type": "fill",
+         "q": "Tea ___51___ (drink) in China for thousands of years.",
+         "answer": "has been drunk",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 52,
+         "type": "fill",
+         "q": "People serve tea to guests ___52___ (show) respect.",
+         "answer": "to show",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 53,
+         "type": "fill",
+         "q": "Many foreigners come to China ___53___ (learn) about tea culture.",
+         "answer": "to learn",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 54,
+         "type": "fill",
+         "q": "It is amazing ___54___ (see) tea connect people across the world.",
+         "answer": "to see",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是李华，外教计划组织一次“中国传统文化”线上分享会，请你写邮件推荐剪纸（paper-cutting）。要点：1. 推荐理由；2. 简单介绍剪纸；3. 邀请外教体验。",
+         "reference": "Dear Sir,\nI’m writing to recommend paper-cutting for our online sharing activity.\nPaper-cutting is a traditional Chinese folk art with a long history. People cut paper into flowers, animals and Chinese characters. It is often used during festivals to express best wishes. It is easy to understand and very beautiful.\nI hope we can show paper-cutting works and introduce its culture. We can also try simple cutting online.\nLooking forward to your reply.\nYours,\nLi Hua"
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "I was walking home after school when I saw an old man fall down on the street. His shopping bag dropped, fruit rolled everywhere. I ran over to help him.\nParagraph 1: I helped him sit up and picked up all the fruit.\nParagraph 2: The old man thanked me again and again before we said goodbye.\n（参考范文略）",
+         "reference": ""
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  },
+  {
+   "id": "gdeng2021",
+   "year": 2021,
+   "kind": "real-paper",
+   "title": "2021 年普通高等学校招生全国统一考试（新高考Ⅰ卷·英语）",
+   "modules": [
+    {
+     "name": "听力",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节（5小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 1,
+         "type": "listen",
+         "q": "What is the man doing?",
+         "options": [
+          "A. Buying a suit.",
+          "B. Having his hair cut.",
+          "C. Trying on shoes."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 2,
+         "type": "listen",
+         "q": "What will the speakers probably do next?",
+         "options": [
+          "A. Go home.",
+          "B. Stop for lunch.",
+          "C. Visit a museum."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 3,
+         "type": "listen",
+         "q": "What does the woman think of the lecture?",
+         "options": [
+          "A. Boring.",
+          "B. Difficult.",
+          "C. Interesting."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 4,
+         "type": "listen",
+         "q": "Why does the man refuse the woman’s offer?",
+         "options": [
+          "A. He doesn’t like the food.",
+          "B. He has an appointment.",
+          "C. He’s already had dinner."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 5,
+         "type": "listen",
+         "q": "What are the speakers talking about?",
+         "options": [
+          "A. How to fry fish.",
+          "B. How to make coffee.",
+          "C. How to remove a bad smell."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      },
+      {
+       "name": "第二节（15小题；每小题1.5分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 6,
+         "type": "listen",
+         "q": "Where are the speakers?",
+         "options": [
+          "A. At a station.",
+          "B. At a restaurant.",
+          "C. At a hotel."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 7,
+         "type": "listen",
+         "q": "What does the man want to do?",
+         "options": [
+          "A. Book a room.",
+          "B. Check out.",
+          "C. Change his reservation."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 8,
+         "type": "listen",
+         "q": "What is the woman’s job?",
+         "options": [
+          "A. A teacher.",
+          "B. A nurse.",
+          "C. A reporter."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 9,
+         "type": "listen",
+         "q": "What does the man ask the woman to do?",
+         "options": [
+          "A. Help his son with study.",
+          "B. Meet his son at school.",
+          "C. Pick up his son from hospital."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 10,
+         "type": "listen",
+         "q": "What are the speakers discussing?",
+         "options": [
+          "A. A trip plan.",
+          "B. A weather report.",
+          "C. A sports game."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 11,
+         "type": "listen",
+         "q": "What will the speakers do tomorrow?",
+         "options": [
+          "A. Go hiking.",
+          "B. Stay at home.",
+          "C. Watch a game."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 12,
+         "type": "listen",
+         "q": "How long will the man stay in Edinburgh?",
+         "options": [
+          "A. One day.",
+          "B. Two days.",
+          "C. Three days."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 13,
+         "type": "listen",
+         "q": "How will the man go to Glasgow?",
+         "options": [
+          "A. By train.",
+          "B. By bus.",
+          "C. By car."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 14,
+         "type": "listen",
+         "q": "Who is the speaker addressing?",
+         "options": [
+          "A. New students.",
+          "B. Library staff.",
+          "C. Graduates."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 15,
+         "type": "listen",
+         "q": "What can students do in the library?",
+         "options": [
+          "A. Borrow laptops.",
+          "B. Print for free.",
+          "C. Eat snacks in the lounge."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 16,
+         "type": "listen",
+         "q": "When can students use group study rooms?",
+         "options": [
+          "A. Any time.",
+          "B. On weekdays only.",
+          "C. At weekends only."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 17,
+         "type": "listen",
+         "q": "What should students do to book a room?",
+         "options": [
+          "A. Fill in a form online.",
+          "B. Go to the help desk.",
+          "C. Send an email."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 18,
+         "type": "listen",
+         "q": "What is the speaker reminding listeners to do?",
+         "options": [
+          "A. Return books on time.",
+          "B. Keep the library quiet.",
+          "C. Bring their student ID."
+         ],
+         "answer": 2,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 19,
+         "type": "listen",
+         "q": "What is the talk mainly about?",
+         "options": [
+          "A. Library rules.",
+          "B. Library services.",
+          "C. Library history."
+         ],
+         "answer": 1,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        },
+        {
+         "no": 20,
+         "type": "listen",
+         "q": "What will the speaker do next?",
+         "options": [
+          "A. Answer questions.",
+          "B. Show them around.",
+          "C. Hand out guides."
+         ],
+         "answer": 0,
+         "analysis": "（听力无音频，本题仅提供答案）"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "阅读",
+     "score": 50,
+     "parts": [
+      {
+       "name": "第一节 A",
+       "passage": "By the end of the century, if not sooner, the world’s oceans will be bluer and greener thanks to a warming climate, according to a new study. The color change of the oceans comes from the growth of phytoplankton (浮游植物). Phytoplankton live near the ocean surface, using chlorophyll (叶绿素) to turn sunlight into energy while absorbing carbon dioxide. When phytoplankton grow, the oceans look greener. When there are fewer phytoplankton, oceans appear bluer. Warming changes the ocean environment. Higher temperatures reduce the amount of nutrients rising from deeper waters to the surface, limiting phytoplankton growth. Some regions will see less phytoplankton and become bluer; other areas with more rainfall will see more phytoplankton and turn greener. The researchers used models to predict changes up to 2100. They found that low-latitude oceans will become bluer, while polar oceans will turn greener. The color changes will be visible to the human eye.",
+       "questions": [
+        {
+         "no": 21,
+         "type": "single",
+         "q": "What causes the color change of oceans?",
+         "options": [
+          "A. Rising sea levels.",
+          "B. Growth of phytoplankton.",
+          "C. Water pollution.",
+          "D. Global rainfall."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 22,
+         "type": "single",
+         "q": "Why do high-latitude oceans turn greener?",
+         "options": [
+          "A. More nutrients become available.",
+          "B. Less carbon dioxide is released.",
+          "C. More sunlight reaches the surface.",
+          "D. Fewer animals eat phytoplankton."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 23,
+         "type": "single",
+         "q": "What is the text mainly about?",
+         "options": [
+          "A. Future ocean color changes.",
+          "B. Protection of ocean plants.",
+          "C. Effects of greenhouse gases.",
+          "D. Research on ocean temperature."
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 B",
+       "passage": "My wife Laura and I were on our way to dinner with some friends when we spotted a dog sitting by the side of the road. It was late autumn, and the weather was cold. The dog looked thin and scared. We stopped our car. As we got closer, we saw it was wearing a collar, but no tag. We loaded the dog into our car and took it home. We gave it food and warm water. We posted notices around our neighborhood and online, describing the dog and our phone number. Three days later, a man called. He said the dog was his. He had moved and accidentally left the dog behind. When he arrived, we saw tears in his eyes. He thanked us repeatedly. He explained that his dog was his only companion after his wife passed away. We were happy to reunite them.",
+       "questions": [
+        {
+         "no": 24,
+         "type": "single",
+         "q": "What did the author first notice about the dog?",
+         "options": [
+          "A. It was injured.",
+          "B. It was hungry and frightened.",
+          "C. It ran after their car.",
+          "D. It had no collar."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 25,
+         "type": "single",
+         "q": "Why did the man cry?",
+         "options": [
+          "A. He felt guilty for losing his dog.",
+          "B. He was moved by the couple’s kindness.",
+          "C. He missed his late wife.",
+          "D. He thought his dog had died."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 26,
+         "type": "single",
+         "q": "What can we infer about the author?",
+         "options": [
+          "A. He loves animals.",
+          "B. He works for an animal shelter.",
+          "C. He is a vet.",
+          "D. He often rescues stray dogs."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 27,
+         "type": "single",
+         "q": "What is the best title for the text?",
+         "options": [
+          "A. A Lost Dog Found a New Home",
+          "B. Reunited: A Dog and Its Owner",
+          "C. Cold Weather and Stray Animals",
+          "D. How to Find Lost Pets"
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 C",
+       "passage": "In the 19th century, the British Museum was one of the first museums to open free to the public. Before that, museums were mostly for wealthy people. Ordinary people had few chances to see ancient treasures. The British Museum’s opening was revolutionary. It believed knowledge should be shared with everyone. Today, many museums follow this idea. However, free admission brings challenges. Museums need money to protect collections, pay staff and organize exhibitions. Some museums charge entry fees, while others rely on donations and government support. Museum managers are trying to balance accessibility and funding. Many keep free entry for permanent collections and charge for special temporary shows. This way, the public can still enjoy basic exhibits without paying.",
+       "questions": [
+        {
+         "no": 28,
+         "type": "single",
+         "q": "What was special about the British Museum in the 1800s?",
+         "options": [
+          "A. It had the largest collection.",
+          "B. It opened to all people for free.",
+          "C. It was run by the government.",
+          "D. It focused on ancient art."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 29,
+         "type": "single",
+         "q": "What problem do free museums face?",
+         "options": [
+          "A. Too many visitors.",
+          "B. Lack of funding.",
+          "C. Difficult management.",
+          "D. Damage to exhibits."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 30,
+         "type": "single",
+         "q": "How do many museums solve the problem?",
+         "options": [
+          "A. Raise ticket prices for all shows.",
+          "B. Ask local businesses for money.",
+          "C. Charge only for special exhibitions.",
+          "D. Reduce opening hours."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 31,
+         "type": "single",
+         "q": "What is the author’s attitude toward free public museums?",
+         "options": [
+          "A. Doubtful.",
+          "B. Supportive.",
+          "C. Uninterested.",
+          "D. Critical."
+         ],
+         "answer": 1,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第一节 D",
+       "passage": "Popularization of science helps people understand the world around them. Science popularization is not just telling people facts. It helps people develop scientific thinking. People with scientific thinking can judge information and avoid false news. Many countries attach importance to science popularization. Scientists are encouraged to talk to the public. Short videos, exhibitions and science lectures are popular ways to spread science. However, science communication has difficulties. Complex theories are hard to explain in simple language. Some scientific topics take years to prove. Communicators must make sure simplified explanations do not become misleading. Good science popularization connects science with daily life. It makes science interesting and useful for ordinary people.",
+       "questions": [
+        {
+         "no": 32,
+         "type": "single",
+         "q": "What is the value of science popularization?",
+         "options": [
+          "A. It trains more scientists.",
+          "B. It improves people’s scientific thinking.",
+          "C. It speeds up research.",
+          "D. It helps publish scientific papers."
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 33,
+         "type": "single",
+         "q": "What is a challenge for science popularization?",
+         "options": [
+          "A. Lack of new research.",
+          "B. Too many ways of communication.",
+          "C. Hard to simplify complex theories.",
+          "D. Low public interest."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 34,
+         "type": "single",
+         "q": "Which way is NOT mentioned to spread science?",
+         "options": [
+          "A. TV series.",
+          "B. Short videos.",
+          "C. Exhibitions.",
+          "D. Lectures."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 35,
+         "type": "single",
+         "q": "What is the main idea of the text?",
+         "options": [
+          "A. Difficulties in scientific research.",
+          "B. How to become a science communicator.",
+          "C. Importance and challenges of science popularization.",
+          "D. Ways to study science."
+         ],
+         "answer": 2,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 七选五（5小题；每小题2.5分）",
+       "passage": "My mother is a teacher. She always tells me to keep reading. ___36___ Reading helps us gain knowledge. When we read books, we travel to different worlds and meet different people. ___37___ Reading also improves our language skills. We learn new words and sentence structures. Our writing becomes better. ___38___ When we feel upset, reading a good story can calm us down. Books can give us hope and courage. But many people say they have no time to read. ___39___ We can read for 10 minutes before bed, or listen to audiobooks on the way to school. The key is to form a habit. Start with simple stories. Gradually you will love reading. ___40___",
+       "questions": [
+        {
+         "no": 36,
+         "type": "single",
+         "q": "第 36 题（七选五）",
+         "options": [
+          "A. Reading is also a good way to relax.",
+          "B. Books are our best friends.",
+          "C. We can learn from characters’ experiences.",
+          "D. Actually, we can find small pieces of time.",
+          "E. It will bring you great benefits.",
+          "F. It is hard to choose good books.",
+          "G. She believes reading shapes our mind."
+         ],
+         "answer": 6,
+         "analysis": ""
+        },
+        {
+         "no": 37,
+         "type": "single",
+         "q": "第 37 题（七选五）",
+         "options": [
+          "A. Reading is also a good way to relax.",
+          "B. Books are our best friends.",
+          "C. We can learn from characters’ experiences.",
+          "D. Actually, we can find small pieces of time.",
+          "E. It will bring you great benefits.",
+          "F. It is hard to choose good books.",
+          "G. She believes reading shapes our mind."
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 38,
+         "type": "single",
+         "q": "第 38 题（七选五）",
+         "options": [
+          "A. Reading is also a good way to relax.",
+          "B. Books are our best friends.",
+          "C. We can learn from characters’ experiences.",
+          "D. Actually, we can find small pieces of time.",
+          "E. It will bring you great benefits.",
+          "F. It is hard to choose good books.",
+          "G. She believes reading shapes our mind."
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 39,
+         "type": "single",
+         "q": "第 39 题（七选五）",
+         "options": [
+          "A. Reading is also a good way to relax.",
+          "B. Books are our best friends.",
+          "C. We can learn from characters’ experiences.",
+          "D. Actually, we can find small pieces of time.",
+          "E. It will bring you great benefits.",
+          "F. It is hard to choose good books.",
+          "G. She believes reading shapes our mind."
+         ],
+         "answer": 3,
+         "analysis": ""
+        },
+        {
+         "no": 40,
+         "type": "single",
+         "q": "第 40 题（七选五）",
+         "options": [
+          "A. Reading is also a good way to relax.",
+          "B. Books are our best friends.",
+          "C. We can learn from characters’ experiences.",
+          "D. Actually, we can find small pieces of time.",
+          "E. It will bring you great benefits.",
+          "F. It is hard to choose good books.",
+          "G. She believes reading shapes our mind."
+         ],
+         "answer": 4,
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "语言运用",
+     "score": 30,
+     "parts": [
+      {
+       "name": "第一节 完形填空（41–50；51–55 原文省略）",
+       "passage": "I have always loved painting. Last year, I joined an art class. At first I was nervous. I feared my work was not good enough. Our teacher, Ms. Wang, was very patient. She told us art was not about perfect skills, but about expressing our true feelings. She encouraged us to paint whatever we saw and felt. One day we were asked to paint a scene from our daily life. I chose the old park near my home. I painted the old trees, benches and the elderly people walking slowly. When I finished, I was not confident. But Ms. Wang praised my painting. She said it carried warm, quiet feelings of ordinary life. Her words ___41___ me. I realized art was not about winning praise. It was about capturing small beautiful moments. Since then, I have painted many scenes around me. Painting becomes my way to slow down and enjoy life.",
+       "questions": [
+        {
+         "no": 41,
+         "type": "single",
+         "q": "Her words ___41___ me.",
+         "options": [
+          "A. surprised",
+          "B. encouraged",
+          "C. confused",
+          "D. warned"
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 42,
+         "type": "single",
+         "q": "art was not about perfect ___42___",
+         "options": [
+          "A. skills",
+          "B. grades",
+          "C. speed",
+          "D. knowledge"
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 43,
+         "type": "single",
+         "q": "about ___43___ our true feelings",
+         "options": [
+          "A. hiding",
+          "B. expressing",
+          "C. controlling",
+          "D. changing"
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 44,
+         "type": "single",
+         "q": "I ___44___ the old park near my home",
+         "options": [
+          "A. chose",
+          "B. visited",
+          "C. remembered",
+          "D. imagined"
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 45,
+         "type": "single",
+         "q": "I was ___45___ confident",
+         "options": [
+          "A. still",
+          "B. almost",
+          "C. not",
+          "D. hardly"
+         ],
+         "answer": 2,
+         "analysis": ""
+        },
+        {
+         "no": 46,
+         "type": "single",
+         "q": "Ms. Wang ___46___ my painting",
+         "options": [
+          "A. doubted",
+          "B. praised",
+          "C. corrected",
+          "D. bought"
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 47,
+         "type": "single",
+         "q": "warm, quiet ___47___ of ordinary life",
+         "options": [
+          "A. feelings",
+          "B. plans",
+          "C. dreams",
+          "D. decisions"
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 48,
+         "type": "single",
+         "q": "not about ___48___ praise",
+         "options": [
+          "A. winning",
+          "B. accepting",
+          "C. refusing",
+          "D. expecting"
+         ],
+         "answer": 0,
+         "analysis": ""
+        },
+        {
+         "no": 49,
+         "type": "single",
+         "q": "about ___49___ small beautiful moments",
+         "options": [
+          "A. creating",
+          "B. capturing",
+          "C. sharing",
+          "D. recalling"
+         ],
+         "answer": 1,
+         "analysis": ""
+        },
+        {
+         "no": 50,
+         "type": "single",
+         "q": "my way to ___50___ and enjoy life",
+         "options": [
+          "A. slow down",
+          "B. cheer up",
+          "C. give up",
+          "D. show off"
+         ],
+         "answer": 0,
+         "analysis": ""
+        }
+       ]
+      },
+      {
+       "name": "第二节 语法填空（51–59；60 原文省略）",
+       "passage": "Going to college is an important step in one’s life. When you arrive at college, you will meet new classmates and teachers. College life is different from high school life. You will have more free time, so you need to learn to manage your time well. Professors will not remind you of homework all the time. It is up to you to finish tasks on time. Besides study, you can join clubs. There are many kinds of clubs, from sports to music. Joining clubs helps you make new friends and develop new skills. College is also a place for you to think independently.",
+       "questions": [
+        {
+         "no": 51,
+         "type": "fill",
+         "q": "College life is different ___51___ high school life.",
+         "answer": "from",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 52,
+         "type": "fill",
+         "q": "you need ___52___ (learn) to manage your time well.",
+         "answer": "to learn",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 53,
+         "type": "fill",
+         "q": "It is up to you ___53___ (finish) tasks on time.",
+         "answer": "to finish",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 54,
+         "type": "fill",
+         "q": "develop new ___54___ (skill).",
+         "answer": "skills",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 55,
+         "type": "fill",
+         "q": "one of ___55___ (wonderful) periods",
+         "answer": "the most wonderful",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 56,
+         "type": "fill",
+         "q": "Many students find ___56___ hard to balance study and social activities.",
+         "answer": "it",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 57,
+         "type": "fill",
+         "q": "The library, ___57___ is open 24 hours, is a good place for study.",
+         "answer": "which",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 58,
+         "type": "fill",
+         "q": "try ___58___ (take) a walk outside",
+         "answer": "taking",
+         "accept": [],
+         "analysis": ""
+        },
+        {
+         "no": 59,
+         "type": "fill",
+         "q": "Talking with friends ___59___ (be) also helpful",
+         "answer": "is",
+         "accept": [],
+         "analysis": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "写作",
+     "score": 40,
+     "parts": [
+      {
+       "name": "第一节 应用文写作（15分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 91,
+         "type": "essay",
+         "title": "应用文写作",
+         "q": "假定你是李华，学校英文报正在举办主题为“Sports in Our School”征文活动，请你投稿。内容包括：1. 学校体育活动；2. 你喜欢的运动；3. 运动带给你的收获。",
+         "reference": "# Sports in Our School\nSports play an important role in our school life. Our school offers many sports activities, such as basketball matches, running races and badminton clubs. Every afternoon, many students take exercise on the playground.\nMy favorite sport is running. I keep running for 30 minutes every day. Running makes me strong and energetic. It also helps me reduce pressure from study.\nSports teach me perseverance and teamwork. I hope more classmates can take part in sports and enjoy the fun of exercise."
+        }
+       ]
+      },
+      {
+       "name": "第二节 读后续写（25分）",
+       "passage": "",
+       "questions": [
+        {
+         "no": 92,
+         "type": "essay",
+         "title": "读后续写",
+         "q": "阅读下面短文，根据所给情节进行续写，使之构成一个完整的故事。\nA few years ago, I took a trip to the mountains with my father. We planned to hike along a quiet trail. At first, everything went well. I enjoyed the fresh air and beautiful views. Suddenly, dark clouds covered the sky. It began to rain heavily. We quickly realized we had lost our way. My father tried to find the path, but rain washed away the marks. We felt worried. We had no phone signal. We found a small cave to stay in. We waited for the rain to stop. Hours passed. I felt cold and scared. My father comforted me and told me stories to keep me calm.\nParagraph 1: As the rain slowed down, my father decided to climb up a high rock to look around.\nParagraph 2: When we finally walked out of the forest, we saw park rangers waiting for us.",
+         "reference": "As the rain slowed down, my father decided to climb up a high rock to look around. He climbed carefully and told me to stay still. After a while, he shouted that he saw the road far away. We packed our small bag and walked slowly through wet bushes. The ground was slippery, and we helped each other move forward.\nWhen we finally walked out of the forest, we saw park rangers waiting for us. They told us that my mother had called them after we failed to return home. We were so thankful. This experience taught me to stay calm when facing difficulties."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "totalScore": 150,
+   "durationMin": 120
+  }
+ ]
+}

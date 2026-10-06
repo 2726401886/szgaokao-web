@@ -220,7 +220,21 @@
       <div><span class="state" id="st-geography">加载中</span></div>
       <button class="go" id="go-geography" onclick="enterMod('geography')">进入模块</button>
     </div>
-    <div class="mod-card tool-card" id="mod-mindmap" style="border-color:var(--brand,#6a5cff);">
+    <div class="mod-card" id="mod-chemistry">
+      <div class="icon">⚗️</div>
+      <div class="name">初高中化学 · 知识点梳理·题库组卷·专题突破</div>
+      <div class="desc">九年级至高三 · 44 个核心知识点（带自测）+ 题库 46 题（选择/填空/实验探究/论述）+ 5 大专题包；物质变化·离子反应·物质的量·元素周期律·有机化学</div>
+      <div><span class="state" id="st-chemistry">加载中</span></div>
+      <button class="go" id="go-chemistry" onclick="enterMod('chemistry')">进入模块</button>
+    </div>
+    <div class="mod-card" id="mod-english-gd" style="border-color:var(--brand,#4f46e5);">
+      <div class="icon">📄</div>
+      <div class="name">广东高考英语 · 真题精练（2021–2026）</div>
+      <div class="desc">新高考Ⅰ卷真题：听力 / 阅读 / 七选五 / 完形 / 语法填空 / 写作 全题型在线作答与解析。2021–2024 官方原版，2025–2026 考生回忆版（非官方标准答案，听力无音频）。</div>
+      <div><span class="state ok">真题卷</span></div>
+      <button class="go on" onclick="location.href='./english-gd.html'">开始真题精练 →</button>
+    </div>
+  <div class="mod-card tool-card" id="mod-mindmap" style="border-color:var(--brand,#6a5cff);">
       <div class="icon">🧠</div>
       <div class="name">学习思维导图</div>
       <div class="desc">一图看懂每个模块的知识结构：章节 · 专题 · 题型 · 题量，随课程自动更新，可筛选定位。</div>
@@ -234,7 +248,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组 / 初高中地理每个板块第 1 组</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组 / 初高中地理每个板块第 1 组 / 初高中化学每个板块第 1 组</div>
 </div>
 
 <script>
@@ -272,6 +286,7 @@ const MODINFO = {
   hchinese:        { url: './hchinese.html', name: '高中语文 · 字词古诗文文言文阅读名著写作' },
   politics:        { url: './politics.html', name: '初高中道法·政治 · 知识点梳理·题库组卷·专题突破' },
   geography:       { url: './geography.html', name: '初高中地理 · 知识点梳理·题库组卷·专题突破' },
+  chemistry:       { url: './chemistry.html', name: '初高中化学 · 知识点梳理·题库组卷·专题突破' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -316,7 +331,7 @@ async function resetDevices() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1, geography: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1, geography: 1, chemistry: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
@@ -359,7 +374,7 @@ function renderHome() {
     $('acctName').textContent = ACCT.username;
     $('acctTag').textContent = ACCT.authorized ? (ACCT.expiry ? '已授权' : '已授权') : '体验模式';
     $('devNote').textContent = `本账号已绑定设备 ${DEV.n} / ${DEV.max} 台`;
-    const anyLocked = !MODS.kids || !MODS.primary || !MODS.middle || !MODS.gk || !MODS.math || !MODS.politics || !MODS.geography;
+    const anyLocked = !MODS.kids || !MODS.primary || !MODS.middle || !MODS.gk || !MODS.math || !MODS.politics || !MODS.geography || !MODS.chemistry;
     show('actCard', anyLocked);
     show('wxCard', anyLocked || !ACCT.authorized);
     if (anyLocked) setMsg('actMsg', ACCT.authorized ? '当前部分模块未解锁，输入授权码解锁全部模块，或联系管理员开通对应模块。' : '当前为体验模式，每个模块可免费体验一个单元。');
@@ -369,7 +384,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics', 'geography'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics', 'geography', 'chemistry'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广东高考英语 · 真题精练（2021–2026）</title>
+<style>
+  :root { --brand:#4f46e5; --brand2:#6366f1; --ok:#15803d; --err:#e23; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .topbar { background:linear-gradient(135deg,#4f46e5,#6366f1); color:#fff; padding:14px 16px; border-radius:16px; margin:12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:18px; }
+  .topbar .spacer { flex:1; }
+  .topbar a.back { color:#fff; text-decoration:none; background:rgba(255,255,255,.22); padding:6px 12px; border-radius:20px; font-size:13px; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 12px 24px; }
+  .trial-note { background:#fff7e0; border:1px solid #f3e6b8; color:#7a5c00; padding:10px 14px; border-radius:12px; font-size:13px; margin:0 12px 12px; display:none; }
+
+  /* ===== 广东高考英语（真题） ===== */
+  .gd2-wrap { max-width:1000px; }
+  .gd2-hd { font-size:18px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .gd2-back { border:none; background:#eef2ff; color:#4f46e5; font-size:13px; font-weight:700; padding:6px 12px; border-radius:14px; cursor:pointer; }
+  .gd2-ed { font-size:12px; font-weight:500; color:#4f46e5; background:#eef2ff; padding:3px 10px; border-radius:12px; }
+  .gd2-recall { font-size:11.5px; font-weight:700; color:#b45309; background:#fef3c7; padding:2px 8px; border-radius:10px; }
+  .gd2-warn { font-size:12.5px; color:#7a5c00; background:#fffbe8; border:1px solid #f3e6b8; border-radius:12px; padding:10px 14px; margin-bottom:12px; line-height:1.8; }
+  .gd2-tip { font-size:12.5px; color:#1e40af; background:#eff6ff; border:1px solid #c9d6ff; border-radius:12px; padding:10px 14px; margin-bottom:12px; line-height:1.8; }
+  .gd2-st-h { font-size:14px; font-weight:800; margin:14px 0 8px; }
+  .gd2-box { background:#fff; border:1px solid #e6e8f0; border-radius:12px; padding:12px 14px; font-size:13px; line-height:1.9; color:#444; }
+  .gd2-cards { display:flex; gap:12px; flex-wrap:wrap; }
+  .gd2-card { flex:1 1 290px; background:#fff; border:1.5px solid #e0e7ff; border-radius:14px; padding:14px; cursor:pointer; display:flex; gap:12px; align-items:center; }
+  .gd2-card:hover { border-color:#4f46e5; box-shadow:0 6px 20px rgba(79,70,229,.12); }
+  .gd2-card-y { font-size:20px; font-weight:800; color:#4f46e5; background:#eef2ff; border-radius:12px; padding:10px 12px; }
+  .gd2-card-b { flex:1; }
+  .gd2-card-t { font-size:14.5px; font-weight:700; }
+  .gd2-card-m { font-size:12px; color:#999; margin-top:4px; }
+  .gd2-card-go { font-size:12px; color:#4f46e5; font-weight:700; white-space:nowrap; }
+  .gd2-paper { background:#fff; border-radius:16px; padding:20px 18px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .gd2-p-hd { text-align:center; border-bottom:2px solid #4f46e5; padding-bottom:12px; margin-bottom:16px; }
+  .gd2-p-name { font-size:19px; font-weight:800; }
+  .gd2-p-meta { font-size:12.5px; color:#666; margin-top:6px; }
+  .gd2-mod { margin-bottom:22px; }
+  .gd2-mod-h { font-size:15.5px; font-weight:800; margin-bottom:6px; }
+  .gd2-mod-sc { font-size:12px; font-weight:600; color:#4f46e5; background:#eef2ff; padding:2px 9px; border-radius:10px; margin-left:8px; }
+  .gd2-part { margin:12px 0 12px 0; }
+  .gd2-part-h { font-size:13.5px; font-weight:700; color:#444; margin:10px 0 6px; padding-left:8px; border-left:3px solid #c7d2fe; }
+  .gd2-passage { font-size:13.5px; color:#444; background:#f8faff; border:1px solid #e6ebfb; border-radius:10px; padding:12px 14px; margin:6px 0 12px; line-height:1.9; white-space:pre-wrap; }
+  .gd2-q { margin:12px 0 12px 0; padding:10px 0 2px; border-top:1px dashed #eee; }
+  .gd2-q-h { font-size:14px; line-height:1.8; margin-bottom:6px; }
+  .gd2-q-tag { font-size:11px; font-weight:700; color:#6366f1; background:#eef2ff; padding:1px 7px; border-radius:8px; margin-left:4px; }
+  .gd2-opt { display:block; padding:7px 10px; border:1.5px solid #eee; border-radius:10px; margin:5px 0; cursor:pointer; font-size:13.5px; line-height:1.7; }
+  .gd2-opt:hover { border-color:#a5b4fc; background:#f6f8ff; }
+  .gd2-opt.locked { cursor:default; }
+  .gd2-opt.right { border-color:#2a8; background:#eefaf5; }
+  .gd2-opt.wrong { border-color:#e23; background:#fdeeee; }
+  .gd2-opt.picked { border-color:#4f46e5; background:#eef2ff; }
+  .gd2-res { font-size:12.5px; margin-top:5px; line-height:1.7; }
+  .gd2-res.ok { color:#2a8; }
+  .gd2-res.bad { color:#e23; }
+  .gd2-ans { background:#f8f9fc; border:1px solid #eceef3; border-radius:10px; padding:9px 11px; font-size:12.5px; color:#444; line-height:1.8; margin-top:6px; white-space:pre-wrap; }
+  .gd2-reveal { border:none; background:#eef2ff; color:#4f46e5; font-size:12.5px; font-weight:700; padding:6px 12px; border-radius:12px; cursor:pointer; margin-top:4px; }
+  .gd2-reveal:hover { background:#e0e7ff; }
+  .empty { background:#fff; border-radius:16px; padding:60px 20px; text-align:center; color:#b0b0b0; font-size:15px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .err-msg { color:#e23; font-size:14px; text-align:center; padding:40px 10px; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <h1>📄 广东高考英语 · 真题精练（2021–2026）</h1>
+    <div class="spacer"></div>
+    <a class="back" href="./index.html">← 返回首页</a>
+  </div>
+  <div class="trial-note" id="trialNote">🎁 体验模式：仅开放最新一套真题。输入授权码或联系管理员（微信 13538237315）解锁全部 6 年真题。</div>
+  <div class="wrap">
+    <div id="mainArea"><div class="empty">加载中…</div></div>
+  </div>
+
+<script>
+  const $ = s => document.querySelector(s);
+  const api = (u, opt) => fetch(u, opt).then(r => r.json().then(j => ({ s: r.status, j })));
+  let TOKEN = localStorage.getItem('token') || '';
+  function fp() {
+    try {
+      const c = document.createElement('canvas'); const ctx = c.getContext('2d');
+      ctx.textBaseline = 'top'; ctx.font = "14px 'Arial'"; ctx.fillText('szgaokao-fp', 2, 2);
+      const px = c.toDataURL();
+      const s = [px, navigator.userAgent, navigator.language, (navigator.languages || []).join(','),
+        screen.width + 'x' + screen.height + 'x' + screen.colorDepth, new Date().getTimezoneOffset(),
+        navigator.hardwareConcurrency || 0, navigator.deviceMemory || 0].join('|');
+      let h = 0x811c9dc5;
+      for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+      return ('0000000' + (h >>> 0).toString(16)).slice(-8);
+    } catch (e) { return 'fp-fallback'; }
+  }
+  const DEVFP = (() => { try { let f = localStorage.getItem('devfp'); if (!f) { f = fp(); localStorage.setItem('devfp', f); } return f; } catch (e) { return fp(); } })();
+  const H = () => ({ 'Content-Type': 'application/json', 'X-Device': DEVFP, ...(TOKEN ? { Authorization: TOKEN } : {}) });
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+  function optLetter(i) { return String.fromCharCode(65 + i); }
+
+  let EG = { loaded: false, meta: null, papers: [], cur: null, showKey: {} };
+
+  async function init() {
+    const r = await api('/api/english-gd', { headers: H() });
+    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常，请稍后重试') + '</div>'; return; }
+    if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#4f46e5;">前往登录页</a></div>'; return; }
+    EG.meta = r.j; EG.papers = r.j.papers || []; EG.loaded = true;
+    if (r.j.trial) $('#trialNote').style.display = 'block';
+    renderList();
+  }
+
+  function renderList() {
+    const m = EG.meta;
+    const warn = m.notice ? '<div class="gd2-warn">⚠️ ' + esc(m.notice.replace(/\*\*/g, '')) + '</div>' : '';
+    const tip = '<div class="gd2-tip">本卷为广东省高考英语 <b>新高考Ⅰ卷真题</b>。<b>2021–2024 为官方原版</b>题干与选项；<b>2025–2026 为考生回忆整理版</b>（无官方完整原文）。<b>听力无音频</b>，仅保留题干/答案（2021 含完整选项）；<b>答案均非官方标准答案</b>，建议核对官方答案册。</div>';
+    const struct = m.structure ? '<div class="gd2-st-h">📋 试卷结构</div><div class="gd2-box">' + esc(m.structure) + '</div>' : '';
+    const cards = '<div class="gd2-st-h">📚 可选试卷（' + EG.papers.length + ' 套）</div><div class="gd2-cards">' +
+      EG.papers.map(p => '<div class="gd2-card" data-p="' + p.id + '"><div class="gd2-card-y">' + p.year + '</div>' +
+        '<div class="gd2-card-b"><div class="gd2-card-t">' + esc(p.title) + '</div>' +
+        '<div class="gd2-card-m">' + p.totalScore + '分 · ' + p.durationMin + '分钟 · ' + p.questionCount + '题' +
+        (p.kind === 'recalled' ? ' · <span class="gd2-recall">回忆版</span>' : '') + '</div></div>' +
+        '<div class="gd2-card-go">开始 →</div></div>').join('') + '</div>';
+    $('#mainArea').innerHTML = '<div class="gd2-wrap">' +
+      '<div class="gd2-hd">📄 广东省高考英语 · 真题练习<span class="gd2-ed">真题原卷</span></div>' +
+      warn + tip + struct + cards + '</div>';
+    document.querySelectorAll('.gd2-card[data-p]').forEach(el => el.addEventListener('click', () => openPaper(el.dataset.p)));
+  }
+
+  async function openPaper(pid) {
+    $('#mainArea').innerHTML = '<div class="gd2-wrap"><div class="empty">加载中…</div></div>';
+    const r = await api('/api/english-gd?paper=' + encodeURIComponent(pid), { headers: H() });
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">试卷加载失败</div>'; return; }
+    EG.cur = r.j; EG.showKey = {};
+    renderPaper();
+  }
+
+  function renderPaper() {
+    const p = EG.cur;
+    const body = p.modules.map(m =>
+      '<div class="gd2-mod"><div class="gd2-mod-h">' + esc(m.name) + '<span class="gd2-mod-sc">' + m.score + '分</span></div>' +
+      m.parts.map(pt =>
+        '<div class="gd2-part">' +
+        (pt.passage ? '<div class="gd2-passage">' + esc(pt.passage) + '</div>' : '') +
+        (m.parts.length > 1 ? '<div class="gd2-part-h">' + esc(pt.name) + '</div>' : '') +
+        pt.questions.map(q => renderQuestion(q)).join('') +
+        '</div>').join('') +
+      '</div>').join('');
+    const recall = p.kind === 'recalled' ? ' <span class="gd2-recall">回忆版</span>' : '';
+    $('#mainArea').innerHTML =
+      '<div class="gd2-wrap">' +
+        '<div class="gd2-hd"><button class="gd2-back" id="egBack">← 返回试卷列表</button><span class="gd2-ed">真题原卷</span>' + recall + '</div>' +
+        '<div class="gd2-paper">' +
+          '<div class="gd2-p-hd"><div class="gd2-p-name">' + esc(p.title) + '</div>' +
+            '<div class="gd2-p-meta">' + esc(EG.meta.examType || '') + ' · 满分 ' + p.totalScore + ' 分 · 考试时间 ' + p.durationMin + ' 分钟</div></div>' +
+          '<div class="gd2-warn">⚠️ ' + esc(EG.meta.notice.replace(/\*\*/g, '')) + '</div>' +
+          body +
+        '</div>' +
+      '</div>';
+    $('#egBack').addEventListener('click', renderList);
+    bindQuestions();
+  }
+
+  function renderQuestion(q) {
+    const key = 'eg' + q.no;
+    if (q.type === 'single') {
+      if (q.options && q.options.length) {
+        return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + esc(q.q) + '</div>' +
+          q.options.map((o, oi) => '<div class="gd2-opt" data-o="' + oi + '">' + optLetter(oi) + '. ' + esc(o) + '</div>').join('') +
+          '<div class="gd2-res" id="r-' + key + '"></div><div class="gd2-ans" id="a-' + key + '" style="display:none"></div></div>';
+      }
+      // 仅答案版（如部分年份完形填空无选项）：直接给出答案
+      return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + esc(q.q) + '<span class="gd2-q-tag">仅答案</span></div>' +
+        '<div class="gd2-res bad" style="background:#fffbe8;color:#7a5c00">（本题仅提供答案：' + optLetter(q.answer) + '）' +
+        (q.analysis ? '　' + esc(q.analysis) : '') + '</div></div>';
+    }
+    if (q.type === 'listen') {
+      if (q.options && q.options.length) {
+        return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + esc(q.q) + '<span class="gd2-q-tag">听力</span></div>' +
+          q.options.map((o, oi) => '<div class="gd2-opt" data-o="' + oi + '">' + optLetter(oi) + '. ' + esc(o) + '</div>').join('') +
+          '<div class="gd2-res" id="r-' + key + '"></div><div class="gd2-ans" id="a-' + key + '" style="display:none"></div></div>';
+      }
+      return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + esc(q.q) + '<span class="gd2-q-tag">听力·无音频</span></div>' +
+        '<div class="gd2-res bad" style="background:#fffbe8;color:#7a5c00">（听力无音频，本题仅提供答案：' + optLetter(q.answer) + '）</div></div>';
+    }
+    if (q.type === 'fill') {
+      const acc = (q.accept && q.accept.length) ? ('　可接受：' + q.accept.map(esc).join(' / ')) : '';
+      const an = '<b>参考答案：</b>' + esc(q.answer) + acc + (q.analysis ? '<br>【解析】' + esc(q.analysis) : '');
+      return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + esc(q.q) + '<span class="gd2-q-tag">语法填空</span></div>' +
+        '<button class="gd2-reveal" id="rv-' + key + '" onclick="revealEg(\'' + key + '\')">显示参考答案</button>' +
+        '<div class="gd2-ans" id="a-' + key + '" style="display:none">' + an + '</div></div>';
+    }
+    if (q.type === 'essay') {
+      const ref = q.reference ?
+        ('<button class="gd2-reveal" id="rv-' + key + '" onclick="revealEg(\'' + key + '\')">显示参考范文</button>' +
+         '<div class="gd2-ans" id="a-' + key + '" style="display:none"><b>参考范文：</b><br>' + esc(q.reference) + '</div>') :
+        '<div class="gd2-ans">（暂无范文）</div>';
+      return '<div class="gd2-q" data-q="' + key + '"><div class="gd2-q-h"><b>' + q.no + '.</b> ' + (q.title ? esc(q.title) + '　' : '') + '<span class="gd2-q-tag">写作</span></div>' +
+        '<div class="gd2-passage">' + esc(q.q) + '</div>' + ref + '</div>';
+    }
+    return '';
+  }
+
+  function revealEg(key) {
+    const a = document.getElementById('a-' + key);
+    const b = document.getElementById('rv-' + key);
+    if (a) a.style.display = '';
+    if (b) b.style.display = 'none';
+  }
+
+  function bindQuestions() {
+    const p = EG.cur; if (!p) return;
+    const all = {};
+    p.modules.forEach(m => m.parts.forEach(pt => pt.questions.forEach(q => { all['eg' + q.no] = q; })));
+    Object.keys(all).forEach(key => {
+      const q = all[key];
+      const interactive = (q.type === 'single' && q.options && q.options.length) || (q.type === 'listen' && q.options && q.options.length);
+      if (!interactive) return;
+      const box = document.querySelector('.gd2-q[data-q="' + key + '"]');
+      if (!box) return;
+      const picked = [];
+      box.querySelectorAll('.gd2-opt').forEach(el => el.addEventListener('click', () => {
+        if (EG.showKey[key]) return;
+        const oi = Number(el.dataset.o);
+        if (picked.length && picked[0] === oi) return;
+        picked.length = 0; picked.push(oi);
+        box.querySelectorAll('.gd2-opt').forEach(x => x.classList.remove('picked'));
+        box.querySelector('.gd2-opt[data-o="' + oi + '"]').classList.add('picked');
+        judgeEg(key, q, box, picked);
+      }));
+    });
+  }
+
+  function judgeEg(key, q, box, picked) {
+    if (EG.showKey[key]) return;
+    EG.showKey[key] = true;
+    const ok = picked.length === 1 && picked[0] === q.answer;
+    box.querySelectorAll('.gd2-opt').forEach(x => {
+      x.classList.add('locked');
+      const oi = Number(x.dataset.o);
+      if (oi === q.answer) x.classList.add('right');
+      else if (picked.indexOf(oi) >= 0) x.classList.add('wrong');
+    });
+    const res = document.getElementById('r-' + key);
+    const ans = document.getElementById('a-' + key);
+    res.className = 'gd2-res ' + (ok ? 'ok' : 'bad');
+    res.textContent = ok ? '✅ 回答正确' : '❌ 回答错误，正确答案：' + optLetter(q.answer);
+    if (ans && q.analysis) { ans.style.display = ''; ans.textContent = '【参考解析】' + q.analysis; }
+  }
+
+  init();
+</script>
+</body>
+</html>
