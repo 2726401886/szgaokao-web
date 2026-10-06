@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+"""初高中历史模块端到端验证（线上）。
+覆盖：/api/history（板块+条目）/api/history-exam（total+筛选+ids）/api/history-link（单元+unit详情）
+      /history 页面 200 + 首页卡片 + 鉴权 401/403
+用法：python tools/e2e_history.py
+"""
+import json, os, ssl, sys, time, urllib.request, urllib.error
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = 'https://szgaokao.toolshe.cn'
+UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+PROXY = os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or 'http://127.0.0.1:60218'
+
+PASS = FAIL = 0
+
+
+def check(name, cond, detail=''):
+    global PASS, FAIL
+    if cond:
+        PASS += 1
+        print('  [PASS] %s%s' % (name, (' — ' + detail) if detail else ''))
+    else:
+        FAIL += 1
+        print('  [FAIL] %s%s' % (name, (' — ' + detail) if detail else ''))
+
+
+opener = urllib.request.build_opener(
+    urllib.request.ProxyHandler({'http': PROXY, 'https': PROXY}),
+    urllib.request.HTTPSHandler(context=ssl.create_default_context()))
+
+
+def req(method, url, data=None, headers=None, retry=3):
+    for a in range(retry):
+        body = json.dumps(data).encode() if data is not None else None
+        h = {'Content-Type': 'application/json', 'User-Agent': UA}
+        if headers:
+            h.update(headers)
+        try:
+            r = urllib.request.Request(url, data=body, method=method, headers=h)
+            with opener.open(r, timeout=60) as resp:
+                return resp.status, json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            try:
+                return e.code, json.loads(e.read().decode())
+            except Exception:
+                return e.code, {}
+        except Exception as e:
+            if a < retry - 1:
+                time.sleep(2)
+                continue
+            return 0, {'error': str(e)}
+
+
+FP = 'e2e-history-device'
+U = 'hist%d' % int(time.time() % 100000)
+st, r = req('POST', BASE + '/api/register', {'username': U, 'password': 'test123456', 'device': FP})
+check('注册成功', st == 200 and r.get('token'), 'HTTP %d' % st)
+H = {'Authorization': 'Bearer ' + r.get('token', ''), 'X-Device': FP}
+
+print('\n--- /api/history 知识点 ---')
+st, r = req('GET', BASE + '/api/history', headers=H)
+check('知识点接口 200', st == 200, 'HTTP %d' % st)
+if st == 200:
+    secs = r.get('sections', {})
+    check('含 knowledge 板块', 'knowledge' in secs, str(list(secs.keys())))
+    gs = secs.get('knowledge', {}).get('groups', [])
+    check('分组数 >= 1（trial 至少 1 组）', len(gs) >= 1, 'groups=%d trial=%s' % (len(gs), r.get('trial')))
+    if gs:
+        g = gs[0]
+        check('分组含 items 列表', isinstance(g.get('items'), list) and len(g['items']) > 0,
+              'items=%d' % len(g.get('items', [])))
+        it = g['items'][0]
+        check('知识点结构完整', all(k in it for k in ('id', 'term', 'jieshi', 'kao')),
+              str(list(it.keys())))
+        check('知识点自测含选项与答案', bool(it.get('kao', {}).get('options')) and 'answer' in it.get('kao', {}))
+        check('知识点有讲解文字', len(it.get('jieshi', '')) >= 10, '%d 字' % len(it.get('jieshi', '')))
+
+print('\n--- /api/history-exam 题库 ---')
+st, r = req('GET', BASE + '/api/history-exam', headers=H)
+check('题库接口 200', st == 200, 'HTTP %d' % st)
+if st == 200:
+    qs = r.get('questions', [])
+    check('返回题目列表', len(qs) > 0, '题数=%d trial=%s' % (len(qs), r.get('trial')))
+    check('返回 topics 供页面筛选', len(r.get('topics', [])) > 0, 'topics=%d' % len(r.get('topics', [])))
+    if qs:
+        q = qs[0]
+        check('题目结构完整', all(k in q for k in ('id', 'grade', 'topic', 'type', 'difficulty', 'stem')),
+              str(list(q.keys())))
+        if q['type'] == 'choice':
+            check('选择题 4 选项', len(q.get('options', [])) == 4, '选项=%d' % len(q.get('options', [])))
+            check('选择题答案合法', 0 <= q.get('answer', -1) < len(q.get('options', [])))
+
+# 年级筛选
+st, r = req('GET', BASE + '/api/history-exam?grade=10', headers=H)
+check('按 grade=10 筛选 200', st == 200, 'HTTP %d' % st)
+if st == 200:
+    gs = {q['grade'] for q in r.get('questions', [])}
+    check('筛选结果均为 grade=10', gs <= {10}, 'grades=%r 题数=%d' % (sorted(gs), len(r.get('questions', []))))
+
+# 题型筛选
+st, r = req('GET', BASE + '/api/history-exam?type=choice', headers=H)
+if st == 200:
+    ts = {q['type'] for q in r.get('questions', [])}
+    check('按 type=choice 筛选生效', ts <= {'choice'}, 'types=%r' % sorted(ts))
+
+# ids 取题
+st, r0 = req('GET', BASE + '/api/history-exam?ids=bad', headers=H)
+check('ids 非法返回 200 空数组', st == 200 and r0.get('questions') == [], 'HTTP %d' % st)
+
+print('\n--- /api/history-link 专题包 ---')
+st, r = req('GET', BASE + '/api/history-link', headers=H)
+check('专题接口 200', st == 200, 'HTTP %d' % st)
+if st == 200:
+    us = r.get('units', [])
+    check('返回单元列表', len(us) >= 1, 'units=%d trial=%s' % (len(us), r.get('trial')))
+    if us:
+        u = us[0]
+        check('单元结构完整', all(k in u for k in ('id', 'title', 'summary', 'points', 'quiz')),
+              str(list(u.keys())))
+        check('单元含讲解要点', len(u.get('points', [])) > 0, 'points=%d' % len(u.get('points', [])))
+        check('单元含小测', len(u.get('quiz', [])) > 0, 'quiz=%d' % len(u.get('quiz', [])))
+        st2, r2 = req('GET', BASE + '/api/history-link?unit=' + u['id'], headers=H)
+        check('unit 详情 200', st2 == 200 and r2.get('id') == u['id'], 'HTTP %d' % st2)
+
+st, _ = req('GET', BASE + '/api/history-link?unit=nope', headers=H)
+check('不存在单元 404', st == 404, 'HTTP %d' % st)
+
+print('\n--- 鉴权 ---')
+st, _ = req('GET', BASE + '/api/history')
+check('未登录 401', st == 401, 'HTTP %d' % st)
+st, _ = req('GET', BASE + '/api/history-exam')
+check('未登录 exam 401', st == 401, 'HTTP %d' % st)
+st, _ = req('GET', BASE + '/api/history', headers={'Authorization': 'Bearer bad', 'X-Device': FP})
+check('无效 token 401', st == 401, 'HTTP %d' % st)
+
+print('\n--- 页面 ---')
+for path, kw in [('/history', ['初高中历史', "/api/history", "k: 'knowledge'", 'renderKnowledgeRead']),
+                 ('/', ['mod-history', "enterMod('history')", "./history.html", '初高中历史'])]:
+    try:
+        rq = urllib.request.Request(BASE + path, headers={'User-Agent': UA})
+        with opener.open(rq, timeout=60) as resp:
+            html = resp.read().decode('utf-8', 'ignore')
+        check('%s 页面 200' % path, True)
+        for k in kw:
+            check('%s 含 %s' % (path, k), k in html)
+    except Exception as e:
+        check('%s 页面可访问' % path, False, str(e)[:60])
+
+print('\n=========================================')
+print('  结果：%d 通过 / %d 失败' % (PASS, FAIL))
+print('=========================================')
+sys.exit(1 if FAIL else 0)
