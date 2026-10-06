@@ -169,6 +169,33 @@
       <div id="codeList" style="clear:both"><div class="msg">加载中…</div></div>
     </div>
 
+    <!-- 注册用户统计表 -->
+    <div class="card">
+      <h3>📊 注册用户统计表 <button class="btn sm gray" style="float:right" onclick="loadRegStats()">刷新</button></h3>
+      <div id="regSummary" style="clear:both"></div>
+      <div style="overflow-x:auto;clear:both">
+        <table id="regTable" style="width:100%;border-collapse:collapse;font-size:13px;min-width:920px">
+          <thead>
+            <tr style="background:#f7f8fa;color:#555;font-weight:700">
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">用户名</th>
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">注册时间</th>
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">密码</th>
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">授权状态</th>
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">到期时间</th>
+              <th style="text-align:left;padding:9px 10px;border-bottom:2px solid #eee">已授权模块</th>
+              <th style="text-align:center;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">设备数</th>
+              <th style="text-align:center;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">标记</th>
+              <th style="text-align:center;padding:9px 10px;border-bottom:2px solid #eee;white-space:nowrap">操作</th>
+            </tr>
+          </thead>
+          <tbody id="regBody"><tr><td colspan="9" style="padding:20px;text-align:center;color:#999">加载中…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="tip">
+        🔒 <b>密码说明</b>：用户密码以 <b>PBKDF2-SHA256（10 万次迭代 + 16 字节随机盐）</b>单向哈希存储，<b>数据库中没有原始密码，任何人都无法反推</b>（含管理员）。如需让用户登录，请用右侧「重置密码」直接设置新密码。
+      </div>
+    </div>
+
     <!-- 用户管理 -->
     <div class="card">
       <h3>👥 用户与设备管理 <button class="btn sm gray" style="float:right" onclick="loadUsers()">刷新</button></h3>
@@ -198,7 +225,7 @@ function enterPanel() {
   $('loginCard').style.display = 'none';
   $('panel').style.display = '';
   $('btnLogout').style.display = '';
-  loadCodes(); loadUsers(); loadTrial(); loadStats();
+  loadCodes(); loadUsers(); loadTrial(); loadStats(); loadRegStats();
 }
 
 // —— 访问统计 ——
@@ -271,6 +298,86 @@ async function loadCodes() {
     const useTag = c.used >= c.maxActs ? '<span class="tag used">已用完</span>' : '<span class="tag ok">可用 ' + (c.maxActs - c.used) + '</span>';
     return `<div class="code-item"><span class="c">${esc(c.code)}</span>${planTag}${useTag}<span class="tag" style="background:#f5f5f5;color:#888">${c.used}/${c.maxActs}</span></div>`;
   }).join('');
+}
+
+// —— 注册用户统计表 ——
+const MOD_NAME = {
+  kids:'🧸幼儿', primary:'📖小学', junior:'🎒初中', middle:'🎧中考', gk:'🎓高考',
+  math:'🧮数学', senior:'📗高中', 'senior-grammar':'📘语法', 'senior-exam':'📝题库',
+  chinese:'📚小学语文', jchinese:'📕初中语文', hchinese:'📗高中语文',
+  politics:'🏛️政治', geography:'🌍地理', chemistry:'⚗️化学', history:'🏛️历史',
+  vocab:'📖单词', english:'🔤英语', 'english-gd':'📄高考英语卷',
+  'hchinese-kwd':'📖语文拓展', 'politics-gd':'📄政治卷', 'geography-gd':'📄地理卷',
+  'chemistry-gd':'📄化学卷', 'history-gd':'📄历史卷',
+};
+function fmtTime(ts) {
+  if (!ts) return '—';
+  const d = new Date(ts);
+  const p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+}
+function modText(mods) {
+  const on = Object.keys(mods || {}).filter(k => mods[k]);
+  if (!on.length) return '<span style="color:#bbb">—</span>';
+  return on.map(k => '<span class="tag used" style="margin:1px 2px">' + esc(MOD_NAME[k] || k) + '</span>').join('');
+}
+let REG_ROWS = [];
+async function loadRegStats() {
+  const r = await api('/api/admin/users', { headers: H() });
+  const body = $('regBody'), sum = $('regSummary');
+  if (r.s !== 200) { body.innerHTML = '<tr><td colspan="9" style="padding:20px;text-align:center;color:#e23">' + esc(r.j.error || '加载失败') + '</td></tr>'; return; }
+  const us = r.j.users || [];
+  REG_ROWS = us;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const t0 = today.getTime();
+  const nToday = us.filter(u => (u.createdAt || 0) >= t0).length;
+  const nAuth = us.filter(u => u.authorized).length;
+  const nTest = us.filter(u => u.isTest).length;
+  const nReal = us.length - nTest;
+  sum.innerHTML =
+    '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">' +
+      statBox(us.length, '注册总人数', '#c0392b') +
+      statBox(nToday, '今日新增', '#b8791f') +
+      statBox(nAuth, '已授权', '#2a8') +
+      statBox(nReal, '真实用户', '#1a56db') +
+      statBox(nTest, '测试账号', '#888') +
+    '</div>';
+  if (!us.length) { body.innerHTML = '<tr><td colspan="9" style="padding:20px;text-align:center;color:#999">暂无用户</td></tr>'; return; }
+  body.innerHTML = us.map((u, i) => {
+    const auth = u.authorized ? '<span class="tag ok">已授权</span>' : '<span class="tag used">未授权</span>';
+    let exp = '<span style="color:#bbb">—</span>';
+    if (u.authorized) exp = u.expiry ? esc(fmtTime(u.expiry)) : '永久';
+    return '<tr style="border-bottom:1px solid #f2f3f5">' +
+      '<td style="padding:8px 10px;font-weight:700">' + esc(u.username) + '</td>' +
+      '<td style="padding:8px 10px;color:#666;white-space:nowrap">' + fmtTime(u.createdAt) + '</td>' +
+      '<td style="padding:8px 10px;white-space:nowrap"><span title="PBKDF2-SHA256 单向哈希，不可逆">🔒 已加密</span></td>' +
+      '<td style="padding:8px 10px">' + auth + '</td>' +
+      '<td style="padding:8px 10px;color:#666;white-space:nowrap">' + exp + '</td>' +
+      '<td style="padding:8px 10px">' + modText(u.modules) + '</td>' +
+      '<td style="padding:8px 10px;text-align:center">' + ((u.devices || []).length) + '</td>' +
+      '<td style="padding:8px 10px;text-align:center">' + (u.isTest ? '<span class="tag used">测试</span>' : '') + '</td>' +
+      '<td style="padding:8px 10px;text-align:center;white-space:nowrap">' +
+        '<button class="btn sm" onclick="openResetPw(' + i + ')">重置密码</button>' +
+      '</td></tr>';
+  }).join('');
+}
+function statBox(n, label, color) {
+  return '<div style="flex:1 1 120px;background:#fff;border:1.5px solid #eee;border-radius:12px;padding:12px;text-align:center">' +
+    '<div style="font-size:24px;font-weight:800;color:' + color + '">' + n + '</div>' +
+    '<div style="font-size:12px;color:#999;margin-top:2px">' + label + '</div></div>';
+}
+function openResetPw(i) {
+  const u = REG_ROWS[i]; if (!u) return;
+  const v = prompt('为用户「' + u.username + '」设置新密码（至少 6 位）：\n\n注意：会直接覆盖原密码，用户需用新密码重新登录。');
+  if (v === null) return;
+  if (v.length < 6) { alert('新密码至少 6 位'); return; }
+  if (!confirm('确认将「' + u.username + '」的密码重置为新密码？')) return;
+  doResetPw(u.username, v);
+}
+async function doResetPw(username, newPassword) {
+  const r = await api('/api/admin/users/reset-pw', { method: 'POST', headers: H(), body: JSON.stringify({ username, newPassword }) });
+  if (r.s === 200) { alert('✅ 已重置「' + username + '」的密码'); loadRegStats(); loadUsers(); }
+  else alert('❌ ' + (r.j.error || '重置失败'));
 }
 
 // —— 用户管理 ——
