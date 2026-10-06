@@ -86,6 +86,7 @@
   .gd-st b { font-size:14px; }
   .gd-st-sc { font-size:12px; font-weight:700; color:#8e44ad; margin-left:8px; }
   .gd-st-d { font-size:11.5px; color:#999; margin-top:5px; line-height:1.6; }
+  .gd-box { background:#fff; border:1.5px solid #f0e6f9; border-radius:12px; padding:11px 14px; font-size:13px; line-height:1.8; color:#444; }
   .gd-cards { display:flex; gap:12px; flex-wrap:wrap; }
   .gd-card { flex:1 1 290px; background:#fff; border:1.5px solid #f0e6f9; border-radius:14px; padding:14px; cursor:pointer; display:flex; gap:12px; align-items:center; }
   .gd-card:hover { border-color:#8e44ad; box-shadow:0 6px 20px rgba(142,68,173,.12); }
@@ -305,6 +306,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
         { k: 'read', t: '📖 范文赏析' } ] },
     { k: 'textbook', t: '📖 课本同步', modes: [] },
     { k: 'gdpaper', t: '📄 广东高考卷', modes: [] },
+    { k: 'kwd', t: '📖 课外阅读拓展', modes: [] },
     { k: 'exam', t: '📋 题库组卷', modes: [] },
     { k: 'link', t: '🌉 高考衔接', modes: [] },
   ];
@@ -375,13 +377,14 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   function selectSection(k) {
     section = k; mode = (SECTIONS.find(s => s.k === k).modes[0] || {}).k || '';
     buildTabs();
-    if (k === 'exam' || k === 'link' || k === 'textbook' || k === 'gdpaper') {
+    if (k === 'exam' || k === 'link' || k === 'textbook' || k === 'gdpaper' || k === 'kwd') {
       // 独立板块：隐藏左侧分组栏，整幅渲染
       $('#sidePane').style.display = 'none';
       $('#mainArea').style.flex = '1 1 100%';
       if (k === 'exam') renderExamPage();
       else if (k === 'textbook') renderTextbookPage();
       else if (k === 'gdpaper') renderGdPaperPage();
+      else if (k === 'kwd') renderKwdPage();
       else renderLinkPage();
       return;
     }
@@ -406,7 +409,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   }
 
   function renderSide() {
-    if (section === 'exam' || section === 'link' || section === 'textbook' || section === 'gdpaper') return;
+    if (section === 'exam' || section === 'link' || section === 'textbook' || section === 'gdpaper' || section === 'kwd') return;
     const groups = curGroups();
     const ids = groups.flatMap(g => itemsOf(g).map(it => it.id));
     const mc = masteredCount(section, ids);
@@ -1130,6 +1133,88 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
         res.className = 'tb-pr-res ' + (ok ? 'ok' : 'bad');
         document.getElementById('tbAn' + pi).style.display = 'block';
       }));
+    });
+  }
+
+  // ================== 板块：课外阅读拓展（4 专题） ==================
+  window.__KWD_CACHE = window.__KWD_CACHE || {};
+  function renderKwdPage() {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    api('/api/hchinese-kwd').then(function (r) {
+      if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败，请登录后重试') + '</div>'; return; }
+      const d = r.j;
+      const cards = (d.units || []).map(function (u) {
+        return '<div class="gd-card" data-u="' + esc(u.id) + '">' +
+          '<div class="gd-card-y" style="font-size:15px;">' + esc(u.no) + '</div>' +
+          '<div class="gd-card-b"><div class="gd-card-t">' + esc(u.title) + '</div>' +
+          '<div class="gd-card-m">' + esc(u.desc || '') + ' · 共 ' + u.questionCount + ' 题</div></div>' +
+          '<div class="gd-card-go">进入专题 →</div></div>';
+      }).join('');
+      $('#mainArea').innerHTML =
+        '<div class="gd-wrap">' +
+          '<div class="gd-hd">📖 高中语文 · 课外阅读拓展<span class="gd-ed">' + esc(d.examType || '') + '</span></div>' +
+          '<div class="gd-warn">⚠️ <b>说明</b>：' + esc(d.notice) + '</div>' +
+          (d.trial ? '<div class="gd-tip">🎁 体验模式：仅开放第 1 专题。输入授权码或联系管理员（微信 13538237315）解锁全部 4 专题。</div>' : '') +
+          '<div class="gd-st-h">专题结构</div><div class="gd-box">' + esc(d.structure || '') + '</div>' +
+          '<div class="gd-st-h">专题列表</div>' +
+          '<div class="gd-cards">' + (cards || '<div class="empty">暂无专题</div>') + '</div>' +
+        '</div>';
+      document.querySelectorAll('.gd-card[data-u]').forEach(el => el.addEventListener('click', () => openKwdUnit(el.dataset.u)));
+    });
+  }
+
+  function openKwdUnit(unitId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    api('/api/hchinese-kwd?unit=' + encodeURIComponent(unitId)).then(function (r) {
+      if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">专题加载失败</div>'; return; }
+      const u = r.j;
+      window.__KWD_CACHE[u.id] = u;
+      const secs = u.sections.map(function (sec) {
+        const qs = sec.questions.map(function (q) {
+          if (q.type === 'choice') {
+            return '<div class="gd-q"><div class="gd-q-stem">' + q.no + '．' + esc(q.stem) + '</div>' +
+              '<div class="gd-q-opts" data-u="' + esc(u.id) + '" data-no="' + q.no + '">' +
+              q.options.map(function (o, oi) { return '<div class="gd-q-o" data-oi="' + oi + '">' + String.fromCharCode(65 + oi) + '．' + esc(o) + '</div>'; }).join('') +
+              '</div><div class="gd-q-res" data-no="' + q.no + '"></div><div class="gd-q-ana" data-no="' + q.no + '">' + esc(q.analysis || '') + '</div></div>';
+          }
+          return '<div class="gd-q"><div class="gd-q-stem">' + q.no + '．' + esc(q.stem) + '</div>' +
+            '<div class="gd-q-sub">参考答案：' + esc(q.answer) + '</div>' +
+            (q.analysis ? '<div class="gd-q-ana" data-no="' + q.no + '">' + esc(q.analysis) + '</div>' : '') + '</div>';
+        }).join('');
+        return '<div class="gd-part"><div class="gd-part-h">' + esc(sec.name) + (sec.score ? '<span class="gd-part-sc">' + sec.score + '分</span>' : '') + '</div>' + qs + '</div>';
+      }).join('');
+      $('#mainArea').innerHTML =
+        '<div class="gd-wrap">' +
+          '<div class="gd-hd"><button class="gd-back" id="kwdBack">← 返回专题列表</button> ' + esc(u.no) + ' ' + esc(u.title) + '</div>' +
+          '<div class="gd-warn">⚠️ ' + esc(u.desc || '') + '</div>' +
+          '<div class="gd-paper">' + secs + '</div>' +
+        '</div>';
+      $('#kwdBack').addEventListener('click', renderKwdPage);
+      document.querySelectorAll('.gd-q-opts').forEach(function (box) {
+        var uId = box.dataset.u, no = box.dataset.no;
+        box.querySelectorAll('.gd-q-o').forEach(function (o) {
+          o.addEventListener('click', function () {
+            if (box.dataset.locked) return;
+            box.dataset.locked = '1';
+            var ans = null;
+            var un = window.__KWD_CACHE && window.__KWD_CACHE[uId];
+            if (un) un.sections.forEach(function (sec) { sec.questions.forEach(function (q) { if (String(q.no) === String(no) && q.type === 'choice') ans = q.answer; }); });
+            var oi = Number(o.dataset.oi);
+            box.querySelectorAll('.gd-q-o').forEach(function (x) {
+              if (ans !== null && Number(x.dataset.oi) === ans) x.classList.add('right');
+              else if (x === o) x.classList.add('wrong');
+            });
+            var res = document.querySelector('.gd-q-res[data-no="' + no + '"]');
+            if (res) {
+              res.textContent = (ans !== null && oi === ans) ? '✅ 正确！' : (ans !== null ? '❌ 正确答案：' + String.fromCharCode(65 + ans) : '');
+              res.className = 'gd-q-res ' + (ans !== null && oi === ans ? 'ok' : 'bad');
+            }
+            var ana = document.querySelector('.gd-q-ana[data-no="' + no + '"]');
+            if (ana) ana.style.display = 'block';
+          });
+        });
+      });
+      document.querySelectorAll('.gd-q-ana').forEach(function (a) { a.style.display = 'block'; });
     });
   }
 
