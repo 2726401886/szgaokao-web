@@ -138,6 +138,44 @@
     .side .grp-item { min-width:150px; margin-bottom:0; }
     .hero .big { font-size:42px; }
   }
+  /* —— 课本同步（物理） —— */
+  .tb-wrap { max-width:1000px; }
+  .tb-hd { font-size:18px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .tb-ed { font-size:12px; font-weight:500; color:#1e40af; background:#eef2ff; padding:3px 10px; border-radius:12px; }
+  .tb-back { border:none; background:#eef2ff; color:#1e40af; font-size:13px; font-weight:700; padding:6px 12px; border-radius:14px; cursor:pointer; }
+  .tb-back:hover { background:#e0e8ff; }
+  .tb-tip { font-size:12.5px; color:#666; background:#fff; border:1px solid #e0edff; border-radius:12px; padding:10px 14px; margin-bottom:12px; line-height:1.7; }
+  .tb-tip b { color:#1e40af; }
+  .tb-warn { font-size:12.5px; color:#7a5c00; background:#fffbe8; border:1px solid #f3e6b8; border-radius:12px; padding:10px 14px; margin-bottom:12px; }
+  .tb-books { display:flex; gap:12px; flex-wrap:wrap; }
+  .tb-book { flex:1 1 300px; background:#fff; border:1.5px solid #e0edff; border-radius:16px; padding:16px; cursor:pointer; transition:border-color .15s, box-shadow .15s; }
+  .tb-book:hover { border-color:#1e40af; box-shadow:0 6px 20px rgba(30,64,175,.12); }
+  .tb-book-hd { display:flex; align-items:center; gap:8px; font-size:16px; font-weight:800; }
+  .tb-tag { font-size:11px; font-weight:600; color:#1e40af; background:#eef2ff; padding:2px 8px; border-radius:10px; }
+  .tb-book-th { font-size:12.5px; color:#888; margin-top:6px; }
+  .tb-units { display:flex; gap:10px; flex-direction:column; }
+  .tb-unit { background:#fff; border:1.5px solid #e0edff; border-radius:14px; padding:13px 15px; cursor:pointer; }
+  .tb-unit:hover { border-color:#1e40af; }
+  .tb-unit-hd { font-size:15px; font-weight:700; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .tb-unit-meta { font-size:12px; color:#aaa; margin-top:5px; }
+  .tb-sec { background:#fff; border:1.5px solid #e0edff; border-radius:14px; padding:13px 15px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  .tb-sec:hover { border-color:#1e40af; }
+  .tb-sec-title { font-size:14.5px; font-weight:700; }
+  .tb-sec-meta { font-size:12px; color:#aaa; }
+  .tb-card { background:#fff; border-radius:16px; padding:16px; margin-bottom:14px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .tb-card-h { font-size:15px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .tb-card-n { font-size:11.5px; font-weight:600; color:#1e40af; background:#eef2ff; padding:2px 9px; border-radius:10px; }
+  .tb-point { border:1.5px solid #e0edff; border-radius:12px; padding:13px 15px; margin-bottom:11px; }
+  .tb-point h4 { font-size:14.5px; color:#1e40af; margin-bottom:6px; }
+  .tb-point .pb { font-size:14.5px; line-height:1.85; color:#333; }
+  .tb-opts { margin-top:4px; }
+  .tb-opts .opt { margin:6px 0; }
+  .tb-res { font-size:13px; font-weight:700; margin-top:6px; }
+  .tb-res.ok { color:#1e3a8a; }
+  .tb-res.bad { color:#e23; }
+  .tb-sub { font-size:13.5px; color:#444; line-height:1.9; background:#f5f9ff; border-radius:8px; padding:9px 12px; margin-bottom:8px; }
+  .qans { font-size:13.5px; color:#1e3a8a; font-weight:700; margin-top:8px; line-height:1.7; display:none; }
+  .qexp.show { display:block; }
 </style>
 <script src="./device.js"></script>
 </head>
@@ -181,7 +219,10 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
         { k: 'read', t: '📖 学习' } ] },
     { k: 'exam', t: '📋 题库组卷', modes: [] },
     { k: 'link', t: '🧩 专题突破', modes: [] },
+    { k: 'book', t: '📗 课本同步', modes: [] },
   ];
+  // 课本同步：题型标签
+  const BOOK_TYPE_LABEL = { choice_single:'单选', choice_multi:'多选', fill:'填空', drawing:'作图', calculation:'计算', short:'简答', experiment:'实验' };
 
   let DATA = null;       // { sections, trial }
   let section = 'pinyin';
@@ -249,12 +290,13 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   function selectSection(k) {
     section = k; mode = (SECTIONS.find(s => s.k === k).modes[0] || {}).k || '';
     buildTabs();
-    if (k === 'exam' || k === 'link') {
+    if (k === 'exam' || k === 'link' || k === 'book') {
       // 独立板块：隐藏左侧分组栏，整幅渲染
       $('#sidePane').style.display = 'none';
       $('#mainArea').style.flex = '1 1 100%';
       if (k === 'exam') renderExamPage();
-      else renderLinkPage();
+      else if (k === 'link') renderLinkPage();
+      else renderBookPage();
       return;
     }
     $('#sidePane').style.display = '';
@@ -273,7 +315,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   }
 
   function renderSide() {
-    if (section === 'exam' || section === 'link') return;
+    if (section === 'exam' || section === 'link' || section === 'book') return;
     const groups = curGroups();
     const ids = groups.flatMap(g => itemsOf(g).map(it => it.id));
     const mc = masteredCount(section, ids);
@@ -1016,6 +1058,175 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
       if (e.key === 'ArrowLeft' && idx > 0) { idx--; qState = null; spellVal = ''; renderMain(); }
     }
   });
+
+  // ================== 板块：课本同步（物理，册→章→节） ==================
+  let BOOK_DATA = null, BOOK_CUR = null, BOOK_CHAPTER = null;
+
+  async function renderBookPage() {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-book');
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败，请登录后重试') + '</div>'; return; }
+    BOOK_DATA = r.j;
+    const books = BOOK_DATA.books || [];
+    const cards = books.map(b =>
+      '<div class="tb-book" data-b="' + esc(b.id) + '">' +
+        '<div class="tb-book-hd"><b>' + esc(b.name) + '</b><span class="tb-tag">' + esc(b.term || '') + '</span></div>' +
+        '<div class="tb-book-th">' + (b.chapterCount || 0) + ' 章 · ' + (b.sectionCount || 0) + ' 节 · 点开查看章节与同步练习</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd">⚛️ 物理 · 课本同步<span class="tb-ed">' + esc(BOOK_DATA.edition || '') + '</span></div>' +
+        (BOOK_DATA.trial ? '<div class="tb-warn">🎁 体验模式：课本同步每册仅开放第 1 章。输入授权码可解锁全部六册。</div>' : '') +
+        (cards || '<div class="tb-tip">暂无课本数据</div>') +
+      '</div>';
+    document.querySelectorAll('.tb-book').forEach(el => el.addEventListener('click', () => loadBook(el.dataset.b)));
+  }
+
+  async function loadBook(bookId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-book?book=' + encodeURIComponent(bookId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const book = r.j.book; BOOK_CUR = book;
+    const chapters = book.chapters || [];
+    const list = chapters.map(c =>
+      '<div class="tb-unit" data-c="' + esc(c.id) + '">' +
+        '<div class="tb-unit-hd"><b>' + esc(c.title) + '</b></div>' +
+        '<div class="tb-unit-meta">' + (c.sections || []).length + ' 节 · 点开查看考点讲解与同步练习</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="tbBack">← 返回</button> ' + esc(book.name) + (book.term ? '　<span class="tb-ed">' + esc(book.term) + '</span>' : '') + '</div>' +
+        (r.j.trial ? '<div class="tb-warn">🎁 体验模式：本册仅开放第 1 章。输入授权码解锁全部章节。</div>' : '') +
+        '<div class="tb-tip">本册共 <b>' + chapters.length + '</b> 章，点章节查看每节的考点讲解与同步练习（每节不少于 10 题，题型贴合中高考）。</div>' +
+        '<div class="tb-units">' + list + '</div>' +
+      '</div>';
+    $('#tbBack').addEventListener('click', () => renderBookPage());
+    document.querySelectorAll('.tb-unit').forEach(el => el.addEventListener('click', () => loadChapter(el.dataset.c)));
+  }
+
+  async function loadChapter(chapterId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-book?chapter=' + encodeURIComponent(chapterId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const ch = r.j.chapter; BOOK_CHAPTER = ch;
+    const sections = ch.sections || [];
+    const list = sections.map(s =>
+      '<div class="tb-sec" data-s="' + esc(s.id) + '">' +
+        '<div class="tb-sec-title">' + esc(s.title) + '</div>' +
+        '<div class="tb-sec-meta">' + (s.questions || []).length + ' 题 ▸</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="tbBack">← 返回</button> ' + esc(BOOK_CUR.name) + ' · ' + esc(ch.title) + '</div>' +
+        '<div class="tb-tip">本章共 <b>' + sections.length + '</b> 节，点节次查看考点讲解与同步练习。</div>' +
+        '<div class="tb-units">' + list + '</div>' +
+      '</div>';
+    $('#tbBack').addEventListener('click', () => loadBook(BOOK_CUR.id));
+    document.querySelectorAll('.tb-sec').forEach(el => el.addEventListener('click', () => loadSection(el.dataset.s)));
+  }
+
+  async function loadSection(sectionId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-book?section=' + encodeURIComponent(sectionId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const s = r.j.section;
+    const points = (s.points || []).map(p =>
+      '<div class="tb-point"><h4>' + esc(p.t) + '</h4><div class="pb">' + esc(p.e) + '</div></div>').join('');
+    const qs = renderBookQuestions(s.questions || []);
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="tbBack">← 返回</button> ' + esc(s.title) + '</div>' +
+        '<div class="tb-card"><div class="tb-card-h">📌 考点讲解<span class="tb-card-n">' + (s.points || []).length + ' 个</span></div>' +
+          (points || '<div class="tb-tip">本节以练习题为主。</div>') + '</div>' +
+        '<div class="tb-card"><div class="tb-card-h">✅ 同步练习<span class="tb-card-n">' + (s.questions || []).length + ' 题</span></div>' +
+          qs + '</div>' +
+      '</div>';
+    $('#tbBack').addEventListener('click', () => loadChapter(BOOK_CHAPTER.id));
+    bindBookQuestions(s.questions || []);
+  }
+
+  function renderBookQuestions(qs) {
+    return qs.map((q, qi) => {
+      const label = BOOK_TYPE_LABEL[q.type] || '题';
+      const kd = q.kaodian ? '<span class="pill">' + esc(q.kaodian) + '</span>' : '';
+      let inner = '';
+      if (q.type === 'choice_single') {
+        inner = '<div class="tb-opts" id="bkOp' + qi + '">' + q.options.map((o, oi) =>
+          '<div class="opt" data-oi="' + oi + '">' + String.fromCharCode(65 + oi) + '. ' + esc(o) + '</div>').join('') + '</div>' +
+          '<div class="tb-res" id="bkRes' + qi + '"></div>' +
+          '<div class="qexp" id="bkAn' + qi + '">' + esc(q.analysis) + '</div>';
+      } else if (q.type === 'choice_multi') {
+        inner = '<div class="tb-opts multi" id="bkOp' + qi + '">' + q.options.map((o, oi) =>
+          '<div class="opt" data-oi="' + oi + '">' + String.fromCharCode(65 + oi) + '. ' + esc(o) + '</div>').join('') + '</div>' +
+          '<button class="qbtn" data-pi="' + qi + '">提交答案</button>' +
+          '<div class="tb-res" id="bkRes' + qi + '"></div>' +
+          '<div class="qexp" id="bkAn' + qi + '">' + esc(q.analysis) + '</div>';
+      } else if (q.type === 'fill') {
+        inner = '<input class="blank-input" id="bkIn' + qi + '" placeholder="输入答案">' +
+          '<button class="qbtn" data-pi="' + qi + '">判分</button>' +
+          '<span class="tb-res" id="bkRes' + qi + '"></span>' +
+          '<div class="qexp" id="bkAn' + qi + '">' + esc(q.analysis) + '</div>';
+      } else {
+        let extra = '';
+        if (q.type === 'experiment' && q.sub) extra = '<div class="tb-sub">' + q.sub.map((x, i) => (i + 1) + '. ' + esc(x)).join('<br>') + '</div>';
+        inner = extra + '<button class="qbtn" data-pi="' + qi + '">查看答案与解析</button>' +
+          '<div class="qans" id="bkAns' + qi + '">参考答案：' + esc(q.answer) + '</div>' +
+          '<div class="qexp" id="bkAn' + qi + '">' + esc(q.analysis) + '</div>';
+      }
+      return '<div class="qitem"><div class="qs">' + (qi + 1) + '. [' + label + '] ' + esc(q.stem) + ' ' + kd + '</div>' + inner + '</div>';
+    }).join('');
+  }
+
+  function bindBookQuestions(qs) {
+    qs.forEach((q, qi) => {
+      if (q.type === 'choice_single') {
+        const box = document.getElementById('bkOp' + qi); if (!box) return;
+        box.querySelectorAll('.opt').forEach(o => o.addEventListener('click', () => {
+          if (box.dataset.locked) return; box.dataset.locked = '1';
+          const oi = Number(o.dataset.oi); const ok = oi === q.answer;
+          box.querySelectorAll('.opt').forEach(x => { if (Number(x.dataset.oi) === q.answer) x.classList.add('right'); else if (x === o) x.classList.add('wrong'); });
+          const res = document.getElementById('bkRes' + qi);
+          res.textContent = ok ? '✅ 正确！' : ('❌ 正确答案：' + String.fromCharCode(65 + q.answer));
+          res.className = 'tb-res ' + (ok ? 'ok' : 'bad');
+          document.getElementById('bkAn' + qi).classList.add('show');
+        }));
+      } else if (q.type === 'choice_multi') {
+        const box = document.getElementById('bkOp' + qi); if (!box) return;
+        box.querySelectorAll('.opt').forEach(o => o.addEventListener('click', () => { if (box.dataset.locked) return; o.classList.toggle('pick'); }));
+      } else if (q.type === 'fill') {
+        const btn = document.querySelector('.qbtn[data-pi="' + qi + '"]'); if (!btn) return;
+        btn.addEventListener('click', () => {
+          const inp = document.getElementById('bkIn' + qi); const val = (inp.value || '').trim();
+          const ok = val && val === String(q.answer).trim();
+          const res = document.getElementById('bkRes' + qi);
+          res.textContent = ok ? '✅ 正确！' : ('❌ 正确答案：' + q.answer);
+          res.className = 'tb-res ' + (ok ? 'ok' : 'bad');
+          document.getElementById('bkAn' + qi).classList.add('show');
+        });
+      } else {
+        const btn = document.querySelector('.qbtn[data-pi="' + qi + '"]'); if (!btn) return;
+        btn.addEventListener('click', () => {
+          document.getElementById('bkAns' + qi).style.display = 'block';
+          document.getElementById('bkAn' + qi).classList.add('show');
+        });
+      }
+    });
+    qs.forEach((q, qi) => {
+      if (q.type !== 'choice_multi') return;
+      const btn = document.querySelector('.qbtn[data-pi="' + qi + '"]'); if (!btn) return;
+      btn.addEventListener('click', () => {
+        const box = document.getElementById('bkOp' + qi); if (box.dataset.locked) return; box.dataset.locked = '1';
+        const picks = Array.from(box.querySelectorAll('.opt.pick')).map(x => Number(x.dataset.oi)).sort((a, b) => a - b);
+        const ans = (q.answer || []).slice().sort((a, b) => a - b);
+        const ok = picks.length === ans.length && picks.every((v, i) => v === ans[i]);
+        box.querySelectorAll('.opt').forEach(x => { if (ans.includes(Number(x.dataset.oi))) x.classList.add('right'); else if (x.classList.contains('pick')) x.classList.add('wrong'); });
+        const res = document.getElementById('bkRes' + qi);
+        res.textContent = ok ? '✅ 正确！' : ('❌ 正确答案：' + ans.map(v => String.fromCharCode(65 + v)).join(''));
+        res.className = 'tb-res ' + (ok ? 'ok' : 'bad');
+        document.getElementById('bkAn' + qi).classList.add('show');
+      });
+    });
+  }
 
   init();
 })();
