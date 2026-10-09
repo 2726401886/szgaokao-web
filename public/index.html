@@ -234,6 +234,13 @@
       <div><span class="state" id="st-history">加载中</span></div>
       <button class="go" id="go-history" onclick="enterMod('history')">进入模块</button>
     </div>
+    <div class="mod-card" id="mod-physics">
+      <div class="icon">⚛️</div>
+      <div class="name">初高中物理 · 知识点梳理·题库组卷·专题突破</div>
+      <div class="desc">八年级至高三 · 25 个核心知识点（带自测）+ 题库 50 题（选择/填空/阅读/写作）+ 5 大专题包；受力分析·牛顿定律·曲线运动·功与能量·电磁学</div>
+      <div><span class="state" id="st-physics">加载中</span></div>
+      <button class="go" id="go-physics" onclick="enterMod('physics')">进入模块</button>
+    </div>
     <div class="mod-card" id="mod-english-gd" style="border-color:var(--brand,#4f46e5);">
       <div class="icon">📄</div>
       <div class="name">广东高考英语 · 真题精练（2021–2026）</div>
@@ -255,7 +262,7 @@
     <div class="wx-card">需要解锁或购买，请添加管理员微信：<b>13538237315</b><a href="./assets/admin-wechat-qr.jpg" target="_blank"><img src="./assets/admin-wechat-qr.jpg" alt="管理员微信二维码"></a></div>
   </div>
 
-  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组 / 初高中地理每个板块第 1 组 / 初高中化学每个板块第 1 组 / 初高中历史每个板块第 1 组</div>
+  <div class="hint">每个模块均可免费体验：幼儿第 1 主题 / 小学第 1 组 / 初中首组单词与首单元 / 中考试卷01 / 高考第 1 套 / 数学第 1 单元 / 高中首单元与首语法专题 / 小学语文每个板块第 1 组 / 初中语文每个板块第 1 组 / 高中语文每个板块第 1 组 / 初高中道法政治每个板块第 1 组 / 初高中地理每个板块第 1 组 / 初高中化学每个板块第 1 组 / 初高中历史每个板块第 1 组 / 初高中物理每个板块第 1 组</div>
 </div>
 
 <script>
@@ -295,6 +302,7 @@ const MODINFO = {
   geography:       { url: './geography.html', name: '初高中地理 · 知识点梳理·题库组卷·专题突破' },
   chemistry:       { url: './chemistry.html', name: '初高中化学 · 知识点梳理·题库组卷·专题突破' },
   history:         { url: './history.html', name: '初高中历史 · 知识点梳理·题库组卷·专题突破' },
+  physics:         { url: './physics.html', name: '初高中物理 · 知识点梳理·题库组卷·专题突破' },
 };
 let MODS = {};   // { kids:0/1, primary:0/1, middle:0/1, gk:0/1 }
 let ACCT = { username: '', expiry: null, authorized: false };
@@ -339,7 +347,7 @@ async function resetDevices() {
 }
 async function activate() {
   const r = await api('/api/activate', { method: 'POST', headers: H(), body: JSON.stringify({ code: code.value.trim().toUpperCase() }) });
-  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1, geography: 1, chemistry: 1, history: 1 }; renderHome(); }
+  if (r.s === 200) { setMsg('actMsg', '激活成功！全部模块已解锁', 'ok'); MODS = { kids: 1, primary: 1, junior: 1, middle: 1, gk: 1, math: 1, senior: 1, 'senior-grammar': 1, 'senior-exam': 1, chinese: 1, jchinese: 1, hchinese: 1, politics: 1, geography: 1, chemistry: 1, history: 1, physics: 1 }; renderHome(); }
   else setMsg('actMsg', r.j.error || '激活失败', 'err');
 }
 function logout() { TOKEN = ''; localStorage.removeItem('token'); location.reload(); }
@@ -392,7 +400,7 @@ function renderHome() {
     show('actCard', false);
     show('wxCard', true);
   }
-  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics', 'geography', 'chemistry', 'history'].forEach(m => renderMod(m));
+  ['kids', 'primary', 'junior', 'middle', 'gk', 'math', 'senior', 'senior-grammar', 'senior-exam', 'chinese', 'jchinese', 'hchinese', 'politics', 'geography', 'chemistry', 'history', 'physics'].forEach(m => renderMod(m));
 }
 
 async function afterLogin() {
