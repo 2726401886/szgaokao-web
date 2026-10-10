@@ -74,6 +74,14 @@ const mathMiddle = load('math_middle.json', { product: '数学', volumes: [] });
 const TRIAL_MM = 'mj101'; // 数学初中体验：仅放行第 1 单元
 const mathHigh = load('math_high.json', { product: '数学', volumes: [] }); // 高中数学（必修第一册）
 const TRIAL_MH = 'mh101'; // 数学高中体验：仅放行第 1 单元
+// —— 初高中物理（7–12 年级，镜像线上 worker）：知识点 / 题库 / 专题衔接 / 课本同步 ——
+const physics = load('physics.json', { sections: {} });       // 知识点分组（sections.knowledge.groups）
+const physicsExam = load('physics_exam.json', { questions: [], topics: [] }); // 中高考真题格式题库
+const physicsLink = load('physics_link.json', { units: [] });  // 专题衔接包
+const physicsBook = load('physics_book.json', { books: [], edition: '' });   // 课本同步（册→章→节）
+const physicsKnowledge = load('physics_knowledge.json', { books: [], edition: '' }); // 知识点梳理（册→章→节，每节详细讲解 + ≥12 中高考题型）
+const TRIAL_PHYSICS_EXAM = 5;     // 物理题库：trial 仅返回前 5 题
+const TRIAL_PHYSICS_LINK = 'pl1'; // 物理衔接包：trial 仅开放第 1 单元
 
 // —— 启动期数据迁移：兼容旧字段 ——
 // 旧授权码只有 usedBy、没有 acts/maxActs → 视为已用（acts=1），避免被误判可复用
@@ -1034,6 +1042,76 @@ const srv = http.createServer(async (req, res) => {
       if (!s) return err(res, 404, '试卷不存在');
       if (!authed && s.id !== TRIAL_GK) return err(res, 403, '体验模式仅可练习 gkb01，输入授权码或联系管理员解锁全部试卷');
       return ok(res, s);
+    }
+    // —— 初高中物理：课本同步（册→章→节）——
+    if (u === '/api/physics-book' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      const authed = modAuthed(user, 'physics') || modAuthed(user, 'primary');
+      const bookId = q.book, chapterId = q.chapter, sectionId = q.section;
+      const books = JSON.parse(JSON.stringify(physicsBook.books));
+      if (sectionId) {
+        for (const b of books) for (const c of b.chapters) { const s = c.sections.find(x => x.id === sectionId); if (s) return ok(res, { section: s, trial: !authed }); }
+        return err(res, 404, '节不存在');
+      }
+      if (chapterId) {
+        for (const b of books) { const c = b.chapters.find(x => x.id === chapterId); if (c) return ok(res, { chapter: c, trial: !authed }); }
+        return err(res, 404, '章不存在');
+      }
+      if (bookId) {
+        const b = books.find(x => x.id === bookId);
+        if (!b) return err(res, 404, '册不存在');
+        if (!authed && b.chapters.length) b.chapters = b.chapters.slice(0, 1);
+        return ok(res, { book: b, trial: !authed });
+      }
+      if (!authed) books.forEach(b => { if (b.chapters.length) b.chapters = b.chapters.slice(0, 1); });
+      const list = books.map(b => ({ id: b.id, name: b.name, term: b.term, chapterCount: b.chapters.length, sectionCount: b.chapters.reduce((n, c) => n + c.sections.length, 0) }));
+      return ok(res, { books: list, edition: physicsBook.edition, trial: !authed });
+    }
+    // —— 初高中物理：知识点梳理（册→章→节，每节详细讲解 + ≥12 中高考题型）——
+    if (u === '/api/physics-knowledge' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      const authed = modAuthed(user, 'physics') || modAuthed(user, 'primary');
+      const bookId = q.book, chapterId = q.chapter, sectionId = q.section;
+      const books = JSON.parse(JSON.stringify(physicsKnowledge.books));
+      if (sectionId) {
+        for (const b of books) for (const c of b.chapters) { const s = c.sections.find(x => x.id === sectionId); if (s) return ok(res, { section: s, trial: !authed }); }
+        return err(res, 404, '节不存在');
+      }
+      if (chapterId) {
+        for (const b of books) { const c = b.chapters.find(x => x.id === chapterId); if (c) return ok(res, { chapter: c, trial: !authed }); }
+        return err(res, 404, '章不存在');
+      }
+      if (bookId) {
+        const b = books.find(x => x.id === bookId);
+        if (!b) return err(res, 404, '册不存在');
+        if (!authed && b.chapters.length) b.chapters = b.chapters.slice(0, 1);
+        return ok(res, { book: b, trial: !authed });
+      }
+      if (!authed) books.forEach(b => { if (b.chapters.length) b.chapters = b.chapters.slice(0, 1); });
+      const list = books.map(b => ({ id: b.id, name: b.name, term: b.term, chapterCount: b.chapters.length, sectionCount: b.chapters.reduce((n, c) => n + c.sections.length, 0) }));
+      return ok(res, { books: list, edition: physicsKnowledge.edition, trial: !authed });
+    }
+    // —— 初高中物理：中高考真题题库 ——
+    if (u === '/api/physics-exam' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      const authed = modAuthed(user, 'physics') || modAuthed(user, 'primary');
+      const questions = authed ? physicsExam.questions : physicsExam.questions.slice(0, TRIAL_PHYSICS_EXAM);
+      return ok(res, { questions, topics: physicsExam.topics, trial: !authed });
+    }
+    // —— 初高中物理：专题衔接包 ——
+    if (u === '/api/physics-link' && req.method === 'GET') {
+      const user = uidOf(req.headers['authorization'] || '');
+      if (!user) return err(res, 401, '未登录或登录已失效，请重新登录');
+      if (!deviceAllowed(user, dev)) return err(res, 403, '当前设备未授权，请重新登录');
+      const authed = modAuthed(user, 'physics') || modAuthed(user, 'primary');
+      const units = authed ? physicsLink.units : physicsLink.units.filter(x => x.id === TRIAL_PHYSICS_LINK);
+      return ok(res, { units, trial: !authed });
     }
     return err(res, 404, '接口不存在');
   }

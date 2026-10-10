@@ -269,14 +269,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
 
   // —— 初始化 ——
   async function init() {
-    const r = await api('/api/physics');
-    if (r.s === 0) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '网络异常') + '</div>'; $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">网络异常</div>'; return; }
-    if (r.s === 401) { $('#mainArea').innerHTML = '<div class="err-msg">请先登录：<a href="./index.html" style="color:#1e40af;">前往登录页</a></div>'; $('#grpList').innerHTML = '<div class="empty" style="box-shadow:none;padding:14px;">未登录</div>'; return; }
-    DATA = r.j;
-    if (DATA.trial) {
-      $('#trialNote').style.display = 'block';
-      $('#trialNote').innerHTML = '🎁 体验模式：每板块可学习第一个分组。输入授权码或联系管理员（微信 13538237315）解锁全部内容。';
-    }
+    $('#trialNote').style.display = 'none';
     buildTabs();
     selectSection('exam');
   }
@@ -290,13 +283,14 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
   function selectSection(k) {
     section = k; mode = (SECTIONS.find(s => s.k === k).modes[0] || {}).k || '';
     buildTabs();
-    if (k === 'exam' || k === 'link' || k === 'book') {
+    if (k === 'exam' || k === 'link' || k === 'book' || k === 'knowledge') {
       // 独立板块：隐藏左侧分组栏，整幅渲染
       $('#sidePane').style.display = 'none';
       $('#mainArea').style.flex = '1 1 100%';
       if (k === 'exam') renderExamPage();
       else if (k === 'link') renderLinkPage();
-      else renderBookPage();
+      else if (k === 'book') renderBookPage();
+      else renderKnowledgePage();
       return;
     }
     $('#sidePane').style.display = '';
@@ -1052,7 +1046,7 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
     if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
     const total = curGroup ? itemsOf(curGroup).length : 0;
     if (!total) return;
-    const navMode = (section === 'knowledge' && mode === 'read');
+    const navMode = false;
     if (navMode) {
       if (e.key === 'ArrowRight' && idx < total - 1) { idx++; qState = null; spellVal = ''; renderMain(); }
       if (e.key === 'ArrowLeft' && idx > 0) { idx--; qState = null; spellVal = ''; renderMain(); }
@@ -1226,6 +1220,94 @@ function logout(){ try{localStorage.removeItem('token')}catch(e){} location.href
         document.getElementById('bkAn' + qi).classList.add('show');
       });
     });
+  }
+
+  // ================== 板块：知识点梳理（物理，册→章→节，每节详细讲解 + ≥12 中高考题型） ==================
+  let KNOW_DATA = null, KNOW_CUR = null, KNOW_CHAPTER = null;
+
+  async function renderKnowledgePage() {
+    $('#trialNote').style.display = 'none';
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-knowledge');
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败，请登录后重试') + '</div>'; return; }
+    KNOW_DATA = r.j;
+    if (KNOW_DATA.trial) { $('#trialNote').style.display = 'block'; $('#trialNote').innerHTML = '🎁 体验模式：知识点梳理每册仅开放第 1 章。输入授权码或联系管理员（微信 13538237315）解锁全部六册。'; }
+    const books = KNOW_DATA.books || [];
+    const cards = books.map(b =>
+      '<div class="tb-book" data-b="' + esc(b.id) + '">' +
+        '<div class="tb-book-hd"><b>' + esc(b.name) + '</b><span class="tb-tag">' + esc(b.term || '') + '</span></div>' +
+        '<div class="tb-book-th">' + (b.chapterCount || 0) + ' 章 · ' + (b.sectionCount || 0) + ' 节 · 点开查看知识点讲解与练习</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd">📘 物理 · 知识点梳理<span class="tb-ed">' + esc(KNOW_DATA.edition || '') + '</span></div>' +
+        (KNOW_DATA.trial ? '<div class="tb-warn">🎁 体验模式：知识点梳理每册仅开放第 1 章。输入授权码解锁全部章节。</div>' : '') +
+        (cards || '<div class="tb-tip">暂无知识点数据</div>') +
+      '</div>';
+    document.querySelectorAll('.tb-book').forEach(el => el.addEventListener('click', () => loadKnowledgeBook(el.dataset.b)));
+  }
+
+  async function loadKnowledgeBook(bookId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-knowledge?book=' + encodeURIComponent(bookId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const book = r.j.book; KNOW_CUR = book;
+    const chapters = book.chapters || [];
+    const list = chapters.map(c =>
+      '<div class="tb-unit" data-c="' + esc(c.id) + '">' +
+        '<div class="tb-unit-hd"><b>' + esc(c.title) + '</b></div>' +
+        '<div class="tb-unit-meta">' + (c.sections || []).length + ' 节 · 点开查看知识点讲解与练习</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="knBack">← 返回</button> ' + esc(book.name) + (book.term ? '　<span class="tb-ed">' + esc(book.term) + '</span>' : '') + '</div>' +
+        (r.j.trial ? '<div class="tb-warn">🎁 体验模式：本册仅开放第 1 章。输入授权码解锁全部章节。</div>' : '') +
+        '<div class="tb-tip">本册共 <b>' + chapters.length + '</b> 章，点章节查看每节的知识点详细讲解与练习（每节不少于 12 题，题型贴合中高考真题）。</div>' +
+        '<div class="tb-units">' + list + '</div>' +
+      '</div>';
+    $('#knBack').addEventListener('click', () => renderKnowledgePage());
+    document.querySelectorAll('.tb-unit').forEach(el => el.addEventListener('click', () => loadKnowledgeChapter(el.dataset.c)));
+  }
+
+  async function loadKnowledgeChapter(chapterId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-knowledge?chapter=' + encodeURIComponent(chapterId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const ch = r.j.chapter; KNOW_CHAPTER = ch;
+    const sections = ch.sections || [];
+    const list = sections.map(s =>
+      '<div class="tb-sec" data-s="' + esc(s.id) + '">' +
+        '<div class="tb-sec-title">' + esc(s.title) + '</div>' +
+        '<div class="tb-sec-meta">' + (s.points || []).length + ' 知识点 · ' + (s.questions || []).length + ' 题 ▸</div>' +
+      '</div>').join('');
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="knBack">← 返回</button> ' + esc(KNOW_CUR.name) + ' · ' + esc(ch.title) + '</div>' +
+        '<div class="tb-tip">本章共 <b>' + sections.length + '</b> 节，点节次查看知识点详细讲解与练习。</div>' +
+        '<div class="tb-units">' + list + '</div>' +
+      '</div>';
+    $('#knBack').addEventListener('click', () => loadKnowledgeBook(KNOW_CUR.id));
+    document.querySelectorAll('.tb-sec').forEach(el => el.addEventListener('click', () => loadKnowledgeSection(el.dataset.s)));
+  }
+
+  async function loadKnowledgeSection(sectionId) {
+    $('#mainArea').innerHTML = '<div class="empty">加载中…</div>';
+    const r = await api('/api/physics-knowledge?section=' + encodeURIComponent(sectionId));
+    if (r.s !== 200) { $('#mainArea').innerHTML = '<div class="err-msg">' + (r.j.error || '加载失败') + '</div>'; return; }
+    const s = r.j.section;
+    const points = (s.points || []).map(p =>
+      '<div class="tb-point"><h4>' + esc(p.t) + '</h4><div class="pb">' + esc(p.e) + '</div></div>').join('');
+    const qs = renderBookQuestions(s.questions || []);
+    $('#mainArea').innerHTML =
+      '<div class="tb-wrap">' +
+        '<div class="tb-hd"><button class="tb-back" id="knBack">← 返回</button> ' + esc(s.title) + '</div>' +
+        '<div class="tb-card"><div class="tb-card-h">📌 知识点讲解<span class="tb-card-n">' + (s.points || []).length + ' 个</span></div>' +
+          (points || '<div class="tb-tip">本节以练习题为主。</div>') + '</div>' +
+        '<div class="tb-card"><div class="tb-card-h">✅ 本节练习<span class="tb-card-n">' + (s.questions || []).length + ' 题（中高考题型）</span></div>' +
+          qs + '</div>' +
+      '</div>';
+    $('#knBack').addEventListener('click', () => loadKnowledgeChapter(KNOW_CHAPTER.id));
+    bindBookQuestions(s.questions || []);
   }
 
   init();
