@@ -347,8 +347,9 @@ async function resetDevices() {
   const r = await api('/api/device/reset', { method: 'POST', headers: H(), body: JSON.stringify({ username: u, password: p }) });
   if (r.s === 200) {
     $('devResetBtn').style.display = 'none';
-    setMsg('authMsg', '已解绑全部旧设备并绑定本机，正在重新登录…', 'ok');
-    login();
+    TOKEN = r.j.token; localStorage.setItem('token', TOKEN);
+    setMsg('authMsg', '已解绑全部旧设备并绑定本机，登录成功', 'ok');
+    afterLogin();
   } else {
     setMsg('authMsg', r.j.error || '重绑失败', 'err');
   }

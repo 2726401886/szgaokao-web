@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoComelon 幼儿英语启蒙全集</title>
+<style>
+  :root { --brand:#ff5b6e; --brand2:#ff9f43; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f3f5fb; color:#222; }
+  .wrap { max-width:980px; margin:0 auto; padding:16px; }
+  .topbar { background:linear-gradient(135deg,#ff5b6e,#ff9f43); color:#fff; padding:18px 16px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .topbar h1 { font-size:20px; }
+  .topbar p { font-size:13px; opacity:.94; margin-top:4px; }
+  .topbar-r { margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .tb-btn { padding:7px 13px; border:none; border-radius:16px; background:rgba(255,255,255,.24); color:#fff; font-size:13px; cursor:pointer; font-weight:700; }
+  .tb-btn:hover { background:rgba(255,255,255,.36); }
+  .note { background:#fff; border:1px dashed #ff9f43; border-radius:12px; padding:12px 14px; margin-bottom:14px; font-size:13px; color:#a35a00; line-height:1.7; }
+  .note b { color:#d9480f; }
+  .yt-block { background:#fff; border-radius:16px; padding:14px; margin-bottom:16px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .yt-block h3 { font-size:15px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+  .yt-frame-wrap { display:none; position:relative; width:100%; aspect-ratio:16/9; background:#0b0b0b; border-radius:12px; overflow:hidden; }
+  .yt-frame-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .yt-fallback { display:none; background:#fff3e8; color:#d9480f; border-radius:12px; padding:18px; text-align:center; font-size:14px; line-height:1.7; }
+  .yt-region-note { font-size:12px; color:#a35a00; margin-top:10px; line-height:1.6; }
+  .play-hint { font-size:13px; color:#1a56db; background:#eaf6ff; border-radius:10px; padding:10px 14px; margin-bottom:14px; line-height:1.6; min-height:1em; }
+  .picker { background:#fff; border-radius:16px; padding:14px; margin-bottom:16px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .picker h3 { font-size:14px; color:#888; margin-bottom:10px; }
+  .picker-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(118px,1fr)); gap:8px; }
+  .picker-btn { border:1px solid #eee; background:#fafbff; border-radius:10px; padding:8px 10px; cursor:pointer; text-align:left; font-size:13px; color:#333; transition:.15s; line-height:1.3; }
+  .picker-btn:hover { border-color:var(--brand); background:#fff3e8; }
+  .picker-btn.active { border-color:var(--brand); background:#ffe3cf; font-weight:700; }
+  .picker-btn .pn { color:var(--brand); font-weight:800; margin-right:5px; }
+  .watch-all { display:block; width:100%; text-align:center; text-decoration:none; background:linear-gradient(135deg,#ff5b6e,#ff9f43); color:#fff; font-weight:800; font-size:16px; padding:14px; border-radius:14px; margin-bottom:16px; box-shadow:0 4px 16px rgba(255,91,110,.25); }
+  .watch-all:active { transform:scale(.99); }
+  .card { background:#fff; border-radius:16px; padding:18px; margin-bottom:16px; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .ep-no { display:inline-block; background:#fff3e8; color:var(--brand); font-weight:800; font-size:13px; padding:3px 12px; border-radius:12px; margin-bottom:8px; }
+  .ep-title { font-size:19px; font-weight:800; margin-bottom:10px; }
+  .ep-desc { font-size:14px; color:#555; line-height:1.7; margin-bottom:10px; }
+  .ep-sec h4 { font-size:13px; color:#999; margin:10px 0 6px; }
+  .tag { display:inline-block; background:#f3f5fb; color:#444; font-size:13px; padding:5px 11px; border-radius:10px; margin:0 6px 6px 0; }
+  .tag.w { background:#fff3e8; color:#d9480f; }
+  .tag.s { background:#eaf6ff; color:#1a56db; }
+  .go-btn { display:inline-flex; align-items:center; gap:6px; margin-top:10px; padding:10px 16px; border:none; border-radius:12px; background:#fff3e8; color:#d9480f; font-weight:700; font-size:14px; text-decoration:none; cursor:pointer; }
+  .go-btn:hover { background:#ffe3cf; }
+  .copyright { background:#fff; border-radius:16px; padding:16px 18px; box-shadow:0 4px 16px rgba(0,0,0,.05); font-size:12.5px; color:#888; line-height:1.8; border-top:3px solid var(--brand); }
+  .copyright b { color:#666; }
+  @media (max-width:680px){ .topbar-r { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>🔴 CoComelon 幼儿英语启蒙全集</h1>
+    <p>官方正版入口 · 免费观看 · 自带学习知识点</p>
+    <div class="topbar-r"><button class="tb-btn" onclick="location.href='./index.html'">🏠 返回主页</button></div>
+  </div>
+
+  <div class="note">
+    ⚠️ <b>合规说明</b>：本站<b>不下载、不储存、不传播</b>任何视频源文件，仅提供 CoComelon 官方正版观看入口。
+    提供两种官方入口：<b>① YouTube 官方频道嵌入</b>（播放器相对干净，但中国大陆网络被屏蔽）；<b>② 腾讯视频官方搜索入口</b>（国内可直连正版）。
+    请按你的网络环境选择。<br>
+    <b>提示</b>：跳转后是搜索结果页，里面可能混有第三方搬运内容，请<b>认准「官方」标识 / Moonbug 出品</b>的条目观看。
+  </div>
+
+  <div class="yt-block">
+    <h3>🎬 YouTube 官方频道嵌入（相对干净 · 海外/可访问区可见）</h3>
+    <div class="yt-frame-wrap" id="ytWrap">
+      <iframe src="https://www.youtube.com/embed?listType=channel&list=UCbCmjCuTUZos6Inko4u57UQ"
+        title="CoComelon Official YouTube Channel"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="yt-fallback" id="ytFallback">
+      ⚠️ YouTube 在当前网络环境（中国大陆）被屏蔽，无法加载嵌入框。<br>
+      请使用下方「📺 看 CoComelon 官方全集（腾讯视频）」按钮，在国内正版平台观看。
+    </div>
+    <div class="yt-region-note">说明：上方为 Moonbug 官方 YouTube 频道嵌入，播放器比国内平台干净，但 YouTube 仍会在嵌入视频前播放其自身广告（无法去除）。国内用户若看不到嵌入框，属正常屏蔽现象，不是页面故障。</div>
+  </div>
+
+  <a class="watch-all" href="https://v.qq.com/x/search/?q=CoComelon" target="_blank" rel="noopener">📺 看 CoComelon 官方全集（腾讯视频）</a>
+
+  <p id="playHint" class="play-hint">💡 提示：在下方「选集表」里点任意一集查看详情（不会一次展开 56 集）；已配置官方视频 ID 的集可点「▶ 黑框内播放」直接在页面黑框里看。</p>
+
+  <div id="picker" class="picker">
+    <h3>📑 选集表（点一下看这一集）</h3>
+    <div class="picker-grid" id="pickerGrid"></div>
+  </div>
+
+  <div id="detail" class="card"></div>
+
+  <div class="copyright">
+    <b>版权声明</b><br>
+    本页面仅提供 CoComelon 官方正版观看入口，所有视频版权归 Moonbug Entertainment 所有：<br>
+    ① YouTube 官方频道嵌入（嵌入框由 YouTube 官方提供，未下载/不储存任何视频）；<br>
+    ② 腾讯视频官方搜索入口（腾讯视频系 Moonbug 官方授权渠道之一）。<br>
+    本站不嵌入、不储存、不传播任何视频源文件，仅作教育展示导航用途。
+  </div>
+</div>
+
+<script>
+/* region probe: is YouTube reachable? */
+var __ytReachable = false;
+(function () {
+  var wrap = document.getElementById("ytWrap");
+  var fb = document.getElementById("ytFallback");
+  var done = false;
+  function fallback() { if (done) return; done = true; __ytReachable = false; wrap.style.display = "none"; fb.style.display = "block"; }
+  function ok() { if (done) return; done = true; __ytReachable = true; wrap.style.display = "block"; }
+  var img = new Image();
+  var timer = setTimeout(fallback, 4500);
+  img.onload = function () { clearTimeout(timer); ok(); };
+  img.onerror = function () { clearTimeout(timer); fallback(); };
+  img.src = "https://www.youtube.com/favicon.ico?_=" + Date.now();
+})();
+
+/* =========================================================
+   剧集数据（一集一条）。由运营/管理员在下方数组里维护。
+   字段说明：
+     no      : 集数标签（如 "EP01"）
+     title   : 本集中文标题
+     q       : 腾讯视频搜索关键词（用于生成官方观看入口）
+     url     : 可选，填了则按钮优先跳此官方直链；留空则用 q 搜索
+     vid     : 可选，腾讯视频视频 ID（v.qq.com/iframe/player.html?vid=xxx），填了则点按钮在黑框内直接播
+     yt      : 可选，YouTube 视频 ID，填了则点按钮在黑框内直接播（海外/可访问区）
+     desc    : 一句话简介
+     words   : 本集重点单词（数组）
+     sentences: 本集重点句型（数组）
+   ========================================================= */
+var COCOMELON_EPISODES = [
+  {
+    no: "EP01",
+    title: "CoComelon 刷牙歌 Yes Yes Brush Your Teeth",
+    q: "CoComelon 刷牙歌",
+    url: "",
+    desc: "经典刷牙习惯养成歌，跟 JJ 一起早晚刷牙。",
+    words: ["brush", "teeth", "toothbrush", "smile"],
+    sentences: ["Brush your teeth.", "Clean and white!"]
+  },
+  {
+    no: "EP02",
+    title: "CoComelon 数数歌 Counting Songs",
+    q: "CoComelon 数数歌",
+    url: "",
+    desc: "从 1 数到 10 的快乐数数歌。",
+    words: ["one", "two", "three", "count"],
+    sentences: ["Let us count to three.", "One, two, three!"]
+  },
+  {
+    no: "EP03",
+    title: "CoComelon 颜色歌 Colors Song",
+    q: "CoComelon 颜色歌",
+    url: "",
+    desc: "认识红黄蓝绿等基础颜色。",
+    words: ["red", "blue", "yellow", "green"],
+    sentences: ["What color is this?", "I see red."]
+  },
+  {
+    no: "EP04",
+    title: "CoComelon 洗澡歌 Bath Song",
+    q: "CoComelon 洗澡歌",
+    url: "",
+    desc: "开心洗澡歌，认识身体部位与清洁。",
+    words: ["bath", "water", "soap", "towel"],
+    sentences: ["Time for a bath!", "Splash splash!"]
+  },
+  {
+    no: "EP05",
+    title: "CoComelon 睡觉歌 Yes Yes Bedtime",
+    q: "CoComelon 睡觉歌",
+    url: "",
+    desc: "睡前晚安 Routine，安抚宝宝入睡。",
+    words: ["bed", "sleep", "dream", "night"],
+    sentences: ["Time to sleep.", "Good night!"]
+  },
+  {
+    no: "EP06",
+    title: "CoComelon 洗手歌 Wash Your Hands",
+    q: "CoComelon 洗手歌",
+    url: "",
+    desc: "七步洗手法儿歌，养成卫生习惯。",
+    words: ["hands", "soap", "water", "clean"],
+    sentences: ["Wash your hands.", "Scrub scrub scrub!"]
+  },
+  {
+    no: "EP07",
+    title: "CoComelon 如厕训练歌 Potty Training",
+    q: "CoComelon 如厕训练",
+    url: "",
+    desc: "如厕训练鼓励歌，建立独立如厕习惯。",
+    words: ["potty", "toilet", "flush", "wash"],
+    sentences: ["Sit on the potty.", "All done!"]
+  },
+  {
+    no: "EP08",
+    title: "CoComelon 整理歌 Clean Up",
+    q: "CoComelon 整理歌",
+    url: "",
+    desc: "收拾玩具整理房间，学习责任。",
+    words: ["toy", "box", "tidy", "clean"],
+    sentences: ["Clean up clean up!", "Everything in its place."]
+  },
+  {
+    no: "EP09",
+    title: "CoComelon 早安歌 This Is the Way",
+    q: "CoComelon 早安歌",
+    url: "",
+    desc: "早晨 Routine：起床洗脸刷牙吃早餐。",
+    words: ["wake", "wash", "dress", "eat"],
+    sentences: ["This is the way we wash our face.", "Good morning!"]
+  },
+  {
+    no: "EP10",
+    title: "CoComelon 巴士歌 Wheels on the Bus",
+    q: "CoComelon 巴士歌",
+    url: "",
+    desc: "经典交通工具儿歌，认识巴士部件。",
+    words: ["bus", "wheel", "door", "go"],
+    sentences: ["The wheels on the bus go round.", "Round and round!"]
+  },
+  {
+    no: "EP11",
+    title: "CoComelon 鲨鱼宝宝 Baby Shark",
+    q: "CoComelon 鲨鱼宝宝",
+    url: "",
+    desc: "风靡全球的鲨鱼一家手指谣。",
+    words: ["shark", "baby", "mommy", "daddy"],
+    sentences: ["Baby shark doo doo.", "Swim swim!"]
+  },
+  {
+    no: "EP12",
+    title: "CoComelon 小星星 Twinkle Twinkle Little Star",
+    q: "CoComelon 小星星",
+    url: "",
+    desc: "经典摇篮曲，认识夜空与星星。",
+    words: ["star", "sky", "twinkle", "night"],
+    sentences: ["Twinkle twinkle little star.", "How I wonder what you are!"]
+  },
+  {
+    no: "EP13",
+    title: "CoComelon 字母歌 ABC Song",
+    q: "CoComelon 字母歌",
+    url: "",
+    desc: "26 个英文字母启蒙歌。",
+    words: ["A", "B", "C", "abc"],
+    sentences: ["A B C D E F G.", "Now I know my ABCs!"]
+  },
+  {
+    no: "EP14",
+    title: "CoComelon 自然拼读 ABC Phonics",
+    q: "CoComelon 自然拼读",
+    url: "",
+    desc: "字母发音 Phonics，拼读入门。",
+    words: ["phonics", "sound", "letter", "read"],
+    sentences: ["A says ahh.", "Let us sound it out!"]
+  },
+  {
+    no: "EP15",
+    title: "CoComelon 老麦克唐纳 Old MacDonald",
+    q: "CoComelon 老麦克唐纳",
+    url: "",
+    desc: "农场动物儿歌，认识动物叫声。",
+    words: ["farm", "cow", "pig", "duck"],
+    sentences: ["Old MacDonald had a farm.", "E I E I O!"]
+  },
+  {
+    no: "EP16",
+    title: "CoComelon 头肩膝脚趾 Head Shoulders Knees Toes",
+    q: "CoComelon 头肩膝脚趾",
+    url: "",
+    desc: "身体部位认知律动歌。",
+    words: ["head", "shoulder", "knee", "toe"],
+    sentences: ["Head shoulders knees and toes.", "And eyes and ears!"]
+  },
+  {
+    no: "EP17",
+    title: "CoComelon 幸福拍手歌 If You're Happy",
+    q: "CoComelon 幸福拍手歌",
+    url: "",
+    desc: "情绪与动作表达儿歌。",
+    words: ["happy", "clap", "stomp", "hurray"],
+    sentences: ["If you are happy clap your hands.", "Clap clap!"]
+  },
+  {
+    no: "EP18",
+    title: "CoComelon 伦敦桥 London Bridge",
+    q: "CoComelon 伦敦桥",
+    url: "",
+    desc: "经典童谣，认识桥梁与协作。",
+    words: ["bridge", "fall", "build", "stone"],
+    sentences: ["London Bridge is falling down.", "My fair lady!"]
+  },
+  {
+    no: "EP19",
+    title: "CoComelon 蛋头先生 Humpty Dumpty",
+    q: "CoComelon 蛋头先生",
+    url: "",
+    desc: "经典童谣，认识蛋与摔倒。",
+    words: ["egg", "wall", "fall", "king"],
+    sentences: ["Humpty Dumpty sat on a wall.", "Could not put him together!"]
+  },
+  {
+    no: "EP20",
+    title: "CoComelon 小蜘蛛 Itsy Bitsy Spider",
+    q: "CoComelon 小蜘蛛",
+    url: "",
+    desc: "指谣儿歌，认识蜘蛛与下雨。",
+    words: ["spider", "water", "sun", "climb"],
+    sentences: ["The itsy bitsy spider climbed.", "Up the water spout!"]
+  },
+  {
+    no: "EP21",
+    title: "CoComelon 宾果狗 Bingo",
+    q: "CoComelon 宾果狗",
+    url: "",
+    desc: "拼读拼写儿歌，认识农夫的狗。",
+    words: ["Bingo", "farmer", "dog", "spell"],
+    sentences: ["There was a farmer had a dog.", "B I N G O!"]
+  },
+  {
+    no: "EP22",
+    title: "CoComelon 五只小鸭 Five Little Ducks",
+    q: "CoComelon 五只小鸭",
+    url: "",
+    desc: "数字递减儿歌，认识鸭子与妈妈。",
+    words: ["duck", "five", "mother", "quack"],
+    sentences: ["Five little ducks went out.", "Quack quack quack!"]
+  },
+  {
+    no: "EP23",
+    title: "CoComelon 玛丽的小羊 Mary Had a Little Lamb",
+    q: "CoComelon 玛丽的小羊",
+    url: "",
+    desc: "经典童谣，认识小羊与学校。",
+    words: ["lamb", "school", "white", "wool"],
+    sentences: ["Mary had a little lamb.", "Its fleece was white!"]
+  },
+  {
+    no: "EP24",
+    title: "CoComelon 划船歌 Row Row Row Your Boat",
+    q: "CoComelon 划船歌",
+    url: "",
+    desc: "经典儿歌，认识划船与河流。",
+    words: ["boat", "river", "row", "stream"],
+    sentences: ["Row row row your boat.", "Gently down the stream!"]
+  },
+  {
+    no: "EP25",
+    title: "CoComelon 约翰尼 Johny Johny Yes Papa",
+    q: "CoComelon 约翰尼",
+    url: "",
+    desc: "经典童谣，诚实与吃糖小故事。",
+    words: ["yes", "papa", "sugar", "eat"],
+    sentences: ["Johny Johny yes papa?", "Telling lies? No papa!"]
+  },
+  {
+    no: "EP26",
+    title: "CoComelon 霍基波基 Hokey Pokey",
+    q: "CoComelon 霍基波基",
+    url: "",
+    desc: "身体律动舞，认识左右与方向。",
+    words: ["right", "left", "turn", "pokey"],
+    sentences: ["You put your right foot in.", "That is what it is!"]
+  },
+  {
+    no: "EP27",
+    title: "CoComelon 咩咩黑羊 Baa Baa Black Sheep",
+    q: "CoComelon 咩咩黑羊",
+    url: "",
+    desc: "经典童谣，认识羊毛与分享。",
+    words: ["sheep", "wool", "bag", "master"],
+    sentences: ["Baa baa black sheep.", "Have you any wool?"]
+  },
+  {
+    no: "EP28",
+    title: "CoComelon 雨快走 Rain Rain Go Away",
+    q: "CoComelon 雨快走",
+    url: "",
+    desc: "天气儿歌，认识下雨与晴天。",
+    words: ["rain", "away", "sun", "play"],
+    sentences: ["Rain rain go away.", "Come again another day!"]
+  },
+  {
+    no: "EP29",
+    title: "CoComelon 这只小猪 This Little Piggy",
+    q: "CoComelon 这只小猪",
+    url: "",
+    desc: "手指谣，认识小猪与回家。",
+    words: ["piggy", "toe", "market", "home"],
+    sentences: ["This little piggy went to market.", "Wee wee wee all the way home!"]
+  },
+  {
+    no: "EP30",
+    title: "CoComelon 戒指游戏 Ring Around the Rosie",
+    q: "CoComelon 戒指游戏",
+    url: "",
+    desc: "圆圈游戏儿歌，认识牵手与摔倒。",
+    words: ["ring", "rosie", "hand", "fall"],
+    sentences: ["Ring around the rosie.", "Ashes ashes we all fall down!"]
+  },
+  {
+    no: "EP31",
+    title: "CoComelon 苹果香蕉 Apples and Bananas",
+    q: "CoComelon 苹果香蕉",
+    url: "",
+    desc: "水果与元音儿歌，认识苹果香蕉。",
+    words: ["apple", "banana", "fruit", "eat"],
+    sentences: ["I like to eat apples.", "And bananas too!"]
+  },
+  {
+    no: "EP32",
+    title: "CoComelon 钟摆鼠 Hickory Dickory Dock",
+    q: "CoComelon 钟摆鼠",
+    url: "",
+    desc: "经典童谣，认识时钟与老鼠。",
+    words: ["clock", "mouse", "run", "time"],
+    sentences: ["Hickory dickory dock.", "The mouse ran up the clock!"]
+  },
+  {
+    no: "EP33",
+    title: "CoComelon 杰克吉尔 Jack and Jill",
+    q: "CoComelon 杰克吉尔",
+    url: "",
+    desc: "经典童谣，认识打水与摔倒。",
+    words: ["Jack", "Jill", "water", "pail"],
+    sentences: ["Jack and Jill went up the hill.", "To fetch a pail of water!"]
+  },
+  {
+    no: "EP34",
+    title: "CoComelon 波莉娃娃 Miss Polly Had a Dolly",
+    q: "CoComelon 波莉娃娃",
+    url: "",
+    desc: "经典童谣，认识看病与照顾。",
+    words: ["dolly", "sick", "doctor", "cure"],
+    sentences: ["Miss Polly had a dolly.", "Who was sick sick sick!"]
+  },
+  {
+    no: "EP35",
+    title: "CoComelon 松饼人 The Muffin Man",
+    q: "CoComelon 松饼人",
+    url: "",
+    desc: "经典童谣，认识烘焙与街坊。",
+    words: ["muffin", "man", "bake", "lane"],
+    sentences: ["Do you know the muffin man?", "The muffin man!"]
+  },
+  {
+    no: "EP36",
+    title: "CoComelon 露比露比 Looby Loo",
+    q: "CoComelon 露比露比",
+    url: "",
+    desc: "圆圈律动歌，认识身体动作。",
+    words: ["Looby", "Loo", "dance", "turn"],
+    sentences: ["Here we go Looby Loo.", "Put your right hand in!"]
+  },
+  {
+    no: "EP37",
+    title: "CoComelon 躲猫猫 Peekaboo",
+    q: "CoComelon 躲猫猫",
+    url: "",
+    desc: "亲子互动儿歌，认识藏与找。",
+    words: ["peek", "boo", "hide", "find"],
+    sentences: ["Peekaboo I see you!", "Where are you?"]
+  },
+  {
+    no: "EP38",
+    title: "CoComelon 拍蛋糕 Pat-a-Cake",
+    q: "CoComelon 拍蛋糕",
+    url: "",
+    desc: "手指谣，认识烘焙与拍手。",
+    words: ["pat", "cake", "bake", "plate"],
+    sentences: ["Pat a cake pat a cake.", "Baker's man!"]
+  },
+  {
+    no: "EP39",
+    title: "CoComelon 在一起 The More We Get Together",
+    q: "CoComelon 在一起",
+    url: "",
+    desc: "友谊儿歌，认识朋友与相聚。",
+    words: ["together", "friends", "happy", "play"],
+    sentences: ["The more we get together.", "The happier we'll be!"]
+  },
+  {
+    no: "EP40",
+    title: "CoComelon 蔬菜歌 Yes Yes Vegetables",
+    q: "CoComelon 蔬菜歌",
+    url: "",
+    desc: "鼓励吃蔬菜，认识健康食物。",
+    words: ["vegetable", "carrot", "broccoli", "eat"],
+    sentences: ["Yes yes vegetables!", "Good for you!"]
+  },
+  {
+    no: "EP41",
+    title: "CoComelon 安全第一 Play Safe",
+    q: "CoComelon 安全第一",
+    url: "",
+    desc: "安全玩耍守则，认识危险与保护。",
+    words: ["safe", "careful", "helmet", "stop"],
+    sentences: ["Play safe play safe.", "Be careful!"]
+  },
+  {
+    no: "EP42",
+    title: "CoComelon 上学第一天 First Day of School",
+    q: "CoComelon 上学第一天",
+    url: "",
+    desc: "入园入学适应，缓解分离焦虑。",
+    words: ["school", "teacher", "friend", "learn"],
+    sentences: ["First day of school.", "I will be okay!"]
+  },
+  {
+    no: "EP43",
+    title: "CoComelon 分享歌 Sharing Song",
+    q: "CoComelon 分享歌",
+    url: "",
+    desc: "学会分享玩具与食物。",
+    words: ["share", "toy", "friend", "happy"],
+    sentences: ["Sharing is caring.", "Here you go!"]
+  },
+  {
+    no: "EP44",
+    title: "CoComelon 礼貌歌 Please and Thank You",
+    q: "CoComelon 礼貌歌",
+    url: "",
+    desc: "礼貌用语启蒙，学会请与谢谢。",
+    words: ["please", "thank", "you", "sorry"],
+    sentences: ["Please and thank you.", "You are welcome!"]
+  },
+  {
+    no: "EP45",
+    title: "CoComelon 生病歌 Sick Song",
+    q: "CoComelon 生病歌",
+    url: "",
+    desc: "生病休息与照顾，认识不适。",
+    words: ["sick", "rest", "medicine", "better"],
+    sentences: ["I do not feel well.", "Get some rest!"]
+  },
+  {
+    no: "EP46",
+    title: "CoComelon 看医生 Doctor Checkup",
+    q: "CoComelon 看医生",
+    url: "",
+    desc: "就医不害怕，认识检查与听诊器。",
+    words: ["doctor", "check", "stethoscope", "cure"],
+    sentences: ["The doctor will check you.", "You will be okay!"]
+  },
+  {
+    no: "EP47",
+    title: "CoComelon 轮流玩 Taking Turns",
+    q: "CoComelon 轮流玩",
+    url: "",
+    desc: "学会等待与轮流，减少争抢。",
+    words: ["turn", "wait", "share", "fair"],
+    sentences: ["Taking turns taking turns.", "Now it is your turn!"]
+  },
+  {
+    no: "EP48",
+    title: "CoComelon 对不起借过 Sorry Excuse Me",
+    q: "CoComelon 对不起",
+    url: "",
+    desc: "礼貌道歉与借过，社交启蒙。",
+    words: ["sorry", "excuse", "me", "polite"],
+    sentences: ["Sorry sorry.", "Excuse me please!"]
+  },
+  {
+    no: "EP49",
+    title: "CoComelon 朋友歌 Friends Song",
+    q: "CoComelon 朋友歌",
+    url: "",
+    desc: "珍惜友谊，认识好朋友。",
+    words: ["friend", "kind", "help", "together"],
+    sentences: ["You are my friend.", "Best friends forever!"]
+  },
+  {
+    no: "EP50",
+    title: "CoComelon 生日快乐 Happy Birthday",
+    q: "CoComelon 生日快乐",
+    url: "",
+    desc: "生日庆祝歌，认识蛋糕与蜡烛。",
+    words: ["birthday", "cake", "candle", "wish"],
+    sentences: ["Happy birthday to you!", "Make a wish!"]
+  },
+  {
+    no: "EP51",
+    title: "CoComelon 万圣节歌 Halloween Song",
+    q: "CoComelon 万圣节",
+    url: "",
+    desc: "节日儿歌，认识南瓜与糖果。",
+    words: ["Halloween", "pumpkin", "candy", "ghost"],
+    sentences: ["Trick or treat!", "Happy Halloween!"]
+  },
+  {
+    no: "EP52",
+    title: "CoComelon 感恩节歌 Thanksgiving Song",
+    q: "CoComelon 感恩节",
+    url: "",
+    desc: "感恩节儿歌，认识火鸡与感谢。",
+    words: ["thanks", "turkey", "family", "give"],
+    sentences: ["We give thanks.", "Happy Thanksgiving!"]
+  },
+  {
+    no: "EP53",
+    title: "CoComelon 圣诞节歌 Christmas Songs",
+    q: "CoComelon 圣诞节",
+    url: "",
+    desc: "圣诞儿歌，认识圣诞树与铃铛。",
+    words: ["Christmas", "tree", "bell", "Santa"],
+    sentences: ["Jingle bells jingle bells.", "Merry Christmas!"]
+  },
+  {
+    no: "EP54",
+    title: "CoComelon 父亲节 Father's Day",
+    q: "CoComelon 父亲节",
+    url: "",
+    desc: "父亲节儿歌，感谢爸爸。",
+    words: ["father", "dad", "love", "hug"],
+    sentences: ["Happy Father's Day!", "I love you dad!"]
+  },
+  {
+    no: "EP55",
+    title: "CoComelon 母亲节 Mother's Day",
+    q: "CoComelon 母亲节",
+    url: "",
+    desc: "母亲节儿歌，感谢妈妈。",
+    words: ["mother", "mom", "love", "flower"],
+    sentences: ["Happy Mother's Day!", "I love you mom!"]
+  },
+  {
+    no: "EP56",
+    title: "CoComelon 交通安全歌 Road Safety",
+    q: "CoComelon 交通安全",
+    url: "",
+    desc: "过马路看红绿灯，安全出行。",
+    words: ["road", "red", "green", "cross"],
+    sentences: ["Stop look and listen.", "Cross the road safe!"]
+  }
+];
+
+/* 官方搜索入口（无直链时的回退） */
+function searchUrl(ep) {
+  return "https://v.qq.com/x/search/?q=" + encodeURIComponent(ep.q || ep.title);
+}
+
+/* 点击某集：在黑框内直接播放（腾讯 vid 或 YouTube yt），否则回退到官方搜索 */
+function playEpisode(ep) {
+  var box = document.getElementById("ytWrap");
+  var fb = document.getElementById("ytFallback");
+  var iframe = box.querySelector("iframe");
+  var hint = document.getElementById("playHint");
+  var url = null;
+  if (ep.vid) {
+    url = "https://v.qq.com/iframe/player.html?vid=" + encodeURIComponent(ep.vid) + "&auto=1&tiny=0";
+  } else if (ep.yt) {
+    url = "https://www.youtube.com/embed/" + encodeURIComponent(ep.yt) + "?autoplay=1&rel=0";
+  }
+  if (url) {
+    box.style.display = "block";
+    fb.style.display = "none";
+    iframe.src = url;
+    var top = box.getBoundingClientRect().top + window.pageYOffset - 16;
+    window.scrollTo({ top: top, behavior: "smooth" });
+    if (hint) hint.textContent = "▶ 正在黑框内播放：" + ep.title;
+    return;
+  }
+  window.open(searchUrl(ep), "_blank");
+  if (hint) hint.textContent = "该集尚未配置官方视频 ID，已为你打开腾讯视频官方搜索（认准官方 / Moonbug 出品条目）。";
+}
+
+/* 选集表：点选某一集再显示其详情，避免一次展开 56 集 */
+function shortTitle(ep) {
+  var t = (ep.title || "").replace(/^CoComelon\s*/, "");
+  return (t.split(/\s+/)[0]) || ep.no;
+}
+
+function selectEpisode(i) {
+  var ep = COCOMELON_EPISODES[i];
+  var detail = document.getElementById("detail");
+  var hint = document.getElementById("playHint");
+  document.querySelectorAll(".picker-btn").forEach(function (b) { b.classList.remove("active"); });
+  var btn = document.querySelector('.picker-btn[data-i="' + i + '"]');
+  if (btn) btn.classList.add("active");
+  var words = (ep.words || []).map(function (w) { return '<span class="tag w">' + w + '</span>'; }).join("");
+  var sents = (ep.sentences || []).map(function (s) { return '<span class="tag s">' + s + '</span>'; }).join("");
+  var action;
+  if (ep.vid || ep.yt) {
+    action = '<button class="go-btn" type="button">▶ 黑框内播放</button>';
+  } else {
+    action = '<a class="go-btn" href="' + searchUrl(ep) + '" target="_blank" rel="noopener">🔍 腾讯视频官方搜索（认准官方 / Moonbug 出品）</a>';
+  }
+  detail.innerHTML =
+    '<span class="ep-no">' + ep.no + '</span>' +
+    '<div class="ep-title">' + ep.title + '</div>' +
+    '<div class="ep-desc">' + (ep.desc || "") + '</div>' +
+    (words ? '<div class="ep-sec"><h4>📘 重点单词</h4>' + words + '</div>' : '') +
+    (sents ? '<div class="ep-sec"><h4>💬 重点句型</h4>' + sents + '</div>' : '') +
+    action;
+  if (ep.vid || ep.yt) {
+    detail.querySelector(".go-btn").addEventListener("click", function () { playEpisode(ep); });
+  }
+  if (hint) hint.textContent = (ep.vid || ep.yt)
+    ? "已显示：" + ep.title + "（点「▶ 黑框内播放」在页面黑框里看）。"
+    : "已显示：" + ep.title + "（该集暂未配置官方视频 ID，可点下方按钮跳腾讯官方搜索）。";
+  detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+(function () {
+  var grid = document.getElementById("pickerGrid");
+  COCOMELON_EPISODES.forEach(function (ep, i) {
+    var b = document.createElement("button");
+    b.className = "picker-btn";
+    b.type = "button";
+    b.setAttribute("data-i", i);
+    b.innerHTML = '<span class="pn">' + ep.no + '</span>' + shortTitle(ep);
+    b.addEventListener("click", function () { selectEpisode(i); });
+    grid.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

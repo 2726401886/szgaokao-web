@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""地理 广东高考真题（2021–2024）端到端验证。
+"""地理 广东高考真题（2021–2026）端到端验证。
 两部分：
-  A. 本地数据完整性（data/geography_gd.json）：4 套卷结构 / 答案合法 / 选考模块等。
+  A. 本地数据完整性（data/geography_gd.json）：6 套卷结构 / 答案合法 / 选考模块等。
   B. 线上冒烟：列表（trial 仅首套）、单卷、鉴权 401、404、页面渲染层。
+  说明：2021–2025 为真题配套解析，2026 为考生回忆版（均非官方标准答案）。
 """
 import json, os, re, ssl, sys, time, urllib.request, urllib.error, collections
 
@@ -24,13 +25,13 @@ def check(name, cond, detail=''):
 print('========== A. 本地数据完整性 ==========')
 D = json.load(open(os.path.join(ROOT, 'data', 'geography_gd.json'), encoding='utf-8'))
 papers = D['papers']
-check('共 4 套真题（2021–2024）', len(papers) == 4, '实际 %d' % len(papers))
-check('年份集合正确', sorted(p['year'] for p in papers) == [2021, 2022, 2023, 2024])
+check('共 6 套真题（2021–2026）', len(papers) == 6, '实际 %d' % len(papers))
+check('年份集合正确', sorted(p['year'] for p in papers) == [2021, 2022, 2023, 2024, 2025, 2026])
 check('kind=real-paper', all(p['kind'] == 'real-paper' for p in papers))
 check('meta 声明「非官方标准答案」', '非官方标准答案' in (D.get('notice') or ''))
 
-EXPECT_SUBJ = {2021: 4, 2022: 4, 2023: 3, 2024: 3}   # 含选考（二选一）的题数
-EXPECT_OPT = {2021: True, 2022: True, 2023: False, 2024: False}
+EXPECT_SUBJ = {2021: 4, 2022: 4, 2023: 3, 2024: 3, 2025: 3, 2026: 3}   # 含选考（二选一）的题数
+EXPECT_OPT = {2021: True, 2022: True, 2023: False, 2024: False, 2025: False, 2026: False}
 for p in papers:
     qs = [q for m in p['modules'] for pt in m['parts'] for q in pt['questions']]
     # 总分按「模块计分」核算：选考为二选一，模块计 10 分（非两题相加）
@@ -55,16 +56,24 @@ for p in papers:
     n4 = [q['no'] for q in mcs if len(q['options']) != 4]
     check('%d 选择题答案/选项合法' % yrs, not (bad or dup or n4),
           'bad=%s dup=%s n4=%s' % (bad, dup, n4))
-    # 答案分布：真题原卷分布，不做均衡改写，仅做「不极端」体检
+    # 答案分布：真题原卷分布，不做均衡改写，仅做「不极端」体检。
+    # 2021–2024 为官方原卷，要求四选项均出现；2025/2026 为考生回忆版，答案可能有误，
+    # 仅做「不过度集中」体检（四选项均出现不作为硬门槛）。
     dist = collections.Counter(q['answer'] for q in mcs)
-    check('%d 答案四选项均出现且不过度集中' % yrs,
-          all(dist.get(i, 0) >= 1 for i in range(4)) and max(dist.values()) / len(mcs) <= 0.6,
-          '分布=%s' % [dist.get(i, 0) for i in range(4)])
+    if yrs in (2025, 2026):
+        check('%d（回忆版）答案不过度集中' % yrs,
+              max(dist.values()) / len(mcs) <= 0.6,
+              '分布=%s' % [dist.get(i, 0) for i in range(4)])
+    else:
+        check('%d 答案四选项均出现且不过度集中' % yrs,
+              all(dist.get(i, 0) >= 1 for i in range(4)) and max(dist.values()) / len(mcs) <= 0.6,
+              '分布=%s' % [dist.get(i, 0) for i in range(4)])
     # 每题有解析、图表题文字化、非选择有参考答案
     no_an = [q['no'] for q in qs if not q.get('analysis')]
     check('%d 每题均有解析' % yrs, not no_an, '缺=%s' % no_an)
     figs = [q for q in qs if q.get('figure')]
-    # 2024 源自试卷图片（图表多）；2021–2023 为用户文字稿，图表按材料描述补 2–3 条。
+    # 2024 源自试卷图片（图表多）；2021–2023 为用户文字稿，图表按材料描述补 2–3 条；
+    # 2025/2026 为真题/回忆版，图表按材料描述补充分文字化。
     # 此处只要求「有图表说明且均充分文字化」，不做数量硬门槛。
     check('%d 含图表文字化说明' % yrs, len(figs) >= 2 and all(len(q['figure']) > 25 for q in figs),
           '图表题=%d' % len(figs))
@@ -111,18 +120,26 @@ H = {'Authorization': 'Bearer ' + r.get('token', ''), 'X-Device': DEV}
 
 st, r = req('GET', BASE + '/api/geography-gd', headers=H)
 check('列表返回 200', st == 200, 'HTTP %d' % st)
-check('trial 仅开放第 1 套（2024）', st == 200 and len(r.get('papers', [])) == 1 and r['papers'][0]['year'] == 2024,
-      'papers=%d' % len(r.get('papers', [])))
-if st == 200 and r.get('papers'):
-    p0 = r['papers'][0]
-    check('首套 19 题', p0.get('questionCount') == 19, '%s' % p0.get('questionCount'))
-    print('       首套: %s | %s分 %s分钟 %s题' % (p0.get('title'), p0.get('totalScore'), p0.get('durationMin'), p0.get('questionCount')))
+if st == 200:
+    # trial 标记由接口返回（!authed）。当线上 trial_open 体验开关开启时，新注册用户
+    # 自动获得全模块授权，此时应为全量 6 套；否则为体验模式仅首套（2026）。
+    is_trial = r.get('trial')
+    n = len(r.get('papers', []))
+    if is_trial:
+        check('trial 仅开放第 1 套（2026）', n == 1 and r['papers'][0]['year'] == 2026,
+              'papers=%d trial=%s' % (n, is_trial))
+    else:
+        check('全量返回 6 套（trial_open 体验期）', n == 6, 'papers=%d trial=%s' % (n, is_trial))
+    if r.get('papers'):
+        p0 = r['papers'][0]
+        check('首套 19 题', p0.get('questionCount') == 19, '%s' % p0.get('questionCount'))
+        print('       首套: %s | %s分 %s分钟 %s题 trial=%s' % (p0.get('title'), p0.get('totalScore'), p0.get('durationMin'), p0.get('questionCount'), is_trial))
 
-st, pp = req('GET', BASE + '/api/geography-gd?paper=gdgdz2024', headers=H)
-check('2024 单卷 200', st == 200 and pp.get('id') == 'gdgdz2024', 'HTTP %d' % st)
+st, pp = req('GET', BASE + '/api/geography-gd?paper=gdgdz2026', headers=H)
+check('2026 单卷 200', st == 200 and pp.get('id') == 'gdgdz2026', 'HTTP %d' % st)
 if st == 200:
     qs = [q for m in pp['modules'] for pt in m['parts'] for q in pt['questions']]
-    check('2024 单卷 19 题/100分', len(qs) == 19 and sum(q['score'] for q in qs) == 100)
+    check('2026 单卷 19 题/100分', len(qs) == 19 and sum(q['score'] for q in qs) == 100)
 
 st, _ = req('GET', BASE + '/api/geography-gd')
 check('未登录 401', st == 401, 'HTTP %d' % st)
